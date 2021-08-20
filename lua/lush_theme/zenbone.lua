@@ -45,9 +45,10 @@
 local lush = require "lush"
 local hsl = lush.hsluv
 
-local sand = hsl(208, 80, 80)
-local sea_crest = hsl(208, 90, 30)
-local sea_deep = hsl(208, 90, 10) -- the integers used here.
+local sand = hsl(39, 25, 91)
+local stone = hsl(170, 8, 12)
+local blossom = hsl(208, 90, 10)
+local leaf = hsl(116, 41, 18)
 
 local theme = lush(function()
 	return {
@@ -63,14 +64,16 @@ local theme = lush(function()
 		-- styling for that group (meaning they mostly get styled as Normal)
 		-- or leave them commented to apply vims default colouring or linking.
 
-		-- Comment      { }, -- any comment
+		Normal { bg = sand, fg = stone }, -- normal text
+
+		Comment { fg = Normal.fg.lighten(40), gui = "italic" }, -- any comment
 		-- ColorColumn  { }, -- used for the columns set with 'colorcolumn'
 		-- Conceal      { }, -- placeholder characters substituted for concealed text (see 'conceallevel')
-		-- Cursor       { }, -- character under the cursor
-		-- lCursor      { }, -- the character under the cursor when |language-mapping| is used (see 'guicursor')
-		-- CursorIM     { }, -- like Cursor, but used when in IME mode |CursorIM|
+		-- Cursor       { fg = 'blue' }, -- character under the cursor
+		-- lCursor      { fg = 'blue' }, -- the character under the cursor when |language-mapping| is used (see 'guicursor')
+		-- CursorIM     { fg = 'blue' }, -- like Cursor, but used when in IME mode |CursorIM|
 		-- CursorColumn { }, -- Screen-column at the cursor, when 'cursorcolumn' is set.
-		-- CursorLine   { }, -- Screen-line at the cursor, when 'cursorline' is set.  Low-priority if foreground (ctermfg OR guifg) is not set.
+		CursorLine { bg = Normal.bg.darken(4) }, -- Screen-line at the cursor, when 'cursorline' is set.  Low-priority if foreground (ctermfg OR guifg) is not set.
 		-- Directory    { }, -- directory names (and other special names in listings)
 		-- DiffAdd      { }, -- diff mode: Added line |diff.txt|
 		-- DiffChange   { }, -- diff mode: Changed line |diff.txt|
@@ -83,18 +86,17 @@ local theme = lush(function()
 		-- VertSplit    { }, -- the column separating vertically split windows
 		-- Folded       { }, -- line used for closed folds
 		-- FoldColumn   { }, -- 'foldcolumn'
-		-- SignColumn   { }, -- column where |signs| are displayed
+		SignColumn { bg = Normal.bg.darken(6), fg = Normal.fg.lighten(42) }, -- column where |signs| are displayed
 		-- IncSearch    { }, -- 'incsearch' highlighting; also used for the text replaced with ":s///c"
 		-- Substitute   { }, -- |:substitute| replacement text highlighting
-		-- LineNr       { }, -- Line number for ":number" and ":#" commands, and when 'number' or 'relativenumber' option is set.
-		-- CursorLineNr { }, -- Like LineNr when 'cursorline' or 'relativenumber' is set for the cursor line.
+		LineNr { SignColumn }, -- Line number for ":number" and ":#" commands, and when 'number' or 'relativenumber' option is set.
+		CursorLineNr { LineNr, fg = Normal.fg.darken(50), gui = "bold" }, -- Like LineNr when 'cursorline' or 'relativenumber' is set for the cursor line.
 		-- MatchParen   { }, -- The character under the cursor or just before it, if it is a paired bracket, and its match. |pi_paren.txt|
 		-- ModeMsg      { }, -- 'showmode' message (e.g., "-- INSERT -- ")
 		-- MsgArea      { }, -- Area for messages and cmdline
 		-- MsgSeparator { }, -- Separator for scrolled messages, `msgsep` flag of 'display'
 		-- MoreMsg      { }, -- |more-prompt|
 		-- NonText      { }, -- '@' at the end of the window, characters from 'showbreak' and other characters that do not really exist in the text (e.g., ">" displayed when a double-wide character doesn't fit at the end of the line). See also |hl-EndOfBuffer|.
-		-- Normal       { }, -- normal text
 		-- NormalFloat  { }, -- Normal text in floating windows.
 		-- NormalNC     { }, -- normal text in non-current windows
 		-- Pmenu        { }, -- Popup menu: normal item.
@@ -127,17 +129,17 @@ local theme = lush(function()
 		-- default,
 		-- Uncomment and edit if you want more specific syntax highlighting.
 
-		-- Constant       { }, -- (preferred) any constant
+		Constant {}, -- (preferred) any constant
 		-- String         { }, --   a string constant: "this is a string"
 		-- Character      { }, --  a character constant: 'c', '\n'
 		-- Number         { }, --   a number constant: 234, 0xff
 		-- Boolean        { }, --  a boolean constant: TRUE, false
 		-- Float          { }, --    a floating point constant: 2.3e10
 
-		-- Identifier     { }, -- (preferred) any variable name
-		-- Function       { }, -- function name (also: methods for classes)
+		Identifier {}, -- (preferred) any variable name
+		Function {}, -- function name (also: methods for classes)
 
-		-- Statement      { }, -- (preferred) any statement
+		Statement {}, -- (preferred) any statement
 		-- Conditional    { }, --  if, then, else, endif, switch, etc.
 		-- Repeat         { }, --   for, do, while, etc.
 		-- Label          { }, --    case, default, etc.
@@ -145,7 +147,7 @@ local theme = lush(function()
 		-- Keyword        { }, --  any other keyword
 		-- Exception      { }, --  try, catch, throw
 
-		-- PreProc        { }, -- (preferred) generic Preprocessor
+		PreProc {}, -- (preferred) generic Preprocessor
 		-- Include        { }, --  preprocessor #include
 		-- Define         { }, --   preprocessor #define
 		-- Macro          { }, --    same as Define
@@ -156,7 +158,7 @@ local theme = lush(function()
 		-- Structure      { }, --  struct, union, enum, etc.
 		-- Typedef        { }, --  A typedef
 
-		-- Special        { }, -- (preferred) any special symbol
+		Special { fg = stone.lighten(20) }, -- (preferred) any special symbol
 		-- SpecialChar    { }, --  special character in a constant
 		-- Tag            { }, --    you can use CTRL-] on this
 		-- Delimiter      { }, --  character that needs attention
