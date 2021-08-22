@@ -45,9 +45,11 @@
 local lush = require "lush"
 local hsluv = lush.hsluv
 
+local white = hsluv "#ffffff"
+local black = hsluv "#000000"
 local sand = hsluv(39, 12, 90)
-local stone = hsluv(215, 22, 8)
-local leaf = hsluv(103, 70, 46)
+local stone = hsluv(215, 22, 16)
+local leaf = hsluv(103, 72, 48)
 local water = hsluv(236, 84, 49)
 local rose = hsluv(5, 76, 46)
 local wood = hsluv(28, 80, 40)
@@ -68,7 +70,7 @@ local theme = lush(function()
 		-- styling for that group (meaning they mostly get styled as Normal)
 		-- or leave them commented to apply vims default colouring or linking.
 
-		Normal          { bg = sand, fg = stone.li(2).sa(80) }, -- normal text
+		Normal          { bg = sand, fg = stone }, -- normal text
 
 		Underlined      { gui = "underline" }, -- (preferred) text that stands out, HTML links
 		Bold            { gui = "bold" },
@@ -78,7 +80,7 @@ local theme = lush(function()
 		ErrorMsg        { Error }, -- error messages on the command line
 		WarningMsg      { fg = wood }, -- warning messages
 
-		Comment         { fg = sand.da(40).de(30), gui = "italic" }, -- any comment
+		Comment         { fg = sand.da(38).de(30), gui = "italic" }, -- any comment
 		ColorColumn     { bg = sand.da(20) }, -- used for the columns set with 'colorcolumn'
 		Conceal         { gui = "bold,italic" }, -- placeholder characters substituted for concealed text (see 'conceallevel')
 		-- Cursor       { }, -- character under the cursor
@@ -86,9 +88,9 @@ local theme = lush(function()
 		-- CursorIM     { }, -- like Cursor, but used when in IME mode |CursorIM|
 		CursorLine      { bg = sand.da(4) }, -- Screen-line at the cursor, when 'cursorline' is set.  Low-priority if foreground (ctermfg OR guifg) is not set.
 		CursorColumn    { CursorLine }, -- Screen-column at the cursor, when 'cursorcolumn' is set.
-		Directory       { gui = "bold" }, -- directory names (and other special names in listings)
+		Directory       { Bold }, -- directory names (and other special names in listings)
 		DiffAdd         { bg = leaf, fg = sand }, -- diff mode: Added line |diff.txt|
-		DiffChange      { bg = water.li(16), fg = sand.li(20) }, -- diff mode: Changed line |diff.txt|
+		DiffChange      { bg = water.li(16), fg = sand.li(26) }, -- diff mode: Changed line |diff.txt|
 		DiffDelete      { bg = rose, fg = sand.li(20) }, -- diff mode: Deleted line |diff.txt|
 		DiffText        { bg = water, fg = sand.li(20) }, -- diff mode: Changed text within a changed line |diff.txt|
 		-- TermCursor   { }, -- cursor in a focused terminal
@@ -105,15 +107,15 @@ local theme = lush(function()
 		-- ModeMsg      { }, -- 'showmode' message (e.g., "-- INSERT -- ")
 		-- MsgArea      { }, -- Area for messages and cmdline
 		-- MsgSeparator { }, -- Separator for scrolled messages, `msgsep` flag of 'display'
-		MoreMsg      { fg = leaf.sa(40), gui = "bold" }, -- |more-prompt|
+		MoreMsg      { fg = leaf, gui = "bold" }, -- |more-prompt|
 		NormalFloat     { bg = sand.da(8) }, -- Normal text in floating windows.
 		FloatBorder     { fg = sand.da(20) }, -- Normal text in floating windows.
 		-- NormalNC     { }, -- normal text in non-current windows
 		Pmenu           { bg = sand.da(10) }, -- Popup menu: normal item.
 		PmenuSel        { bg = sand.da(20) }, -- Popup menu: selected item.
 		PmenuSbar       { bg = sand.da(30) }, -- Popup menu: scrollbar.
-		PmenuThumb      { bg = sand.abs_lighten(30) }, -- Popup menu: Thumb of the scrollbar.
-		Question        { fg = leaf, gui = "bold" }, -- |hit-enter| prompt and yes/no questions
+		PmenuThumb      { bg = sand.abs_li(30) }, -- Popup menu: Thumb of the scrollbar.
+		Question        { MoreMsg }, -- |hit-enter| prompt and yes/no questions
 		-- QuickFixLine { }, -- Current |quickfix| item in the quickfix window. Combined with |hl-CursorLine| when the cursor is there.
 		Search          { bg = water, fg = sand }, -- Last search pattern highlighting (see 'hlsearch').  Also used for similar items that need to stand out.
 		SpellBad        { fg = Error.fg.de(40), gui = "undercurl", guisp = Error.fg }, -- Word that is not recognized by the spellchecker. |spell| Combined with the highlighting used otherwise.
@@ -140,15 +142,15 @@ local theme = lush(function()
 		-- default,
 		-- Uncomment and edit if you want more specific syntax highlighting.
 
-		Constant        { fg = stone.li(30) }, -- (preferred) any constant
-		String          { fg = Constant.fg, gui = "italic" }, --   a string constant: "this is a string"
+		Constant        { fg = stone.li(30), gui = "italic" }, -- (preferred) any constant
+		-- String       { }, --   a string constant: "this is a string"
 		-- Character    { }, --  a character constant: 'c', '\n'
 		-- Number       { }, --   a number constant: 234, 0xff
 		-- Boolean      { }, --  a boolean constant: TRUE, false
 		-- Float        { }, --    a floating point constant: 2.3e10
 
 		Identifier      { fg = stone.li(20) }, -- (preferred) any variable name
-		Function        { fg = stone.li(20) }, -- function name (also: methods for classes)
+		Function        { fg = stone.da(20) }, -- function name (also: methods for classes)
 
 		Statement       { gui = "bold" }, -- (preferred) any statement
 		-- Conditional  { }, --  if, then, else, endif, switch, etc.
@@ -262,7 +264,7 @@ local theme = lush(function()
 		TSVariable { Identifier }, -- Any variable name that does not have another highlight.
 		-- TSVariableBuiltin    { };    -- Variable names that are defined by the languages, like `this` or `self`.
 
-		-- TSTag                { };    -- Tags like html tag names.
+		TSTag                   { fg = stone.li(20), gui = "bold" },    -- Tags like html tag names.
 		-- TSTagDelimiter       { };    -- Tag delimiter like `<` `>` `/`
 		-- TSText               { };    -- For strings considered text in a markup language.
 		-- TSEmphasis           { };    -- For text to be represented with emphasis.
