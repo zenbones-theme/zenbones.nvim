@@ -87,11 +87,10 @@ local theme = lush(function()
 		CursorLine      { bg = sand.da(4) }, -- Screen-line at the cursor, when 'cursorline' is set.  Low-priority if foreground (ctermfg OR guifg) is not set.
 		CursorColumn    { CursorLine }, -- Screen-column at the cursor, when 'cursorcolumn' is set.
 		Directory       { Bold }, -- directory names (and other special names in listings)
-		DiffAdd         { bg = leaf, fg = sand }, -- diff mode: Added line |diff.txt|
-		DiffChange      { bg = water.li(16), fg = sand.li(26) }, -- diff mode: Changed line |diff.txt|
-		DiffDelete      { bg = rose, fg = sand.li(20) }, -- diff mode: Deleted line |diff.txt|
-		DiffText        { bg = water, fg = sand.li(20) }, -- diff mode: Changed text within a changed line |diff.txt|
-		-- TermCursor   { }, -- cursor in a focused terminal
+		DiffAdd         { bg = leaf.de(42).li(64) }, -- diff mode: Added line |diff.txt|
+		DiffChange      { bg = water.de(36).li(68) }, -- diff mode: Changed line |diff.txt|
+		DiffDelete      { bg = rose.sa(40).li(64) }, -- diff mode: Deleted line |diff.txt|
+		DiffText        { bg = water.de(24).li(56), fg = stone }, -- diff mode: Changed text within a changed line |diff.txt|
 		-- TermCursorNC { }, -- cursor in an unfocused terminal
 		LineNr          { bg = sand.da(6), fg = stone.li(42) }, -- Line number for ":number" and ":#" commands, and when 'number' or 'relativenumber' option is set.
 		SignColumn      { LineNr }, -- column where |signs| are displayed
@@ -273,8 +272,8 @@ local theme = lush(function()
 		-- TSURI                { };    -- Any URI like a link or email.
 
 		GitSignsAdd    { bg = SignColumn.bg, fg = leaf }, -- Text that is part of a title.
-		GitSignsChange { bg = SignColumn.bg, fg = DiffChange.bg }, -- Literal text.
-		GitSignsDelete { bg = SignColumn.bg, fg = DiffDelete.bg }, -- Any URI like a link or email.
+		GitSignsChange { bg = SignColumn.bg, fg = water }, -- Literal text.
+		GitSignsDelete { bg = SignColumn.bg, fg = rose }, -- Any URI like a link or email.
 
 		IndentBlanklineChar { fg = sand.da(10).de(20) }
 	}
