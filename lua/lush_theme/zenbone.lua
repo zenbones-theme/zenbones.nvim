@@ -53,6 +53,7 @@ local rose = hsluv(5, 76, 46)
 local wood = hsluv(28, 80, 40)
 local orchid = hsluv(292, 40, 49)
 
+-- stylua: ignore start
 local theme = lush(function()
 	return {
 		-- The following are all the Neovim default highlight groups from the docs
@@ -67,7 +68,6 @@ local theme = lush(function()
 		-- styling for that group (meaning they mostly get styled as Normal)
 		-- or leave them commented to apply vims default colouring or linking.
 
-		-- stylua: ignore start
 		Normal          { bg = sand, fg = stone.li(2).sa(80) }, -- normal text
 
 		Underlined      { gui = "underline" }, -- (preferred) text that stands out, HTML links
@@ -80,7 +80,7 @@ local theme = lush(function()
 
 		Comment         { fg = sand.da(40).de(30), gui = "italic" }, -- any comment
 		ColorColumn     { bg = sand.da(20) }, -- used for the columns set with 'colorcolumn'
-		-- Conceal      { }, -- placeholder characters substituted for concealed text (see 'conceallevel')
+		Conceal         { gui = "bold,italic" }, -- placeholder characters substituted for concealed text (see 'conceallevel')
 		-- Cursor       { }, -- character under the cursor
 		-- lCursor      { }, -- the character under the cursor when |language-mapping| is used (see 'guicursor')
 		-- CursorIM     { }, -- like Cursor, but used when in IME mode |CursorIM|
@@ -101,11 +101,11 @@ local theme = lush(function()
 		CursorLineNr    { LineNr, fg = stone.da(50), gui = "bold" }, -- Like LineNr when 'cursorline' or 'relativenumber' is set for the cursor line.
 		IncSearch       { bg = orchid, fg = sand }, -- 'incsearch' highlighting; also used for the text replaced with ":s///c"
 		-- Substitute   { }, -- |:substitute| replacement text highlighting
-		MatchParen      { }, -- The character under the cursor or just before it, if it is a paired bracket, and its match. |pi_paren.txt|
+		MatchParen      { bg = orchid.de(10).lighten(40), fg = stone }, -- The character under the cursor or just before it, if it is a paired bracket, and its match. |pi_paren.txt|
 		-- ModeMsg      { }, -- 'showmode' message (e.g., "-- INSERT -- ")
 		-- MsgArea      { }, -- Area for messages and cmdline
 		-- MsgSeparator { }, -- Separator for scrolled messages, `msgsep` flag of 'display'
-		-- MoreMsg      { }, -- |more-prompt|
+		MoreMsg      { fg = leaf.sa(40), gui = "bold" }, -- |more-prompt|
 		NormalFloat     { bg = sand.da(8) }, -- Normal text in floating windows.
 		FloatBorder     { fg = sand.da(20) }, -- Normal text in floating windows.
 		-- NormalNC     { }, -- normal text in non-current windows
@@ -120,11 +120,11 @@ local theme = lush(function()
 		SpellCap        { SpellBad, guisp = Error.fg.li(10) }, -- Word that should start with a capital. |spell| Combined with the highlighting used otherwise.
 		SpellLocal      { SpellCap }, -- Word that is recognized by the spellchecker as one that is used in another region. |spell| Combined with the highlighting used otherwise.
 		SpellRare       { SpellBad, guisp = wood }, -- Word that is recognized by the spellchecker as one that is hardly ever used.  |spell| Combined with the highlighting used otherwise.
-		StatusLine      { bg = sand.da(20) }, -- status line of current window
+		StatusLine      { bg = sand.da(20), fg = stone }, -- status line of current window
 		StatusLineNC    { bg = sand.da(10), fg = stone.li(30) }, -- status lines of not-current windows Note: if this is equal to "StatusLine" Vim will use "^^^" in the status line of the current window.
-		-- TabLine      { }, -- tab pages line, not active tab page label
-		-- TabLineFill  { }, -- tab pages line, where there are no labels
-		-- TabLineSel   { }, -- tab pages line, active tab page label
+		TabLine         { StatusLine, gui = "italic" }, -- tab pages line, not active tab page label
+		TabLineFill     { StatusLineNC }, -- tab pages line, where there are no labels
+		TabLineSel      { Bold }, -- tab pages line, active tab page label
 		Title           { Bold }, -- titles for output from ":set all", ":autocmd" etc.
 		Visual          { bg = stone.li(40), fg = sand }, -- Visual mode selection
 		-- VisualNOS    { }, -- Visual mode selection when vim is "Not Owning the Selection".
@@ -275,9 +275,9 @@ local theme = lush(function()
 		GitSignsAdd    { bg = SignColumn.bg, fg = leaf }, -- Text that is part of a title.
 		GitSignsChange { bg = SignColumn.bg, fg = DiffChange.bg }, -- Literal text.
 		GitSignsDelete { bg = SignColumn.bg, fg = DiffDelete.bg }, -- Any URI like a link or email.
-		-- stylua: ignore end
 	}
 end)
+-- stylua: ignore end
 
 -- return our parsed theme for extension or use else where.
 return theme
