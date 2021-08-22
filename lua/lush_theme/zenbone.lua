@@ -50,8 +50,8 @@ local stone = hsluv(215, 22, 8)
 local leaf = hsluv(103, 70, 46)
 local water = hsluv(236, 84, 49)
 local rose = hsluv(5, 76, 46)
-local wood = hsluv(28, 100, 40)
-local orchid = hsluv(292, 61, 49)
+local wood = hsluv(28, 80, 40)
+local orchid = hsluv(292, 40, 49)
 
 local theme = lush(function()
 	return {
@@ -87,19 +87,19 @@ local theme = lush(function()
 		CursorColumn { CursorLine }, -- Screen-column at the cursor, when 'cursorcolumn' is set.
 		Directory { gui = "bold" }, -- directory names (and other special names in listings)
 		DiffAdd { bg = leaf, fg = sand }, -- diff mode: Added line |diff.txt|
-		DiffChange { bg = water, fg = sand.lighten(20) }, -- diff mode: Changed line |diff.txt|
+		DiffChange { bg = water.lighten(16), fg = sand.lighten(20) }, -- diff mode: Changed line |diff.txt|
 		DiffDelete { bg = rose, fg = sand.lighten(20) }, -- diff mode: Deleted line |diff.txt|
-		DiffText { bg = water.lighten(16), fg = sand.lighten(20) }, -- diff mode: Changed text within a changed line |diff.txt|
+		DiffText { bg = water, fg = sand.lighten(20) }, -- diff mode: Changed text within a changed line |diff.txt|
 		-- TermCursor   { }, -- cursor in a focused terminal
 		-- TermCursorNC { }, -- cursor in an unfocused terminal
 		VertSplit { bg = sand.darken(18) }, -- the column separating vertically split windows
-		-- Folded       { }, -- line used for closed folds
-		-- FoldColumn   { }, -- 'foldcolumn'
-		SignColumn { bg = sand.darken(6), fg = stone.lighten(42) }, -- column where |signs| are displayed
+		LineNr { bg = sand.darken(6), fg = stone.lighten(42) }, -- Line number for ":number" and ":#" commands, and when 'number' or 'relativenumber' option is set.
+		SignColumn { LineNr }, -- column where |signs| are displayed
+		FoldColumn { LineNr, gui="bold" }, -- 'foldcolumn'
+		Folded       { bg = sand.darken(20), fg = sand.darken(60) }, -- line used for closed folds
+		CursorLineNr { LineNr, fg = stone.darken(50), gui = "bold" }, -- Like LineNr when 'cursorline' or 'relativenumber' is set for the cursor line.
 		-- IncSearch    { }, -- 'incsearch' highlighting; also used for the text replaced with ":s///c"
 		-- Substitute   { }, -- |:substitute| replacement text highlighting
-		LineNr { SignColumn }, -- Line number for ":number" and ":#" commands, and when 'number' or 'relativenumber' option is set.
-		CursorLineNr { LineNr, fg = stone.darken(50), gui = "bold" }, -- Like LineNr when 'cursorline' or 'relativenumber' is set for the cursor line.
 		MatchParen {}, -- The character under the cursor or just before it, if it is a paired bracket, and its match. |pi_paren.txt|
 		-- ModeMsg      { }, -- 'showmode' message (e.g., "-- INSERT -- ")
 		-- MsgArea      { }, -- Area for messages and cmdline
@@ -169,11 +169,11 @@ local theme = lush(function()
 		-- Typedef        { }, --  A typedef
 
 		Special { fg = stone.lighten(20) }, -- (preferred) any special symbol
-		SpecialChar    { Special }, --  special character in a constant
-		Tag            { fg = stone.darken(20) }, --    you can use CTRL-] on this
+		SpecialChar { Special }, --  special character in a constant
+		Tag { fg = stone.darken(20) }, --    you can use CTRL-] on this
 		Delimiter { fg = sand.darken(40) }, --  character that needs attention
 		SpecialComment { Comment, gui = "bold" }, -- special things inside a comment
-		Debug          { Special }, --    debugging statements
+		Debug { Special }, --    debugging statements
 
 		-- ("Ignore", below, may be invisible...)
 		-- Ignore         { }, -- (preferred) left blank, hidden  |hl-Ignore|
@@ -188,20 +188,20 @@ local theme = lush(function()
 		-- LspReferenceRead                     { }, -- used for highlighting "read" references
 		-- LspReferenceWrite                    { }, -- used for highlighting "write" references
 
-		LspDiagnosticsDefaultError           { Error }, -- Used as the base highlight group. Other LspDiagnostic highlights link to this by default (except Underline)
-		LspDiagnosticsDefaultWarning         { WarningMsg }, -- Used as the base highlight group. Other LspDiagnostic highlights link to this by default (except Underline)
-		LspDiagnosticsDefaultInformation     { fg = water }, -- Used as the base highlight group. Other LspDiagnostic highlights link to this by default (except Underline)
-		LspDiagnosticsDefaultHint            { fg = orchid }, -- Used as the base highlight group. Other LspDiagnostic highlights link to this by default (except Underline)
+		LspDiagnosticsDefaultError { Error }, -- Used as the base highlight group. Other LspDiagnostic highlights link to this by default (except Underline)
+		LspDiagnosticsDefaultWarning { WarningMsg }, -- Used as the base highlight group. Other LspDiagnostic highlights link to this by default (except Underline)
+		LspDiagnosticsDefaultInformation { fg = water }, -- Used as the base highlight group. Other LspDiagnostic highlights link to this by default (except Underline)
+		LspDiagnosticsDefaultHint { fg = orchid }, -- Used as the base highlight group. Other LspDiagnostic highlights link to this by default (except Underline)
 
 		-- LspDiagnosticsVirtualTextError       { }, -- Used for "Error" diagnostic virtual text
 		-- LspDiagnosticsVirtualTextWarning     { }, -- Used for "Warning" diagnostic virtual text
 		-- LspDiagnosticsVirtualTextInformation { }, -- Used for "Information" diagnostic virtual text
 		-- LspDiagnosticsVirtualTextHint        { }, -- Used for "Hint" diagnostic virtual text
 
-		LspDiagnosticsUnderlineError         { LspDiagnosticsDefaultError, gui="undercurl" }, -- Used to underline "Error" diagnostics
-		LspDiagnosticsUnderlineWarning       { LspDiagnosticsDefaultWarning, gui="undercurl" }, -- Used to underline "Warning" diagnostics
-		LspDiagnosticsUnderlineInformation   { LspDiagnosticsDefaultInformation, gui="undercurl" }, -- Used to underline "Information" diagnostics
-		LspDiagnosticsUnderlineHint          { LspDiagnosticsDefaultHint, gui="undercurl" }, -- Used to underline "Hint" diagnostics
+		LspDiagnosticsUnderlineError { LspDiagnosticsDefaultError, gui = "undercurl" }, -- Used to underline "Error" diagnostics
+		LspDiagnosticsUnderlineWarning { LspDiagnosticsDefaultWarning, gui = "undercurl" }, -- Used to underline "Warning" diagnostics
+		LspDiagnosticsUnderlineInformation { LspDiagnosticsDefaultInformation, gui = "undercurl" }, -- Used to underline "Information" diagnostics
+		LspDiagnosticsUnderlineHint { LspDiagnosticsDefaultHint, gui = "undercurl" }, -- Used to underline "Hint" diagnostics
 
 		-- LspDiagnosticsFloatingError          { }, -- Used to color "Error" diagnostic messages in diagnostics float
 		-- LspDiagnosticsFloatingWarning        { }, -- Used to color "Warning" diagnostic messages in diagnostics float
