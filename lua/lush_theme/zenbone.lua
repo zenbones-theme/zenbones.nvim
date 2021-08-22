@@ -43,12 +43,14 @@
 --  `:lua require('lush').ify()`
 
 local lush = require "lush"
-local hsl = lush.hsluv
+local hsluv = lush.hsluv
 
-local sand = hsl(39, 25, 91)
-local stone = hsl(170, 8, 12)
-local blossom = hsl(208, 90, 10)
-local leaf = hsl(116, 41, 18)
+local sand = hsluv(39, 12, 90)
+local stone = hsluv(215, 22, 8)
+local leaf = hsluv(103, 70, 46)
+local water = hsluv(236, 84, 49)
+local rose = hsluv(5, 76, 46)
+local wood = hsluv(28, 100, 40)
 
 local theme = lush(function()
 	return {
@@ -64,63 +66,70 @@ local theme = lush(function()
 		-- styling for that group (meaning they mostly get styled as Normal)
 		-- or leave them commented to apply vims default colouring or linking.
 
-		Normal { bg = sand, fg = stone }, -- normal text
+		Normal { bg = sand, fg = stone.lighten(2).saturate(80) }, -- normal text
 
-		Comment { fg = Normal.fg.lighten(40), gui = "italic" }, -- any comment
-		-- ColorColumn  { }, -- used for the columns set with 'colorcolumn'
+		Underlined { gui = "underline" }, -- (preferred) text that stands out, HTML links
+		Bold { gui = "bold" },
+		Italic { gui = "italic" },
+
+		Error { fg = rose }, -- (preferred) any erroneous construct
+		ErrorMsg { Error }, -- error messages on the command line
+		WarningMsg { fg = wood }, -- warning messages
+
+		Comment { fg = sand.darken(40).desaturate(30), gui = "italic" }, -- any comment
+		ColorColumn { bg = sand.darken(20) }, -- used for the columns set with 'colorcolumn'
 		-- Conceal      { }, -- placeholder characters substituted for concealed text (see 'conceallevel')
-		-- Cursor       { fg = 'blue' }, -- character under the cursor
-		-- lCursor      { fg = 'blue' }, -- the character under the cursor when |language-mapping| is used (see 'guicursor')
-		-- CursorIM     { fg = 'blue' }, -- like Cursor, but used when in IME mode |CursorIM|
-		-- CursorColumn { }, -- Screen-column at the cursor, when 'cursorcolumn' is set.
-		CursorLine { bg = Normal.bg.darken(4) }, -- Screen-line at the cursor, when 'cursorline' is set.  Low-priority if foreground (ctermfg OR guifg) is not set.
-		-- Directory    { }, -- directory names (and other special names in listings)
-		-- DiffAdd      { }, -- diff mode: Added line |diff.txt|
-		-- DiffChange   { }, -- diff mode: Changed line |diff.txt|
-		-- DiffDelete   { }, -- diff mode: Deleted line |diff.txt|
-		-- DiffText     { }, -- diff mode: Changed text within a changed line |diff.txt|
-		-- EndOfBuffer  { }, -- filler lines (~) after the end of the buffer.  By default, this is highlighted like |hl-NonText|.
+		-- Cursor       { bg = 'blue' }, -- character under the cursor
+		-- lCursor      { }, -- the character under the cursor when |language-mapping| is used (see 'guicursor')
+		-- CursorIM     { }, -- like Cursor, but used when in IME mode |CursorIM|
+		CursorLine { bg = sand.darken(4) }, -- Screen-line at the cursor, when 'cursorline' is set.  Low-priority if foreground (ctermfg OR guifg) is not set.
+		CursorColumn { CursorLine }, -- Screen-column at the cursor, when 'cursorcolumn' is set.
+		Directory { gui = "bold" }, -- directory names (and other special names in listings)
+		DiffAdd { bg = leaf, fg = sand }, -- diff mode: Added line |diff.txt|
+		DiffChange { bg = water, fg = sand.lighten(20) }, -- diff mode: Changed line |diff.txt|
+		DiffDelete { bg = rose, fg = sand.lighten(20) }, -- diff mode: Deleted line |diff.txt|
+		DiffText { bg = water.lighten(16), fg = sand.lighten(20) }, -- diff mode: Changed text within a changed line |diff.txt|
 		-- TermCursor   { }, -- cursor in a focused terminal
 		-- TermCursorNC { }, -- cursor in an unfocused terminal
-		-- ErrorMsg     { }, -- error messages on the command line
-		-- VertSplit    { }, -- the column separating vertically split windows
+		VertSplit { bg = sand.darken(18) }, -- the column separating vertically split windows
 		-- Folded       { }, -- line used for closed folds
 		-- FoldColumn   { }, -- 'foldcolumn'
-		SignColumn { bg = Normal.bg.darken(6), fg = Normal.fg.lighten(42) }, -- column where |signs| are displayed
+		SignColumn { bg = sand.darken(6), fg = stone.lighten(42) }, -- column where |signs| are displayed
 		-- IncSearch    { }, -- 'incsearch' highlighting; also used for the text replaced with ":s///c"
 		-- Substitute   { }, -- |:substitute| replacement text highlighting
 		LineNr { SignColumn }, -- Line number for ":number" and ":#" commands, and when 'number' or 'relativenumber' option is set.
-		CursorLineNr { LineNr, fg = Normal.fg.darken(50), gui = "bold" }, -- Like LineNr when 'cursorline' or 'relativenumber' is set for the cursor line.
-		-- MatchParen   { }, -- The character under the cursor or just before it, if it is a paired bracket, and its match. |pi_paren.txt|
+		CursorLineNr { LineNr, fg = stone.darken(50), gui = "bold" }, -- Like LineNr when 'cursorline' or 'relativenumber' is set for the cursor line.
+		MatchParen {}, -- The character under the cursor or just before it, if it is a paired bracket, and its match. |pi_paren.txt|
 		-- ModeMsg      { }, -- 'showmode' message (e.g., "-- INSERT -- ")
 		-- MsgArea      { }, -- Area for messages and cmdline
 		-- MsgSeparator { }, -- Separator for scrolled messages, `msgsep` flag of 'display'
 		-- MoreMsg      { }, -- |more-prompt|
-		-- NonText      { }, -- '@' at the end of the window, characters from 'showbreak' and other characters that do not really exist in the text (e.g., ">" displayed when a double-wide character doesn't fit at the end of the line). See also |hl-EndOfBuffer|.
-		-- NormalFloat  { }, -- Normal text in floating windows.
+		NormalFloat { bg = sand.darken(8) }, -- Normal text in floating windows.
+		FloatBorder { fg = sand.darken(20) }, -- Normal text in floating windows.
 		-- NormalNC     { }, -- normal text in non-current windows
-		-- Pmenu        { }, -- Popup menu: normal item.
-		-- PmenuSel     { }, -- Popup menu: selected item.
-		-- PmenuSbar    { }, -- Popup menu: scrollbar.
-		-- PmenuThumb   { }, -- Popup menu: Thumb of the scrollbar.
+		Pmenu { bg = sand.darken(10) }, -- Popup menu: normal item.
+		PmenuSel { bg = sand.darken(20) }, -- Popup menu: selected item.
+		PmenuSbar { bg = sand.darken(30) }, -- Popup menu: scrollbar.
+		PmenuThumb { bg = sand.abs_lighten(30) }, -- Popup menu: Thumb of the scrollbar.
 		-- Question     { }, -- |hit-enter| prompt and yes/no questions
 		-- QuickFixLine { }, -- Current |quickfix| item in the quickfix window. Combined with |hl-CursorLine| when the cursor is there.
 		-- Search       { }, -- Last search pattern highlighting (see 'hlsearch').  Also used for similar items that need to stand out.
 		-- SpecialKey   { }, -- Unprintable characters: text displayed differently from what it really is.  But not 'listchars' whitespace. |hl-Whitespace|
-		-- SpellBad     { }, -- Word that is not recognized by the spellchecker. |spell| Combined with the highlighting used otherwise.
-		-- SpellCap     { }, -- Word that should start with a capital. |spell| Combined with the highlighting used otherwise.
-		-- SpellLocal   { }, -- Word that is recognized by the spellchecker as one that is used in another region. |spell| Combined with the highlighting used otherwise.
-		-- SpellRare    { }, -- Word that is recognized by the spellchecker as one that is hardly ever used.  |spell| Combined with the highlighting used otherwise.
-		-- StatusLine   { }, -- status line of current window
-		-- StatusLineNC { }, -- status lines of not-current windows Note: if this is equal to "StatusLine" Vim will use "^^^" in the status line of the current window.
+		SpellBad { fg = Error.fg.desaturate(40), gui = "undercurl", guisp = Error.fg }, -- Word that is not recognized by the spellchecker. |spell| Combined with the highlighting used otherwise.
+		SpellCap { SpellBad, guisp = Error.fg.lighten(10) }, -- Word that should start with a capital. |spell| Combined with the highlighting used otherwise.
+		SpellLocal { SpellCap }, -- Word that is recognized by the spellchecker as one that is used in another region. |spell| Combined with the highlighting used otherwise.
+		SpellRare { SpellBad, guisp = wood }, -- Word that is recognized by the spellchecker as one that is hardly ever used.  |spell| Combined with the highlighting used otherwise.
+		StatusLine { bg = sand.darken(20) }, -- status line of current window
+		StatusLineNC { bg = sand.darken(10), fg = stone.lighten(30) }, -- status lines of not-current windows Note: if this is equal to "StatusLine" Vim will use "^^^" in the status line of the current window.
 		-- TabLine      { }, -- tab pages line, not active tab page label
 		-- TabLineFill  { }, -- tab pages line, where there are no labels
 		-- TabLineSel   { }, -- tab pages line, active tab page label
-		-- Title        { }, -- titles for output from ":set all", ":autocmd" etc.
-		-- Visual       { }, -- Visual mode selection
+		Title { Bold }, -- titles for output from ":set all", ":autocmd" etc.
+		Visual { bg = stone.lighten(40), fg = sand }, -- Visual mode selection
 		-- VisualNOS    { }, -- Visual mode selection when vim is "Not Owning the Selection".
-		-- WarningMsg   { }, -- warning messages
-		-- Whitespace   { }, -- "nbsp", "space", "tab" and "trail" in 'listchars'
+		NonText { fg = sand.darken(20) }, -- '@' at the end of the window, characters from 'showbreak' and other characters that do not really exist in the text (e.g., ">" displayed when a double-wide character doesn't fit at the end of the line). See also |hl-EndOfBuffer|.
+		Whitespace { NonText }, -- "nbsp", "space", "tab" and "trail" in 'listchars'
+		EndOfBuffer { NonText }, -- filler lines (~) after the end of the buffer.  By default, this is highlighted like |hl-NonText|.
 		-- WildMenu     { }, -- current match in 'wildmenu' completion
 
 		-- These groups are not listed as default vim groups,
@@ -129,17 +138,17 @@ local theme = lush(function()
 		-- default,
 		-- Uncomment and edit if you want more specific syntax highlighting.
 
-		Constant {}, -- (preferred) any constant
-		-- String         { }, --   a string constant: "this is a string"
+		Constant { fg = stone.lighten(30) }, -- (preferred) any constant
+		String { fg = Constant.fg, gui = "italic" }, --   a string constant: "this is a string"
 		-- Character      { }, --  a character constant: 'c', '\n'
 		-- Number         { }, --   a number constant: 234, 0xff
 		-- Boolean        { }, --  a boolean constant: TRUE, false
 		-- Float          { }, --    a floating point constant: 2.3e10
 
-		Identifier {}, -- (preferred) any variable name
-		Function {}, -- function name (also: methods for classes)
+		Identifier { fg = stone.lighten(20) }, -- (preferred) any variable name
+		Function { fg = stone.lighten(20) }, -- function name (also: methods for classes)
 
-		Statement {}, -- (preferred) any statement
+		Statement { gui = "bold" }, -- (preferred) any statement
 		-- Conditional    { }, --  if, then, else, endif, switch, etc.
 		-- Repeat         { }, --   for, do, while, etc.
 		-- Label          { }, --    case, default, etc.
@@ -147,13 +156,13 @@ local theme = lush(function()
 		-- Keyword        { }, --  any other keyword
 		-- Exception      { }, --  try, catch, throw
 
-		PreProc {}, -- (preferred) generic Preprocessor
+		PreProc { Statement }, -- (preferred) generic Preprocessor
 		-- Include        { }, --  preprocessor #include
 		-- Define         { }, --   preprocessor #define
 		-- Macro          { }, --    same as Define
 		-- PreCondit      { }, --  preprocessor #if, #else, #endif, etc.
 
-		-- Type           { }, -- (preferred) int, long, char, etc.
+		Type { fg = sand.darken(60) }, -- (preferred) int, long, char, etc.
 		-- StorageClass   { }, -- static, register, volatile, etc.
 		-- Structure      { }, --  struct, union, enum, etc.
 		-- Typedef        { }, --  A typedef
@@ -161,20 +170,14 @@ local theme = lush(function()
 		Special { fg = stone.lighten(20) }, -- (preferred) any special symbol
 		-- SpecialChar    { }, --  special character in a constant
 		-- Tag            { }, --    you can use CTRL-] on this
-		-- Delimiter      { }, --  character that needs attention
-		-- SpecialComment { }, -- special things inside a comment
+		Delimiter { fg = sand.darken(40) }, --  character that needs attention
+		SpecialComment { Comment, gui = "bold" }, -- special things inside a comment
 		-- Debug          { }, --    debugging statements
-
-		-- Underlined { gui = "underline" }, -- (preferred) text that stands out, HTML links
-		-- Bold       { gui = "bold" },
-		-- Italic     { gui = "italic" },
 
 		-- ("Ignore", below, may be invisible...)
 		-- Ignore         { }, -- (preferred) left blank, hidden  |hl-Ignore|
 
-		-- Error          { }, -- (preferred) any erroneous construct
-
-		-- Todo           { }, -- (preferred) anything that needs extra attention; mostly the keywords TODO FIXME and XXX
+		Todo { gui = "bold,italic" }, -- (preferred) anything that needs extra attention; mostly the keywords TODO FIXME and XXX
 
 		-- These groups are for the native LSP client. Some other LSP clients may
 		-- use these groups, or use their own. Consult your LSP client's
@@ -254,7 +257,7 @@ local theme = lush(function()
 		-- TSSymbol             { };    -- For identifiers referring to symbols or atoms.
 		-- TSType               { };    -- For types.
 		-- TSTypeBuiltin        { };    -- For builtin types.
-		-- TSVariable           { };    -- Any variable name that does not have another highlight.
+		TSVariable { Identifier }, -- Any variable name that does not have another highlight.
 		-- TSVariableBuiltin    { };    -- Variable names that are defined by the languages, like `this` or `self`.
 
 		-- TSTag                { };    -- Tags like html tag names.
@@ -266,6 +269,10 @@ local theme = lush(function()
 		-- TSTitle              { };    -- Text that is part of a title.
 		-- TSLiteral            { };    -- Literal text.
 		-- TSURI                { };    -- Any URI like a link or email.
+
+		GitSignsAdd { bg = SignColumn.bg, fg = leaf }, -- Text that is part of a title.
+		GitSignsChange { bg = SignColumn.bg, fg = DiffChange.bg }, -- Literal text.
+		GitSignsDelete { bg = SignColumn.bg, fg = DiffDelete.bg }, -- Any URI like a link or email.
 	}
 end)
 
