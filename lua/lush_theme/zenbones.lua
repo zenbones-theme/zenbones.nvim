@@ -45,15 +45,13 @@
 local lush = require "lush"
 local hsluv = lush.hsluv
 
-local white = hsluv "#ffffff"
-local black = hsluv "#000000"
 local sand = hsluv(39, 12, 90)
-local stone = hsluv(215, 22, 16)
-local leaf = hsluv(103, 72, 48)
-local water = hsluv(236, 84, 49)
+local stone = hsluv(215, 24, 20)
+local leaf = hsluv(103, 72, 46)
+local water = hsluv(236, 84, 40)
 local rose = hsluv(5, 76, 46)
 local wood = hsluv(28, 80, 40)
-local orchid = hsluv(292, 40, 49)
+local blossom = hsluv(318, 40, 42)
 
 -- stylua: ignore start
 local theme = lush(function()
@@ -80,8 +78,8 @@ local theme = lush(function()
 		ErrorMsg        { Error }, -- error messages on the command line
 		WarningMsg      { fg = wood }, -- warning messages
 
-		Comment         { fg = sand.da(38).de(30), gui = "italic" }, -- any comment
-		ColorColumn     { bg = sand.da(20) }, -- used for the columns set with 'colorcolumn'
+		Comment         { fg = sand.da(40).de(28), gui = "italic" }, -- any comment
+		ColorColumn     { bg = rose.li(39).de(40) }, -- used for the columns set with 'colorcolumn'
 		Conceal         { gui = "bold,italic" }, -- placeholder characters substituted for concealed text (see 'conceallevel')
 		-- Cursor       { }, -- character under the cursor
 		-- lCursor      { }, -- the character under the cursor when |language-mapping| is used (see 'guicursor')
@@ -95,35 +93,35 @@ local theme = lush(function()
 		DiffText        { bg = water, fg = sand.li(20) }, -- diff mode: Changed text within a changed line |diff.txt|
 		-- TermCursor   { }, -- cursor in a focused terminal
 		-- TermCursorNC { }, -- cursor in an unfocused terminal
-		VertSplit       { bg = sand.da(18) }, -- the column separating vertically split windows
 		LineNr          { bg = sand.da(6), fg = stone.li(42) }, -- Line number for ":number" and ":#" commands, and when 'number' or 'relativenumber' option is set.
 		SignColumn      { LineNr }, -- column where |signs| are displayed
 		FoldColumn      { LineNr, gui = "bold" }, -- 'foldcolumn'
 		Folded          { bg = sand.da(20), fg = sand.da(60) }, -- line used for closed folds
-		CursorLineNr    { LineNr, fg = stone.da(50), gui = "bold" }, -- Like LineNr when 'cursorline' or 'relativenumber' is set for the cursor line.
-		IncSearch       { bg = orchid, fg = sand }, -- 'incsearch' highlighting; also used for the text replaced with ":s///c"
-		-- Substitute   { }, -- |:substitute| replacement text highlighting
-		MatchParen      { bg = orchid.de(10).lighten(40), fg = stone }, -- The character under the cursor or just before it, if it is a paired bracket, and its match. |pi_paren.txt|
+		CursorLineNr    { LineNr, fg = stone.da(20), gui = "bold" }, -- Like LineNr when 'cursorline' or 'relativenumber' is set for the cursor line.
 		-- ModeMsg      { }, -- 'showmode' message (e.g., "-- INSERT -- ")
 		-- MsgArea      { }, -- Area for messages and cmdline
 		-- MsgSeparator { }, -- Separator for scrolled messages, `msgsep` flag of 'display'
-		MoreMsg      { fg = leaf, gui = "bold" }, -- |more-prompt|
+		MoreMsg         { fg = leaf, gui = "bold" }, -- |more-prompt|
 		NormalFloat     { bg = sand.da(8) }, -- Normal text in floating windows.
 		FloatBorder     { fg = sand.da(20) }, -- Normal text in floating windows.
 		-- NormalNC     { }, -- normal text in non-current windows
 		Pmenu           { bg = sand.da(10) }, -- Popup menu: normal item.
 		PmenuSel        { bg = sand.da(20) }, -- Popup menu: selected item.
 		PmenuSbar       { bg = sand.da(30) }, -- Popup menu: scrollbar.
-		PmenuThumb      { bg = sand.abs_li(30) }, -- Popup menu: Thumb of the scrollbar.
+		PmenuThumb      { bg = sand.li(70) }, -- Popup menu: Thumb of the scrollbar.
 		Question        { MoreMsg }, -- |hit-enter| prompt and yes/no questions
+		Search          { bg = blossom.de(10).lighten(50), fg = stone }, -- Last search pattern highlighting (see 'hlsearch').  Also used for similar items that need to stand out.
+		IncSearch       { bg = blossom, fg = sand }, -- 'incsearch' highlighting; also used for the text replaced with ":s///c"
+		-- Substitute   { }, -- |:substitute| replacement text highlighting
+		MatchParen      { Search }, -- The character under the cursor or just before it, if it is a paired bracket, and its match. |pi_paren.txt|
 		-- QuickFixLine { }, -- Current |quickfix| item in the quickfix window. Combined with |hl-CursorLine| when the cursor is there.
-		Search          { bg = water, fg = sand }, -- Last search pattern highlighting (see 'hlsearch').  Also used for similar items that need to stand out.
 		SpellBad        { fg = Error.fg.de(40), gui = "undercurl", guisp = Error.fg }, -- Word that is not recognized by the spellchecker. |spell| Combined with the highlighting used otherwise.
 		SpellCap        { SpellBad, guisp = Error.fg.li(10) }, -- Word that should start with a capital. |spell| Combined with the highlighting used otherwise.
 		SpellLocal      { SpellCap }, -- Word that is recognized by the spellchecker as one that is used in another region. |spell| Combined with the highlighting used otherwise.
 		SpellRare       { SpellBad, guisp = wood }, -- Word that is recognized by the spellchecker as one that is hardly ever used.  |spell| Combined with the highlighting used otherwise.
-		StatusLine      { bg = sand.da(20), fg = stone }, -- status line of current window
+		StatusLine      { bg = sand.da(18), fg = stone }, -- status line of current window
 		StatusLineNC    { bg = sand.da(10), fg = stone.li(30) }, -- status lines of not-current windows Note: if this is equal to "StatusLine" Vim will use "^^^" in the status line of the current window.
+		VertSplit       { StatusLine }, -- the column separating vertically split windows
 		TabLine         { StatusLine, gui = "italic" }, -- tab pages line, not active tab page label
 		TabLineFill     { StatusLineNC }, -- tab pages line, where there are no labels
 		TabLineSel      { Bold }, -- tab pages line, active tab page label
@@ -149,7 +147,7 @@ local theme = lush(function()
 		-- Boolean      { }, --  a boolean constant: TRUE, false
 		-- Float        { }, --    a floating point constant: 2.3e10
 
-		Identifier      { fg = stone.li(20) }, -- (preferred) any variable name
+		Identifier      { fg = stone.li(16) }, -- (preferred) any variable name
 		Function        { fg = stone.da(20) }, -- function name (also: methods for classes)
 
 		Statement       { gui = "bold" }, -- (preferred) any statement
@@ -171,12 +169,12 @@ local theme = lush(function()
 		-- Structure    { }, --  struct, union, enum, etc.
 		-- Typedef      { }, --  A typedef
 
-		Special         { fg = stone.li(20) }, -- (preferred) any special symbol
-		SpecialChar     { Special }, --  special character in a constant
-		Tag             { fg = stone.da(20) }, --    you can use CTRL-] on this
+		Special         { fg = stone.li(28), gui="bold" }, -- (preferred) any special symbol
+		-- SpecialChar  { }, --  special character in a constant
+		-- Tag          { }, --    you can use CTRL-] on this
 		Delimiter       { fg = sand.da(40) }, --  character that needs attention
 		SpecialComment  { Comment, gui = "bold" }, -- special things inside a comment
-		Debug           { Special }, --    debugging statements
+		-- Debug        { }, --    debugging statements
 
 		-- ("Ignore", below, may be invisible...)
 		-- Ignore       { }, -- (preferred) left blank, hidden  |hl-Ignore|
@@ -194,7 +192,7 @@ local theme = lush(function()
 		LspDiagnosticsDefaultError              { Error }, -- Used as the base highlight group. Other LspDiagnostic highlights link to this by default (except Underline)
 		LspDiagnosticsDefaultWarning            { WarningMsg }, -- Used as the base highlight group. Other LspDiagnostic highlights link to this by default (except Underline)
 		LspDiagnosticsDefaultInformation        { fg = water }, -- Used as the base highlight group. Other LspDiagnostic highlights link to this by default (except Underline)
-		LspDiagnosticsDefaultHint               { fg = orchid }, -- Used as the base highlight group. Other LspDiagnostic highlights link to this by default (except Underline)
+		LspDiagnosticsDefaultHint               { fg = blossom }, -- Used as the base highlight group. Other LspDiagnostic highlights link to this by default (except Underline)
 
 		-- LspDiagnosticsVirtualTextError       { }, -- Used for "Error" diagnostic virtual text
 		-- LspDiagnosticsVirtualTextWarning     { }, -- Used for "Warning" diagnostic virtual text
@@ -277,6 +275,8 @@ local theme = lush(function()
 		GitSignsAdd    { bg = SignColumn.bg, fg = leaf }, -- Text that is part of a title.
 		GitSignsChange { bg = SignColumn.bg, fg = DiffChange.bg }, -- Literal text.
 		GitSignsDelete { bg = SignColumn.bg, fg = DiffDelete.bg }, -- Any URI like a link or email.
+
+		IndentBlanklineChar { fg = sand.da(10).de(20) }
 	}
 end)
 -- stylua: ignore end
