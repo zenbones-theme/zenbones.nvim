@@ -51,6 +51,7 @@ local leaf = hsluv(103, 70, 46)
 local water = hsluv(236, 84, 49)
 local rose = hsluv(5, 76, 46)
 local wood = hsluv(28, 100, 40)
+local orchid = hsluv(292, 61, 49)
 
 local theme = lush(function()
 	return {
@@ -168,11 +169,11 @@ local theme = lush(function()
 		-- Typedef        { }, --  A typedef
 
 		Special { fg = stone.lighten(20) }, -- (preferred) any special symbol
-		-- SpecialChar    { }, --  special character in a constant
-		-- Tag            { }, --    you can use CTRL-] on this
+		SpecialChar    { Special }, --  special character in a constant
+		Tag            { fg = stone.darken(20) }, --    you can use CTRL-] on this
 		Delimiter { fg = sand.darken(40) }, --  character that needs attention
 		SpecialComment { Comment, gui = "bold" }, -- special things inside a comment
-		-- Debug          { }, --    debugging statements
+		Debug          { Special }, --    debugging statements
 
 		-- ("Ignore", below, may be invisible...)
 		-- Ignore         { }, -- (preferred) left blank, hidden  |hl-Ignore|
@@ -187,20 +188,20 @@ local theme = lush(function()
 		-- LspReferenceRead                     { }, -- used for highlighting "read" references
 		-- LspReferenceWrite                    { }, -- used for highlighting "write" references
 
-		-- LspDiagnosticsDefaultError           { }, -- Used as the base highlight group. Other LspDiagnostic highlights link to this by default (except Underline)
-		-- LspDiagnosticsDefaultWarning         { }, -- Used as the base highlight group. Other LspDiagnostic highlights link to this by default (except Underline)
-		-- LspDiagnosticsDefaultInformation     { }, -- Used as the base highlight group. Other LspDiagnostic highlights link to this by default (except Underline)
-		-- LspDiagnosticsDefaultHint            { }, -- Used as the base highlight group. Other LspDiagnostic highlights link to this by default (except Underline)
+		LspDiagnosticsDefaultError           { Error }, -- Used as the base highlight group. Other LspDiagnostic highlights link to this by default (except Underline)
+		LspDiagnosticsDefaultWarning         { WarningMsg }, -- Used as the base highlight group. Other LspDiagnostic highlights link to this by default (except Underline)
+		LspDiagnosticsDefaultInformation     { fg = water }, -- Used as the base highlight group. Other LspDiagnostic highlights link to this by default (except Underline)
+		LspDiagnosticsDefaultHint            { fg = orchid }, -- Used as the base highlight group. Other LspDiagnostic highlights link to this by default (except Underline)
 
 		-- LspDiagnosticsVirtualTextError       { }, -- Used for "Error" diagnostic virtual text
 		-- LspDiagnosticsVirtualTextWarning     { }, -- Used for "Warning" diagnostic virtual text
 		-- LspDiagnosticsVirtualTextInformation { }, -- Used for "Information" diagnostic virtual text
 		-- LspDiagnosticsVirtualTextHint        { }, -- Used for "Hint" diagnostic virtual text
 
-		-- LspDiagnosticsUnderlineError         { }, -- Used to underline "Error" diagnostics
-		-- LspDiagnosticsUnderlineWarning       { }, -- Used to underline "Warning" diagnostics
-		-- LspDiagnosticsUnderlineInformation   { }, -- Used to underline "Information" diagnostics
-		-- LspDiagnosticsUnderlineHint          { }, -- Used to underline "Hint" diagnostics
+		LspDiagnosticsUnderlineError         { LspDiagnosticsDefaultError, gui="undercurl" }, -- Used to underline "Error" diagnostics
+		LspDiagnosticsUnderlineWarning       { LspDiagnosticsDefaultWarning, gui="undercurl" }, -- Used to underline "Warning" diagnostics
+		LspDiagnosticsUnderlineInformation   { LspDiagnosticsDefaultInformation, gui="undercurl" }, -- Used to underline "Information" diagnostics
+		LspDiagnosticsUnderlineHint          { LspDiagnosticsDefaultHint, gui="undercurl" }, -- Used to underline "Hint" diagnostics
 
 		-- LspDiagnosticsFloatingError          { }, -- Used to color "Error" diagnostic messages in diagnostics float
 		-- LspDiagnosticsFloatingWarning        { }, -- Used to color "Warning" diagnostic messages in diagnostics float
