@@ -89,7 +89,7 @@ local theme = lush(function()
 		Directory       { Bold }, -- directory names (and other special names in listings)
 		DiffAdd         { bg = leaf.de(42).li(64) }, -- diff mode: Added line |diff.txt|
 		DiffChange      { bg = water.de(36).li(68) }, -- diff mode: Changed line |diff.txt|
-		DiffDelete      { bg = rose.sa(40).li(64) }, -- diff mode: Deleted line |diff.txt|
+		DiffDelete      { bg = rose.sa(8).li(50) }, -- diff mode: Deleted line |diff.txt|
 		DiffText        { bg = water.de(24).li(56), fg = stone }, -- diff mode: Changed text within a changed line |diff.txt|
 		-- TermCursorNC { }, -- cursor in an unfocused terminal
 		LineNr          { bg = sand.da(6), fg = sand.da(46) }, -- Line number for ":number" and ":#" commands, and when 'number' or 'relativenumber' option is set.
