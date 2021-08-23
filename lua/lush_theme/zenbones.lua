@@ -168,7 +168,7 @@ local theme = lush(function()
 		-- Structure    { }, --  struct, union, enum, etc.
 		-- Typedef      { }, --  A typedef
 
-		Special         { fg = stone.li(24), gui="bold" }, -- (preferred) any special symbol
+		Special         { fg = stone.li(24), gui = "bold" }, -- (preferred) any special symbol
 		-- SpecialChar  { }, --  special character in a constant
 		-- Tag          { }, --    you can use CTRL-] on this
 		Delimiter       { fg = sand.da(40) }, --  character that needs attention
@@ -258,10 +258,10 @@ local theme = lush(function()
 		-- TSSymbol             { };    -- For identifiers referring to symbols or atoms.
 		-- TSType               { };    -- For types.
 		-- TSTypeBuiltin        { };    -- For builtin types.
-		TSVariable { Identifier }, -- Any variable name that does not have another highlight.
+		TSVariable              { Identifier }, -- Any variable name that does not have another highlight.
 		-- TSVariableBuiltin    { };    -- Variable names that are defined by the languages, like `this` or `self`.
 
-		TSTag                   { fg = stone.li(20), gui = "bold" },    -- Tags like html tag names.
+		TSTag                   { fg = stone.li(20), gui = "bold" }, -- Tags like html tag names.
 		-- TSTagDelimiter       { };    -- Tag delimiter like `<` `>` `/`
 		-- TSText               { };    -- For strings considered text in a markup language.
 		-- TSEmphasis           { };    -- For text to be represented with emphasis.
@@ -271,11 +271,11 @@ local theme = lush(function()
 		-- TSLiteral            { };    -- Literal text.
 		-- TSURI                { };    -- Any URI like a link or email.
 
-		GitSignsAdd    { bg = SignColumn.bg, fg = leaf }, -- Text that is part of a title.
-		GitSignsChange { bg = SignColumn.bg, fg = water }, -- Literal text.
-		GitSignsDelete { bg = SignColumn.bg, fg = rose }, -- Any URI like a link or email.
+		GitSignsAdd         { bg = SignColumn.bg, fg = leaf }, -- Text that is part of a title.
+		GitSignsChange      { bg = SignColumn.bg, fg = water }, -- Literal text.
+		GitSignsDelete      { bg = SignColumn.bg, fg = rose }, -- Any URI like a link or email.
 
-		IndentBlanklineChar { fg = sand.da(10).de(20) }
+		IndentBlanklineChar { fg = sand.da(10).de(20) },
 	}
 end)
 -- stylua: ignore end
