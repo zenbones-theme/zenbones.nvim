@@ -178,7 +178,7 @@ local theme = lush(function()
 		-- ("Ignore", below, may be invisible...)
 		-- Ignore       { }, -- (preferred) left blank, hidden  |hl-Ignore|
 
-		Todo            { gui = "bold,italic" }, -- (preferred) anything that needs extra attention; mostly the keywords TODO FIXME and XXX
+		Todo            { gui = "bold,underline" }, -- (preferred) anything that needs extra attention; mostly the keywords TODO FIXME and XXX
 
 		-- These groups are for the native LSP client. Some other LSP clients may
 		-- use these groups, or use their own. Consult your LSP client's
