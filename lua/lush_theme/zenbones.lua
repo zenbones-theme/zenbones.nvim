@@ -146,7 +146,7 @@ local theme = lush(function()
 		-- Boolean      { }, --  a boolean constant: TRUE, false
 		-- Float        { }, --    a floating point constant: 2.3e10
 
-		Identifier      { fg = stone.li(14) }, -- (preferred) any variable name
+		Identifier      { fg = stone.li(16) }, -- (preferred) any variable name
 		Function        { fg = stone }, -- function name (also: methods for classes)
 
 		Statement       { fg = stone, gui = "bold" }, -- (preferred) any statement
