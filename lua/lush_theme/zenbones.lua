@@ -110,7 +110,7 @@ local theme = lush(function()
 		PmenuThumb      { bg = sand.li(70) }, -- Popup menu: Thumb of the scrollbar.
 		Question        { MoreMsg }, -- |hit-enter| prompt and yes/no questions
 		Search          { bg = blossom.de(10).lighten(50), fg = stone }, -- Last search pattern highlighting (see 'hlsearch').  Also used for similar items that need to stand out.
-		IncSearch       { bg = blossom, fg = sand }, -- 'incsearch' highlighting; also used for the text replaced with ":s///c"
+		IncSearch       { bg = blossom, fg = sand, gui = "bold" }, -- 'incsearch' highlighting; also used for the text replaced with ":s///c"
 		-- Substitute   { }, -- |:substitute| replacement text highlighting
 		MatchParen      { Search }, -- The character under the cursor or just before it, if it is a paired bracket, and its match. |pi_paren.txt|
 		-- QuickFixLine { }, -- Current |quickfix| item in the quickfix window. Combined with |hl-CursorLine| when the cursor is there.
@@ -131,7 +131,7 @@ local theme = lush(function()
 		SpecialKey      { NonText, gui = "italic" }, -- Unprintable characters: text displayed differently from what it really is.  But not 'listchars' whitespace. |hl-Whitespace|
 		Whitespace      { NonText }, -- "nbsp", "space", "tab" and "trail" in 'listchars'
 		EndOfBuffer     { NonText }, -- filler lines (~) after the end of the buffer.  By default, this is highlighted like |hl-NonText|.
-		WildMenu        { IncSearch }, -- current match in 'wildmenu' completion
+		WildMenu        { bg = blossom, fg = sand }, -- current match in 'wildmenu' completion
 
 		-- These groups are not listed as default vim groups,
 		-- but they are defacto standard group names for syntax highlighting.
