@@ -78,10 +78,10 @@ local theme = lush(function()
 		ErrorMsg        { Error }, -- error messages on the command line
 		WarningMsg      { fg = wood }, -- warning messages
 
-		Comment         { fg = sand.da(40).de(28), gui = "italic" }, -- any comment
-		ColorColumn     { bg = rose.li(39).de(40) }, -- used for the columns set with 'colorcolumn'
-		Conceal         { gui = "bold,italic" }, -- placeholder characters substituted for concealed text (see 'conceallevel')
-		-- Cursor       { }, -- character under the cursor
+		Comment         { fg = sand.da(38).de(28), gui = "italic" }, -- any comment
+		ColorColumn     { bg = rose.li(42).de(40) }, -- used for the columns set with 'colorcolumn'
+		Conceal         { fg = stone.li(20), gui = "bold,italic" }, -- placeholder characters substituted for concealed text (see 'conceallevel')
+		Cursor          { bg = stone, fg = sand.li(20) }, -- character under the cursor
 		-- lCursor      { }, -- the character under the cursor when |language-mapping| is used (see 'guicursor')
 		-- CursorIM     { }, -- like Cursor, but used when in IME mode |CursorIM|
 		CursorLine      { bg = sand.da(4) }, -- Screen-line at the cursor, when 'cursorline' is set.  Low-priority if foreground (ctermfg OR guifg) is not set.
