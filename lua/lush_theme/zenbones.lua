@@ -139,7 +139,7 @@ local theme = lush(function()
 		-- default,
 		-- Uncomment and edit if you want more specific syntax highlighting.
 
-		Constant        { fg = stone.li(30), gui = "italic" }, -- (preferred) any constant
+		Constant        { fg = stone.li(26), gui = "italic" }, -- (preferred) any constant
 		-- String       { }, --   a string constant: "this is a string"
 		-- Character    { }, --  a character constant: 'c', '\n'
 		-- Number       { }, --   a number constant: 234, 0xff
@@ -147,9 +147,9 @@ local theme = lush(function()
 		-- Float        { }, --    a floating point constant: 2.3e10
 
 		Identifier      { fg = stone.li(16) }, -- (preferred) any variable name
-		Function        { fg = stone.da(20) }, -- function name (also: methods for classes)
+		Function        { fg = stone }, -- function name (also: methods for classes)
 
-		Statement       { gui = "bold" }, -- (preferred) any statement
+		Statement       { fg = stone, gui = "bold" }, -- (preferred) any statement
 		-- Conditional  { }, --  if, then, else, endif, switch, etc.
 		-- Repeat       { }, --   for, do, while, etc.
 		-- Label        { }, --    case, default, etc.
@@ -168,7 +168,7 @@ local theme = lush(function()
 		-- Structure    { }, --  struct, union, enum, etc.
 		-- Typedef      { }, --  A typedef
 
-		Special         { fg = stone.li(28), gui="bold" }, -- (preferred) any special symbol
+		Special         { fg = stone.li(24), gui="bold" }, -- (preferred) any special symbol
 		-- SpecialChar  { }, --  special character in a constant
 		-- Tag          { }, --    you can use CTRL-] on this
 		Delimiter       { fg = sand.da(40) }, --  character that needs attention
