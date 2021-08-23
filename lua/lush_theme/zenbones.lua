@@ -46,7 +46,7 @@ local lush = require "lush"
 local hsluv = lush.hsluv
 
 local sand = hsluv(39, 12, 90)
-local stone = hsluv(215, 24, 20)
+local stone = hsluv(230, 30, 24)
 local leaf = hsluv(103, 72, 46)
 local water = hsluv(236, 84, 40)
 local rose = hsluv(5, 76, 46)
