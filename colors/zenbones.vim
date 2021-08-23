@@ -1,5 +1,5 @@
 " You probably always want to set this in your vim file
-set background=dark
+set background=light
 let g:colors_name="zenbones"
 
 " By setting our module to nil, we clear lua's cache,
@@ -14,7 +14,7 @@ let g:colors_name="zenbones"
 "
 " The performance impact of this call can be measured in the hundreds of
 " *nanoseconds* and such could be considered "production safe".
-lua package.loaded['lush_theme.lush_template'] = nil
+lua package.loaded['lush_theme.zenbones'] = nil
 
 " include our theme file and pass it to lush to apply
 lua require('lush')(require('lush_theme.zenbones'))
