@@ -46,7 +46,7 @@ local lush = require "lush"
 local hsluv = lush.hsluv
 
 local sand = hsluv(39, 12, 90)
-local stone = hsluv(230, 30, 24)
+local stone = hsluv(230, 30, 26)
 local leaf = hsluv(103, 72, 46)
 local water = hsluv(236, 84, 40)
 local rose = hsluv(5, 76, 46)
@@ -139,14 +139,14 @@ local theme = lush(function()
 		-- default,
 		-- Uncomment and edit if you want more specific syntax highlighting.
 
-		Constant        { fg = stone.li(26), gui = "italic" }, -- (preferred) any constant
+		Constant        { fg = stone.li(24), gui = "italic" }, -- (preferred) any constant
 		-- String       { }, --   a string constant: "this is a string"
 		-- Character    { }, --  a character constant: 'c', '\n'
 		-- Number       { }, --   a number constant: 234, 0xff
 		-- Boolean      { }, --  a boolean constant: TRUE, false
 		-- Float        { }, --    a floating point constant: 2.3e10
 
-		Identifier      { fg = stone.li(16) }, -- (preferred) any variable name
+		Identifier      { fg = stone.li(14) }, -- (preferred) any variable name
 		Function        { fg = stone }, -- function name (also: methods for classes)
 
 		Statement       { fg = stone, gui = "bold" }, -- (preferred) any statement
