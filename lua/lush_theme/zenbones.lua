@@ -92,7 +92,7 @@ local theme = lush(function()
 		DiffDelete      { bg = rose.sa(40).li(64) }, -- diff mode: Deleted line |diff.txt|
 		DiffText        { bg = water.de(24).li(56), fg = stone }, -- diff mode: Changed text within a changed line |diff.txt|
 		-- TermCursorNC { }, -- cursor in an unfocused terminal
-		LineNr          { bg = sand.da(6), fg = stone.li(42) }, -- Line number for ":number" and ":#" commands, and when 'number' or 'relativenumber' option is set.
+		LineNr          { bg = sand.da(6), fg = sand.da(46) }, -- Line number for ":number" and ":#" commands, and when 'number' or 'relativenumber' option is set.
 		SignColumn      { LineNr }, -- column where |signs| are displayed
 		FoldColumn      { LineNr, gui = "bold" }, -- 'foldcolumn'
 		Folded          { bg = sand.da(20), fg = sand.da(60) }, -- line used for closed folds
