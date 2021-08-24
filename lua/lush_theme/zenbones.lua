@@ -287,19 +287,20 @@ local theme = lush(function()
 		-- TSURI                { };    -- Any URI like a link or email.
 
 		-- Other plugins
-		GitSignsAdd          { fg = leaf },
-		GitSignsChange       { fg = water },
-		GitSignsDelete       { fg = rose },
+		GitSignsAdd             { fg = leaf },
+		GitSignsChange          { fg = water },
+		GitSignsDelete          { fg = rose },
 
-		IndentBlanklineChar  { fg = sand.da(12).de(20) },
+		IndentBlanklineChar     { fg = sand.da(12).de(20) },
 
-		TelescopeSelection   { PmenuSel },
-		TelescopePreviewLine { PmenuSel },
-		TelescopeBorder      { FloatBorder },
+		TelescopeSelection      { CursorLine },
+		TelescopeSelectionCaret { TelescopeSelection, fg = rose },
+		TelescopeMatching       { fg = blossom, gui = "bold" },
+		TelescopeBorder         { FloatBorder },
 
-		Sneak                { Search },
-		SneakLabel           { WildMenu },
-		SneakLabelMask       { bg = blossom, fg = blossom }
+		Sneak                   { Search },
+		SneakLabel              { WildMenu },
+		SneakLabelMask          { bg = blossom, fg = blossom }
 	}
 end)
 -- stylua: ignore end
