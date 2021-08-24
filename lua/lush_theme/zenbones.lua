@@ -83,9 +83,10 @@ local theme = lush(function()
 		Conceal         { fg = stone.li(20), gui = "bold,italic" }, -- placeholder characters substituted for concealed text (see 'conceallevel')
 
 		Cursor          { bg = stone, fg = sand.li(20) }, -- character under the cursor
-		-- lCursor      { }, -- the character under the cursor when |language-mapping| is used (see 'guicursor')
+		lCursor         { Cursor, bg = Cursor.bg.lighten(20)  }, -- the character under the cursor when |language-mapping| is used (see 'guicursor')
 		-- CursorIM     { }, -- like Cursor, but used when in IME mode |CursorIM|
-		-- TermCursorNC { }, -- cursor in an unfocused terminal
+		TermCursor      { Cursor }, -- cursor in a focused terminal
+		TermCursorNC    { lCursor }, -- cursor in an unfocused terminal
 
 		CursorLine      { bg = sand.da(4) }, -- Screen-line at the cursor, when 'cursorline' is set.  Low-priority if foreground (ctermfg OR guifg) is not set.
 		CursorColumn    { CursorLine }, -- Screen-column at the cursor, when 'cursorcolumn' is set.
