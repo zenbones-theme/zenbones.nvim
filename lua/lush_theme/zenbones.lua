@@ -81,9 +81,12 @@ local theme = lush(function()
 		Comment         { fg = sand.da(38).de(28), gui = "italic" }, -- any comment
 		ColorColumn     { bg = rose.li(42).de(40) }, -- used for the columns set with 'colorcolumn'
 		Conceal         { fg = stone.li(20), gui = "bold,italic" }, -- placeholder characters substituted for concealed text (see 'conceallevel')
+
 		Cursor          { bg = stone, fg = sand.li(20) }, -- character under the cursor
 		-- lCursor      { }, -- the character under the cursor when |language-mapping| is used (see 'guicursor')
 		-- CursorIM     { }, -- like Cursor, but used when in IME mode |CursorIM|
+		-- TermCursorNC { }, -- cursor in an unfocused terminal
+
 		CursorLine      { bg = sand.da(4) }, -- Screen-line at the cursor, when 'cursorline' is set.  Low-priority if foreground (ctermfg OR guifg) is not set.
 		CursorColumn    { CursorLine }, -- Screen-column at the cursor, when 'cursorcolumn' is set.
 		Directory       { Bold }, -- directory names (and other special names in listings)
@@ -98,6 +101,7 @@ local theme = lush(function()
 		FoldColumn      { LineNr, gui = "bold" }, -- 'foldcolumn'
 		Folded          { bg = sand.da(20), fg = sand.da(60) }, -- line used for closed folds
 		CursorLineNr    { LineNr, fg = stone.da(20), gui = "bold" }, -- Like LineNr when 'cursorline' or 'relativenumber' is set for the cursor line.
+
 		-- ModeMsg      { }, -- 'showmode' message (e.g., "-- INSERT -- ")
 		-- MsgArea      { }, -- Area for messages and cmdline
 		-- MsgSeparator { }, -- Separator for scrolled messages, `msgsep` flag of 'display'
@@ -105,20 +109,25 @@ local theme = lush(function()
 		NormalFloat     { bg = sand.da(8) }, -- Normal text in floating windows.
 		FloatBorder     { fg = sand.da(50) }, -- Normal text in floating windows.
 		-- NormalNC     { }, -- normal text in non-current windows
+
 		Pmenu           { bg = sand.da(10) }, -- Popup menu: normal item.
 		PmenuSel        { bg = sand.da(20) }, -- Popup menu: selected item.
 		PmenuSbar       { bg = sand.da(30) }, -- Popup menu: scrollbar.
 		PmenuThumb      { bg = sand.li(70) }, -- Popup menu: Thumb of the scrollbar.
+
 		Question        { MoreMsg }, -- |hit-enter| prompt and yes/no questions
+
 		Search          { bg = blossom.de(10).lighten(50), fg = stone }, -- Last search pattern highlighting (see 'hlsearch').  Also used for similar items that need to stand out.
 		IncSearch       { bg = blossom, fg = sand, gui = "bold" }, -- 'incsearch' highlighting; also used for the text replaced with ":s///c"
 		-- Substitute   { }, -- |:substitute| replacement text highlighting
 		MatchParen      { Search }, -- The character under the cursor or just before it, if it is a paired bracket, and its match. |pi_paren.txt|
 		-- QuickFixLine { }, -- Current |quickfix| item in the quickfix window. Combined with |hl-CursorLine| when the cursor is there.
+
 		SpellBad        { fg = Error.fg.de(40), gui = "undercurl", guisp = Error.fg }, -- Word that is not recognized by the spellchecker. |spell| Combined with the highlighting used otherwise.
 		SpellCap        { SpellBad, guisp = Error.fg.li(10) }, -- Word that should start with a capital. |spell| Combined with the highlighting used otherwise.
 		SpellLocal      { SpellCap }, -- Word that is recognized by the spellchecker as one that is used in another region. |spell| Combined with the highlighting used otherwise.
 		SpellRare       { SpellBad, guisp = wood }, -- Word that is recognized by the spellchecker as one that is hardly ever used.  |spell| Combined with the highlighting used otherwise.
+
 		StatusLine      { bg = sand.da(18), fg = stone }, -- status line of current window
 		StatusLineNC    { bg = sand.da(10), fg = stone.li(30) }, -- status lines of not-current windows Note: if this is equal to "StatusLine" Vim will use "^^^" in the status line of the current window.
 		VertSplit       { StatusLine }, -- the column separating vertically split windows
@@ -126,9 +135,11 @@ local theme = lush(function()
 		TabLineFill     { StatusLineNC }, -- tab pages line, where there are no labels
 		TabLineSel      { Bold }, -- tab pages line, active tab page label
 		Title           { Bold }, -- titles for output from ":set all", ":autocmd" etc.
+
 		Visual          { bg = stone.li(40), fg = sand }, -- Visual mode selection
 		-- VisualNOS    { }, -- Visual mode selection when vim is "Not Owning the Selection".
-		NonText         { fg = sand.da(20) }, -- '@' at the end of the window, characters from 'showbreak' and other characters that do not really exist in the text (e.g., ">" displayed when a double-wide character doesn't fit at the end of the line). See also |hl-EndOfBuffer|.
+
+		NonText         { fg = sand.da(22) }, -- '@' at the end of the window, characters from 'showbreak' and other characters that do not really exist in the text (e.g., ">" displayed when a double-wide character doesn't fit at the end of the line). See also |hl-EndOfBuffer|.
 		SpecialKey      { NonText, gui = "italic" }, -- Unprintable characters: text displayed differently from what it really is.  But not 'listchars' whitespace. |hl-Whitespace|
 		Whitespace      { NonText }, -- "nbsp", "space", "tab" and "trail" in 'listchars'
 		EndOfBuffer     { NonText }, -- filler lines (~) after the end of the buffer.  By default, this is highlighted like |hl-NonText|.
