@@ -49,9 +49,10 @@ local sand = hsluv(39, 12, 94)
 local stone = hsluv(230, 30, 22)
 local leaf = hsluv(103, 72, 46)
 local water = hsluv(236, 84, 40)
-local rose = hsluv(5, 76, 46)
+local rose = hsluv(5, 70, 46)
 local wood = hsluv(28, 80, 40)
-local blossom = hsluv(318, 40, 42)
+local blossom = hsluv(318, 42, 42)
+local white = sand.li(58)
 
 -- stylua: ignore start
 local theme = lush(function()
@@ -100,25 +101,25 @@ local theme = lush(function()
 		LineNr          { fg = sand.da(36) }, -- Line number for ":number" and ":#" commands, and when 'number' or 'relativenumber' option is set.
 		SignColumn      { LineNr }, -- column where |signs| are displayed
 		FoldColumn      { LineNr, gui = "bold" }, -- 'foldcolumn'
-		Folded          { bg = sand.da(20), fg = sand.da(64) }, -- line used for closed folds
+		Folded          { bg = sand.da(16), fg = sand.da(64) }, -- line used for closed folds
 		CursorLineNr    { LineNr, fg = stone, gui = "bold" }, -- Like LineNr when 'cursorline' or 'relativenumber' is set for the cursor line.
 
 		-- ModeMsg      { }, -- 'showmode' message (e.g., "-- INSERT -- ")
 		-- MsgArea      { }, -- Area for messages and cmdline
 		-- MsgSeparator { }, -- Separator for scrolled messages, `msgsep` flag of 'display'
 		MoreMsg         { fg = leaf, gui = "bold" }, -- |more-prompt|
-		NormalFloat     { bg = sand.da(8) }, -- Normal text in floating windows.
+		NormalFloat     { bg = sand.da(6) }, -- Normal text in floating windows.
 		FloatBorder     { fg = sand.da(50) }, -- Normal text in floating windows.
 		-- NormalNC     { }, -- normal text in non-current windows
 
 		Pmenu           { bg = sand.da(10) }, -- Popup menu: normal item.
 		PmenuSel        { bg = sand.da(20) }, -- Popup menu: selected item.
 		PmenuSbar       { bg = sand.da(30) }, -- Popup menu: scrollbar.
-		PmenuThumb      { bg = sand.li(70) }, -- Popup menu: Thumb of the scrollbar.
+		PmenuThumb      { bg = white }, -- Popup menu: Thumb of the scrollbar.
 
 		Question        { MoreMsg }, -- |hit-enter| prompt and yes/no questions
 
-		Search          { bg = blossom.de(10).lighten(50), fg = stone }, -- Last search pattern highlighting (see 'hlsearch').  Also used for similar items that need to stand out.
+		Search          { bg = blossom.de(10).lighten(54), fg = stone }, -- Last search pattern highlighting (see 'hlsearch').  Also used for similar items that need to stand out.
 		IncSearch       { bg = blossom, fg = sand, gui = "bold" }, -- 'incsearch' highlighting; also used for the text replaced with ":s///c"
 		-- Substitute   { }, -- |:substitute| replacement text highlighting
 		MatchParen      { Search }, -- The character under the cursor or just before it, if it is a paired bracket, and its match. |pi_paren.txt|
@@ -176,7 +177,7 @@ local theme = lush(function()
 		-- Macro        { }, --    same as Define
 		-- PreCondit    { }, --  preprocessor #if, #else, #endif, etc.
 
-		Type            { fg = sand.da(60) }, -- (preferred) int, long, char, etc.
+		Type            { fg = sand.da(62) }, -- (preferred) int, long, char, etc.
 		-- StorageClass { }, -- static, register, volatile, etc.
 		-- Structure    { }, --  struct, union, enum, etc.
 		-- Typedef      { }, --  A typedef
@@ -184,7 +185,7 @@ local theme = lush(function()
 		Special         { fg = stone.li(24), gui = "bold" }, -- (preferred) any special symbol
 		-- SpecialChar  { }, --  special character in a constant
 		-- Tag          { }, --    you can use CTRL-] on this
-		Delimiter       { fg = sand.da(40) }, --  character that needs attention
+		Delimiter       { fg = sand.da(42) }, --  character that needs attention
 		SpecialComment  { Comment, gui = "bold" }, -- special things inside a comment
 		-- Debug        { }, --    debugging statements
 
@@ -289,15 +290,15 @@ local theme = lush(function()
 		GitSignsChange       { fg = water },
 		GitSignsDelete       { fg = rose },
 
-		IndentBlanklineChar { fg = sand.da(10).de(20) },
+		IndentBlanklineChar  { fg = sand.da(10).de(20) },
 
 		TelescopeSelection   { PmenuSel },
 		TelescopePreviewLine { PmenuSel },
 		TelescopeBorder      { FloatBorder },
 
-		Sneak          { Search },
-		SneakLabel     { WildMenu },
-		SneakLabelMask { bg = blossom, fg = blossom }
+		Sneak                { Search },
+		SneakLabel           { WildMenu },
+		SneakLabelMask       { bg = blossom, fg = blossom }
 	}
 end)
 -- stylua: ignore end
