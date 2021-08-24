@@ -1,5 +1,7 @@
-A Lush Theme for Neovim.
-===
+# Zenbones
 
-See: http://git.io/lush.nvim for more information on Lush and a helper script
-to setup your repo clone.
+Contrast-focused Neovim colorscheme.
+
+## Other implementations
+
+- [iterm2](https://github.com/mcchrish/zenbones-iterm)
