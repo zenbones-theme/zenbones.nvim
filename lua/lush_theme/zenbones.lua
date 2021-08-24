@@ -80,7 +80,6 @@ local theme = lush(function()
 		WarningMsg      { fg = wood }, -- warning messages
 
 		Comment         { fg = sand.da(38).de(28), gui = "italic" }, -- any comment
-		ColorColumn     { bg = rose.li(42).de(40) }, -- used for the columns set with 'colorcolumn'
 		Conceal         { fg = stone.li(20), gui = "bold,italic" }, -- placeholder characters substituted for concealed text (see 'conceallevel')
 
 		Cursor          { bg = stone, fg = sand.li(20) }, -- character under the cursor
@@ -91,7 +90,7 @@ local theme = lush(function()
 
 		CursorLine      { bg = sand.da(4) }, -- Screen-line at the cursor, when 'cursorline' is set.  Low-priority if foreground (ctermfg OR guifg) is not set.
 		CursorColumn    { CursorLine }, -- Screen-column at the cursor, when 'cursorcolumn' is set.
-		Directory       { Bold }, -- directory names (and other special names in listings)
+		ColorColumn     { bg = wood.de(40).li(80) }, -- used for the columns set with 'colorcolumn'
 
 		DiffAdd         { bg = leaf.de(48).li(64) }, -- diff mode: Added line |diff.txt|
 		DiffChange      { bg = water.de(38).li(76) }, -- diff mode: Changed line |diff.txt|
@@ -117,8 +116,6 @@ local theme = lush(function()
 		PmenuSbar       { bg = sand.da(30) }, -- Popup menu: scrollbar.
 		PmenuThumb      { bg = white }, -- Popup menu: Thumb of the scrollbar.
 
-		Question        { MoreMsg }, -- |hit-enter| prompt and yes/no questions
-
 		Search          { bg = blossom.de(10).lighten(54), fg = stone }, -- Last search pattern highlighting (see 'hlsearch').  Also used for similar items that need to stand out.
 		IncSearch       { bg = blossom, fg = sand, gui = "bold" }, -- 'incsearch' highlighting; also used for the text replaced with ":s///c"
 		-- Substitute   { }, -- |:substitute| replacement text highlighting
@@ -132,11 +129,10 @@ local theme = lush(function()
 
 		StatusLine      { bg = sand.da(16), fg = stone }, -- status line of current window
 		StatusLineNC    { bg = sand.da(10), fg = stone.li(28) }, -- status lines of not-current windows Note: if this is equal to "StatusLine" Vim will use "^^^" in the status line of the current window.
-		VertSplit       { fg = white }, -- the column separating vertically split windows
 		TabLine         { StatusLine, gui = "italic" }, -- tab pages line, not active tab page label
 		TabLineFill     { StatusLineNC }, -- tab pages line, where there are no labels
 		TabLineSel      { Bold }, -- tab pages line, active tab page label
-		Title           { Bold }, -- titles for output from ":set all", ":autocmd" etc.
+		VertSplit       { fg = white }, -- the column separating vertically split windows
 
 		Visual          { bg = stone.li(84) }, -- Visual mode selection
 		-- VisualNOS    { }, -- Visual mode selection when vim is "Not Owning the Selection".
@@ -145,7 +141,12 @@ local theme = lush(function()
 		SpecialKey      { NonText, gui = "italic" }, -- Unprintable characters: text displayed differently from what it really is.  But not 'listchars' whitespace. |hl-Whitespace|
 		Whitespace      { NonText }, -- "nbsp", "space", "tab" and "trail" in 'listchars'
 		EndOfBuffer     { NonText }, -- filler lines (~) after the end of the buffer.  By default, this is highlighted like |hl-NonText|.
+
 		WildMenu        { bg = blossom, fg = sand }, -- current match in 'wildmenu' completion
+		Directory       { Bold }, -- directory names (and other special names in listings)
+		Question        { MoreMsg }, -- |hit-enter| prompt and yes/no questions
+		Title           { Bold }, -- titles for output from ":set all", ":autocmd" etc.
+
 
 		-- These groups are not listed as default vim groups,
 		-- but they are defacto standard group names for syntax highlighting.
