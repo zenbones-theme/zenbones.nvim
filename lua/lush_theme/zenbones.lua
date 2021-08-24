@@ -97,11 +97,11 @@ local theme = lush(function()
 		DiffDelete      { bg = rose.de(22).li(60) }, -- diff mode: Deleted line |diff.txt|
 		DiffText        { bg = water.de(24).li(68), fg = stone }, -- diff mode: Changed text within a changed line |diff.txt|
 
-		LineNr          { bg = sand.da(6), fg = sand.da(46) }, -- Line number for ":number" and ":#" commands, and when 'number' or 'relativenumber' option is set.
+		LineNr          { fg = sand.da(36) }, -- Line number for ":number" and ":#" commands, and when 'number' or 'relativenumber' option is set.
 		SignColumn      { LineNr }, -- column where |signs| are displayed
 		FoldColumn      { LineNr, gui = "bold" }, -- 'foldcolumn'
-		Folded          { bg = sand.da(20), fg = sand.da(60) }, -- line used for closed folds
-		CursorLineNr    { LineNr, fg = stone.da(20), gui = "bold" }, -- Like LineNr when 'cursorline' or 'relativenumber' is set for the cursor line.
+		Folded          { bg = sand.da(20), fg = sand.da(64) }, -- line used for closed folds
+		CursorLineNr    { LineNr, fg = stone, gui = "bold" }, -- Like LineNr when 'cursorline' or 'relativenumber' is set for the cursor line.
 
 		-- ModeMsg      { }, -- 'showmode' message (e.g., "-- INSERT -- ")
 		-- MsgArea      { }, -- Area for messages and cmdline
@@ -129,9 +129,9 @@ local theme = lush(function()
 		SpellLocal      { SpellCap }, -- Word that is recognized by the spellchecker as one that is used in another region. |spell| Combined with the highlighting used otherwise.
 		SpellRare       { SpellBad, guisp = wood }, -- Word that is recognized by the spellchecker as one that is hardly ever used.  |spell| Combined with the highlighting used otherwise.
 
-		StatusLine      { bg = sand.da(18), fg = stone }, -- status line of current window
-		StatusLineNC    { bg = sand.da(10), fg = stone.li(30) }, -- status lines of not-current windows Note: if this is equal to "StatusLine" Vim will use "^^^" in the status line of the current window.
-		VertSplit       { StatusLine }, -- the column separating vertically split windows
+		StatusLine      { bg = sand.da(16), fg = stone }, -- status line of current window
+		StatusLineNC    { bg = sand.da(10), fg = stone.li(28) }, -- status lines of not-current windows Note: if this is equal to "StatusLine" Vim will use "^^^" in the status line of the current window.
+		VertSplit       { fg = white }, -- the column separating vertically split windows
 		TabLine         { StatusLine, gui = "italic" }, -- tab pages line, not active tab page label
 		TabLineFill     { StatusLineNC }, -- tab pages line, where there are no labels
 		TabLineSel      { Bold }, -- tab pages line, active tab page label
@@ -284,9 +284,10 @@ local theme = lush(function()
 		-- TSLiteral            { };    -- Literal text.
 		-- TSURI                { };    -- Any URI like a link or email.
 
-		GitSignsAdd         { bg = SignColumn.bg, fg = leaf }, -- Text that is part of a title.
-		GitSignsChange      { bg = SignColumn.bg, fg = water }, -- Literal text.
-		GitSignsDelete      { bg = SignColumn.bg, fg = rose }, -- Any URI like a link or email.
+		-- Other plugins
+		GitSignsAdd          { fg = leaf },
+		GitSignsChange       { fg = water },
+		GitSignsDelete       { fg = rose },
 
 		IndentBlanklineChar { fg = sand.da(10).de(20) },
 
