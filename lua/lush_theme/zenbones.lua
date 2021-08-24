@@ -291,7 +291,7 @@ local theme = lush(function()
 		GitSignsChange       { fg = water },
 		GitSignsDelete       { fg = rose },
 
-		IndentBlanklineChar  { fg = sand.da(10).de(20) },
+		IndentBlanklineChar  { fg = sand.da(12).de(20) },
 
 		TelescopeSelection   { PmenuSel },
 		TelescopePreviewLine { PmenuSel },
