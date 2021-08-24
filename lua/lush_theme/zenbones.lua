@@ -136,7 +136,7 @@ local theme = lush(function()
 		TabLineSel      { Bold }, -- tab pages line, active tab page label
 		Title           { Bold }, -- titles for output from ":set all", ":autocmd" etc.
 
-		Visual          { bg = stone.li(40), fg = sand }, -- Visual mode selection
+		Visual          { bg = stone.li(84) }, -- Visual mode selection
 		-- VisualNOS    { }, -- Visual mode selection when vim is "Not Owning the Selection".
 
 		NonText         { fg = sand.da(22) }, -- '@' at the end of the window, characters from 'showbreak' and other characters that do not really exist in the text (e.g., ">" displayed when a double-wide character doesn't fit at the end of the line). See also |hl-EndOfBuffer|.
