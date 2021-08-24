@@ -45,8 +45,8 @@
 local lush = require "lush"
 local hsluv = lush.hsluv
 
-local sand = hsluv(39, 12, 90)
-local stone = hsluv(230, 30, 24)
+local sand = hsluv(39, 12, 94)
+local stone = hsluv(230, 30, 22)
 local leaf = hsluv(103, 72, 46)
 local water = hsluv(236, 84, 40)
 local rose = hsluv(5, 76, 46)
@@ -102,7 +102,7 @@ local theme = lush(function()
 		-- MsgSeparator { }, -- Separator for scrolled messages, `msgsep` flag of 'display'
 		MoreMsg         { fg = leaf, gui = "bold" }, -- |more-prompt|
 		NormalFloat     { bg = sand.da(8) }, -- Normal text in floating windows.
-		FloatBorder     { fg = sand.da(20) }, -- Normal text in floating windows.
+		FloatBorder     { fg = sand.da(50) }, -- Normal text in floating windows.
 		-- NormalNC     { }, -- normal text in non-current windows
 		Pmenu           { bg = sand.da(10) }, -- Popup menu: normal item.
 		PmenuSel        { bg = sand.da(20) }, -- Popup menu: selected item.
@@ -276,6 +276,10 @@ local theme = lush(function()
 		GitSignsDelete      { bg = SignColumn.bg, fg = rose }, -- Any URI like a link or email.
 
 		IndentBlanklineChar { fg = sand.da(10).de(20) },
+
+		TelescopeSelection { PmenuSel },
+		TelescopePreviewLine { PmenuSel },
+		TelescopeBorder { FloatBorder }
 	}
 end)
 -- stylua: ignore end
