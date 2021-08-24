@@ -277,9 +277,13 @@ local theme = lush(function()
 
 		IndentBlanklineChar { fg = sand.da(10).de(20) },
 
-		TelescopeSelection { PmenuSel },
+		TelescopeSelection   { PmenuSel },
 		TelescopePreviewLine { PmenuSel },
-		TelescopeBorder { FloatBorder }
+		TelescopeBorder      { FloatBorder },
+
+		Sneak          { Search },
+		SneakLabel     { WildMenu },
+		SneakLabelMask { bg = blossom, fg = blossom }
 	}
 end)
 -- stylua: ignore end
