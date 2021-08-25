@@ -1,6 +1,12 @@
+if exists('g:colors_name')
+    highlight clear
+    syntax reset
+    set t_Co=256
+endif
+
 " You probably always want to set this in your vim file
 set background=light
-let g:colors_name="zenbones"
+let g:colors_name = 'zenbones'
 
 "Theme built with Lush.nvim, exported at Tue Aug 24 18:16:17 2021
 highlight Type guifg=#5C534F guibg=NONE guisp=NONE gui=NONE
