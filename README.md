@@ -18,6 +18,26 @@ some requirements to take full advantage of the theme:
 - 24-bit RGB colors (vim compiled with +termguicolors)
 - Terminal or GUI with bold and italic support
 
+## Usage
+
+Install using your favorite plugin manager and just apply the colorscheme as
+usual:
+
+```vim
+set termguicolors
+colorscheme zenbones
+```
+
+Alternatively, if you want to make use of lua or forked this repo and tweaked
+the colors to your liking:
+
+```vim
+set termguicolors
+colorscheme zenbones-lua
+```
+
+To make it work however, you must install lush.
+
 ## Showcase
 
 <details>
