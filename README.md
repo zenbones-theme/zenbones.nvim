@@ -83,7 +83,7 @@ plugins.
 ## Inspirations
 
 Zenbones is heavily inspired by
-[Vervandi](https://github.com/be5invis/vsc-theme-verdandi) and
+[Verdandi](https://github.com/be5invis/vsc-theme-verdandi) and
 [vim-yin-yang](https://github.com/pgdouyon/vim-yin-yang). The name came from a
 book called
 [Zen Flesh, Zen Bones](https://en.wikipedia.org/wiki/Zen_Flesh,_Zen_Bones).
