@@ -1,6 +1,6 @@
 # Zenbones
 
-Zenbones uses contrast
+Zenbones is a colorscheme that uses contrast
 
 It's made using the handy [lush](https://github.com/rktjmp/lush.nvim) theme
 builder.
@@ -17,6 +17,7 @@ Primarily built for nvim but it works pretty well with vim. However here are
 some requirements to take full advantage of the theme:
 
 - 24-bit RGB colors (vim compiled with +termguicolors)
+- Font with bold and italic
 - Terminal or GUI with bold and italic support
 
 ## Usage
@@ -82,5 +83,9 @@ plugins.
 
 Zenbones is heavily inspired by
 [Vervandi](https://github.com/be5invis/vsc-theme-verdandi) and
-[vim-yin-yang](https://github.com/pgdouyon/vim-yin-yang). The name came from
-this [small book](https://en.wikipedia.org/wiki/Zen_Flesh,_Zen_Bones).
+[vim-yin-yang](https://github.com/pgdouyon/vim-yin-yang). The name came from a
+book called
+[Zen Flesh, Zen Bones](https://en.wikipedia.org/wiki/Zen_Flesh,_Zen_Bones).
+
+Check out more
+[colorschemes with few colors from this collection](https://github.com/mcchrish/vim-no-color-collections).
