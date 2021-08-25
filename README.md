@@ -1,13 +1,14 @@
 # Zenbones
 
-Zenbones is a colorscheme designed
+Zenbones uses contrast
 
-It's made using the handy [lush](https://github.com/rktjmp/lush.nvim) theme builder.
+It's made using the handy [lush](https://github.com/rktjmp/lush.nvim) theme
+builder.
 
 ![zenbones-main-image](https://user-images.githubusercontent.com/7200153/130731060-85313919-8a04-45e2-813a-ea67f602d1c5.jpg)
 
 <p align="center">
-<a href="https://en.wikipedia.org/wiki/Ry%C5%8Dan-ji">Ryōan-ji</a>
+A rock garden in <a href="https://en.wikipedia.org/wiki/Ry%C5%8Dan-ji">Ryōan-ji</a>.
 </p>
 
 ## Requirements
@@ -28,11 +29,10 @@ set termguicolors
 colorscheme zenbones
 ```
 
-Alternatively, if you want to make use of lua or forked this repo and tweaked
-the colors to your liking:
+Alternatively, if you want to make use of lua or you forked this repo and
+tweaked the colors to your liking:
 
 ```vim
-set termguicolors
 colorscheme zenbones-lua
 ```
 
@@ -63,15 +63,16 @@ To make it work however, you must install lush.
 
 _Font used is [Iosevka](https://typeof.net/Iosevka/)_.
 
-## Other plugin support
+## Other plugins support
 
-There are only a few plugins that are currently supported. Please feel free to
-open a PR to support your favorite plugins.
+Aside from LSP and basic Tree-sitter support, there are only a few plugins that
+are currently supported. Please feel free to open a PR to support your favorite
+plugins.
 
--  [gitsigns](https://github.com/lewis6991/gitsigns.nvim)
--  [indent-blankline](https://github.com/lukas-reineke/indent-blankline.nvim)
--  [Telescope](https://github.com/nvim-telescope/telescope.nvim)
--  [sneak](https://github.com/justinmk/vim-sneak)
+- [gitsigns](https://github.com/lewis6991/gitsigns.nvim)
+- [indent-blankline](https://github.com/lukas-reineke/indent-blankline.nvim)
+- [Telescope](https://github.com/nvim-telescope/telescope.nvim)
+- [sneak](https://github.com/justinmk/vim-sneak)
 
 ## Other implementations
 
