@@ -1,9 +1,10 @@
 # Zenbones
 
-Zenbones is a colorscheme that uses contrast
+Zenbones is a light vim/nvim colorscheme designed to highlight code using
+contrasts and font variations. Colors are tasked for other roles such as
+diagnostics, diffs, search matches, and actions.
 
-It's made using the handy [lush](https://github.com/rktjmp/lush.nvim) theme
-builder.
+It's made using the handy [lush.nvim](https://github.com/rktjmp/lush.nvim).
 
 ![zenbones-main-image](https://user-images.githubusercontent.com/7200153/130731060-85313919-8a04-45e2-813a-ea67f602d1c5.jpg)
 
