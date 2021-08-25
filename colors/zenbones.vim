@@ -8,6 +8,44 @@ endif
 set background=light
 let g:colors_name = 'zenbones'
 
+let g:terminal_color_0 = '#2c363c'
+let g:terminal_color_1 = '#c23c55'
+let g:terminal_color_2 = '#617437'
+let g:terminal_color_3 = '#914b27'
+let g:terminal_color_4 = '#286486'
+let g:terminal_color_5 = '#88507d'
+let g:terminal_color_6 = '#3e879b'
+let g:terminal_color_7 = '#f0edec'
+let g:terminal_color_8 = '#44525b'
+let g:terminal_color_9 = '#951434'
+let g:terminal_color_10 = '#445519'
+let g:terminal_color_11 = '#703410'
+let g:terminal_color_12 = '#0d4e6d'
+let g:terminal_color_13 = '#8a297b'
+let g:terminal_color_14 = '#24697c'
+let g:terminal_color_15 = '#dad3cf'
+
+if has('terminal')
+    let g:terminal_ansi_colors = [
+                \ g:terminal_color_0,
+                \ g:terminal_color_1,
+                \ g:terminal_color_2,
+                \ g:terminal_color_3,
+                \ g:terminal_color_4,
+                \ g:terminal_color_5,
+                \ g:terminal_color_6,
+                \ g:terminal_color_7,
+                \ g:terminal_color_8,
+                \ g:terminal_color_9,
+                \ g:terminal_color_10,
+                \ g:terminal_color_11,
+                \ g:terminal_color_12,
+                \ g:terminal_color_13,
+                \ g:terminal_color_14,
+                \ g:terminal_color_15
+                \ ]
+endif
+
 "Theme built with Lush.nvim, exported at Wed Aug 25 08:25:22 2021
 highlight LspDiagnosticsUnderlineWarning guifg=#914B27 guibg=NONE guisp=NONE gui=undercurl
 highlight LspDiagnosticsUnderlineInformation guifg=#286486 guibg=NONE guisp=NONE gui=undercurl
