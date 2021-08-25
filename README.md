@@ -1,8 +1,8 @@
 # Zenbones
 
 Zenbones is a light vim/nvim colorscheme designed to highlight code using
-contrasts and font variations. Colors are tasked for other roles such as
-diagnostics, diffs, search matches, and actions.
+contrasts and font variations. Colors are tasked only for other roles such as
+diagnostics, diffs, search matches.
 
 It's made using the handy [lush.nvim](https://github.com/rktjmp/lush.nvim).
 
@@ -88,5 +88,5 @@ Zenbones is heavily inspired by
 book called
 [Zen Flesh, Zen Bones](https://en.wikipedia.org/wiki/Zen_Flesh,_Zen_Bones).
 
-Check out more
+There are more similar
 [colorschemes with few colors from this collection](https://github.com/mcchrish/vim-no-color-collections).
