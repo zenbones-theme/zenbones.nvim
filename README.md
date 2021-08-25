@@ -17,14 +17,19 @@ Contrast-focused Neovim colorscheme.
 
 </details>
  
-Search:
+<details>
+    <summary>Search</summary>
 
 <img width="1128" alt="Search" src="https://user-images.githubusercontent.com/7200153/130731292-928fcffc-c252-425c-8c61-e292df3fa478.png">
 
-Diagnostics:
+</details>
+
+<details>
+    <summary>Diagnostics</summary>
+
 <img width="1128" alt="Screen Shot 2021-08-25 at 1 16 02 PM" src="https://user-images.githubusercontent.com/7200153/130731432-863956db-8061-4edb-b4a3-bf95f4631f5b.png">
 
-
+</details>
 
 ## Other implementations
 
