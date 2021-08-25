@@ -1,6 +1,8 @@
 # Zenbones
 
-Contrast-focused vim/nvim colorscheme.
+Zenbones is a colorscheme designed
+
+It's made using the handy [lush](https://github.com/rktjmp/lush.nvim) theme builder.
 
 ![zenbones-main-image](https://user-images.githubusercontent.com/7200153/130731060-85313919-8a04-45e2-813a-ea67f602d1c5.jpg)
 
@@ -10,7 +12,8 @@ Contrast-focused vim/nvim colorscheme.
 
 ## Requirements
 
-Primarily built for nvim but it works pretty well with vim. However here are some requirements to take full advantage of the theme:
+Primarily built for nvim but it works pretty well with vim. However here are
+some requirements to take full advantage of the theme:
 
 - 24-bit RGB colors (vim compiled with +termguicolors)
 - Terminal or GUI with bold and italic support
@@ -38,6 +41,24 @@ Primarily built for nvim but it works pretty well with vim. However here are som
 
 </details>
 
+_Font used is [Iosevka](https://typeof.net/Iosevka/)_.
+
+## Other plugin support
+
+There are only a few plugins that are currently supported. Please feel free to
+open a PR to support your favorite plugins.
+
+-  [gitsigns](https://github.com/lewis6991/gitsigns.nvim)
+-  [indent-blankline](https://github.com/lukas-reineke/indent-blankline.nvim)
+-  [Telescope](https://github.com/nvim-telescope/telescope.nvim)
+-  [sneak](https://github.com/justinmk/vim-sneak)
+
 ## Other implementations
 
 - [iterm2](https://github.com/mcchrish/zenbones-iterm)
+
+## Inspirations
+
+Zenbones is heavily inspired by
+[Vervandi](https://github.com/be5invis/vsc-theme-verdandi) and
+[vim-yin-yang](https://github.com/pgdouyon/vim-yin-yang).
