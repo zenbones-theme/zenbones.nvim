@@ -15,9 +15,9 @@ A rock garden in <a href="https://en.wikipedia.org/wiki/Ry%C5%8Dan-ji">Ryōan-ji
 ## Requirements
 
 Primarily built for nvim but it works pretty well with vim. However here are
-some requirements to take full advantage of the theme:
+some requirements to take full advantage of the colorscheme:
 
-- 24-bit RGB colors (vim compiled with +termguicolors)
+- 24-bit RGB colors (nvim or vim compiled with +termguicolors)
 - Font with bold and italic
 - Terminal or GUI with bold and italic support
 
@@ -38,7 +38,7 @@ tweaked the colors to your liking:
 colorscheme zenbones-lua
 ```
 
-To make it work however, you must install lush.
+To make it work however, you must also install lush.
 
 ## Showcase
 
