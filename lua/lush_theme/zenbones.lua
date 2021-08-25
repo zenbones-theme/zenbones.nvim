@@ -93,9 +93,9 @@ local theme = lush(function()
 		ColorColumn     { bg = wood.de(40).li(80) }, -- used for the columns set with 'colorcolumn'
 
 		DiffAdd         { bg = leaf.de(48).li(64) }, -- diff mode: Added line |diff.txt|
-		DiffChange      { bg = water.de(38).li(76) }, -- diff mode: Changed line |diff.txt|
+		DiffChange      { bg = water.de(18).li(68) }, -- diff mode: Changed line |diff.txt|
 		DiffDelete      { bg = rose.de(22).li(60) }, -- diff mode: Deleted line |diff.txt|
-		DiffText        { bg = water.de(24).li(68), fg = stone }, -- diff mode: Changed text within a changed line |diff.txt|
+		DiffText        { bg = water.de(18).li(56), fg = stone }, -- diff mode: Changed text within a changed line |diff.txt|
 
 		LineNr          { fg = sand.da(36) }, -- Line number for ":number" and ":#" commands, and when 'number' or 'relativenumber' option is set.
 		SignColumn      { LineNr }, -- column where |signs| are displayed
