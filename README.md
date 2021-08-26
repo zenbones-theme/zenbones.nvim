@@ -116,8 +116,12 @@ the complete options.
 ### Print terminal colors
 
 You can retrieve the terminal colors by using this command:
-`:lua require('zenbones.print').print_terminal_colors()`. Useful when you want to
-apply a zenbones theme to your terminal.
+
+```
+:lua require("zenbones.print").print_terminal_colors()
+```
+
+Useful when you want to apply a zenbones theme to your terminal.
 
 ## Inspirations
 
