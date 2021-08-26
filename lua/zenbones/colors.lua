@@ -1,7 +1,7 @@
 local lush = require "lush"
 local hsluv = lush.hsluv
 
-local config = {
+local colors = {
 	sand = hsluv(39, 12, 94),
 	stone = hsluv(230, 30, 22),
 	leaf = hsluv(103, 72, 46),
@@ -12,6 +12,6 @@ local config = {
 	sky = hsluv(204, 80, 53),
 }
 
-config.white = config.sand.li(58)
+colors.white = colors.sand.li(58)
 
-return config
+return colors
