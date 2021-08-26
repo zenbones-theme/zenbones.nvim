@@ -1,6 +1,6 @@
 " You probably always want to set this in your vim file
 set background=light
-let g:colors_name="zenbones-lua"
+let g:colors_name="zenbones-lush"
 
 lua require('zenbones.terminal').setup()
 

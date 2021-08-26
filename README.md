@@ -45,7 +45,7 @@ Alternatively, if you want to make use of the lua version:
 
 ```vim
 set termguicolors
-colorscheme zenbones-lua
+colorscheme zenbones-lush
 ```
 
 It works pretty much the same as the first one but pretty handy when extending
