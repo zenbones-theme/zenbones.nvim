@@ -75,10 +75,16 @@ plugins.
 - [indent-blankline](https://github.com/lukas-reineke/indent-blankline.nvim)
 - [Telescope](https://github.com/nvim-telescope/telescope.nvim)
 - [sneak](https://github.com/justinmk/vim-sneak)
+- [lualine](https://github.com/hoob3rt/lualine.nvim)
 
 ## Other implementations
 
 - [iterm2](https://github.com/mcchrish/zenbones-iterm)
+
+### Print terminal colors
+
+You can retrieve the terminal colors as using this command:
+`lua require('zenbones.print').print_terminal_colors()`.
 
 ## Inspirations
 
