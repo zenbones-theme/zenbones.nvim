@@ -3,7 +3,7 @@ local t = require "zenbones"
 return {
 	normal = {
 		a = { bg = t.PmenuSbar.bg.hex, fg = t.Folded.fg.hex, gui = "bold" },
-		b = { bg = t.PmenuSel.bg.hex, fg = t.Identifier.fg.hex },
+		b = { bg = t.PmenuSel.bg.hex, fg = t.Folded.fg.hex },
 		c = { bg = t.StatusLine.bg.hex, fg = t.StatusLine.fg.hex },
 	},
 
