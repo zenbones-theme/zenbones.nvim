@@ -4,8 +4,6 @@ Zenbones is a light vim/nvim colorscheme designed to highlight code using
 contrasts and font variations. Colors are tasked only for other roles such as
 diagnostics, diffs, search matches.
 
-It's made using the handy [lush.nvim](https://github.com/rktjmp/lush.nvim).
-
 ![zenbones-main-image](https://user-images.githubusercontent.com/7200153/130731060-85313919-8a04-45e2-813a-ea67f602d1c5.jpg)
 
 <p align="center">
@@ -26,12 +24,12 @@ some requirements to take full advantage of the colorscheme:
 Example installation using packer:
 
 ```lua
--- packer
 use "mcchrish/zenbones.nvim"
 
--- Optionally install lush. Useful if you want to extend the theme
+-- Optionally install Lush. Useful if you want to extend the theme
 -- e.g. create a statusline plugin theme using zenbones colors
 use "rktjmp/lush.nvim"
+-- See Advanced Usage section for more details
 ```
 
 ## Usage
@@ -50,8 +48,8 @@ set termguicolors
 colorscheme zenbones-lua
 ```
 
-It works pretty much the same as the first one however you have to also install
-lush.
+It works pretty much the same as the first one but pretty handy when extending
+or customizing the colors to your likings.
 
 ## Showcase
 
@@ -92,14 +90,33 @@ plugins.
 
 ## Advance Usage
 
+Zenbones is pretty extensible thanks to
+[Lush.nvim](https://github.com/rktjmp/lush.nvim). You can easily retrieve the
+colors in lua:
+
+```lua
+local theme = require "zenbones"
+local colors = require "zenbones.colors"
+
+print(theme.StatusLine.bg.hex)
+print(sand.darken(20).hex)
+```
+
+One example of this is the custom [lualine](lua/lualine/themes/zenbones.lua)
+theme.
+
+See also
+[Lush's documentation](https://github.com/rktjmp/lush.nvim#advanced-usage) for
+the complete options.
+
 ## Other implementations
 
 - [iterm2](https://github.com/mcchrish/zenbones-iterm)
 
 ### Print terminal colors
 
-You can retrieve the terminal colors as using this command:
-`lua require('zenbones.print').print_terminal_colors()`. Useful when you want to
+You can retrieve the terminal colors by using this command:
+`:lua require('zenbones.print').print_terminal_colors()`. Useful when you want to
 apply a zenbones theme to your terminal.
 
 ## Inspirations
