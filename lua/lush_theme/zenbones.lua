@@ -199,17 +199,17 @@ local theme = lush(function()
 		-- use these groups, or use their own. Consult your LSP client's
 		-- documentation.
 
-		-- LspReferenceText                     { }, -- used for highlighting "text" references
-		-- LspReferenceRead                     { }, -- used for highlighting "read" references
-		-- LspReferenceWrite                    { }, -- used for highlighting "write" references
+		LspReferenceText                        { ColorColumn }, -- used for highlighting "text" references
+		LspReferenceRead                        { ColorColumn }, -- used for highlighting "read" references
+		LspReferenceWrite                       { ColorColumn }, -- used for highlighting "write" references
 
 		LspDiagnosticsDefaultError              { Error }, -- Used as the base highlight group. Other LspDiagnostic highlights link to this by default (except Underline)
 		LspDiagnosticsDefaultWarning            { WarningMsg }, -- Used as the base highlight group. Other LspDiagnostic highlights link to this by default (except Underline)
 		LspDiagnosticsDefaultInformation        { fg = water }, -- Used as the base highlight group. Other LspDiagnostic highlights link to this by default (except Underline)
 		LspDiagnosticsDefaultHint               { fg = blossom }, -- Used as the base highlight group. Other LspDiagnostic highlights link to this by default (except Underline)
 
-		-- LspDiagnosticsVirtualTextError       { }, -- Used for "Error" diagnostic virtual text
-		-- LspDiagnosticsVirtualTextWarning     { }, -- Used for "Warning" diagnostic virtual text
+		LspDiagnosticsVirtualTextError          { LspDiagnosticsDefaultError, bg = rose.abs_de(42).li(82) }, -- Used for "Error" diagnostic virtual text
+		LspDiagnosticsVirtualTextWarning        { LspDiagnosticsDefaultWarning, bg = wood.de(48).li(84) }, -- Used for "Warning" diagnostic virtual text
 		-- LspDiagnosticsVirtualTextInformation { }, -- Used for "Information" diagnostic virtual text
 		-- LspDiagnosticsVirtualTextHint        { }, -- Used for "Hint" diagnostic virtual text
 
