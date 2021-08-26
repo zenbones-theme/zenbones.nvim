@@ -247,7 +247,12 @@ local theme = lush(function()
 
 		Sneak                   { Search },
 		SneakLabel              { WildMenu },
-		SneakLabelMask          { bg = c.blossom, fg = c.blossom }
+		SneakLabelMask          { bg = c.blossom, fg = c.blossom },
+
+		BufferCurrent { TabLineSel },
+		BufferVisible { fg = StatusLineNC.fg },
+		BufferVisibleSign { fg = StatusLineNC.fg },
+		BufferVisibleIndex { fg = StatusLineNC.fg },
 	}
 end)
 -- stylua: ignore end
