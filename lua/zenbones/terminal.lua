@@ -17,7 +17,7 @@ local colors = {
 	c.water.sa(20).da(8),
 	c.blossom.sa(24).da(6),
 	c.sky.sa(20).da(6),
-	c.sand.sa(8).da(10),
+	c.sand.sa(4).da(10),
 }
 
 local M = { }
