@@ -91,8 +91,8 @@ plugins.
 ## Advance Usage
 
 Zenbones is pretty extensible thanks to
-[Lush.nvim](https://github.com/rktjmp/lush.nvim). You can easily retrieve the
-colors in lua:
+[Lush](https://github.com/rktjmp/lush.nvim). You can easily retrieve the colors
+in lua:
 
 ```lua
 local theme = require "zenbones"
@@ -102,8 +102,7 @@ print(theme.StatusLine.bg.hex)
 print(sand.darken(20).hex)
 ```
 
-One example of this is the custom [lualine](lua/lualine/themes/zenbones.lua)
-theme.
+One such example is the custom [lualine](lua/lualine/themes/zenbones.lua) theme.
 
 See also
 [Lush's documentation](https://github.com/rktjmp/lush.nvim#advanced-usage) for
@@ -119,6 +118,18 @@ You can retrieve the terminal colors by using this command:
 
 ```
 :lua require("zenbones.print").print_terminal_colors()
+
+...
+Terminal colors
+foreground: #2C363C
+background: #F0EDEC
+ansi color0: #2C363C
+ansi color1: #C23C55
+ansi color2: #617437
+ansi color3: #914B27
+ansi color4: #286486
+ansi color5: #88507D
+...
 ```
 
 Useful when you want to apply a zenbones theme to your terminal.
