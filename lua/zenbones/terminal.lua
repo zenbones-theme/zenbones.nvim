@@ -20,7 +20,9 @@ local colors = {
 	c.sand.sa(8).da(10),
 }
 
-local M = { colors }
+local M = { }
+
+M.colors = colors
 
 function M.setup()
 	for i, v in ipairs(colors) do
