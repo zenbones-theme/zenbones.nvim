@@ -9,7 +9,7 @@ It's made using the handy [lush.nvim](https://github.com/rktjmp/lush.nvim).
 ![zenbones-main-image](https://user-images.githubusercontent.com/7200153/130731060-85313919-8a04-45e2-813a-ea67f602d1c5.jpg)
 
 <p align="center">
-A rock garden in <a href="https://en.wikipedia.org/wiki/Ry%C5%8Dan-ji">Ryōan-ji</a>.
+<em>A rock garden in <a href="https://en.wikipedia.org/wiki/Ry%C5%8Dan-ji">Ryōan-ji</a>.</em>
 </p>
 
 ## Requirements
@@ -36,22 +36,22 @@ use "rktjmp/lush.nvim"
 
 ## Usage
 
-Install using your favorite plugin manager and just apply the colorscheme as
-usual:
+Just apply the colorscheme as usual:
 
 ```vim
 set termguicolors
 colorscheme zenbones
 ```
 
-Alternatively, if you want to make use of lua or you forked this repo and
-tweaked the colors to your liking:
+Alternatively, if you want to make use of the lua version:
 
 ```vim
+set termguicolors
 colorscheme zenbones-lua
 ```
 
-To make it work however, you must also install lush.
+It works pretty much the same as the first one however you have to also install
+lush.
 
 ## Showcase
 
@@ -90,6 +90,8 @@ plugins.
 - [sneak](https://github.com/justinmk/vim-sneak)
 - [lualine](https://github.com/hoob3rt/lualine.nvim)
 
+## Advance Usage
+
 ## Other implementations
 
 - [iterm2](https://github.com/mcchrish/zenbones-iterm)
@@ -97,7 +99,8 @@ plugins.
 ### Print terminal colors
 
 You can retrieve the terminal colors as using this command:
-`lua require('zenbones.print').print_terminal_colors()`.
+`lua require('zenbones.print').print_terminal_colors()`. Useful when you want to
+apply a zenbones theme to your terminal.
 
 ## Inspirations
 
