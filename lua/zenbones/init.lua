@@ -78,7 +78,7 @@ local theme = lush(function()
 		StatusLineNC    { bg = c.sand.da(10), fg = c.stone.li(28) }, -- status lines of not-current windows Note: if this is equal to "StatusLine" Vim will use "^^^" in the status line of the current window.
 		TabLine         { StatusLine, gui = "italic" }, -- tab pages line, not active tab page label
 		TabLineFill     { StatusLineNC }, -- tab pages line, where there are no labels
-		TabLineSel      { Bold }, -- tab pages line, active tab page label
+		TabLineSel      { gui = "bold" }, -- tab pages line, active tab page label
 		VertSplit       { fg = c.white }, -- the column separating vertically split windows
 
 		Visual          { bg = c.stone.li(84) }, -- Visual mode selection
@@ -90,9 +90,9 @@ local theme = lush(function()
 		EndOfBuffer     { NonText }, -- filler lines (~) after the end of the buffer.  By default, this is highlighted like |hl-NonText|.
 
 		WildMenu        { bg = c.blossom, fg = c.sand }, -- current match in 'wildmenu' completion
-		Directory       { Bold }, -- directory names (and other special names in listings)
+		Directory       { gui = "bold" }, -- directory names (and other special names in listings)
 		Question        { MoreMsg }, -- |hit-enter| prompt and yes/no questions
-		Title           { Bold }, -- titles for output from ":set all", ":autocmd" etc.
+		Title           { gui = "bold" }, -- titles for output from ":set all", ":autocmd" etc.
 
 
 		-- These groups are not listed as default vim groups,
