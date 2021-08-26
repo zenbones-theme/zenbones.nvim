@@ -70,7 +70,7 @@ or customizing the colors to your likings.
 <details>
     <summary>Diagnostics</summary>
 
-<img width="1128" alt="Diagnostics" src="https://user-images.githubusercontent.com/7200153/130731432-863956db-8061-4edb-b4a3-bf95f4631f5b.png">
+<img width="1128" alt="Diagnostics" src="https://user-images.githubusercontent.com/7200153/130927693-00cd8a6e-7a75-4ebb-9f23-b9322de7933a.png">
 
 </details>
 
