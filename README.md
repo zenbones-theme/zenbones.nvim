@@ -74,7 +74,7 @@ or customizing the colors to your likings.
 
 </details>
 
-_Font used is [Iosevka](https://typeof.net/Iosevka/)_.
+_Font used is [Iosevka Curly Slab](https://typeof.net/Iosevka/)_.
 
 ## Other plugins support
 
