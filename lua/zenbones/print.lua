@@ -22,15 +22,11 @@ function M.print_terminal_colors()
 	table.insert(lines, "selection background: " .. t.Visual.bg.hex)
 
 	local buf = vim.api.nvim_create_buf(false, true)
-	local win = vim.api.nvim_open_win(buf, true, {
-		relative = "editor",
-		width = vim.api.nvim_win_get_width(0) - 2,
-		height = vim.api.nvim_win_get_height(0) - 2,
-		row = 1,
-		col = 1,
-		style = "minimal",
-	})
 	vim.api.nvim_buf_set_lines(buf, 0, -1, false, lines)
+
+	vim.cmd('tabnew')
+	local win = vim.api.nvim_get_current_win()
+	vim.api.nvim_win_set_buf(win, buf)
 end
 
 return M
