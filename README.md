@@ -86,7 +86,7 @@ plugins.
 - [indent-blankline](https://github.com/lukas-reineke/indent-blankline.nvim)
 - [Telescope](https://github.com/nvim-telescope/telescope.nvim)
 - [sneak](https://github.com/justinmk/vim-sneak)
-- [lualine](https://github.com/hoob3rt/lualine.nvim)
+- [lualine](https://github.com/hoob3rt/lualine.nvim) (requires Lush)
 - [barbar.nvim](https://github.com/romgrk/barbar.nvim)
 
 ## Advance Usage
