@@ -58,8 +58,8 @@ local theme = lush(function()
 		FloatBorder     { fg = c.sand.da(50) }, -- Normal text in floating windows.
 		-- NormalNC     { }, -- normal text in non-current windows
 
-		Pmenu           { bg = c.sand.da(10) }, -- Popup menu: normal item.
-		PmenuSel        { bg = c.sand.da(20) }, -- Popup menu: selected item.
+		Pmenu           { bg = c.sand.da(12) }, -- Popup menu: normal item.
+		PmenuSel        { bg = c.sand.da(22) }, -- Popup menu: selected item.
 		PmenuSbar       { bg = c.sand.da(30) }, -- Popup menu: scrollbar.
 		PmenuThumb      { bg = c.white }, -- Popup menu: Thumb of the scrollbar.
 
@@ -74,7 +74,7 @@ local theme = lush(function()
 		SpellLocal      { SpellCap }, -- Word that is recognized by the spellchecker as one that is used in another region. |spell| Combined with the highlighting used otherwise.
 		SpellRare       { SpellBad, guisp = c.wood }, -- Word that is recognized by the spellchecker as one that is hardly ever used.  |spell| Combined with the highlighting used otherwise.
 
-		StatusLine      { bg = c.sand.da(16), fg = c.stone }, -- status line of current window
+		StatusLine      { bg = c.sand.da(14), fg = c.stone }, -- status line of current window
 		StatusLineNC    { bg = c.sand.da(10), fg = c.stone.li(28) }, -- status lines of not-current windows Note: if this is equal to "StatusLine" Vim will use "^^^" in the status line of the current window.
 		TabLine         { StatusLine, gui = "italic" }, -- tab pages line, not active tab page label
 		TabLineFill     { StatusLineNC }, -- tab pages line, where there are no labels
