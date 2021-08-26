@@ -9,6 +9,7 @@ local config = {
 	rose = hsluv(5, 70, 46),
 	wood = hsluv(28, 80, 40),
 	blossom = hsluv(318, 42, 42),
+	sky = hsluv(204, 80, 53),
 }
 
 config.white = config.sand.li(58)
