@@ -21,6 +21,19 @@ some requirements to take full advantage of the colorscheme:
 - Font with bold and italic
 - Terminal or GUI with bold and italic support
 
+## Installation
+
+Example installation using packer:
+
+```lua
+-- packer
+use "mcchrish/zenbones.nvim"
+
+-- Optionally install lush. Useful if you want to extend the theme
+-- e.g. create a statusline plugin theme using zenbones colors
+use "rktjmp/lush.nvim"
+```
+
 ## Usage
 
 Install using your favorite plugin manager and just apply the colorscheme as
