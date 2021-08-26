@@ -11,12 +11,12 @@ local colors = {
 	c.sky,
 	c.sand,
 	c.stone.li(16),
-	c.rose.sa(20).da(8),
-	c.leaf.sa(20).da(8),
-	c.wood.sa(18).da(8),
-	c.water.sa(20).da(8),
-	c.blossom.sa(24).da(6),
-	c.sky.sa(20).da(6),
+	c.rose.sa(20).da(10),
+	c.leaf.sa(20).da(10),
+	c.wood.sa(18).da(10),
+	c.water.sa(20).da(10),
+	c.blossom.sa(24).da(10),
+	c.sky.sa(20).da(10),
 	c.sand.sa(4).da(10),
 }
 
