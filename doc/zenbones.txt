@@ -15,20 +15,21 @@ Table of Contents                                 *zenbones-table-of-contents*
 ==============================================================================
 1. Zenbones                                                *zenbones-zenbones*
 
-Zenbones is a light vim/nvim |'colorscheme'| designed to highlight code using
+Zenbones is a light vim/nvim |colorscheme| designed to highlight code using
 contrasts and font variations. Colors are tasked only for other roles such as
 diagnostics, diffs, search matches.
 
-<div class="figure">
-<img src="https://user-images.githubusercontent.com/7200153/131045472-05c76909-0071-4c24-bd30-f15da3ae4e82.jpg" title="fig:"/>
-<p class="caption">Zenbones main image</p>
-</div>
 
-<p align="center">
 
-<em>A rock garden in <a href="https://en.wikipedia.org/wiki/Ry%C5%8Dan-ji">Ryōan-ji</a>.</em>
 
-</p>
+
+
+
+
+
+
+
+
 
 REQUIREMENTS                                           *zenbones-requirements*
 
@@ -80,41 +81,41 @@ or customizing the colors to your likings.
 
 
 
-<details>
-
-<summary>
 
 
 
-</summary>
 
 
 
-</details>
-
-<details>
-
-<summary>
 
 
 
-</summary>
 
 
 
-</details>
-
-<details>
-
-<summary>
 
 
 
-</summary>
 
 
 
-</details>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
