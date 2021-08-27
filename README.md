@@ -1,8 +1,9 @@
 # Zenbones
 
-Zenbones is a light vim/nvim colorscheme designed to highlight code using
-contrasts and font variations. Colors are tasked only for other roles such as
-diagnostics, diffs, search matches.
+Zenbones is a light vim/nvim
+[colorscheme](https://neovim.io/doc/user/syntax.html#:colorscheme) designed to
+highlight code using contrasts and font variations. Colors are tasked only for
+other roles such as diagnostics, diffs, search matches.
 
 ![Zenbones main image](https://user-images.githubusercontent.com/7200153/131045472-05c76909-0071-4c24-bd30-f15da3ae4e82.jpg)
 
@@ -15,9 +16,9 @@ diagnostics, diffs, search matches.
 Primarily built for nvim but it works pretty well with vim. However here are
 some requirements to take full advantage of the colorscheme:
 
-- 24-bit RGB colors (nvim or vim compiled with +termguicolors)
-- Font with bold and italic
-- Terminal or GUI with bold and italic support
+-   24-bit RGB colors (nvim or vim compiled with +termguicolors)
+-   Font with bold and italic
+-   Terminal or GUI with bold and italic support
 
 ## Installation
 
@@ -52,6 +53,7 @@ It works pretty much the same as the first one but pretty handy when extending
 or customizing the colors to your likings.
 
 <!-- panvimdoc-ignore-start -->
+
 ## Showcase
 
 <details>
@@ -76,6 +78,7 @@ or customizing the colors to your likings.
 </details>
 
 _Font used is [Iosevka Curly Slab](https://typeof.net/Iosevka/)_.
+
 <!-- panvimdoc-ignore-end -->
 
 ## Other plugins support
@@ -84,12 +87,12 @@ Aside from LSP and basic Tree-sitter support, there are only a few plugins that
 are currently supported. Please feel free to open a PR to support your favorite
 plugins.
 
-- [gitsigns](https://github.com/lewis6991/gitsigns.nvim)
-- [indent-blankline](https://github.com/lukas-reineke/indent-blankline.nvim)
-- [Telescope](https://github.com/nvim-telescope/telescope.nvim)
-- [sneak](https://github.com/justinmk/vim-sneak)
-- [lualine](https://github.com/hoob3rt/lualine.nvim) (requires Lush)
-- [barbar.nvim](https://github.com/romgrk/barbar.nvim)
+-   [gitsigns](https://github.com/lewis6991/gitsigns.nvim)
+-   [indent-blankline](https://github.com/lukas-reineke/indent-blankline.nvim)
+-   [Telescope](https://github.com/nvim-telescope/telescope.nvim)
+-   [sneak](https://github.com/justinmk/vim-sneak)
+-   [lualine](https://github.com/hoob3rt/lualine.nvim) (requires Lush)
+-   [barbar.nvim](https://github.com/romgrk/barbar.nvim)
 
 ## Advance Usage
 
@@ -113,7 +116,7 @@ the complete options.
 
 ## Other implementations
 
-- [iterm2](https://github.com/mcchrish/zenbones-iterm)
+-   [iterm2](https://github.com/mcchrish/zenbones-iterm)
 
 ### Print terminal colors
 
