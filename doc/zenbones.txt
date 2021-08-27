@@ -110,11 +110,9 @@ OTHER IMPLEMENTATIONS                         *zenbones-other-implementations*
 - iterm2 <https://github.com/mcchrish/zenbones-iterm>
 
 
-                                              *zenbones-Print terminal colors*
+PRINT TERMINAL COLORS
 
-Print terminal colors                  You can retrieve the terminal colors by
-                                       using this command:
-
+You can retrieve the terminal colors by using this command:
 
 >
     :lua require("zenbones.print").print_terminal_colors()
