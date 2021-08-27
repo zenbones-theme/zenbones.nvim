@@ -1,9 +1,17 @@
-zenbones.txt            For NVIM v0.4.3            Last change: 2021 August 27
+*zenbones.txt*           For NVIM v0.4.3           Last change: 2021 August 27
 
 ==============================================================================
 Table of Contents                                 *zenbones-table-of-contents*
 
 1. Zenbones                                                |zenbones-zenbones|
+  - Requirements                                       |zenbones-requirements|
+  - Installation                                       |zenbones-installation|
+  - Usage                                                     |zenbones-usage|
+  - Showcase                                               |zenbones-showcase|
+  - Other plugins support                     |zenbones-other-plugins-support|
+  - Advance Usage                                     |zenbones-advance-usage|
+  - Other implementations                     |zenbones-other-implementations|
+  - Inspirations                                       |zenbones-inspirations|
 
 ==============================================================================
 1. Zenbones                                                *zenbones-zenbones*
@@ -23,7 +31,7 @@ diagnostics, diffs, search matches.
 
 </p>
 
-REQUIREMENTS                                           *zenbones-requirements*
+REQUIREMENTS                                       *zenbones-requirements*
 
 Primarily built for nvim but it works pretty well with vim. However here are
 some requirements to take full advantage of the colorscheme:
@@ -34,7 +42,7 @@ some requirements to take full advantage of the colorscheme:
 - Terminal or GUI with bold and italic support
 
 
-INSTALLATION                                           *zenbones-installation*
+INSTALLATION                                       *zenbones-installation*
 
 Example installation using packer:
 
@@ -48,7 +56,7 @@ Example installation using packer:
 <
 
 
-USAGE                                                         *zenbones-usage*
+USAGE                                                     *zenbones-usage*
 
 Just apply the colorscheme as usual:
 
@@ -69,7 +77,7 @@ Alternatively, if you want to make use of the lua version:
 It works pretty much the same as the first one but pretty handy when extending
 or customizing the colors to your likings.
 
-SHOWCASE                                                   *zenbones-showcase*
+SHOWCASE                                               *zenbones-showcase*
 
 <details>
 
@@ -110,27 +118,27 @@ src="https://user-images.githubusercontent.com/7200153/130927693-00cd8a6e-7a75-4
 
 </details>
 
-_Font used is |Iosevka Curly Slab|_.
+_Font used is |zenbones-Iosevka-Curly-Slab|_.
 
-OTHER PLUGINS SUPPORT                         *zenbones-other-plugins-support*
+OTHER PLUGINS SUPPORT                     *zenbones-other-plugins-support*
 
 Aside from LSP and basic Tree-sitter support, there are only a few plugins that
 are currently supported. Please feel free to open a PR to support your favorite
 plugins.
 
 
-- |gitsigns|
-- |indent-blankline|
-- |Telescope|
-- |sneak|
-- |lualine| (requires Lush)
-- |barbar.nvim|
+- |zenbones-gitsigns|
+- |zenbones-indent-blankline|
+- |zenbones-Telescope|
+- |zenbones-sneak|
+- |zenbones-lualine| (requires Lush)
+- |zenbones-barbar.nvim|
 
 
-ADVANCE USAGE                                         *zenbones-advance-usage*
+ADVANCE USAGE                                     *zenbones-advance-usage*
 
-Zenbones is pretty extensible thanks to |Lush|. You can easily retrieve the
-colors in lua:
+Zenbones is pretty extensible thanks to |zenbones-Lush|. You can easily
+retrieve the colors in lua:
 
 >
     local theme = require "zenbones"
@@ -141,14 +149,14 @@ colors in lua:
 <
 
 
-One such example is the custom |lualine| theme.
+One such example is the custom |zenbones-lualine| theme.
 
-See also |Lush’s documentation| for the complete options.
+See also |zenbones-Lush’s-documentation| for the complete options.
 
-OTHER IMPLEMENTATIONS                         *zenbones-other-implementations*
+OTHER IMPLEMENTATIONS                     *zenbones-other-implementations*
 
 
-- |iterm2|
+- |zenbones-iterm2|
 
 
                                               *zenbones-Print terminal colors*
@@ -176,28 +184,31 @@ Print terminal colors                  You can retrieve the terminal colors by
 
 Useful when you want to apply a zenbones theme to your terminal.
 
-INSPIRATIONS                                           *zenbones-inspirations*
+INSPIRATIONS                                       *zenbones-inspirations*
 
-Zenbones is heavily inspired by |Verdandi| and |vim-yin-yang|. The name came
-from a book called |Zen Flesh, Zen Bones|.
+Zenbones is heavily inspired by |zenbones-Verdandi| and
+|zenbones-vim-yin-yang|. The name came from a book called
+|zenbones-Zen-Flesh,-Zen-Bones|.
 
-There are more similar |colorschemes with few colors from this collection|.
+There are more similar
+|zenbones-colorschemes-with-few-colors-from-this-collection|.
 ==============================================================================
-Links                                                         *zenbones-links*
+2. Links                                                      *zenbones-links*
 
-- *gitsigns*                        https://github.com/lewis6991/gitsigns.nvim
-- *Zen Flesh, Zen Bones*    https://en.wikipedia.org/wiki/Zen_Flesh,_Zen_Bones
-- *sneak*                                https://github.com/justinmk/vim-sneak
-- *barbar.nvim*                          https://github.com/romgrk/barbar.nvim
-- *vim-yin-yang*                      https://github.com/pgdouyon/vim-yin-yang
-- *Verdandi*                    https://github.com/be5invis/vsc-theme-verdandi
-- *Lush*                                   https://github.com/rktjmp/lush.nvim
-- *colorschemes with few colors from this collection*    https://github.com/mcchrish/vim-no-color-collections
-- *indent-blankline*    https://github.com/lukas-reineke/indent-blankline.nvim
-- *Lush’s documentation*    https://github.com/rktjmp/lush.nvim#advanced-usage
-- *iterm2*                          https://github.com/mcchrish/zenbones-iterm
-- *Telescope*                 https://github.com/nvim-telescope/telescope.nvim
-- *Iosevka Curly Slab*                             https://typeof.net/Iosevka/
-- *lualine*                                    lua/lualine/themes/zenbones.lua
+1. *zenbones-Iosevka-Curly-Slab*: https://typeof.net/Iosevka/
+2. *zenbones-gitsigns*: https://github.com/lewis6991/gitsigns.nvim
+3. *zenbones-indent-blankline*: https://github.com/lukas-reineke/indent-blankline.nvim
+4. *zenbones-Telescope*: https://github.com/nvim-telescope/telescope.nvim
+5. *zenbones-sneak*: https://github.com/justinmk/vim-sneak
+6. *zenbones-lualine*: https://github.com/hoob3rt/lualine.nvim
+7. *zenbones-barbar.nvim*: https://github.com/romgrk/barbar.nvim
+8. *zenbones-Lush*: https://github.com/rktjmp/lush.nvim
+9. *zenbones-lualine*: lua/lualine/themes/zenbones.lua
+10. *zenbones-Lush’s-documentation*: https://github.com/rktjmp/lush.nvim#advanced-usage
+11. *zenbones-iterm2*: https://github.com/mcchrish/zenbones-iterm
+12. *zenbones-Verdandi*: https://github.com/be5invis/vsc-theme-verdandi
+13. *zenbones-vim-yin-yang*: https://github.com/pgdouyon/vim-yin-yang
+14. *zenbones-Zen-Flesh,-Zen-Bones*: https://en.wikipedia.org/wiki/Zen_Flesh,_Zen_Bones
+15. *zenbones-colorschemes-with-few-colors-from-this-collection*: https://github.com/mcchrish/vim-no-color-collections
 
 vim:tw=78:ts=8:noet:ft=help:norl:
