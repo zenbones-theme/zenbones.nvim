@@ -185,19 +185,19 @@ There are more similar |colorschemes with few colors from this collection|.
 ==============================================================================
 Links                                                         *zenbones-links*
 
-- *Iosevka Curly Slab*                             https://typeof.net/Iosevka/
-- *barbar.nvim*                          https://github.com/romgrk/barbar.nvim
-- *lualine*                                    lua/lualine/themes/zenbones.lua
-- *sneak*                                https://github.com/justinmk/vim-sneak
-- *colorschemes with few colors from this collection*    https://github.com/mcchrish/vim-no-color-collections
-- *vim-yin-yang*                      https://github.com/pgdouyon/vim-yin-yang
-- *Lush’s documentation*    https://github.com/rktjmp/lush.nvim#advanced-usage
-- *Verdandi*                    https://github.com/be5invis/vsc-theme-verdandi
-- *indent-blankline*    https://github.com/lukas-reineke/indent-blankline.nvim
-- *iterm2*                          https://github.com/mcchrish/zenbones-iterm
-- *Zen Flesh, Zen Bones*    https://en.wikipedia.org/wiki/Zen_Flesh,_Zen_Bones
-- *Lush*                                   https://github.com/rktjmp/lush.nvim
 - *gitsigns*                        https://github.com/lewis6991/gitsigns.nvim
+- *Zen Flesh, Zen Bones*    https://en.wikipedia.org/wiki/Zen_Flesh,_Zen_Bones
+- *sneak*                                https://github.com/justinmk/vim-sneak
+- *barbar.nvim*                          https://github.com/romgrk/barbar.nvim
+- *vim-yin-yang*                      https://github.com/pgdouyon/vim-yin-yang
+- *Verdandi*                    https://github.com/be5invis/vsc-theme-verdandi
+- *Lush*                                   https://github.com/rktjmp/lush.nvim
+- *colorschemes with few colors from this collection*    https://github.com/mcchrish/vim-no-color-collections
+- *indent-blankline*    https://github.com/lukas-reineke/indent-blankline.nvim
+- *Lush’s documentation*    https://github.com/rktjmp/lush.nvim#advanced-usage
+- *iterm2*                          https://github.com/mcchrish/zenbones-iterm
 - *Telescope*                 https://github.com/nvim-telescope/telescope.nvim
+- *Iosevka Curly Slab*                             https://typeof.net/Iosevka/
+- *lualine*                                    lua/lualine/themes/zenbones.lua
 
 vim:tw=78:ts=8:noet:ft=help:norl:
