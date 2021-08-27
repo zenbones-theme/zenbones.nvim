@@ -51,6 +51,7 @@ colorscheme zenbones-lush
 It works pretty much the same as the first one but pretty handy when extending
 or customizing the colors to your likings.
 
+<!-- panvimdoc-ignore-start -->
 ## Showcase
 
 <details>
@@ -75,6 +76,7 @@ or customizing the colors to your likings.
 </details>
 
 _Font used is [Iosevka Curly Slab](https://typeof.net/Iosevka/)_.
+<!-- panvimdoc-ignore-end -->
 
 ## Other plugins support
 
