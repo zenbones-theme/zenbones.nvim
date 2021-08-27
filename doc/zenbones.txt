@@ -30,7 +30,7 @@ diagnostics, diffs, search matches.
 
 </p>
 
-REQUIREMENTS                                       *zenbones-requirements*
+REQUIREMENTS                                           *zenbones-requirements*
 
 Primarily built for nvim but it works pretty well with vim. However here are
 some requirements to take full advantage of the colorscheme:
@@ -41,7 +41,7 @@ some requirements to take full advantage of the colorscheme:
 - Terminal or GUI with bold and italic support
 
 
-INSTALLATION                                       *zenbones-installation*
+INSTALLATION                                           *zenbones-installation*
 
 Example installation using packer:
 
@@ -55,7 +55,7 @@ Example installation using packer:
 <
 
 
-USAGE                                                     *zenbones-usage*
+USAGE                                                         *zenbones-usage*
 
 Just apply the colorscheme as usual:
 
@@ -120,25 +120,26 @@ or customizing the colors to your likings.
 
 
 
-OTHER PLUGINS SUPPORT                     *zenbones-other-plugins-support*
+OTHER PLUGINS SUPPORT                         *zenbones-other-plugins-support*
 
 Aside from LSP and basic Tree-sitter support, there are only a few plugins that
 are currently supported. Please feel free to open a PR to support your favorite
 plugins.
 
 
-- |zenbones-gitsigns|
-- |zenbones-indent-blankline|
-- |zenbones-Telescope|
-- |zenbones-sneak|
-- |zenbones-lualine| (requires Lush)
-- |zenbones-barbar.nvim|
+- gitsigns <https://github.com/lewis6991/gitsigns.nvim>
+- indent-blankline <https://github.com/lukas-reineke/indent-blankline.nvim>
+- Telescope <https://github.com/nvim-telescope/telescope.nvim>
+- sneak <https://github.com/justinmk/vim-sneak>
+- lualine <https://github.com/hoob3rt/lualine.nvim> (requires Lush)
+- barbar.nvim <https://github.com/romgrk/barbar.nvim>
 
 
-ADVANCE USAGE                                     *zenbones-advance-usage*
+ADVANCE USAGE                                         *zenbones-advance-usage*
 
-Zenbones is pretty extensible thanks to |zenbones-Lush|. You can easily
-retrieve the colors in lua:
+Zenbones is pretty extensible thanks to Lush
+<https://github.com/rktjmp/lush.nvim>. You can easily retrieve the colors in
+lua:
 
 >
     local theme = require "zenbones"
@@ -149,14 +150,15 @@ retrieve the colors in lua:
 <
 
 
-One such example is the custom |zenbones-lualine| theme.
+One such example is the custom lualine <lua/lualine/themes/zenbones.lua> theme.
 
-See also |zenbones-Lush’s-documentation| for the complete options.
+See also Lush’s documentation
+<https://github.com/rktjmp/lush.nvim#advanced-usage> for the complete options.
 
-OTHER IMPLEMENTATIONS                     *zenbones-other-implementations*
+OTHER IMPLEMENTATIONS                         *zenbones-other-implementations*
 
 
-- |zenbones-iterm2|
+- iterm2 <https://github.com/mcchrish/zenbones-iterm>
 
 
                                               *zenbones-Print terminal colors*
@@ -184,30 +186,17 @@ Print terminal colors                  You can retrieve the terminal colors by
 
 Useful when you want to apply a zenbones theme to your terminal.
 
-INSPIRATIONS                                       *zenbones-inspirations*
+INSPIRATIONS                                           *zenbones-inspirations*
 
-Zenbones is heavily inspired by |zenbones-Verdandi| and
-|zenbones-vim-yin-yang|. The name came from a book called
-|zenbones-Zen-Flesh,-Zen-Bones|.
+Zenbones is heavily inspired by Verdandi
+<https://github.com/be5invis/vsc-theme-verdandi> and vim-yin-yang
+<https://github.com/pgdouyon/vim-yin-yang>. The name came from a book called
+Zen Flesh, Zen Bones <https://en.wikipedia.org/wiki/Zen_Flesh,_Zen_Bones>.
 
-There are more similar
-|zenbones-colorschemes-with-few-colors-from-this-collection|.
+There are more similar colorschemes with few colors from this collection
+<https://github.com/mcchrish/vim-no-color-collections>.
 ==============================================================================
 2. Links                                                      *zenbones-links*
 
-1. *zenbones-gitsigns*: https://github.com/lewis6991/gitsigns.nvim
-2. *zenbones-indent-blankline*: https://github.com/lukas-reineke/indent-blankline.nvim
-3. *zenbones-Telescope*: https://github.com/nvim-telescope/telescope.nvim
-4. *zenbones-sneak*: https://github.com/justinmk/vim-sneak
-5. *zenbones-lualine*: https://github.com/hoob3rt/lualine.nvim
-6. *zenbones-barbar.nvim*: https://github.com/romgrk/barbar.nvim
-7. *zenbones-Lush*: https://github.com/rktjmp/lush.nvim
-8. *zenbones-lualine*: lua/lualine/themes/zenbones.lua
-9. *zenbones-Lush’s-documentation*: https://github.com/rktjmp/lush.nvim#advanced-usage
-10. *zenbones-iterm2*: https://github.com/mcchrish/zenbones-iterm
-11. *zenbones-Verdandi*: https://github.com/be5invis/vsc-theme-verdandi
-12. *zenbones-vim-yin-yang*: https://github.com/pgdouyon/vim-yin-yang
-13. *zenbones-Zen-Flesh,-Zen-Bones*: https://en.wikipedia.org/wiki/Zen_Flesh,_Zen_Bones
-14. *zenbones-colorschemes-with-few-colors-from-this-collection*: https://github.com/mcchrish/vim-no-color-collections
 
 vim:tw=78:ts=8:noet:ft=help:norl:
