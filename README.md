@@ -5,11 +5,15 @@ Zenbones is a light vim/nvim
 highlight code using contrasts and font variations. Colors are tasked only for
 other roles such as diagnostics, diffs, search matches.
 
+<!-- panvimdoc-ignore-start -->
+
 ![Zenbones main image](https://user-images.githubusercontent.com/7200153/131045472-05c76909-0071-4c24-bd30-f15da3ae4e82.jpg)
 
 <p align="center">
 <em>A rock garden in <a href="https://en.wikipedia.org/wiki/Ry%C5%8Dan-ji">Ryōan-ji</a>.</em>
 </p>
+
+<!-- panvimdoc-ignore-end -->
 
 ## Requirements
 
