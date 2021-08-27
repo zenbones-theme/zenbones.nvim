@@ -34,3 +34,4 @@ jobs:
         with:
           commit_message: "auto generate docs"
           branch: ${{ github.head_ref }}
+          file_pattern: doc/zenbones.txt
