@@ -37,12 +37,14 @@ local theme = lush(function()
 
 		CursorLine      { bg = c.sand.da(4) }, -- Screen-line at the cursor, when 'cursorline' is set.  Low-priority if foreground (ctermfg OR guifg) is not set.
 		CursorColumn    { CursorLine }, -- Screen-column at the cursor, when 'cursorcolumn' is set.
-		ColorColumn     { bg = c.wood.de(40).li(80) }, -- used for the columns set with 'colorcolumn'
+		ColorColumn     { bg = c.wood.de(38).li(80) }, -- used for the columns set with 'colorcolumn'
 
-		DiffAdd         { bg = c.leaf.de(48).li(64) }, -- diff mode: Added line |diff.txt|
-		DiffChange      { bg = c.water.de(18).li(68) }, -- diff mode: Changed line |diff.txt|
-		DiffDelete      { bg = c.rose.de(22).li(60) }, -- diff mode: Deleted line |diff.txt|
-		DiffText        { bg = c.water.de(18).li(56), fg = c.stone }, -- diff mode: Changed text within a changed line |diff.txt|
+		DiffAdds         { bg = c.leaf.de(74).li(86) }, -- diff mode: Added line |diff.txt|
+
+		DiffAdd         { bg = c.leaf.de(77).li(82) }, -- diff mode: Added line |diff.txt|
+		DiffChange      { bg = c.water.de(22).li(76) }, -- diff mode: Changed line |diff.txt|
+		DiffDelete      { bg = c.rose.de(32).li(74) }, -- diff mode: Deleted line |diff.txt|
+		DiffText        { bg = c.water.de(24).li(64), fg = c.stone }, -- diff mode: Changed text within a changed line |diff.txt|
 
 		LineNr          { fg = c.sand.da(36) }, -- Line number for ":number" and ":#" commands, and when 'number' or 'relativenumber' option is set.
 		SignColumn      { LineNr }, -- column where |signs| are displayed
@@ -54,13 +56,13 @@ local theme = lush(function()
 		-- MsgArea      { }, -- Area for messages and cmdline
 		-- MsgSeparator { }, -- Separator for scrolled messages, `msgsep` flag of 'display'
 		MoreMsg         { fg = c.leaf, gui = "bold" }, -- |more-prompt|
-		NormalFloat     { bg = c.sand.da(7) }, -- Normal text in floating windows.
+		NormalFloat     { bg = c.sand.da(6) }, -- Normal text in floating windows.
 		FloatBorder     { fg = c.sand.da(50) }, -- Normal text in floating windows.
 		-- NormalNC     { }, -- normal text in non-current windows
 
-		Pmenu           { bg = c.sand.da(12) }, -- Popup menu: normal item.
-		PmenuSel        { bg = c.sand.da(22) }, -- Popup menu: selected item.
-		PmenuSbar       { bg = c.sand.da(30) }, -- Popup menu: scrollbar.
+		Pmenu           { bg = c.sand.da(10) }, -- Popup menu: normal item.
+		PmenuSel        { bg = c.sand.da(20) }, -- Popup menu: selected item.
+		PmenuSbar       { bg = c.sand.da(28) }, -- Popup menu: scrollbar.
 		PmenuThumb      { bg = c.white }, -- Popup menu: Thumb of the scrollbar.
 
 		Search          { bg = c.blossom.de(10).lighten(54), fg = c.stone }, -- Last search pattern highlighting (see 'hlsearch').  Also used for similar items that need to stand out.
@@ -69,7 +71,7 @@ local theme = lush(function()
 		MatchParen      { Search }, -- The character under the cursor or just before it, if it is a paired bracket, and its match. |pi_paren.txt|
 		-- QuickFixLine { }, -- Current |quickfix| item in the quickfix window. Combined with |hl-CursorLine| when the cursor is there.
 
-		SpellBad        { fg = Error.fg.de(40), gui = "undercurl", guisp = Error.fg }, -- Word that is not recognized by the spellchecker. |spell| Combined with the highlighting used otherwise.
+		SpellBad        { fg = Error.fg.de(30), gui = "undercurl", guisp = Error.fg }, -- Word that is not recognized by the spellchecker. |spell| Combined with the highlighting used otherwise.
 		SpellCap        { SpellBad, guisp = Error.fg.li(10) }, -- Word that should start with a capital. |spell| Combined with the highlighting used otherwise.
 		SpellLocal      { SpellCap }, -- Word that is recognized by the spellchecker as one that is used in another region. |spell| Combined with the highlighting used otherwise.
 		SpellRare       { SpellBad, guisp = c.wood }, -- Word that is recognized by the spellchecker as one that is hardly ever used.  |spell| Combined with the highlighting used otherwise.
@@ -155,8 +157,8 @@ local theme = lush(function()
 		LspDiagnosticsDefaultInformation        { fg = c.water }, -- Used as the base highlight group. Other LspDiagnostic highlights link to this by default (except Underline)
 		LspDiagnosticsDefaultHint               { fg = c.blossom }, -- Used as the base highlight group. Other LspDiagnostic highlights link to this by default (except Underline)
 
-		LspDiagnosticsVirtualTextError          { LspDiagnosticsDefaultError, bg = c.rose.abs_de(42).li(82) }, -- Used for "Error" diagnostic virtual text
-		LspDiagnosticsVirtualTextWarning        { LspDiagnosticsDefaultWarning, bg = c.wood.de(48).li(84) }, -- Used for "Warning" diagnostic virtual text
+		LspDiagnosticsVirtualTextError          { LspDiagnosticsDefaultError, bg = c.rose.abs_de(48).li(82) }, -- Used for "Error" diagnostic virtual text
+		LspDiagnosticsVirtualTextWarning        { LspDiagnosticsDefaultWarning, bg = c.wood.de(58).li(86) }, -- Used for "Warning" diagnostic virtual text
 		-- LspDiagnosticsVirtualTextInformation { }, -- Used for "Information" diagnostic virtual text
 		-- LspDiagnosticsVirtualTextHint        { }, -- Used for "Hint" diagnostic virtual text
 
@@ -249,10 +251,10 @@ local theme = lush(function()
 		SneakLabel              { WildMenu },
 		SneakLabelMask          { bg = c.blossom, fg = c.blossom },
 
-		BufferCurrent { TabLineSel },
-		BufferVisible { fg = StatusLineNC.fg },
-		BufferVisibleSign { fg = StatusLineNC.fg },
-		BufferVisibleIndex { fg = StatusLineNC.fg },
+		BufferCurrent           { TabLineSel },
+		BufferVisible           { fg = StatusLineNC.fg },
+		BufferVisibleSign       { fg = StatusLineNC.fg },
+		BufferVisibleIndex      { fg = StatusLineNC.fg },
 	}
 end)
 -- stylua: ignore end

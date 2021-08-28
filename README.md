@@ -63,21 +63,21 @@ or customizing the colors to your likings.
 <details>
     <summary>Diff highlights</summary>
 
-<img width="1128" alt="Vim diff" src="https://user-images.githubusercontent.com/7200153/130730698-38c2f493-4161-4146-bb68-00cd9a87d2bd.png">
+<img width="1120" alt="Vim diff" src="https://user-images.githubusercontent.com/7200153/131212101-3a3b4083-f3ae-4dfc-ab1f-133cf3600a01.png">
 
 </details>
  
 <details>
     <summary>Search</summary>
 
-<img width="1128" alt="Search" src="https://user-images.githubusercontent.com/7200153/130731292-928fcffc-c252-425c-8c61-e292df3fa478.png">
+<img width="1128" alt="Search" src="https://user-images.githubusercontent.com/7200153/131212102-620323dc-01db-4e40-ae74-640a00368121.png">
 
 </details>
 
 <details>
     <summary>Diagnostics</summary>
 
-<img width="1128" alt="Diagnostics" src="https://user-images.githubusercontent.com/7200153/130927693-00cd8a6e-7a75-4ebb-9f23-b9322de7933a.png">
+<img width="1128" alt="Diagnostics" src="https://user-images.githubusercontent.com/7200153/131212106-b515ba76-d157-46b3-b1cb-c72811abbff3.png">
 
 </details>
 
