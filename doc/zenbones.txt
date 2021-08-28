@@ -1,4 +1,4 @@
-*zenbones.txt*           For NVIM v0.4.3           Last change: 2021 August 27
+*zenbones.txt*           For NVIM v0.4.3           Last change: 2021 August 28
 
 ==============================================================================
 Table of Contents                                 *zenbones-table-of-contents*
