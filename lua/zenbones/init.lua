@@ -54,7 +54,7 @@ local theme = lush(function()
 		-- MsgArea      { }, -- Area for messages and cmdline
 		-- MsgSeparator { }, -- Separator for scrolled messages, `msgsep` flag of 'display'
 		MoreMsg         { fg = c.leaf, gui = "bold" }, -- |more-prompt|
-		NormalFloat     { bg = c.sand.da(7) }, -- Normal text in floating windows.
+		NormalFloat     { bg = c.sand.da(6) }, -- Normal text in floating windows.
 		FloatBorder     { fg = c.sand.da(50) }, -- Normal text in floating windows.
 		-- NormalNC     { }, -- normal text in non-current windows
 
