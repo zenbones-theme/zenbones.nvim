@@ -37,11 +37,11 @@ local theme = lush(function()
 
 		CursorLine      { bg = c.sand.da(4) }, -- Screen-line at the cursor, when 'cursorline' is set.  Low-priority if foreground (ctermfg OR guifg) is not set.
 		CursorColumn    { CursorLine }, -- Screen-column at the cursor, when 'cursorcolumn' is set.
-		ColorColumn     { bg = c.wood.de(40).li(80) }, -- used for the columns set with 'colorcolumn'
+		ColorColumn     { bg = c.wood.de(38).li(80) }, -- used for the columns set with 'colorcolumn'
 
 		DiffAdd         { bg = c.leaf.de(77).li(86) }, -- diff mode: Added line |diff.txt|
 		DiffChange      { bg = c.water.de(24).li(80) }, -- diff mode: Changed line |diff.txt|
-		DiffDelete      { bg = c.rose.de(34).li(74) }, -- diff mode: Deleted line |diff.txt|
+		DiffDelete      { bg = c.rose.de(34).li(78) }, -- diff mode: Deleted line |diff.txt|
 		DiffText        { bg = c.water.de(24).li(66), fg = c.stone }, -- diff mode: Changed text within a changed line |diff.txt|
 
 		LineNr          { fg = c.sand.da(36) }, -- Line number for ":number" and ":#" commands, and when 'number' or 'relativenumber' option is set.
@@ -249,10 +249,10 @@ local theme = lush(function()
 		SneakLabel              { WildMenu },
 		SneakLabelMask          { bg = c.blossom, fg = c.blossom },
 
-		BufferCurrent { TabLineSel },
-		BufferVisible { fg = StatusLineNC.fg },
-		BufferVisibleSign { fg = StatusLineNC.fg },
-		BufferVisibleIndex { fg = StatusLineNC.fg },
+		BufferCurrent           { TabLineSel },
+		BufferVisible           { fg = StatusLineNC.fg },
+		BufferVisibleSign       { fg = StatusLineNC.fg },
+		BufferVisibleIndex      { fg = StatusLineNC.fg },
 	}
 end)
 -- stylua: ignore end
