@@ -39,10 +39,12 @@ local theme = lush(function()
 		CursorColumn    { CursorLine }, -- Screen-column at the cursor, when 'cursorcolumn' is set.
 		ColorColumn     { bg = c.wood.de(38).li(80) }, -- used for the columns set with 'colorcolumn'
 
-		DiffAdd         { bg = c.leaf.de(77).li(86) }, -- diff mode: Added line |diff.txt|
-		DiffChange      { bg = c.water.de(24).li(80) }, -- diff mode: Changed line |diff.txt|
-		DiffDelete      { bg = c.rose.de(34).li(78) }, -- diff mode: Deleted line |diff.txt|
-		DiffText        { bg = c.water.de(24).li(66), fg = c.stone }, -- diff mode: Changed text within a changed line |diff.txt|
+		DiffAdds         { bg = c.leaf.de(74).li(86) }, -- diff mode: Added line |diff.txt|
+
+		DiffAdd         { bg = c.leaf.de(77).li(82) }, -- diff mode: Added line |diff.txt|
+		DiffChange      { bg = c.water.de(22).li(76) }, -- diff mode: Changed line |diff.txt|
+		DiffDelete      { bg = c.rose.de(32).li(74) }, -- diff mode: Deleted line |diff.txt|
+		DiffText        { bg = c.water.de(24).li(64), fg = c.stone }, -- diff mode: Changed text within a changed line |diff.txt|
 
 		LineNr          { fg = c.sand.da(36) }, -- Line number for ":number" and ":#" commands, and when 'number' or 'relativenumber' option is set.
 		SignColumn      { LineNr }, -- column where |signs| are displayed
@@ -58,9 +60,9 @@ local theme = lush(function()
 		FloatBorder     { fg = c.sand.da(50) }, -- Normal text in floating windows.
 		-- NormalNC     { }, -- normal text in non-current windows
 
-		Pmenu           { bg = c.sand.da(12) }, -- Popup menu: normal item.
-		PmenuSel        { bg = c.sand.da(22) }, -- Popup menu: selected item.
-		PmenuSbar       { bg = c.sand.da(30) }, -- Popup menu: scrollbar.
+		Pmenu           { bg = c.sand.da(10) }, -- Popup menu: normal item.
+		PmenuSel        { bg = c.sand.da(20) }, -- Popup menu: selected item.
+		PmenuSbar       { bg = c.sand.da(28) }, -- Popup menu: scrollbar.
 		PmenuThumb      { bg = c.white }, -- Popup menu: Thumb of the scrollbar.
 
 		Search          { bg = c.blossom.de(10).lighten(54), fg = c.stone }, -- Last search pattern highlighting (see 'hlsearch').  Also used for similar items that need to stand out.
