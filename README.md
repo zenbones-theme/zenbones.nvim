@@ -60,26 +60,17 @@ or customizing the colors to your likings.
 
 ## Showcase
 
-<details>
-    <summary>Diff highlights</summary>
+**Diff highlights**
 
 <img width="1120" alt="Vim diff" src="https://user-images.githubusercontent.com/7200153/131212101-3a3b4083-f3ae-4dfc-ab1f-133cf3600a01.png">
 
-</details>
- 
-<details>
-    <summary>Search</summary>
+**Search matches**
 
-<img width="1128" alt="Search" src="https://user-images.githubusercontent.com/7200153/131212102-620323dc-01db-4e40-ae74-640a00368121.png">
+<img width="1128" alt="Search matches" src="https://user-images.githubusercontent.com/7200153/131212102-620323dc-01db-4e40-ae74-640a00368121.png">
 
-</details>
+**LSP diagnostics**
 
-<details>
-    <summary>Diagnostics</summary>
-
-<img width="1128" alt="Diagnostics" src="https://user-images.githubusercontent.com/7200153/131212106-b515ba76-d157-46b3-b1cb-c72811abbff3.png">
-
-</details>
+<img width="1128" alt="LSP diagnostics" src="https://user-images.githubusercontent.com/7200153/131212106-b515ba76-d157-46b3-b1cb-c72811abbff3.png">
 
 _Font used is [Iosevka Curly Slab](https://typeof.net/Iosevka/)_.
 
