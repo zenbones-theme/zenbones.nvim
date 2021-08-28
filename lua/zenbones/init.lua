@@ -39,10 +39,10 @@ local theme = lush(function()
 		CursorColumn    { CursorLine }, -- Screen-column at the cursor, when 'cursorcolumn' is set.
 		ColorColumn     { bg = c.wood.de(40).li(80) }, -- used for the columns set with 'colorcolumn'
 
-		DiffAdd         { bg = c.leaf.de(48).li(64) }, -- diff mode: Added line |diff.txt|
-		DiffChange      { bg = c.water.de(18).li(68) }, -- diff mode: Changed line |diff.txt|
-		DiffDelete      { bg = c.rose.de(22).li(60) }, -- diff mode: Deleted line |diff.txt|
-		DiffText        { bg = c.water.de(18).li(56), fg = c.stone }, -- diff mode: Changed text within a changed line |diff.txt|
+		DiffAdd         { bg = c.leaf.de(77).li(86) }, -- diff mode: Added line |diff.txt|
+		DiffChange      { bg = c.water.de(24).li(80) }, -- diff mode: Changed line |diff.txt|
+		DiffDelete      { bg = c.rose.de(34).li(74) }, -- diff mode: Deleted line |diff.txt|
+		DiffText        { bg = c.water.de(24).li(66), fg = c.stone }, -- diff mode: Changed text within a changed line |diff.txt|
 
 		LineNr          { fg = c.sand.da(36) }, -- Line number for ":number" and ":#" commands, and when 'number' or 'relativenumber' option is set.
 		SignColumn      { LineNr }, -- column where |signs| are displayed
