@@ -155,8 +155,8 @@ local theme = lush(function()
 		LspDiagnosticsDefaultInformation        { fg = c.water }, -- Used as the base highlight group. Other LspDiagnostic highlights link to this by default (except Underline)
 		LspDiagnosticsDefaultHint               { fg = c.blossom }, -- Used as the base highlight group. Other LspDiagnostic highlights link to this by default (except Underline)
 
-		LspDiagnosticsVirtualTextError          { LspDiagnosticsDefaultError, bg = c.rose.abs_de(42).li(82) }, -- Used for "Error" diagnostic virtual text
-		LspDiagnosticsVirtualTextWarning        { LspDiagnosticsDefaultWarning, bg = c.wood.de(48).li(84) }, -- Used for "Warning" diagnostic virtual text
+		LspDiagnosticsVirtualTextError          { LspDiagnosticsDefaultError, bg = c.rose.abs_de(48).li(82) }, -- Used for "Error" diagnostic virtual text
+		LspDiagnosticsVirtualTextWarning        { LspDiagnosticsDefaultWarning, bg = c.wood.de(58).li(86) }, -- Used for "Warning" diagnostic virtual text
 		-- LspDiagnosticsVirtualTextInformation { }, -- Used for "Information" diagnostic virtual text
 		-- LspDiagnosticsVirtualTextHint        { }, -- Used for "Hint" diagnostic virtual text
 
