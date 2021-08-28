@@ -12,6 +12,7 @@ function M.print_terminal_colors()
 
 	for i, v in ipairs(terminal.colors) do
 		table.insert(lines, "ansi color" .. (i - 1) .. ": " .. v.hex)
+		-- table.insert(lines, "let g:terminal_color_" .. (i - 1) .. " = '" .. v.hex .. "'")
 	end
 
 	table.insert(lines, "cursor foreground: " .. t.Cursor.fg.hex)
