@@ -235,6 +235,16 @@ local theme = lush(function()
 		-- TSLiteral			{ };	-- Literal text.
 		-- TSURI				{ };	-- Any URI like a link or email.
 
+		-- Syntax
+		diffAdded		{ fg = c.leaf },
+		diffRemoved		{ fg = c.rose },
+		diffChanged		{ fg = c.water },
+		diffOldFile		{ fg = c.rose, gui = "italic" },
+		diffNewFile		{ fg = c.leaf, gui = "italic" },
+		diffFile		{ fg = c.wood, gui = "bold" },
+		diffLine		{ fg = c.blossom, gui = "bold" },
+		diffIndexLine	{ fg = c.wood },
+
 		-- Other plugins
 		GitSignsAdd					{ fg = c.leaf },
 		GitSignsChange				{ fg = c.water },
