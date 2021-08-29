@@ -1,4 +1,4 @@
-*zenbones.txt*           For NVIM v0.4.3           Last change: 2021 August 28
+*zenbones.txt*           For NVIM v0.4.3           Last change: 2021 August 29
 
 ==============================================================================
 Table of Contents                                 *zenbones-table-of-contents*
@@ -82,6 +82,7 @@ plugins.
 - sneak <https://github.com/justinmk/vim-sneak>
 - lualine <https://github.com/hoob3rt/lualine.nvim> (requires Lush)
 - barbar.nvim <https://github.com/romgrk/barbar.nvim>
+- coc.nvim <https://github.com/neoclide/coc.nvim>
 
 
 ADVANCE USAGE                                         *zenbones-advance-usage*
