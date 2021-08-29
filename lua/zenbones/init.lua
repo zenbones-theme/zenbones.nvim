@@ -257,6 +257,20 @@ local theme = lush(function()
 		BufferVisible           { fg = StatusLineNC.fg },
 		BufferVisibleSign       { fg = StatusLineNC.fg },
 		BufferVisibleIndex      { fg = StatusLineNC.fg },
+
+		CocErrorSign            { LspDiagnosticsDefaultError },
+		CocWarningSign          { LspDiagnosticsDefaultWarning },
+		CocInfoSign             { LspDiagnosticsDefaultInformation },
+		CocHintSign				{ LspDiagnosticsDefaultHint },
+		CocErrorHighlight		{ CocErrorSign, gui = "underline" },
+		CocWarningHighlight		{ CocWarningSign, gui = "underline" },
+		CocInfoHighlight		{ CocInfoSign, gui = "underline" },
+		CocHintHighlight		{ CocHintSign, gui = "underline" },
+		CocErrorVirtualText		{ LspDiagnosticsVirtualTextError },
+		CocWarningVitualText	{ LspDiagnosticsVirtualTextWarning },
+		CocSelectedText			{ SpellBad },
+		CocCodeLens				{ LineNr },
+		CocMarkdownLink			{ fg = c.sky, gui = "underline" }
 	}
 end)
 -- stylua: ignore end

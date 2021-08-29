@@ -88,6 +88,7 @@ plugins.
 -   [sneak](https://github.com/justinmk/vim-sneak)
 -   [lualine](https://github.com/hoob3rt/lualine.nvim) (requires Lush)
 -   [barbar.nvim](https://github.com/romgrk/barbar.nvim)
+-   [coc.nvim](https://github.com/neoclide/coc.nvim)
 
 ## Advance Usage
 

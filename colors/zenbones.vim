@@ -46,7 +46,23 @@ if has('terminal')
                 \ ]
 endif
 
-"Theme built with Lush.nvim, exported at Sat Aug 28 16:51:20 2021
+"Theme built with Lush.nvim, exported at Sun Aug 29 08:37:35 2021
+highlight! link CocWarningSign LspDiagnosticsDefaultWarning
+highlight! link CocInfoSign LspDiagnosticsDefaultInformation
+highlight! link CocHintSign LspDiagnosticsDefaultHint
+highlight CocErrorHighlight guifg=#A8334C guibg=NONE guisp=NONE gui=underline
+highlight CocWarningHighlight guifg=#944927 guibg=NONE guisp=NONE gui=underline
+highlight CocHintHighlight guifg=#88507D guibg=NONE guisp=NONE gui=underline
+highlight VertSplit guifg=#F7F6F5 guibg=NONE guisp=NONE gui=NONE
+highlight Visual guifg=NONE guibg=#D2DFE7 guisp=NONE gui=NONE
+highlight NonText guifg=#C0B0A8 guibg=NONE guisp=NONE gui=NONE
+highlight SpecialKey guifg=#C0B0A8 guibg=NONE guisp=NONE gui=italic
+highlight! link Whitespace NonText
+highlight! link EndOfBuffer NonText
+highlight WildMenu guifg=#F0EDEC guibg=#88507D guisp=NONE gui=NONE
+highlight Directory guifg=NONE guibg=NONE guisp=NONE gui=bold
+highlight! link Question MoreMsg
+highlight Title guifg=NONE guibg=NONE guisp=NONE gui=bold
 highlight Constant guifg=#53636D guibg=NONE guisp=NONE gui=italic
 highlight Identifier guifg=#44525B guibg=NONE guisp=NONE gui=NONE
 highlight Function guifg=#2C363C guibg=NONE guisp=NONE gui=NONE
@@ -56,49 +72,14 @@ highlight Type guifg=#5C534F guibg=NONE guisp=NONE gui=NONE
 highlight Special guifg=#53636D guibg=NONE guisp=NONE gui=bold
 highlight Delimiter guifg=#8E817B guibg=NONE guisp=NONE gui=NONE
 highlight SpecialComment guifg=#948985 guibg=NONE guisp=NONE gui=bold
-highlight Todo guifg=NONE guibg=NONE guisp=NONE gui=bold,underline
-highlight! link LspReferenceText ColorColumn
-highlight! link LspReferenceRead ColorColumn
-highlight! link LspReferenceWrite ColorColumn
-highlight! link LspDiagnosticsDefaultError Error
-highlight! link LspDiagnosticsDefaultWarning WarningMsg
-highlight LspDiagnosticsDefaultInformation guifg=#286486 guibg=NONE guisp=NONE gui=NONE
-highlight LspDiagnosticsDefaultHint guifg=#88507D guibg=NONE guisp=NONE gui=NONE
-highlight LspDiagnosticsVirtualTextError guifg=#A8334C guibg=#E7DDDE guisp=NONE gui=NONE
-highlight LspDiagnosticsVirtualTextWarning guifg=#944927 guibg=#F0E6E4 guisp=NONE gui=NONE
-highlight LspDiagnosticsUnderlineError guifg=#A8334C guibg=NONE guisp=NONE gui=undercurl
-highlight LspDiagnosticsUnderlineWarning guifg=#944927 guibg=NONE guisp=NONE gui=undercurl
-highlight LspDiagnosticsUnderlineInformation guifg=#286486 guibg=NONE guisp=NONE gui=undercurl
-highlight LspDiagnosticsUnderlineHint guifg=#88507D guibg=NONE guisp=NONE gui=undercurl
-highlight! link TSVariable Identifier
-highlight TSTag guifg=#4D5C65 guibg=NONE guisp=NONE gui=bold
-highlight GitSignsAdd guifg=#617437 guibg=NONE guisp=NONE gui=NONE
-highlight GitSignsChange guifg=#286486 guibg=NONE guisp=NONE gui=NONE
-highlight GitSignsDelete guifg=#A8334C guibg=NONE guisp=NONE gui=NONE
-highlight IndentBlanklineChar guifg=#D4CDCA guibg=NONE guisp=NONE gui=NONE
-highlight! link TelescopeSelection CursorLine
-highlight TelescopeSelectionCaret guifg=#A8334C guibg=#E6E1DF guisp=NONE gui=NONE
-highlight TelescopeMatching guifg=#88507D guibg=NONE guisp=NONE gui=bold
-highlight! link TelescopeBorder FloatBorder
-highlight! link Sneak Search
-highlight! link SneakLabel WildMenu
-highlight SneakLabelMask guifg=#88507D guibg=#88507D guisp=NONE gui=NONE
-highlight! link BufferCurrent TabLineSel
-highlight BufferVisible guifg=#596A76 guibg=NONE guisp=NONE gui=NONE
-highlight BufferVisibleSign guifg=#596A76 guibg=NONE guisp=NONE gui=NONE
-highlight BufferVisibleIndex guifg=#596A76 guibg=NONE guisp=NONE gui=NONE
-highlight Bold guifg=NONE guibg=NONE guisp=NONE gui=bold
 highlight Italic guifg=NONE guibg=NONE guisp=NONE gui=italic
+highlight CocInfoHighlight guifg=#286486 guibg=NONE guisp=NONE gui=underline
 highlight Conceal guifg=#4D5C65 guibg=NONE guisp=NONE gui=bold,italic
-highlight WarningMsg guifg=#944927 guibg=NONE guisp=NONE gui=NONE
+highlight! link LspReferenceRead ColorColumn
 highlight Cursor guifg=#F2F0EF guibg=#2C363C guisp=NONE gui=NONE
 highlight lCursor guifg=#F2F0EF guibg=#4D5C65 guisp=NONE gui=NONE
 highlight! link TermCursor Cursor
 highlight! link TermCursorNC lCursor
-highlight Comment guifg=#948985 guibg=NONE guisp=NONE gui=italic
-highlight Underlined guifg=NONE guibg=NONE guisp=NONE gui=underline
-highlight! link ErrorMsg Error
-highlight Normal guifg=#2C363C guibg=#F0EDEC guisp=NONE gui=NONE
 highlight CursorLine guifg=NONE guibg=#E6E1DF guisp=NONE gui=NONE
 highlight! link CursorColumn CursorLine
 highlight ColorColumn guifg=NONE guibg=#EFD8D3 guisp=NONE gui=NONE
@@ -116,14 +97,14 @@ highlight MoreMsg guifg=#617437 guibg=NONE guisp=NONE gui=bold
 highlight NormalFloat guifg=NONE guibg=#E1DCD9 guisp=NONE gui=NONE
 highlight FloatBorder guifg=#786D68 guibg=NONE guisp=NONE gui=NONE
 highlight Pmenu guifg=NONE guibg=#DAD3CF guisp=NONE gui=NONE
-highlight PmenuSel guifg=NONE guibg=#C4B6AF guisp=NONE gui=NONE
+highlight WarningMsg guifg=#944927 guibg=NONE guisp=NONE gui=NONE
 highlight PmenuSbar guifg=NONE guibg=#B2A39B guisp=NONE gui=NONE
 highlight PmenuThumb guifg=NONE guibg=#F7F6F5 guisp=NONE gui=NONE
 highlight Search guifg=#2C363C guibg=#D2A6C8 guisp=NONE gui=NONE
 highlight IncSearch guifg=#F0EDEC guibg=#88507D guisp=NONE gui=bold
 highlight! link MatchParen Search
 highlight SpellBad guifg=#974352 guibg=NONE guisp=NONE gui=undercurl
-highlight Error guifg=#A8334C guibg=NONE guisp=NONE gui=NONE
+highlight BufferVisibleIndex guifg=#596A76 guibg=NONE guisp=NONE gui=NONE
 highlight SpellCap guifg=#974352 guibg=NONE guisp=NONE gui=undercurl
 highlight! link SpellLocal SpellCap
 highlight SpellRare guifg=#974352 guibg=NONE guisp=NONE gui=undercurl
@@ -132,13 +113,46 @@ highlight StatusLineNC guifg=#596A76 guibg=#DAD3CF guisp=NONE gui=NONE
 highlight TabLine guifg=#2C363C guibg=#D1C7C3 guisp=NONE gui=italic
 highlight! link TabLineFill StatusLineNC
 highlight TabLineSel guifg=NONE guibg=NONE guisp=NONE gui=bold
-highlight VertSplit guifg=#F7F6F5 guibg=NONE guisp=NONE gui=NONE
-highlight Visual guifg=NONE guibg=#D2DFE7 guisp=NONE gui=NONE
-highlight NonText guifg=#C0B0A8 guibg=NONE guisp=NONE gui=NONE
-highlight SpecialKey guifg=#C0B0A8 guibg=NONE guisp=NONE gui=italic
-highlight! link Whitespace NonText
-highlight! link EndOfBuffer NonText
-highlight WildMenu guifg=#F0EDEC guibg=#88507D guisp=NONE gui=NONE
-highlight Directory guifg=NONE guibg=NONE guisp=NONE gui=bold
-highlight! link Question MoreMsg
-highlight Title guifg=NONE guibg=NONE guisp=NONE gui=bold
+highlight! link CocErrorVirtualText LspDiagnosticsVirtualTextError
+highlight! link CocWarningVitualText LspDiagnosticsVirtualTextWarning
+highlight! link CocSelectedText SpellBad
+highlight! link CocCodeLens LineNr
+highlight CocMarkdownLink guifg=#3B8992 guibg=NONE guisp=NONE gui=underline
+highlight Error guifg=#A8334C guibg=NONE guisp=NONE gui=NONE
+highlight! link CocErrorSign LspDiagnosticsDefaultError
+highlight BufferVisibleSign guifg=#596A76 guibg=NONE guisp=NONE gui=NONE
+highlight BufferVisible guifg=#596A76 guibg=NONE guisp=NONE gui=NONE
+highlight! link BufferCurrent TabLineSel
+highlight SneakLabelMask guifg=#88507D guibg=#88507D guisp=NONE gui=NONE
+highlight! link SneakLabel WildMenu
+highlight! link Sneak Search
+highlight! link TelescopeBorder FloatBorder
+highlight TelescopeMatching guifg=#88507D guibg=NONE guisp=NONE gui=bold
+highlight TelescopeSelectionCaret guifg=#A8334C guibg=#E6E1DF guisp=NONE gui=NONE
+highlight! link TelescopeSelection CursorLine
+highlight IndentBlanklineChar guifg=#D4CDCA guibg=NONE guisp=NONE gui=NONE
+highlight GitSignsDelete guifg=#A8334C guibg=NONE guisp=NONE gui=NONE
+highlight GitSignsChange guifg=#286486 guibg=NONE guisp=NONE gui=NONE
+highlight GitSignsAdd guifg=#617437 guibg=NONE guisp=NONE gui=NONE
+highlight TSTag guifg=#4D5C65 guibg=NONE guisp=NONE gui=bold
+highlight! link TSVariable Identifier
+highlight! link LspCodeLens LineNr
+highlight LspDiagnosticsUnderlineHint guifg=#88507D guibg=NONE guisp=NONE gui=undercurl
+highlight LspDiagnosticsUnderlineInformation guifg=#286486 guibg=NONE guisp=NONE gui=undercurl
+highlight LspDiagnosticsUnderlineWarning guifg=#944927 guibg=NONE guisp=NONE gui=undercurl
+highlight LspDiagnosticsUnderlineError guifg=#A8334C guibg=NONE guisp=NONE gui=undercurl
+highlight LspDiagnosticsVirtualTextWarning guifg=#944927 guibg=#F0E6E4 guisp=NONE gui=NONE
+highlight LspDiagnosticsVirtualTextError guifg=#A8334C guibg=#E7DDDE guisp=NONE gui=NONE
+highlight LspDiagnosticsDefaultHint guifg=#88507D guibg=NONE guisp=NONE gui=NONE
+highlight Comment guifg=#948985 guibg=NONE guisp=NONE gui=italic
+highlight LspDiagnosticsDefaultInformation guifg=#286486 guibg=NONE guisp=NONE gui=NONE
+highlight! link ErrorMsg Error
+highlight! link LspDiagnosticsDefaultWarning WarningMsg
+highlight! link LspDiagnosticsDefaultError Error
+highlight! link LspReferenceWrite ColorColumn
+highlight! link LspReferenceText ColorColumn
+highlight Todo guifg=NONE guibg=NONE guisp=NONE gui=bold,underline
+highlight Bold guifg=NONE guibg=NONE guisp=NONE gui=bold
+highlight Underlined guifg=NONE guibg=NONE guisp=NONE gui=underline
+highlight Normal guifg=#2C363C guibg=#F0EDEC guisp=NONE gui=NONE
+highlight PmenuSel guifg=NONE guibg=#C4B6AF guisp=NONE gui=NONE
