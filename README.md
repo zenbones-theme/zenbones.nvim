@@ -82,13 +82,14 @@ Aside from LSP and basic Tree-sitter support, there are only a few plugins that
 are currently supported. Please feel free to open a PR to support your favorite
 plugins.
 
--   [gitsigns](https://github.com/lewis6991/gitsigns.nvim)
--   [indent-blankline](https://github.com/lukas-reineke/indent-blankline.nvim)
+-   [Git Signs](https://github.com/lewis6991/gitsigns.nvim)
+-   [Indent Blankline](https://github.com/lukas-reineke/indent-blankline.nvim)
 -   [Telescope](https://github.com/nvim-telescope/telescope.nvim)
--   [sneak](https://github.com/justinmk/vim-sneak)
--   [lualine](https://github.com/hoob3rt/lualine.nvim) (requires Lush)
--   [barbar.nvim](https://github.com/romgrk/barbar.nvim)
--   [coc.nvim](https://github.com/neoclide/coc.nvim)
+-   [Sneak](https://github.com/justinmk/vim-sneak)
+-   [Lualine](https://github.com/hoob3rt/lualine.nvim) (requires Lush)
+-   [BarBar](https://github.com/romgrk/barbar.nvim)
+-   [CoC](https://github.com/neoclide/coc.nvim)
+-   [Neogit](https://github.com/TimUntersberger/neogit)
 
 ## Advance Usage
 
