@@ -273,6 +273,12 @@ local theme = lush(function()
 		NeogitNotificationError   { LspDiagnosticsDefaultError },
 		NeogitNotificationWarning { LspDiagnosticsDefaultWarning },
 		NeogitNotificationInfo	  { LspDiagnosticsDefaultInformation },
+
+		NeogitDiffContextHighlight	{ CursorLine },
+		NeogitDiffDeleteHighlight	{ DiffDelete },
+		NeogitDiffAddHighlight		{ DiffAdd },
+		NeogitHunkHeader			{ LineNr },
+		NeogitHunkHeaderHighlight	{ CursorLine, fg = c.stone, gui = "bold" },
 	}
 end)
 -- stylua: ignore end
