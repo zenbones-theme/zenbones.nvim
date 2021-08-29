@@ -177,6 +177,8 @@ local theme = lush(function()
 		-- LspDiagnosticsSignInformation        { }, -- Used for "Information" signs in sign column
 		-- LspDiagnosticsSignHint               { }, -- Used for "Hint" signs in sign column
 
+		LspCodeLens								{ LineNr },
+
 		-- These groups are for the neovim tree-sitter highlights.
 		-- As of writing, tree-sitter support is a WIP, group names may change.
 		-- By default, most of these groups link to an appropriate Vim group,
