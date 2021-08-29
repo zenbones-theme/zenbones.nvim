@@ -270,9 +270,9 @@ local theme = lush(function()
 		CocCodeLens				  { LineNr },
 		CocMarkdownLink			  { fg = c.sky, gui = "underline" },
 
-		NeogitNotificationError   { LspDiagnosticsDefaultError },
-		NeogitNotificationWarning { LspDiagnosticsDefaultWarning },
-		NeogitNotificationInfo	  { LspDiagnosticsDefaultInformation },
+		NeogitNotificationError		{ LspDiagnosticsDefaultError },
+		NeogitNotificationWarning	{ LspDiagnosticsDefaultWarning },
+		NeogitNotificationInfo		{ LspDiagnosticsDefaultInformation },
 
 		NeogitDiffContextHighlight	{ CursorLine },
 		NeogitDiffDeleteHighlight	{ DiffDelete },
