@@ -1,14 +1,15 @@
 local lush = require "lush"
 local c = require "zenbones.colors"
 
-local settings = {
-	sand_lightness = 0
+local config = {
+	sand_li = 0,
+	diff_li = 0,
 }
 
-if vim.g.zenbones_lightness == 'bright' then
-	settings.sand_lightness = -4
-elseif vim.g.zenbones_lightness == 'dim' then
-	settings.sand_lightness = 4
+if vim.g.zenbones_lightness == "bright" then
+	config.sand_li = -4
+elseif vim.g.zenbones_lightness == "dim" then
+	config.sand_li = 4
 end
 
 
@@ -28,7 +29,7 @@ return lush(function()
 		-- styling for that group (meaning they mostly get styled as Normal)
 		-- or leave them commented to apply vims default colouring or linking.
 
-		Normal          { bg = c.sand.abs_da(settings.sand_lightness), fg = c.stone }, -- normal text
+		Normal          { bg = c.sand.abs_da(config.sand_li), fg = c.stone }, -- normal text
 
 		Underlined      { gui = "underline" }, -- (preferred) text that stands out, HTML links
 		Bold            { gui = "bold" },
@@ -51,10 +52,10 @@ return lush(function()
 		CursorColumn    { CursorLine }, -- Screen-column at the cursor, when 'cursorcolumn' is set.
 		ColorColumn     { bg = c.wood.de(38).li(80) }, -- used for the columns set with 'colorcolumn'
 
-		DiffAdd         { bg = c.leaf.de(77).li(82) }, -- diff mode: Added line |diff.txt|
-		DiffChange      { bg = c.water.de(22).li(76) }, -- diff mode: Changed line |diff.txt|
-		DiffDelete      { bg = c.rose.de(32).li(74) }, -- diff mode: Deleted line |diff.txt|
-		DiffText        { bg = c.water.de(24).li(64), fg = c.stone }, -- diff mode: Changed text within a changed line |diff.txt|
+		DiffAdd         { bg = c.leaf.de(77).li(82).abs_da(config.diff_li) }, -- diff mode: Added line |diff.txt|
+		DiffChange      { bg = c.water.de(22).li(76).abs_da(config.diff_li) }, -- diff mode: Changed line |diff.txt|
+		DiffDelete      { bg = c.rose.de(32).li(74).abs_da(config.diff_li) }, -- diff mode: Deleted line |diff.txt|
+		DiffText        { bg = c.water.de(24).li(64).abs_da(config.diff_li), fg = c.stone }, -- diff mode: Changed text within a changed line |diff.txt|
 
 		LineNr          { fg = Normal.bg.da(36) }, -- Line number for ":number" and ":#" commands, and when 'number' or 'relativenumber' option is set.
 		SignColumn      { LineNr }, -- column where |signs| are displayed
