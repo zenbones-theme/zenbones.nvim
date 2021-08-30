@@ -8,11 +8,11 @@ local config = {
 
 if vim.g.zenbones_lightness == "bright" then
 	config.sand_li = -4
+	config.diff_li = -4
 elseif vim.g.zenbones_lightness == "dim" then
 	config.sand_li = 4
+	config.diff_li = 4
 end
-
-
 
 -- stylua: ignore start
 return lush(function()
