@@ -6,12 +6,16 @@ local config = {
 	diff_li = 0,
 }
 
-if vim.g.zenbones_lightness == "bright" then
+local lightness = vim.g.zenbones_lightness
+if lightness == "bright" then
 	config.sand_li = -4
 	config.diff_li = -4
-elseif vim.g.zenbones_lightness == "dim" then
+elseif lightness == "dim" then
 	config.sand_li = 4
 	config.diff_li = 4
+elseif lightness ~= nil then
+	local error_msg = "Unknown zenbones_lightness value: " .. vim.inspect(lightness)
+	vim.api.nvim_echo({ { error_msg, "WarningMsg" } }, true, {})
 end
 
 -- stylua: ignore start
