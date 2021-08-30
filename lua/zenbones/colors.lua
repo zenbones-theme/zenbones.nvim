@@ -12,6 +12,4 @@ local colors = {
 	sky = hsluv(204, 80, 53),
 }
 
-colors.white = colors.sand.li(58)
-
 return colors
