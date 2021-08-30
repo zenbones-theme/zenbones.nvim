@@ -80,7 +80,7 @@ _Font used is [Iosevka Curly Slab](https://typeof.net/Iosevka/)_.
 
 #### g:zenbones_lightness
 
-Change foreground color lightness.
+Change foreground colors lightness. Only available for `zenbones-lush`.
 
 **'bright'**
 
