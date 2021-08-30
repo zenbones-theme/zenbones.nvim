@@ -1,4 +1,4 @@
-*zenbones.txt*           For NVIM v0.4.3           Last change: 2021 August 29
+*zenbones.txt*           For NVIM v0.4.3           Last change: 2021 August 30
 
 ==============================================================================
 Table of Contents                                 *zenbones-table-of-contents*
@@ -7,6 +7,7 @@ Table of Contents                                 *zenbones-table-of-contents*
   - Requirements                                       |zenbones-requirements|
   - Installation                                       |zenbones-installation|
   - Usage                                                     |zenbones-usage|
+  - Configuration                                     |zenbones-configuration|
   - Other plugins support                     |zenbones-other-plugins-support|
   - Advance Usage                                     |zenbones-advance-usage|
   - Other implementations                     |zenbones-other-implementations|
@@ -68,6 +69,28 @@ It works pretty much the same as the first one but pretty handy when extending
 or customizing the colors to your likings.
 
 
+
+CONFIGURATION                                         *zenbones-configuration*
+
+                                               *zenbones-g:zenbones_lightness*
+
+g:zenbones_lightness                   Change foreground color lightness.
+
+
+**'bright'**
+
+<img width="1080" alt="Bright lightness"
+src="https://user-images.githubusercontent.com/7200153/131272384-710e253f-059d-46fd-bf0e-7d82f62d62cd.png">
+
+**Default** _(unset)_
+
+<img width="1080" alt="Default lightness"
+src="https://user-images.githubusercontent.com/7200153/131272333-3fb67e68-fcd2-48ae-b8c4-ab24b701ed5e.png">
+
+**'dim'**
+
+<img width="1080" alt="Dim lightness"
+src="https://user-images.githubusercontent.com/7200153/131272410-329636bb-fd8e-42fb-83aa-f436d211b5ed.png">
 
 OTHER PLUGINS SUPPORT                         *zenbones-other-plugins-support*
 
