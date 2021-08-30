@@ -74,7 +74,8 @@ CONFIGURATION                                         *zenbones-configuration*
 
                                                *zenbones-g:zenbones_lightness*
 
-g:zenbones_lightness                   Change foreground color lightness.
+g:zenbones_lightness                   Change foreground colors lightness. Only
+                                       available for `zenbones-lush`.
 
 
 **'bright'**
