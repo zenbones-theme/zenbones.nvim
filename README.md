@@ -62,19 +62,37 @@ or customizing the colors to your likings.
 
 **Diff highlights**
 
-<img width="1120" alt="Vim diff" src="https://user-images.githubusercontent.com/7200153/131212101-3a3b4083-f3ae-4dfc-ab1f-133cf3600a01.png">
+<img width="1080" alt="Vim diff" src="https://user-images.githubusercontent.com/7200153/131212101-3a3b4083-f3ae-4dfc-ab1f-133cf3600a01.png">
 
 **Search matches**
 
-<img width="1128" alt="Search matches" src="https://user-images.githubusercontent.com/7200153/131212102-620323dc-01db-4e40-ae74-640a00368121.png">
+<img width="1080" alt="Search matches" src="https://user-images.githubusercontent.com/7200153/131212102-620323dc-01db-4e40-ae74-640a00368121.png">
 
 **LSP diagnostics**
 
-<img width="1128" alt="LSP diagnostics" src="https://user-images.githubusercontent.com/7200153/131212106-b515ba76-d157-46b3-b1cb-c72811abbff3.png">
+<img width="1080" alt="LSP diagnostics" src="https://user-images.githubusercontent.com/7200153/131212106-b515ba76-d157-46b3-b1cb-c72811abbff3.png">
 
 _Font used is [Iosevka Curly Slab](https://typeof.net/Iosevka/)_.
 
 <!-- panvimdoc-ignore-end -->
+
+## Configuration
+
+#### g:zenbones_lightness
+
+Change foreground color lightness.
+
+**'bright'**
+
+<img width="1080" alt="Bright lightness" src="https://user-images.githubusercontent.com/7200153/131272384-710e253f-059d-46fd-bf0e-7d82f62d62cd.png">
+
+**Default** _(unset)_
+
+<img width="1080" alt="Default lightness" src="https://user-images.githubusercontent.com/7200153/131272333-3fb67e68-fcd2-48ae-b8c4-ab24b701ed5e.png">
+
+**'dim'**
+
+<img width="1080" alt="Dim lightness" src="https://user-images.githubusercontent.com/7200153/131272410-329636bb-fd8e-42fb-83aa-f436d211b5ed.png">
 
 ## Other plugins support
 
