@@ -1,8 +1,20 @@
 local lush = require "lush"
 local c = require "zenbones.colors"
 
+local settings = {
+	sand_lightness = 0
+}
+
+if vim.g.zenbones_lightness == 'bright' then
+	settings.sand_lightness = -4
+elseif vim.g.zenbones_lightness == 'dim' then
+	settings.sand_lightness = 4
+end
+
+
+
 -- stylua: ignore start
-local theme = lush(function()
+return lush(function()
 	return {
 		-- The following are all the Neovim default highlight groups from the docs
 		-- as of 0.5.0-nightly-446, to aid your theme creation. Your themes should
@@ -16,7 +28,7 @@ local theme = lush(function()
 		-- styling for that group (meaning they mostly get styled as Normal)
 		-- or leave them commented to apply vims default colouring or linking.
 
-		Normal          { bg = c.sand, fg = c.stone }, -- normal text
+		Normal          { bg = c.sand.abs_da(settings.sand_lightness), fg = c.stone }, -- normal text
 
 		Underlined      { gui = "underline" }, -- (preferred) text that stands out, HTML links
 		Bold            { gui = "bold" },
@@ -35,7 +47,7 @@ local theme = lush(function()
 		TermCursor      { Cursor }, -- cursor in a focused terminal
 		TermCursorNC    { lCursor }, -- cursor in an unfocused terminal
 
-		CursorLine      { bg = c.sand.da(4) }, -- Screen-line at the cursor, when 'cursorline' is set.	Low-priority if foreground (ctermfg OR guifg) is not set.
+		CursorLine      { bg = Normal.bg.da(4) }, -- Screen-line at the cursor, when 'cursorline' is set.	Low-priority if foreground (ctermfg OR guifg) is not set.
 		CursorColumn    { CursorLine }, -- Screen-column at the cursor, when 'cursorcolumn' is set.
 		ColorColumn     { bg = c.wood.de(38).li(80) }, -- used for the columns set with 'colorcolumn'
 
@@ -44,24 +56,24 @@ local theme = lush(function()
 		DiffDelete      { bg = c.rose.de(32).li(74) }, -- diff mode: Deleted line |diff.txt|
 		DiffText        { bg = c.water.de(24).li(64), fg = c.stone }, -- diff mode: Changed text within a changed line |diff.txt|
 
-		LineNr          { fg = c.sand.da(36) }, -- Line number for ":number" and ":#" commands, and when 'number' or 'relativenumber' option is set.
+		LineNr          { fg = Normal.bg.da(36) }, -- Line number for ":number" and ":#" commands, and when 'number' or 'relativenumber' option is set.
 		SignColumn      { LineNr }, -- column where |signs| are displayed
 		FoldColumn      { LineNr, gui = "bold" }, -- 'foldcolumn'
-		Folded          { bg = c.sand.da(16), fg = c.sand.da(64) }, -- line used for closed folds
+		Folded          { bg = Normal.bg.da(16), fg = Normal.bg.da(64) }, -- line used for closed folds
 		CursorLineNr    { LineNr, fg = c.stone, gui = "bold" }, -- Like LineNr when 'cursorline' or 'relativenumber' is set for the cursor line.
 
 		-- ModeMsg      { }, -- 'showmode' message (e.g., "-- INSERT -- ")
 		-- MsgArea      { }, -- Area for messages and cmdline
 		-- MsgSeparator { }, -- Separator for scrolled messages, `msgsep` flag of 'display'
 		MoreMsg         { fg = c.leaf, gui = "bold" }, -- |more-prompt|
-		NormalFloat     { bg = c.sand.da(6) }, -- Normal text in floating windows.
-		FloatBorder     { fg = c.sand.da(50) }, -- Normal text in floating windows.
+		NormalFloat     { bg = Normal.bg.da(6) }, -- Normal text in floating windows.
+		FloatBorder     { fg = Normal.bg.da(50) }, -- Normal text in floating windows.
 		-- NormalNC     { }, -- normal text in non-current windows
 
-		Pmenu           { bg = c.sand.da(10) }, -- Popup menu: normal item.
-		PmenuSel        { bg = c.sand.da(20) }, -- Popup menu: selected item.
-		PmenuSbar       { bg = c.sand.da(28) }, -- Popup menu: scrollbar.
-		PmenuThumb      { bg = c.white }, -- Popup menu: Thumb of the scrollbar.
+		Pmenu           { bg = Normal.bg.da(10) }, -- Popup menu: normal item.
+		PmenuSel        { bg = Normal.bg.da(20) }, -- Popup menu: selected item.
+		PmenuSbar       { bg = Normal.bg.da(28) }, -- Popup menu: scrollbar.
+		PmenuThumb      { bg = Normal.bg.li(58) }, -- Popup menu: Thumb of the scrollbar.
 
 		Search          { bg = c.blossom.de(10).lighten(54), fg = c.stone }, -- Last search pattern highlighting (see 'hlsearch').	Also used for similar items that need to stand out.
 		IncSearch       { bg = c.blossom, fg = c.sand, gui = "bold" }, -- 'incsearch' highlighting; also used for the text replaced with ":s///c"
@@ -79,12 +91,12 @@ local theme = lush(function()
 		TabLine         { StatusLine, gui = "italic" }, -- tab pages line, not active tab page label
 		TabLineFill     { StatusLineNC }, -- tab pages line, where there are no labels
 		TabLineSel      { gui = "bold" }, -- tab pages line, active tab page label
-		VertSplit       { fg = c.white }, -- the column separating vertically split windows
+		VertSplit       { fg = PmenuThumb.bg }, -- the column separating vertically split windows
 
 		Visual          { bg = c.stone.li(84) }, -- Visual mode selection
 		-- VisualNOS    { }, -- Visual mode selection when vim is "Not Owning the Selection".
 
-		NonText         { fg = c.sand.da(22) }, -- '@' at the end of the window, characters from 'showbreak' and other characters that do not really exist in the text (e.g., ">" displayed when a double-wide character doesn't fit at the end of the line). See also |hl-EndOfBuffer|.
+		NonText         { fg = Normal.bg.da(22) }, -- '@' at the end of the window, characters from 'showbreak' and other characters that do not really exist in the text (e.g., ">" displayed when a double-wide character doesn't fit at the end of the line). See also |hl-EndOfBuffer|.
 		SpecialKey      { NonText, gui = "italic" }, -- Unprintable characters: text displayed differently from what it really is.	But not 'listchars' whitespace. |hl-Whitespace|
 		Whitespace      { NonText }, -- "nbsp", "space", "tab" and "trail" in 'listchars'
 		EndOfBuffer     { NonText }, -- filler lines (~) after the end of the buffer.  By default, this is highlighted like |hl-NonText|.
@@ -130,7 +142,7 @@ local theme = lush(function()
 		-- Structure    { }, --  struct, union, enum, etc.
 		-- Typedef      { }, --  A typedef
 
-		Special         { fg = c.stone.li(24), gui = "bold" }, -- (preferred) any special symbol
+		Special         { fg = c.stone.li(21), gui = "bold" }, -- (preferred) any special symbol
 		-- SpecialChar  { }, --  special character in a constant
 		-- Tag          { }, --    you can use CTRL-] on this
 		Delimiter       { fg = c.sand.da(42) }, --	character that needs attention
@@ -292,8 +304,4 @@ local theme = lush(function()
 	}
 end)
 -- stylua: ignore end
-
--- return our parsed theme for extension or use else where.
-return theme
-
 -- vi:nowrap
