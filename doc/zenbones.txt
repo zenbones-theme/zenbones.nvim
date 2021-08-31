@@ -1,4 +1,4 @@
-*zenbones.txt*           For NVIM v0.4.3           Last change: 2021 August 30
+*zenbones.txt*           For NVIM v0.4.3           Last change: 2021 August 31
 
 ==============================================================================
 Table of Contents                                 *zenbones-table-of-contents*
@@ -9,7 +9,7 @@ Table of Contents                                 *zenbones-table-of-contents*
   - Usage                                                     |zenbones-usage|
   - Configuration                                     |zenbones-configuration|
   - Other plugins support                     |zenbones-other-plugins-support|
-  - Advance Usage                                     |zenbones-advance-usage|
+  - Advanced Usage                                   |zenbones-advanced-usage|
   - Other implementations                     |zenbones-other-implementations|
   - Inspirations                                       |zenbones-inspirations|
 
@@ -72,10 +72,11 @@ or customizing the colors to your likings.
 
 CONFIGURATION                                         *zenbones-configuration*
 
+Configuration is only available for `zenbones-lush`.
+
                                                *zenbones-g:zenbones_lightness*
 
-g:zenbones_lightness                   Change foreground colors lightness. Only
-                                       available for `zenbones-lush`.
+g:zenbones_lightness                   Change foreground colors lightness.
 
 
 **'bright'**
@@ -92,6 +93,19 @@ src="https://user-images.githubusercontent.com/7200153/131272333-3fb67e68-fcd2-4
 
 <img width="1080" alt="Dim lightness"
 src="https://user-images.githubusercontent.com/7200153/131272410-329636bb-fd8e-42fb-83aa-f436d211b5ed.png">
+
+                                        *zenbones-g:zenbones_solid_vert_split*
+
+g:zenbones_solid_vert_split            Set to `v:true` to make vertical split
+                                       more visible with a dimmer background
+                                       highlight.
+
+
+                                   *zenbones-g:zenbones_dim_noncurrent_window*
+
+g:zenbones_dim_noncurrent_window       Set to `v:true` to make non-current
+                                       window dimmer than _Normal_.
+
 
 OTHER PLUGINS SUPPORT                         *zenbones-other-plugins-support*
 
@@ -110,7 +124,7 @@ plugins.
 - Neogit <https://github.com/TimUntersberger/neogit>
 
 
-ADVANCE USAGE                                         *zenbones-advance-usage*
+ADVANCED USAGE                                       *zenbones-advanced-usage*
 
 Zenbones is pretty extensible thanks to Lush
 <https://github.com/rktjmp/lush.nvim>. You can easily retrieve the colors in
