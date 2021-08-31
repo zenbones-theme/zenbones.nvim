@@ -166,7 +166,6 @@ highlight CursorLineNr guifg=#2C363C guibg=NONE guisp=NONE gui=bold
 highlight MoreMsg guifg=#617437 guibg=NONE guisp=NONE gui=bold
 highlight NormalFloat guifg=NONE guibg=#E1DCD9 guisp=NONE gui=NONE
 highlight FloatBorder guifg=#786D68 guibg=NONE guisp=NONE gui=NONE
-highlight! link NormalNC Normal
 highlight Pmenu guifg=NONE guibg=#DAD3CF guisp=NONE gui=NONE
 highlight PmenuSel guifg=NONE guibg=#C4B6AF guisp=NONE gui=NONE
 highlight PmenuSbar guifg=NONE guibg=#B2A39B guisp=NONE gui=NONE

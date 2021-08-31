@@ -16,11 +16,8 @@ elseif lightness ~= nil then
 	vim.api.nvim_echo({ { error_msg, "WarningMsg" } }, true, {})
 end
 
-local solid_vert_split = vim.g.zenbones_solid_vert_split
-local dim_noncurrent_window = vim.g.zenbones_dim_noncurrent_window
-
 -- stylua: ignore start
-return lush(function()
+local theme = lush(function()
 	return {
 		-- The following are all the Neovim default highlight groups from the docs
 		-- as of 0.5.0-nightly-446, to aid your theme creation. Your themes should
@@ -74,7 +71,6 @@ return lush(function()
 		MoreMsg         { fg = c.leaf, gui = "bold" }, -- |more-prompt|
 		NormalFloat     { bg = Normal.bg.da(6) }, -- Normal text in floating windows.
 		FloatBorder     { fg = Normal.bg.da(50) }, -- Normal text in floating windows.
-		NormalNC        (dim_noncurrent_window and { Normal, bg = Normal.bg.abs_da(2) } or { Normal }), -- normal text in non-current windows
 
 		Pmenu           { bg = Normal.bg.da(10) }, -- Popup menu: normal item.
 		PmenuSel        { bg = Normal.bg.da(20) }, -- Popup menu: selected item.
@@ -97,7 +93,7 @@ return lush(function()
 		TabLine         { StatusLine, gui = "italic" }, -- tab pages line, not active tab page label
 		TabLineFill     { StatusLineNC }, -- tab pages line, where there are no labels
 		TabLineSel      { gui = "bold" }, -- tab pages line, active tab page label
-		VertSplit       (solid_vert_split and { bg = StatusLineNC.bg, fg = LineNr.fg } or { fg = PmenuThumb.bg }), -- the column separating vertically split windows
+		VertSplit       { fg = PmenuThumb.bg }, -- the column separating vertically split windows
 
 		Visual          { bg = c.stone.li(84) }, -- Visual mode selection
 		-- VisualNOS    { }, -- Visual mode selection when vim is "Not Owning the Selection".
@@ -310,4 +306,33 @@ return lush(function()
 	}
 end)
 -- stylua: ignore end
+
+local specs = {
+	theme,
+}
+
+if vim.g.zenbones_dim_noncurrent_window then
+	table.insert(
+		specs,
+		lush(function()
+			return {
+				NormalNC { theme.Normal, bg = theme.Normal.bg.abs_da(2) }, -- normal text in non-current windows
+			}
+		end)
+	)
+end
+
+if vim.g.zenbones_solid_vert_split then
+	table.insert(
+		specs,
+		lush(function()
+			return {
+				VertSplit { bg = theme.StatusLineNC.bg, fg = theme.LineNr.fg }, -- the column separating vertically split windows
+			}
+		end)
+	)
+end
+
+return lush.merge(specs)
+
 -- vi:nowrap
