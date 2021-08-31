@@ -47,7 +47,7 @@ return lush(function()
 		Conceal         { fg = c.stone.li(20), gui = "bold,italic" }, -- placeholder characters substituted for concealed text (see 'conceallevel')
 
 		Cursor          { bg = c.stone, fg = c.sand.li(20) }, -- character under the cursor
-		lCursor         { Cursor, bg = Cursor.bg.lighten(20)  }, -- the character under the cursor when |language-mapping| is used (see 'guicursor')
+		lCursor         { Cursor, bg = Cursor.bg.li(20)  }, -- the character under the cursor when |language-mapping| is used (see 'guicursor')
 		-- CursorIM     { }, -- like Cursor, but used when in IME mode |CursorIM|
 		TermCursor      { Cursor }, -- cursor in a focused terminal
 		TermCursorNC    { lCursor }, -- cursor in an unfocused terminal
@@ -80,7 +80,7 @@ return lush(function()
 		PmenuSbar       { bg = Normal.bg.da(28) }, -- Popup menu: scrollbar.
 		PmenuThumb      { bg = Normal.bg.li(58) }, -- Popup menu: Thumb of the scrollbar.
 
-		Search          { bg = c.blossom.de(10).lighten(54), fg = c.stone }, -- Last search pattern highlighting (see 'hlsearch').	Also used for similar items that need to stand out.
+		Search          { bg = c.blossom.de(10).li(54), fg = c.stone }, -- Last search pattern highlighting (see 'hlsearch').	Also used for similar items that need to stand out.
 		IncSearch       { bg = c.blossom, fg = c.sand, gui = "bold" }, -- 'incsearch' highlighting; also used for the text replaced with ":s///c"
 		-- Substitute   { }, -- |:substitute| replacement text highlighting
 		MatchParen      { Search }, -- The character under the cursor or just before it, if it is a paired bracket, and its match. |pi_paren.txt|

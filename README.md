@@ -109,7 +109,7 @@ plugins.
 -   [CoC](https://github.com/neoclide/coc.nvim)
 -   [Neogit](https://github.com/TimUntersberger/neogit)
 
-## Advance Usage
+## Advanced Usage
 
 Zenbones is pretty extensible thanks to
 [Lush](https://github.com/rktjmp/lush.nvim). You can easily retrieve the colors
