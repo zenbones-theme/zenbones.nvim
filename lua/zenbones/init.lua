@@ -18,6 +18,8 @@ elseif lightness ~= nil then
 	vim.api.nvim_echo({ { error_msg, "WarningMsg" } }, true, {})
 end
 
+local solid_vert_split = vim.g.zenbones_solid_vert_split
+
 -- stylua: ignore start
 return lush(function()
 	return {
@@ -96,7 +98,7 @@ return lush(function()
 		TabLine         { StatusLine, gui = "italic" }, -- tab pages line, not active tab page label
 		TabLineFill     { StatusLineNC }, -- tab pages line, where there are no labels
 		TabLineSel      { gui = "bold" }, -- tab pages line, active tab page label
-		VertSplit       { fg = PmenuThumb.bg }, -- the column separating vertically split windows
+		VertSplit       (solid_vert_split and { bg = StatusLineNC.bg, fg = LineNr.fg } or { fg = PmenuThumb.bg }), -- the column separating vertically split windows
 
 		Visual          { bg = c.stone.li(84) }, -- Visual mode selection
 		-- VisualNOS    { }, -- Visual mode selection when vim is "Not Owning the Selection".

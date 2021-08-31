@@ -94,6 +94,11 @@ Change foreground colors lightness. Only available for `zenbones-lush`.
 
 <img width="1080" alt="Dim lightness" src="https://user-images.githubusercontent.com/7200153/131272410-329636bb-fd8e-42fb-83aa-f436d211b5ed.png">
 
+#### g:zenbones_solid_vert_split
+
+Set to `v:true` to make vertical split more visible with a dimmer background
+highlight.
+
 ## Other plugins support
 
 Aside from LSP and basic Tree-sitter support, there are only a few plugins that
