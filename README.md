@@ -99,6 +99,10 @@ Change foreground colors lightness. Only available for `zenbones-lush`.
 Set to `v:true` to make vertical split more visible with a dimmer background
 highlight.
 
+#### g:zenbones_dim_noncurrent_window
+
+Set to `v:true` to make non-current window dimmer than _Normal_.
+
 ## Other plugins support
 
 Aside from LSP and basic Tree-sitter support, there are only a few plugins that
