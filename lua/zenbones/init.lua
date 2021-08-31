@@ -7,16 +7,17 @@ local diff_bg_li = 0
 local lightness = vim.g.zenbones_lightness
 if lightness == "bright" then
 	normal_bg = normal_bg.abs_da(-4)
-	diff_li = -4
+	diff_bg_li = -4
 elseif lightness == "dim" then
 	normal_bg = normal_bg.abs_da(4)
-	diff_li = 4
+	diff_bg_li = 4
 elseif lightness ~= nil then
 	local error_msg = "Unknown zenbones_lightness value: " .. vim.inspect(lightness)
 	vim.api.nvim_echo({ { error_msg, "WarningMsg" } }, true, {})
 end
 
 local solid_vert_split = vim.g.zenbones_solid_vert_split
+local dim_noncurrent_window = vim.g.zenbones_dim_noncurrent_window
 
 -- stylua: ignore start
 return lush(function()
@@ -56,10 +57,10 @@ return lush(function()
 		CursorColumn    { CursorLine }, -- Screen-column at the cursor, when 'cursorcolumn' is set.
 		ColorColumn     { bg = c.wood.de(38).li(80) }, -- used for the columns set with 'colorcolumn'
 
-		DiffAdd         { bg = c.leaf.de(77).li(82).abs_da(diff_li) }, -- diff mode: Added line |diff.txt|
-		DiffChange      { bg = c.water.de(22).li(76).abs_da(diff_li) }, -- diff mode: Changed line |diff.txt|
-		DiffDelete      { bg = c.rose.de(32).li(74).abs_da(diff_li) }, -- diff mode: Deleted line |diff.txt|
-		DiffText        { bg = c.water.de(24).li(64).abs_da(diff_li), fg = c.stone }, -- diff mode: Changed text within a changed line |diff.txt|
+		DiffAdd         { bg = c.leaf.de(77).li(82).abs_da(diff_bg_li) }, -- diff mode: Added line |diff.txt|
+		DiffChange      { bg = c.water.de(22).li(76).abs_da(diff_bg_li) }, -- diff mode: Changed line |diff.txt|
+		DiffDelete      { bg = c.rose.de(32).li(74).abs_da(diff_bg_li) }, -- diff mode: Deleted line |diff.txt|
+		DiffText        { bg = c.water.de(24).li(64).abs_da(diff_bg_li), fg = c.stone }, -- diff mode: Changed text within a changed line |diff.txt|
 
 		LineNr          { fg = Normal.bg.da(36) }, -- Line number for ":number" and ":#" commands, and when 'number' or 'relativenumber' option is set.
 		SignColumn      { LineNr }, -- column where |signs| are displayed
@@ -73,7 +74,7 @@ return lush(function()
 		MoreMsg         { fg = c.leaf, gui = "bold" }, -- |more-prompt|
 		NormalFloat     { bg = Normal.bg.da(6) }, -- Normal text in floating windows.
 		FloatBorder     { fg = Normal.bg.da(50) }, -- Normal text in floating windows.
-		-- NormalNC     { }, -- normal text in non-current windows
+		NormalNC        (dim_noncurrent_window and { Normal, bg = Normal.bg.abs_da(2) } or { Normal }), -- normal text in non-current windows
 
 		Pmenu           { bg = Normal.bg.da(10) }, -- Popup menu: normal item.
 		PmenuSel        { bg = Normal.bg.da(20) }, -- Popup menu: selected item.
