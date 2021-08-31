@@ -78,9 +78,11 @@ _Font used is [Iosevka Curly Slab](https://typeof.net/Iosevka/)_.
 
 ## Configuration
 
+Configuration is only available for `zenbones-lush`.
+
 #### g:zenbones_lightness
 
-Change foreground colors lightness. Only available for `zenbones-lush`.
+Change foreground colors lightness.
 
 **'bright'**
 
