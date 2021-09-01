@@ -1,4 +1,4 @@
-*zenbones.txt*           For NVIM v0.4.3           Last change: 2021 August 31
+*zenbones.txt*         For NVIM v0.4.3          Last change: 2021 September 01
 
 ==============================================================================
 Table of Contents                                 *zenbones-table-of-contents*
@@ -76,7 +76,7 @@ Configuration is only available for `zenbones-lush`.
 
                                                *zenbones-g:zenbones_lightness*
 
-g:zenbones_lightness                   Change foreground colors lightness.
+g:zenbones_lightness                   Change background colors lightness.
 
 
 **'bright'**
@@ -104,7 +104,7 @@ g:zenbones_solid_vert_split            Set to `v:true` to make vertical split
                                    *zenbones-g:zenbones_dim_noncurrent_window*
 
 g:zenbones_dim_noncurrent_window       Set to `v:true` to make non-current
-                                       window dimmer than _Normal_.
+                                       window background dimmer than _Normal_.
 
 
 OTHER PLUGINS SUPPORT                         *zenbones-other-plugins-support*
