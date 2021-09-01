@@ -82,7 +82,7 @@ Configuration is only available for `zenbones-lush`.
 
 #### g:zenbones_lightness
 
-Change foreground colors lightness.
+Change background colors lightness.
 
 **'bright'**
 
@@ -103,7 +103,7 @@ highlight.
 
 #### g:zenbones_dim_noncurrent_window
 
-Set to `v:true` to make non-current window dimmer than _Normal_.
+Set to `v:true` to make non-current window background dimmer than _Normal_.
 
 ## Other plugins support
 
