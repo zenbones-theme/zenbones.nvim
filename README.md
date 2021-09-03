@@ -1,6 +1,6 @@
 # Zenbones
 
-Zenbones is a light vim/nvim
+Zenbones is a light vim/neovim
 [colorscheme](https://neovim.io/doc/user/syntax.html#:colorscheme) designed to
 highlight code using contrasts and font variations. Colors are tasked only for
 other roles such as diagnostics, diffs, search matches.
@@ -17,10 +17,10 @@ other roles such as diagnostics, diffs, search matches.
 
 ## Requirements
 
-Primarily built for nvim but it works pretty well with vim. However here are
+Primarily built for neovim but it works pretty well with vim. However here are
 some requirements to take full advantage of the colorscheme:
 
--   24-bit RGB colors (nvim or vim compiled with +termguicolors)
+-   24-bit RGB colors (neovim or vim compiled with +termguicolors)
 -   Font with bold and italic
 -   Terminal or GUI with bold and italic support
 
