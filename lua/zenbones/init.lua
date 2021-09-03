@@ -264,6 +264,10 @@ local theme = lush(function()
 		GitSignsChange             { fg = c.water },
 		GitSignsDelete             { fg = c.rose },
 
+		GitGutterAdd               { GitSignsAdd },
+		GitGutterChange            { GitSignsChange },
+		GitGutterDelete            { GitSignsDelete },
+
 		IndentBlanklineChar        { fg = c.sand.da(12).de(20) },
 
 		TelescopeSelection         { CursorLine },
