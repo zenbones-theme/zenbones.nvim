@@ -148,23 +148,38 @@ the complete options.
 
 You can retrieve the terminal colors by using this command:
 
-```
+```vim
 :lua require("zenbones.print").print_terminal_colors()
+```
 
-...
+Useful when you want to apply a zenbones theme to your terminal. Recent output:
+
+```
 Terminal colors
 foreground: #2C363C
 background: #F0EDEC
 ansi color0: #2C363C
-ansi color1: #C23C55
+ansi color1: #A8334C
 ansi color2: #617437
-ansi color3: #914B27
+ansi color3: #944927
 ansi color4: #286486
 ansi color5: #88507D
-...
+ansi color6: #3B8992
+ansi color7: #F0EDEC
+ansi color8: #44525B
+ansi color9: #9C2842
+ansi color10: #55672A
+ansi color11: #87411E
+ansi color12: #1F5A7A
+ansi color13: #864079
+ansi color14: #2F7C85
+ansi color15: #DCD2CE
+cursor foreground: #F2F0EF
+cursor background: #2C363C
+inactive cursor foreground: #F2F0EF
+inactive cursor background: #4D5C65
+selection background: #D2DFE7
 ```
-
-Useful when you want to apply a zenbones theme to your terminal.
 
 ## Inspirations
 
