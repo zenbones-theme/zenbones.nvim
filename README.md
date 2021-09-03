@@ -112,6 +112,7 @@ are currently supported. Please feel free to open a PR to support your favorite
 plugins.
 
 -   [Git Signs](https://github.com/lewis6991/gitsigns.nvim)
+-   [Git Gutter](https://github.com/airblade/vim-gitgutter)
 -   [Indent Blankline](https://github.com/lukas-reineke/indent-blankline.nvim)
 -   [Telescope](https://github.com/nvim-telescope/telescope.nvim)
 -   [Sneak](https://github.com/justinmk/vim-sneak)
