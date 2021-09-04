@@ -1,4 +1,3 @@
-local lush = require "lush"
 local theme = require "zenbones"
 local terminal = require "zenbones.terminal"
 
@@ -18,44 +17,11 @@ local function write_template(path, spec)
 	file:close()
 end
 
-local function viml_build()
-	local termcolors = ""
-	for i, v in ipairs(require("zenbones.terminal").colors) do
-		termcolors = termcolors .. string.format("let g:terminal_color_%s = '%s'\n", (i - 1), v.hex)
-	end
-
-	-- Compile lush table, concatenate to a single string, and remove blend property
-	local vimcolors = table.concat(vim.fn.sort(lush.compile(theme, { exclude_keys = { "blend" } })), "\n")
-	write_template("colors/zenbones.vim", {
-		termcolors = termcolors,
-		vimcolors = vimcolors,
-	})
-end
-
-local function kitty_build()
-	local bg = theme.Normal.bg.hex
-	local fg = theme.Normal.fg.hex
-	local specs = {
-		background = bg,
-		foreground = fg,
-		selection_background = theme.Visual.bg.hex,
-		selection_foreground = fg,
-		url_color = terminal.colors[14].hex,
-		cursor = fg,
-		active_tab_background = theme.Search.bg.hex,
-		active_tab_foreground = fg,
-		inactive_tab_background = theme.StatusLine.bg.hex,
-		inactive_tab_foreground = fg,
-	}
-	for i, v in ipairs(terminal.colors) do
-		specs["color" .. (i - 1)] = v.hex
-	end
-	write_template("extras/kitty/zenbones.conf", specs)
-end
-
 local function build()
-	viml_build()
-	kitty_build()
+	local templates = { "vim", "kitty" }
+	for _, t in ipairs(templates) do
+		write_template(unpack(require("zenbones.build." .. t)))
+	end
 end
 
 return { build = build }
