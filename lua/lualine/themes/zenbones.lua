@@ -1,31 +1,33 @@
-local t = require "zenbones"
+local common_fg = "#564E4A"
+local inative_bg = "#DAD3CF"
+local inative_fg = "#596A76"
 
 return {
 	normal = {
-		a = { bg = t.PmenuSbar.bg.hex, fg = t.Folded.fg.hex, gui = "bold" },
-		b = { bg = t.PmenuSel.bg.hex, fg = t.Folded.fg.hex },
-		c = { bg = t.StatusLine.bg.hex, fg = t.StatusLine.fg.hex },
+		a = { bg = "#B2A39B", fg = common_fg, gui = "bold" },
+		b = { bg = "#C4B6AF", fg = common_fg },
+		c = { bg = "#D1C7C3", fg = "#2C363C" },
 	},
 
 	insert = {
-		a = { bg = t.DiffAdd.bg.hex, fg = t.Folded.fg.hex, gui = "bold" },
+		a = { bg = "#DDE6CD", fg = common_fg, gui = "bold" },
 	},
 
 	command = {
-		a = { bg = t.ColorColumn.bg.hex, fg = t.Folded.fg.hex, gui = "bold" },
+		a = { bg = "#D2A6C8", fg = common_fg, gui = "bold" },
 	},
 
 	visual = {
-		a = { bg = t.Search.bg.hex, fg = t.Folded.fg.hex, gui = "bold" },
+		a = { bg = "#D2DFE7", fg = common_fg, gui = "bold" },
 	},
 
 	replace = {
-		a = { bg = t.DiffDelete.bg.hex, fg = t.Folded.fg.hex, gui = "bold" },
+		a = { bg = "#E9CACE", fg = common_fg, gui = "bold" },
 	},
 
 	inactive = {
-		a = { bg = t.StatusLineNC.bg.hex, fg = t.StatusLineNC.fg.hex, gui = "bold" },
-		b = { bg = t.StatusLineNC.bg.hex, fg = t.StatusLineNC.fg.hex },
-		c = { bg = t.StatusLineNC.bg.hex, fg = t.StatusLineNC.fg.hex },
+		a = { bg = inative_bg, fg = inative_fg, gui = "bold" },
+		b = { bg = inative_bg, fg = inative_fg },
+		c = { bg = inative_bg, fg = inative_fg },
 	},
 }
