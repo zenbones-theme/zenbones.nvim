@@ -1,40 +1,21 @@
 local lush = require "lush"
 local theme = require "zenbones"
 
-local viml_template = [[
-if exists('g:colors_name')
-    highlight clear
-    syntax reset
-    set t_Co=256
-endif
+-- got from http://lua-users.org/wiki/StringInterpolation
+function interp(s, tab)
+	return (s:gsub("($%b{})", function(w)
+		return tab[w:sub(3, -2)] or w
+	end))
+end
 
-set background=light
-let g:colors_name = 'zenbones'
-
-%s
-if has('terminal')
-    let g:terminal_ansi_colors = [
-                \ g:terminal_color_0,
-                \ g:terminal_color_1,
-                \ g:terminal_color_2,
-                \ g:terminal_color_3,
-                \ g:terminal_color_4,
-                \ g:terminal_color_5,
-                \ g:terminal_color_6,
-                \ g:terminal_color_7,
-                \ g:terminal_color_8,
-                \ g:terminal_color_9,
-                \ g:terminal_color_10,
-                \ g:terminal_color_11,
-                \ g:terminal_color_12,
-                \ g:terminal_color_13,
-                \ g:terminal_color_14,
-                \ g:terminal_color_15
-                \ ]
-endif
-
-%s
-]]
+local function write_template(path, spec)
+	print("[write template] " .. path)
+	local template = io.open("_templates/" .. path ..".txt", "r"):read "*all"
+	local content = interp(template, spec)
+	local file = io.open(path, "w")
+	file:write(content)
+	file:close()
+end
 
 local function viml_build()
 	local termcolors = ""
@@ -44,8 +25,10 @@ local function viml_build()
 
 	-- Compile lush table, concatenate to a single string, and remove blend property
 	local vimcolors = table.concat(vim.fn.sort(lush.compile(theme, { exclude_keys = { "blend" } })), "\n")
-	local content = vim.fn.split(string.format(viml_template, termcolors, vimcolors), "\n")
-	vim.fn.writefile(content, "colors/zenbones.vim")
+	write_template("colors/zenbones.vim", {
+		termcolors = termcolors,
+		vimcolors = vimcolors
+	})
 end
 
 local function build()
