@@ -148,7 +148,8 @@ See also Lush’s documentation
 OTHER IMPLEMENTATIONS                         *zenbones-other-implementations*
 
 
-- iterm2 <https://github.com/mcchrish/zenbones-iterm>
+- iTerm2 <extras/iterm/zenbones.itermcolors>
+- Kitty <extras/kitty/zenbones.conf>
 
 
 PRINT TERMINAL COLORS
