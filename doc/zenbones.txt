@@ -1,4 +1,4 @@
-*zenbones.txt*         For NVIM v0.4.3          Last change: 2021 September 03
+*zenbones.txt*         For NVIM v0.4.3          Last change: 2021 September 04
 
 ==============================================================================
 Table of Contents                                 *zenbones-table-of-contents*
@@ -16,7 +16,7 @@ Table of Contents                                 *zenbones-table-of-contents*
 ==============================================================================
 1. Zenbones                                                *zenbones-zenbones*
 
-Zenbones is a light vim/nvim |colorscheme| designed to highlight code using
+Zenbones is a light vim/neovim |colorscheme| designed to highlight code using
 contrasts and font variations. Colors are tasked only for other roles such as
 diagnostics, diffs, search matches.
 
@@ -24,11 +24,11 @@ diagnostics, diffs, search matches.
 
 REQUIREMENTS                                           *zenbones-requirements*
 
-Primarily built for nvim but it works pretty well with vim. However here are
+Primarily built for neovim but it works pretty well with vim. However here are
 some requirements to take full advantage of the colorscheme:
 
 
-- 24-bit RGB colors (nvim or vim compiled with +termguicolors)
+- 24-bit RGB colors (neovim or vim compiled with +termguicolors)
 - Font with bold and italic
 - Terminal or GUI with bold and italic support
 
@@ -119,7 +119,7 @@ plugins.
 - Indent Blankline <https://github.com/lukas-reineke/indent-blankline.nvim>
 - Telescope <https://github.com/nvim-telescope/telescope.nvim>
 - Sneak <https://github.com/justinmk/vim-sneak>
-- Lualine <https://github.com/hoob3rt/lualine.nvim> (requires Lush)
+- Lualine <https://github.com/hoob3rt/lualine.nvim>
 - BarBar <https://github.com/romgrk/barbar.nvim>
 - CoC <https://github.com/neoclide/coc.nvim>
 - Neogit <https://github.com/TimUntersberger/neogit>
