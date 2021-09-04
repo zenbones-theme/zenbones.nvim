@@ -8,10 +8,9 @@ function interp(s, tab)
 	end))
 end
 
-local function write_template(path, spec)
+local function write_template(path, template, values)
 	print("[write template] " .. path)
-	local template = io.open("_templates/" .. path .. ".txt", "r"):read "*all"
-	local content = interp(template, spec)
+	local content = interp(template, values)
 	local file = io.open(path, "w")
 	file:write(content)
 	file:close()
