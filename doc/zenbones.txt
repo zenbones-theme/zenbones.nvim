@@ -147,6 +147,7 @@ OTHER IMPLEMENTATIONS                         *zenbones-other-implementations*
 
 - iTerm2 <extras/iterm/zenbones.itermcolors>
 - Kitty <extras/kitty/zenbones.conf>
+- Alacritty <extras/alacritty/zenbones.yml>
 
 
 PRINT TERMINAL COLORS
