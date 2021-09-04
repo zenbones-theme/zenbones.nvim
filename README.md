@@ -107,9 +107,8 @@ Set to `v:true` to make non-current window background dimmer than _Normal_.
 
 ## Other plugins support
 
-Aside from LSP and basic Tree-sitter support, there are only a few plugins that
-are currently supported. Please feel free to open a PR to support your favorite
-plugins.
+Aside from LSP and basic Tree-sitter support, here are some plugins that are
+currently supported.
 
 -   [Git Signs](https://github.com/lewis6991/gitsigns.nvim)
 -   [Git Gutter](https://github.com/airblade/vim-gitgutter)
@@ -134,8 +133,6 @@ local colors = require "zenbones.colors"
 print(theme.StatusLine.bg.hex)
 print(sand.darken(20).hex)
 ```
-
-One such example is the custom [lualine](lua/lualine/themes/zenbones.lua) theme.
 
 See also
 [Lush's documentation](https://github.com/rktjmp/lush.nvim#advanced-usage) for
@@ -182,6 +179,10 @@ inactive cursor foreground: #F2F0EF
 inactive cursor background: #4D5C65
 selection background: #D2DFE7
 ```
+
+It's also possible to generate color configuration files using a template,
+[this one for Kitty](lua/zenbones/build/kitty.lua) for example. Please feel free
+to submit a PR if you want to add some more.
 
 ## Inspirations
 
