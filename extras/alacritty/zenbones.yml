@@ -1,0 +1,26 @@
+# Zenbones Alacritty Colors
+colors:
+  # Default colors
+  primary:
+    background: '#F0EDEC'
+    foreground: '#2C363C'
+  # Normal colors
+  normal:
+    black:   '#2C363C'
+    red:     '#A8334C'
+    green:   '#617437'
+    yellow:  '#944927'
+    blue:    '#286486'
+    magenta: '#88507D'
+    cyan:    '#3B8992'
+    white:   '#F0EDEC'
+  # Bright colors
+  bright:
+    black:   '#44525B'
+    red:     '#9C2842'
+    green:   '#55672A'
+    yellow:  '#87411E'
+    blue:    '#1F5A7A'
+    magenta: '#864079'
+    cyan:    '#2F7C85'
+    white:   '#DCD2CE'
