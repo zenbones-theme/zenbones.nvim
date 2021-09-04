@@ -143,7 +143,8 @@ the complete options.
 
 ## Other implementations
 
--   [iterm2](https://github.com/mcchrish/zenbones-iterm)
+-   [iTerm2](extras/iterm/zenbones.itermcolors)
+-   [Kitty](extras/kitty/zenbones.conf)
 
 ### Print terminal colors
 
