@@ -109,9 +109,8 @@ g:zenbones_dim_noncurrent_window       Set to `v:true` to make non-current
 
 OTHER PLUGINS SUPPORT                         *zenbones-other-plugins-support*
 
-Aside from LSP and basic Tree-sitter support, there are only a few plugins that
-are currently supported. Please feel free to open a PR to support your favorite
-plugins.
+Aside from LSP and basic Tree-sitter support, here are some plugins that are
+currently supported.
 
 
 - Git Signs <https://github.com/lewis6991/gitsigns.nvim>
@@ -139,8 +138,6 @@ lua:
     print(sand.darken(20).hex)
 <
 
-
-One such example is the custom lualine <lua/lualine/themes/zenbones.lua> theme.
 
 See also Lush’s documentation
 <https://github.com/rktjmp/lush.nvim#advanced-usage> for the complete options.
@@ -190,6 +187,10 @@ Useful when you want to apply a zenbones theme to your terminal. Recent output:
     selection background: #D2DFE7
 <
 
+
+It’s also possible to generate color configuration files using a template,
+this one for Kitty <lua/zenbones/build/kitty.lua> for example. Please feel free
+to submit a PR if you want to add some more.
 
 INSPIRATIONS                                           *zenbones-inspirations*
 
