@@ -1,4 +1,4 @@
-*zenbones.txt*         For NVIM v0.4.3          Last change: 2021 September 04
+*zenbones.txt*         For NVIM v0.4.3          Last change: 2021 September 05
 
 ==============================================================================
 Table of Contents                                 *zenbones-table-of-contents*
@@ -148,6 +148,7 @@ OTHER IMPLEMENTATIONS                         *zenbones-other-implementations*
 - iTerm2 <extras/iterm/zenbones.itermcolors>
 - Kitty <extras/kitty/zenbones.conf>
 - Alacritty <extras/alacritty/zenbones.yml>
+- WezTerm <extras/wezterm/Zenbones.toml>
 
 
 PRINT TERMINAL COLORS
