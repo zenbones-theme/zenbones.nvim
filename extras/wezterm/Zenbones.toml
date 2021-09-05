@@ -1,0 +1,12 @@
+# Zenbones
+[colors]
+foreground = "#2C363C"
+background = "#F0EDEC"
+cursor_bg = "#2C363C"
+cursor_border = "#F2F0EF"
+cursor_fg = "#F2F0EF"
+selection_bg = "#D2DFE7"
+selection_fg = "#2C363C"
+
+ansi = ["#2C363C", "#A8334C", "#617437", "#944927", "#286486", "#88507D", "#3B8992", "#F0EDEC"]
+brights = ["#44525B", "#9C2842", "#55672A", "#87411E", "#1F5A7A", "#864079", "#2F7C85", "#DCD2CE"]

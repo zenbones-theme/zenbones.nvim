@@ -143,6 +143,7 @@ the complete options.
 -   [iTerm2](extras/iterm/zenbones.itermcolors)
 -   [Kitty](extras/kitty/zenbones.conf)
 -   [Alacritty](extras/alacritty/zenbones.yml)
+-   [WezTerm](extras/wezterm/Zenbones.toml)
 
 ### Print terminal colors
 
