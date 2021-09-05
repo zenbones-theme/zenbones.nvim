@@ -20,8 +20,6 @@ Zenbones is a light vim/neovim |colorscheme| designed to highlight code using
 contrasts and font variations. Colors are tasked only for other roles such as
 diagnostics, diffs, search matches.
 
-
-
 REQUIREMENTS                                           *zenbones-requirements*
 
 Primarily built for neovim but it works pretty well with vim. However here are
@@ -68,8 +66,6 @@ If you want to make use of the lua version:
 
 It works pretty much the same as the first one but pretty handy when extending
 or customizing the colors to your likings.
-
-
 
 CONFIGURATION                                         *zenbones-configuration*
 
