@@ -57,9 +57,10 @@ Just apply the colorscheme as usual:
 <
 
 
-Alternatively, if you want to make use of the lua version:
+If you want to make use of the lua version:
 
 >
+    " has('nvim') only
     set termguicolors
     colorscheme zenbones-lush
 <
@@ -103,6 +104,10 @@ g:zenbones_solid_vert_split            Set to `v:true` to make vertical split
 
                                    *zenbones-g:zenbones_dim_noncurrent_window*
 
+g:zenbones_dim_noncurrent_window       Set to `v:true` to make non-current
+                                       window background dimmer than _Normal_.
+
+
 ADVANCED USAGE                                       *zenbones-advanced-usage*
 
 Zenbones is pretty extensible thanks to Lush
@@ -118,7 +123,8 @@ lua:
 <
 
 
-Set to `v:true` to make non-current window background dimmer than _Normal_.
+See also Lush’s documentation
+<https://github.com/rktjmp/lush.nvim#advanced-usage> for the complete options.
 
 OTHER PLUGINS SUPPORT                         *zenbones-other-plugins-support*
 
@@ -136,9 +142,6 @@ currently supported.
 - CoC <https://github.com/neoclide/coc.nvim>
 - Neogit <https://github.com/TimUntersberger/neogit>
 
-
-See also Lush’s documentation
-<https://github.com/rktjmp/lush.nvim#advanced-usage> for the complete options.
 
 OTHER IMPLEMENTATIONS                         *zenbones-other-implementations*
 
