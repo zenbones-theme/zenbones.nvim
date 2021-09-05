@@ -103,6 +103,20 @@ highlight.
 
 #### g:zenbones_dim_noncurrent_window
 
+## Advanced Usage
+
+Zenbones is pretty extensible thanks to
+[Lush](https://github.com/rktjmp/lush.nvim). You can easily retrieve the colors
+in lua:
+
+```lua
+local theme = require "zenbones"
+local colors = require "zenbones.colors"
+
+print(theme.StatusLine.bg.hex)
+print(sand.darken(20).hex)
+```
+
 Set to `v:true` to make non-current window background dimmer than _Normal_.
 
 ## Other plugins support
@@ -119,20 +133,6 @@ currently supported.
 -   [BarBar](https://github.com/romgrk/barbar.nvim)
 -   [CoC](https://github.com/neoclide/coc.nvim)
 -   [Neogit](https://github.com/TimUntersberger/neogit)
-
-## Advanced Usage
-
-Zenbones is pretty extensible thanks to
-[Lush](https://github.com/rktjmp/lush.nvim). You can easily retrieve the colors
-in lua:
-
-```lua
-local theme = require "zenbones"
-local colors = require "zenbones.colors"
-
-print(theme.StatusLine.bg.hex)
-print(sand.darken(20).hex)
-```
 
 See also
 [Lush's documentation](https://github.com/rktjmp/lush.nvim#advanced-usage) for
