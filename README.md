@@ -138,6 +138,7 @@ currently supported.
 -   [BarBar](https://github.com/romgrk/barbar.nvim)
 -   [CoC](https://github.com/neoclide/coc.nvim)
 -   [Neogit](https://github.com/TimUntersberger/neogit)
+-   [WhichKey](https://github.com/folke/which-key.nvim)
 
 ## Other implementations
 

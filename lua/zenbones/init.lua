@@ -307,6 +307,11 @@ local theme = lush(function()
 		NeogitDiffAddHighlight     { DiffAdd },
 		NeogitHunkHeader           { LineNr },
 		NeogitHunkHeaderHighlight  { CursorLine, fg = c.stone, gui = "bold" },
+
+		WhichKey                   { Statement },
+		WhichKeyGroup              { Special },
+		WhichKeySeparator          { LineNr },
+		WhichKeyValue              { Constant },
 	}
 end)
 -- stylua: ignore end
