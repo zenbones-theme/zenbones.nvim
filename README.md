@@ -46,9 +46,10 @@ set termguicolors
 colorscheme zenbones
 ```
 
-Alternatively, if you want to make use of the lua version:
+If you want to make use of the lua version:
 
 ```vim
+" has('nvim') only
 set termguicolors
 colorscheme zenbones-lush
 ```
@@ -103,6 +104,8 @@ highlight.
 
 #### g:zenbones_dim_noncurrent_window
 
+Set to `v:true` to make non-current window background dimmer than _Normal_.
+
 ## Advanced Usage
 
 Zenbones is pretty extensible thanks to
@@ -117,7 +120,9 @@ print(theme.StatusLine.bg.hex)
 print(sand.darken(20).hex)
 ```
 
-Set to `v:true` to make non-current window background dimmer than _Normal_.
+See also
+[Lush's documentation](https://github.com/rktjmp/lush.nvim#advanced-usage) for
+the complete options.
 
 ## Other plugins support
 
@@ -133,10 +138,6 @@ currently supported.
 -   [BarBar](https://github.com/romgrk/barbar.nvim)
 -   [CoC](https://github.com/neoclide/coc.nvim)
 -   [Neogit](https://github.com/TimUntersberger/neogit)
-
-See also
-[Lush's documentation](https://github.com/rktjmp/lush.nvim#advanced-usage) for
-the complete options.
 
 ## Other implementations
 
