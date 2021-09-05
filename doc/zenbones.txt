@@ -8,8 +8,8 @@ Table of Contents                                 *zenbones-table-of-contents*
   - Installation                                       |zenbones-installation|
   - Usage                                                     |zenbones-usage|
   - Configuration                                     |zenbones-configuration|
-  - Other plugins support                     |zenbones-other-plugins-support|
   - Advanced Usage                                   |zenbones-advanced-usage|
+  - Other plugins support                     |zenbones-other-plugins-support|
   - Other implementations                     |zenbones-other-implementations|
   - Inspirations                                       |zenbones-inspirations|
 
@@ -103,9 +103,22 @@ g:zenbones_solid_vert_split            Set to `v:true` to make vertical split
 
                                    *zenbones-g:zenbones_dim_noncurrent_window*
 
-g:zenbones_dim_noncurrent_window       Set to `v:true` to make non-current
-                                       window background dimmer than _Normal_.
+ADVANCED USAGE                                       *zenbones-advanced-usage*
 
+Zenbones is pretty extensible thanks to Lush
+<https://github.com/rktjmp/lush.nvim>. You can easily retrieve the colors in
+lua:
+
+>
+    local theme = require "zenbones"
+    local colors = require "zenbones.colors"
+    
+    print(theme.StatusLine.bg.hex)
+    print(sand.darken(20).hex)
+<
+
+
+Set to `v:true` to make non-current window background dimmer than _Normal_.
 
 OTHER PLUGINS SUPPORT                         *zenbones-other-plugins-support*
 
@@ -122,21 +135,6 @@ currently supported.
 - BarBar <https://github.com/romgrk/barbar.nvim>
 - CoC <https://github.com/neoclide/coc.nvim>
 - Neogit <https://github.com/TimUntersberger/neogit>
-
-
-ADVANCED USAGE                                       *zenbones-advanced-usage*
-
-Zenbones is pretty extensible thanks to Lush
-<https://github.com/rktjmp/lush.nvim>. You can easily retrieve the colors in
-lua:
-
->
-    local theme = require "zenbones"
-    local colors = require "zenbones.colors"
-    
-    print(theme.StatusLine.bg.hex)
-    print(sand.darken(20).hex)
-<
 
 
 See also Lush’s documentation
