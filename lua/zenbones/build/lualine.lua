@@ -1,6 +1,6 @@
 local template = [[local common_fg = "${common_fg}"
-local inative_bg = "${inative_bg}"
-local inative_fg = "${inative_fg}"
+local inactive_bg = "${inactive_bg}"
+local inactive_fg = "${inactive_fg}"
 
 return {
 	normal = {
@@ -26,9 +26,9 @@ return {
 	},
 
 	inactive = {
-		a = { bg = inative_bg, fg = inative_fg, gui = "bold" },
-		b = { bg = inative_bg, fg = inative_fg },
-		c = { bg = inative_bg, fg = inative_fg },
+		a = { bg = inactive_bg, fg = inactive_fg, gui = "bold" },
+		b = { bg = inactive_bg, fg = inactive_fg },
+		c = { bg = inactive_bg, fg = inactive_fg },
 	},
 }
 ]]
@@ -40,8 +40,8 @@ return {
 	template,
 	{
 		common_fg = theme.Folded.fg.hex,
-		inative_bg = theme.StatusLineNC.bg.hex,
-		inative_fg = theme.StatusLineNC.fg.hex,
+		inactive_bg = theme.StatusLineNC.bg.hex,
+		inactive_fg = theme.StatusLineNC.fg.hex,
 		normal_a_bg = theme.PmenuSbar.bg.hex,
 		normal_b_bg = theme.PmenuSel.bg.hex,
 		normal_c_bg = theme.StatusLine.bg.hex,

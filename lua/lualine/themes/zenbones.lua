@@ -1,6 +1,6 @@
 local common_fg = "#564E4A"
-local inative_bg = "#DAD3CF"
-local inative_fg = "#596A76"
+local inactive_bg = "#DAD3CF"
+local inactive_fg = "#596A76"
 
 return {
 	normal = {
@@ -26,8 +26,8 @@ return {
 	},
 
 	inactive = {
-		a = { bg = inative_bg, fg = inative_fg, gui = "bold" },
-		b = { bg = inative_bg, fg = inative_fg },
-		c = { bg = inative_bg, fg = inative_fg },
+		a = { bg = inactive_bg, fg = inactive_fg, gui = "bold" },
+		b = { bg = inactive_bg, fg = inactive_fg },
+		c = { bg = inactive_bg, fg = inactive_fg },
 	},
 }
