@@ -291,6 +291,10 @@ local theme = lush(function()
 		LightspeedPendingChangeOpArea { fg = c.blossom },
 		LightspeedGreyWash         { fg = Comment.fg },
 
+		HopNextKey                 { LightspeedLabel },
+		HopNextKey1                { LightspeedLabelDistant },
+		HopNextKey2                { fg = c.water },
+		HopUnmatched               { LightspeedGreyWash } ,
 
 		BufferCurrent              { TabLineSel },
 		BufferVisible              { fg = StatusLineNC.fg },
