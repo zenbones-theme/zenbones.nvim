@@ -17,7 +17,11 @@ local function write_template(path, template, values)
 end
 
 local function build()
+<<<<<<< HEAD
 	local templates = { "vim", "kitty", "alacritty", "wezterm", "lualine", "lightline", "tmux" }
+=======
+	local templates = { "vim", "kitty", "alacritty", "wezterm", "lualine", "lightline" }
+>>>>>>> b939cb4 (add lightline support)
 	for _, t in ipairs(templates) do
 		write_template(unpack(require("zenbones.build." .. t)))
 	end
