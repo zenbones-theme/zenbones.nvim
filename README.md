@@ -135,6 +135,7 @@ currently supported.
 -   [Telescope](https://github.com/nvim-telescope/telescope.nvim)
 -   [Sneak](https://github.com/justinmk/vim-sneak)
 -   [Lightspeed](https://github.com/ggandor/lightspeed.nvim)
+-   [Hop](https://github.com/phaazon/hop.nvim)
 -   [Lualine](https://github.com/hoob3rt/lualine.nvim)
 -   [BarBar](https://github.com/romgrk/barbar.nvim)
 -   [CoC](https://github.com/neoclide/coc.nvim)

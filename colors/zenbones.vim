@@ -75,6 +75,7 @@ highlight Function guifg=#2C363C guibg=NONE guisp=NONE gui=NONE
 highlight GitSignsAdd guifg=#617437 guibg=NONE guisp=NONE gui=NONE
 highlight GitSignsChange guifg=#286486 guibg=NONE guisp=NONE gui=NONE
 highlight GitSignsDelete guifg=#A8334C guibg=NONE guisp=NONE gui=NONE
+highlight HopNextKey2 guifg=#286486 guibg=NONE guisp=NONE gui=NONE
 highlight Identifier guifg=#44525B guibg=NONE guisp=NONE gui=NONE
 highlight IncSearch guifg=#F0EDEC guibg=#88507D guisp=NONE gui=bold
 highlight IndentBlanklineChar guifg=#D4CDCA guibg=NONE guisp=NONE gui=NONE
@@ -153,6 +154,9 @@ highlight! link ErrorMsg Error
 highlight! link GitGutterAdd GitSignsAdd
 highlight! link GitGutterChange GitSignsChange
 highlight! link GitGutterDelete GitSignsDelete
+highlight! link HopNextKey LightspeedLabel
+highlight! link HopNextKey1 LightspeedLabelDistant
+highlight! link HopUnmatched LightspeedGreyWash
 highlight! link LightspeedMaskedChar Conceal
 highlight! link LightspeedPendingOpArea SneakLabel
 highlight! link LightspeedUnlabeledMatch Bold
