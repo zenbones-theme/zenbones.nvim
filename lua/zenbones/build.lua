@@ -17,7 +17,7 @@ local function write_template(path, template, values)
 end
 
 local function build()
-	local templates = { "vim", "kitty", "alacritty", "wezterm", "lualine" }
+	local templates = { "vim", "kitty", "alacritty", "wezterm", "lualine", "lightline", "tmux" }
 	for _, t in ipairs(templates) do
 		write_template(unpack(require("zenbones.build." .. t)))
 	end
