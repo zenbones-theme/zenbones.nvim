@@ -1,4 +1,4 @@
-*zenbones.txt*         For NVIM v0.4.3          Last change: 2021 September 05
+*zenbones.txt*         For NVIM v0.4.3          Last change: 2021 September 06
 
 ==============================================================================
 Table of Contents                                 *zenbones-table-of-contents*
@@ -133,7 +133,10 @@ currently supported.
 - Indent Blankline <https://github.com/lukas-reineke/indent-blankline.nvim>
 - Telescope <https://github.com/nvim-telescope/telescope.nvim>
 - Sneak <https://github.com/justinmk/vim-sneak>
+- Lightspeed <https://github.com/ggandor/lightspeed.nvim>
+- Hop <https://github.com/phaazon/hop.nvim>
 - Lualine <https://github.com/hoob3rt/lualine.nvim>
+- Lightline <https://github.com/itchyny/lightline.vim>
 - BarBar <https://github.com/romgrk/barbar.nvim>
 - CoC <https://github.com/neoclide/coc.nvim>
 - Neogit <https://github.com/TimUntersberger/neogit>
