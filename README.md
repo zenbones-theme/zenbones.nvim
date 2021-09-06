@@ -149,6 +149,7 @@ currently supported.
 -   [Kitty](extras/kitty/zenbones.conf)
 -   [Alacritty](extras/alacritty/zenbones.yml)
 -   [WezTerm](extras/wezterm/Zenbones.toml)
+-   [Tmux](extras/tmux/zenbones.tmux)
 
 ### Print terminal colors
 
