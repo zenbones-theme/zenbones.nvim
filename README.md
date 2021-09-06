@@ -137,6 +137,7 @@ currently supported.
 -   [Lightspeed](https://github.com/ggandor/lightspeed.nvim)
 -   [Hop](https://github.com/phaazon/hop.nvim)
 -   [Lualine](https://github.com/hoob3rt/lualine.nvim)
+-   [Lightline](https://github.com/itchyny/lightline.vim)
 -   [BarBar](https://github.com/romgrk/barbar.nvim)
 -   [CoC](https://github.com/neoclide/coc.nvim)
 -   [Neogit](https://github.com/TimUntersberger/neogit)
