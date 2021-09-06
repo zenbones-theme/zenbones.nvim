@@ -279,6 +279,19 @@ local theme = lush(function()
 		SneakLabel                 { WildMenu },
 		SneakLabelMask             { bg = c.blossom, fg = c.blossom },
 
+		LightspeedLabel            { fg = c.blossom, gui = "bold,underline" },
+		LightspeedLabelOverlapped  { fg = c.blossom, gui = "underline" },
+		LightspeedLabelDistant     { fg = c.sky, gui = "bold,underline" },
+		LightspeedLabelDistantOverlapped { fg = c.sky, gui = "underline" },
+		LightspeedShortcut         { SneakLabel, gui = "bold,underline" },
+		LightspeedOneCharMatch     { SneakLabel, gui = "bold" },
+		LightspeedMaskedChar       { Conceal },
+		LightspeedUnlabeledMatch   { Bold },
+		LightspeedPendingOpArea    { SneakLabel },
+		LightspeedPendingChangeOpArea { fg = c.blossom },
+		LightspeedGreyWash         { fg = Comment.fg },
+
+
 		BufferCurrent              { TabLineSel },
 		BufferVisible              { fg = StatusLineNC.fg },
 		BufferVisibleSign          { fg = StatusLineNC.fg },

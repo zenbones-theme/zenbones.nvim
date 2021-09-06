@@ -79,6 +79,14 @@ highlight Identifier guifg=#44525B guibg=NONE guisp=NONE gui=NONE
 highlight IncSearch guifg=#F0EDEC guibg=#88507D guisp=NONE gui=bold
 highlight IndentBlanklineChar guifg=#D4CDCA guibg=NONE guisp=NONE gui=NONE
 highlight Italic guifg=NONE guibg=NONE guisp=NONE gui=italic
+highlight LightspeedGreyWash guifg=#948985 guibg=NONE guisp=NONE gui=NONE
+highlight LightspeedLabel guifg=#88507D guibg=NONE guisp=NONE gui=bold,underline
+highlight LightspeedLabelDistant guifg=#3B8992 guibg=NONE guisp=NONE gui=bold,underline
+highlight LightspeedLabelDistantOverlapped guifg=#3B8992 guibg=NONE guisp=NONE gui=underline
+highlight LightspeedLabelOverlapped guifg=#88507D guibg=NONE guisp=NONE gui=underline
+highlight LightspeedOneCharMatch guifg=#F0EDEC guibg=#88507D guisp=NONE gui=bold
+highlight LightspeedPendingChangeOpArea guifg=#88507D guibg=NONE guisp=NONE gui=NONE
+highlight LightspeedShortcut guifg=#F0EDEC guibg=#88507D guisp=NONE gui=bold,underline
 highlight LineNr guifg=#9C8E87 guibg=NONE guisp=NONE gui=NONE
 highlight LspDiagnosticsDefaultHint guifg=#88507D guibg=NONE guisp=NONE gui=NONE
 highlight LspDiagnosticsDefaultInformation guifg=#286486 guibg=NONE guisp=NONE gui=NONE
@@ -145,6 +153,9 @@ highlight! link ErrorMsg Error
 highlight! link GitGutterAdd GitSignsAdd
 highlight! link GitGutterChange GitSignsChange
 highlight! link GitGutterDelete GitSignsDelete
+highlight! link LightspeedMaskedChar Conceal
+highlight! link LightspeedPendingOpArea SneakLabel
+highlight! link LightspeedUnlabeledMatch Bold
 highlight! link LspCodeLens LineNr
 highlight! link LspDiagnosticsDefaultError Error
 highlight! link LspDiagnosticsDefaultWarning WarningMsg
@@ -171,4 +182,8 @@ highlight! link TelescopeBorder FloatBorder
 highlight! link TelescopeSelection CursorLine
 highlight! link TermCursor Cursor
 highlight! link TermCursorNC lCursor
+highlight! link WhichKey Statement
+highlight! link WhichKeyGroup Special
+highlight! link WhichKeySeparator LineNr
+highlight! link WhichKeyValue Constant
 highlight! link Whitespace NonText
