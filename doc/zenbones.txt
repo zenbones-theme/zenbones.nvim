@@ -150,6 +150,7 @@ OTHER IMPLEMENTATIONS                         *zenbones-other-implementations*
 - Kitty <extras/kitty/zenbones.conf>
 - Alacritty <extras/alacritty/zenbones.yml>
 - WezTerm <extras/wezterm/Zenbones.toml>
+- Tmux <extras/tmux/zenbones.tmux>
 
 
 PRINT TERMINAL COLORS
