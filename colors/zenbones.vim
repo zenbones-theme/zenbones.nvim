@@ -117,7 +117,6 @@ highlight SpellRare guifg=#974352 guibg=NONE guisp=NONE gui=undercurl
 highlight Statement guifg=#2C363C guibg=NONE guisp=NONE gui=bold
 highlight StatusLine guifg=#2C363C guibg=#D1C7C3 guisp=NONE gui=NONE
 highlight StatusLineNC guifg=#596A76 guibg=#DAD3CF guisp=NONE gui=NONE
-highlight TSTag guifg=#4D5C65 guibg=NONE guisp=NONE gui=bold
 highlight TabLine guifg=#2C363C guibg=#D1C7C3 guisp=NONE gui=italic
 highlight TabLineSel guifg=NONE guibg=NONE guisp=NONE gui=bold
 highlight TelescopeMatching guifg=#88507D guibg=NONE guisp=NONE gui=bold
@@ -181,7 +180,11 @@ highlight! link SignColumn LineNr
 highlight! link Sneak Search
 highlight! link SneakLabel WildMenu
 highlight! link SpellLocal SpellCap
+highlight! link TSDanger Error
+highlight! link TSNote LspDiagnosticsDefaultInformation
+highlight! link TSTag Special
 highlight! link TSVariable Identifier
+highlight! link TSWarning WarningMsg
 highlight! link TabLineFill StatusLineNC
 highlight! link TelescopeBorder FloatBorder
 highlight! link TelescopeSelection CursorLine

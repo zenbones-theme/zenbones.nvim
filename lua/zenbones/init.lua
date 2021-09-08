@@ -239,7 +239,7 @@ local theme = lush(function()
 		TSVariable              { Identifier }, -- Any variable name that does not have another highlight.
 		-- TSVariableBuiltin    { };	-- Variable names that are defined by the languages, like `this` or `self`.
 
-		TSTag                   { fg = c.stone.li(20), gui = "bold" }, -- Tags like html tag names.
+		TSTag                   { Special }, -- Tags like html tag names.
 		-- TSTagDelimiter       { };	-- Tag delimiter like `<` `>` `/`
 		-- TSText               { };	-- For strings considered text in a markup language.
 		-- TSEmphasis           { };	-- For text to be represented with emphasis.
@@ -248,6 +248,10 @@ local theme = lush(function()
 		-- TSTitle              { };	-- Text that is part of a title.
 		-- TSLiteral            { };	-- Literal text.
 		-- TSURI                { };	-- Any URI like a link or email.
+
+		TSNote                  { LspDiagnosticsDefaultInformation },
+		TSWarning               { WarningMsg },
+		TSDanger                { Error },
 
 		-- Syntax
 		diffAdded     { fg = c.leaf },
