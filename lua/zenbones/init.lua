@@ -9,7 +9,7 @@ if lightness == "bright" then
 	normal_bg = normal_bg.abs_da(-4)
 	diff_bg_li = -4
 elseif lightness == "dim" then
-	normal_bg = normal_bg.abs_da(4)
+	normal_bg = normal_bg.abs_da(4).de(18)
 	diff_bg_li = 4
 elseif lightness ~= nil then
 	local error_msg = "Unknown zenbones_lightness value: " .. vim.inspect(lightness)
