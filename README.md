@@ -20,7 +20,8 @@ other roles such as diagnostics, diffs, search matches.
 Primarily built for neovim but it works pretty well with vim. However here are
 some requirements to take full advantage of the colorscheme:
 
--   24-bit RGB colors (neovim or vim compiled with +termguicolors)
+-   24-bit RGB colors (neovim or vim compiled with +termguicolors) i.e.
+    `set termguicolors`
 -   Font with bold and italic
 -   Terminal or GUI with bold and italic support
 
@@ -42,7 +43,6 @@ use "rktjmp/lush.nvim"
 Just apply the colorscheme as usual:
 
 ```vim
-set termguicolors
 colorscheme zenbones
 ```
 
@@ -50,7 +50,6 @@ If you want to make use of the lua version:
 
 ```vim
 " has('nvim') only
-set termguicolors
 colorscheme zenbones-lush
 ```
 
