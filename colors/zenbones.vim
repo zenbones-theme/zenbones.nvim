@@ -139,6 +139,7 @@ highlight diffNewFile guifg=#617437 guibg=NONE guisp=NONE gui=italic
 highlight diffOldFile guifg=#A8334C guibg=NONE guisp=NONE gui=italic
 highlight diffRemoved guifg=#A8334C guibg=NONE guisp=NONE gui=NONE
 highlight lCursor guifg=#F2F0EF guibg=#4D5C65 guisp=NONE gui=NONE
+highlight markdownH1 guifg=#2C363C guibg=NONE guisp=NONE gui=bold,underline
 highlight! link BufferCurrent TabLineSel
 highlight! link CocCodeLens LineNr
 highlight! link CocErrorSign LspDiagnosticsDefaultError
@@ -191,3 +192,10 @@ highlight! link WhichKeyGroup Special
 highlight! link WhichKeySeparator LineNr
 highlight! link WhichKeyValue Constant
 highlight! link Whitespace NonText
+highlight! link markdownCode Identifier
+highlight! link markdownH2 Statement
+highlight! link markdownH3 Statement
+highlight! link markdownH4 Special
+highlight! link markdownH5 Special
+highlight! link markdownH6 Special
+highlight! link markdownLinkTextDelimiter Delimiter
