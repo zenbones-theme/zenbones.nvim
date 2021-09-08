@@ -59,7 +59,7 @@ local theme = lush(function()
 		DiffDelete      { bg = c.rose.de(32).li(74).abs_da(diff_bg_li) }, -- diff mode: Deleted line |diff.txt|
 		DiffText        { bg = c.water.de(24).li(64).abs_da(diff_bg_li), fg = c.stone }, -- diff mode: Changed text within a changed line |diff.txt|
 
-		LineNr          { fg = Normal.bg.da(36) }, -- Line number for ":number" and ":#" commands, and when 'number' or 'relativenumber' option is set.
+		LineNr          { fg = Normal.bg.da(32) }, -- Line number for ":number" and ":#" commands, and when 'number' or 'relativenumber' option is set.
 		SignColumn      { LineNr }, -- column where |signs| are displayed
 		FoldColumn      { LineNr, gui = "bold" }, -- 'foldcolumn'
 		Folded          { bg = Normal.bg.da(16), fg = Normal.bg.da(64) }, -- line used for closed folds

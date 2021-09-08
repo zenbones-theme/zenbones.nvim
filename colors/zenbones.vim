@@ -69,7 +69,7 @@ highlight DiffText guifg=#2C363C guibg=#99C6E9 guisp=NONE gui=NONE
 highlight Directory guifg=NONE guibg=NONE guisp=NONE gui=bold
 highlight Error guifg=#A8334C guibg=NONE guisp=NONE gui=NONE
 highlight FloatBorder guifg=#786D68 guibg=NONE guisp=NONE gui=NONE
-highlight FoldColumn guifg=#9C8E87 guibg=NONE guisp=NONE gui=bold
+highlight FoldColumn guifg=#A79891 guibg=NONE guisp=NONE gui=bold
 highlight Folded guifg=#564E4A guibg=#CDC2BC guisp=NONE gui=NONE
 highlight Function guifg=#2C363C guibg=NONE guisp=NONE gui=NONE
 highlight GitSignsAdd guifg=#617437 guibg=NONE guisp=NONE gui=NONE
@@ -88,7 +88,7 @@ highlight LightspeedLabelOverlapped guifg=#88507D guibg=NONE guisp=NONE gui=unde
 highlight LightspeedOneCharMatch guifg=#F0EDEC guibg=#88507D guisp=NONE gui=bold
 highlight LightspeedPendingChangeOpArea guifg=#88507D guibg=NONE guisp=NONE gui=NONE
 highlight LightspeedShortcut guifg=#F0EDEC guibg=#88507D guisp=NONE gui=bold,underline
-highlight LineNr guifg=#9C8E87 guibg=NONE guisp=NONE gui=NONE
+highlight LineNr guifg=#A79891 guibg=NONE guisp=NONE gui=NONE
 highlight LspDiagnosticsDefaultHint guifg=#88507D guibg=NONE guisp=NONE gui=NONE
 highlight LspDiagnosticsDefaultInformation guifg=#286486 guibg=NONE guisp=NONE gui=NONE
 highlight LspDiagnosticsUnderlineError guifg=#A8334C guibg=NONE guisp=NONE gui=undercurl
