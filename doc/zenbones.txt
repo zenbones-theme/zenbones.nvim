@@ -1,4 +1,4 @@
-*zenbones.txt*         For NVIM v0.4.3          Last change: 2021 September 08
+*zenbones.txt*         For NVIM v0.4.3          Last change: 2021 September 10
 
 ==============================================================================
 Table of Contents                                 *zenbones-table-of-contents*
@@ -26,7 +26,8 @@ Primarily built for neovim but it works pretty well with vim. However here are
 some requirements to take full advantage of the colorscheme:
 
 
-- 24-bit RGB colors (neovim or vim compiled with +termguicolors)
+- 24-bit RGB colors (neovim or vim compiled with +termguicolors) i.e.
+    `set termguicolors`
 - Font with bold and italic
 - Terminal or GUI with bold and italic support
 
@@ -50,7 +51,6 @@ USAGE                                                         *zenbones-usage*
 Just apply the colorscheme as usual:
 
 >
-    set termguicolors
     colorscheme zenbones
 <
 
@@ -59,7 +59,6 @@ If you want to make use of the lua version:
 
 >
     " has('nvim') only
-    set termguicolors
     colorscheme zenbones-lush
 <
 
@@ -141,6 +140,7 @@ currently supported.
 - CoC <https://github.com/neoclide/coc.nvim>
 - Neogit <https://github.com/TimUntersberger/neogit>
 - WhichKey <https://github.com/folke/which-key.nvim>
+- Trouble <https://github.com/folke/trouble.nvim>
 
 
 OTHER IMPLEMENTATIONS                         *zenbones-other-implementations*
