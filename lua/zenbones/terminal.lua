@@ -20,7 +20,7 @@ local colors = {
 	c.sand.sa(4).da(10),
 }
 
-local M = { }
+local M = {}
 
 M.colors = colors
 

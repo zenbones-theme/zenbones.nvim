@@ -198,6 +198,10 @@ highlight! link WhichKeyGroup Special
 highlight! link WhichKeySeparator LineNr
 highlight! link WhichKeyValue Constant
 highlight! link Whitespace NonText
+highlight! link helpHyperTextEntry Special
+highlight! link helpHyperTextJump Constant
+highlight! link helpOption Constant
+highlight! link helpSpecial Type
 highlight! link markdownCode Identifier
 highlight! link markdownH2 Statement
 highlight! link markdownH3 Statement

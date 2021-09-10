@@ -263,7 +263,7 @@ local theme = lush(function()
 		diffLine      { fg = c.blossom, gui = "bold" },
 		diffIndexLine { fg = c.wood },
 		
-		markdownH1    { Statement, gui="bold,underline" },
+		markdownH1    { Statement, gui = "bold,underline" },
 		markdownH2    { Statement },
 		markdownH3    { Statement },
 		markdownH4    { Special },
@@ -271,6 +271,11 @@ local theme = lush(function()
 		markdownH6    { Special },
 		markdownCode  { Identifier },
 		markdownLinkTextDelimiter { Delimiter },
+
+		helpHyperTextEntry { Special },
+		helpHyperTextJump  { Constant },
+		helpSpecial        { Type },
+		helpOption         { Constant },
 
 		-- Other plugins
 		GitSignsAdd                { fg = c.leaf },
