@@ -2,9 +2,9 @@ local lush = require "lush"
 local hsluv = lush.hsluv
 
 local c = {
-	sand = hsluv(39, 12, 16),
+	sand = hsluv(48, 10, 12),
 	-- stone = hsluv(230, 2, 80),
-	stone = hsluv(52, 7, 76),
+	stone = hsluv(92, 6, 78),
 	leaf = hsluv(103, 68, 54),
 	water = hsluv(236, 84, 53),
 	rose = hsluv(4, 55, 56),
@@ -53,7 +53,7 @@ local theme = lush(function()
 		ErrorMsg        { Error }, -- error messages on the command line
 		WarningMsg      { fg = c.wood }, -- warning messages
 
-		Comment         { fg = c.sand.li(38).de(28), gui = "italic" }, -- any comment
+		Comment         { fg = c.sand.li(32).de(30), gui = "italic" }, -- any comment
 		Conceal         { fg = c.stone.li(20), gui = "bold,italic" }, -- placeholder characters substituted for concealed text (see 'conceallevel')
 
 		Cursor          { bg = c.stone, fg = c.sand.da(10) }, -- character under the cursor
@@ -63,14 +63,14 @@ local theme = lush(function()
 
 		CursorLine      { bg = Normal.bg.li(4) }, -- Screen-line at the cursor, when 'cursorline' is set.	Low-priority if foreground (ctermfg OR guifg) is not set.
 		CursorColumn    { CursorLine }, -- Screen-column at the cursor, when 'cursorcolumn' is set.
-		ColorColumn     { bg = c.wood.de(38).da(20) }, -- used for the columns set with 'colorcolumn'
+		ColorColumn     { bg = c.wood.de(38).da(24) }, -- used for the columns set with 'colorcolumn'
 
-		DiffAdd         { bg = c.leaf.de(20).da(10).abs_da(diff_bg_li) }, -- diff mode: Added line |diff.txt|
-		DiffChange      { bg = c.water.de(22).li(10).abs_da(diff_bg_li) }, -- diff mode: Changed line |diff.txt|
-		DiffDelete      { bg = c.rose.de(37).li(10).abs_da(diff_bg_li) }, -- diff mode: Deleted line |diff.txt|
-		DiffText        { bg = c.water.de(24).li(20).abs_da(diff_bg_li), fg = c.stone }, -- diff mode: Changed text within a changed line |diff.txt|
+		DiffAdd         { bg = c.leaf.de(17).da(23).abs_da(diff_bg_li) }, -- diff mode: Added line |diff.txt|
+		DiffChange      { bg = c.water.de(18).da(22).abs_da(diff_bg_li) }, -- diff mode: Changed line |diff.txt|
+		DiffDelete      { bg = c.rose.de(23).da(15).abs_da(diff_bg_li) }, -- diff mode: Deleted line |diff.txt|
+		DiffText        { bg = c.water.de(22).da(17).abs_da(diff_bg_li), fg = c.stone }, -- diff mode: Changed text within a changed line |diff.txt|
 
-		LineNr          { fg = Normal.bg.li(32) }, -- Line number for ":number" and ":#" commands, and when 'number' or 'relativenumber' option is set.
+		LineNr          { fg = Normal.bg.li(26) }, -- Line number for ":number" and ":#" commands, and when 'number' or 'relativenumber' option is set.
 		SignColumn      { LineNr }, -- column where |signs| are displayed
 		FoldColumn      { LineNr, gui = "bold" }, -- 'foldcolumn'
 		Folded          { bg = Normal.bg.li(16), fg = Normal.bg.da(64) }, -- line used for closed folds
@@ -95,7 +95,7 @@ local theme = lush(function()
 		-- QuickFixLine { }, -- Current |quickfix| item in the quickfix window. Combined with |hl-CursorLine| when the cursor is there.
 
 		SpellBad        { fg = Error.fg.de(30), gui = "undercurl", guisp = Error.fg }, -- Word that is not recognized by the spellchecker. |spell| Combined with the highlighting used otherwise.
-		SpellCap        { SpellBad, guisp = Error.fg.li(10) }, -- Word that should start with a capital. |spell| Combined with the highlighting used otherwise.
+		SpellCap        { SpellBad, guisp = Error.fg.da(10) }, -- Word that should start with a capital. |spell| Combined with the highlighting used otherwise.
 		SpellLocal      { SpellCap }, -- Word that is recognized by the spellchecker as one that is used in another region. |spell| Combined with the highlighting used otherwise.
 		SpellRare       { SpellBad, guisp = c.wood }, -- Word that is recognized by the spellchecker as one that is hardly ever used.  |spell| Combined with the highlighting used otherwise.
 
@@ -126,14 +126,14 @@ local theme = lush(function()
 		-- default,
 		-- Uncomment and edit if you want more specific syntax highlighting.
 
-		Constant        { fg = c.stone.da(26), gui = "italic" }, -- (preferred) any constant
+		Constant        { fg = c.stone.da(30), gui = "italic" }, -- (preferred) any constant
 		-- String       { }, --   a string constant: "this is a string"
 		-- Character    { }, --  a character constant: 'c', '\n'
 		-- Number       { }, --   a number constant: 234, 0xff
 		-- Boolean      { }, --  a boolean constant: TRUE, false
 		-- Float        { }, --    a floating point constant: 2.3e10
 
-		Identifier      { fg = c.stone.da(12) }, -- (preferred) any variable name
+		Identifier      { fg = c.stone.da(18) }, -- (preferred) any variable name
 		Function        { fg = c.stone }, -- function name (also: methods for classes)
 
 		Statement       { fg = c.stone, gui = "bold" }, -- (preferred) any statement
@@ -150,15 +150,15 @@ local theme = lush(function()
 		-- Macro        { }, --    same as Define
 		-- PreCondit    { }, --  preprocessor #if, #else, #endif, etc.
 
-		Type            { fg = c.sand.li(62) }, -- (preferred) int, long, char, etc.
+		Type            { fg = c.sand.li(68) }, -- (preferred) int, long, char, etc.
 		-- StorageClass { }, -- static, register, volatile, etc.
 		-- Structure    { }, --  struct, union, enum, etc.
 		-- Typedef      { }, --  A typedef
 
-		Special         { fg = c.stone.li(21), gui = "bold" }, -- (preferred) any special symbol
+		Special         { fg = c.stone.da(18), gui = "bold" }, -- (preferred) any special symbol
 		-- SpecialChar  { }, --  special character in a constant
 		-- Tag          { }, --    you can use CTRL-] on this
-		Delimiter       { fg = c.sand.li(68) }, --	character that needs attention
+		Delimiter       { fg = c.sand.li(38) }, --	character that needs attention
 		SpecialComment  { Comment, gui = "bold" }, -- special things inside a comment
 		-- Debug        { }, --    debugging statements
 
