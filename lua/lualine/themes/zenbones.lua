@@ -22,7 +22,7 @@ return {
 	},
 
 	replace = {
-		a = { bg = "#E9CACE", fg = common_fg, gui = "bold" },
+		a = { bg = "#E7CBCE", fg = common_fg, gui = "bold" },
 	},
 
 	inactive = {

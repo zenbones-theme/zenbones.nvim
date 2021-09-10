@@ -64,7 +64,7 @@ highlight CursorLineNr guifg=#2C363C guibg=NONE guisp=NONE gui=bold
 highlight Delimiter guifg=#8E817B guibg=NONE guisp=NONE gui=NONE
 highlight DiffAdd guifg=NONE guibg=#DDE6CD guisp=NONE gui=NONE
 highlight DiffChange guifg=NONE guibg=#C0DAF2 guisp=NONE gui=NONE
-highlight DiffDelete guifg=NONE guibg=#E9CACE guisp=NONE gui=NONE
+highlight DiffDelete guifg=NONE guibg=#E7CBCE guisp=NONE gui=NONE
 highlight DiffText guifg=#2C363C guibg=#99C6E9 guisp=NONE gui=NONE
 highlight Directory guifg=NONE guibg=NONE guisp=NONE gui=bold
 highlight Error guifg=#A8334C guibg=NONE guisp=NONE gui=NONE
@@ -189,7 +189,6 @@ highlight! link TabLineFill StatusLineNC
 highlight! link TelescopeBorder FloatBorder
 highlight! link TelescopeSelection CursorLine
 highlight! link TermCursor Cursor
-highlight! link TermCursorNC lCursor
 highlight! link TroubleNormal Function
 highlight! link TroubleSource Constant
 highlight! link TroubleText Function

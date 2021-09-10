@@ -48,7 +48,6 @@ local theme = lush(function()
 		lCursor         { Cursor, bg = Cursor.bg.li(20)  }, -- the character under the cursor when |language-mapping| is used (see 'guicursor')
 		-- CursorIM     { }, -- like Cursor, but used when in IME mode |CursorIM|
 		TermCursor      { Cursor }, -- cursor in a focused terminal
-		TermCursorNC    { lCursor }, -- cursor in an unfocused terminal
 
 		CursorLine      { bg = Normal.bg.da(4) }, -- Screen-line at the cursor, when 'cursorline' is set.	Low-priority if foreground (ctermfg OR guifg) is not set.
 		CursorColumn    { CursorLine }, -- Screen-column at the cursor, when 'cursorcolumn' is set.
@@ -56,7 +55,7 @@ local theme = lush(function()
 
 		DiffAdd         { bg = c.leaf.de(77).li(82).abs_da(diff_bg_li) }, -- diff mode: Added line |diff.txt|
 		DiffChange      { bg = c.water.de(22).li(76).abs_da(diff_bg_li) }, -- diff mode: Changed line |diff.txt|
-		DiffDelete      { bg = c.rose.de(32).li(74).abs_da(diff_bg_li) }, -- diff mode: Deleted line |diff.txt|
+		DiffDelete      { bg = c.rose.de(37).li(74).abs_da(diff_bg_li) }, -- diff mode: Deleted line |diff.txt|
 		DiffText        { bg = c.water.de(24).li(64).abs_da(diff_bg_li), fg = c.stone }, -- diff mode: Changed text within a changed line |diff.txt|
 
 		LineNr          { fg = Normal.bg.da(32) }, -- Line number for ":number" and ":#" commands, and when 'number' or 'relativenumber' option is set.
