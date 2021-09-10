@@ -342,6 +342,10 @@ local theme = lush(function()
 		WhichKeyGroup              { Special },
 		WhichKeySeparator          { LineNr },
 		WhichKeyValue              { Constant },
+
+		TroubleNormal              { Function },
+		TroubleText                { Function },
+		TroubleSource              { Constant },
 	}
 end)
 -- stylua: ignore end

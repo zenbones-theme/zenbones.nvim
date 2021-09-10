@@ -141,6 +141,7 @@ currently supported.
 -   [CoC](https://github.com/neoclide/coc.nvim)
 -   [Neogit](https://github.com/TimUntersberger/neogit)
 -   [WhichKey](https://github.com/folke/which-key.nvim)
+-   [Trouble](https://github.com/folke/trouble.nvim)
 
 ## Other implementations
 
