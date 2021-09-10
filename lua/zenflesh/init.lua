@@ -3,12 +3,13 @@ local hsluv = lush.hsluv
 
 local c = {
 	sand = hsluv(39, 12, 16),
-	stone = hsluv(230, 2, 80),
+	-- stone = hsluv(230, 2, 80),
+	stone = hsluv(52, 7, 76),
 	leaf = hsluv(103, 68, 54),
 	water = hsluv(236, 84, 53),
-	rose = hsluv(4, 62, 53),
-	wood = hsluv(26, 74, 51),
-	blossom = hsluv(318, 40, 52),
+	rose = hsluv(4, 55, 56),
+	wood = hsluv(26, 59, 54),
+	blossom = hsluv(318, 45, 56),
 	sky = hsluv(204, 80, 58),
 }
 
@@ -87,7 +88,7 @@ local theme = lush(function()
 		PmenuSbar       { bg = Normal.bg.li(28) }, -- Popup menu: scrollbar.
 		PmenuThumb      { bg = Normal.bg.li(58) }, -- Popup menu: Thumb of the scrollbar.
 
-		Search          { bg = c.blossom.de(10).da(20), fg = c.stone }, -- Last search pattern highlighting (see 'hlsearch').	Also used for similar items that need to stand out.
+		Search          { bg = c.blossom.de(10).da(25), fg = c.stone }, -- Last search pattern highlighting (see 'hlsearch').	Also used for similar items that need to stand out.
 		IncSearch       { bg = c.blossom, gui = "bold" }, -- 'incsearch' highlighting; also used for the text replaced with ":s///c"
 		-- Substitute   { }, -- |:substitute| replacement text highlighting
 		MatchParen      { Search }, -- The character under the cursor or just before it, if it is a paired bracket, and its match. |pi_paren.txt|
@@ -105,7 +106,7 @@ local theme = lush(function()
 		TabLineSel      { gui = "bold" }, -- tab pages line, active tab page label
 		VertSplit       { fg = PmenuThumb.bg }, -- the column separating vertically split windows
 
-		Visual          { bg = c.stone.li(84) }, -- Visual mode selection
+		Visual          { bg = c.stone.da(70) }, -- Visual mode selection
 		-- VisualNOS    { }, -- Visual mode selection when vim is "Not Owning the Selection".
 
 		NonText         { fg = Normal.bg.li(22) }, -- '@' at the end of the window, characters from 'showbreak' and other characters that do not really exist in the text (e.g., ">" displayed when a double-wide character doesn't fit at the end of the line). See also |hl-EndOfBuffer|.
@@ -125,14 +126,14 @@ local theme = lush(function()
 		-- default,
 		-- Uncomment and edit if you want more specific syntax highlighting.
 
-		Constant        { fg = c.stone.li(24), gui = "italic" }, -- (preferred) any constant
+		Constant        { fg = c.stone.da(26), gui = "italic" }, -- (preferred) any constant
 		-- String       { }, --   a string constant: "this is a string"
 		-- Character    { }, --  a character constant: 'c', '\n'
 		-- Number       { }, --   a number constant: 234, 0xff
 		-- Boolean      { }, --  a boolean constant: TRUE, false
 		-- Float        { }, --    a floating point constant: 2.3e10
 
-		Identifier      { fg = c.stone.li(16) }, -- (preferred) any variable name
+		Identifier      { fg = c.stone.da(12) }, -- (preferred) any variable name
 		Function        { fg = c.stone }, -- function name (also: methods for classes)
 
 		Statement       { fg = c.stone, gui = "bold" }, -- (preferred) any statement
