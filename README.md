@@ -49,32 +49,12 @@ colorscheme zenbones
 If you want to make use of the lua version:
 
 ```vim
-" has('nvim') only
+" Requires `neovim` and `rktjmp/lush.nvim` installed
 colorscheme zenbones-lush
 ```
 
 It works pretty much the same as the first one but pretty handy when extending
 or customizing the colors to your likings.
-
-<!-- panvimdoc-ignore-start -->
-
-## Showcase
-
-**Diff highlights**
-
-<img width="1080" alt="Vim diff" src="https://user-images.githubusercontent.com/7200153/131212101-3a3b4083-f3ae-4dfc-ab1f-133cf3600a01.png">
-
-**Search matches**
-
-<img width="1080" alt="Search matches" src="https://user-images.githubusercontent.com/7200153/131212102-620323dc-01db-4e40-ae74-640a00368121.png">
-
-**LSP diagnostics**
-
-<img width="1080" alt="LSP diagnostics" src="https://user-images.githubusercontent.com/7200153/131212106-b515ba76-d157-46b3-b1cb-c72811abbff3.png">
-
-_Font used is [Iosevka Curly Slab](https://typeof.net/Iosevka/)_.
-
-<!-- panvimdoc-ignore-end -->
 
 ## Configuration
 
@@ -107,8 +87,7 @@ Set to `v:true` to make non-current window background dimmer than _Normal_.
 
 ## Advanced Usage
 
-Zenbones is pretty extensible thanks to
-[Lush](https://github.com/rktjmp/lush.nvim). You can easily retrieve the colors
+Zenbones is pretty extensible thanks to Lush. You can easily retrieve the colors
 in lua:
 
 ```lua
@@ -121,7 +100,7 @@ print(sand.darken(20).hex)
 
 See also
 [Lush's documentation](https://github.com/rktjmp/lush.nvim#advanced-usage) for
-the complete options.
+more options.
 
 ## Other plugins support
 
@@ -191,6 +170,26 @@ selection background: #D2DFE7
 It's also possible to generate color configuration files using a template,
 [this one for Kitty](lua/zenbones/build/kitty.lua) for example. Please feel free
 to submit a PR if you want to add some more.
+
+<!-- panvimdoc-ignore-start -->
+
+## Showcase
+
+**Diff highlights**
+
+<img width="1080" alt="Vim diff" src="https://user-images.githubusercontent.com/7200153/131212101-3a3b4083-f3ae-4dfc-ab1f-133cf3600a01.png">
+
+**Search matches**
+
+<img width="1080" alt="Search matches" src="https://user-images.githubusercontent.com/7200153/131212102-620323dc-01db-4e40-ae74-640a00368121.png">
+
+**LSP diagnostics**
+
+<img width="1080" alt="LSP diagnostics" src="https://user-images.githubusercontent.com/7200153/131212106-b515ba76-d157-46b3-b1cb-c72811abbff3.png">
+
+_Font used is [Iosevka Curly Slab](https://typeof.net/Iosevka/)_.
+
+<!-- panvimdoc-ignore-end -->
 
 ## Inspirations
 
