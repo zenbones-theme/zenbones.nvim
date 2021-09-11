@@ -2,14 +2,14 @@ local lush = require "lush"
 local hsluv = lush.hsluv
 
 local c = {
-	sand = hsluv(48, 10, 12),
+	sand = hsluv(39, 8, 12),
 	-- stone = hsluv(230, 2, 80),
-	stone = hsluv(92, 6, 78),
+	stone = hsluv(106, 6, 74),
 	leaf = hsluv(103, 68, 54),
 	water = hsluv(236, 84, 53),
 	rose = hsluv(4, 55, 56),
 	wood = hsluv(26, 59, 54),
-	blossom = hsluv(318, 45, 56),
+	blossom = hsluv(318, 45, 58),
 	sky = hsluv(204, 80, 58),
 }
 
@@ -53,27 +53,28 @@ local theme = lush(function()
 		ErrorMsg        { Error }, -- error messages on the command line
 		WarningMsg      { fg = c.wood }, -- warning messages
 
-		Comment         { fg = c.sand.li(32).de(30), gui = "italic" }, -- any comment
-		Conceal         { fg = c.stone.li(20), gui = "bold,italic" }, -- placeholder characters substituted for concealed text (see 'conceallevel')
+		Comment         { fg = c.sand.li(36).de(30), gui = "italic" }, -- any comment
+		Conceal         { fg = c.stone.da(20), gui = "bold,italic" }, -- placeholder characters substituted for concealed text (see 'conceallevel')
 
-		Cursor          { bg = c.stone, fg = c.sand.da(10) }, -- character under the cursor
-		lCursor         { Cursor, bg = Cursor.bg.li(20)  }, -- the character under the cursor when |language-mapping| is used (see 'guicursor')
+		Cursor          { bg = c.stone.li(20), fg = c.sand.da(20) }, -- character under the cursor
+		lCursor         { Cursor, bg = Cursor.bg.da(20)  }, -- the character under the cursor when |language-mapping| is used (see 'guicursor')
 		-- CursorIM     { }, -- like Cursor, but used when in IME mode |CursorIM|
 		TermCursor      { Cursor }, -- cursor in a focused terminal
+		TermCursorNC    { lCursor }, -- cursor in an unfocused terminal
 
 		CursorLine      { bg = Normal.bg.li(4) }, -- Screen-line at the cursor, when 'cursorline' is set.	Low-priority if foreground (ctermfg OR guifg) is not set.
 		CursorColumn    { CursorLine }, -- Screen-column at the cursor, when 'cursorcolumn' is set.
-		ColorColumn     { bg = c.wood.de(38).da(24) }, -- used for the columns set with 'colorcolumn'
+		ColorColumn     { bg = c.wood.de(38).da(28) }, -- used for the columns set with 'colorcolumn'
 
-		DiffAdd         { bg = c.leaf.de(17).da(23).abs_da(diff_bg_li) }, -- diff mode: Added line |diff.txt|
-		DiffChange      { bg = c.water.de(18).da(22).abs_da(diff_bg_li) }, -- diff mode: Changed line |diff.txt|
-		DiffDelete      { bg = c.rose.de(23).da(15).abs_da(diff_bg_li) }, -- diff mode: Deleted line |diff.txt|
-		DiffText        { bg = c.water.de(22).da(17).abs_da(diff_bg_li), fg = c.stone }, -- diff mode: Changed text within a changed line |diff.txt|
+		DiffAdd         { bg = c.leaf.de(14).da(38).abs_da(diff_bg_li) }, -- diff mode: Added line |diff.txt|
+		DiffChange      { bg = c.water.de(18).da(41).abs_da(diff_bg_li) }, -- diff mode: Changed line |diff.txt|
+		DiffDelete      { bg = c.rose.de(23).da(44).abs_da(diff_bg_li) }, -- diff mode: Deleted line |diff.txt|
+		DiffText        { bg = c.water.de(22).da(18).abs_da(diff_bg_li), fg = c.stone }, -- diff mode: Changed text within a changed line |diff.txt|
 
 		LineNr          { fg = Normal.bg.li(26) }, -- Line number for ":number" and ":#" commands, and when 'number' or 'relativenumber' option is set.
 		SignColumn      { LineNr }, -- column where |signs| are displayed
 		FoldColumn      { LineNr, gui = "bold" }, -- 'foldcolumn'
-		Folded          { bg = Normal.bg.li(16), fg = Normal.bg.da(64) }, -- line used for closed folds
+		Folded          { bg = Normal.bg.li(16), fg = Normal.bg.li(64) }, -- line used for closed folds
 		CursorLineNr    { LineNr, fg = c.stone, gui = "bold" }, -- Like LineNr when 'cursorline' or 'relativenumber' is set for the cursor line.
 
 		-- ModeMsg      { }, -- 'showmode' message (e.g., "-- INSERT -- ")
@@ -88,8 +89,8 @@ local theme = lush(function()
 		PmenuSbar       { bg = Normal.bg.li(28) }, -- Popup menu: scrollbar.
 		PmenuThumb      { bg = Normal.bg.li(58) }, -- Popup menu: Thumb of the scrollbar.
 
-		Search          { bg = c.blossom.de(10).da(25), fg = c.stone }, -- Last search pattern highlighting (see 'hlsearch').	Also used for similar items that need to stand out.
-		IncSearch       { bg = c.blossom, gui = "bold" }, -- 'incsearch' highlighting; also used for the text replaced with ":s///c"
+		Search          { bg = c.blossom.de(10).da(30), fg = c.sand }, -- Last search pattern highlighting (see 'hlsearch').	Also used for similar items that need to stand out.
+		IncSearch       { bg = c.blossom, fg = c.sand, gui = "bold" }, -- 'incsearch' highlighting; also used for the text replaced with ":s///c"
 		-- Substitute   { }, -- |:substitute| replacement text highlighting
 		MatchParen      { Search }, -- The character under the cursor or just before it, if it is a paired bracket, and its match. |pi_paren.txt|
 		-- QuickFixLine { }, -- Current |quickfix| item in the quickfix window. Combined with |hl-CursorLine| when the cursor is there.
@@ -106,7 +107,7 @@ local theme = lush(function()
 		TabLineSel      { gui = "bold" }, -- tab pages line, active tab page label
 		VertSplit       { fg = PmenuThumb.bg }, -- the column separating vertically split windows
 
-		Visual          { bg = c.stone.da(70) }, -- Visual mode selection
+		Visual          { bg = c.stone.da(68) }, -- Visual mode selection
 		-- VisualNOS    { }, -- Visual mode selection when vim is "Not Owning the Selection".
 
 		NonText         { fg = Normal.bg.li(22) }, -- '@' at the end of the window, characters from 'showbreak' and other characters that do not really exist in the text (e.g., ">" displayed when a double-wide character doesn't fit at the end of the line). See also |hl-EndOfBuffer|.
@@ -126,14 +127,14 @@ local theme = lush(function()
 		-- default,
 		-- Uncomment and edit if you want more specific syntax highlighting.
 
-		Constant        { fg = c.stone.da(30), gui = "italic" }, -- (preferred) any constant
+		Constant        { fg = c.stone.da(32), gui = "italic" }, -- (preferred) any constant
 		-- String       { }, --   a string constant: "this is a string"
 		-- Character    { }, --  a character constant: 'c', '\n'
 		-- Number       { }, --   a number constant: 234, 0xff
 		-- Boolean      { }, --  a boolean constant: TRUE, false
 		-- Float        { }, --    a floating point constant: 2.3e10
 
-		Identifier      { fg = c.stone.da(18) }, -- (preferred) any variable name
+		Identifier      { fg = c.stone.da(20) }, -- (preferred) any variable name
 		Function        { fg = c.stone }, -- function name (also: methods for classes)
 
 		Statement       { fg = c.stone, gui = "bold" }, -- (preferred) any statement
@@ -155,10 +156,10 @@ local theme = lush(function()
 		-- Structure    { }, --  struct, union, enum, etc.
 		-- Typedef      { }, --  A typedef
 
-		Special         { fg = c.stone.da(18), gui = "bold" }, -- (preferred) any special symbol
+		Special         { fg = c.stone.da(20), gui = "bold" }, -- (preferred) any special symbol
 		-- SpecialChar  { }, --  special character in a constant
 		-- Tag          { }, --    you can use CTRL-] on this
-		Delimiter       { fg = c.sand.li(38) }, --	character that needs attention
+		Delimiter       { fg = c.sand.sa(12).li(42) }, --	character that needs attention
 		SpecialComment  { Comment, gui = "bold" }, -- special things inside a comment
 		-- Debug        { }, --    debugging statements
 
@@ -180,8 +181,8 @@ local theme = lush(function()
 		LspDiagnosticsDefaultInformation        { fg = c.water }, -- Used as the base highlight group. Other LspDiagnostic highlights link to this by default (except Underline)
 		LspDiagnosticsDefaultHint               { fg = c.blossom }, -- Used as the base highlight group. Other LspDiagnostic highlights link to this by default (except Underline)
 
-		LspDiagnosticsVirtualTextError          { LspDiagnosticsDefaultError, bg = c.rose.abs_de(48).da(60) }, -- Used for "Error" diagnostic virtual text
-		LspDiagnosticsVirtualTextWarning        { LspDiagnosticsDefaultWarning, bg = c.wood.de(58).da(60) }, -- Used for "Warning" diagnostic virtual text
+		LspDiagnosticsVirtualTextError          { LspDiagnosticsDefaultError, bg = c.rose.abs_de(48).da(64) }, -- Used for "Error" diagnostic virtual text
+		LspDiagnosticsVirtualTextWarning        { LspDiagnosticsDefaultWarning, bg = c.wood.de(58).da(64) }, -- Used for "Warning" diagnostic virtual text
 		-- LspDiagnosticsVirtualTextInformation { }, -- Used for "Information" diagnostic virtual text
 		-- LspDiagnosticsVirtualTextHint        { }, -- Used for "Hint" diagnostic virtual text
 
