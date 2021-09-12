@@ -1,4 +1,4 @@
-*zenbones.txt*         For NVIM v0.4.3          Last change: 2021 September 10
+*zenbones.txt*         For NVIM v0.4.3          Last change: 2021 September 12
 
 ==============================================================================
 Table of Contents                                 *zenbones-table-of-contents*
@@ -58,7 +58,7 @@ Just apply the colorscheme as usual:
 If you want to make use of the lua version:
 
 >
-    " has('nvim') only
+    " Requires `neovim` and `rktjmp/lush.nvim` installed
     colorscheme zenbones-lush
 <
 
@@ -105,9 +105,8 @@ g:zenbones_dim_noncurrent_window       Set to `v:true` to make non-current
 
 ADVANCED USAGE                                       *zenbones-advanced-usage*
 
-Zenbones is pretty extensible thanks to Lush
-<https://github.com/rktjmp/lush.nvim>. You can easily retrieve the colors in
-lua:
+Zenbones is pretty extensible thanks to Lush. You can easily retrieve the
+colors in lua:
 
 >
     local theme = require "zenbones"
@@ -119,7 +118,7 @@ lua:
 
 
 See also Lush’s documentation
-<https://github.com/rktjmp/lush.nvim#advanced-usage> for the complete options.
+<https://github.com/rktjmp/lush.nvim#advanced-usage> for more options.
 
 OTHER PLUGINS SUPPORT                         *zenbones-other-plugins-support*
 
