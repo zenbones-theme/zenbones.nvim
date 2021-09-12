@@ -3,12 +3,12 @@ local hsluv = lush.hsluv
 
 local c = {
 	sand = hsluv(39, 8, 10),
-	stone = hsluv(230, 6, 75),
-	leaf = hsluv(103, 68, 54),
-	water = hsluv(236, 84, 53),
-	rose = hsluv(4, 44, 53),
-	wood = hsluv(26, 59, 54),
-	blossom = hsluv(318, 38, 56),
+	stone = hsluv(230, 4, 75),
+	leaf = hsluv(103, 63, 54),
+	water = hsluv(236, 78, 53),
+	rose = hsluv(4, 38, 53),
+	wood = hsluv(26, 56, 54),
+	blossom = hsluv(318, 32, 56),
 	sky = hsluv(204, 74, 58),
 }
 
@@ -52,7 +52,7 @@ local theme = lush(function()
 		ErrorMsg        { Error }, -- error messages on the command line
 		WarningMsg      { fg = c.wood }, -- warning messages
 
-		Comment         { fg = c.sand.li(34).de(46), gui = "italic" }, -- any comment
+		Comment         { fg = c.sand.li(34).de(42), gui = "italic" }, -- any comment
 		Conceal         { fg = c.stone.da(20), gui = "bold,italic" }, -- placeholder characters substituted for concealed text (see 'conceallevel')
 
 		Cursor          { bg = c.stone.li(20), fg = c.sand.da(20) }, -- character under the cursor
@@ -63,12 +63,12 @@ local theme = lush(function()
 
 		CursorLine      { bg = Normal.bg.li(4) }, -- Screen-line at the cursor, when 'cursorline' is set.	Low-priority if foreground (ctermfg OR guifg) is not set.
 		CursorColumn    { CursorLine }, -- Screen-column at the cursor, when 'cursorcolumn' is set.
-		ColorColumn     { bg = c.wood.de(38).da(28) }, -- used for the columns set with 'colorcolumn'
+		ColorColumn     { bg = c.wood.de(40).da(28) }, -- used for the columns set with 'colorcolumn'
 
-		DiffAdd         { bg = c.leaf.de(14).da(38).abs_da(diff_bg_li) }, -- diff mode: Added line |diff.txt|
-		DiffChange      { bg = c.water.de(18).da(41).abs_da(diff_bg_li) }, -- diff mode: Changed line |diff.txt|
-		DiffDelete      { bg = c.rose.de(23).da(44).abs_da(diff_bg_li) }, -- diff mode: Deleted line |diff.txt|
-		DiffText        { bg = c.water.de(22).da(18).abs_da(diff_bg_li), fg = c.stone }, -- diff mode: Changed text within a changed line |diff.txt|
+		DiffAdd         { bg = c.leaf.de(10).da(38).abs_da(diff_bg_li) }, -- diff mode: Added line |diff.txt|
+		DiffChange      { bg = c.water.de(14).da(41).abs_da(diff_bg_li) }, -- diff mode: Changed line |diff.txt|
+		DiffDelete      { bg = c.rose.de(19).da(44).abs_da(diff_bg_li) }, -- diff mode: Deleted line |diff.txt|
+		DiffText        { bg = c.water.de(20).da(18).abs_da(diff_bg_li), fg = c.stone }, -- diff mode: Changed text within a changed line |diff.txt|
 
 		LineNr          { fg = Normal.bg.li(28) }, -- Line number for ":number" and ":#" commands, and when 'number' or 'relativenumber' option is set.
 		SignColumn      { LineNr }, -- column where |signs| are displayed
@@ -88,7 +88,7 @@ local theme = lush(function()
 		PmenuSbar       { bg = Normal.bg.li(28) }, -- Popup menu: scrollbar.
 		PmenuThumb      { bg = Normal.bg.li(52) }, -- Popup menu: Thumb of the scrollbar.
 
-		Search          { bg = c.blossom.de(10).da(30), fg = c.sand }, -- Last search pattern highlighting (see 'hlsearch').	Also used for similar items that need to stand out.
+		Search          { bg = c.blossom.de(10).da(28), fg = c.sand }, -- Last search pattern highlighting (see 'hlsearch').	Also used for similar items that need to stand out.
 		IncSearch       { bg = c.blossom, fg = c.sand, gui = "bold" }, -- 'incsearch' highlighting; also used for the text replaced with ":s///c"
 		-- Substitute   { }, -- |:substitute| replacement text highlighting
 		MatchParen      { Search }, -- The character under the cursor or just before it, if it is a paired bracket, and its match. |pi_paren.txt|
@@ -126,14 +126,14 @@ local theme = lush(function()
 		-- default,
 		-- Uncomment and edit if you want more specific syntax highlighting.
 
-		Constant        { fg = c.stone.da(30), gui = "italic" }, -- (preferred) any constant
+		Constant        { fg = c.stone.da(24), gui = "italic" }, -- (preferred) any constant
 		-- String       { }, --   a string constant: "this is a string"
 		-- Character    { }, --  a character constant: 'c', '\n'
 		Number          { gui = "italic" }, --   a number constant: 234, 0xff
 		Boolean         { Number }, --  a boolean constant: TRUE, false
 		-- Float        { }, --    a floating point constant: 2.3e10
 
-		Identifier      { fg = c.stone.sa(8).da(16) }, -- (preferred) any variable name
+		Identifier      { fg = c.stone.sa(8).da(14) }, -- (preferred) any variable name
 		Function        { fg = c.stone }, -- function name (also: methods for classes)
 
 		Statement       { fg = c.stone, gui = "bold" }, -- (preferred) any statement
@@ -150,7 +150,7 @@ local theme = lush(function()
 		-- Macro        { }, --    same as Define
 		-- PreCondit    { }, --  preprocessor #if, #else, #endif, etc.
 
-		Type            { fg = c.sand.de(24).li(54) }, -- (preferred) int, long, char, etc.
+		Type            { fg = c.sand.de(24).li(58) }, -- (preferred) int, long, char, etc.
 		-- StorageClass { }, -- static, register, volatile, etc.
 		-- Structure    { }, --  struct, union, enum, etc.
 		-- Typedef      { }, --  A typedef
