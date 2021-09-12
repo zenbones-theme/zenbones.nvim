@@ -117,8 +117,8 @@ local theme = lush(function()
 		Constant        { fg = c.stone.li(24), gui = "italic" }, -- (preferred) any constant
 		-- String       { }, --   a string constant: "this is a string"
 		-- Character    { }, --  a character constant: 'c', '\n'
-		-- Number       { }, --   a number constant: 234, 0xff
-		-- Boolean      { }, --  a boolean constant: TRUE, false
+		Number          { gui = "italic" }, --   a number constant: 234, 0xff
+		Boolean         { Number }, --  a boolean constant: TRUE, false
 		-- Float        { }, --    a floating point constant: 2.3e10
 
 		Identifier      { fg = c.stone.li(16) }, -- (preferred) any variable name
