@@ -1,5 +1,5 @@
 local lush = require "lush"
-local c = require "zenbones.colors"
+local c = require "zenbones.palette"
 
 local normal_bg = c.sand
 local diff_bg_li = 0

@@ -1,5 +1,5 @@
 local lush = require "lush"
-local c = require "zenbones.colors"
+local c = require "zenbones.palette"
 
 local colors = {
 	c.stone,

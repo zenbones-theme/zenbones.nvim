@@ -92,10 +92,10 @@ in lua:
 
 ```lua
 local theme = require "zenbones"
-local colors = require "zenbones.colors"
+local palette = require "zenbones.palette"
 
 print(theme.StatusLine.bg.hex)
-print(sand.darken(20).hex)
+print(palette.sand.darken(20).hex)
 ```
 
 See also
