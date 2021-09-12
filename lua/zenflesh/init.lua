@@ -52,7 +52,7 @@ local theme = lush(function()
 		ErrorMsg        { Error }, -- error messages on the command line
 		WarningMsg      { fg = c.wood }, -- warning messages
 
-		Comment         { fg = c.sand.li(36).de(30), gui = "italic" }, -- any comment
+		Comment         { fg = c.sand.li(34).de(46), gui = "italic" }, -- any comment
 		Conceal         { fg = c.stone.da(20), gui = "bold,italic" }, -- placeholder characters substituted for concealed text (see 'conceallevel')
 
 		Cursor          { bg = c.stone.li(20), fg = c.sand.da(20) }, -- character under the cursor
@@ -70,7 +70,7 @@ local theme = lush(function()
 		DiffDelete      { bg = c.rose.de(23).da(44).abs_da(diff_bg_li) }, -- diff mode: Deleted line |diff.txt|
 		DiffText        { bg = c.water.de(22).da(18).abs_da(diff_bg_li), fg = c.stone }, -- diff mode: Changed text within a changed line |diff.txt|
 
-		LineNr          { fg = Normal.bg.li(26) }, -- Line number for ":number" and ":#" commands, and when 'number' or 'relativenumber' option is set.
+		LineNr          { fg = Normal.bg.li(28) }, -- Line number for ":number" and ":#" commands, and when 'number' or 'relativenumber' option is set.
 		SignColumn      { LineNr }, -- column where |signs| are displayed
 		FoldColumn      { LineNr, gui = "bold" }, -- 'foldcolumn'
 		Folded          { bg = Normal.bg.li(16), fg = Normal.bg.li(64) }, -- line used for closed folds
@@ -86,7 +86,7 @@ local theme = lush(function()
 		Pmenu           { bg = Normal.bg.li(10) }, -- Popup menu: normal item.
 		PmenuSel        { bg = Normal.bg.li(20) }, -- Popup menu: selected item.
 		PmenuSbar       { bg = Normal.bg.li(28) }, -- Popup menu: scrollbar.
-		PmenuThumb      { bg = Normal.bg.li(58) }, -- Popup menu: Thumb of the scrollbar.
+		PmenuThumb      { bg = Normal.bg.li(52) }, -- Popup menu: Thumb of the scrollbar.
 
 		Search          { bg = c.blossom.de(10).da(30), fg = c.sand }, -- Last search pattern highlighting (see 'hlsearch').	Also used for similar items that need to stand out.
 		IncSearch       { bg = c.blossom, fg = c.sand, gui = "bold" }, -- 'incsearch' highlighting; also used for the text replaced with ":s///c"
@@ -126,14 +126,14 @@ local theme = lush(function()
 		-- default,
 		-- Uncomment and edit if you want more specific syntax highlighting.
 
-		Constant        { fg = c.stone.da(32), gui = "italic" }, -- (preferred) any constant
+		Constant        { fg = c.stone.da(30), gui = "italic" }, -- (preferred) any constant
 		-- String       { }, --   a string constant: "this is a string"
 		-- Character    { }, --  a character constant: 'c', '\n'
-		-- Number       { }, --   a number constant: 234, 0xff
-		-- Boolean      { }, --  a boolean constant: TRUE, false
+		Number          { gui = "italic" }, --   a number constant: 234, 0xff
+		Boolean         { Number }, --  a boolean constant: TRUE, false
 		-- Float        { }, --    a floating point constant: 2.3e10
 
-		Identifier      { fg = c.stone.da(20) }, -- (preferred) any variable name
+		Identifier      { fg = c.stone.sa(8).da(16) }, -- (preferred) any variable name
 		Function        { fg = c.stone }, -- function name (also: methods for classes)
 
 		Statement       { fg = c.stone, gui = "bold" }, -- (preferred) any statement
@@ -150,15 +150,15 @@ local theme = lush(function()
 		-- Macro        { }, --    same as Define
 		-- PreCondit    { }, --  preprocessor #if, #else, #endif, etc.
 
-		Type            { fg = c.sand.li(68) }, -- (preferred) int, long, char, etc.
+		Type            { fg = c.sand.de(24).li(54) }, -- (preferred) int, long, char, etc.
 		-- StorageClass { }, -- static, register, volatile, etc.
 		-- Structure    { }, --  struct, union, enum, etc.
 		-- Typedef      { }, --  A typedef
 
-		Special         { fg = c.stone.da(20), gui = "bold" }, -- (preferred) any special symbol
+		Special         { fg = c.stone.da(18), gui = "bold" }, -- (preferred) any special symbol
 		-- SpecialChar  { }, --  special character in a constant
 		-- Tag          { }, --    you can use CTRL-] on this
-		Delimiter       { fg = c.sand.sa(12).li(42) }, --	character that needs attention
+		Delimiter       { fg = c.sand.de(24).li(42) }, --	character that needs attention
 		SpecialComment  { Comment, gui = "bold" }, -- special things inside a comment
 		-- Debug        { }, --    debugging statements
 

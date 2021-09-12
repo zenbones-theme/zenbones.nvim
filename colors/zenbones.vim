@@ -102,6 +102,7 @@ highlight NeogitHunkHeaderHighlight guifg=#2C363C guibg=#E6E1DF guisp=NONE gui=b
 highlight NonText guifg=#C0B0A8 guibg=NONE guisp=NONE gui=NONE
 highlight Normal guifg=#2C363C guibg=#F0EDEC guisp=NONE gui=NONE
 highlight NormalFloat guifg=NONE guibg=#E1DCD9 guisp=NONE gui=NONE
+highlight Number guifg=NONE guibg=NONE guisp=NONE gui=italic
 highlight Pmenu guifg=NONE guibg=#DAD3CF guisp=NONE gui=NONE
 highlight PmenuSbar guifg=NONE guibg=#B2A39B guisp=NONE gui=NONE
 highlight PmenuSel guifg=NONE guibg=#C4B6AF guisp=NONE gui=NONE
@@ -139,6 +140,7 @@ highlight diffOldFile guifg=#A8334C guibg=NONE guisp=NONE gui=italic
 highlight diffRemoved guifg=#A8334C guibg=NONE guisp=NONE gui=NONE
 highlight lCursor guifg=#F2F0EF guibg=#4D5C65 guisp=NONE gui=NONE
 highlight markdownH1 guifg=#2C363C guibg=NONE guisp=NONE gui=bold,underline
+highlight! link Boolean Number
 highlight! link BufferCurrent TabLineSel
 highlight! link CocCodeLens LineNr
 highlight! link CocErrorSign LspDiagnosticsDefaultError
