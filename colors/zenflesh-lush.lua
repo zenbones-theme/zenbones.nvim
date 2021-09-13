@@ -1,4 +1,4 @@
-vim.opt.background = "light"
+vim.opt.background = "dark"
 vim.g.colors_name = "zenflesh-lush"
 
 require("zenflesh.terminal").setup()

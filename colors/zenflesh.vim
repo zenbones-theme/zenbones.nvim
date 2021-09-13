@@ -4,7 +4,7 @@ if exists('g:colors_name')
     set t_Co=256
 endif
 
-set background=light
+set background=dark
 let g:colors_name = 'zenflesh'
 
 let g:terminal_color_0 = '#B6BCC1'
@@ -124,7 +124,7 @@ highlight TelescopeMatching guifg=#AC75A1 guibg=NONE guisp=NONE gui=bold
 highlight TelescopeSelectionCaret guifg=#BB6572 guibg=#231F1D guisp=NONE gui=NONE
 highlight Title guifg=NONE guibg=NONE guisp=NONE gui=bold
 highlight Todo guifg=NONE guibg=NONE guisp=NONE gui=bold,underline
-highlight Type guifg=#9C918C guibg=NONE guisp=NONE gui=NONE
+highlight Type guifg=#9B918D guibg=NONE guisp=NONE gui=NONE
 highlight Underlined guifg=NONE guibg=NONE guisp=NONE gui=underline
 highlight Visual guifg=NONE guibg=#303B41 guisp=NONE gui=NONE
 highlight WarningMsg guifg=#B86E54 guibg=NONE guisp=NONE gui=NONE

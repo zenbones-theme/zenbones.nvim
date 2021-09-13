@@ -6,7 +6,7 @@ local template = [[if exists('g:colors_name')
     set t_Co=256
 endif
 
-set background=light
+set background=${background}
 let g:colors_name = '${name}'
 
 ${termcolors}
@@ -49,6 +49,7 @@ return function(name)
         string.format("colors/%s.vim", name),
         template,
         {
+            background = name == "zenbones" and "light" or "dark",
             name = name,
             termcolors = termcolors,
             vimcolors = vimcolors,
