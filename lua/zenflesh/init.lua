@@ -13,17 +13,17 @@ local c = {
 }
 
 local normal_bg = c.sand
-local diff_bg_li = 0
+local diff_bg_l = 0
 
-local lightness = vim.g.zenbones_lightness
-if lightness == "bright" then
-	normal_bg = normal_bg.abs_da(-4)
-	diff_bg_li = -4
-elseif lightness == "dim" then
-	normal_bg = normal_bg.abs_da(4).de(18)
-	diff_bg_li = 4
-elseif lightness ~= nil then
-	local error_msg = "Unknown zenbones_lightness value: " .. vim.inspect(lightness)
+local darkness = vim.g.zenflesh_darkness
+if darkness == "stark" then
+	normal_bg = normal_bg.abs_da(3)
+	diff_bg_l = -3
+elseif darkness == "warm" then
+	normal_bg = normal_bg.abs_li(3)
+	diff_bg_l = 3
+elseif darkness ~= nil then
+	local error_msg = "Unknown zenflesh_darkness value: " .. vim.inspect(darkness)
 	vim.api.nvim_echo({ { error_msg, "WarningMsg" } }, true, {})
 end
 
