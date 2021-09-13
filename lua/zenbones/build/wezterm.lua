@@ -12,10 +12,7 @@ ansi = ["${color0}", "${color1}", "${color2}", "${color3}", "${color4}", "${colo
 brights = ["${color8}", "${color9}", "${color10}", "${color11}", "${color12}", "${color13}", "${color14}", "${color15}"]
 ]]
 
-return function(name)
-	local theme = require(name)
-	local terminal = require(name .. ".terminal")
-
+return function(name, theme, palette, terminal)
 	local name = name:sub(1, 1):upper() .. name:sub(2)
 
 	local values = {

@@ -34,25 +34,23 @@ endif
 ${vimcolors}
 ]]
 
-return function(name)
-    local theme = require(name)
-    local terminal = require(name .. ".terminal")
-    local termcolors = ""
-    for i, v in ipairs(terminal.colors) do
-        termcolors = termcolors .. string.format("let g:terminal_color_%s = '%s'\n", (i - 1), v.hex)
-    end
+return function(name, theme, palette, terminal)
+	local termcolors = ""
+	for i, v in ipairs(terminal.colors) do
+		termcolors = termcolors .. string.format("let g:terminal_color_%s = '%s'\n", (i - 1), v.hex)
+	end
 
-    -- Compile lush table, concatenate to a single string, and remove blend property
-    local vimcolors = table.concat(vim.fn.sort(lush.compile(theme, { exclude_keys = { "blend" } })), "\n")
+	-- Compile lush table, concatenate to a single string, and remove blend property
+	local vimcolors = table.concat(vim.fn.sort(lush.compile(theme, { exclude_keys = { "blend" } })), "\n")
 
-    return {
-        string.format("colors/%s.vim", name),
-        template,
-        {
-            background = name == "zenbones" and "light" or "dark",
-            name = name,
-            termcolors = termcolors,
-            vimcolors = vimcolors,
-        },
-    }
+	return {
+		string.format("colors/%s.vim", name),
+		template,
+		{
+			background = name == "zenbones" and "light" or "dark",
+			name = name,
+			termcolors = termcolors,
+			vimcolors = vimcolors,
+		},
+	}
 end

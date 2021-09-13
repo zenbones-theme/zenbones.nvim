@@ -33,9 +33,7 @@ return {
 }
 ]]
 
-return function(name)
-	local theme = require(name)
-
+return function(name, theme, palette, terminal)
 	return {
 		string.format("lua/lualine/themes/%s.lua", name),
 		template,

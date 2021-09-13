@@ -26,10 +26,7 @@ colors:
     white:   '${color15}'
 ]]
 
-return function(name)
-	local theme = require(name)
-	local terminal = require(name .. ".terminal")
-
+return function(name, theme, palette, terminal)
 	local values = {
 		name = name,
 		bg = theme.Normal.bg.hex,

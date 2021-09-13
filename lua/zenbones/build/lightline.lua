@@ -22,9 +22,7 @@ let s:p.tabline.tabsel = [ [ "${tabsel_fg}", "${tabsel_bg}", "bold" ] ]
 let g:lightline#colorscheme#zenbones#palette = lightline#colorscheme#fill(s:p)
 ]]
 
-return function(name)
-	local theme = require(name)
-
+return function(name, theme, palette, terminal)
 	return {
 		string.format("autoload/lightline/colorscheme/%s.vim", name),
 		template,

@@ -17,10 +17,7 @@ set -g clock-mode-colour '${color5}'
 set -g mode-style fg='${color0}',bg='${selection_background}'
 ]]
 
-return function(name)
-	local theme = require(name)
-	local terminal = require(name .. ".terminal")
-
+return function(name, theme, palette, terminal)
 	local values = {
 		selection_background = theme.Visual.bg.hex,
 	}
