@@ -33,22 +33,24 @@ return {
 }
 ]]
 
-local theme = require "zenbones"
+return function(name)
+	local theme = require(name)
 
-return {
-	"lua/lualine/themes/zenbones.lua",
-	template,
-	{
-		common_fg = theme.Folded.fg.hex,
-		inactive_bg = theme.StatusLineNC.bg.hex,
-		inactive_fg = theme.StatusLineNC.fg.hex,
-		normal_a_bg = theme.PmenuSbar.bg.hex,
-		normal_b_bg = theme.PmenuSel.bg.hex,
-		normal_c_bg = theme.StatusLine.bg.hex,
-		normal_c_fg = theme.StatusLine.fg.hex,
-		insert_a_bg = theme.DiffAdd.bg.hex,
-		command_a_bg = theme.Search.bg.hex,
-		visual_a_bg = theme.Visual.bg.hex,
-		replace_a_bg = theme.DiffDelete.bg.hex,
-	},
-}
+	return {
+		string.format("lua/lualine/themes/%s.lua", name),
+		template,
+		{
+			common_fg = theme.Folded.fg.hex,
+			inactive_bg = theme.StatusLineNC.bg.hex,
+			inactive_fg = theme.StatusLineNC.fg.hex,
+			normal_a_bg = theme.PmenuSbar.bg.hex,
+			normal_b_bg = theme.PmenuSel.bg.hex,
+			normal_c_bg = theme.StatusLine.bg.hex,
+			normal_c_fg = theme.StatusLine.fg.hex,
+			insert_a_bg = theme.DiffAdd.bg.hex,
+			command_a_bg = theme.Search.bg.hex,
+			visual_a_bg = theme.Visual.bg.hex,
+			replace_a_bg = theme.DiffDelete.bg.hex,
+		},
+	}
+end

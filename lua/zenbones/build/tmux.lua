@@ -17,14 +17,16 @@ set -g clock-mode-colour '${color5}'
 set -g mode-style fg='${color0}',bg='${selection_background}'
 ]]
 
-local theme = require "zenbones"
-local terminal = require "zenbones.terminal"
+return function(name)
+	local theme = require(name)
+	local terminal = require(name .. ".terminal")
 
-local values = {
-	selection_background = theme.Visual.bg.hex,
-}
-for i, v in ipairs(terminal.colors) do
-	values["color" .. (i - 1)] = v.hex
+	local values = {
+		selection_background = theme.Visual.bg.hex,
+	}
+	for i, v in ipairs(terminal.colors) do
+		values["color" .. (i - 1)] = v.hex
+	end
+
+	return { string.format("extras/tmux/%s.tmux", name), template, values }
 end
-
-return { "extras/tmux/zenbones.tmux", template, values }

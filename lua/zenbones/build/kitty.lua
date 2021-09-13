@@ -1,8 +1,8 @@
 local template = [[# vim:ft=kitty
-## name: zenbones
+## name: ${name}
 ## license: MIT
 ## author: Michael Chris Lopez
-## upstream: https://github.com/mcchrish/zenbones.nvim/raw/main/extras/kitty/zenbones.conf
+## upstream: https://github.com/mcchrish/zenbones.nvim/raw/main/extras/kitty/${name}.conf
 
 background ${background}
 foreground ${foreground}
@@ -39,25 +39,28 @@ color14 ${color14}
 color15 ${color15}
 ]]
 
-local theme = require "zenbones"
-local terminal = require "zenbones.terminal"
+return function(name)
+	local theme = require(name)
+	local terminal = require(name .. ".terminal")
 
-local bg = theme.Normal.bg.hex
-local fg = theme.Normal.fg.hex
-local values = {
-	background = bg,
-	foreground = fg,
-	selection_background = theme.Visual.bg.hex,
-	selection_foreground = fg,
-	url_color = terminal.colors[14].hex,
-	cursor = fg,
-	active_tab_background = theme.Search.bg.hex,
-	active_tab_foreground = fg,
-	inactive_tab_background = theme.StatusLine.bg.hex,
-	inactive_tab_foreground = fg,
-}
-for i, v in ipairs(terminal.colors) do
-	values["color" .. (i - 1)] = v.hex
+	local bg = theme.Normal.bg.hex
+	local fg = theme.Normal.fg.hex
+	local values = {
+		name = name,
+		background = bg,
+		foreground = fg,
+		selection_background = theme.Visual.bg.hex,
+		selection_foreground = fg,
+		url_color = terminal.colors[14].hex,
+		cursor = fg,
+		active_tab_background = theme.Search.bg.hex,
+		active_tab_foreground = fg,
+		inactive_tab_background = theme.StatusLine.bg.hex,
+		inactive_tab_foreground = fg,
+	}
+	for i, v in ipairs(terminal.colors) do
+		values["color" .. (i - 1)] = v.hex
+	end
+
+	return { string.format("extras/kitty/%s.conf", name), template, values }
 end
-
-return { "extras/kitty/zenbones.conf", template, values }
