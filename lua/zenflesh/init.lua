@@ -93,7 +93,7 @@ local theme = lush(function()
 		TabLine         { StatusLine, gui = "italic" }, -- tab pages line, not active tab page label
 		TabLineFill     { StatusLineNC }, -- tab pages line, where there are no labels
 		TabLineSel      { gui = "bold" }, -- tab pages line, active tab page label
-		VertSplit       { fg = PmenuSbar.bg }, -- the column separating vertically split windows
+		VertSplit       { LineNr }, -- the column separating vertically split windows
 
 		Visual          { bg = c.stone.sa(24).da(68) }, -- Visual mode selection
 		-- VisualNOS    { }, -- Visual mode selection when vim is "Not Owning the Selection".
@@ -365,6 +365,17 @@ if vim.g.zenflesh_lighten_noncurrent_window then
 		lush(function()
 			return {
 				NormalNC { theme.Normal, bg = theme.Normal.bg.abs_li(2) }, -- normal text in non-current windows
+			}
+		end)
+	)
+end
+
+if vim.g.zenflesh_solid_vert_split then
+	table.insert(
+		specs,
+		lush(function()
+			return {
+				VertSplit { bg = theme.StatusLineNC.bg, fg = theme.LineNr.fg }, -- the column separating vertically split windows
 			}
 		end)
 	)

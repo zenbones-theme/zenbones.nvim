@@ -92,7 +92,7 @@ local theme = lush(function()
 		TabLine         { StatusLine, gui = "italic" }, -- tab pages line, not active tab page label
 		TabLineFill     { StatusLineNC }, -- tab pages line, where there are no labels
 		TabLineSel      { gui = "bold" }, -- tab pages line, active tab page label
-		VertSplit       { fg = PmenuThumb.bg }, -- the column separating vertically split windows
+		VertSplit       { LineNr }, -- the column separating vertically split windows
 
 		Visual          { bg = c.stone.li(84) }, -- Visual mode selection
 		-- VisualNOS    { }, -- Visual mode selection when vim is "Not Owning the Selection".
