@@ -6,7 +6,7 @@ local diff_bg_l = 0
 
 local darkness = vim.g.zenflesh_darkness
 if darkness == "stark" then
-	normal_bg = normal_bg.abs_da(3)
+	normal_bg = normal_bg.abs_da(3).sa(8)
 	diff_bg_l = -3
 elseif darkness == "warm" then
 	normal_bg = normal_bg.abs_li(3).de(16)
@@ -54,10 +54,10 @@ local theme = lush(function()
 		CursorColumn    { CursorLine }, -- Screen-column at the cursor, when 'cursorcolumn' is set.
 		ColorColumn     { bg = c.wood.de(40).da(28) }, -- used for the columns set with 'colorcolumn'
 
-		DiffAdd         { bg = c.leaf.de(18).da(38).abs_da(diff_bg_l) }, -- diff mode: Added line |diff.txt|
-		DiffChange      { bg = c.water.de(22).da(41).abs_da(diff_bg_l) }, -- diff mode: Changed line |diff.txt|
-		DiffDelete      { bg = c.rose.de(27).da(44).abs_da(diff_bg_l) }, -- diff mode: Deleted line |diff.txt|
-		DiffText        { bg = c.water.de(28).da(18).abs_da(diff_bg_l), fg = c.stone }, -- diff mode: Changed text within a changed line |diff.txt|
+		DiffAdd         { bg = c.leaf.de(14).da(52).abs_da(diff_bg_l) }, -- diff mode: Added line |diff.txt|
+		DiffChange      { bg = c.water.de(20).da(45).abs_da(diff_bg_l) }, -- diff mode: Changed line |diff.txt|
+		DiffDelete      { bg = c.rose.de(26).da(47).abs_da(diff_bg_l) }, -- diff mode: Deleted line |diff.txt|
+		DiffText        { bg = c.water.de(22).da(28).abs_da(diff_bg_l), fg = c.stone }, -- diff mode: Changed text within a changed line |diff.txt|
 
 		LineNr          { fg = Normal.bg.li(28) }, -- Line number for ":number" and ":#" commands, and when 'number' or 'relativenumber' option is set.
 		SignColumn      { LineNr }, -- column where |signs| are displayed
@@ -169,8 +169,8 @@ local theme = lush(function()
 		LspDiagnosticsDefaultInformation        { fg = c.water }, -- Used as the base highlight group. Other LspDiagnostic highlights link to this by default (except Underline)
 		LspDiagnosticsDefaultHint               { fg = c.blossom }, -- Used as the base highlight group. Other LspDiagnostic highlights link to this by default (except Underline)
 
-		LspDiagnosticsVirtualTextError          { LspDiagnosticsDefaultError, bg = c.rose.abs_de(48).da(64) }, -- Used for "Error" diagnostic virtual text
-		LspDiagnosticsVirtualTextWarning        { LspDiagnosticsDefaultWarning, bg = c.wood.de(58).da(64) }, -- Used for "Warning" diagnostic virtual text
+		LspDiagnosticsVirtualTextError          { LspDiagnosticsDefaultError, bg = c.rose.abs_de(48).da(68) }, -- Used for "Error" diagnostic virtual text
+		LspDiagnosticsVirtualTextWarning        { LspDiagnosticsDefaultWarning, bg = c.wood.de(58).da(68) }, -- Used for "Warning" diagnostic virtual text
 		-- LspDiagnosticsVirtualTextInformation { }, -- Used for "Information" diagnostic virtual text
 		-- LspDiagnosticsVirtualTextHint        { }, -- Used for "Hint" diagnostic virtual text
 
