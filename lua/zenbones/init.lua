@@ -114,14 +114,14 @@ local theme = lush(function()
 		-- default,
 		-- Uncomment and edit if you want more specific syntax highlighting.
 
-		Constant        { fg = c.stone.li(24), gui = "italic" }, -- (preferred) any constant
+		Constant        { fg = c.stone.li(25), gui = "italic" }, -- (preferred) any constant
 		-- String       { }, --   a string constant: "this is a string"
 		-- Character    { }, --  a character constant: 'c', '\n'
 		Number          { gui = "italic" }, --   a number constant: 234, 0xff
 		Boolean         { Number }, --  a boolean constant: TRUE, false
 		-- Float        { }, --    a floating point constant: 2.3e10
 
-		Identifier      { fg = c.stone.li(16) }, -- (preferred) any variable name
+		Identifier      { fg = c.stone.li(15) }, -- (preferred) any variable name
 		Function        { fg = c.stone }, -- function name (also: methods for classes)
 
 		Statement       { fg = c.stone, gui = "bold" }, -- (preferred) any statement
