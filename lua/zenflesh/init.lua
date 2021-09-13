@@ -52,7 +52,7 @@ local theme = lush(function()
 		ErrorMsg        { Error }, -- error messages on the command line
 		WarningMsg      { fg = c.wood }, -- warning messages
 
-		Comment         { fg = c.sand.li(34).de(42), gui = "italic" }, -- any comment
+		Comment         { fg = c.sand.li(34).de(52), gui = "italic" }, -- any comment
 		Conceal         { fg = c.stone.da(20), gui = "bold,italic" }, -- placeholder characters substituted for concealed text (see 'conceallevel')
 
 		Cursor          { bg = c.stone.li(20), fg = c.sand.da(20) }, -- character under the cursor
@@ -65,10 +65,10 @@ local theme = lush(function()
 		CursorColumn    { CursorLine }, -- Screen-column at the cursor, when 'cursorcolumn' is set.
 		ColorColumn     { bg = c.wood.de(40).da(28) }, -- used for the columns set with 'colorcolumn'
 
-		DiffAdd         { bg = c.leaf.de(10).da(38).abs_da(diff_bg_li) }, -- diff mode: Added line |diff.txt|
-		DiffChange      { bg = c.water.de(14).da(41).abs_da(diff_bg_li) }, -- diff mode: Changed line |diff.txt|
-		DiffDelete      { bg = c.rose.de(19).da(44).abs_da(diff_bg_li) }, -- diff mode: Deleted line |diff.txt|
-		DiffText        { bg = c.water.de(20).da(18).abs_da(diff_bg_li), fg = c.stone }, -- diff mode: Changed text within a changed line |diff.txt|
+		DiffAdd         { bg = c.leaf.de(10).da(38).abs_da(diff_bg_l) }, -- diff mode: Added line |diff.txt|
+		DiffChange      { bg = c.water.de(14).da(41).abs_da(diff_bg_l) }, -- diff mode: Changed line |diff.txt|
+		DiffDelete      { bg = c.rose.de(19).da(44).abs_da(diff_bg_l) }, -- diff mode: Deleted line |diff.txt|
+		DiffText        { bg = c.water.de(20).da(18).abs_da(diff_bg_l), fg = c.stone }, -- diff mode: Changed text within a changed line |diff.txt|
 
 		LineNr          { fg = Normal.bg.li(28) }, -- Line number for ":number" and ":#" commands, and when 'number' or 'relativenumber' option is set.
 		SignColumn      { LineNr }, -- column where |signs| are displayed
@@ -104,9 +104,9 @@ local theme = lush(function()
 		TabLine         { StatusLine, gui = "italic" }, -- tab pages line, not active tab page label
 		TabLineFill     { StatusLineNC }, -- tab pages line, where there are no labels
 		TabLineSel      { gui = "bold" }, -- tab pages line, active tab page label
-		VertSplit       { fg = PmenuThumb.bg }, -- the column separating vertically split windows
+		VertSplit       { fg = PmenuSbar.bg }, -- the column separating vertically split windows
 
-		Visual          { bg = c.stone.da(68) }, -- Visual mode selection
+		Visual          { bg = c.stone.sa(24).da(68) }, -- Visual mode selection
 		-- VisualNOS    { }, -- Visual mode selection when vim is "Not Owning the Selection".
 
 		NonText         { fg = Normal.bg.li(22) }, -- '@' at the end of the window, characters from 'showbreak' and other characters that do not really exist in the text (e.g., ">" displayed when a double-wide character doesn't fit at the end of the line). See also |hl-EndOfBuffer|.
@@ -370,23 +370,12 @@ local specs = {
 	theme,
 }
 
-if vim.g.zenbones_dim_noncurrent_window then
+if vim.g.zenflesh_lighten_noncurrent_window then
 	table.insert(
 		specs,
 		lush(function()
 			return {
-				NormalNC { theme.Normal, bg = theme.Normal.bg.abs_da(2) }, -- normal text in non-current windows
-			}
-		end)
-	)
-end
-
-if vim.g.zenbones_solid_vert_split then
-	table.insert(
-		specs,
-		lush(function()
-			return {
-				VertSplit { bg = theme.StatusLineNC.bg, fg = theme.LineNr.fg }, -- the column separating vertically split windows
+				NormalNC { theme.Normal, bg = theme.Normal.bg.abs_li(2) }, -- normal text in non-current windows
 			}
 		end)
 	)

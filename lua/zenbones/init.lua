@@ -2,15 +2,15 @@ local lush = require "lush"
 local c = require "zenbones.palette"
 
 local normal_bg = c.sand
-local diff_bg_li = 0
+local diff_bg_l = 0
 
 local lightness = vim.g.zenbones_lightness
 if lightness == "bright" then
 	normal_bg = normal_bg.abs_li(3)
-	diff_bg_li = -4
+	diff_bg_l = -4
 elseif lightness == "dim" then
 	normal_bg = normal_bg.abs_da(3).de(16)
-	diff_bg_li = 4
+	diff_bg_l = 4
 elseif lightness ~= nil then
 	local error_msg = "Unknown zenbones_lightness value: " .. vim.inspect(lightness)
 	vim.api.nvim_echo({ { error_msg, "WarningMsg" } }, true, {})
@@ -53,10 +53,10 @@ local theme = lush(function()
 		CursorColumn    { CursorLine }, -- Screen-column at the cursor, when 'cursorcolumn' is set.
 		ColorColumn     { bg = c.wood.de(38).li(80) }, -- used for the columns set with 'colorcolumn'
 
-		DiffAdd         { bg = c.leaf.de(77).li(82).abs_da(diff_bg_li) }, -- diff mode: Added line |diff.txt|
-		DiffChange      { bg = c.water.de(22).li(76).abs_da(diff_bg_li) }, -- diff mode: Changed line |diff.txt|
-		DiffDelete      { bg = c.rose.de(37).li(74).abs_da(diff_bg_li) }, -- diff mode: Deleted line |diff.txt|
-		DiffText        { bg = c.water.de(24).li(64).abs_da(diff_bg_li), fg = c.stone }, -- diff mode: Changed text within a changed line |diff.txt|
+		DiffAdd         { bg = c.leaf.de(77).li(82).abs_da(diff_bg_l) }, -- diff mode: Added line |diff.txt|
+		DiffChange      { bg = c.water.de(22).li(76).abs_da(diff_bg_l) }, -- diff mode: Changed line |diff.txt|
+		DiffDelete      { bg = c.rose.de(37).li(74).abs_da(diff_bg_l) }, -- diff mode: Deleted line |diff.txt|
+		DiffText        { bg = c.water.de(24).li(64).abs_da(diff_bg_l), fg = c.stone }, -- diff mode: Changed text within a changed line |diff.txt|
 
 		LineNr          { fg = Normal.bg.da(32) }, -- Line number for ":number" and ":#" commands, and when 'number' or 'relativenumber' option is set.
 		SignColumn      { LineNr }, -- column where |signs| are displayed
