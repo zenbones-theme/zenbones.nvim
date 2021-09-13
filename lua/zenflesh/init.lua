@@ -41,7 +41,7 @@ local theme = lush(function()
 		ErrorMsg        { Error }, -- error messages on the command line
 		WarningMsg      { fg = c.wood }, -- warning messages
 
-		Comment         { fg = c.sand.li(34).de(52), gui = "italic" }, -- any comment
+		Comment         { fg = c.sand.li(32).de(48), gui = "italic" }, -- any comment
 		Conceal         { fg = c.stone.da(20), gui = "bold,italic" }, -- placeholder characters substituted for concealed text (see 'conceallevel')
 
 		Cursor          { bg = c.stone.li(20), fg = c.sand.da(20) }, -- character under the cursor
@@ -62,7 +62,7 @@ local theme = lush(function()
 		LineNr          { fg = Normal.bg.li(28) }, -- Line number for ":number" and ":#" commands, and when 'number' or 'relativenumber' option is set.
 		SignColumn      { LineNr }, -- column where |signs| are displayed
 		FoldColumn      { LineNr, gui = "bold" }, -- 'foldcolumn'
-		Folded          { bg = Normal.bg.li(16), fg = Normal.bg.li(64) }, -- line used for closed folds
+		Folded          { bg = Normal.bg.li(14), fg = Normal.bg.li(64) }, -- line used for closed folds
 		CursorLineNr    { LineNr, fg = c.stone, gui = "bold" }, -- Like LineNr when 'cursorline' or 'relativenumber' is set for the cursor line.
 
 		-- ModeMsg      { }, -- 'showmode' message (e.g., "-- INSERT -- ")
@@ -73,9 +73,9 @@ local theme = lush(function()
 		FloatBorder     { fg = Normal.bg.li(50) }, -- Normal text in floating windows.
 
 		Pmenu           { bg = Normal.bg.li(10) }, -- Popup menu: normal item.
-		PmenuSel        { bg = Normal.bg.li(20) }, -- Popup menu: selected item.
-		PmenuSbar       { bg = Normal.bg.li(28) }, -- Popup menu: scrollbar.
-		PmenuThumb      { bg = Normal.bg.li(52) }, -- Popup menu: Thumb of the scrollbar.
+		PmenuSel        { bg = Normal.bg.li(16) }, -- Popup menu: selected item.
+		PmenuSbar       { bg = Normal.bg.li(24) }, -- Popup menu: scrollbar.
+		PmenuThumb      { bg = Normal.bg.li(48) }, -- Popup menu: Thumb of the scrollbar.
 
 		Search          { bg = c.blossom.de(10).da(28), fg = c.sand }, -- Last search pattern highlighting (see 'hlsearch').	Also used for similar items that need to stand out.
 		IncSearch       { bg = c.blossom, fg = c.sand, gui = "bold" }, -- 'incsearch' highlighting; also used for the text replaced with ":s///c"
@@ -115,7 +115,7 @@ local theme = lush(function()
 		-- default,
 		-- Uncomment and edit if you want more specific syntax highlighting.
 
-		Constant        { fg = c.stone.da(29), gui = "italic" }, -- (preferred) any constant
+		Constant        { fg = c.stone.da(27), gui = "italic" }, -- (preferred) any constant
 		-- String       { }, --   a string constant: "this is a string"
 		-- Character    { }, --  a character constant: 'c', '\n'
 		Number          { gui = "italic" }, --   a number constant: 234, 0xff
