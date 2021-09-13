@@ -1,16 +1,5 @@
 local lush = require "lush"
-local hsluv = lush.hsluv
-
-local c = {
-	sand = hsluv(39, 8, 10),
-	stone = hsluv(230, 7, 75),
-	leaf = hsluv(103, 65, 54),
-	water = hsluv(236, 80, 53),
-	rose = hsluv(4, 40, 53),
-	wood = hsluv(26, 58, 54),
-	blossom = hsluv(318, 34, 56),
-	sky = hsluv(204, 76, 58),
-}
+local c = require "zenflesh.palette"
 
 local normal_bg = c.sand
 local diff_bg_l = 0
@@ -20,7 +9,7 @@ if darkness == "stark" then
 	normal_bg = normal_bg.abs_da(3)
 	diff_bg_l = -3
 elseif darkness == "warm" then
-	normal_bg = normal_bg.abs_li(3)
+	normal_bg = normal_bg.abs_li(3).de(16)
 	diff_bg_l = 3
 elseif darkness ~= nil then
 	local error_msg = "Unknown zenflesh_darkness value: " .. vim.inspect(darkness)
@@ -56,7 +45,7 @@ local theme = lush(function()
 		Conceal         { fg = c.stone.da(20), gui = "bold,italic" }, -- placeholder characters substituted for concealed text (see 'conceallevel')
 
 		Cursor          { bg = c.stone.li(20), fg = c.sand.da(20) }, -- character under the cursor
-		lCursor         { Cursor, bg = Cursor.bg.da(20)  }, -- the character under the cursor when |language-mapping| is used (see 'guicursor')
+		lCursor         { Cursor, bg = Cursor.bg.da(35)  }, -- the character under the cursor when |language-mapping| is used (see 'guicursor')
 		-- CursorIM     { }, -- like Cursor, but used when in IME mode |CursorIM|
 		TermCursor      { Cursor }, -- cursor in a focused terminal
 		TermCursorNC    { lCursor }, -- cursor in an unfocused terminal
@@ -65,10 +54,10 @@ local theme = lush(function()
 		CursorColumn    { CursorLine }, -- Screen-column at the cursor, when 'cursorcolumn' is set.
 		ColorColumn     { bg = c.wood.de(40).da(28) }, -- used for the columns set with 'colorcolumn'
 
-		DiffAdd         { bg = c.leaf.de(10).da(38).abs_da(diff_bg_l) }, -- diff mode: Added line |diff.txt|
-		DiffChange      { bg = c.water.de(14).da(41).abs_da(diff_bg_l) }, -- diff mode: Changed line |diff.txt|
-		DiffDelete      { bg = c.rose.de(19).da(44).abs_da(diff_bg_l) }, -- diff mode: Deleted line |diff.txt|
-		DiffText        { bg = c.water.de(20).da(18).abs_da(diff_bg_l), fg = c.stone }, -- diff mode: Changed text within a changed line |diff.txt|
+		DiffAdd         { bg = c.leaf.de(18).da(38).abs_da(diff_bg_l) }, -- diff mode: Added line |diff.txt|
+		DiffChange      { bg = c.water.de(22).da(41).abs_da(diff_bg_l) }, -- diff mode: Changed line |diff.txt|
+		DiffDelete      { bg = c.rose.de(27).da(44).abs_da(diff_bg_l) }, -- diff mode: Deleted line |diff.txt|
+		DiffText        { bg = c.water.de(28).da(18).abs_da(diff_bg_l), fg = c.stone }, -- diff mode: Changed text within a changed line |diff.txt|
 
 		LineNr          { fg = Normal.bg.li(28) }, -- Line number for ":number" and ":#" commands, and when 'number' or 'relativenumber' option is set.
 		SignColumn      { LineNr }, -- column where |signs| are displayed
