@@ -57,7 +57,7 @@ highlight CocWarningHighlight guifg=#944927 guibg=NONE guisp=NONE gui=underline
 highlight ColorColumn guifg=NONE guibg=#EFD8D3 guisp=NONE gui=NONE
 highlight Comment guifg=#948985 guibg=NONE guisp=NONE gui=italic
 highlight Conceal guifg=#4D5C65 guibg=NONE guisp=NONE gui=bold,italic
-highlight Constant guifg=#53636D guibg=NONE guisp=NONE gui=italic
+highlight Constant guifg=#556570 guibg=NONE guisp=NONE gui=italic
 highlight Cursor guifg=#F2F0EF guibg=#2C363C guisp=NONE gui=NONE
 highlight CursorLine guifg=NONE guibg=#E6E1DF guisp=NONE gui=NONE
 highlight CursorLineNr guifg=#2C363C guibg=NONE guisp=NONE gui=bold
@@ -126,7 +126,6 @@ highlight Title guifg=NONE guibg=NONE guisp=NONE gui=bold
 highlight Todo guifg=NONE guibg=NONE guisp=NONE gui=bold,underline
 highlight Type guifg=#5C534F guibg=NONE guisp=NONE gui=NONE
 highlight Underlined guifg=NONE guibg=NONE guisp=NONE gui=underline
-highlight VertSplit guifg=#F7F6F5 guibg=NONE guisp=NONE gui=NONE
 highlight Visual guifg=NONE guibg=#D2DFE7 guisp=NONE gui=NONE
 highlight WarningMsg guifg=#944927 guibg=NONE guisp=NONE gui=NONE
 highlight WildMenu guifg=#F0EDEC guibg=#88507D guisp=NONE gui=NONE
@@ -194,6 +193,7 @@ highlight! link TermCursor Cursor
 highlight! link TroubleNormal Function
 highlight! link TroubleSource Constant
 highlight! link TroubleText Function
+highlight! link VertSplit LineNr
 highlight! link WhichKey Statement
 highlight! link WhichKeyGroup Special
 highlight! link WhichKeySeparator LineNr

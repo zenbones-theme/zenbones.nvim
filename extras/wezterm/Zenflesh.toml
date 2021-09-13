@@ -1,0 +1,12 @@
+# Zenflesh
+[colors]
+foreground = "#B6BCC1"
+background = "#1A1715"
+cursor_bg = "#C5CACE"
+cursor_border = "#161311"
+cursor_fg = "#161311"
+selection_bg = "#303B41"
+selection_fg = "#B6BCC1"
+
+ansi = ["#B6BCC1", "#BB6572", "#75884C", "#B86E54", "#4185AE", "#AC75A1", "#4F969E", "#1A1715"]
+brights = ["#969CA0", "#D16D7D", "#7F974C", "#D07654", "#4293C2", "#C873B8", "#4CA2AC", "#2F2925"]
