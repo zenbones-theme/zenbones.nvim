@@ -1,7 +1,7 @@
 local lush = require "lush"
-local c = require "zenbones.palette"
+local p = require "zenbones.palette"
 
-local normal_bg = c.sand
+local normal_bg = p.sand
 local diff_bg_l = 0
 
 local lightness = vim.g.zenbones_lightness
@@ -33,43 +33,43 @@ local theme = lush(function()
 		-- styling for that group (meaning they mostly get styled as Normal)
 		-- or leave them commented to apply vims default colouring or linking.
 
-		Normal          { bg = normal_bg, fg = c.stone }, -- normal text
+		Normal          { bg = normal_bg, fg = p.stone }, -- normal text
 
 		Underlined      { gui = "underline" }, -- (preferred) text that stands out, HTML links
 		Bold            { gui = "bold" },
 		Italic          { gui = "italic" },
 
-		Error           { fg = c.rose }, -- (preferred) any erroneous construct
+		Error           { fg = p.rose }, -- (preferred) any erroneous construct
 		ErrorMsg        { Error }, -- error messages on the command line
-		WarningMsg      { fg = c.wood }, -- warning messages
+		WarningMsg      { fg = p.wood }, -- warning messages
 
-		Comment         { fg = c.sand.da(38).de(28), gui = (italic_comments and "italic" or "NONE") }, -- any comment
-		Conceal         { fg = c.stone.li(20), gui = "bold,italic" }, -- placeholder characters substituted for concealed text (see 'conceallevel')
+		Comment         { fg = p.sand.da(38).de(28), gui = (italic_comments and "italic" or "NONE") }, -- any comment
+		Conceal         { fg = p.stone.li(20), gui = "bold,italic" }, -- placeholder characters substituted for concealed text (see 'conceallevel')
 
-		Cursor          { bg = c.stone, fg = c.sand.li(20) }, -- character under the cursor
+		Cursor          { bg = p.stone, fg = p.sand.li(20) }, -- character under the cursor
 		lCursor         { Cursor, bg = Cursor.bg.li(20)  }, -- the character under the cursor when |language-mapping| is used (see 'guicursor')
 		-- CursorIM     { }, -- like Cursor, but used when in IME mode |CursorIM|
 		TermCursor      { Cursor }, -- cursor in a focused terminal
 
 		CursorLine      { bg = Normal.bg.da(4) }, -- Screen-line at the cursor, when 'cursorline' is set.	Low-priority if foreground (ctermfg OR guifg) is not set.
 		CursorColumn    { CursorLine }, -- Screen-column at the cursor, when 'cursorcolumn' is set.
-		ColorColumn     { bg = c.wood.de(38).li(80) }, -- used for the columns set with 'colorcolumn'
+		ColorColumn     { bg = p.wood.de(38).li(80) }, -- used for the columns set with 'colorcolumn'
 
-		DiffAdd         { bg = c.leaf.de(77).li(82).abs_da(diff_bg_l) }, -- diff mode: Added line |diff.txt|
-		DiffChange      { bg = c.water.de(22).li(76).abs_da(diff_bg_l) }, -- diff mode: Changed line |diff.txt|
-		DiffDelete      { bg = c.rose.de(37).li(74).abs_da(diff_bg_l) }, -- diff mode: Deleted line |diff.txt|
-		DiffText        { bg = c.water.de(24).li(64).abs_da(diff_bg_l), fg = c.stone }, -- diff mode: Changed text within a changed line |diff.txt|
+		DiffAdd         { bg = p.leaf.de(77).li(82).abs_da(diff_bg_l) }, -- diff mode: Added line |diff.txt|
+		DiffChange      { bg = p.water.de(22).li(76).abs_da(diff_bg_l) }, -- diff mode: Changed line |diff.txt|
+		DiffDelete      { bg = p.rose.de(37).li(74).abs_da(diff_bg_l) }, -- diff mode: Deleted line |diff.txt|
+		DiffText        { bg = p.water.de(24).li(64).abs_da(diff_bg_l), fg = p.stone }, -- diff mode: Changed text within a changed line |diff.txt|
 
 		LineNr          { fg = Normal.bg.da(32) }, -- Line number for ":number" and ":#" commands, and when 'number' or 'relativenumber' option is set.
 		SignColumn      { LineNr }, -- column where |signs| are displayed
 		FoldColumn      { LineNr, gui = "bold" }, -- 'foldcolumn'
 		Folded          { bg = Normal.bg.da(16), fg = Normal.bg.da(64) }, -- line used for closed folds
-		CursorLineNr    { LineNr, fg = c.stone, gui = "bold" }, -- Like LineNr when 'cursorline' or 'relativenumber' is set for the cursor line.
+		CursorLineNr    { LineNr, fg = p.stone, gui = "bold" }, -- Like LineNr when 'cursorline' or 'relativenumber' is set for the cursor line.
 
 		-- ModeMsg      { }, -- 'showmode' message (e.g., "-- INSERT -- ")
 		-- MsgArea      { }, -- Area for messages and cmdline
 		-- MsgSeparator { }, -- Separator for scrolled messages, `msgsep` flag of 'display'
-		MoreMsg         { fg = c.leaf, gui = "bold" }, -- |more-prompt|
+		MoreMsg         { fg = p.leaf, gui = "bold" }, -- |more-prompt|
 		NormalFloat     { bg = Normal.bg.da(6) }, -- Normal text in floating windows.
 		FloatBorder     { fg = Normal.bg.da(50) }, -- Normal text in floating windows.
 
@@ -78,8 +78,8 @@ local theme = lush(function()
 		PmenuSbar       { bg = Normal.bg.da(28) }, -- Popup menu: scrollbar.
 		PmenuThumb      { bg = Normal.bg.li(58) }, -- Popup menu: Thumb of the scrollbar.
 
-		Search          { bg = c.blossom.de(10).li(54), fg = c.stone }, -- Last search pattern highlighting (see 'hlsearch').	Also used for similar items that need to stand out.
-		IncSearch       { bg = c.blossom, fg = c.sand, gui = "bold" }, -- 'incsearch' highlighting; also used for the text replaced with ":s///c"
+		Search          { bg = p.blossom.de(10).li(54), fg = p.stone }, -- Last search pattern highlighting (see 'hlsearch').	Also used for similar items that need to stand out.
+		IncSearch       { bg = p.blossom, fg = p.sand, gui = "bold" }, -- 'incsearch' highlighting; also used for the text replaced with ":s///c"
 		-- Substitute   { }, -- |:substitute| replacement text highlighting
 		MatchParen      { Search }, -- The character under the cursor or just before it, if it is a paired bracket, and its match. |pi_paren.txt|
 		-- QuickFixLine { }, -- Current |quickfix| item in the quickfix window. Combined with |hl-CursorLine| when the cursor is there.
@@ -87,16 +87,16 @@ local theme = lush(function()
 		SpellBad        { fg = Error.fg.de(30), gui = "undercurl", guisp = Error.fg }, -- Word that is not recognized by the spellchecker. |spell| Combined with the highlighting used otherwise.
 		SpellCap        { SpellBad, guisp = Error.fg.li(10) }, -- Word that should start with a capital. |spell| Combined with the highlighting used otherwise.
 		SpellLocal      { SpellCap }, -- Word that is recognized by the spellchecker as one that is used in another region. |spell| Combined with the highlighting used otherwise.
-		SpellRare       { SpellBad, guisp = c.wood }, -- Word that is recognized by the spellchecker as one that is hardly ever used.  |spell| Combined with the highlighting used otherwise.
+		SpellRare       { SpellBad, guisp = p.wood }, -- Word that is recognized by the spellchecker as one that is hardly ever used.  |spell| Combined with the highlighting used otherwise.
 
-		StatusLine      { bg = c.sand.da(14), fg = c.stone }, -- status line of current window
-		StatusLineNC    { bg = c.sand.da(10), fg = c.stone.li(28) }, -- status lines of not-current windows Note: if this is equal to "StatusLine" Vim will use "^^^" in the status line of the current window.
+		StatusLine      { bg = p.sand.da(14), fg = p.stone }, -- status line of current window
+		StatusLineNC    { bg = p.sand.da(10), fg = p.stone.li(28) }, -- status lines of not-current windows Note: if this is equal to "StatusLine" Vim will use "^^^" in the status line of the current window.
 		TabLine         { StatusLine, gui = "italic" }, -- tab pages line, not active tab page label
 		TabLineFill     { StatusLineNC }, -- tab pages line, where there are no labels
 		TabLineSel      { gui = "bold" }, -- tab pages line, active tab page label
 		VertSplit       { LineNr }, -- the column separating vertically split windows
 
-		Visual          { bg = c.stone.li(84) }, -- Visual mode selection
+		Visual          { bg = p.stone.li(84) }, -- Visual mode selection
 		-- VisualNOS    { }, -- Visual mode selection when vim is "Not Owning the Selection".
 
 		NonText         { fg = Normal.bg.da(22) }, -- '@' at the end of the window, characters from 'showbreak' and other characters that do not really exist in the text (e.g., ">" displayed when a double-wide character doesn't fit at the end of the line). See also |hl-EndOfBuffer|.
@@ -104,7 +104,7 @@ local theme = lush(function()
 		Whitespace      { NonText }, -- "nbsp", "space", "tab" and "trail" in 'listchars'
 		EndOfBuffer     { NonText }, -- filler lines (~) after the end of the buffer.  By default, this is highlighted like |hl-NonText|.
 
-		WildMenu        { bg = c.blossom, fg = c.sand }, -- current match in 'wildmenu' completion
+		WildMenu        { bg = p.blossom, fg = p.sand }, -- current match in 'wildmenu' completion
 		Directory       { gui = "bold" }, -- directory names (and other special names in listings)
 		Question        { MoreMsg }, -- |hit-enter| prompt and yes/no questions
 		Title           { gui = "bold" }, -- titles for output from ":set all", ":autocmd" etc.
@@ -116,21 +116,21 @@ local theme = lush(function()
 		-- default,
 		-- Uncomment and edit if you want more specific syntax highlighting.
 
-		Constant        { fg = c.stone.li(25), gui = "italic" }, -- (preferred) any constant
+		Constant        { fg = p.stone.li(25), gui = "italic" }, -- (preferred) any constant
 		-- String       { }, --   a string constant: "this is a string"
 		-- Character    { }, --  a character constant: 'c', '\n'
 		Number          { gui = "italic" }, --   a number constant: 234, 0xff
 		Boolean         { Number }, --  a boolean constant: TRUE, false
 		-- Float        { }, --    a floating point constant: 2.3e10
 
-		Identifier      { fg = c.stone.li(15) }, -- (preferred) any variable name
-		Function        { fg = c.stone }, -- function name (also: methods for classes)
+		Identifier      { fg = p.stone.li(15) }, -- (preferred) any variable name
+		Function        { fg = p.stone }, -- function name (also: methods for classes)
 
-		Statement       { fg = c.stone, gui = "bold" }, -- (preferred) any statement
-		-- Conditional  { }, --  if, then, else, endif, switch, etc.
-		-- Repeat       { }, --   for, do, while, etc.
-		-- Label        { }, --    case, default, etc.
-		-- Operator     { }, -- "sizeof", "+", "*", etc.
+		Statement       { fg = p.stone, gui = "bold" }, -- (preferred) any statement
+		-- Conditional  { }, --  if, then, else, endif, switch, etp.
+		-- Repeat       { }, --   for, do, while, etp.
+		-- Label        { }, --    case, default, etp.
+		-- Operator     { }, -- "sizeof", "+", "*", etp.
 		-- Keyword      { }, --  any other keyword
 		-- Exception    { }, --  try, catch, throw
 
@@ -138,17 +138,17 @@ local theme = lush(function()
 		-- Include      { }, --  preprocessor #include
 		-- Define       { }, --   preprocessor #define
 		-- Macro        { }, --    same as Define
-		-- PreCondit    { }, --  preprocessor #if, #else, #endif, etc.
+		-- PreCondit    { }, --  preprocessor #if, #else, #endif, etp.
 
-		Type            { fg = c.sand.da(62) }, -- (preferred) int, long, char, etc.
+		Type            { fg = p.sand.da(62) }, -- (preferred) int, long, char, etp.
 		-- StorageClass { }, -- static, register, volatile, etc.
 		-- Structure    { }, --  struct, union, enum, etc.
 		-- Typedef      { }, --  A typedef
 
-		Special         { fg = c.stone.li(21), gui = "bold" }, -- (preferred) any special symbol
+		Special         { fg = p.stone.li(21), gui = "bold" }, -- (preferred) any special symbol
 		-- SpecialChar  { }, --  special character in a constant
 		-- Tag          { }, --    you can use CTRL-] on this
-		Delimiter       { fg = c.sand.da(42) }, --	character that needs attention
+		Delimiter       { fg = p.sand.da(42) }, --	character that needs attention
 		SpecialComment  { Comment, gui = "bold" }, -- special things inside a comment
 		-- Debug        { }, --    debugging statements
 
@@ -167,11 +167,11 @@ local theme = lush(function()
 
 		LspDiagnosticsDefaultError              { Error }, -- Used as the base highlight group. Other LspDiagnostic highlights link to this by default (except Underline)
 		LspDiagnosticsDefaultWarning            { WarningMsg }, -- Used as the base highlight group. Other LspDiagnostic highlights link to this by default (except Underline)
-		LspDiagnosticsDefaultInformation        { fg = c.water }, -- Used as the base highlight group. Other LspDiagnostic highlights link to this by default (except Underline)
-		LspDiagnosticsDefaultHint               { fg = c.blossom }, -- Used as the base highlight group. Other LspDiagnostic highlights link to this by default (except Underline)
+		LspDiagnosticsDefaultInformation        { fg = p.water }, -- Used as the base highlight group. Other LspDiagnostic highlights link to this by default (except Underline)
+		LspDiagnosticsDefaultHint               { fg = p.blossom }, -- Used as the base highlight group. Other LspDiagnostic highlights link to this by default (except Underline)
 
-		LspDiagnosticsVirtualTextError          { LspDiagnosticsDefaultError, bg = c.rose.abs_de(48).li(82) }, -- Used for "Error" diagnostic virtual text
-		LspDiagnosticsVirtualTextWarning        { LspDiagnosticsDefaultWarning, bg = c.wood.de(58).li(86) }, -- Used for "Warning" diagnostic virtual text
+		LspDiagnosticsVirtualTextError          { LspDiagnosticsDefaultError, bg = p.rose.abs_de(48).li(82) }, -- Used for "Error" diagnostic virtual text
+		LspDiagnosticsVirtualTextWarning        { LspDiagnosticsDefaultWarning, bg = p.wood.de(58).li(86) }, -- Used for "Warning" diagnostic virtual text
 		-- LspDiagnosticsVirtualTextInformation { }, -- Used for "Information" diagnostic virtual text
 		-- LspDiagnosticsVirtualTextHint        { }, -- Used for "Hint" diagnostic virtual text
 
@@ -255,14 +255,14 @@ local theme = lush(function()
 		TSDanger                { Error },
 
 		-- Syntax
-		diffAdded     { fg = c.leaf },
-		diffRemoved   { fg = c.rose },
-		diffChanged   { fg = c.water },
-		diffOldFile   { fg = c.rose, gui = "italic" },
-		diffNewFile   { fg = c.leaf, gui = "italic" },
-		diffFile      { fg = c.wood, gui = "bold" },
-		diffLine      { fg = c.blossom, gui = "bold" },
-		diffIndexLine { fg = c.wood },
+		diffAdded     { fg = p.leaf },
+		diffRemoved   { fg = p.rose },
+		diffChanged   { fg = p.water },
+		diffOldFile   { fg = p.rose, gui = "italic" },
+		diffNewFile   { fg = p.leaf, gui = "italic" },
+		diffFile      { fg = p.wood, gui = "bold" },
+		diffLine      { fg = p.blossom, gui = "bold" },
+		diffIndexLine { fg = p.wood },
 		
 		markdownH1    { Statement, gui = "bold,underline" },
 		markdownH2    { Statement },
@@ -279,40 +279,40 @@ local theme = lush(function()
 		helpOption         { Constant },
 
 		-- Other plugins
-		GitSignsAdd                { fg = c.leaf },
-		GitSignsChange             { fg = c.water },
-		GitSignsDelete             { fg = c.rose },
+		GitSignsAdd                { fg = p.leaf },
+		GitSignsChange             { fg = p.water },
+		GitSignsDelete             { fg = p.rose },
 
 		GitGutterAdd               { GitSignsAdd },
 		GitGutterChange            { GitSignsChange },
 		GitGutterDelete            { GitSignsDelete },
 
-		IndentBlanklineChar        { fg = c.sand.da(12).de(20) },
+		IndentBlanklineChar        { fg = p.sand.da(12).de(20) },
 
 		TelescopeSelection         { CursorLine },
-		TelescopeSelectionCaret    { TelescopeSelection, fg = c.rose },
-		TelescopeMatching          { fg = c.blossom, gui = "bold" },
+		TelescopeSelectionCaret    { TelescopeSelection, fg = p.rose },
+		TelescopeMatching          { fg = p.blossom, gui = "bold" },
 		TelescopeBorder            { FloatBorder },
 
 		Sneak                      { Search },
 		SneakLabel                 { WildMenu },
-		SneakLabelMask             { bg = c.blossom, fg = c.blossom },
+		SneakLabelMask             { bg = p.blossom, fg = p.blossom },
 
-		LightspeedLabel            { fg = c.blossom, gui = "bold,underline" },
-		LightspeedLabelOverlapped  { fg = c.blossom, gui = "underline" },
-		LightspeedLabelDistant     { fg = c.sky, gui = "bold,underline" },
-		LightspeedLabelDistantOverlapped { fg = c.sky, gui = "underline" },
+		LightspeedLabel            { fg = p.blossom, gui = "bold,underline" },
+		LightspeedLabelOverlapped  { fg = p.blossom, gui = "underline" },
+		LightspeedLabelDistant     { fg = p.sky, gui = "bold,underline" },
+		LightspeedLabelDistantOverlapped { fg = p.sky, gui = "underline" },
 		LightspeedShortcut         { SneakLabel, gui = "bold,underline" },
 		LightspeedOneCharMatch     { SneakLabel, gui = "bold" },
 		LightspeedMaskedChar       { Conceal },
 		LightspeedUnlabeledMatch   { Bold },
 		LightspeedPendingOpArea    { SneakLabel },
-		LightspeedPendingChangeOpArea { fg = c.blossom },
+		LightspeedPendingChangeOpArea { fg = p.blossom },
 		LightspeedGreyWash         { fg = Comment.fg },
 
 		HopNextKey                 { LightspeedLabel },
 		HopNextKey1                { LightspeedLabelDistant },
-		HopNextKey2                { fg = c.water },
+		HopNextKey2                { fg = p.water },
 		HopUnmatched               { LightspeedGreyWash } ,
 
 		BufferCurrent              { TabLineSel },
@@ -332,7 +332,7 @@ local theme = lush(function()
 		CocWarningVitualText       { LspDiagnosticsVirtualTextWarning },
 		CocSelectedText            { SpellBad },
 		CocCodeLens                { LineNr },
-		CocMarkdownLink            { fg = c.sky, gui = "underline" },
+		CocMarkdownLink            { fg = p.sky, gui = "underline" },
 
 		NeogitNotificationError    { LspDiagnosticsDefaultError },
 		NeogitNotificationWarning  { LspDiagnosticsDefaultWarning },
@@ -342,7 +342,7 @@ local theme = lush(function()
 		NeogitDiffDeleteHighlight  { DiffDelete },
 		NeogitDiffAddHighlight     { DiffAdd },
 		NeogitHunkHeader           { LineNr },
-		NeogitHunkHeaderHighlight  { CursorLine, fg = c.stone, gui = "bold" },
+		NeogitHunkHeaderHighlight  { CursorLine, fg = p.stone, gui = "bold" },
 
 		WhichKey                   { Statement },
 		WhichKeyGroup              { Special },

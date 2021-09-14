@@ -1,23 +1,23 @@
 local lush = require "lush"
-local c = require "zenbones.palette"
+local p = require "zenbones.palette"
 
 local colors = {
-	c.stone,
-	c.rose,
-	c.leaf,
-	c.wood,
-	c.water,
-	c.blossom,
-	c.sky,
-	c.sand,
-	c.stone.li(16),
-	c.rose.sa(20).da(10),
-	c.leaf.sa(20).da(10),
-	c.wood.sa(18).da(10),
-	c.water.sa(20).da(10),
-	c.blossom.sa(24).da(10),
-	c.sky.sa(20).da(10),
-	c.sand.sa(4).da(10),
+	p.stone,
+	p.rose,
+	p.leaf,
+	p.wood,
+	p.water,
+	p.blossom,
+	p.sky,
+	p.sand,
+	p.stone.li(16),
+	p.rose.sa(20).da(10),
+	p.leaf.sa(20).da(10),
+	p.wood.sa(18).da(10),
+	p.water.sa(20).da(10),
+	p.blossom.sa(24).da(10),
+	p.sky.sa(20).da(10),
+	p.sand.sa(4).da(10),
 }
 
 local M = {}
