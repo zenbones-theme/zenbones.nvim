@@ -49,11 +49,7 @@ highlight Bold guifg=NONE guibg=NONE guisp=NONE gui=bold
 highlight BufferVisible guifg=#596A76 guibg=NONE guisp=NONE gui=NONE
 highlight BufferVisibleIndex guifg=#596A76 guibg=NONE guisp=NONE gui=NONE
 highlight BufferVisibleSign guifg=#596A76 guibg=NONE guisp=NONE gui=NONE
-highlight CocErrorHighlight guifg=#A8334C guibg=NONE guisp=NONE gui=underline
-highlight CocHintHighlight guifg=#88507D guibg=NONE guisp=NONE gui=underline
-highlight CocInfoHighlight guifg=#286486 guibg=NONE guisp=NONE gui=underline
 highlight CocMarkdownLink guifg=#3B8992 guibg=NONE guisp=NONE gui=underline
-highlight CocWarningHighlight guifg=#944927 guibg=NONE guisp=NONE gui=underline
 highlight ColorColumn guifg=NONE guibg=#EFD8D3 guisp=NONE gui=NONE
 highlight Comment guifg=#948985 guibg=NONE guisp=NONE gui=italic
 highlight Conceal guifg=#4D5C65 guibg=NONE guisp=NONE gui=bold,italic
@@ -142,11 +138,15 @@ highlight markdownH1 guifg=#2C363C guibg=NONE guisp=NONE gui=bold,underline
 highlight! link Boolean Number
 highlight! link BufferCurrent TabLineSel
 highlight! link CocCodeLens LineNr
+highlight! link CocErrorHighlight LspDiagnosticsUnderlineError
 highlight! link CocErrorSign LspDiagnosticsDefaultError
 highlight! link CocErrorVirtualText LspDiagnosticsVirtualTextError
+highlight! link CocHintHighlight LspDiagnosticsUnderlineHint
 highlight! link CocHintSign LspDiagnosticsDefaultHint
+highlight! link CocInfoHighlight LspDiagnosticsUnderlineInformation
 highlight! link CocInfoSign LspDiagnosticsDefaultInformation
 highlight! link CocSelectedText SpellBad
+highlight! link CocWarningHighlight LspDiagnosticsUnderlineWarning
 highlight! link CocWarningSign LspDiagnosticsDefaultWarning
 highlight! link CocWarningVitualText LspDiagnosticsVirtualTextWarning
 highlight! link CursorColumn CursorLine
