@@ -85,6 +85,10 @@ highlight.
 
 Set to `v:true` to make non-current window background dimmer than _Normal_.
 
+#### g:zenbones_italic_comments
+
+Set to `v:false` to make comments not italicize.
+
 ## Advanced Usage
 
 Zenbones is pretty extensible thanks to Lush. You can easily retrieve the colors
