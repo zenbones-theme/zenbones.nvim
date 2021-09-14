@@ -1,4 +1,4 @@
-# Zenbones
+# Zenflesh, Zenbones
 
 Zenbones is a light vim/neovim
 [colorscheme](https://neovim.io/doc/user/syntax.html#:colorscheme) designed to

@@ -7,22 +7,22 @@ endif
 set background=dark
 let g:colors_name = 'zenflesh'
 
-let g:terminal_color_0 = '#B3BABF'
+let g:terminal_color_0 = '#1A1715'
 let g:terminal_color_1 = '#BB6572'
 let g:terminal_color_2 = '#75884C'
 let g:terminal_color_3 = '#B86E54'
 let g:terminal_color_4 = '#4185AE'
 let g:terminal_color_5 = '#AC75A1'
 let g:terminal_color_6 = '#4F969E'
-let g:terminal_color_7 = '#1A1715'
-let g:terminal_color_8 = '#93999E'
+let g:terminal_color_7 = '#B3BABF'
+let g:terminal_color_8 = '#2F2925'
 let g:terminal_color_9 = '#D16D7D'
 let g:terminal_color_10 = '#7F974C'
 let g:terminal_color_11 = '#D07654'
 let g:terminal_color_12 = '#4293C2'
 let g:terminal_color_13 = '#C873B8'
 let g:terminal_color_14 = '#4CA2AC'
-let g:terminal_color_15 = '#2F2925'
+let g:terminal_color_15 = '#93999E'
 
 if has('terminal')
     let g:terminal_ansi_colors = [

@@ -48,7 +48,7 @@ return function(name, theme, palette, terminal)
 		foreground = fg,
 		selection_background = theme.Visual.bg.hex,
 		selection_foreground = fg,
-		url_color = terminal.colors[14].hex,
+		url_color = terminal.colors[13].hex,
 		cursor = fg,
 		active_tab_background = theme.Search.bg.hex,
 		active_tab_foreground = fg,
