@@ -3,10 +3,10 @@ colors:
   # Default colors
   primary:
     background: '#1A1715'
-    foreground: '#B6BCC1'
+    foreground: '#B3BABF'
   # Normal colors
   normal:
-    black:   '#B6BCC1'
+    black:   '#B3BABF'
     red:     '#BB6572'
     green:   '#75884C'
     yellow:  '#B86E54'
@@ -16,7 +16,7 @@ colors:
     white:   '#1A1715'
   # Bright colors
   bright:
-    black:   '#969CA0'
+    black:   '#93999E'
     red:     '#D16D7D'
     green:   '#7F974C'
     yellow:  '#D07654'

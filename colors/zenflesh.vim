@@ -7,7 +7,7 @@ endif
 set background=dark
 let g:colors_name = 'zenflesh'
 
-let g:terminal_color_0 = '#B6BCC1'
+let g:terminal_color_0 = '#B3BABF'
 let g:terminal_color_1 = '#BB6572'
 let g:terminal_color_2 = '#75884C'
 let g:terminal_color_3 = '#B86E54'
@@ -15,7 +15,7 @@ let g:terminal_color_4 = '#4185AE'
 let g:terminal_color_5 = '#AC75A1'
 let g:terminal_color_6 = '#4F969E'
 let g:terminal_color_7 = '#1A1715'
-let g:terminal_color_8 = '#969CA0'
+let g:terminal_color_8 = '#93999E'
 let g:terminal_color_9 = '#D16D7D'
 let g:terminal_color_10 = '#7F974C'
 let g:terminal_color_11 = '#D07654'
@@ -46,39 +46,39 @@ if has('terminal')
 endif
 
 highlight Bold guifg=NONE guibg=NONE guisp=NONE gui=bold
-highlight BufferVisible guifg=#CBCFD3 guibg=NONE guisp=NONE gui=NONE
-highlight BufferVisibleIndex guifg=#CBCFD3 guibg=NONE guisp=NONE gui=NONE
-highlight BufferVisibleSign guifg=#CBCFD3 guibg=NONE guisp=NONE gui=NONE
+highlight BufferVisible guifg=#C8CDD0 guibg=NONE guisp=NONE gui=NONE
+highlight BufferVisibleIndex guifg=#C8CDD0 guibg=NONE guisp=NONE gui=NONE
+highlight BufferVisibleSign guifg=#C8CDD0 guibg=NONE guisp=NONE gui=NONE
 highlight CocErrorHighlight guifg=#BB6572 guibg=NONE guisp=NONE gui=underline
 highlight CocHintHighlight guifg=#AC75A1 guibg=NONE guisp=NONE gui=underline
 highlight CocInfoHighlight guifg=#4185AE guibg=NONE guisp=NONE gui=underline
 highlight CocMarkdownLink guifg=#4F969E guibg=NONE guisp=NONE gui=underline
 highlight CocWarningHighlight guifg=#B86E54 guibg=NONE guisp=NONE gui=underline
-highlight ColorColumn guifg=NONE guibg=#775349 guisp=NONE gui=NONE
+highlight ColorColumn guifg=NONE guibg=#714F45 guisp=NONE gui=NONE
 highlight Comment guifg=#5B5654 guibg=NONE guisp=NONE gui=italic
-highlight Conceal guifg=#8E9498 guibg=NONE guisp=NONE gui=bold,italic
+highlight Conceal guifg=#8C9196 guibg=NONE guisp=NONE gui=bold,italic
 highlight Constant guifg=#7F8488 guibg=NONE guisp=NONE gui=italic
-highlight Cursor guifg=#161311 guibg=#C5CACE guisp=NONE gui=NONE
+highlight Cursor guifg=#161311 guibg=#C2C7CB guisp=NONE gui=NONE
 highlight CursorLine guifg=NONE guibg=#231F1D guisp=NONE gui=NONE
-highlight CursorLineNr guifg=#B6BCC1 guibg=NONE guisp=NONE gui=bold
+highlight CursorLineNr guifg=#B3BABF guibg=NONE guisp=NONE gui=bold
 highlight Delimiter guifg=#776E69 guibg=NONE guisp=NONE gui=NONE
 highlight DiffAdd guifg=NONE guibg=#384126 guisp=NONE gui=NONE
 highlight DiffChange guifg=NONE guibg=#2C475B guisp=NONE gui=NONE
 highlight DiffDelete guifg=NONE guibg=#5D383D guisp=NONE gui=NONE
-highlight DiffText guifg=#B6BCC1 guibg=#3B5D75 guisp=NONE gui=NONE
+highlight DiffText guifg=#B3BABF guibg=#3B5D75 guisp=NONE gui=NONE
 highlight Directory guifg=NONE guibg=NONE guisp=NONE gui=bold
 highlight Error guifg=#BB6572 guibg=NONE guisp=NONE gui=NONE
-highlight FloatBorder guifg=#8B7F79 guibg=NONE guisp=NONE gui=NONE
-highlight FoldColumn guifg=#564E4A guibg=NONE guisp=NONE gui=bold
-highlight Folded guifg=#AFA099 guibg=#37312F guisp=NONE gui=NONE
-highlight Function guifg=#B6BCC1 guibg=NONE guisp=NONE gui=NONE
+highlight FloatBorder guifg=#80756F guibg=NONE guisp=NONE gui=NONE
+highlight FoldColumn guifg=#5C534F guibg=NONE guisp=NONE gui=bold
+highlight Folded guifg=#9E918A guibg=#37312F guisp=NONE gui=NONE
+highlight Function guifg=#B3BABF guibg=NONE guisp=NONE gui=NONE
 highlight GitSignsAdd guifg=#75884C guibg=NONE guisp=NONE gui=NONE
 highlight GitSignsChange guifg=#4185AE guibg=NONE guisp=NONE gui=NONE
 highlight GitSignsDelete guifg=#BB6572 guibg=NONE guisp=NONE gui=NONE
 highlight HopNextKey2 guifg=#4185AE guibg=NONE guisp=NONE gui=NONE
-highlight Identifier guifg=#969CA0 guibg=NONE guisp=NONE gui=NONE
+highlight Identifier guifg=#93999E guibg=NONE guisp=NONE gui=NONE
 highlight IncSearch guifg=#1A1715 guibg=#AC75A1 guisp=NONE gui=bold
-highlight IndentBlanklineChar guifg=#181514 guibg=NONE guisp=NONE gui=NONE
+highlight IndentBlanklineChar guifg=#363230 guibg=NONE guisp=NONE gui=NONE
 highlight Italic guifg=NONE guibg=NONE guisp=NONE gui=italic
 highlight LightspeedGreyWash guifg=#5B5654 guibg=NONE guisp=NONE gui=NONE
 highlight LightspeedLabel guifg=#AC75A1 guibg=NONE guisp=NONE gui=bold,underline
@@ -88,7 +88,7 @@ highlight LightspeedLabelOverlapped guifg=#AC75A1 guibg=NONE guisp=NONE gui=unde
 highlight LightspeedOneCharMatch guifg=#1A1715 guibg=#AC75A1 guisp=NONE gui=bold
 highlight LightspeedPendingChangeOpArea guifg=#AC75A1 guibg=NONE guisp=NONE gui=NONE
 highlight LightspeedShortcut guifg=#1A1715 guibg=#AC75A1 guisp=NONE gui=bold,underline
-highlight LineNr guifg=#564E4A guibg=NONE guisp=NONE gui=NONE
+highlight LineNr guifg=#5C534F guibg=NONE guisp=NONE gui=NONE
 highlight LspDiagnosticsDefaultHint guifg=#AC75A1 guibg=NONE guisp=NONE gui=NONE
 highlight LspDiagnosticsDefaultInformation guifg=#4185AE guibg=NONE guisp=NONE gui=NONE
 highlight LspDiagnosticsUnderlineError guifg=#BB6572 guibg=NONE guisp=NONE gui=undercurl
@@ -98,33 +98,33 @@ highlight LspDiagnosticsUnderlineWarning guifg=#B86E54 guibg=NONE guisp=NONE gui
 highlight LspDiagnosticsVirtualTextError guifg=#BB6572 guibg=#2A2A2A guisp=NONE gui=NONE
 highlight LspDiagnosticsVirtualTextWarning guifg=#B86E54 guibg=#352723 guisp=NONE gui=NONE
 highlight MoreMsg guifg=#75884C guibg=NONE guisp=NONE gui=bold
-highlight NeogitHunkHeaderHighlight guifg=#B6BCC1 guibg=#231F1D guisp=NONE gui=bold
-highlight NonText guifg=#48413D guibg=NONE guisp=NONE gui=NONE
-highlight Normal guifg=#B6BCC1 guibg=#1A1715 guisp=NONE gui=NONE
-highlight NormalFloat guifg=NONE guibg=#272321 guisp=NONE gui=NONE
+highlight NeogitHunkHeaderHighlight guifg=#B3BABF guibg=#231F1D guisp=NONE gui=bold
+highlight NonText guifg=#514A46 guibg=NONE guisp=NONE gui=NONE
+highlight Normal guifg=#B3BABF guibg=#1A1715 guisp=NONE gui=NONE
+highlight NormalFloat guifg=NONE guibg=#292523 guisp=NONE gui=NONE
 highlight Number guifg=NONE guibg=NONE guisp=NONE gui=italic
-highlight Pmenu guifg=NONE guibg=#2E2927 guisp=NONE gui=NONE
-highlight PmenuSbar guifg=NONE guibg=#4D4542 guisp=NONE gui=NONE
-highlight PmenuSel guifg=NONE guibg=#3C3633 guisp=NONE gui=NONE
-highlight PmenuThumb guifg=NONE guibg=#867A74 guisp=NONE gui=NONE
-highlight Search guifg=#1A1715 guibg=#775370 guisp=NONE gui=NONE
+highlight Pmenu guifg=NONE guibg=#322D2B guisp=NONE gui=NONE
+highlight PmenuSbar guifg=NONE guibg=#514A46 guisp=NONE gui=NONE
+highlight PmenuSel guifg=NONE guibg=#403A37 guisp=NONE gui=NONE
+highlight PmenuThumb guifg=NONE guibg=#8B7F79 guisp=NONE gui=NONE
+highlight Search guifg=#B3BABF guibg=#714F6A guisp=NONE gui=NONE
 highlight SneakLabelMask guifg=#AC75A1 guibg=#AC75A1 guisp=NONE gui=NONE
 highlight Special guifg=#91979B guibg=NONE guisp=NONE gui=bold
 highlight SpecialComment guifg=#5B5654 guibg=NONE guisp=NONE gui=bold
-highlight SpecialKey guifg=#48413D guibg=NONE guisp=NONE gui=italic
+highlight SpecialKey guifg=#514A46 guibg=NONE guisp=NONE gui=italic
 highlight SpellBad guifg=#AD6D76 guibg=NONE guisp=NONE gui=undercurl
 highlight SpellCap guifg=#AD6D76 guibg=NONE guisp=NONE gui=undercurl
 highlight SpellRare guifg=#AD6D76 guibg=NONE guisp=NONE gui=undercurl
-highlight Statement guifg=#B6BCC1 guibg=NONE guisp=NONE gui=bold
-highlight StatusLine guifg=#B6BCC1 guibg=#37312F guisp=NONE gui=NONE
-highlight StatusLineNC guifg=#CBCFD3 guibg=#2E2927 guisp=NONE gui=NONE
-highlight TabLine guifg=#B6BCC1 guibg=#37312F guisp=NONE gui=italic
+highlight Statement guifg=#B3BABF guibg=NONE guisp=NONE gui=bold
+highlight StatusLine guifg=#B3BABF guibg=#3C3633 guisp=NONE gui=NONE
+highlight StatusLineNC guifg=#C8CDD0 guibg=#302B29 guisp=NONE gui=NONE
+highlight TabLine guifg=#B3BABF guibg=#3C3633 guisp=NONE gui=italic
 highlight TabLineSel guifg=NONE guibg=NONE guisp=NONE gui=bold
 highlight TelescopeMatching guifg=#AC75A1 guibg=NONE guisp=NONE gui=bold
 highlight TelescopeSelectionCaret guifg=#BB6572 guibg=#231F1D guisp=NONE gui=NONE
 highlight Title guifg=NONE guibg=NONE guisp=NONE gui=bold
 highlight Todo guifg=NONE guibg=NONE guisp=NONE gui=bold,underline
-highlight Type guifg=#9B918D guibg=NONE guisp=NONE gui=NONE
+highlight Type guifg=#998F8A guibg=NONE guisp=NONE gui=NONE
 highlight Underlined guifg=NONE guibg=NONE guisp=NONE gui=underline
 highlight Visual guifg=NONE guibg=#303B41 guisp=NONE gui=NONE
 highlight WarningMsg guifg=#B86E54 guibg=NONE guisp=NONE gui=NONE
@@ -137,8 +137,8 @@ highlight diffLine guifg=#AC75A1 guibg=NONE guisp=NONE gui=bold
 highlight diffNewFile guifg=#75884C guibg=NONE guisp=NONE gui=italic
 highlight diffOldFile guifg=#BB6572 guibg=NONE guisp=NONE gui=italic
 highlight diffRemoved guifg=#BB6572 guibg=NONE guisp=NONE gui=NONE
-highlight lCursor guifg=#161311 guibg=#7A7F83 guisp=NONE gui=NONE
-highlight markdownH1 guifg=#B6BCC1 guibg=NONE guisp=NONE gui=bold,underline
+highlight lCursor guifg=#161311 guibg=#787D80 guisp=NONE gui=NONE
+highlight markdownH1 guifg=#B3BABF guibg=NONE guisp=NONE gui=bold,underline
 highlight! link Boolean Number
 highlight! link BufferCurrent TabLineSel
 highlight! link CocCodeLens LineNr
