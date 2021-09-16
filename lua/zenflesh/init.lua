@@ -1,22 +1,5 @@
 local lush = require "lush"
--- local p = require "zenflesh.palette"
-
-local hsluv = lush.hsluv
-
-local p = {
-	-- bg = hsluv(230, 18, 10), -- stone
-	-- fg = hsluv(39, 6, 78), -- sand
-
-	bg = hsluv(39, 10, 8), -- sand
-	fg = hsluv(230, 8, 78), -- stone
-
-	rose = hsluv(4, 60, 61),
-	leaf = hsluv(111, 46, 62),
-	wood = hsluv(26, 43, 56),
-	water = hsluv(236, 64, 60),
-	blossom = hsluv(318, 32, 57),
-	sky = hsluv(204, 61, 64),
-}
+local p = require "zenflesh.palette"
 
 local normal_bg = p.bg
 local diff_bg_l = 0
@@ -158,7 +141,7 @@ local theme = lush(function()
 		-- Macro        { }, --    same as Define
 		-- PreCondit    { }, --  preprocessor #if, #else, #endif, etc.
 
-		Type            { fg = p.bg.li(60) }, -- (preferred) int, long, char, etc.
+		Type            { fg = p.bg.li(58) }, -- (preferred) int, long, char, etc.
 		-- StorageClass { }, -- static, register, volatile, etc.
 		-- Structure    { }, --  struct, union, enum, etc.
 		-- Typedef      { }, --  A typedef
@@ -166,7 +149,7 @@ local theme = lush(function()
 		Special         { fg = p.fg.da(12), gui = "bold" }, -- (preferred) any special symbol
 		-- SpecialChar  { }, --  special character in a constant
 		-- Tag          { }, --    you can use CTRL-] on this
-		Delimiter       { fg = p.bg.li(54) }, --	character that needs attention
+		Delimiter       { fg = p.bg.li(52) }, --	character that needs attention
 		SpecialComment  { Comment, gui = "bold" }, -- special things inside a comment
 		-- Debug        { }, --    debugging statements
 
