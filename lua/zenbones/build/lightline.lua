@@ -34,7 +34,7 @@ return function(name, theme, palette, terminal)
 			normal_b_bg = theme.PmenuSel.bg.hex,
 			normal_c_bg = theme.StatusLine.bg.hex,
 			normal_c_fg = theme.StatusLine.fg.hex,
-			insert_a_bg = theme.DiffAdd.bg.hex,
+			insert_a_bg = theme.DiffText.bg.hex,
 			visual_a_bg = theme.Visual.bg.hex,
 			replace_a_bg = theme.DiffDelete.bg.hex,
 			tabline_left_bg = theme.PmenuSel.bg.hex,

@@ -64,7 +64,7 @@ local theme = lush(function()
 		LineNr          { fg = Normal.bg.li(30) }, -- Line number for ":number" and ":#" commands, and when 'number' or 'relativenumber' option is set.
 		SignColumn      { LineNr }, -- column where |signs| are displayed
 		FoldColumn      { LineNr, gui = "bold" }, -- 'foldcolumn'
-		Folded          { bg = Normal.bg.li(16), fg = Normal.bg.li(58) }, -- line used for closed folds
+		Folded          { bg = Normal.bg.li(16), fg = Normal.bg.li(69) }, -- line used for closed folds
 		CursorLineNr    { LineNr, fg = p.fg, gui = "bold" }, -- Like LineNr when 'cursorline' or 'relativenumber' is set for the cursor line.
 
 		-- ModeMsg      { }, -- 'showmode' message (e.g., "-- INSERT -- ")
@@ -75,8 +75,8 @@ local theme = lush(function()
 		FloatBorder     { fg = Normal.bg.li(46) }, -- Normal text in floating windows.
 
 		Pmenu           { bg = Normal.bg.li(12) }, -- Popup menu: normal item.
-		PmenuSel        { bg = Normal.bg.li(18) }, -- Popup menu: selected item.
-		PmenuSbar       { bg = Normal.bg.li(26) }, -- Popup menu: scrollbar.
+		PmenuSel        { bg = Normal.bg.li(24) }, -- Popup menu: selected item.
+		PmenuSbar       { bg = Normal.bg.li(40) }, -- Popup menu: scrollbar.
 		PmenuThumb      { bg = Normal.bg.li(50) }, -- Popup menu: Thumb of the scrollbar.
 
 		Search          { bg = p.blossom.de(12).da(32), fg = p.fg }, -- Last search pattern highlighting (see 'hlsearch').	Also used for similar items that need to stand out.
