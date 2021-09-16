@@ -1,16 +1,16 @@
-local common_fg = "#9E948F"
+local common_fg = "#BBAEA8"
 local inactive_bg = "#312D2B"
 local inactive_fg = "#CAD0D4"
 
 return {
 	normal = {
-		a = { bg = "#524C4A", fg = common_fg, gui = "bold" },
-		b = { bg = "#3F3A38", fg = common_fg },
+		a = { bg = "#716965", fg = common_fg, gui = "bold" },
+		b = { bg = "#4E4845", fg = common_fg },
 		c = { bg = "#3D3836", fg = "#B4BDC3" },
 	},
 
 	insert = {
-		a = { bg = "#333C2C", fg = common_fg, gui = "bold" },
+		a = { bg = "#455C6F", fg = common_fg, gui = "bold" },
 	},
 
 	command = {

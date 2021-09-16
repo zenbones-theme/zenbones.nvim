@@ -66,7 +66,7 @@ highlight Directory guifg=NONE guibg=NONE guisp=NONE gui=bold
 highlight Error guifg=#DE6E7C guibg=NONE guisp=NONE gui=NONE
 highlight FloatBorder guifg=#817873 guibg=NONE guisp=NONE gui=NONE
 highlight FoldColumn guifg=#5A5350 guibg=NONE guisp=NONE gui=bold
-highlight Folded guifg=#9E948F guibg=#3D3836 guisp=NONE gui=NONE
+highlight Folded guifg=#BBAEA8 guibg=#3D3836 guisp=NONE gui=NONE
 highlight Function guifg=#B4BDC3 guibg=NONE guisp=NONE gui=NONE
 highlight GitSignsAdd guifg=#819B69 guibg=NONE guisp=NONE gui=NONE
 highlight GitSignsChange guifg=#6099C0 guibg=NONE guisp=NONE gui=NONE
@@ -100,8 +100,8 @@ highlight Normal guifg=#B4BDC3 guibg=#1C1918 guisp=NONE gui=NONE
 highlight NormalFloat guifg=NONE guibg=#2B2725 guisp=NONE gui=NONE
 highlight Number guifg=NONE guibg=NONE guisp=NONE gui=italic
 highlight Pmenu guifg=NONE guibg=#34302E guisp=NONE gui=NONE
-highlight PmenuSbar guifg=NONE guibg=#524C4A guisp=NONE gui=NONE
-highlight PmenuSel guifg=NONE guibg=#3F3A38 guisp=NONE gui=NONE
+highlight PmenuSbar guifg=NONE guibg=#716965 guisp=NONE gui=NONE
+highlight PmenuSel guifg=NONE guibg=#4E4845 guisp=NONE gui=NONE
 highlight PmenuThumb guifg=NONE guibg=#8B827D guisp=NONE gui=NONE
 highlight Search guifg=#B4BDC3 guibg=#73516C guisp=NONE gui=NONE
 highlight SneakLabelMask guifg=#B279A7 guibg=#B279A7 guisp=NONE gui=NONE
