@@ -83,14 +83,16 @@ Change background colors darkness.
 
 #### g:zenflesh_solid_vert_split
 
-Set to `v:true` to make vertical split more visible with a dimmer background
+Set to `v:true` to make vertical split more distinguishable background
 highlight.
 
 #### g:zenbones_dim_noncurrent_window
 
-#### g:zenflesh_dim_noncurrent_window
-
 Set to `v:true` to make non-current window background dimmer than _Normal_.
+
+#### g:zenflesh_lighten_noncurrent_window
+
+Set to `v:true` to make non-current window background warmer than _Normal_.
 
 #### g:zenbones_italic_comments
 
