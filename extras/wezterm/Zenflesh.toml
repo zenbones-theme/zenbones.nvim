@@ -1,12 +1,12 @@
 # Zenflesh
 [colors]
-foreground = "#B3BABF"
-background = "#1A1715"
-cursor_bg = "#C2C7CB"
-cursor_border = "#161311"
-cursor_fg = "#161311"
-selection_bg = "#303B41"
-selection_fg = "#B3BABF"
+foreground = "#B4BDC3"
+background = "#1C1918"
+cursor_bg = "#C4CACF"
+cursor_border = "#171514"
+cursor_fg = "#171514"
+selection_bg = "#37393B"
+selection_fg = "#B4BDC3"
 
-ansi = ["#1A1715", "#BB6572", "#75884C", "#B86E54", "#4185AE", "#AC75A1", "#4F969E", "#B3BABF"]
-brights = ["#2F2925", "#D16D7D", "#7F974C", "#D07654", "#4293C2", "#C873B8", "#4CA2AC", "#93999E"]
+ansi = ["#1C1918", "#DE6E7C", "#819B69", "#B77E64", "#6099C0", "#B279A7", "#66A5AD", "#B4BDC3"]
+brights = ["#3E3834", "#E8838F", "#8BAE68", "#D68C67", "#61ABDA", "#CF86C1", "#65B8C1", "#888F94"]

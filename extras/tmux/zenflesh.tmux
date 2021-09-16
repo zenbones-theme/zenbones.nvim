@@ -1,17 +1,17 @@
-set -g status-left ' #[fg=#AC75A1,bold]#{s/root//:client_key_table} '
-set -g status-right '#[fg=#AC75A1,bold] [#S]#[fg=#AC75A1,bold] [%d/%m] #[fg=#AC75A1,bold][%I:%M%p] '
-set -g status-style fg='#AC75A1',bg='#B3BABF'
+set -g status-left ' #[fg=#B279A7,bold]#{s/root//:client_key_table} '
+set -g status-right '#[fg=#B279A7,bold] [#S]#[fg=#B279A7,bold] [%d/%m] #[fg=#B279A7,bold][%I:%M%p] '
+set -g status-style fg='#B279A7',bg='#B4BDC3'
 
-set -g window-status-current-style fg='#AC75A1',bg='#B3BABF',bold
+set -g window-status-current-style fg='#B279A7',bg='#B4BDC3',bold
 
-set -g pane-border-style fg='#AC75A1'
-set -g pane-active-border-style fg='#AC75A1'
+set -g pane-border-style fg='#B279A7'
+set -g pane-active-border-style fg='#B279A7'
 
-set -g message-style fg='#1A1715',bg='#303B41'
+set -g message-style fg='#1C1918',bg='#37393B'
 
-set -g display-panes-active-colour '#AC75A1'
-set -g display-panes-colour '#AC75A1'
+set -g display-panes-active-colour '#B279A7'
+set -g display-panes-colour '#B279A7'
 
-set -g clock-mode-colour '#AC75A1'
+set -g clock-mode-colour '#B279A7'
 
-set -g mode-style fg='#1A1715',bg='#303B41'
+set -g mode-style fg='#1C1918',bg='#37393B'

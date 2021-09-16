@@ -1,22 +1,22 @@
 let s:p = {'normal': {}, 'inactive': {}, 'insert': {}, 'replace': {}, 'visual': {}, 'tabline': {}}
 
-let s:p.normal.left = [ [ "#9E918A", "#514A46", "bold" ], [ "#9E918A", "#403A37" ] ]
-let s:p.normal.middle = [ [ "#B3BABF", "#3C3633" ] ]
-let s:p.normal.right = [ [ "#9E918A", "#403A37" ], [ "#9E918A", "#403A37" ] ]
-let s:p.normal.warning = [ [ "#B86E54", "#352723" ] ]
-let s:p.normal.error = [ [ "#BB6572", "#2A2A2A" ] ]
+let s:p.normal.left = [ [ "#9E948F", "#524C4A", "bold" ], [ "#9E948F", "#3F3A38" ] ]
+let s:p.normal.middle = [ [ "#B4BDC3", "#3D3836" ] ]
+let s:p.normal.right = [ [ "#9E948F", "#3F3A38" ], [ "#9E948F", "#3F3A38" ] ]
+let s:p.normal.warning = [ [ "#B77E64", "#362C28" ] ]
+let s:p.normal.error = [ [ "#DE6E7C", "#3A2A2C" ] ]
 
-let s:p.inactive.left =  [ [ "#C8CDD0", "#302B29" ], [ "#C8CDD0", "#302B29" ] ]
-let s:p.inactive.middle = [ [ "#C8CDD0", "#302B29" ] ]
-let s:p.inactive.right = [ [ "#C8CDD0", "#302B29" ] ]
+let s:p.inactive.left =  [ [ "#CAD0D4", "#312D2B" ], [ "#CAD0D4", "#312D2B" ] ]
+let s:p.inactive.middle = [ [ "#CAD0D4", "#312D2B" ] ]
+let s:p.inactive.right = [ [ "#CAD0D4", "#312D2B" ] ]
 
-let s:p.insert.left = [ [ "#9E918A", "#384126", "bold" ], [ "#9E918A", "#403A37" ] ]
-let s:p.replace.left = [ [ "#9E918A", "#5D383D", "bold" ], [ "#9E918A", "#403A37" ] ]
-let s:p.visual.left = [ [ "#9E918A", "#303B41", "bold" ], [ "#9E918A", "#403A37" ] ]
+let s:p.insert.left = [ [ "#9E948F", "#333C2C", "bold" ], [ "#9E948F", "#3F3A38" ] ]
+let s:p.replace.left = [ [ "#9E948F", "#5B2E33", "bold" ], [ "#9E948F", "#3F3A38" ] ]
+let s:p.visual.left = [ [ "#9E948F", "#37393B", "bold" ], [ "#9E948F", "#3F3A38" ] ]
 
-let s:p.tabline.left = [ [ "#B3BABF", "#403A37", "italic" ] ]
-let s:p.tabline.middle = [ [ "#C8CDD0", "#302B29" ] ]
-let s:p.tabline.right = [ [ "#B3BABF", "#403A37" ] ]
-let s:p.tabline.tabsel = [ [ "#B3BABF", "#1A1715", "bold" ] ]
+let s:p.tabline.left = [ [ "#B4BDC3", "#3F3A38", "italic" ] ]
+let s:p.tabline.middle = [ [ "#CAD0D4", "#312D2B" ] ]
+let s:p.tabline.right = [ [ "#B4BDC3", "#3F3A38" ] ]
+let s:p.tabline.tabsel = [ [ "#B4BDC3", "#1C1918", "bold" ] ]
 
 let g:lightline#colorscheme#zenbones#palette = lightline#colorscheme#fill(s:p)

@@ -1,28 +1,28 @@
-local common_fg = "#9E918A"
-local inactive_bg = "#302B29"
-local inactive_fg = "#C8CDD0"
+local common_fg = "#9E948F"
+local inactive_bg = "#312D2B"
+local inactive_fg = "#CAD0D4"
 
 return {
 	normal = {
-		a = { bg = "#514A46", fg = common_fg, gui = "bold" },
-		b = { bg = "#403A37", fg = common_fg },
-		c = { bg = "#3C3633", fg = "#B3BABF" },
+		a = { bg = "#524C4A", fg = common_fg, gui = "bold" },
+		b = { bg = "#3F3A38", fg = common_fg },
+		c = { bg = "#3D3836", fg = "#B4BDC3" },
 	},
 
 	insert = {
-		a = { bg = "#384126", fg = common_fg, gui = "bold" },
+		a = { bg = "#333C2C", fg = common_fg, gui = "bold" },
 	},
 
 	command = {
-		a = { bg = "#714F6A", fg = common_fg, gui = "bold" },
+		a = { bg = "#73516C", fg = common_fg, gui = "bold" },
 	},
 
 	visual = {
-		a = { bg = "#303B41", fg = common_fg, gui = "bold" },
+		a = { bg = "#37393B", fg = common_fg, gui = "bold" },
 	},
 
 	replace = {
-		a = { bg = "#5D383D", fg = common_fg, gui = "bold" },
+		a = { bg = "#5B2E33", fg = common_fg, gui = "bold" },
 	},
 
 	inactive = {
