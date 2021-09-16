@@ -1,9 +1,8 @@
 # Zenflesh, Zenbones
 
-Zenbones is a light vim/neovim
-[colorscheme](https://neovim.io/doc/user/syntax.html#:colorscheme) designed to
-highlight code using contrasts and font variations. Colors are tasked only for
-other roles such as diagnostics, diffs, search matches.
+Zenbones is a vim/neovim colorscheme designed to highlight code using contrasts
+and font variations. Colors are tasked only for other roles such as diagnostics,
+diffs, search matches.
 
 <!-- panvimdoc-ignore-start -->
 
@@ -43,7 +42,10 @@ use "rktjmp/lush.nvim"
 Just apply the colorscheme as usual:
 
 ```vim
+" light
 colorscheme zenbones
+" dark
+colorscheme zenflesh
 ```
 
 If you want to make use of the lua version:
@@ -51,6 +53,7 @@ If you want to make use of the lua version:
 ```vim
 " Requires `neovim` and `rktjmp/lush.nvim` installed
 colorscheme zenbones-lush
+colorscheme zenflesh-lush
 ```
 
 It works pretty much the same as the first one but pretty handy when extending
@@ -58,23 +61,17 @@ or customizing the colors to your likings.
 
 ## Configuration
 
-Configuration is only available for `zenbones-lush`.
+Configuration is only available for `zenbones-lush` and `zenflesh-lush`.
 
 #### g:zenbones_lightness
 
 Change background colors lightness.
 
-**'bright'**
+|                                                         'bright'                                                          |                                                         _(unset)_                                                          |                                                         'dim'                                                          |
+| :-----------------------------------------------------------------------------------------------------------------------: | :------------------------------------------------------------------------------------------------------------------------: | :--------------------------------------------------------------------------------------------------------------------: |
+| ![Bright lightness](https://user-images.githubusercontent.com/7200153/131272384-710e253f-059d-46fd-bf0e-7d82f62d62cd.png) | ![Default lightness](https://user-images.githubusercontent.com/7200153/131272333-3fb67e68-fcd2-48ae-b8c4-ab24b701ed5e.png) | ![Dim lightness](https://user-images.githubusercontent.com/7200153/131272410-329636bb-fd8e-42fb-83aa-f436d211b5ed.png) |
 
-<img width="1080" alt="Bright lightness" src="https://user-images.githubusercontent.com/7200153/131272384-710e253f-059d-46fd-bf0e-7d82f62d62cd.png">
-
-**Default** _(unset)_
-
-<img width="1080" alt="Default lightness" src="https://user-images.githubusercontent.com/7200153/131272333-3fb67e68-fcd2-48ae-b8c4-ab24b701ed5e.png">
-
-**'dim'**
-
-<img width="1080" alt="Dim lightness" src="https://user-images.githubusercontent.com/7200153/131272410-329636bb-fd8e-42fb-83aa-f436d211b5ed.png">
+#### g:zenflesh_lightness
 
 #### g:zenbones_solid_vert_split
 
@@ -99,7 +96,7 @@ local theme = require "zenbones"
 local palette = require "zenbones.palette"
 
 print(theme.StatusLine.bg.hex)
-print(palette.sand.darken(20).hex)
+print(palette.blossom.darken(20).hex)
 ```
 
 See also
