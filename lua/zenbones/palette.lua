@@ -2,9 +2,9 @@ local lush = require "lush"
 local hsluv = lush.hsluv
 
 return {
-	sand = hsluv(39, 12, 94),
-	stone = hsluv(230, 30, 22),
-	leaf = hsluv(103, 72, 46),
+	bg = hsluv(39, 12, 94), -- sand
+	fg = hsluv(230, 30, 22), -- stone
+	leaf = hsluv(112, 72, 42),
 	water = hsluv(236, 84, 40),
 	rose = hsluv(4, 70, 40),
 	wood = hsluv(26, 80, 40),
