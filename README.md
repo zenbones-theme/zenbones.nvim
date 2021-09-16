@@ -71,18 +71,30 @@ Change background colors lightness.
 | :-----------------------------------------------------------------------------------------------------------------------: | :------------------------------------------------------------------------------------------------------------------------: | :--------------------------------------------------------------------------------------------------------------------: |
 | ![Bright lightness](https://user-images.githubusercontent.com/7200153/131272384-710e253f-059d-46fd-bf0e-7d82f62d62cd.png) | ![Default lightness](https://user-images.githubusercontent.com/7200153/131272333-3fb67e68-fcd2-48ae-b8c4-ab24b701ed5e.png) | ![Dim lightness](https://user-images.githubusercontent.com/7200153/131272410-329636bb-fd8e-42fb-83aa-f436d211b5ed.png) |
 
-#### g:zenflesh_lightness
+#### g:zenflesh_darkness
+
+Change background colors darkness.
+
+|                                                          'stark'                                                          |                                                         _(unset)_                                                          |                                                         'warm'                                                         |
+| :-----------------------------------------------------------------------------------------------------------------------: | :------------------------------------------------------------------------------------------------------------------------: | :--------------------------------------------------------------------------------------------------------------------: |
+| ![Bright lightness](https://user-images.githubusercontent.com/7200153/131272384-710e253f-059d-46fd-bf0e-7d82f62d62cd.png) | ![Default lightness](https://user-images.githubusercontent.com/7200153/131272333-3fb67e68-fcd2-48ae-b8c4-ab24b701ed5e.png) | ![Dim lightness](https://user-images.githubusercontent.com/7200153/131272410-329636bb-fd8e-42fb-83aa-f436d211b5ed.png) |
 
 #### g:zenbones_solid_vert_split
+
+#### g:zenflesh_solid_vert_split
 
 Set to `v:true` to make vertical split more visible with a dimmer background
 highlight.
 
 #### g:zenbones_dim_noncurrent_window
 
+#### g:zenflesh_dim_noncurrent_window
+
 Set to `v:true` to make non-current window background dimmer than _Normal_.
 
 #### g:zenbones_italic_comments
+
+#### g:zenflesh_italic_comments
 
 Set to `v:false` to make comments not italicize.
 
@@ -92,7 +104,7 @@ Zenbones is pretty extensible thanks to Lush. You can easily retrieve the colors
 in lua:
 
 ```lua
-local theme = require "zenbones"
+local theme = require "zenbones" -- or zenflesh
 local palette = require "zenbones.palette"
 
 print(theme.StatusLine.bg.hex)
@@ -134,26 +146,6 @@ currently supported.
 It's also possible to generate color configuration files using a template,
 [this one for Kitty](lua/zenbones/build/kitty.lua) for example. Please feel free
 to submit a PR if you want to add some more.
-
-<!-- panvimdoc-ignore-start -->
-
-## Showcase
-
-**Diff highlights**
-
-<img width="1080" alt="Vim diff" src="https://user-images.githubusercontent.com/7200153/131212101-3a3b4083-f3ae-4dfc-ab1f-133cf3600a01.png">
-
-**Search matches**
-
-<img width="1080" alt="Search matches" src="https://user-images.githubusercontent.com/7200153/131212102-620323dc-01db-4e40-ae74-640a00368121.png">
-
-**LSP diagnostics**
-
-<img width="1080" alt="LSP diagnostics" src="https://user-images.githubusercontent.com/7200153/131212106-b515ba76-d157-46b3-b1cb-c72811abbff3.png">
-
-_Font used is [Iosevka Curly Slab](https://typeof.net/Iosevka/)_.
-
-<!-- panvimdoc-ignore-end -->
 
 ## Inspirations
 
