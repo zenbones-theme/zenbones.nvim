@@ -1,7 +1,7 @@
 local lush = require "lush"
 local p = require "zenbones.palette"
 
-local normal_bg = p.sand
+local normal_bg = p.bg
 local diff_bg_l = 0
 
 local lightness = vim.g.zenbones_lightness
@@ -33,7 +33,7 @@ local theme = lush(function()
 		-- styling for that group (meaning they mostly get styled as Normal)
 		-- or leave them commented to apply vims default colouring or linking.
 
-		Normal          { bg = normal_bg, fg = p.stone }, -- normal text
+		Normal          { bg = normal_bg, fg = p.fg }, -- normal text
 
 		Underlined      { gui = "underline" }, -- (preferred) text that stands out, HTML links
 		Bold            { gui = "bold" },
@@ -43,10 +43,10 @@ local theme = lush(function()
 		ErrorMsg        { Error }, -- error messages on the command line
 		WarningMsg      { fg = p.wood }, -- warning messages
 
-		Comment         { fg = p.sand.da(38).de(28), gui = (italic_comments and "italic" or "NONE") }, -- any comment
-		Conceal         { fg = p.stone.li(20), gui = "bold,italic" }, -- placeholder characters substituted for concealed text (see 'conceallevel')
+		Comment         { fg = p.bg.da(38).de(28), gui = (italic_comments and "italic" or "NONE") }, -- any comment
+		Conceal         { fg = p.fg.li(20), gui = "bold,italic" }, -- placeholder characters substituted for concealed text (see 'conceallevel')
 
-		Cursor          { bg = p.stone, fg = p.sand.li(20) }, -- character under the cursor
+		Cursor          { bg = p.fg, fg = p.bg.li(20) }, -- character under the cursor
 		lCursor         { Cursor, bg = Cursor.bg.li(20)  }, -- the character under the cursor when |language-mapping| is used (see 'guicursor')
 		-- CursorIM     { }, -- like Cursor, but used when in IME mode |CursorIM|
 		TermCursor      { Cursor }, -- cursor in a focused terminal
@@ -58,13 +58,13 @@ local theme = lush(function()
 		DiffAdd         { bg = p.leaf.de(77).li(82).abs_da(diff_bg_l) }, -- diff mode: Added line |diff.txt|
 		DiffChange      { bg = p.water.de(22).li(76).abs_da(diff_bg_l) }, -- diff mode: Changed line |diff.txt|
 		DiffDelete      { bg = p.rose.de(37).li(74).abs_da(diff_bg_l) }, -- diff mode: Deleted line |diff.txt|
-		DiffText        { bg = p.water.de(24).li(64).abs_da(diff_bg_l), fg = p.stone }, -- diff mode: Changed text within a changed line |diff.txt|
+		DiffText        { bg = p.water.de(24).li(64).abs_da(diff_bg_l), fg = p.fg }, -- diff mode: Changed text within a changed line |diff.txt|
 
 		LineNr          { fg = Normal.bg.da(32) }, -- Line number for ":number" and ":#" commands, and when 'number' or 'relativenumber' option is set.
 		SignColumn      { LineNr }, -- column where |signs| are displayed
 		FoldColumn      { LineNr, gui = "bold" }, -- 'foldcolumn'
 		Folded          { bg = Normal.bg.da(16), fg = Normal.bg.da(64) }, -- line used for closed folds
-		CursorLineNr    { LineNr, fg = p.stone, gui = "bold" }, -- Like LineNr when 'cursorline' or 'relativenumber' is set for the cursor line.
+		CursorLineNr    { LineNr, fg = p.fg, gui = "bold" }, -- Like LineNr when 'cursorline' or 'relativenumber' is set for the cursor line.
 
 		-- ModeMsg      { }, -- 'showmode' message (e.g., "-- INSERT -- ")
 		-- MsgArea      { }, -- Area for messages and cmdline
@@ -78,8 +78,8 @@ local theme = lush(function()
 		PmenuSbar       { bg = Normal.bg.da(28) }, -- Popup menu: scrollbar.
 		PmenuThumb      { bg = Normal.bg.li(58) }, -- Popup menu: Thumb of the scrollbar.
 
-		Search          { bg = p.blossom.de(10).li(54), fg = p.stone }, -- Last search pattern highlighting (see 'hlsearch').	Also used for similar items that need to stand out.
-		IncSearch       { bg = p.blossom, fg = p.sand, gui = "bold" }, -- 'incsearch' highlighting; also used for the text replaced with ":s///c"
+		Search          { bg = p.blossom.de(10).li(54), fg = p.fg }, -- Last search pattern highlighting (see 'hlsearch').	Also used for similar items that need to stand out.
+		IncSearch       { bg = p.blossom, fg = p.bg, gui = "bold" }, -- 'incsearch' highlighting; also used for the text replaced with ":s///c"
 		-- Substitute   { }, -- |:substitute| replacement text highlighting
 		MatchParen      { Search }, -- The character under the cursor or just before it, if it is a paired bracket, and its match. |pi_paren.txt|
 		-- QuickFixLine { }, -- Current |quickfix| item in the quickfix window. Combined with |hl-CursorLine| when the cursor is there.
@@ -89,14 +89,14 @@ local theme = lush(function()
 		SpellLocal      { SpellCap }, -- Word that is recognized by the spellchecker as one that is used in another region. |spell| Combined with the highlighting used otherwise.
 		SpellRare       { SpellBad, guisp = p.wood }, -- Word that is recognized by the spellchecker as one that is hardly ever used.  |spell| Combined with the highlighting used otherwise.
 
-		StatusLine      { bg = p.sand.da(14), fg = p.stone }, -- status line of current window
-		StatusLineNC    { bg = p.sand.da(10), fg = p.stone.li(28) }, -- status lines of not-current windows Note: if this is equal to "StatusLine" Vim will use "^^^" in the status line of the current window.
+		StatusLine      { bg = p.bg.da(14), fg = p.fg }, -- status line of current window
+		StatusLineNC    { bg = p.bg.da(10), fg = p.fg.li(28) }, -- status lines of not-current windows Note: if this is equal to "StatusLine" Vim will use "^^^" in the status line of the current window.
 		TabLine         { StatusLine, gui = "italic" }, -- tab pages line, not active tab page label
 		TabLineFill     { StatusLineNC }, -- tab pages line, where there are no labels
 		TabLineSel      { gui = "bold" }, -- tab pages line, active tab page label
 		VertSplit       { LineNr }, -- the column separating vertically split windows
 
-		Visual          { bg = p.stone.li(84) }, -- Visual mode selection
+		Visual          { bg = p.fg.li(84) }, -- Visual mode selection
 		-- VisualNOS    { }, -- Visual mode selection when vim is "Not Owning the Selection".
 
 		NonText         { fg = Normal.bg.da(22) }, -- '@' at the end of the window, characters from 'showbreak' and other characters that do not really exist in the text (e.g., ">" displayed when a double-wide character doesn't fit at the end of the line). See also |hl-EndOfBuffer|.
@@ -104,7 +104,7 @@ local theme = lush(function()
 		Whitespace      { NonText }, -- "nbsp", "space", "tab" and "trail" in 'listchars'
 		EndOfBuffer     { NonText }, -- filler lines (~) after the end of the buffer.  By default, this is highlighted like |hl-NonText|.
 
-		WildMenu        { bg = p.blossom, fg = p.sand }, -- current match in 'wildmenu' completion
+		WildMenu        { bg = p.blossom, fg = p.bg }, -- current match in 'wildmenu' completion
 		Directory       { gui = "bold" }, -- directory names (and other special names in listings)
 		Question        { MoreMsg }, -- |hit-enter| prompt and yes/no questions
 		Title           { gui = "bold" }, -- titles for output from ":set all", ":autocmd" etc.
@@ -116,17 +116,17 @@ local theme = lush(function()
 		-- default,
 		-- Uncomment and edit if you want more specific syntax highlighting.
 
-		Constant        { fg = p.stone.li(25), gui = "italic" }, -- (preferred) any constant
+		Constant        { fg = p.fg.li(25), gui = "italic" }, -- (preferred) any constant
 		-- String       { }, --   a string constant: "this is a string"
 		-- Character    { }, --  a character constant: 'c', '\n'
 		Number          { gui = "italic" }, --   a number constant: 234, 0xff
 		Boolean         { Number }, --  a boolean constant: TRUE, false
 		-- Float        { }, --    a floating point constant: 2.3e10
 
-		Identifier      { fg = p.stone.li(15) }, -- (preferred) any variable name
-		Function        { fg = p.stone }, -- function name (also: methods for classes)
+		Identifier      { fg = p.fg.li(15) }, -- (preferred) any variable name
+		Function        { fg = p.fg }, -- function name (also: methods for classes)
 
-		Statement       { fg = p.stone, gui = "bold" }, -- (preferred) any statement
+		Statement       { fg = p.fg, gui = "bold" }, -- (preferred) any statement
 		-- Conditional  { }, --  if, then, else, endif, switch, etp.
 		-- Repeat       { }, --   for, do, while, etp.
 		-- Label        { }, --    case, default, etp.
@@ -140,15 +140,15 @@ local theme = lush(function()
 		-- Macro        { }, --    same as Define
 		-- PreCondit    { }, --  preprocessor #if, #else, #endif, etp.
 
-		Type            { fg = p.sand.da(62) }, -- (preferred) int, long, char, etp.
+		Type            { fg = p.bg.da(62) }, -- (preferred) int, long, char, etp.
 		-- StorageClass { }, -- static, register, volatile, etc.
 		-- Structure    { }, --  struct, union, enum, etc.
 		-- Typedef      { }, --  A typedef
 
-		Special         { fg = p.stone.li(21), gui = "bold" }, -- (preferred) any special symbol
+		Special         { fg = p.fg.li(21), gui = "bold" }, -- (preferred) any special symbol
 		-- SpecialChar  { }, --  special character in a constant
 		-- Tag          { }, --    you can use CTRL-] on this
-		Delimiter       { fg = p.sand.da(42) }, --	character that needs attention
+		Delimiter       { fg = p.bg.da(42) }, --	character that needs attention
 		SpecialComment  { Comment, gui = "bold" }, -- special things inside a comment
 		-- Debug        { }, --    debugging statements
 
@@ -287,7 +287,7 @@ local theme = lush(function()
 		GitGutterChange            { GitSignsChange },
 		GitGutterDelete            { GitSignsDelete },
 
-		IndentBlanklineChar        { fg = p.sand.da(12).de(20) },
+		IndentBlanklineChar        { fg = p.bg.da(12).de(20) },
 
 		TelescopeSelection         { CursorLine },
 		TelescopeSelectionCaret    { TelescopeSelection, fg = p.rose },
@@ -342,7 +342,7 @@ local theme = lush(function()
 		NeogitDiffDeleteHighlight  { DiffDelete },
 		NeogitDiffAddHighlight     { DiffAdd },
 		NeogitHunkHeader           { LineNr },
-		NeogitHunkHeaderHighlight  { CursorLine, fg = p.stone, gui = "bold" },
+		NeogitHunkHeaderHighlight  { CursorLine, fg = p.fg, gui = "bold" },
 
 		WhichKey                   { Statement },
 		WhichKeyGroup              { Special },
