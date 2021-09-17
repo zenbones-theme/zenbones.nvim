@@ -1,6 +1,3 @@
-local theme = require "zenbones"
-local terminal = require "zenbones.terminal"
-
 -- got from http://lua-users.org/wiki/StringInterpolation
 function interp(s, tab)
 	return (s:gsub("($%b{})", function(w)
@@ -19,7 +16,26 @@ end
 local function build()
 	local templates = { "vim", "kitty", "alacritty", "wezterm", "lualine", "lightline", "tmux" }
 	for _, t in ipairs(templates) do
-		write_template(unpack(require("zenbones.build." .. t)))
+		write_template(
+			unpack(
+				require("zenbones.build." .. t)(
+					"zenbones",
+					require "zenbones",
+					require "zenbones.palette",
+					require "zenbones.terminal"
+				)
+			)
+		)
+		write_template(
+			unpack(
+				require("zenbones.build." .. t)(
+					"zenflesh",
+					require "zenflesh",
+					require "zenflesh.palette",
+					require "zenflesh.terminal"
+				)
+			)
+		)
 	end
 end
 

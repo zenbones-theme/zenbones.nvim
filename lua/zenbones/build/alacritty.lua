@@ -1,4 +1,4 @@
-local template = [[# Zenbones Alacritty Colors
+local template = [[# ${name} alacritty colors
 colors:
   # Default colors
   primary:
@@ -26,15 +26,15 @@ colors:
     white:   '${color15}'
 ]]
 
-local theme = require "zenbones"
-local terminal = require "zenbones.terminal"
+return function(name, theme, palette, terminal)
+	local values = {
+		name = name,
+		bg = theme.Normal.bg.hex,
+		fg = theme.Normal.fg.hex,
+	}
+	for i, v in ipairs(terminal.colors) do
+		values["color" .. (i - 1)] = v.hex
+	end
 
-local values = {
-	bg = theme.Normal.bg.hex,
-	fg = theme.Normal.fg.hex,
-}
-for i, v in ipairs(terminal.colors) do
-	values["color" .. (i - 1)] = v.hex
+	return { string.format("extras/alacritty/%s.yml", name), template, values }
 end
-
-return { "extras/alacritty/zenbones.yml", template, values }

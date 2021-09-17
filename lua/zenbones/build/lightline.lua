@@ -22,31 +22,31 @@ let s:p.tabline.tabsel = [ [ "${tabsel_fg}", "${tabsel_bg}", "bold" ] ]
 let g:lightline#colorscheme#zenbones#palette = lightline#colorscheme#fill(s:p)
 ]]
 
-local theme = require "zenbones"
-
-return {
-	"autoload/lightline/colorscheme/zenbones.vim",
-	template,
-	{
-		common_fg = theme.Folded.fg.hex,
-		inactive_bg = theme.StatusLineNC.bg.hex,
-		inactive_fg = theme.StatusLineNC.fg.hex,
-		normal_a_bg = theme.PmenuSbar.bg.hex,
-		normal_b_bg = theme.PmenuSel.bg.hex,
-		normal_c_bg = theme.StatusLine.bg.hex,
-		normal_c_fg = theme.StatusLine.fg.hex,
-		insert_a_bg = theme.DiffAdd.bg.hex,
-		visual_a_bg = theme.Visual.bg.hex,
-		replace_a_bg = theme.DiffDelete.bg.hex,
-		tabline_left_bg = theme.PmenuSel.bg.hex,
-		tabline_left_fg = theme.Normal.fg.hex,
-		tabline_right_bg = theme.PmenuSel.bg.hex,
-		tabline_right_fg = theme.Normal.fg.hex,
-		tabsel_bg = theme.Normal.bg.hex,
-		tabsel_fg = theme.Normal.fg.hex,
-		warning_bg = theme.LspDiagnosticsVirtualTextWarning.bg.hex,
-		warning_fg = theme.LspDiagnosticsVirtualTextWarning.fg.hex,
-		error_bg = theme.LspDiagnosticsVirtualTextError.bg.hex,
-		error_fg = theme.LspDiagnosticsVirtualTextError.fg.hex,
-	},
-}
+return function(name, theme, palette, terminal)
+	return {
+		string.format("autoload/lightline/colorscheme/%s.vim", name),
+		template,
+		{
+			common_fg = theme.Folded.fg.hex,
+			inactive_bg = theme.StatusLineNC.bg.hex,
+			inactive_fg = theme.StatusLineNC.fg.hex,
+			normal_a_bg = theme.PmenuSbar.bg.hex,
+			normal_b_bg = theme.PmenuSel.bg.hex,
+			normal_c_bg = theme.StatusLine.bg.hex,
+			normal_c_fg = theme.StatusLine.fg.hex,
+			insert_a_bg = theme.DiffText.bg.hex,
+			visual_a_bg = theme.Visual.bg.hex,
+			replace_a_bg = theme.DiffDelete.bg.hex,
+			tabline_left_bg = theme.PmenuSel.bg.hex,
+			tabline_left_fg = theme.Normal.fg.hex,
+			tabline_right_bg = theme.PmenuSel.bg.hex,
+			tabline_right_fg = theme.Normal.fg.hex,
+			tabsel_bg = theme.Normal.bg.hex,
+			tabsel_fg = theme.Normal.fg.hex,
+			warning_bg = theme.LspDiagnosticsVirtualTextWarning.bg.hex,
+			warning_fg = theme.LspDiagnosticsVirtualTextWarning.fg.hex,
+			error_bg = theme.LspDiagnosticsVirtualTextError.bg.hex,
+			error_fg = theme.LspDiagnosticsVirtualTextError.fg.hex,
+		},
+	}
+end

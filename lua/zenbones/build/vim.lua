@@ -1,6 +1,4 @@
 local lush = require "lush"
-local theme = require "zenbones"
-local terminal = require "zenbones.terminal"
 
 local template = [[if exists('g:colors_name')
     highlight clear
@@ -8,8 +6,8 @@ local template = [[if exists('g:colors_name')
     set t_Co=256
 endif
 
-set background=light
-let g:colors_name = 'zenbones'
+set background=${background}
+let g:colors_name = '${name}'
 
 ${termcolors}
 if has('terminal')
@@ -36,19 +34,23 @@ endif
 ${vimcolors}
 ]]
 
-local termcolors = ""
-for i, v in ipairs(terminal.colors) do
-	termcolors = termcolors .. string.format("let g:terminal_color_%s = '%s'\n", (i - 1), v.hex)
+return function(name, theme, palette, terminal)
+	local termcolors = ""
+	for i, v in ipairs(terminal.colors) do
+		termcolors = termcolors .. string.format("let g:terminal_color_%s = '%s'\n", (i - 1), v.hex)
+	end
+
+	-- Compile lush table, concatenate to a single string, and remove blend property
+	local vimcolors = table.concat(vim.fn.sort(lush.compile(theme, { exclude_keys = { "blend" } })), "\n")
+
+	return {
+		string.format("colors/%s.vim", name),
+		template,
+		{
+			background = name == "zenbones" and "light" or "dark",
+			name = name,
+			termcolors = termcolors,
+			vimcolors = vimcolors,
+		},
+	}
 end
-
--- Compile lush table, concatenate to a single string, and remove blend property
-local vimcolors = table.concat(vim.fn.sort(lush.compile(theme, { exclude_keys = { "blend" } })), "\n")
-
-return {
-	"colors/zenbones.vim",
-	template,
-	{
-		termcolors = termcolors,
-		vimcolors = vimcolors,
-	},
-}

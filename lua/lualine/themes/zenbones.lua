@@ -10,7 +10,7 @@ return {
 	},
 
 	insert = {
-		a = { bg = "#DDE6CD", fg = common_fg, gui = "bold" },
+		a = { bg = "#99C6E9", fg = common_fg, gui = "bold" },
 	},
 
 	command = {

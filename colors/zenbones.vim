@@ -7,22 +7,22 @@ endif
 set background=light
 let g:colors_name = 'zenbones'
 
-let g:terminal_color_0 = '#2C363C'
+let g:terminal_color_0 = '#F0EDEC'
 let g:terminal_color_1 = '#A8334C'
-let g:terminal_color_2 = '#617437'
+let g:terminal_color_2 = '#4F6C31'
 let g:terminal_color_3 = '#944927'
 let g:terminal_color_4 = '#286486'
 let g:terminal_color_5 = '#88507D'
 let g:terminal_color_6 = '#3B8992'
-let g:terminal_color_7 = '#F0EDEC'
-let g:terminal_color_8 = '#44525B'
-let g:terminal_color_9 = '#9C2842'
-let g:terminal_color_10 = '#55672A'
-let g:terminal_color_11 = '#87411E'
-let g:terminal_color_12 = '#1F5A7A'
-let g:terminal_color_13 = '#864079'
-let g:terminal_color_14 = '#2F7C85'
-let g:terminal_color_15 = '#DCD2CE'
+let g:terminal_color_7 = '#2C363C'
+let g:terminal_color_8 = '#CFC1BA'
+let g:terminal_color_9 = '#94253E'
+let g:terminal_color_10 = '#3F5A22'
+let g:terminal_color_11 = '#803D1C'
+let g:terminal_color_12 = '#1D5573'
+let g:terminal_color_13 = '#7B3B70'
+let g:terminal_color_14 = '#2B747C'
+let g:terminal_color_15 = '#4F5E68'
 
 if has('terminal')
     let g:terminal_ansi_colors = [
@@ -49,20 +49,16 @@ highlight Bold guifg=NONE guibg=NONE guisp=NONE gui=bold
 highlight BufferVisible guifg=#596A76 guibg=NONE guisp=NONE gui=NONE
 highlight BufferVisibleIndex guifg=#596A76 guibg=NONE guisp=NONE gui=NONE
 highlight BufferVisibleSign guifg=#596A76 guibg=NONE guisp=NONE gui=NONE
-highlight CocErrorHighlight guifg=#A8334C guibg=NONE guisp=NONE gui=underline
-highlight CocHintHighlight guifg=#88507D guibg=NONE guisp=NONE gui=underline
-highlight CocInfoHighlight guifg=#286486 guibg=NONE guisp=NONE gui=underline
 highlight CocMarkdownLink guifg=#3B8992 guibg=NONE guisp=NONE gui=underline
-highlight CocWarningHighlight guifg=#944927 guibg=NONE guisp=NONE gui=underline
 highlight ColorColumn guifg=NONE guibg=#EFD8D3 guisp=NONE gui=NONE
 highlight Comment guifg=#948985 guibg=NONE guisp=NONE gui=italic
 highlight Conceal guifg=#4D5C65 guibg=NONE guisp=NONE gui=bold,italic
-highlight Constant guifg=#53636D guibg=NONE guisp=NONE gui=italic
+highlight Constant guifg=#556570 guibg=NONE guisp=NONE gui=italic
 highlight Cursor guifg=#F2F0EF guibg=#2C363C guisp=NONE gui=NONE
 highlight CursorLine guifg=NONE guibg=#E6E1DF guisp=NONE gui=NONE
 highlight CursorLineNr guifg=#2C363C guibg=NONE guisp=NONE gui=bold
 highlight Delimiter guifg=#8E817B guibg=NONE guisp=NONE gui=NONE
-highlight DiffAdd guifg=NONE guibg=#DDE6CD guisp=NONE gui=NONE
+highlight DiffAdd guifg=NONE guibg=#D8E7CD guisp=NONE gui=NONE
 highlight DiffChange guifg=NONE guibg=#C0DAF2 guisp=NONE gui=NONE
 highlight DiffDelete guifg=NONE guibg=#E7CBCE guisp=NONE gui=NONE
 highlight DiffText guifg=#2C363C guibg=#99C6E9 guisp=NONE gui=NONE
@@ -72,7 +68,7 @@ highlight FloatBorder guifg=#786D68 guibg=NONE guisp=NONE gui=NONE
 highlight FoldColumn guifg=#A79891 guibg=NONE guisp=NONE gui=bold
 highlight Folded guifg=#564E4A guibg=#CDC2BC guisp=NONE gui=NONE
 highlight Function guifg=#2C363C guibg=NONE guisp=NONE gui=NONE
-highlight GitSignsAdd guifg=#617437 guibg=NONE guisp=NONE gui=NONE
+highlight GitSignsAdd guifg=#4F6C31 guibg=NONE guisp=NONE gui=NONE
 highlight GitSignsChange guifg=#286486 guibg=NONE guisp=NONE gui=NONE
 highlight GitSignsDelete guifg=#A8334C guibg=NONE guisp=NONE gui=NONE
 highlight HopNextKey2 guifg=#286486 guibg=NONE guisp=NONE gui=NONE
@@ -97,11 +93,12 @@ highlight LspDiagnosticsUnderlineInformation guifg=#286486 guibg=NONE guisp=NONE
 highlight LspDiagnosticsUnderlineWarning guifg=#944927 guibg=NONE guisp=NONE gui=undercurl
 highlight LspDiagnosticsVirtualTextError guifg=#A8334C guibg=#E7DDDE guisp=NONE gui=NONE
 highlight LspDiagnosticsVirtualTextWarning guifg=#944927 guibg=#F0E6E4 guisp=NONE gui=NONE
-highlight MoreMsg guifg=#617437 guibg=NONE guisp=NONE gui=bold
+highlight MoreMsg guifg=#4F6C31 guibg=NONE guisp=NONE gui=bold
 highlight NeogitHunkHeaderHighlight guifg=#2C363C guibg=#E6E1DF guisp=NONE gui=bold
 highlight NonText guifg=#C0B0A8 guibg=NONE guisp=NONE gui=NONE
 highlight Normal guifg=#2C363C guibg=#F0EDEC guisp=NONE gui=NONE
 highlight NormalFloat guifg=NONE guibg=#E1DCD9 guisp=NONE gui=NONE
+highlight Number guifg=NONE guibg=NONE guisp=NONE gui=italic
 highlight Pmenu guifg=NONE guibg=#DAD3CF guisp=NONE gui=NONE
 highlight PmenuSbar guifg=NONE guibg=#B2A39B guisp=NONE gui=NONE
 highlight PmenuSel guifg=NONE guibg=#C4B6AF guisp=NONE gui=NONE
@@ -125,27 +122,31 @@ highlight Title guifg=NONE guibg=NONE guisp=NONE gui=bold
 highlight Todo guifg=NONE guibg=NONE guisp=NONE gui=bold,underline
 highlight Type guifg=#5C534F guibg=NONE guisp=NONE gui=NONE
 highlight Underlined guifg=NONE guibg=NONE guisp=NONE gui=underline
-highlight VertSplit guifg=#F7F6F5 guibg=NONE guisp=NONE gui=NONE
 highlight Visual guifg=NONE guibg=#D2DFE7 guisp=NONE gui=NONE
 highlight WarningMsg guifg=#944927 guibg=NONE guisp=NONE gui=NONE
 highlight WildMenu guifg=#F0EDEC guibg=#88507D guisp=NONE gui=NONE
-highlight diffAdded guifg=#617437 guibg=NONE guisp=NONE gui=NONE
+highlight diffAdded guifg=#4F6C31 guibg=NONE guisp=NONE gui=NONE
 highlight diffChanged guifg=#286486 guibg=NONE guisp=NONE gui=NONE
 highlight diffFile guifg=#944927 guibg=NONE guisp=NONE gui=bold
 highlight diffIndexLine guifg=#944927 guibg=NONE guisp=NONE gui=NONE
 highlight diffLine guifg=#88507D guibg=NONE guisp=NONE gui=bold
-highlight diffNewFile guifg=#617437 guibg=NONE guisp=NONE gui=italic
+highlight diffNewFile guifg=#4F6C31 guibg=NONE guisp=NONE gui=italic
 highlight diffOldFile guifg=#A8334C guibg=NONE guisp=NONE gui=italic
 highlight diffRemoved guifg=#A8334C guibg=NONE guisp=NONE gui=NONE
 highlight lCursor guifg=#F2F0EF guibg=#4D5C65 guisp=NONE gui=NONE
 highlight markdownH1 guifg=#2C363C guibg=NONE guisp=NONE gui=bold,underline
+highlight! link Boolean Number
 highlight! link BufferCurrent TabLineSel
 highlight! link CocCodeLens LineNr
+highlight! link CocErrorHighlight LspDiagnosticsUnderlineError
 highlight! link CocErrorSign LspDiagnosticsDefaultError
 highlight! link CocErrorVirtualText LspDiagnosticsVirtualTextError
+highlight! link CocHintHighlight LspDiagnosticsUnderlineHint
 highlight! link CocHintSign LspDiagnosticsDefaultHint
+highlight! link CocInfoHighlight LspDiagnosticsUnderlineInformation
 highlight! link CocInfoSign LspDiagnosticsDefaultInformation
 highlight! link CocSelectedText SpellBad
+highlight! link CocWarningHighlight LspDiagnosticsUnderlineWarning
 highlight! link CocWarningSign LspDiagnosticsDefaultWarning
 highlight! link CocWarningVitualText LspDiagnosticsVirtualTextWarning
 highlight! link CursorColumn CursorLine
@@ -192,6 +193,7 @@ highlight! link TermCursor Cursor
 highlight! link TroubleNormal Function
 highlight! link TroubleSource Constant
 highlight! link TroubleText Function
+highlight! link VertSplit LineNr
 highlight! link WhichKey Statement
 highlight! link WhichKeyGroup Special
 highlight! link WhichKeySeparator LineNr

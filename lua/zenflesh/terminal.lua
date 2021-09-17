@@ -1,5 +1,5 @@
 local lush = require "lush"
-local p = require "zenbones.palette"
+local p = require "zenflesh.palette"
 
 local colors = {
 	p.bg,
@@ -10,14 +10,14 @@ local colors = {
 	p.blossom,
 	p.sky,
 	p.fg,
-	p.bg.sa(4).da(16),
-	p.rose.sa(20).da(16),
-	p.leaf.sa(20).da(16),
-	p.wood.sa(18).da(16),
-	p.water.sa(20).da(16),
-	p.blossom.sa(24).da(16),
-	p.sky.sa(20).da(16),
-	p.fg.li(22),
+	p.bg.sa(4).li(16),
+	p.rose.sa(20).li(16),
+	p.leaf.sa(20).li(16),
+	p.wood.sa(18).li(16),
+	p.water.sa(20).li(16),
+	p.blossom.sa(24).li(16),
+	p.sky.sa(20).li(16),
+	p.fg.da(22),
 }
 
 local M = {}

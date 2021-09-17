@@ -1,13 +1,12 @@
-# Zenbones
+# Zenflesh, Zenbones
 
-Zenbones is a light vim/neovim
-[colorscheme](https://neovim.io/doc/user/syntax.html#:colorscheme) designed to
-highlight code using contrasts and font variations. Colors are tasked only for
-other roles such as diagnostics, diffs, search matches.
+Zenbones is a vim/neovim colorscheme designed to highlight code using contrasts
+and font variations. Colors are tasked only for other roles such as diagnostics,
+diffs, search matches.
 
 <!-- panvimdoc-ignore-start -->
 
-![Zenbones main image](https://user-images.githubusercontent.com/7200153/131045472-05c76909-0071-4c24-bd30-f15da3ae4e82.jpg)
+![Zenbones main image](https://user-images.githubusercontent.com/7200153/133774819-32b4e18b-6af7-48ac-91d5-16c4f413ad20.jpg)
 
 <p align="center">
 <em>A rock garden in <a href="https://en.wikipedia.org/wiki/Ry%C5%8Dan-ji">Ryōan-ji</a>.</em>
@@ -43,85 +42,78 @@ use "rktjmp/lush.nvim"
 Just apply the colorscheme as usual:
 
 ```vim
-colorscheme zenbones
+colorscheme zenbones " light
+colorscheme zenflesh " dark
 ```
 
 If you want to make use of the lua version:
 
 ```vim
-" has('nvim') only
+" Requires `neovim` and `rktjmp/lush.nvim` installed
 colorscheme zenbones-lush
+colorscheme zenflesh-lush
 ```
 
 It works pretty much the same as the first one but pretty handy when extending
 or customizing the colors to your likings.
 
-<!-- panvimdoc-ignore-start -->
-
-## Showcase
-
-**Diff highlights**
-
-<img width="1080" alt="Vim diff" src="https://user-images.githubusercontent.com/7200153/131212101-3a3b4083-f3ae-4dfc-ab1f-133cf3600a01.png">
-
-**Search matches**
-
-<img width="1080" alt="Search matches" src="https://user-images.githubusercontent.com/7200153/131212102-620323dc-01db-4e40-ae74-640a00368121.png">
-
-**LSP diagnostics**
-
-<img width="1080" alt="LSP diagnostics" src="https://user-images.githubusercontent.com/7200153/131212106-b515ba76-d157-46b3-b1cb-c72811abbff3.png">
-
-_Font used is [Iosevka Curly Slab](https://typeof.net/Iosevka/)_.
-
-<!-- panvimdoc-ignore-end -->
-
 ## Configuration
 
-Configuration is only available for `zenbones-lush`.
+Configuration is only available for `zenbones-lush` and `zenflesh-lush`.
 
 #### g:zenbones_lightness
 
 Change background colors lightness.
 
-**'bright'**
+|                                                         'bright'                                                          |                                                         _(unset)_                                                          |                                                         'dim'                                                          |
+| :-----------------------------------------------------------------------------------------------------------------------: | :------------------------------------------------------------------------------------------------------------------------: | :--------------------------------------------------------------------------------------------------------------------: |
+| ![Bright lightness](https://user-images.githubusercontent.com/7200153/133776552-5919f664-17d9-4d96-bf44-d587f20b01dc.png) | ![Default lightness](https://user-images.githubusercontent.com/7200153/133776625-d8e9dd88-13b3-4362-9cad-2031ef6ccf7d.png) | ![Dim lightness](https://user-images.githubusercontent.com/7200153/133776674-ff7d15e9-52e3-4a27-9099-722ffcbe1cb8.png) |
 
-<img width="1080" alt="Bright lightness" src="https://user-images.githubusercontent.com/7200153/131272384-710e253f-059d-46fd-bf0e-7d82f62d62cd.png">
+#### g:zenflesh_darkness
 
-**Default** _(unset)_
+Change background colors darkness.
 
-<img width="1080" alt="Default lightness" src="https://user-images.githubusercontent.com/7200153/131272333-3fb67e68-fcd2-48ae-b8c4-ab24b701ed5e.png">
-
-**'dim'**
-
-<img width="1080" alt="Dim lightness" src="https://user-images.githubusercontent.com/7200153/131272410-329636bb-fd8e-42fb-83aa-f436d211b5ed.png">
+|                                                         'stark'                                                         |                                                         _(unset)_                                                         |                                                         'warm'                                                         |
+| :---------------------------------------------------------------------------------------------------------------------: | :-----------------------------------------------------------------------------------------------------------------------: | :--------------------------------------------------------------------------------------------------------------------: |
+| ![Stark darkness](https://user-images.githubusercontent.com/7200153/133776839-4b12c3dd-233f-47d1-9740-006bf50e812a.png) | ![Default darkness](https://user-images.githubusercontent.com/7200153/133776882-26d006b4-50db-49ad-bd79-3bec327a95fc.png) | ![Warm darkness](https://user-images.githubusercontent.com/7200153/133776957-3d2949c9-51b6-4537-aca4-6ced80113b91.png) |
 
 #### g:zenbones_solid_vert_split
 
-Set to `v:true` to make vertical split more visible with a dimmer background
+#### g:zenflesh_solid_vert_split
+
+Set to `v:true` to make vertical split more distinguishable background
 highlight.
 
 #### g:zenbones_dim_noncurrent_window
 
 Set to `v:true` to make non-current window background dimmer than _Normal_.
 
+#### g:zenflesh_lighten_noncurrent_window
+
+Set to `v:true` to make non-current window background warmer than _Normal_.
+
+#### g:zenbones_italic_comments
+
+#### g:zenflesh_italic_comments
+
+Set to `v:false` to make comments not italicize.
+
 ## Advanced Usage
 
-Zenbones is pretty extensible thanks to
-[Lush](https://github.com/rktjmp/lush.nvim). You can easily retrieve the colors
+Zenbones is pretty extensible thanks to Lush. You can easily retrieve the colors
 in lua:
 
 ```lua
-local theme = require "zenbones"
-local colors = require "zenbones.colors"
+local theme = require "zenbones" -- or zenflesh
+local palette = require "zenbones.palette"
 
 print(theme.StatusLine.bg.hex)
-print(sand.darken(20).hex)
+print(palette.blossom.darken(20).hex)
 ```
 
 See also
 [Lush's documentation](https://github.com/rktjmp/lush.nvim#advanced-usage) for
-the complete options.
+more options.
 
 ## Other plugins support
 
@@ -145,48 +137,11 @@ currently supported.
 
 ## Other implementations
 
--   [iTerm2](extras/iterm/zenbones.itermcolors)
--   [Kitty](extras/kitty/zenbones.conf)
--   [Alacritty](extras/alacritty/zenbones.yml)
--   [WezTerm](extras/wezterm/Zenbones.toml)
--   [Tmux](extras/tmux/zenbones.tmux)
-
-### Print terminal colors
-
-You can retrieve the terminal colors by using this command:
-
-```vim
-:lua require("zenbones.print").print_terminal_colors()
-```
-
-Useful when you want to apply a zenbones theme to your terminal. Recent output:
-
-```
-Terminal colors
-foreground: #2C363C
-background: #F0EDEC
-ansi color0: #2C363C
-ansi color1: #A8334C
-ansi color2: #617437
-ansi color3: #944927
-ansi color4: #286486
-ansi color5: #88507D
-ansi color6: #3B8992
-ansi color7: #F0EDEC
-ansi color8: #44525B
-ansi color9: #9C2842
-ansi color10: #55672A
-ansi color11: #87411E
-ansi color12: #1F5A7A
-ansi color13: #864079
-ansi color14: #2F7C85
-ansi color15: #DCD2CE
-cursor foreground: #F2F0EF
-cursor background: #2C363C
-inactive cursor foreground: #F2F0EF
-inactive cursor background: #4D5C65
-selection background: #D2DFE7
-```
+-   [iTerm2](extras/iterm)
+-   [Kitty](extras/kitty)
+-   [Alacritty](extras/alacritty)
+-   [WezTerm](extras/wezterm)
+-   [Tmux](extras/tmux)
 
 It's also possible to generate color configuration files using a template,
 [this one for Kitty](lua/zenbones/build/kitty.lua) for example. Please feel free
