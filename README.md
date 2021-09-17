@@ -42,10 +42,8 @@ use "rktjmp/lush.nvim"
 Just apply the colorscheme as usual:
 
 ```vim
-" light
-colorscheme zenbones
-" dark
-colorscheme zenflesh
+colorscheme zenbones " light
+colorscheme zenflesh " dark
 ```
 
 If you want to make use of the lua version:
@@ -75,8 +73,8 @@ Change background colors lightness.
 
 Change background colors darkness.
 
-|                                                          'stark'                                                          |                                                         _(unset)_                                                          |                                                         'warm'                                                         |
-| :-----------------------------------------------------------------------------------------------------------------------: | :------------------------------------------------------------------------------------------------------------------------: | :--------------------------------------------------------------------------------------------------------------------: |
+|                                                         'stark'                                                         |                                                         _(unset)_                                                         |                                                         'warm'                                                         |
+| :---------------------------------------------------------------------------------------------------------------------: | :-----------------------------------------------------------------------------------------------------------------------: | :--------------------------------------------------------------------------------------------------------------------: |
 | ![Stark darkness](https://user-images.githubusercontent.com/7200153/133776839-4b12c3dd-233f-47d1-9740-006bf50e812a.png) | ![Default darkness](https://user-images.githubusercontent.com/7200153/133776882-26d006b4-50db-49ad-bd79-3bec327a95fc.png) | ![Warm darkness](https://user-images.githubusercontent.com/7200153/133776957-3d2949c9-51b6-4537-aca4-6ced80113b91.png) |
 
 #### g:zenbones_solid_vert_split
@@ -139,11 +137,11 @@ currently supported.
 
 ## Other implementations
 
--   [iTerm2](extras/iterm/zenbones.itermcolors)
--   [Kitty](extras/kitty/zenbones.conf)
--   [Alacritty](extras/alacritty/zenbones.yml)
--   [WezTerm](extras/wezterm/Zenbones.toml)
--   [Tmux](extras/tmux/zenbones.tmux)
+-   [iTerm2](extras/iterm)
+-   [Kitty](extras/kitty)
+-   [Alacritty](extras/alacritty)
+-   [WezTerm](extras/wezterm)
+-   [Tmux](extras/tmux)
 
 It's also possible to generate color configuration files using a template,
 [this one for Kitty](lua/zenbones/build/kitty.lua) for example. Please feel free
