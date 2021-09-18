@@ -1,7 +1,8 @@
-Zenbones is a vim/neovim colorscheme designed to highlight code using contrasts
-and font variations. Colors are tasked only for other roles such as diagnostics,
+# Zenbones
 
-diffs, search matches.
+**Zenflesh, Zenbones** is a vim/neovim colorscheme designed to highlight code
+using contrasts and font variations. Colors are tasked only for other roles such
+as diagnostics, diffs, search matches.
 
 ## Usage
 
@@ -39,22 +40,29 @@ Change background colors darkness. Options: `'stark'`, `'warm'`.
 
 #### g:zenflesh_solid_vert_split
 
-Default: `v:false` Make vertical split more distinguishable background
-highlight.
+Default: `v:false`
+
+Make vertical split more distinguishable background highlight.
 
 #### g:zenbones_dim_noncurrent_window
 
-Default: `v:false` Make non-current window background dimmer than _Normal_.
+Default: `v:false`
+
+Make non-current window background dimmer than _Normal_.
 
 #### g:zenflesh_lighten_noncurrent_window
 
-Default: `v:false` Make non-current window background warmer than _Normal_.
+Default: `v:false`
+
+Make non-current window background warmer than _Normal_.
 
 #### g:zenbones_italic_comments
 
 #### g:zenflesh_italic_comments
 
-Default: `v:true` Make comments not italicize.
+Default: `v:true`
+
+Make comments not italicize.
 
 ## Advanced Usage
 
