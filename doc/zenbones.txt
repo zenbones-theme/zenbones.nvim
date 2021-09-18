@@ -3,48 +3,15 @@
 ==============================================================================
 Table of Contents                                 *zenbones-table-of-contents*
 
-1. Zenflesh, Zenbones                            |zenbones-zenflesh,-zenbones|
-  - Requirements                                       |zenbones-requirements|
-  - Installation                                       |zenbones-installation|
   - Usage                                                     |zenbones-usage|
   - Configuration                                     |zenbones-configuration|
   - Advanced Usage                                   |zenbones-advanced-usage|
-  - Other plugins support                     |zenbones-other-plugins-support|
-  - Other implementations                     |zenbones-other-implementations|
-  - Inspirations                                       |zenbones-inspirations|
-
-==============================================================================
-1. Zenflesh, Zenbones                            *zenbones-zenflesh,-zenbones*
 
 Zenbones is a vim/neovim colorscheme designed to highlight code using contrasts
 and font variations. Colors are tasked only for other roles such as
-diagnostics, diffs, search matches.
+diagnostics,
 
-REQUIREMENTS                                           *zenbones-requirements*
-
-Primarily built for neovim but it works pretty well with vim. However here are
-some requirements to take full advantage of the colorscheme:
-
-
-- 24-bit RGB colors (neovim or vim compiled with +termguicolors) i.e.
-    `set termguicolors`
-- Font with bold and italic
-- Terminal or GUI with bold and italic support
-
-
-INSTALLATION                                           *zenbones-installation*
-
-Example installation using packer:
-
->
-    use "mcchrish/zenbones.nvim"
-    
-    -- Optionally install Lush. Useful if you want to extend the theme
-    -- e.g. create a statusline plugin theme using zenbones colors
-    use "rktjmp/lush.nvim"
-    -- See Advanced Usage section for more details
-<
-
+diffs, search matches.
 
 USAGE                                                         *zenbones-usage*
 
@@ -75,47 +42,33 @@ Configuration is only available for `zenbones-lush` and `zenflesh-lush`.
                                                *zenbones-g:zenbones_lightness*
 
 g:zenbones_lightness                   Change background colors lightness.
-
-
-│        'bright'         │        _(unset)_        │          'dim'          │
-│<img src='https://user-im│<img src='https://user-im│<img src='https://user-im│
-│ages.githubusercontent.co│ages.githubusercontent.co│ages.githubusercontent.co│
-│m/7200153/133776552-5919f│m/7200153/133776625-d8e9d│m/7200153/133776674-ff7d1│
-│664-17d9-4d96-bf44-d587f2│d88-13b3-4362-9cad-2031ef│5e9-52e3-4a27-9099-722ffc│
-│ 0b01dc.png' title=''/>  │ 6ccf7d.png' title=''/>  │ be1cb8.png' title=''/>  │
+                                       Options: `'bright'`, `'dim'`.
 
 
                                                 *zenbones-g:zenflesh_darkness*
 
 g:zenflesh_darkness                    Change background colors darkness.
-
-
-│         'stark'         │        _(unset)_        │         'warm'          │
-│<img src='https://user-im│<img src='https://user-im│<img src='https://user-im│
-│ages.githubusercontent.co│ages.githubusercontent.co│ages.githubusercontent.co│
-│m/7200153/133776839-4b12c│m/7200153/133776882-26d00│m/7200153/133776957-3d294│
-│3dd-233f-47d1-9740-006bf5│6b4-50db-49ad-bd79-3bec32│9c9-51b6-4537-aca4-6ced80│
-│ 0e812a.png' title=''/>  │ 7a95fc.png' title=''/>  │ 113b91.png' title=''/>  │
+                                       Options: `'stark'`, `'warm'`.
 
 
                                         *zenbones-g:zenbones_solid_vert_split*
 
                                         *zenbones-g:zenflesh_solid_vert_split*
 
-g:zenflesh_solid_vert_split            Set to `v:true` to make vertical split
+g:zenflesh_solid_vert_split            Default: `v:false` Make vertical split
                                        more distinguishable background
                                        highlight.
 
 
                                    *zenbones-g:zenbones_dim_noncurrent_window*
 
-g:zenbones_dim_noncurrent_window       Set to `v:true` to make non-current
+g:zenbones_dim_noncurrent_window       Default: `v:false` Make non-current
                                        window background dimmer than _Normal_.
 
 
                                *zenbones-g:zenflesh_lighten_noncurrent_window*
 
-g:zenflesh_lighten_noncurrent_window   Set to `v:true` to make non-current
+g:zenflesh_lighten_noncurrent_window   Default: `v:false` Make non-current
                                        window background warmer than _Normal_.
 
 
@@ -123,7 +76,7 @@ g:zenflesh_lighten_noncurrent_window   Set to `v:true` to make non-current
 
                                          *zenbones-g:zenflesh_italic_comments*
 
-g:zenflesh_italic_comments             Set to `v:false` to make comments not
+g:zenflesh_italic_comments             Default: `v:true` Make comments not
                                        italicize.
 
 
@@ -143,52 +96,6 @@ colors in lua:
 
 See also Lush’s documentation
 <https://github.com/rktjmp/lush.nvim#advanced-usage> for more options.
-
-OTHER PLUGINS SUPPORT                         *zenbones-other-plugins-support*
-
-Aside from LSP and basic Tree-sitter support, here are some plugins that are
-currently supported.
-
-
-- Git Signs <https://github.com/lewis6991/gitsigns.nvim>
-- Git Gutter <https://github.com/airblade/vim-gitgutter>
-- Indent Blankline <https://github.com/lukas-reineke/indent-blankline.nvim>
-- Telescope <https://github.com/nvim-telescope/telescope.nvim>
-- Sneak <https://github.com/justinmk/vim-sneak>
-- Lightspeed <https://github.com/ggandor/lightspeed.nvim>
-- Hop <https://github.com/phaazon/hop.nvim>
-- Lualine <https://github.com/hoob3rt/lualine.nvim>
-- Lightline <https://github.com/itchyny/lightline.vim>
-- BarBar <https://github.com/romgrk/barbar.nvim>
-- CoC <https://github.com/neoclide/coc.nvim>
-- Neogit <https://github.com/TimUntersberger/neogit>
-- WhichKey <https://github.com/folke/which-key.nvim>
-- Trouble <https://github.com/folke/trouble.nvim>
-
-
-OTHER IMPLEMENTATIONS                         *zenbones-other-implementations*
-
-
-- iTerm2 <extras/iterm>
-- Kitty <extras/kitty>
-- Alacritty <extras/alacritty>
-- WezTerm <extras/wezterm>
-- Tmux <extras/tmux>
-
-
-It’s also possible to generate color configuration files using a template,
-this one for Kitty <lua/zenbones/build/kitty.lua> for example. Please feel free
-to submit a PR if you want to add some more.
-
-INSPIRATIONS                                           *zenbones-inspirations*
-
-Zenbones is heavily inspired by Verdandi
-<https://github.com/be5invis/vsc-theme-verdandi> and vim-yin-yang
-<https://github.com/pgdouyon/vim-yin-yang>. The name came from a book called
-Zen Flesh, Zen Bones <https://en.wikipedia.org/wiki/Zen_Flesh,_Zen_Bones>.
-
-There are more similar colorschemes with few colors from this collection
-<https://github.com/mcchrish/vim-no-color-collections>.
 
 Generated by panvimdoc <https://github.com/kdheepak/panvimdoc>
 
