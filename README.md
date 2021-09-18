@@ -4,7 +4,7 @@ Zenbones is a vim/neovim colorscheme designed to highlight code using contrasts
 and font variations. Colors are tasked only for other roles such as diagnostics,
 diffs, search matches.
 
-![Zenbones main image](https://user-images.githubusercontent.com/7200153/133774819-32b4e18b-6af7-48ac-91d5-16c4f413ad20.jpg)
+![Zenbones main image](https://user-images.githubusercontent.com/7200153/133883977-116795f3-c602-45f0-8907-b89c8d0b2f82.jpg)
 
 <p align="center">
 <em>A rock garden in <a href="https://en.wikipedia.org/wiki/Ry%C5%8Dan-ji">Ryōan-ji</a>.</em>
