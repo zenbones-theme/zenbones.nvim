@@ -1,4 +1,5 @@
-local template = [[set -g status-left ' #[fg=${color5},bold]#{s/root//:client_key_table} '
+local template = [[# This file is auto-generated from lua/zenbones/build/tmux.lua
+set -g status-left ' #[fg=${color5},bold]#{s/root//:client_key_table} '
 set -g status-right '#[fg=${color5},bold] [#S]#[fg=${color5},bold] [%d/%m] #[fg=${color5},bold][%I:%M%p] '
 set -g status-style fg='${color5}',bg='${color7}'
 

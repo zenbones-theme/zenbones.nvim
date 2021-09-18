@@ -1,4 +1,5 @@
-local template = [[# ${name} alacritty colors
+local template = [[# This file is auto-generated from lua/zenbones/build/alacritty.lua
+# ${name} alacritty colors
 colors:
   # Default colors
   primary:

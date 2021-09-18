@@ -1,4 +1,5 @@
-local template = [[let s:p = {'normal': {}, 'inactive': {}, 'insert': {}, 'replace': {}, 'visual': {}, 'tabline': {}}
+local template = [[" This file is auto-generated from lua/zenbones/build/lightline.lua
+let s:p = {'normal': {}, 'inactive': {}, 'insert': {}, 'replace': {}, 'visual': {}, 'tabline': {}}
 
 let s:p.normal.left = [ [ "${common_fg}", "${normal_a_bg}", "bold" ], [ "${common_fg}", "${normal_b_bg}" ] ]
 let s:p.normal.middle = [ [ "${normal_c_fg}", "${normal_c_bg}" ] ]

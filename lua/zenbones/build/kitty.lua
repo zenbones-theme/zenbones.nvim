@@ -1,4 +1,5 @@
-local template = [[# vim:ft=kitty
+local template = [[# This file is auto-generated from lua/zenbones/build/kitty.lua
+# vim:ft=kitty
 ## name: ${name}
 ## license: MIT
 ## author: Michael Chris Lopez

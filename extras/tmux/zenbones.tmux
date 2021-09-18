@@ -1,3 +1,4 @@
+# This file is auto-generated from lua/zenbones/build/tmux.lua
 set -g status-left ' #[fg=#88507D,bold]#{s/root//:client_key_table} '
 set -g status-right '#[fg=#88507D,bold] [#S]#[fg=#88507D,bold] [%d/%m] #[fg=#88507D,bold][%I:%M%p] '
 set -g status-style fg='#88507D',bg='#2C363C'

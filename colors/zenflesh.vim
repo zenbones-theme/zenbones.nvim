@@ -1,3 +1,4 @@
+" This file is auto-generated from lua/zenbones/build/vim.lua
 if exists('g:colors_name')
     highlight clear
     syntax reset

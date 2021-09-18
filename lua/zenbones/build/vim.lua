@@ -1,6 +1,7 @@
 local lush = require "lush"
 
-local template = [[if exists('g:colors_name')
+local template = [[" This file is auto-generated from lua/zenbones/build/vim.lua
+if exists('g:colors_name')
     highlight clear
     syntax reset
     set t_Co=256
