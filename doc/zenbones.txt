@@ -57,33 +57,30 @@ g:zenflesh_darkness                    Change background colors darkness.
 
                                         *zenbones-g:zenflesh_solid_vert_split*
 
-g:zenflesh_solid_vert_split            Default: `v:false`
+g:zenflesh_solid_vert_split            Default: `v:false`. Make vertical split
+                                       more distinguishable background
+                                       highlight.
 
-
-Make vertical split more distinguishable background highlight.
 
                                    *zenbones-g:zenbones_dim_noncurrent_window*
 
-g:zenbones_dim_noncurrent_window       Default: `v:false`
+g:zenbones_dim_noncurrent_window       Default: `v:false`. Make non-current
+                                       window background dimmer than _Normal_.
 
-
-Make non-current window background dimmer than _Normal_.
 
                                *zenbones-g:zenflesh_lighten_noncurrent_window*
 
-g:zenflesh_lighten_noncurrent_window   Default: `v:false`
+g:zenflesh_lighten_noncurrent_window   Default: `v:false`. Make non-current
+                                       window background warmer than _Normal_.
 
-
-Make non-current window background warmer than _Normal_.
 
                                          *zenbones-g:zenbones_italic_comments*
 
                                          *zenbones-g:zenflesh_italic_comments*
 
-g:zenflesh_italic_comments             Default: `v:true`
+g:zenflesh_italic_comments             Default: `v:true`. Make comments not
+                                       italicize.
 
-
-Make comments not italicize.
 
 ADVANCED USAGE                                       *zenbones-advanced-usage*
 
