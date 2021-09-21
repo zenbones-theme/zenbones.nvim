@@ -15,6 +15,7 @@ require("zenflesh.terminal").setup()
 --
 -- The performance impact of this call can be measured in the hundreds of
 -- *nanoseconds* and such could be considered "production safe".
+package.loaded["zenflesh.palette"] = nil
 package.loaded["zenflesh"] = nil
 
 -- include our theme file and pass it to lush to apply
