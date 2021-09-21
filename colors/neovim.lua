@@ -2,24 +2,14 @@ vim.g.colors_name = "neovim"
 
 local base_name = vim.opt.background:get() == "light" and "zenbones" or "zenflesh"
 
--- By setting our module to nil, we clear lua's cache,
--- which means the require ahead will *always* occur.
---
--- This isn't strictly required but it can be a useful trick if you are
--- incrementally editing your config a lot and want to be sure your themes
--- changes are being picked up without restarting neovim.
---
--- Note if you're working in on your theme and have :Lushify'd the buffer,
--- your changes will be applied with our without the following line.
---
--- The performance impact of this call can be measured in the hundreds of
--- *nanoseconds* and such could be considered "production safe".
+-- reset base palette and specs
 package.loaded[base_name .. ".palette"] = nil
 package.loaded[base_name] = nil
 
 local lush = require "lush"
 local hsluv = lush.hsluv
 
+-- modify base palette first (before requiring specs)
 local palette = require(base_name .. ".palette")
 if base_name == "zenbones" then
 	palette.bg = hsluv "#e7eee8" -- --bg-color
@@ -31,6 +21,7 @@ else
 	palette.leaf = hsluv "#8fff6d" -- --accent-color
 end
 
+-- extend specs using Lush
 local theme = require(base_name)
 local specs
 if base_name == "zenbones" then
