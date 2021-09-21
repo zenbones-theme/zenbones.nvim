@@ -48,6 +48,9 @@ If you want to make use of the lua version:
 " Requires `neovim` and `rktjmp/lush.nvim` installed
 colorscheme zenbones-lush
 colorscheme zenflesh-lush
+
+" Secret neovim.io colorscheme
+colorscheme neovim
 ```
 
 ## [Configuration and other documentations](doc/zenbones.md)

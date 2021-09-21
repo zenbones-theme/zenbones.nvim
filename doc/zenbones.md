@@ -19,6 +19,9 @@ If you want to make use of the lua version:
 " Requires `neovim` and `rktjmp/lush.nvim` installed
 colorscheme zenbones-lush
 colorscheme zenflesh-lush
+
+" Secret neovim.io colorscheme
+colorscheme neovim
 ```
 
 It works pretty much the same as the first one but pretty handy when extending
