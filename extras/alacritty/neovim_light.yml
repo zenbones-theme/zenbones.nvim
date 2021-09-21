@@ -1,0 +1,27 @@
+# This file is auto-generated from lua/zenbones/template/alacritty.lua
+# neovim_light alacritty colors
+colors:
+  # Default colors
+  primary:
+    background: '#E7EEE8'
+    foreground: '#212F19'
+  # Normal colors
+  normal:
+    black:   '#E7EEE8'
+    red:     '#A8334C'
+    green:   '#567A30'
+    yellow:  '#944927'
+    blue:    '#286486'
+    magenta: '#88507D'
+    cyan:    '#3B8992'
+    white:   '#212F19'
+  # Bright colors
+  bright:
+    black:   '#B9D0BC'
+    red:     '#94253E'
+    green:   '#466522'
+    yellow:  '#803D1C'
+    blue:    '#1D5573'
+    magenta: '#7B3B70'
+    cyan:    '#2B747C'
+    white:   '#4D6E3A'
