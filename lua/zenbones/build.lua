@@ -1,8 +1,8 @@
 local util = require "zenbones.util"
 
 local function build()
-	util.build("zenbones", require "zenbones", require "zenbones.palette", require "zenbones.terminal")
-	util.build("zenflesh", require "zenflesh", require "zenflesh.palette", require "zenflesh.terminal")
+	util.build("zenbones", require "zenbones", require "zenbones.palette", require "zenbones.terminal", {})
+	util.build("zenflesh", require "zenflesh", require "zenflesh.palette", require "zenflesh.terminal", {})
 
 	vim.opt.background = "light"
 	package.loaded["zenbones.palette"] = nil
@@ -12,7 +12,8 @@ local function build()
 		"neovim_light",
 		require "zenbones.neovim",
 		require "zenbones.neovim.palette",
-		require "zenbones.neovim.terminal"
+		require "zenbones.neovim.terminal",
+		{ exclude = { "vim" } }
 	)
 
 	vim.opt.background = "dark"
@@ -23,7 +24,8 @@ local function build()
 		"neovim_dark",
 		require "zenbones.neovim",
 		require "zenbones.neovim.palette",
-		require "zenbones.neovim.terminal"
+		require "zenbones.neovim.terminal",
+		{ exclude = { "vim" } }
 	)
 end
 

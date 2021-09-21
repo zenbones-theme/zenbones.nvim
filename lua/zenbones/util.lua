@@ -19,10 +19,13 @@ local function write_template(path, template, values)
 	file:close()
 end
 
-function M.build(name, specs, palette, terminal)
+function M.build(name, specs, palette, terminal, options)
+	local exclude = options.exclude or {}
 	local templates = { "vim", "kitty", "alacritty", "wezterm", "lualine", "lightline", "tmux" }
 	for _, t in ipairs(templates) do
-		write_template(unpack(require("zenbones.template." .. t)(name, specs, palette, terminal)))
+		if not vim.tbl_contains(exclude, t) then
+			write_template(unpack(require("zenbones.template." .. t)(name, specs, palette, terminal)))
+		end
 	end
 end
 
