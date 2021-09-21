@@ -1,4 +1,4 @@
-# This file is auto-generated from lua/zenbones/build/alacritty.lua
+# This file is auto-generated from lua/zenbones/template/alacritty.lua
 # zenbones alacritty colors
 colors:
   # Default colors

@@ -1,4 +1,4 @@
-local template = [[# This file is auto-generated from lua/zenbones/build/wezterm.lua
+local template = [[# This file is auto-generated from lua/zenbones/template/wezterm.lua
 # ${name}
 [colors]
 foreground = "${fg}"

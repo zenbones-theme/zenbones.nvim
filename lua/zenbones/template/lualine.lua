@@ -1,4 +1,4 @@
-local template = [[-- This file is auto-generated from lua/zenbones/build/lualine.lua
+local template = [[-- This file is auto-generated from lua/zenbones/template/lualine.lua
 local common_fg = "${common_fg}"
 local inactive_bg = "${inactive_bg}"
 local inactive_fg = "${inactive_fg}"

@@ -1,4 +1,4 @@
--- This file is auto-generated from lua/zenbones/build/lualine.lua
+-- This file is auto-generated from lua/zenbones/template/lualine.lua
 local common_fg = "#BBAEA8"
 local inactive_bg = "#312D2B"
 local inactive_fg = "#CAD0D4"

@@ -1,4 +1,4 @@
-# This file is auto-generated from lua/zenbones/build/wezterm.lua
+# This file is auto-generated from lua/zenbones/template/wezterm.lua
 # Zenbones
 [colors]
 foreground = "#2C363C"

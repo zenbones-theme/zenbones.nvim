@@ -1,4 +1,4 @@
-" This file is auto-generated from lua/zenbones/build/lightline.lua
+" This file is auto-generated from lua/zenbones/template/lightline.lua
 let s:p = {'normal': {}, 'inactive': {}, 'insert': {}, 'replace': {}, 'visual': {}, 'tabline': {}}
 
 let s:p.normal.left = [ [ "#564E4A", "#B2A39B", "bold" ], [ "#564E4A", "#C4B6AF" ] ]

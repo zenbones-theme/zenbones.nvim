@@ -1,6 +1,4 @@
-local lush = require "lush"
-
-local template = [[" This file is auto-generated from lua/zenbones/build/vim.lua
+local template = [[" This file is auto-generated from lua/zenbones/template/vim.lua
 if exists('g:colors_name')
     highlight clear
     syntax reset
@@ -35,6 +33,7 @@ endif
 ${vimcolors}
 ]]
 
+local lush = require "lush"
 return function(name, theme, palette, terminal)
 	local termcolors = ""
 	for i, v in ipairs(terminal.colors) do
