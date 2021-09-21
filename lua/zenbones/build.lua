@@ -1,13 +1,8 @@
--- got from http://lua-users.org/wiki/StringInterpolation
-function interp(s, tab)
-	return (s:gsub("($%b{})", function(w)
-		return tab[w:sub(3, -2)] or w
-	end))
-end
+local util = require "zenbones.util"
 
 local function write_template(path, template, values)
 	print("[write template] " .. path)
-	local content = interp(template, values)
+	local content = util.interp(template, values)
 	local file = io.open(path, "w")
 	file:write(content)
 	file:close()
