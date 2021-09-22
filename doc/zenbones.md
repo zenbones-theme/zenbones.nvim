@@ -20,7 +20,7 @@ If you want to make use of the lua version:
 colorscheme zenbones-lush
 colorscheme zenflesh-lush
 
-" Secret neovim.io colorscheme
+" Secret https://neovim.io colorscheme
 colorscheme neovim
 ```
 
@@ -160,5 +160,5 @@ lush(specs)
 And there you have it. Just call `colorscheme gruvbones` to use your new
 colorscheme. It respects `&background` and other configurations too.
 
-Also checkout the [neovim](colors/neovim.lua) colorscheme for a similarly
+Also checkout the [neovim](../colors/neovim.lua) colorscheme for a similar and
 complete example.

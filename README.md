@@ -49,7 +49,7 @@ If you want to make use of the lua version:
 colorscheme zenbones-lush
 colorscheme zenflesh-lush
 
-" Secret neovim.io colorscheme
+" Secret https://neovim.io colorscheme
 colorscheme neovim
 ```
 

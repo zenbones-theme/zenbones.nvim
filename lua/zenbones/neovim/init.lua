@@ -1,7 +1,7 @@
 local lush = require "lush"
 local hsl = lush.hsl
 
--- modify base palette first (before requiring specs)
+-- modify base palette (before requiring specs)
 local palette = require "zenbones.neovim.palette"
 
 -- extend specs using Lush
