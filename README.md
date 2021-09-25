@@ -91,6 +91,7 @@ currently supported.
 -   [Neogit](https://github.com/TimUntersberger/neogit)
 -   [WhichKey](https://github.com/folke/which-key.nvim)
 -   [Trouble](https://github.com/folke/trouble.nvim)
+-   [NvimTree](https://github.com/kyazdani42/nvim-tree.lua)
 
 ## Other implementations
 
