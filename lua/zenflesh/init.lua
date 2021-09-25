@@ -355,6 +355,17 @@ local theme = lush(function()
 		TroubleNormal              { Function },
 		TroubleText                { Function },
 		TroubleSource              { Constant },
+
+		NvimTreeNormal             { NormalFloat },
+		NvimTreeVertSplit          { fg = "bg" },
+		NvimTreeCursorLine         { bg = StatusLineNC.bg },
+		NvimTreeCursorColumn       { NvimTreeCursorLine	},
+		NvimTreeRootFolder         { fg = p.water, gui = "bold" },
+		NvimTreeSymlink            { fg = p.water },
+		NvimTreeGitDirty           { diffChanged },
+		NvimTreeGitNew             { diffAdded },
+		NvimTreeGitDeleted         { diffRemoved },
+		NvimTreeSpecialFile        { fg = p.blossom, gui = "underline" },
 	}
 end)
 -- stylua: ignore end

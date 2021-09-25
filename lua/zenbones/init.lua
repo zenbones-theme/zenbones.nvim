@@ -263,6 +263,8 @@ local theme = lush(function()
 		diffFile      { fg = p.wood, gui = "bold" },
 		diffLine      { fg = p.blossom, gui = "bold" },
 		diffIndexLine { fg = p.wood },
+
+		gitcommitOverflow { WarningMsg },
 		
 		markdownH1    { Statement, gui = "bold,underline" },
 		markdownH2    { Statement },

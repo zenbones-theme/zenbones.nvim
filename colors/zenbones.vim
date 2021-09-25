@@ -100,6 +100,11 @@ highlight NonText guifg=#C0B0A8 guibg=NONE guisp=NONE gui=NONE
 highlight Normal guifg=#2C363C guibg=#F0EDEC guisp=NONE gui=NONE
 highlight NormalFloat guifg=NONE guibg=#E1DCD9 guisp=NONE gui=NONE
 highlight Number guifg=NONE guibg=NONE guisp=NONE gui=italic
+highlight NvimTreeCursorLine guifg=NONE guibg=#DAD3CF guisp=NONE gui=NONE
+highlight NvimTreeRootFolder guifg=#286486 guibg=NONE guisp=NONE gui=bold
+highlight NvimTreeSpecialFile guifg=#88507D guibg=NONE guisp=NONE gui=underline
+highlight NvimTreeSymlink guifg=#286486 guibg=NONE guisp=NONE gui=NONE
+highlight NvimTreeVertSplit guifg=bg guibg=NONE guisp=NONE gui=NONE
 highlight Pmenu guifg=NONE guibg=#DAD3CF guisp=NONE gui=NONE
 highlight PmenuSbar guifg=NONE guibg=#B2A39B guisp=NONE gui=NONE
 highlight PmenuSel guifg=NONE guibg=#C4B6AF guisp=NONE gui=NONE
@@ -176,6 +181,11 @@ highlight! link NeogitHunkHeader LineNr
 highlight! link NeogitNotificationError LspDiagnosticsDefaultError
 highlight! link NeogitNotificationInfo LspDiagnosticsDefaultInformation
 highlight! link NeogitNotificationWarning LspDiagnosticsDefaultWarning
+highlight! link NvimTreeCursorColumn NvimTreeCursorLine
+highlight! link NvimTreeGitDeleted diffRemoved
+highlight! link NvimTreeGitDirty diffChanged
+highlight! link NvimTreeGitNew diffAdded
+highlight! link NvimTreeNormal NormalFloat
 highlight! link PreProc Statement
 highlight! link Question MoreMsg
 highlight! link SignColumn LineNr
@@ -200,6 +210,7 @@ highlight! link WhichKeyGroup Special
 highlight! link WhichKeySeparator LineNr
 highlight! link WhichKeyValue Constant
 highlight! link Whitespace NonText
+highlight! link gitcommitOverflow WarningMsg
 highlight! link helpHyperTextEntry Special
 highlight! link helpHyperTextJump Constant
 highlight! link helpOption Constant
