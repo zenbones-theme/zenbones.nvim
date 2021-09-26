@@ -10,13 +10,9 @@ diffs, search matches.
 <em>A rock garden in <a href="https://en.wikipedia.org/wiki/Ry%C5%8Dan-ji">Ryōan-ji</a>.</em>
 </p>
 
-## Requirements
+## Recommended setup
 
-Primarily built for neovim but it works pretty well with vim. However here are
-some requirements to take full advantage of the colorscheme:
-
--   24-bit RGB colors (neovim or vim compiled with +termguicolors) i.e.
-    `set termguicolors`
+-   Vim/Neovim with true colors support i.e. `set termguicolors`
 -   Font with bold and italic
 -   Terminal or GUI with bold and italic support
 
@@ -102,8 +98,8 @@ currently supported.
 -   [Tmux](extras/tmux)
 
 It's also possible to generate any color configuration files using a template,
-[this one for Kitty](lua/zenbones/template/kitty.lua) for example. Please feel free
-to submit a PR if you want to add some more.
+[this one for Kitty](lua/zenbones/template/kitty.lua) for example. Please feel
+free to submit a PR if you want to add some more.
 
 ## Inspirations
 
