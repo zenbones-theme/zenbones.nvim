@@ -58,7 +58,21 @@ Default: `v:false`. Make non-current window background warmer than _Normal_.
 
 #### g:zenflesh_italic_comments
 
-Default: `v:true`. Make comments not italicize.
+Default: `v:true`. Make comments italicize.
+
+#### lightline
+
+```vim
+let g:lightline = {
+      \ 'colorscheme': 'zenbones', " or 'zenflesh'
+      \ }
+```
+
+#### lualine
+
+```lua
+options = { theme = 'zenbones' } -- or 'zenflesh'
+```
 
 ## Advanced Usage
 
