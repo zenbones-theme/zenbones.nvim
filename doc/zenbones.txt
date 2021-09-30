@@ -81,8 +81,24 @@ g:zenflesh_lighten_noncurrent_window   Default: `v:false`. Make non-current
 
                                          *zenbones-g:zenflesh_italic_comments*
 
-g:zenflesh_italic_comments             Default: `v:true`. Make comments not
+g:zenflesh_italic_comments             Default: `v:true`. Make comments
                                        italicize.
+
+
+                                                          *zenbones-lightline*
+
+>
+    let g:lightline = {
+          \ 'colorscheme': 'zenbones', " or 'zenflesh'
+          \ }
+<
+
+
+                                                            *zenbones-lualine*
+
+>
+    options = { theme = 'zenbones' } -- or 'zenflesh'
+<
 
 
 ADVANCED USAGE                                       *zenbones-advanced-usage*
