@@ -165,20 +165,33 @@ local theme = lush(function()
 		LspReferenceRead                        { ColorColumn }, -- used for highlighting "read" references
 		LspReferenceWrite                       { ColorColumn }, -- used for highlighting "write" references
 
-		LspDiagnosticsDefaultError              { Error }, -- Used as the base highlight group. Other LspDiagnostic highlights link to this by default (except Underline)
-		LspDiagnosticsDefaultWarning            { WarningMsg }, -- Used as the base highlight group. Other LspDiagnostic highlights link to this by default (except Underline)
-		LspDiagnosticsDefaultInformation        { fg = p.water }, -- Used as the base highlight group. Other LspDiagnostic highlights link to this by default (except Underline)
-		LspDiagnosticsDefaultHint               { fg = p.blossom }, -- Used as the base highlight group. Other LspDiagnostic highlights link to this by default (except Underline)
+		DiagnosticError		                    { Error },
+		DiagnosticWarn                          { WarningMsg },
+		DiagnosticInfo                          { fg = p.water },
+		DiagnosticHint                          { fg = p.blossom },
 
-		LspDiagnosticsVirtualTextError          { LspDiagnosticsDefaultError, bg = p.rose.abs_de(48).li(82) }, -- Used for "Error" diagnostic virtual text
-		LspDiagnosticsVirtualTextWarning        { LspDiagnosticsDefaultWarning, bg = p.wood.de(58).li(86) }, -- Used for "Warning" diagnostic virtual text
+		DiagnosticVirtualTextError              { DiagnosticError, bg = p.rose.abs_de(48).li(82) },
+		DiagnosticVirtualTextWarn               { DiagnosticWarn, bg = p.wood.de(58).li(86) },
+
+		DiagnosticUnderlineError		        { DiagnosticError, gui = "undercurl" },
+		DiagnosticUnderlineWarn                 { DiagnosticWarn, gui = "undercurl" },
+		DiagnosticUnderlineInfo                 { DiagnosticInfo, gui = "undercurl" },
+		DiagnosticUnderlineHint                 { DiagnosticHint, gui = "undercurl" },
+
+		LspDiagnosticsDefaultError              { DiagnosticError }, -- Used as the base highlight group. Other LspDiagnostic highlights link to this by default (except Underline)
+		LspDiagnosticsDefaultWarning            { DiagnosticWarn }, -- Used as the base highlight group. Other LspDiagnostic highlights link to this by default (except Underline)
+		LspDiagnosticsDefaultInformation        { DiagnosticInfo }, -- Used as the base highlight group. Other LspDiagnostic highlights link to this by default (except Underline)
+		LspDiagnosticsDefaultHint               { DiagnosticHint }, -- Used as the base highlight group. Other LspDiagnostic highlights link to this by default (except Underline)
+
+		LspDiagnosticsVirtualTextError          { DiagnosticVirtualTextError }, -- Used for "Error" diagnostic virtual text
+		LspDiagnosticsVirtualTextWarning        { DiagnosticVirtualTextWarn }, -- Used for "Warning" diagnostic virtual text
 		-- LspDiagnosticsVirtualTextInformation { }, -- Used for "Information" diagnostic virtual text
 		-- LspDiagnosticsVirtualTextHint        { }, -- Used for "Hint" diagnostic virtual text
 
-		LspDiagnosticsUnderlineError            { LspDiagnosticsDefaultError, gui = "undercurl" }, -- Used to underline "Error" diagnostics
-		LspDiagnosticsUnderlineWarning          { LspDiagnosticsDefaultWarning, gui = "undercurl" }, -- Used to underline "Warning" diagnostics
-		LspDiagnosticsUnderlineInformation      { LspDiagnosticsDefaultInformation, gui = "undercurl" }, -- Used to underline "Information" diagnostics
-		LspDiagnosticsUnderlineHint             { LspDiagnosticsDefaultHint, gui = "undercurl" }, -- Used to underline "Hint" diagnostics
+		LspDiagnosticsUnderlineError            { DiagnosticUnderlineError }, -- Used to underline "Error" diagnostics
+		LspDiagnosticsUnderlineWarning          { DiagnosticUnderlineWarn }, -- Used to underline "Warning" diagnostics
+		LspDiagnosticsUnderlineInformation      { DiagnosticUnderlineInfo }, -- Used to underline "Information" diagnostics
+		LspDiagnosticsUnderlineHint             { DiagnosticUnderlineHint }, -- Used to underline "Hint" diagnostics
 
 		-- LspDiagnosticsFloatingError          { }, -- Used to color "Error" diagnostic messages in diagnostics float
 		-- LspDiagnosticsFloatingWarning        { }, -- Used to color "Warning" diagnostic messages in diagnostics float

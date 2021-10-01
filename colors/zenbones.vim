@@ -59,6 +59,14 @@ highlight Cursor guifg=#F2F0EF guibg=#2C363C guisp=NONE gui=NONE
 highlight CursorLine guifg=NONE guibg=#E6E1DF guisp=NONE gui=NONE
 highlight CursorLineNr guifg=#2C363C guibg=NONE guisp=NONE gui=bold
 highlight Delimiter guifg=#8E817B guibg=NONE guisp=NONE gui=NONE
+highlight DiagnosticHint guifg=#88507D guibg=NONE guisp=NONE gui=NONE
+highlight DiagnosticInfo guifg=#286486 guibg=NONE guisp=NONE gui=NONE
+highlight DiagnosticUnderlineError guifg=#A8334C guibg=NONE guisp=NONE gui=undercurl
+highlight DiagnosticUnderlineHint guifg=#88507D guibg=NONE guisp=NONE gui=undercurl
+highlight DiagnosticUnderlineInfo guifg=#286486 guibg=NONE guisp=NONE gui=undercurl
+highlight DiagnosticUnderlineWarn guifg=#944927 guibg=NONE guisp=NONE gui=undercurl
+highlight DiagnosticVirtualTextError guifg=#A8334C guibg=#E7DDDE guisp=NONE gui=NONE
+highlight DiagnosticVirtualTextWarn guifg=#944927 guibg=#F0E6E4 guisp=NONE gui=NONE
 highlight DiffAdd guifg=NONE guibg=#D8E7CD guisp=NONE gui=NONE
 highlight DiffChange guifg=NONE guibg=#C0DAF2 guisp=NONE gui=NONE
 highlight DiffDelete guifg=NONE guibg=#E7CBCE guisp=NONE gui=NONE
@@ -86,14 +94,6 @@ highlight LightspeedOneCharMatch guifg=#F0EDEC guibg=#88507D guisp=NONE gui=bold
 highlight LightspeedPendingChangeOpArea guifg=#88507D guibg=NONE guisp=NONE gui=NONE
 highlight LightspeedShortcut guifg=#F0EDEC guibg=#88507D guisp=NONE gui=bold,underline
 highlight LineNr guifg=#A79891 guibg=NONE guisp=NONE gui=NONE
-highlight LspDiagnosticsDefaultHint guifg=#88507D guibg=NONE guisp=NONE gui=NONE
-highlight LspDiagnosticsDefaultInformation guifg=#286486 guibg=NONE guisp=NONE gui=NONE
-highlight LspDiagnosticsUnderlineError guifg=#A8334C guibg=NONE guisp=NONE gui=undercurl
-highlight LspDiagnosticsUnderlineHint guifg=#88507D guibg=NONE guisp=NONE gui=undercurl
-highlight LspDiagnosticsUnderlineInformation guifg=#286486 guibg=NONE guisp=NONE gui=undercurl
-highlight LspDiagnosticsUnderlineWarning guifg=#944927 guibg=NONE guisp=NONE gui=undercurl
-highlight LspDiagnosticsVirtualTextError guifg=#A8334C guibg=#E7DDDE guisp=NONE gui=NONE
-highlight LspDiagnosticsVirtualTextWarning guifg=#944927 guibg=#F0E6E4 guisp=NONE gui=NONE
 highlight MoreMsg guifg=#4F6C31 guibg=NONE guisp=NONE gui=bold
 highlight NeogitHunkHeaderHighlight guifg=#2C363C guibg=#E6E1DF guisp=NONE gui=bold
 highlight NonText guifg=#C0B0A8 guibg=NONE guisp=NONE gui=NONE
@@ -156,6 +156,8 @@ highlight! link CocWarningHighlight LspDiagnosticsUnderlineWarning
 highlight! link CocWarningSign LspDiagnosticsDefaultWarning
 highlight! link CocWarningVitualText LspDiagnosticsVirtualTextWarning
 highlight! link CursorColumn CursorLine
+highlight! link DiagnosticError Error
+highlight! link DiagnosticWarn WarningMsg
 highlight! link EndOfBuffer NonText
 highlight! link ErrorMsg Error
 highlight! link GitGutterAdd GitSignsAdd
@@ -168,8 +170,16 @@ highlight! link LightspeedMaskedChar Conceal
 highlight! link LightspeedPendingOpArea SneakLabel
 highlight! link LightspeedUnlabeledMatch Bold
 highlight! link LspCodeLens LineNr
-highlight! link LspDiagnosticsDefaultError Error
-highlight! link LspDiagnosticsDefaultWarning WarningMsg
+highlight! link LspDiagnosticsDefaultError DiagnosticError
+highlight! link LspDiagnosticsDefaultHint DiagnosticHint
+highlight! link LspDiagnosticsDefaultInformation DiagnosticInfo
+highlight! link LspDiagnosticsDefaultWarning DiagnosticWarn
+highlight! link LspDiagnosticsUnderlineError DiagnosticUnderlineError
+highlight! link LspDiagnosticsUnderlineHint DiagnosticUnderlineHint
+highlight! link LspDiagnosticsUnderlineInformation DiagnosticUnderlineInfo
+highlight! link LspDiagnosticsUnderlineWarning DiagnosticUnderlineWarn
+highlight! link LspDiagnosticsVirtualTextError DiagnosticVirtualTextError
+highlight! link LspDiagnosticsVirtualTextWarning DiagnosticVirtualTextWarn
 highlight! link LspReferenceRead ColorColumn
 highlight! link LspReferenceText ColorColumn
 highlight! link LspReferenceWrite ColorColumn
