@@ -50,6 +50,7 @@ local theme = lush(function()
 		lCursor         { Cursor, bg = Cursor.bg.li(20)  }, -- the character under the cursor when |language-mapping| is used (see 'guicursor')
 		-- CursorIM     { }, -- like Cursor, but used when in IME mode |CursorIM|
 		TermCursor      { Cursor }, -- cursor in a focused terminal
+		TermCursorNC    { lCursor }, -- cursor in an unfocused terminal
 
 		CursorLine      { bg = Normal.bg.da(4) }, -- Screen-line at the cursor, when 'cursorline' is set.	Low-priority if foreground (ctermfg OR guifg) is not set.
 		CursorColumn    { CursorLine }, -- Screen-column at the cursor, when 'cursorcolumn' is set.

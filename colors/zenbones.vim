@@ -211,6 +211,7 @@ highlight! link TabLineFill StatusLineNC
 highlight! link TelescopeBorder FloatBorder
 highlight! link TelescopeSelection CursorLine
 highlight! link TermCursor Cursor
+highlight! link TermCursorNC lCursor
 highlight! link TroubleNormal Function
 highlight! link TroubleSource Constant
 highlight! link TroubleText Function

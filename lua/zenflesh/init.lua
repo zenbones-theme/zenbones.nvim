@@ -161,7 +161,7 @@ local theme = lush(function()
 		-- These groups are for the native LSP client. Some other LSP clients may
 		-- use these groups, or use their own. Consult your LSP client's
 		-- documentation.
-		
+
 		LspReferenceText                        { ColorColumn }, -- used for highlighting "text" references
 		LspReferenceRead                        { ColorColumn }, -- used for highlighting "read" references
 		LspReferenceWrite                       { ColorColumn }, -- used for highlighting "write" references
