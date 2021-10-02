@@ -52,7 +52,7 @@ highlight BufferVisibleIndex guifg=#CAD0D4 guibg=NONE guisp=NONE gui=NONE
 highlight BufferVisibleSign guifg=#CAD0D4 guibg=NONE guisp=NONE gui=NONE
 highlight CocMarkdownLink guifg=#66A5AD guibg=NONE guisp=NONE gui=underline
 highlight ColorColumn guifg=NONE guibg=#675047 guisp=NONE gui=NONE
-highlight Comment guifg=#6C6765 guibg=NONE guisp=NONE gui=italic
+highlight Comment guifg=#6D6764 guibg=NONE guisp=NONE gui=italic
 highlight Conceal guifg=#8D9499 guibg=NONE guisp=NONE gui=bold,italic
 highlight Constant guifg=#868C91 guibg=NONE guisp=NONE gui=italic
 highlight Cursor guifg=#171514 guibg=#C4CACF guisp=NONE gui=NONE
@@ -85,7 +85,7 @@ highlight Identifier guifg=#979FA4 guibg=NONE guisp=NONE gui=NONE
 highlight IncSearch guifg=#1C1918 guibg=#B279A7 guisp=NONE gui=bold
 highlight IndentBlanklineChar guifg=#373432 guibg=NONE guisp=NONE gui=NONE
 highlight Italic guifg=NONE guibg=NONE guisp=NONE gui=italic
-highlight LightspeedGreyWash guifg=#6C6765 guibg=NONE guisp=NONE gui=NONE
+highlight LightspeedGreyWash guifg=#6D6764 guibg=NONE guisp=NONE gui=NONE
 highlight LightspeedLabel guifg=#B279A7 guibg=NONE guisp=NONE gui=bold,underline
 highlight LightspeedLabelDistant guifg=#66A5AD guibg=NONE guisp=NONE gui=bold,underline
 highlight LightspeedLabelDistantOverlapped guifg=#66A5AD guibg=NONE guisp=NONE gui=underline
@@ -112,7 +112,7 @@ highlight PmenuThumb guifg=NONE guibg=#8B827D guisp=NONE gui=NONE
 highlight Search guifg=#B4BDC3 guibg=#73516C guisp=NONE gui=NONE
 highlight SneakLabelMask guifg=#B279A7 guibg=#B279A7 guisp=NONE gui=NONE
 highlight Special guifg=#9CA4AA guibg=NONE guisp=NONE gui=bold
-highlight SpecialComment guifg=#6C6765 guibg=NONE guisp=NONE gui=bold
+highlight SpecialComment guifg=#6D6764 guibg=NONE guisp=NONE gui=bold
 highlight SpecialKey guifg=#524C4A guibg=NONE guisp=NONE gui=italic
 highlight SpellBad guifg=#CB7A83 guibg=NONE guisp=NONE gui=undercurl
 highlight SpellCap guifg=#CB7A83 guibg=NONE guisp=NONE gui=undercurl
