@@ -6,10 +6,10 @@ local diff_bg_l = 0
 
 local darkness = vim.g.zenflesh_darkness
 if darkness == "stark" then
-	normal_bg = normal_bg.abs_da(3).sa(8)
+	normal_bg = p.bg_stark
 	diff_bg_l = -3
 elseif darkness == "warm" then
-	normal_bg = normal_bg.abs_li(3).de(12)
+	normal_bg = p.bg_warm
 	diff_bg_l = 3
 elseif darkness ~= nil then
 	local error_msg = "Unknown zenflesh_darkness value: " .. vim.inspect(darkness)
