@@ -1,18 +1,18 @@
 # This file is auto-generated from lua/zenbones/template/tmux.lua
-set -g status-left ' #[fg=#88507D,bold]#{s/root//:client_key_table} '
-set -g status-right '#[fg=#88507D,bold] [#S]#[fg=#88507D,bold] [%d/%m] #[fg=#88507D,bold][%I:%M%p] '
-set -g status-style fg='#88507D',bg='#212F19'
+set -g status-left ' #[fg=#B279A7,bold]#{s/root//:client_key_table} '
+set -g status-right '#[fg=#B279A7,bold] [#S]#[fg=#B279A7,bold] [%d/%m] #[fg=#B279A7,bold][%I:%M%p] '
+set -g status-style fg='#B279A7',bg='#C7D6D0'
 
-set -g window-status-current-style fg='#88507D',bg='#212F19',bold
+set -g window-status-current-style fg='#B279A7',bg='#C7D6D0',bold
 
-set -g pane-border-style fg='#88507D'
-set -g pane-active-border-style fg='#88507D'
+set -g pane-border-style fg='#B279A7'
+set -g pane-active-border-style fg='#B279A7'
 
-set -g message-style fg='#E7EEE8',bg='#D8E6D0'
+set -g message-style fg='#0F191F',bg='#3A4A44'
 
-set -g display-panes-active-colour '#88507D'
-set -g display-panes-colour '#88507D'
+set -g display-panes-active-colour '#B279A7'
+set -g display-panes-colour '#B279A7'
 
-set -g clock-mode-colour '#88507D'
+set -g clock-mode-colour '#B279A7'
 
-set -g mode-style fg='#E7EEE8',bg='#D8E6D0'
+set -g mode-style fg='#0F191F',bg='#3A4A44'

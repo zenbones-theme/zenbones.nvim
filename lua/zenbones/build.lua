@@ -8,6 +8,10 @@ local function reset_base()
 	package.loaded["zenflesh.palette"] = nil
 	package.loaded["zenflesh.terminal"] = nil
 	package.loaded["zenflesh"] = nil
+
+	package.loaded["zenbones.neovim.palette"] = nil
+	package.loaded["zenbones.neovim.terminal"] = nil
+	package.loaded["zenbones.neovim"] = nil
 end
 
 local function build()

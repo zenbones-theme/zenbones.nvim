@@ -1,23 +1,23 @@
 " This file is auto-generated from lua/zenbones/template/lightline.lua
 let s:p = {'normal': {}, 'inactive': {}, 'insert': {}, 'replace': {}, 'visual': {}, 'tabline': {}}
 
-let s:p.normal.left = [ [ "#46624A", "#9AB79E", "bold" ], [ "#46624A", "#B1C8B5" ] ]
-let s:p.normal.middle = [ [ "#212F19", "#C0D3C3" ] ]
-let s:p.normal.right = [ [ "#46624A", "#B1C8B5" ], [ "#46624A", "#B1C8B5" ] ]
-let s:p.normal.warning = [ [ "#944927", "#F0E6E4" ] ]
-let s:p.normal.error = [ [ "#A8334C", "#E7DDDE" ] ]
+let s:p.normal.left = [ [ "#9FBDD1", "#4B7C9B", "bold" ], [ "#9FBDD1", "#33566B" ] ]
+let s:p.normal.middle = [ [ "#C7D6D0", "#284253" ] ]
+let s:p.normal.right = [ [ "#9FBDD1", "#33566B" ], [ "#9FBDD1", "#33566B" ] ]
+let s:p.normal.warning = [ [ "#B77E64", "#362C28" ] ]
+let s:p.normal.error = [ [ "#DE6E7C", "#3A2A2C" ] ]
 
-let s:p.inactive.left =  [ [ "#597F43", "#CCDBCE" ], [ "#597F43", "#CCDBCE" ] ]
-let s:p.inactive.middle = [ [ "#597F43", "#CCDBCE" ] ]
-let s:p.inactive.right = [ [ "#597F43", "#CCDBCE" ] ]
+let s:p.inactive.left =  [ [ "#D6E1DC", "#1F3441" ], [ "#D6E1DC", "#1F3441" ] ]
+let s:p.inactive.middle = [ [ "#D6E1DC", "#1F3441" ] ]
+let s:p.inactive.right = [ [ "#D6E1DC", "#1F3441" ] ]
 
-let s:p.insert.left = [ [ "#46624A", "#99C6E9", "bold" ], [ "#46624A", "#B1C8B5" ] ]
-let s:p.replace.left = [ [ "#46624A", "#E7CBCE", "bold" ], [ "#46624A", "#B1C8B5" ] ]
-let s:p.visual.left = [ [ "#46624A", "#D8E6D0", "bold" ], [ "#46624A", "#B1C8B5" ] ]
+let s:p.insert.left = [ [ "#9FBDD1", "#455C6F", "bold" ], [ "#9FBDD1", "#33566B" ] ]
+let s:p.replace.left = [ [ "#9FBDD1", "#5B2E33", "bold" ], [ "#9FBDD1", "#33566B" ] ]
+let s:p.visual.left = [ [ "#9FBDD1", "#3A4A44", "bold" ], [ "#9FBDD1", "#33566B" ] ]
 
-let s:p.tabline.left = [ [ "#212F19", "#B1C8B5", "italic" ] ]
-let s:p.tabline.middle = [ [ "#597F43", "#CCDBCE" ] ]
-let s:p.tabline.right = [ [ "#212F19", "#B1C8B5" ] ]
-let s:p.tabline.tabsel = [ [ "#212F19", "#E7EEE8", "bold" ] ]
+let s:p.tabline.left = [ [ "#C7D6D0", "#33566B", "italic" ] ]
+let s:p.tabline.middle = [ [ "#D6E1DC", "#1F3441" ] ]
+let s:p.tabline.right = [ [ "#C7D6D0", "#33566B" ] ]
+let s:p.tabline.tabsel = [ [ "#C7D6D0", "#0F191F", "bold" ] ]
 
 let g:lightline#colorscheme#zenbones#palette = lightline#colorscheme#fill(s:p)
