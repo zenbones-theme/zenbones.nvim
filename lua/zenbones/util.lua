@@ -21,7 +21,7 @@ end
 
 function M.build(name, specs, palette, terminal, options)
 	local exclude = options.exclude or {}
-	local templates = { "vim", "kitty", "alacritty", "wezterm", "lualine", "lightline", "tmux" }
+	local templates = { "vim", "iterm", "kitty", "alacritty", "wezterm", "lualine", "lightline", "tmux" }
 	for _, t in ipairs(templates) do
 		if not vim.tbl_contains(exclude, t) then
 			write_template(unpack(require("zenbones.template." .. t)(name, specs, palette, terminal)))
