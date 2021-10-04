@@ -176,5 +176,6 @@ lush(specs)
 And there you have it. Just call `colorscheme gruvbones` to use your new
 colorscheme. It respects `&background` and other configurations too.
 
-Also checkout the [neovim](../colors/neovim.lua) colorscheme for a similar and
-complete example.
+Also checkout the [neovim](../colors/neovim.lua) and
+[rosebones](../colors/rosebones.lua) colorscheme for a similar and complete
+example.
