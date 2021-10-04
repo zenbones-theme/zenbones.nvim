@@ -8,7 +8,7 @@ package.loaded[base_name] = nil
 package.loaded["zenbones.neovim.palette"] = nil
 package.loaded["zenbones.neovim"] = nil
 
-require("zenbones.neovim.terminal").setup()
-
 -- include our theme file and pass it to lush to apply
 require "lush"(require "zenbones.neovim")
+
+require("zenbones.neovim.terminal").setup()
