@@ -1,4 +1,3 @@
-local lush = require "lush"
 local p = require "zenflesh.palette"
 
 local colors = {
