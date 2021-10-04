@@ -20,8 +20,10 @@ If you want to make use of the lua version:
 colorscheme zenbones-lush
 colorscheme zenflesh-lush
 
-" Secret https://neovim.io colorscheme
+" https://neovim.io flavor
 colorscheme neovim
+" Rosé Pine flavor - https://rosepinetheme.com
+colorscheme rosebones
 ```
 
 It works pretty much the same as the first one but pretty handy when extending
