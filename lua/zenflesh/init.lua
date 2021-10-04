@@ -16,7 +16,7 @@ elseif darkness ~= nil then
 	vim.api.nvim_echo({ { error_msg, "WarningMsg" } }, true, {})
 end
 
-local italic_comments = type(vim.g.zenflesh_italic_comments) == "boolean" and vim.g.zenflesh_italic_comments or true
+local italic_comments = vim.g.zenflesh_italic_comments ~= false and "italic" or nil
 
 -- stylua: ignore start
 local theme = lush(function()
@@ -43,7 +43,7 @@ local theme = lush(function()
 		ErrorMsg        { Error }, -- error messages on the command line
 		WarningMsg      { fg = p.wood }, -- warning messages
 
-		Comment         { fg = p.bg.li(38).de(24), gui = (italic_comments and "italic" or "NONE") }, -- any comment
+		Comment         { fg = p.bg.li(38).de(24), gui = italic_comments }, -- any comment
 		Conceal         { fg = p.fg.da(20), gui = "bold,italic" }, -- placeholder characters substituted for concealed text (see 'conceallevel')
 
 		Cursor          { bg = p.fg.li(20), fg = p.bg.da(20) }, -- character under the cursor
