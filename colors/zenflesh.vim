@@ -202,10 +202,14 @@ highlight! link SignColumn LineNr
 highlight! link Sneak Search
 highlight! link SneakLabel WildMenu
 highlight! link SpellLocal SpellCap
+highlight! link TSConstBuiltin Number
+highlight! link TSConstMacro Number
 highlight! link TSDanger Error
+highlight! link TSNamespace Special
 highlight! link TSNote LspDiagnosticsDefaultInformation
 highlight! link TSTag Special
 highlight! link TSVariable Identifier
+highlight! link TSVariableBuiltin Number
 highlight! link TSWarning WarningMsg
 highlight! link TabLineFill StatusLineNC
 highlight! link TelescopeBorder FloatBorder
