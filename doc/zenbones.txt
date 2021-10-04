@@ -32,8 +32,10 @@ If you want to make use of the lua version:
     colorscheme zenbones-lush
     colorscheme zenflesh-lush
     
-    " Secret https://neovim.io colorscheme
+    " https://neovim.io flavor
     colorscheme neovim
+    " Rosé Pine flavor - https://rosepinetheme.com
+    colorscheme rosebones
 <
 
 
