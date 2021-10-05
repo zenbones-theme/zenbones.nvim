@@ -11,6 +11,7 @@ local specs = lush.extends({ theme }).with(function()
 	return {
 		Statement { fg = palette.leaf, gui = "bold" },
 		Special { fg = palette.water, gui = "bold" },
+		Type { fg = palette.text },
 	}
 end)
 

@@ -8,14 +8,14 @@ if base_name == "zenbones" then
 	palette.bg = hsl(32, 57, 95) -- base
 	palette.bg_bright = palette.bg.abs_li(3).sa(6)
 	palette.bg_dim = palette.bg.abs_da(3)
-	palette.fg = hsl(3, 26, 40) -- rose, base: 3, 53, 67
+	palette.fg = hsl(3, 24, 38) -- rose, base: 3, 53, 67
 	palette.rose = hsl(343, 35, 55) -- love
 	palette.leaf = hsl(197, 53, 34) -- pine
 	palette.wood = hsl(35, 81, 56) -- gold
 	palette.water = hsl(189, 30, 48) -- foam
 	palette.blossom = hsl(268, 21, 57) -- iris
 	palette.sky = hsl(189, 30, 48) -- foam
-	palette.text = hsl(248, 19, 40) -- text
+	palette.text = hsl(248, 12, 40) -- text, base: 248, 19, 40
 else
 	palette.bg = hsl(249, 22, 12) -- base
 	palette.bg_stark = palette.bg.abs_da(3).sa(8)
@@ -27,7 +27,7 @@ else
 	palette.water = hsl(189, 43, 73) -- foam
 	palette.blossom = hsl(267, 57, 78) -- iris
 	palette.sky = hsl(190, 15, 73) -- foam
-	palette.text = hsl(245, 50, 91) -- text
+	palette.text = hsl(245, 20, 78) -- text, base: 245, 50, 91
 end
 
 return palette
