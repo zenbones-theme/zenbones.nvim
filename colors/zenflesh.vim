@@ -99,7 +99,7 @@ highlight NeogitHunkHeaderHighlight guifg=#B4BDC3 guibg=#24211F guisp=NONE gui=b
 highlight NonText guifg=#524C4A guibg=NONE guisp=NONE gui=NONE
 highlight Normal guifg=#B4BDC3 guibg=#1C1918 guisp=NONE gui=NONE
 highlight NormalFloat guifg=NONE guibg=#2B2725 guisp=NONE gui=NONE
-highlight Number guifg=NONE guibg=NONE guisp=NONE gui=italic
+highlight Number guifg=#B4BDC3 guibg=NONE guisp=NONE gui=italic
 highlight NvimTreeCursorLine guifg=NONE guibg=#312D2B guisp=NONE gui=NONE
 highlight NvimTreeRootFolder guifg=#6099C0 guibg=NONE guisp=NONE gui=bold
 highlight NvimTreeSpecialFile guifg=#B279A7 guibg=NONE guisp=NONE gui=underline
@@ -120,6 +120,7 @@ highlight SpellRare guifg=#CB7A83 guibg=NONE guisp=NONE gui=undercurl
 highlight Statement guifg=#B4BDC3 guibg=NONE guisp=NONE gui=bold
 highlight StatusLine guifg=#B4BDC3 guibg=#3D3836 guisp=NONE gui=NONE
 highlight StatusLineNC guifg=#CAD0D4 guibg=#312D2B guisp=NONE gui=NONE
+highlight TSConstant guifg=#979FA4 guibg=NONE guisp=NONE gui=bold,italic
 highlight TabLine guifg=#B4BDC3 guibg=#3D3836 guisp=NONE gui=italic
 highlight TabLineSel guifg=NONE guibg=NONE guisp=NONE gui=bold
 highlight TelescopeMatching guifg=#B279A7 guibg=NONE guisp=NONE gui=bold

@@ -54,7 +54,7 @@ highlight CocMarkdownLink guifg=#3B8992 guibg=NONE guisp=NONE gui=underline
 highlight ColorColumn guifg=NONE guibg=#EFD8D3 guisp=NONE gui=NONE
 highlight Comment guifg=#948985 guibg=NONE guisp=NONE gui=italic
 highlight Conceal guifg=#4D5C65 guibg=NONE guisp=NONE gui=bold,italic
-highlight Constant guifg=#556570 guibg=NONE guisp=NONE gui=italic
+highlight Constant guifg=#53636D guibg=NONE guisp=NONE gui=italic
 highlight Cursor guifg=#F2F0EF guibg=#2C363C guisp=NONE gui=NONE
 highlight CursorLine guifg=NONE guibg=#E6E1DF guisp=NONE gui=NONE
 highlight CursorLineNr guifg=#2C363C guibg=NONE guisp=NONE gui=bold
@@ -99,7 +99,7 @@ highlight NeogitHunkHeaderHighlight guifg=#2C363C guibg=#E6E1DF guisp=NONE gui=b
 highlight NonText guifg=#C0B0A8 guibg=NONE guisp=NONE gui=NONE
 highlight Normal guifg=#2C363C guibg=#F0EDEC guisp=NONE gui=NONE
 highlight NormalFloat guifg=NONE guibg=#E1DCD9 guisp=NONE gui=NONE
-highlight Number guifg=NONE guibg=NONE guisp=NONE gui=italic
+highlight Number guifg=#2C363C guibg=NONE guisp=NONE gui=italic
 highlight NvimTreeCursorLine guifg=NONE guibg=#DAD3CF guisp=NONE gui=NONE
 highlight NvimTreeRootFolder guifg=#286486 guibg=NONE guisp=NONE gui=bold
 highlight NvimTreeSpecialFile guifg=#88507D guibg=NONE guisp=NONE gui=underline
@@ -111,7 +111,7 @@ highlight PmenuSel guifg=NONE guibg=#C4B6AF guisp=NONE gui=NONE
 highlight PmenuThumb guifg=NONE guibg=#F7F6F5 guisp=NONE gui=NONE
 highlight Search guifg=#2C363C guibg=#D2A6C8 guisp=NONE gui=NONE
 highlight SneakLabelMask guifg=#88507D guibg=#88507D guisp=NONE gui=NONE
-highlight Special guifg=#4D5C65 guibg=NONE guisp=NONE gui=bold
+highlight Special guifg=#51606B guibg=NONE guisp=NONE gui=bold
 highlight SpecialComment guifg=#948985 guibg=NONE guisp=NONE gui=bold
 highlight SpecialKey guifg=#C0B0A8 guibg=NONE guisp=NONE gui=italic
 highlight SpellBad guifg=#974352 guibg=NONE guisp=NONE gui=undercurl
@@ -120,13 +120,14 @@ highlight SpellRare guifg=#974352 guibg=NONE guisp=NONE gui=undercurl
 highlight Statement guifg=#2C363C guibg=NONE guisp=NONE gui=bold
 highlight StatusLine guifg=#2C363C guibg=#D1C7C3 guisp=NONE gui=NONE
 highlight StatusLineNC guifg=#596A76 guibg=#DAD3CF guisp=NONE gui=NONE
+highlight TSConstant guifg=#44525B guibg=NONE guisp=NONE gui=bold,italic
 highlight TabLine guifg=#2C363C guibg=#D1C7C3 guisp=NONE gui=italic
 highlight TabLineSel guifg=NONE guibg=NONE guisp=NONE gui=bold
 highlight TelescopeMatching guifg=#88507D guibg=NONE guisp=NONE gui=bold
 highlight TelescopeSelectionCaret guifg=#A8334C guibg=#E6E1DF guisp=NONE gui=NONE
 highlight Title guifg=NONE guibg=NONE guisp=NONE gui=bold
 highlight Todo guifg=NONE guibg=NONE guisp=NONE gui=bold,underline
-highlight Type guifg=#5C534F guibg=NONE guisp=NONE gui=NONE
+highlight Type guifg=#6A5549 guibg=NONE guisp=NONE gui=NONE
 highlight Underlined guifg=NONE guibg=NONE guisp=NONE gui=underline
 highlight Visual guifg=NONE guibg=#D2DFE7 guisp=NONE gui=NONE
 highlight WarningMsg guifg=#944927 guibg=NONE guisp=NONE gui=NONE

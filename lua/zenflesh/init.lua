@@ -16,7 +16,7 @@ elseif darkness ~= nil then
 	vim.api.nvim_echo({ { error_msg, "WarningMsg" } }, true, {})
 end
 
-local italic_comments = vim.g.zenflesh_italic_comments ~= false and "italic" or nil
+local italic_comments = vim.g.zenflesh_italic_comments ~= false and "italic" or "NONE"
 
 -- stylua: ignore start
 local theme = lush(function()
@@ -120,7 +120,7 @@ local theme = lush(function()
 		Constant        { fg = p.fg.da(24), gui = "italic" }, -- (preferred) any constant
 		-- String       { }, --   a string constant: "this is a string"
 		-- Character    { }, --  a character constant: 'c', '\n'
-		Number          { gui = "italic" }, --   a number constant: 234, 0xff
+		Number          { fg = p.fg, gui = "italic" }, --   a number constant: 234, 0xff
 		Boolean         { Number }, --  a boolean constant: TRUE, false
 		-- Float        { }, --    a floating point constant: 2.3e10
 
@@ -219,7 +219,7 @@ local theme = lush(function()
 		-- TSComment            { };	-- For comment blocks.
 		-- TSConstructor        { };	-- For constructor calls and definitions: ` { }` in Lua, and Java constructors.
 		-- TSConditional        { };	-- For keywords related to conditionnals.
-		-- TSConstant           { };	-- For constants
+		TSConstant              { Identifier, gui = "bold,italic" };	-- For constants
 		TSConstBuiltin          { Number };	-- For constant that are built in the language: `nil` in Lua.
 		TSConstMacro            { Number };	-- For constants that are defined by macros: `NULL` in C.
 		-- TSError              { };	-- For syntax/parser errors.
