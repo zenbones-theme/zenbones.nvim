@@ -219,7 +219,7 @@ local theme = lush(function()
 		-- TSComment            { };	-- For comment blocks.
 		-- TSConstructor        { };	-- For constructor calls and definitions: ` { }` in Lua, and Java constructors.
 		-- TSConditional        { };	-- For keywords related to conditionnals.
-		TSConstant              { Identifier, gui = "bold,italic" };	-- For constants
+		TSConstant              { Identifier, gui = "bold" };	-- For constants
 		TSConstBuiltin          { Number };	-- For constant that are built in the language: `nil` in Lua.
 		TSConstMacro            { Number };	-- For constants that are defined by macros: `NULL` in C.
 		-- TSError              { };	-- For syntax/parser errors.

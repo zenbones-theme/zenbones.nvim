@@ -120,7 +120,7 @@ highlight SpellRare guifg=#974352 guibg=NONE guisp=NONE gui=undercurl
 highlight Statement guifg=#2C363C guibg=NONE guisp=NONE gui=bold
 highlight StatusLine guifg=#2C363C guibg=#D1C7C3 guisp=NONE gui=NONE
 highlight StatusLineNC guifg=#596A76 guibg=#DAD3CF guisp=NONE gui=NONE
-highlight TSConstant guifg=#44525B guibg=NONE guisp=NONE gui=bold,italic
+highlight TSConstant guifg=#44525B guibg=NONE guisp=NONE gui=bold
 highlight TabLine guifg=#2C363C guibg=#D1C7C3 guisp=NONE gui=italic
 highlight TabLineSel guifg=NONE guibg=NONE guisp=NONE gui=bold
 highlight TelescopeMatching guifg=#88507D guibg=NONE guisp=NONE gui=bold
