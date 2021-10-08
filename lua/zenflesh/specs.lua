@@ -93,7 +93,7 @@ function M.generate(p, opt)
 
 			StatusLine      { bg = p.bg.li(16), fg = p.fg }, -- status line of current window
 			StatusLineNC    { bg = p.bg.li(11), fg = p.fg.li(28) }, -- status lines of not-current windows Note: if this is equal to "StatusLine" Vim will use "^^^" in the status line of the current window.
-			TabLine         { StatusLine, gui = "italic" }, -- tab pages line, not active tab page label
+			TabLine         { StatusLine }, -- tab pages line, not active tab page label
 			TabLineFill     { StatusLineNC }, -- tab pages line, where there are no labels
 			TabLineSel      { gui = "bold" }, -- tab pages line, active tab page label
 			VertSplit       { LineNr }, -- the column separating vertically split windows
