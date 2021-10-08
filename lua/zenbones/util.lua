@@ -29,4 +29,22 @@ function M.build(name, specs, palette, terminal, options)
 	end
 end
 
+function M.resolve_config(base_name)
+	if base_name == "zenbones" then
+		return {
+			lightness = vim.g.zenbones_lightness,
+			comment_gui = vim.g.zenbones_italic_comments ~= false and "italic" or "NONE",
+			dim_noncurrent_window = vim.g.zenbones_dim_noncurrent_window,
+			solid_vert_split = vim.g.zenbones_solid_vert_split,
+		}
+	else
+		return {
+			darkness = vim.g.zenflesh_darkness,
+			comment_gui = vim.g.zenflesh_italic_comments ~= false and "italic" or "NONE",
+			lighten_noncurrent_window = vim.g.zenflesh_lighten_noncurrent_window,
+			solid_vert_split = vim.g.zenflesh_solid_vert_split,
+		}
+	end
+end
+
 return M

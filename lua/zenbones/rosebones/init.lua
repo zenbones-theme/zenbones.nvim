@@ -1,18 +1,16 @@
 local lush = require "lush"
+local util = require "zenbones.util"
 
--- modify base palette (before requiring specs)
-local palette = require "zenbones.rosebones.palette"
+local base_name = util.bg_to_base_name()
+local p = require "zenbones.rosebones.palette"
+
+local specs = require(base_name .. ".specs").generate(p[base_name], util.resolve_config(base_name))
 
 -- extend specs using Lush
-local base_name = require("zenbones.util").bg_to_base_name()
-local theme = require(base_name)
-
-local specs = lush.extends({ theme }).with(function()
+return lush.extends({ specs }).with(function()
 	return {
-		Statement { fg = palette.leaf, gui = "bold" },
-		Special { fg = palette.water, gui = "bold" },
-		Type { fg = palette.text },
+		Statement { fg = p.leaf, gui = "bold" },
+		Special { fg = p.water, gui = "bold" },
+		Type { fg = p.text },
 	}
 end)
-
-return specs
