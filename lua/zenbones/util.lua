@@ -37,13 +37,15 @@ function M.resolve_config(base_name)
 			dim_noncurrent_window = vim.g.zenbones_dim_noncurrent_window,
 			solid_vert_split = vim.g.zenbones_solid_vert_split,
 		}
-	else
+	elseif base_name == "zenflesh" then
 		return {
 			darkness = vim.g.zenflesh_darkness,
 			comment_gui = vim.g.zenflesh_italic_comments ~= false and "italic" or "NONE",
 			lighten_noncurrent_window = vim.g.zenflesh_lighten_noncurrent_window,
 			solid_vert_split = vim.g.zenflesh_solid_vert_split,
 		}
+	else
+		error "Unknown base_name"
 	end
 end
 
