@@ -7,8 +7,12 @@ endif
 
 let g:colors_name = '${name}'
 
+if !exists('g:zenbones_compat')
+    let g:zenbones_compat = !has('nvim')
+endif
+
 ${termcolors}
-if get(g:, "zenbones_compat") != v:true
+if g:zenbones_compat == 0
     let g:colors_name = '${name}'
     lua package.loaded["${specs_path}"] = nil
     lua require "lush"(require "${specs_path}", { force_clean = false })
