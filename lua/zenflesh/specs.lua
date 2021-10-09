@@ -13,7 +13,7 @@ function M.generate(p, opt)
 		normal_bg = p.bg_warm
 		diff_bg_l = 3
 	elseif opt.darkness ~= nil then
-		local error_msg = "Unknown zenflesh_darkness value: " .. vim.inspect(darkness)
+		local error_msg = "Unknown darkness value: " .. vim.inspect(darkness)
 		vim.api.nvim_echo({ { error_msg, "WarningMsg" } }, true, {})
 	end
 
@@ -388,7 +388,7 @@ function M.generate(p, opt)
 		theme,
 	}
 
-	if opt.zenflesh_lighten_noncurrent_window then
+	if opt.lighten_noncurrent_window then
 		table.insert(
 			specs,
 			lush(function()
@@ -399,7 +399,7 @@ function M.generate(p, opt)
 		)
 	end
 
-	if opt.zenflesh_solid_vert_split then
+	if opt.solid_vert_split then
 		table.insert(
 			specs,
 			lush(function()

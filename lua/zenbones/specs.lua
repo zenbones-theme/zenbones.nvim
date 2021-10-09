@@ -13,7 +13,7 @@ function M.generate(p, opt)
 		normal_bg = p.bg_dim
 		diff_bg_l = 4
 	elseif opt.lightness ~= nil then
-		local error_msg = "Unknown zenbones_lightness value: " .. vim.inspect(lightness)
+		local error_msg = "Unknown lightness value: " .. vim.inspect(lightness)
 		vim.api.nvim_echo({ { error_msg, "WarningMsg" } }, true, {})
 	end
 
@@ -388,7 +388,7 @@ function M.generate(p, opt)
 		theme,
 	}
 
-	if opt.zenbones_dim_noncurrent_window then
+	if opt.dim_noncurrent_window then
 		table.insert(
 			specs,
 			lush(function()
@@ -399,7 +399,7 @@ function M.generate(p, opt)
 		)
 	end
 
-	if opt.zenbones_solid_vert_split then
+	if opt.solid_vert_split then
 		table.insert(
 			specs,
 			lush(function()
