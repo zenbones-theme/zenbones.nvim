@@ -9,4 +9,5 @@ local base_name = util.bg_to_base_name()
 -- include our theme file and pass it to lush to apply
 require "lush"(require "zenbones.rosebones")
 
-require("zenbones.rosebones.term").setup(base_name)
+local base_name = require("zenbones.util").bg_to_base_name()
+require("zenbones.neovim.term").setup(base_name)
