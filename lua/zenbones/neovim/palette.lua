@@ -1,18 +1,21 @@
 local lush = require "lush"
-local hsl = lush.hsl
+local hsluv = lush.hsluv
 
-local base_name = require("zenbones.util").bg_to_base_name()
-local palette = require(base_name .. ".palette")
+local M = {}
 
-if base_name == "zenbones" then
-	-- palette.bg = hsl "#d3e4db" -- --accent-bg-color
-	palette.bg = hsl "#e7eee8" -- --bg-color
-	palette.fg = hsl "#202e18" -- --accent-color
-	palette.leaf = palette.leaf.sa(24).li(8) -- need to make green more prominent
-else
-	palette.bg = hsl "#0f191f" -- --bg-color
-	palette.fg = hsl "#c7d6d0" -- --fg-color
-	palette.leaf = hsl "#8fff6d" -- --accent-color
-end
+local zenbones = vim.tbl_extend("keep", {
+	-- bg = hsluv "#d3e4db" -- --accent-bg-color
+	bg = hsluv "#e7eee8", -- --bg-color
+	fg = hsluv "#202e18", -- --accent-color
+	leaf = hsluv "#8fff6d", -- need to make green more prominent
+}, require "zenbones.palette")
+M.zenbones = zenbones
 
-return palette
+local zenflesh = vim.tbl_extend("keep", {
+	bg = hsluv "#0f191f", -- --bg-color
+	fg = hsluv "#c7d6d0", -- --fg-color
+	leaf = hsluv "#8fff6d", -- --accent-color
+}, require "zenflesh.palette")
+M.zenflesh = zenflesh
+
+return M

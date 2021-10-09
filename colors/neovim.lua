@@ -11,4 +11,4 @@ package.loaded["zenbones.neovim"] = nil
 -- include our theme file and pass it to lush to apply
 require "lush"(require "zenbones.neovim")
 
-require("zenbones.neovim.terminal").setup()
+require("zenbones.neovim.term").setup()

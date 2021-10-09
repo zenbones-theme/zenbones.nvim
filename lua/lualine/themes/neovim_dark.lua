@@ -1,13 +1,13 @@
 -- This file is auto-generated from lua/zenbones/template/lualine.lua
-local common_fg = "#9FBDD1"
-local inactive_bg = "#1F3441"
-local inactive_fg = "#D6E1DC"
+local common_fg = "#83B4D2"
+local inactive_bg = "#1F2E37"
+local inactive_fg = "#D1E0DA"
 
 return {
 	normal = {
-		a = { bg = "#4B7C9B", fg = common_fg, gui = "bold" },
-		b = { bg = "#33566B", fg = common_fg },
-		c = { bg = "#284253", fg = "#C7D6D0" },
+		a = { bg = "#4F6F82", fg = common_fg, gui = "bold" },
+		b = { bg = "#334A57", fg = common_fg },
+		c = { bg = "#273944", fg = "#C6D5CF" },
 	},
 
 	insert = {
@@ -19,7 +19,7 @@ return {
 	},
 
 	visual = {
-		a = { bg = "#3A4A44", fg = common_fg, gui = "bold" },
+		a = { bg = "#3D413F", fg = common_fg, gui = "bold" },
 	},
 
 	replace = {

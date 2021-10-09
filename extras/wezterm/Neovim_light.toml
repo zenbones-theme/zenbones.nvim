@@ -1,13 +1,13 @@
 # This file is auto-generated from lua/zenbones/template/wezterm.lua
 # Neovim_light
 [colors]
-foreground = "#212F19"
-background = "#E7EEE8"
-cursor_bg = "#212F19"
-cursor_border = "#EDF2EE"
-cursor_fg = "#EDF2EE"
-selection_bg = "#D8E6D0"
-selection_fg = "#212F19"
+foreground = "#202E18"
+background = "#E5EDE6"
+cursor_bg = "#202E18"
+cursor_border = "#E9EFEA"
+cursor_fg = "#E9EFEA"
+selection_bg = "#B1EA90"
+selection_fg = "#202E18"
 
-ansi = ["#E7EEE8", "#A8334C", "#567A30", "#944927", "#286486", "#88507D", "#3B8992", "#212F19"]
-brights = ["#B9D0BC", "#94253E", "#466522", "#803D1C", "#1D5573", "#7B3B70", "#2B747C", "#4D6E3A"]
+ansi = ["#E5EDE6", "#A8334C", "#90FF6B", "#944927", "#286486", "#88507D", "#3B8992", "#202E18"]
+brights = ["#B3C6B6", "#94253E", "#5AD500", "#803D1C", "#1D5573", "#7B3B70", "#2B747C", "#415934"]
