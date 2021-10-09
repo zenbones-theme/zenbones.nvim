@@ -5,10 +5,18 @@ if exists('g:colors_name')
     set t_Co=256
 endif
 
-set background=${background}
 let g:colors_name = '${name}'
 
 ${termcolors}
+if get(g:, "zenbones_compat") != v:true
+    let g:colors_name = '${name}'
+    lua package.loaded["${specs_path}"] = nil
+    lua require "lush"(require "${specs_path}", { force_clean = false })
+    finish
+else
+${vimcolors}
+endif
+
 if has('terminal')
     let g:terminal_ansi_colors = [
                 \ g:terminal_color_0,
@@ -29,8 +37,6 @@ if has('terminal')
                 \ g:terminal_color_15
                 \ ]
 endif
-
-${vimcolors}
 ]]
 
 local lush = require "lush"
@@ -47,8 +53,8 @@ return function(name, theme, palette, term)
 		string.format("colors/%s.vim", name),
 		template,
 		{
-			background = name == "zenbones" and "light" or "dark",
 			name = name,
+			specs_path = name,
 			termcolors = termcolors,
 			vimcolors = vimcolors,
 		},

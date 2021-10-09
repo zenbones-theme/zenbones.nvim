@@ -5,7 +5,6 @@ if exists('g:colors_name')
     set t_Co=256
 endif
 
-set background=light
 let g:colors_name = 'zenbones'
 
 let g:terminal_color_0 = '#F0EDEC'
@@ -25,27 +24,12 @@ let g:terminal_color_13 = '#7B3B70'
 let g:terminal_color_14 = '#2B747C'
 let g:terminal_color_15 = '#4F5E68'
 
-if has('terminal')
-    let g:terminal_ansi_colors = [
-                \ g:terminal_color_0,
-                \ g:terminal_color_1,
-                \ g:terminal_color_2,
-                \ g:terminal_color_3,
-                \ g:terminal_color_4,
-                \ g:terminal_color_5,
-                \ g:terminal_color_6,
-                \ g:terminal_color_7,
-                \ g:terminal_color_8,
-                \ g:terminal_color_9,
-                \ g:terminal_color_10,
-                \ g:terminal_color_11,
-                \ g:terminal_color_12,
-                \ g:terminal_color_13,
-                \ g:terminal_color_14,
-                \ g:terminal_color_15
-                \ ]
-endif
-
+if get(g:, "zenbones_compat") != v:true
+    let g:colors_name = 'zenbones'
+    lua package.loaded["zenbones"] = nil
+    lua require "lush"(require "zenbones", { force_clean = false })
+    finish
+else
 highlight Bold guifg=NONE guibg=NONE guisp=NONE gui=bold
 highlight BufferVisible guifg=#596A76 guibg=NONE guisp=NONE gui=NONE
 highlight BufferVisibleIndex guifg=#596A76 guibg=NONE guisp=NONE gui=NONE
@@ -238,3 +222,25 @@ highlight! link markdownH4 Special
 highlight! link markdownH5 Special
 highlight! link markdownH6 Special
 highlight! link markdownLinkTextDelimiter Delimiter
+endif
+
+if has('terminal')
+    let g:terminal_ansi_colors = [
+                \ g:terminal_color_0,
+                \ g:terminal_color_1,
+                \ g:terminal_color_2,
+                \ g:terminal_color_3,
+                \ g:terminal_color_4,
+                \ g:terminal_color_5,
+                \ g:terminal_color_6,
+                \ g:terminal_color_7,
+                \ g:terminal_color_8,
+                \ g:terminal_color_9,
+                \ g:terminal_color_10,
+                \ g:terminal_color_11,
+                \ g:terminal_color_12,
+                \ g:terminal_color_13,
+                \ g:terminal_color_14,
+                \ g:terminal_color_15
+                \ ]
+endif
