@@ -20,7 +20,7 @@ M.zenbones = zenbones
 
 local zenflesh = {
 	bg = hsluv(271.2, 20.2, 8.5), -- base
-	fg = hsluv(14.8, 24, 78.3), -- rose, base: 2, 55, 83
+	fg = hsluv(14.8, 21, 82), -- rose, base: 2, 55, 83
 	rose = hsluv(357.2, 75.7, 62.6), -- love
 	leaf = hsluv(227.7, 81.8, 45.8), -- pine
 	wood = hsluv(53.2, 78.8, 81.3), -- gold
