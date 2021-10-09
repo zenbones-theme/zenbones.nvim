@@ -167,7 +167,7 @@ local specs = lush.extends({ theme }).with(function()
 end)
 
 -- apply terminal colors
-require(base_name .. ".terminal").setup()
+require(base_name .. ".term").setup()
 
 -- include our theme file and pass it to lush to apply
 lush(specs)

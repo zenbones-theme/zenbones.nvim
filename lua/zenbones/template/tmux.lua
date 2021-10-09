@@ -18,11 +18,11 @@ set -g clock-mode-colour '${color5}'
 set -g mode-style fg='${color0}',bg='${selection_background}'
 ]]
 
-return function(name, theme, palette, terminal)
+return function(name, theme, palette, term)
 	local values = {
 		selection_background = theme.Visual.bg.hex,
 	}
-	for i, v in ipairs(terminal.colors) do
+	for i, v in ipairs(term) do
 		values["color" .. (i - 1)] = v.hex
 	end
 

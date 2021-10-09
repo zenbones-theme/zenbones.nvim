@@ -1,8 +1,7 @@
 local palette = require "zenbones.rosebones.palette"
 
-local M = {}
+local M = { colors = {} }
 
-M.colors = {}
 local p = palette.zenbones
 M.colors.zenbones = {
 	p.bg,

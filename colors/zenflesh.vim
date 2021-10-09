@@ -121,7 +121,6 @@ highlight Statement guifg=#B4BDC3 guibg=NONE guisp=NONE gui=bold
 highlight StatusLine guifg=#B4BDC3 guibg=#3D3836 guisp=NONE gui=NONE
 highlight StatusLineNC guifg=#CAD0D4 guibg=#312D2B guisp=NONE gui=NONE
 highlight TSConstant guifg=#979FA4 guibg=NONE guisp=NONE gui=bold
-highlight TabLine guifg=#B4BDC3 guibg=#3D3836 guisp=NONE gui=italic
 highlight TabLineSel guifg=NONE guibg=NONE guisp=NONE gui=bold
 highlight TelescopeMatching guifg=#B279A7 guibg=NONE guisp=NONE gui=bold
 highlight TelescopeSelectionCaret guifg=#DE6E7C guibg=#24211F guisp=NONE gui=NONE
@@ -212,6 +211,7 @@ highlight! link TSTag Special
 highlight! link TSVariable Identifier
 highlight! link TSVariableBuiltin Number
 highlight! link TSWarning WarningMsg
+highlight! link TabLine StatusLine
 highlight! link TabLineFill StatusLineNC
 highlight! link TelescopeBorder FloatBorder
 highlight! link TelescopeSelection CursorLine

@@ -1,7 +1,7 @@
 vim.opt.background = "light"
 vim.g.colors_name = "zenbones-lush"
 
-require("zenbones.terminal").setup()
+require("zenbones.term").setup()
 
 -- By setting our module to nil, we clear lua's cache,
 -- which means the require ahead will *always* occur.

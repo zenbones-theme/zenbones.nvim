@@ -2,22 +2,22 @@ local util = require "zenbones.util"
 
 local function reset_base()
 	package.loaded["zenbones.palette"] = nil
-	package.loaded["zenbones.terminal"] = nil
+	package.loaded["zenbones.term"] = nil
 	package.loaded["zenbones"] = nil
 
 	package.loaded["zenflesh.palette"] = nil
-	package.loaded["zenflesh.terminal"] = nil
+	package.loaded["zenflesh.term"] = nil
 	package.loaded["zenflesh"] = nil
 
 	package.loaded["zenbones.neovim.palette"] = nil
-	package.loaded["zenbones.neovim.terminal"] = nil
+	package.loaded["zenbones.neovim.term"] = nil
 	package.loaded["zenbones.neovim"] = nil
 end
 
 local function build()
 	-- default
 	reset_base()
-	util.build("zenbones", require "zenbones", require "zenbones.palette", require "zenbones.terminal", {})
+	util.build("zenbones", require "zenbones", require "zenbones.palette", require("zenbones.term").colors, {})
 
 	-- bright
 	reset_base()
@@ -26,7 +26,7 @@ local function build()
 		"zenbones_bright",
 		require "zenbones",
 		require "zenbones.palette",
-		require "zenbones.terminal",
+		require("zenbones.term").colors,
 		{ exclude = { "vim", "lightline", "lualine" } }
 	)
 	vim.api.nvim_del_var "zenbones_lightness"
@@ -38,14 +38,14 @@ local function build()
 		"zenbones_dim",
 		require "zenbones",
 		require "zenbones.palette",
-		require "zenbones.terminal",
+		require("zenbones.term").colors,
 		{ exclude = { "vim", "lightline", "lualine" } }
 	)
 	vim.api.nvim_del_var "zenbones_lightness"
 
 	-- default
 	reset_base()
-	util.build("zenflesh", require "zenflesh", require "zenflesh.palette", require "zenflesh.terminal", {})
+	util.build("zenflesh", require "zenflesh", require "zenflesh.palette", require("zenflesh.term").colors, {})
 
 	-- stark
 	reset_base()
@@ -54,7 +54,7 @@ local function build()
 		"zenflesh_stark",
 		require "zenflesh",
 		require "zenflesh.palette",
-		require "zenflesh.terminal",
+		require("zenflesh.term").colors,
 		{ exclude = { "vim", "lightline", "lualine" } }
 	)
 	vim.api.nvim_del_var "zenflesh_darkness"
@@ -66,7 +66,7 @@ local function build()
 		"zenflesh_warm",
 		require "zenflesh",
 		require "zenflesh.palette",
-		require "zenflesh.terminal",
+		require("zenflesh.term").colors,
 		{ exclude = { "vim", "lightline", "lualine" } }
 	)
 	vim.api.nvim_del_var "zenflesh_darkness"
@@ -78,7 +78,7 @@ local function build()
 		"neovim_light",
 		require "zenbones.neovim",
 		require "zenbones.neovim.palette",
-		require "zenbones.neovim.terminal",
+		require("zenbones.neovim.term").colors.zenbones,
 		{ exclude = { "vim" } }
 	)
 
@@ -89,7 +89,7 @@ local function build()
 		"neovim_dark",
 		require "zenbones.neovim",
 		require "zenbones.neovim.palette",
-		require "zenbones.neovim.terminal",
+		require("zenbones.neovim.term").colors.zenflesh,
 		{ exclude = { "vim" } }
 	)
 end

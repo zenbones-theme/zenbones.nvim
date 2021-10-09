@@ -34,9 +34,9 @@ ${vimcolors}
 ]]
 
 local lush = require "lush"
-return function(name, theme, palette, terminal)
+return function(name, theme, palette, term)
 	local termcolors = ""
-	for i, v in ipairs(terminal.colors) do
+	for i, v in ipairs(term) do
 		termcolors = termcolors .. string.format("let g:terminal_color_%s = '%s'\n", (i - 1), v.hex)
 	end
 

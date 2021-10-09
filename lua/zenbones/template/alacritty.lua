@@ -27,13 +27,13 @@ colors:
     white:   '${color15}'
 ]]
 
-return function(name, theme, palette, terminal)
+return function(name, theme, palette, term)
 	local values = {
 		name = name,
 		bg = theme.Normal.bg.hex,
 		fg = theme.Normal.fg.hex,
 	}
-	for i, v in ipairs(terminal.colors) do
+	for i, v in ipairs(term) do
 		values["color" .. (i - 1)] = v.hex
 	end
 
