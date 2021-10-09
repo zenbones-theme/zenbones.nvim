@@ -46,7 +46,7 @@ colorscheme zenbones-lush
 colorscheme zenflesh-lush
 
 " https://neovim.io flavor
-colorscheme neovim
+colorscheme neobones
 " Rosé Pine flavor - https://rosepinetheme.com
 colorscheme rosebones
 ```

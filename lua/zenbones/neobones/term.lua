@@ -1,4 +1,4 @@
-local palette = require "zenbones.neovim.palette"
+local palette = require "zenbones.neobones.palette"
 
 local M = { colors = {} }
 

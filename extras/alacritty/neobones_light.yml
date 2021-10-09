@@ -1,5 +1,5 @@
 # This file is auto-generated from lua/zenbones/template/alacritty.lua
-# neovim_light alacritty colors
+# neobones_light alacritty colors
 colors:
   # Default colors
   primary:

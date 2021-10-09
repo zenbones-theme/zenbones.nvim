@@ -1,5 +1,5 @@
 # This file is auto-generated from lua/zenbones/template/wezterm.lua
-# Neovim_dark
+# Neobones_dark
 [colors]
 foreground = "#C6D5CF"
 background = "#0F191F"

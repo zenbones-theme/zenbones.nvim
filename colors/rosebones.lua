@@ -10,4 +10,4 @@ local base_name = util.bg_to_base_name()
 require "lush"(require "zenbones.rosebones")
 
 local base_name = require("zenbones.util").bg_to_base_name()
-require("zenbones.neovim.term").setup(base_name)
+require("zenbones.rosebones.term").setup(base_name)

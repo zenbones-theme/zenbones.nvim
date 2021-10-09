@@ -57,25 +57,25 @@ local function build()
 	)
 	vim.api.nvim_del_var "zenflesh_darkness"
 
-	-- neovim light
-	package.loaded["zenbones.neovim"] = nil
+	-- neobones light
+	package.loaded["zenbones.neobones"] = nil
 	vim.opt.background = "light"
 	util.build(
-		"neovim_light",
-		require "zenbones.neovim",
-		require "zenbones.neovim.palette",
-		require("zenbones.neovim.term").colors.zenbones,
+		"neobones_light",
+		require "zenbones.neobones",
+		require "zenbones.neobones.palette",
+		require("zenbones.neobones.term").colors.zenbones,
 		{ exclude = { "vim" } }
 	)
 
-	-- neovim dark
-	package.loaded["zenbones.neovim"] = nil
+	-- neobones dark
+	package.loaded["zenbones.neobones"] = nil
 	vim.opt.background = "dark"
 	util.build(
-		"neovim_dark",
-		require "zenbones.neovim",
-		require "zenbones.neovim.palette",
-		require("zenbones.neovim.term").colors.zenflesh,
+		"neobones_dark",
+		require "zenbones.neobones",
+		require "zenbones.neobones.palette",
+		require("zenbones.neobones.term").colors.zenflesh,
 		{ exclude = { "vim" } }
 	)
 end
