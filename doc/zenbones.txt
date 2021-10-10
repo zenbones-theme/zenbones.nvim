@@ -78,6 +78,12 @@ g:zenflesh_italic_comments             Default: `v:true`. Make comments
                                        italicize.
 
 
+                                                  *zenbones-g:zenbones_compat*
+
+g:zenbones_compat                      Set to `1` to turn on compatibility
+                                       mode.
+
+
                                                           *zenbones-lightline*
 
 >
