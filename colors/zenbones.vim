@@ -24,11 +24,7 @@ let g:terminal_color_13 = '#7B3B70'
 let g:terminal_color_14 = '#2B747C'
 let g:terminal_color_15 = '#4F5E68'
 
-if !exists('g:zenbones_compat')
-    let g:zenbones_compat = !has('nvim')
-endif
-if g:zenbones_compat == 0
-    let g:colors_name = 'zenbones'
+if has('nvim') && (!exists('g:zenbones_compat') || g:zenbones_compat == 0)
     lua package.loaded["zenbones"] = nil
     lua require "lush"(require "zenbones", { force_clean = false })
     finish

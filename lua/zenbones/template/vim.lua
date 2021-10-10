@@ -8,11 +8,7 @@ endif
 let g:colors_name = '${name}'
 
 ${termcolors}
-if !exists('g:zenbones_compat')
-    let g:zenbones_compat = !has('nvim')
-endif
-if g:zenbones_compat == 0
-    let g:colors_name = '${name}'
+if has('nvim') && (!exists('g:zenbones_compat') || g:zenbones_compat == 0)
     lua package.loaded["${specs_path}"] = nil
     lua require "lush"(require "${specs_path}", { force_clean = false })
     finish
