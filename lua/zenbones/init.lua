@@ -1,5 +1,4 @@
-local specs = require "zenbones.specs"
+local generator = require "zenbones.specs"
 local p = require "zenbones.palette"
-local config = require("zenbones.util").resolve_config "zenbones"
 
-return specs.generate(p, config)
+return generator.generate(p, generator.get_global_config())

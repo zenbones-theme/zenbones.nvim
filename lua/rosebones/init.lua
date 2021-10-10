@@ -4,7 +4,8 @@ local util = require "zenbones.util"
 local base_name = util.bg_to_base_name()
 local p = require("rosebones.palette")[base_name]
 
-local specs = require(base_name .. ".specs").generate(p, util.resolve_config(base_name))
+local generator = require(base_name .. ".specs")
+local specs = generator.generate(p, generator.get_global_config(base_name))
 
 -- extend specs using Lush
 return lush.extends({ specs }).with(function()

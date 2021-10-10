@@ -7,7 +7,8 @@ local p = require("neobones.palette")[base_name]
 
 -- extend specs using Lush
 if base_name == "zenbones" then
-	local specs = require("zenbones.specs").generate(p, util.resolve_config("zenbones"))
+	local generator = require "zenbones.specs"
+	local specs = generator.generate(p, generator.get_global_config())
 	return lush.extends({ specs }).with(function()
 		return {
 			helpHyperTextJump { fg = hsluv "#195174" }, -- --link-color
@@ -16,7 +17,8 @@ if base_name == "zenbones" then
 		}
 	end)
 else
-	local specs = require("zenflesh.specs").generate(p, util.resolve_config("zenflesh"))
+	local generator = require "zenflesh.specs"
+	local specs = generator.generate(p, generator.get_global_config())
 	return lush.extends({ specs }).with(function()
 		return {
 			FloatBorder { fg = hsluv "#203f57" }, -- --border-color

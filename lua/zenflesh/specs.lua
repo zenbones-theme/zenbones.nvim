@@ -2,6 +2,15 @@ local lush = require "lush"
 
 local M = {}
 
+function M.get_global_config(base_name)
+	return {
+		darkness = vim.g.zenflesh_darkness,
+		comment_gui = vim.g.zenflesh_italic_comments ~= false and "italic" or "NONE",
+		lighten_noncurrent_window = vim.g.zenflesh_lighten_noncurrent_window,
+		solid_vert_split = vim.g.zenflesh_solid_vert_split,
+	}
+end
+
 function M.generate(p, opt)
 	local normal_bg = p.bg
 	local diff_bg_l = 0
