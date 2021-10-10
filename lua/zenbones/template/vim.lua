@@ -44,14 +44,15 @@ endif
 ]]
 
 local lush = require "lush"
-return function(name, theme, palette, term)
+return function(name, specs, p)
+	local term = require("zenbones.term").colors_map(p)
 	local termcolors = ""
 	for i, v in ipairs(term) do
 		termcolors = termcolors .. string.format("let g:terminal_color_%s = '%s'\n", (i - 1), v.hex)
 	end
 
 	-- Compile lush table, concatenate to a single string, and remove blend property
-	local vimcolors = table.concat(vim.fn.sort(lush.compile(theme, { exclude_keys = { "blend" } })), "\n")
+	local vimcolors = table.concat(vim.fn.sort(lush.compile(specs, { exclude_keys = { "blend" } })), "\n")
 
 	return {
 		string.format("colors/%s.vim", name),

@@ -34,22 +34,22 @@ return {
 }
 ]]
 
-return function(name, theme, palette, terminal)
+return function(name, specs, p)
 	return {
 		string.format("lua/lualine/themes/%s.lua", name),
 		template,
 		{
-			common_fg = theme.Folded.fg.hex,
-			inactive_bg = theme.StatusLineNC.bg.hex,
-			inactive_fg = theme.StatusLineNC.fg.hex,
-			normal_a_bg = theme.PmenuSbar.bg.hex,
-			normal_b_bg = theme.PmenuSel.bg.hex,
-			normal_c_bg = theme.StatusLine.bg.hex,
-			normal_c_fg = theme.StatusLine.fg.hex,
-			insert_a_bg = theme.DiffText.bg.hex,
-			command_a_bg = theme.Search.bg.hex,
-			visual_a_bg = theme.Visual.bg.hex,
-			replace_a_bg = theme.DiffDelete.bg.hex,
+			common_fg = specs.Folded.fg.hex,
+			inactive_bg = specs.StatusLineNC.bg.hex,
+			inactive_fg = specs.StatusLineNC.fg.hex,
+			normal_a_bg = specs.PmenuSbar.bg.hex,
+			normal_b_bg = specs.PmenuSel.bg.hex,
+			normal_c_bg = specs.StatusLine.bg.hex,
+			normal_c_fg = specs.StatusLine.fg.hex,
+			insert_a_bg = specs.DiffText.bg.hex,
+			command_a_bg = specs.Search.bg.hex,
+			visual_a_bg = specs.Visual.bg.hex,
+			replace_a_bg = specs.DiffDelete.bg.hex,
 		},
 	}
 end

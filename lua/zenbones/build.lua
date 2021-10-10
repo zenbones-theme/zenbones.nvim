@@ -8,12 +8,12 @@ local function write_template(path, template, values)
 	file:close()
 end
 
-function build(name, specs, palette, terminal, options)
+function build(name, specs, palette, options)
 	local exclude = options.exclude or {}
 	local templates = { "vim", "iterm", "kitty", "alacritty", "wezterm", "lualine", "lightline", "tmux" }
 	for _, t in ipairs(templates) do
 		if not vim.tbl_contains(exclude, t) then
-			write_template(unpack(require("zenbones.template." .. t)(name, specs, palette, terminal)))
+			write_template(unpack(require("zenbones.template." .. t)(name, specs, palette)))
 		end
 	end
 end
@@ -24,7 +24,7 @@ function M.run()
 	-- default
 	package.loaded["zenbones"] = nil
 	local p = require "zenbones.palette"
-	build("zenbones", require "zenbones", p, require("zenbones.term").colors, {})
+	build("zenbones", require "zenbones", p, {})
 
 	-- bright
 	package.loaded["zenbones"] = nil
@@ -33,7 +33,6 @@ function M.run()
 		"zenbones_bright",
 		require "zenbones",
 		require "zenbones.palette",
-		require("zenbones.term").colors,
 		{ exclude = { "vim", "lightline", "lualine" } }
 	)
 	vim.api.nvim_del_var "zenbones_lightness"
@@ -45,14 +44,13 @@ function M.run()
 		"zenbones_dim",
 		require "zenbones",
 		require "zenbones.palette",
-		require("zenbones.term").colors,
 		{ exclude = { "vim", "lightline", "lualine" } }
 	)
 	vim.api.nvim_del_var "zenbones_lightness"
 
 	-- default
 	package.loaded["zenflesh"] = nil
-	build("zenflesh", require "zenflesh", require "zenflesh.palette", require("zenflesh.term").colors, {})
+	build("zenflesh", require "zenflesh", require "zenflesh.palette", {})
 
 	-- stark
 	package.loaded["zenflesh"] = nil
@@ -61,7 +59,6 @@ function M.run()
 		"zenflesh_stark",
 		require "zenflesh",
 		require "zenflesh.palette",
-		require("zenflesh.term").colors,
 		{ exclude = { "vim", "lightline", "lualine" } }
 	)
 	vim.api.nvim_del_var "zenflesh_darkness"
@@ -73,32 +70,19 @@ function M.run()
 		"zenflesh_warm",
 		require "zenflesh",
 		require "zenflesh.palette",
-		require("zenflesh.term").colors,
 		{ exclude = { "vim", "lightline", "lualine" } }
 	)
 	vim.api.nvim_del_var "zenflesh_darkness"
 
 	-- neobones light
-	package.loaded["zenbones.neobones"] = nil
+	package.loaded["neobones"] = nil
 	vim.opt.background = "light"
-	build(
-		"neobones_light",
-		require "zenbones.neobones",
-		require "zenbones.neobones.palette",
-		require("zenbones.neobones.term").colors.zenbones,
-		{ exclude = { "vim" } }
-	)
+	build("neobones_light", require "neobones", require("neobones.palette").zenbones, { exclude = { "vim" } })
 
 	-- neobones dark
-	package.loaded["zenbones.neobones"] = nil
+	package.loaded["neobones"] = nil
 	vim.opt.background = "dark"
-	build(
-		"neobones_dark",
-		require "zenbones.neobones",
-		require "zenbones.neobones.palette",
-		require("zenbones.neobones.term").colors.zenflesh,
-		{ exclude = { "vim" } }
-	)
+	build("neobones_dark", require "neobones", require("neobones.palette").zenflesh, { exclude = { "vim" } })
 end
 
 return M

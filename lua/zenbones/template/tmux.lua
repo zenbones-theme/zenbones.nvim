@@ -18,9 +18,10 @@ set -g clock-mode-colour '${color5}'
 set -g mode-style fg='${color0}',bg='${selection_background}'
 ]]
 
-return function(name, theme, palette, term)
+return function(name, specs, p)
+	local term = require("zenbones.term").colors_map(p)
 	local values = {
-		selection_background = theme.Visual.bg.hex,
+		selection_background = specs.Visual.bg.hex,
 	}
 	for i, v in ipairs(term) do
 		values["color" .. (i - 1)] = v.hex

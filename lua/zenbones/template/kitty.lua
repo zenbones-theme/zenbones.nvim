@@ -40,20 +40,21 @@ color14 ${color14}
 color15 ${color15}
 ]]
 
-return function(name, theme, palette, term)
-	local bg = theme.Normal.bg.hex
-	local fg = theme.Normal.fg.hex
+return function(name, specs, p)
+	local term = require("zenbones.term").colors_map(p)
+	local bg = specs.Normal.bg.hex
+	local fg = specs.Normal.fg.hex
 	local values = {
 		name = name,
 		background = bg,
 		foreground = fg,
-		selection_background = theme.Visual.bg.hex,
+		selection_background = specs.Visual.bg.hex,
 		selection_foreground = fg,
 		url_color = term[13].hex,
 		cursor = fg,
-		active_tab_background = theme.Search.bg.hex,
+		active_tab_background = specs.Search.bg.hex,
 		active_tab_foreground = fg,
-		inactive_tab_background = theme.StatusLine.bg.hex,
+		inactive_tab_background = specs.StatusLine.bg.hex,
 		inactive_tab_foreground = fg,
 	}
 	for i, v in ipairs(term) do

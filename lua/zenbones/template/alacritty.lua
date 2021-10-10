@@ -27,11 +27,12 @@ colors:
     white:   '${color15}'
 ]]
 
-return function(name, theme, palette, term)
+return function(name, specs, p)
+	local term = require("zenbones.term").colors_map(p)
 	local values = {
 		name = name,
-		bg = theme.Normal.bg.hex,
-		fg = theme.Normal.fg.hex,
+		bg = specs.Normal.bg.hex,
+		fg = specs.Normal.fg.hex,
 	}
 	for i, v in ipairs(term) do
 		values["color" .. (i - 1)] = v.hex

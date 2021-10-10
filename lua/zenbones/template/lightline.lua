@@ -23,31 +23,31 @@ let s:p.tabline.tabsel = [ [ "${tabsel_fg}", "${tabsel_bg}", "bold" ] ]
 let g:lightline#colorscheme#zenbones#palette = lightline#colorscheme#fill(s:p)
 ]]
 
-return function(name, theme, palette, terminal)
+return function(name, specs, p)
 	return {
 		string.format("autoload/lightline/colorscheme/%s.vim", name),
 		template,
 		{
-			common_fg = theme.Folded.fg.hex,
-			inactive_bg = theme.StatusLineNC.bg.hex,
-			inactive_fg = theme.StatusLineNC.fg.hex,
-			normal_a_bg = theme.PmenuSbar.bg.hex,
-			normal_b_bg = theme.PmenuSel.bg.hex,
-			normal_c_bg = theme.StatusLine.bg.hex,
-			normal_c_fg = theme.StatusLine.fg.hex,
-			insert_a_bg = theme.DiffText.bg.hex,
-			visual_a_bg = theme.Visual.bg.hex,
-			replace_a_bg = theme.DiffDelete.bg.hex,
-			tabline_left_bg = theme.PmenuSel.bg.hex,
-			tabline_left_fg = theme.Normal.fg.hex,
-			tabline_right_bg = theme.PmenuSel.bg.hex,
-			tabline_right_fg = theme.Normal.fg.hex,
-			tabsel_bg = theme.Normal.bg.hex,
-			tabsel_fg = theme.Normal.fg.hex,
-			warning_bg = theme.DiagnosticVirtualTextWarn.bg.hex,
-			warning_fg = theme.DiagnosticVirtualTextWarn.fg.hex,
-			error_bg = theme.LspDiagnosticsVirtualTextError.bg.hex,
-			error_fg = theme.LspDiagnosticsVirtualTextError.fg.hex,
+			common_fg = specs.Folded.fg.hex,
+			inactive_bg = specs.StatusLineNC.bg.hex,
+			inactive_fg = specs.StatusLineNC.fg.hex,
+			normal_a_bg = specs.PmenuSbar.bg.hex,
+			normal_b_bg = specs.PmenuSel.bg.hex,
+			normal_c_bg = specs.StatusLine.bg.hex,
+			normal_c_fg = specs.StatusLine.fg.hex,
+			insert_a_bg = specs.DiffText.bg.hex,
+			visual_a_bg = specs.Visual.bg.hex,
+			replace_a_bg = specs.DiffDelete.bg.hex,
+			tabline_left_bg = specs.PmenuSel.bg.hex,
+			tabline_left_fg = specs.Normal.fg.hex,
+			tabline_right_bg = specs.PmenuSel.bg.hex,
+			tabline_right_fg = specs.Normal.fg.hex,
+			tabsel_bg = specs.Normal.bg.hex,
+			tabsel_fg = specs.Normal.fg.hex,
+			warning_bg = specs.DiagnosticVirtualTextWarn.bg.hex,
+			warning_fg = specs.DiagnosticVirtualTextWarn.fg.hex,
+			error_bg = specs.LspDiagnosticsVirtualTextError.bg.hex,
+			error_fg = specs.LspDiagnosticsVirtualTextError.fg.hex,
 		},
 	}
 end

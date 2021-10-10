@@ -43,7 +43,8 @@ local function key_to_xml(key, color)
 	return xml
 end
 
-return function(name, theme, palette, term)
+return function(name, specs, p)
+	local term = require("zenbones.term").colors_map(p)
 	local colors = {
 		["Ansi 0"] = term[1],
 		["Ansi 1"] = term[2],
@@ -61,17 +62,17 @@ return function(name, theme, palette, term)
 		["Ansi 13"] = term[14],
 		["Ansi 14"] = term[15],
 		["Ansi 15"] = term[16],
-		Foreground = theme.Normal.fg,
-		Background = theme.Normal.bg,
+		Foreground = specs.Normal.fg,
+		Background = specs.Normal.bg,
 		Bold = term[9],
-		Cursor = theme.Cursor.bg,
-		["Cursor Text"] = theme.Cursor.fg,
-		["Cursor Guide"] = theme.CursorLine.bg,
+		Cursor = specs.Cursor.bg,
+		["Cursor Text"] = specs.Cursor.fg,
+		["Cursor Guide"] = specs.CursorLine.bg,
 		Link = term[13],
-		Selection = theme.Visual.bg,
-		["Selected Text"] = theme.Normal.fg,
-		Badge = theme.Comment.fg,
-		Tab = theme.Normal.bg,
+		Selection = specs.Visual.bg,
+		["Selected Text"] = specs.Normal.fg,
+		Badge = specs.Comment.fg,
+		Tab = specs.Normal.bg,
 	}
 
 	local template = start_template
