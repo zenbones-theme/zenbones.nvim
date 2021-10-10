@@ -21,12 +21,12 @@ diffs, search matches.
 Example installation using packer:
 
 ```lua
-use "mcchrish/zenbones.nvim"
-
--- Optionally install Lush. Useful if you want to extend the theme
--- e.g. create a statusline plugin theme using zenbones colors
-use "rktjmp/lush.nvim"
--- See Advanced Usage section for more details
+use {
+    "mcchrish/zenbones.nvim",
+    -- Optionally install Lush. Allows for more configuration or extending the colorscheme
+    requires = "rktjmp/lush.nvim"
+    -- See Advanced Usage section for more details
+}
 ```
 
 ## Usage
@@ -36,14 +36,6 @@ Just apply the colorscheme as usual:
 ```vim
 colorscheme zenbones " light
 colorscheme zenflesh " dark
-```
-
-If you want to make use of the lua version:
-
-```vim
-" Requires `neovim` and `rktjmp/lush.nvim` installed
-colorscheme zenbones-lush
-colorscheme zenflesh-lush
 
 " https://neovim.io flavor
 colorscheme neobones

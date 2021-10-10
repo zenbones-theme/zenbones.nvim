@@ -11,14 +11,6 @@ Just apply the colorscheme as usual:
 ```vim
 colorscheme zenbones " light
 colorscheme zenflesh " dark
-```
-
-If you want to make use of the lua version:
-
-```vim
-" Requires `neovim` and `rktjmp/lush.nvim` installed
-colorscheme zenbones-lush
-colorscheme zenflesh-lush
 
 " https://neovim.io flavor
 colorscheme neobones
@@ -31,7 +23,7 @@ or customizing the colors to your likings.
 
 ## Configuration
 
-Configuration is only available for `zenbones-lush` and `zenflesh-lush`.
+Configuration is only available for neovim.
 
 #### g:zenbones_lightness
 
