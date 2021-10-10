@@ -5,7 +5,6 @@ local hsluv = lush.hsluv
 local base_name = util.bg_to_base_name()
 local p = require("neobones.palette")[base_name]
 
--- extend specs using Lush
 if base_name == "zenbones" then
 	local generator = require "zenbones.specs"
 	local specs = generator.generate(p, generator.get_global_config())

@@ -81,6 +81,35 @@ print(theme.StatusLine.bg.hex)
 print(palette.blossom.darken(20).hex)
 ```
 
+Here's an example of how to extend/override some highlights:
+
+```lua
+local function customize_zenbones()
+	if vim.g.colors_name ~= "zenbones" then
+		return
+	end
+
+	local lush = require "lush"
+	local base = require "zenbones"
+
+	local specs = lush.parse(function()
+		return {
+			TabLine { base.TabLine, gui = "italic" }, -- setting gui to "italic"
+		}
+	end)
+
+	lush.apply(lush.compile(specs))
+end
+
+return customize_zenbones
+```
+
+And then somewhere in your config:
+
+```vim
+autocmd VimEnter,ColorScheme * lua require("customize_zenbones")()
+```
+
 See also
 [Lush's documentation](https://github.com/rktjmp/lush.nvim#advanced-usage) for
 more options.
@@ -156,6 +185,6 @@ require("zenbones.term").apply_colors(palette)
 And there you have it. Just call `colorscheme gruvbones` to use your new
 colorscheme. It respects `&background` and other configurations too.
 
-Also checkout the [neovim](../colors/neovim.lua) and
+Also checkout the [neobones](../colors/neobones.lua) and
 [rosebones](../colors/rosebones.lua) colorscheme for a similar and complete
 example.
