@@ -1,14 +1,35 @@
 local util = require "zenbones.util"
 
-local function build()
+local function write_template(path, template, values)
+	print("[write template] " .. path)
+	local content = util.interp(template, values)
+	local file = io.open(path, "w")
+	file:write(content)
+	file:close()
+end
+
+function build(name, specs, palette, terminal, options)
+	local exclude = options.exclude or {}
+	local templates = { "vim", "iterm", "kitty", "alacritty", "wezterm", "lualine", "lightline", "tmux" }
+	for _, t in ipairs(templates) do
+		if not vim.tbl_contains(exclude, t) then
+			write_template(unpack(require("zenbones.template." .. t)(name, specs, palette, terminal)))
+		end
+	end
+end
+
+local M = {}
+
+function M.run()
 	-- default
 	package.loaded["zenbones"] = nil
-	util.build("zenbones", require "zenbones", require "zenbones.palette", require("zenbones.term").colors, {})
+	local p = require "zenbones.palette"
+	build("zenbones", require "zenbones", p, require("zenbones.term").colors, {})
 
 	-- bright
 	package.loaded["zenbones"] = nil
 	vim.g.zenbones_lightness = "bright"
-	util.build(
+	build(
 		"zenbones_bright",
 		require "zenbones",
 		require "zenbones.palette",
@@ -20,7 +41,7 @@ local function build()
 	-- dim
 	package.loaded["zenbones"] = nil
 	vim.g.zenbones_lightness = "dim"
-	util.build(
+	build(
 		"zenbones_dim",
 		require "zenbones",
 		require "zenbones.palette",
@@ -31,12 +52,12 @@ local function build()
 
 	-- default
 	package.loaded["zenflesh"] = nil
-	util.build("zenflesh", require "zenflesh", require "zenflesh.palette", require("zenflesh.term").colors, {})
+	build("zenflesh", require "zenflesh", require "zenflesh.palette", require("zenflesh.term").colors, {})
 
 	-- stark
 	package.loaded["zenflesh"] = nil
 	vim.g.zenflesh_darkness = "stark"
-	util.build(
+	build(
 		"zenflesh_stark",
 		require "zenflesh",
 		require "zenflesh.palette",
@@ -48,7 +69,7 @@ local function build()
 	-- warm
 	package.loaded["zenflesh"] = nil
 	vim.g.zenflesh_darkness = "warm"
-	util.build(
+	build(
 		"zenflesh_warm",
 		require "zenflesh",
 		require "zenflesh.palette",
@@ -60,7 +81,7 @@ local function build()
 	-- neobones light
 	package.loaded["zenbones.neobones"] = nil
 	vim.opt.background = "light"
-	util.build(
+	build(
 		"neobones_light",
 		require "zenbones.neobones",
 		require "zenbones.neobones.palette",
@@ -71,7 +92,7 @@ local function build()
 	-- neobones dark
 	package.loaded["zenbones.neobones"] = nil
 	vim.opt.background = "dark"
-	util.build(
+	build(
 		"neobones_dark",
 		require "zenbones.neobones",
 		require "zenbones.neobones.palette",
@@ -80,4 +101,4 @@ local function build()
 	)
 end
 
-return { build = build }
+return M
