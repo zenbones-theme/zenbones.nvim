@@ -2,7 +2,7 @@ local lush = require "lush"
 local util = require "zenbones.util"
 
 local base_name = util.bg_to_base_name()
-local p = require("zenbones.rosebones.palette")[base_name]
+local p = require("rosebones.palette")[base_name]
 
 local specs = require(base_name .. ".specs").generate(p, util.resolve_config(base_name))
 

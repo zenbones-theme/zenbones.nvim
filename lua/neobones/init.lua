@@ -3,7 +3,7 @@ local util = require "zenbones.util"
 local hsluv = lush.hsluv
 
 local base_name = util.bg_to_base_name()
-local p = require("zenbones.neobones.palette")[base_name]
+local p = require("neobones.palette")[base_name]
 
 -- extend specs using Lush
 if base_name == "zenbones" then
