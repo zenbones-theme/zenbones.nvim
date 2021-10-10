@@ -54,6 +54,10 @@ Default: `v:false`. Make non-current window background warmer than _Normal_.
 
 Default: `v:true`. Make comments italicize.
 
+#### g:zenbones_compat
+
+Set to `1` to turn on compatibility mode.
+
 #### lightline
 
 ```vim

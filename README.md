@@ -25,7 +25,7 @@ use {
     "mcchrish/zenbones.nvim",
     -- Optionally install Lush. Allows for more configuration or extending the colorscheme
     requires = "rktjmp/lush.nvim"
-    -- See Advanced Usage section for more details
+    -- If you don't want to install lush, make sure to set g:zenbones_compat = 1
 }
 ```
 
