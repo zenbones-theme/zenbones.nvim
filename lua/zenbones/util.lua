@@ -1,5 +1,3 @@
-local lush = require "lush"
-local hsluv = lush.hsluv
 local M = {}
 
 -- got from http://lua-users.org/wiki/StringInterpolation
@@ -14,6 +12,8 @@ function M.bg_to_base_name()
 end
 
 function M.palette_extend(p, base_name)
+	local lush = require "lush"
+	local hsluv = lush.hsluv
 	if base_name == "zenbones" then
 		p = vim.tbl_extend("keep", p, {
 			bg = hsluv(39, 12, 94), -- sand
