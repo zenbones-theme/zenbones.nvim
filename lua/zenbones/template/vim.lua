@@ -5,6 +5,7 @@ if exists('g:colors_name')
     set t_Co=256
 endif
 
+set background=${background}
 let g:colors_name = '${name}'
 
 ${termcolors}
@@ -55,6 +56,7 @@ return function(name, specs, p)
 		{
 			name = name,
 			specs_path = name,
+			background = name == "zenbones" and "light" or "dark",
 			termcolors = termcolors,
 			vimcolors = vimcolors,
 		},

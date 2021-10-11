@@ -5,6 +5,7 @@ if exists('g:colors_name')
     set t_Co=256
 endif
 
+set background=dark
 let g:colors_name = 'zenflesh'
 
 let g:terminal_color_0 = '#1C1918'
