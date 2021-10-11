@@ -114,7 +114,9 @@ colors in lua:
 <
 
 
-Here’s an example of how to extend/override some highlights:
+Here’s an example of how to extend/override some highlights.
+
+`lua/customize_zenbones.lua`:
 
 >
     local function customize_zenbones()
@@ -125,12 +127,13 @@ Here’s an example of how to extend/override some highlights:
         local lush = require "lush"
         local base = require "zenbones"
     
+        -- Create some specs
         local specs = lush.parse(function()
             return {
                 TabLine { base.TabLine, gui = "italic" }, -- setting gui to "italic"
-            }
+            
         end)
-    
+        -- Apply specs using lush tool-chain
         lush.apply(lush.compile(specs))
     end
     
@@ -138,7 +141,7 @@ Here’s an example of how to extend/override some highlights:
 <
 
 
-And then somewhere in your config:
+And then somewhere in your `init.vim`:
 
 >
     autocmd VimEnter,ColorScheme * lua require("customize_zenbones")()
@@ -151,25 +154,25 @@ See also Lush’s documentation
 CREATE YOUR OWN COLORSCHEME ~
 
 You can ultimately create your own colorscheme that is based on Zenbones by
-modifying the base palette and extending the specs. Best way to demonstrate
-this is through an example. Let’s make a zenbones-flavored Gruvbox
-colorscheme called `gruvbones`.
+defining a palette and generating a specs. Best way to demonstrate this is
+through an example. Let’s make a zenbones-flavored Gruvbox colorscheme called
+`gruvbones`.
 
 Let’s define our |colorscheme| in `nvim/colors/gruvbones.lua`. And it
 contains the following:
 
 >
-    vim.g.colors_name = "gruvbones"
+    vim.g.colors_name = "gruvbones" -- Required when defining a colorscheme
     
     local lush = require "lush"
-    local hsluv = lush.hsluv -- human-friendly hsl
+    local hsluv = lush.hsluv -- Human-friendly hsl
     local util = require "zenbones.util"
     
-    -- let's base bg=dark, bg=light on zenflesh, zenbones specs respectively
+    -- Let's base bg=dark, bg=light on zenflesh, zenbones specs respectively
     local base_name = util.bg_to_base_name()
     
-    -- create a palette. Use palette_extend to fill unspecified colors
-    -- based on https://github.com/gruvbox-community/gruvbox#palette
+    -- Define a palette. Use `palette_extend` to fill unspecified colors
+    -- Based on https://github.com/gruvbox-community/gruvbox#palette
     local palette
     if base_name == "zenbones" then
         palette = util.palette_extend({
@@ -195,11 +198,11 @@ contains the following:
         }, "zenflesh")
     end
     
-    -- generate the lush specs using the generator util
+    -- Generate the lush specs using the generator util
     local generator = require(base_name .. ".specs")
     local base_specs = generator.generate(palette, generator.get_global_config(base_name))
     
-    -- optionally extend specs using Lush
+    -- Optionally extend specs using Lush
     local specs = lush.extends({ base_specs }).with(function()
         return {
             Statement { base_specs.Statement, fg = palette.rose },
@@ -208,10 +211,10 @@ contains the following:
         }
     end)
     
-    -- include our theme file and pass it to lush to apply
+    -- Pass the specs to lush to apply
     lush(specs)
     
-    -- optionally, set term colors
+    -- Optionally set term colors
     require("zenbones.term").apply_colors(palette)
 <
 
