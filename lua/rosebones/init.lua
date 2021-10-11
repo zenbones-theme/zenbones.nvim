@@ -5,7 +5,6 @@ local p = require("rosebones.palette")[bg]
 local generator = require "zenbones.specs"
 local specs = generator.generate(p, bg, generator.get_global_config("rosebones", bg))
 
--- extend specs using Lush
 return lush.extends({ specs }).with(function()
 	return {
 		Statement { fg = p.leaf, gui = "bold" },
