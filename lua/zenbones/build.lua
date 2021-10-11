@@ -77,12 +77,12 @@ function M.run()
 	-- neobones light
 	package.loaded["neobones"] = nil
 	vim.opt.background = "light"
-	build("neobones_light", require "neobones", require("neobones.palette").zenbones, { exclude = { "vim" } })
+	build("neobones_light", require "neobones", require("neobones.palette").light, { exclude = { "vim" } })
 
 	-- neobones dark
 	package.loaded["neobones"] = nil
 	vim.opt.background = "dark"
-	build("neobones_dark", require "neobones", require("neobones.palette").zenflesh, { exclude = { "vim" } })
+	build("neobones_dark", require "neobones", require("neobones.palette").dark, { exclude = { "vim" } })
 end
 
 return M

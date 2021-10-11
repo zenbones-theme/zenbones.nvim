@@ -7,14 +7,10 @@ function M.interp(s, tab)
 	end))
 end
 
-function M.bg_to_base_name()
-	return vim.opt.background:get() == "light" and "zenbones" or "zenflesh"
-end
-
-function M.palette_extend(p, base_name)
+function M.palette_extend(p, base_bg)
 	local lush = require "lush"
 	local hsluv = lush.hsluv
-	if base_name == "zenbones" then
+	if base_bg == "light" then
 		p = vim.tbl_extend("keep", p, {
 			bg = hsluv(39, 12, 94), -- sand
 			fg = hsluv(230, 30, 22), -- stone
@@ -37,7 +33,7 @@ function M.palette_extend(p, base_name)
 			sky1 = p.sky.sa(20).da(16),
 			fg1 = p.fg.li(22),
 		})
-	elseif base_name == "zenflesh" then
+	else
 		-- default
 		p = vim.tbl_extend("keep", p, {
 			bg = hsluv(39, 9, 9), -- sand
@@ -62,8 +58,6 @@ function M.palette_extend(p, base_name)
 			sky1 = p.sky.sa(20).li(16),
 			fg1 = p.fg.da(22),
 		})
-	else
-		error "Unknown base_name"
 	end
 end
 

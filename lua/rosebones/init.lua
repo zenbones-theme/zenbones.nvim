@@ -1,11 +1,9 @@
 local lush = require "lush"
-local util = require "zenbones.util"
-
-local base_name = util.bg_to_base_name()
-local p = require("rosebones.palette")[base_name]
+local bg = vim.opt.background:get()
+local p = require("rosebones.palette")[bg]
 
 local generator = require "zenbones.specs"
-local specs = generator.generate(p, base_name, generator.get_global_config(base_name, "rosebones"))
+local specs = generator.generate(p, bg, generator.get_global_config("rosebones", bg))
 
 -- extend specs using Lush
 return lush.extends({ specs }).with(function()

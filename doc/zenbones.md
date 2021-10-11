@@ -139,13 +139,12 @@ local lush = require "lush"
 local hsluv = lush.hsluv -- Human-friendly hsl
 local util = require "zenbones.util"
 
--- Let's base bg=dark, bg=light on zenflesh, zenbones specs respectively
-local base_name = util.bg_to_base_name()
+local bg = vim.opt.background:get()
 
 -- Define a palette. Use `palette_extend` to fill unspecified colors
 -- Based on https://github.com/gruvbox-community/gruvbox#palette
 local palette
-if base_name == "zenbones" then
+if bg == "light" then
 	palette = util.palette_extend({
 		bg = hsluv "#fbf1c7",
 		fg = hsluv "#3c3836",
@@ -170,8 +169,8 @@ else
 end
 
 -- Generate the lush specs using the generator util
-local generator = require(base_name .. ".specs")
-local base_specs = generator.generate(palette, generator.get_global_config(base_name))
+local generator = require "zenbones.specs"
+local base_specs = generator.generate(palette, bg, generator.get_global_config("gruvbones", bg))
 
 -- Optionally extend specs using Lush
 local specs = lush.extends({ base_specs }).with(function()
