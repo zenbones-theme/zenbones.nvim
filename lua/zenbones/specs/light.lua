@@ -2,14 +2,11 @@ local lush = require "lush"
 
 local function generate(p, opt)
 	local normal_bg = p.bg
-	local diff_bg_l = 0
 
 	if opt.lightness == "bright" then
 		normal_bg = p.bg_bright
-		diff_bg_l = -4
 	elseif opt.lightness == "dim" then
 		normal_bg = p.bg_dim
-		diff_bg_l = 4
 	elseif opt.lightness ~= nil then
 		local error_msg = "Unknown lightness value: " .. vim.inspect(lightness)
 		vim.api.nvim_echo({ { error_msg, "WarningMsg" } }, true, {})
@@ -55,10 +52,10 @@ local function generate(p, opt)
 			CursorColumn    { CursorLine }, -- Screen-column at the cursor, when 'cursorcolumn' is set.
 			ColorColumn     { bg = p.wood.de(38).li(80) }, -- used for the columns set with 'colorcolumn'
 
-			DiffAdd         { bg = p.leaf.de(77).li(82).abs_da(diff_bg_l) }, -- diff mode: Added line |diff.txt|
-			DiffChange      { bg = p.water.de(22).li(76).abs_da(diff_bg_l) }, -- diff mode: Changed line |diff.txt|
-			DiffDelete      { bg = p.rose.de(37).li(74).abs_da(diff_bg_l) }, -- diff mode: Deleted line |diff.txt|
-			DiffText        { bg = p.water.de(24).li(64).abs_da(diff_bg_l), fg = p.fg }, -- diff mode: Changed text within a changed line |diff.txt|
+			DiffAdd         { bg = p.leaf.de(42).li(76) }, -- diff mode: Added line |diff.txt|
+			DiffChange      { bg = p.water.de(22).li(76) }, -- diff mode: Changed line |diff.txt|
+			DiffDelete      { bg = p.rose.de(37).li(74) }, -- diff mode: Deleted line |diff.txt|
+			DiffText        { bg = p.water.de(24).li(64), fg = p.fg }, -- diff mode: Changed text within a changed line |diff.txt|
 
 			LineNr          { fg = Normal.bg.da(32) }, -- Line number for ":number" and ":#" commands, and when 'number' or 'relativenumber' option is set.
 			SignColumn      { LineNr }, -- column where |signs| are displayed
