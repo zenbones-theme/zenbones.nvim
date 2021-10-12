@@ -1,11 +1,9 @@
 local lush = require "lush"
-local util = require "zenbones.util"
 local hsluv = lush.hsluv
-
+local generator = require "zenbones.specs"
 local bg = vim.opt.background:get()
 local p = require("neobones.palette")[bg]
 
-local generator = require "zenbones.specs"
 local specs = generator.generate(p, bg, generator.get_global_config("neobones", bg))
 
 if bg == "light" then
