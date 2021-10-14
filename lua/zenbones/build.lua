@@ -83,6 +83,16 @@ function M.run()
 	package.loaded["neobones"] = nil
 	vim.opt.background = "dark"
 	build("neobones_dark", require "neobones", require("neobones.palette").dark, { exclude = { "vim" } })
+
+	-- zenwritten light
+	package.loaded["zenwritten"] = nil
+	vim.opt.background = "light"
+	build("zenwritten_light", require "zenwritten", require("zenwritten.palette").light, { exclude = { "vim" } })
+
+	-- zenwritten dark
+	package.loaded["zenwritten"] = nil
+	vim.opt.background = "dark"
+	build("zenwritten_dark", require "zenwritten", require("zenwritten.palette").dark, { exclude = { "vim" } })
 end
 
 return M

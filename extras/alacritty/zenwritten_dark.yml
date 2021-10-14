@@ -1,0 +1,27 @@
+# This file is auto-generated from lua/zenbones/template/alacritty.lua
+# zenwritten_dark alacritty colors
+colors:
+  # Default colors
+  primary:
+    background: '#191919'
+    foreground: '#BBBBBB'
+  # Normal colors
+  normal:
+    black:   '#191919'
+    red:     '#DE6E7C'
+    green:   '#819B69'
+    yellow:  '#B77E64'
+    blue:    '#6099C0'
+    magenta: '#B279A7'
+    cyan:    '#66A5AD'
+    white:   '#BBBBBB'
+  # Bright colors
+  bright:
+    black:   '#3D3839'
+    red:     '#E8838F'
+    green:   '#8BAE68'
+    yellow:  '#D68C67'
+    blue:    '#61ABDA'
+    magenta: '#CF86C1'
+    cyan:    '#65B8C1'
+    white:   '#8E8E8E'
