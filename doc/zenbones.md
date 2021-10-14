@@ -12,10 +12,10 @@ Just apply the colorscheme as usual:
 colorscheme zenbones " light
 colorscheme zenflesh " dark
 
-" https://neovim.io flavor
-colorscheme neobones
-" Rosé Pine flavor - https://rosepinetheme.com
-colorscheme rosebones
+colorscheme neobones " https://neovim.io flavor
+colorscheme rosebones " Rosé Pine flavor - https://rosepinetheme.com
+colorscheme forestbones " Everforest flavor - https://github.com/sainnhe/everforest
+colorscheme zenwritten " Zero hue and saturation version
 ```
 
 It works pretty much the same as the first one but pretty handy when extending
