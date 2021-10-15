@@ -9,5 +9,5 @@ cursor_fg = "#0C141A"
 selection_bg = "#3D413F"
 selection_fg = "#C6D5CF"
 
-ansi = ["#0F191F", "#DE6E7C", "#90FF6B", "#B77E64", "#6099C0", "#B279A7", "#66A5AD", "#C6D5CF"]
-brights = ["#263945", "#E8838F", "#A0FF85", "#D68C67", "#61ABDA", "#CF86C1", "#65B8C1", "#98A39E"]
+ansi = ["#0F191F", "#DE6E7C", "#90FF6B", "#B77E64", "#8190D4", "#B279A7", "#66A5AD", "#C6D5CF"]
+brights = ["#263945", "#E8838F", "#A0FF85", "#D68C67", "#92A0E2", "#CF86C1", "#65B8C1", "#98A39E"]

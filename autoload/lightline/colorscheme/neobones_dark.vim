@@ -11,8 +11,8 @@ let s:p.inactive.left =  [ [ "#D1E0DA", "#1F2E37" ], [ "#D1E0DA", "#1F2E37" ] ]
 let s:p.inactive.middle = [ [ "#D1E0DA", "#1F2E37" ] ]
 let s:p.inactive.right = [ [ "#D1E0DA", "#1F2E37" ] ]
 
-let s:p.insert.left = [ [ "#7BA9C5", "#455C6F", "bold" ], [ "#7BA9C5", "#334A57" ] ]
-let s:p.replace.left = [ [ "#7BA9C5", "#5B2E33", "bold" ], [ "#7BA9C5", "#334A57" ] ]
+let s:p.insert.left = [ [ "#7BA9C5", "#303F76", "bold" ], [ "#7BA9C5", "#334A57" ] ]
+let s:p.replace.left = [ [ "#7BA9C5", "#401D21", "bold" ], [ "#7BA9C5", "#334A57" ] ]
 let s:p.visual.left = [ [ "#7BA9C5", "#3D413F", "bold" ], [ "#7BA9C5", "#334A57" ] ]
 
 let s:p.tabline.left = [ [ "#C6D5CF", "#334A57", "italic" ] ]

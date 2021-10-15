@@ -51,10 +51,10 @@ highlight DiagnosticUnderlineInfo guifg=#6099C0 guibg=NONE guisp=NONE gui=underc
 highlight DiagnosticUnderlineWarn guifg=#B77E64 guibg=NONE guisp=NONE gui=undercurl
 highlight DiagnosticVirtualTextError guifg=#DE6E7C guibg=#3A2A2C guisp=NONE gui=NONE
 highlight DiagnosticVirtualTextWarn guifg=#B77E64 guibg=#362C28 guisp=NONE gui=NONE
-highlight DiffAdd guifg=NONE guibg=#374030 guisp=NONE gui=NONE
-highlight DiffChange guifg=NONE guibg=#2D404E guisp=NONE gui=NONE
-highlight DiffDelete guifg=NONE guibg=#5B2E33 guisp=NONE gui=NONE
-highlight DiffText guifg=#B4BDC3 guibg=#455C6F guisp=NONE gui=NONE
+highlight DiffAdd guifg=NONE guibg=#222D16 guisp=NONE gui=NONE
+highlight DiffChange guifg=NONE guibg=#1A2C39 guisp=NONE gui=NONE
+highlight DiffDelete guifg=NONE guibg=#441F23 guisp=NONE gui=NONE
+highlight DiffText guifg=#B4BDC3 guibg=#2D475A guisp=NONE gui=NONE
 highlight Directory guifg=NONE guibg=NONE guisp=NONE gui=bold
 highlight Error guifg=#DE6E7C guibg=NONE guisp=NONE gui=NONE
 highlight FloatBorder guifg=#837771 guibg=NONE guisp=NONE gui=NONE

@@ -11,7 +11,7 @@ return {
 	},
 
 	insert = {
-		a = { bg = "#99C6E9", fg = common_fg, gui = "bold" },
+		a = { bg = "#A2BFD8", fg = common_fg, gui = "bold" },
 	},
 
 	command = {
@@ -23,7 +23,7 @@ return {
 	},
 
 	replace = {
-		a = { bg = "#E7CBCE", fg = common_fg, gui = "bold" },
+		a = { bg = "#EBD8DA", fg = common_fg, gui = "bold" },
 	},
 
 	inactive = {
