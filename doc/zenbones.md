@@ -17,6 +17,7 @@ colorscheme neobones " https://neovim.io flavor
 colorscheme rosebones " Rosé Pine flavor - https://rosepinetheme.com
 colorscheme forestbones " Everforest flavor - https://github.com/sainnhe/everforest
 colorscheme nordbones " Nord flavor - https://www.nordtheme.com/docs/colors-and-palettes
+colorscheme tokyobones " Tokyo Night flavor - https://github.com/enkia/tokyo-night-vscode-theme#color-palette
 ```
 
 It works pretty much the same as the first one but pretty handy when extending
