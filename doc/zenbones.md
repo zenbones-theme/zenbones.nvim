@@ -12,10 +12,11 @@ Just apply the colorscheme as usual:
 colorscheme zenbones " light
 colorscheme zenflesh " dark
 
+colorscheme zenwritten " Zero hue and saturation version
 colorscheme neobones " https://neovim.io flavor
 colorscheme rosebones " Rosé Pine flavor - https://rosepinetheme.com
 colorscheme forestbones " Everforest flavor - https://github.com/sainnhe/everforest
-colorscheme zenwritten " Zero hue and saturation version
+colorscheme nordbones " Nord flavor - https://www.nordtheme.com/docs/colors-and-palettes
 ```
 
 It works pretty much the same as the first one but pretty handy when extending
