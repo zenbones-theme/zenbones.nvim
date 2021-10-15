@@ -1,9 +1,9 @@
 " This file is auto-generated from lua/zenbones/template/lightline.lua
 let s:p = {'normal': {}, 'inactive': {}, 'insert': {}, 'replace': {}, 'visual': {}, 'tabline': {}}
 
-let s:p.normal.left = [ [ "#83B4D2", "#4F6F82", "bold" ], [ "#83B4D2", "#334A57" ] ]
+let s:p.normal.left = [ [ "#7BA9C5", "#4F6F82", "bold" ], [ "#7BA9C5", "#334A57" ] ]
 let s:p.normal.middle = [ [ "#C6D5CF", "#273944" ] ]
-let s:p.normal.right = [ [ "#83B4D2", "#334A57" ], [ "#83B4D2", "#334A57" ] ]
+let s:p.normal.right = [ [ "#7BA9C5", "#334A57" ], [ "#7BA9C5", "#334A57" ] ]
 let s:p.normal.warning = [ [ "#B77E64", "#362C28" ] ]
 let s:p.normal.error = [ [ "#DE6E7C", "#3A2A2C" ] ]
 
@@ -11,9 +11,9 @@ let s:p.inactive.left =  [ [ "#D1E0DA", "#1F2E37" ], [ "#D1E0DA", "#1F2E37" ] ]
 let s:p.inactive.middle = [ [ "#D1E0DA", "#1F2E37" ] ]
 let s:p.inactive.right = [ [ "#D1E0DA", "#1F2E37" ] ]
 
-let s:p.insert.left = [ [ "#83B4D2", "#455C6F", "bold" ], [ "#83B4D2", "#334A57" ] ]
-let s:p.replace.left = [ [ "#83B4D2", "#5B2E33", "bold" ], [ "#83B4D2", "#334A57" ] ]
-let s:p.visual.left = [ [ "#83B4D2", "#3D413F", "bold" ], [ "#83B4D2", "#334A57" ] ]
+let s:p.insert.left = [ [ "#7BA9C5", "#455C6F", "bold" ], [ "#7BA9C5", "#334A57" ] ]
+let s:p.replace.left = [ [ "#7BA9C5", "#5B2E33", "bold" ], [ "#7BA9C5", "#334A57" ] ]
+let s:p.visual.left = [ [ "#7BA9C5", "#3D413F", "bold" ], [ "#7BA9C5", "#334A57" ] ]
 
 let s:p.tabline.left = [ [ "#C6D5CF", "#334A57", "italic" ] ]
 let s:p.tabline.middle = [ [ "#D1E0DA", "#1F2E37" ] ]

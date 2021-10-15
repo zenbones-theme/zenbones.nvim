@@ -1,5 +1,5 @@
 -- This file is auto-generated from lua/zenbones/template/lualine.lua
-local common_fg = "#B0B0B0"
+local common_fg = "#A3A3A3"
 local inactive_bg = "#2E2E2E"
 local inactive_fg = "#CFCFCF"
 

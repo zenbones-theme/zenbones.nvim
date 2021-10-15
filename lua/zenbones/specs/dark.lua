@@ -60,7 +60,7 @@ local function generate(p, opt)
 			LineNr          { fg = Normal.bg.li(30) }, -- Line number for ":number" and ":#" commands, and when 'number' or 'relativenumber' option is set.
 			SignColumn      { LineNr }, -- column where |signs| are displayed
 			FoldColumn      { LineNr, gui = "bold" }, -- 'foldcolumn'
-			Folded          { bg = Normal.bg.li(16), fg = Normal.bg.li(69) }, -- line used for closed folds
+			Folded          { bg = Normal.bg.li(16), fg = Normal.bg.li(64) }, -- line used for closed folds
 			CursorLineNr    { LineNr, fg = p.fg, gui = "bold" }, -- Like LineNr when 'cursorline' or 'relativenumber' is set for the cursor line.
 
 			-- ModeMsg      { }, -- 'showmode' message (e.g., "-- INSERT -- ")
@@ -145,7 +145,7 @@ local function generate(p, opt)
 			Special         { fg = p.fg.da(12), gui = "bold" }, -- (preferred) any special symbol
 			-- SpecialChar  { }, --  special character in a constant
 			-- Tag          { }, --    you can use CTRL-] on this
-			Delimiter       { fg = p.bg.li(52) }, --	character that needs attention
+			Delimiter       { fg = p.bg.li(47) }, --	character that needs attention
 			SpecialComment  { Comment, gui = "bold" }, -- special things inside a comment
 			-- Debug        { }, --    debugging statements
 

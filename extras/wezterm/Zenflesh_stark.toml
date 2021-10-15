@@ -2,12 +2,12 @@
 # Zenflesh_stark
 [colors]
 foreground = "#B4BDC3"
-background = "#161311"
+background = "#171210"
 cursor_bg = "#C4CACF"
-cursor_border = "#171514"
-cursor_fg = "#171514"
+cursor_border = "#181513"
+cursor_fg = "#181513"
 selection_bg = "#37393B"
 selection_fg = "#B4BDC3"
 
-ansi = ["#1C1918", "#DE6E7C", "#819B69", "#B77E64", "#6099C0", "#B279A7", "#66A5AD", "#B4BDC3"]
-brights = ["#3E3834", "#E8838F", "#8BAE68", "#D68C67", "#61ABDA", "#CF86C1", "#65B8C1", "#888F94"]
+ansi = ["#1C1917", "#DE6E7C", "#819B69", "#B77E64", "#6099C0", "#B279A7", "#66A5AD", "#B4BDC3"]
+brights = ["#403833", "#E8838F", "#8BAE68", "#D68C67", "#61ABDA", "#CF86C1", "#65B8C1", "#888F94"]
