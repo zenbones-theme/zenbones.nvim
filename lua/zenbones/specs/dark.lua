@@ -52,10 +52,10 @@ local function generate(p, opt)
 			CursorColumn    { CursorLine }, -- Screen-column at the cursor, when 'cursorcolumn' is set.
 			ColorColumn     { bg = p.wood.de(40).da(38) }, -- used for the columns set with 'colorcolumn'
 
-			DiffAdd         { bg = p.leaf.de(28).da(58) }, -- diff mode: Added line |diff.txt|
-			DiffChange      { bg = p.water.de(24).da(58) }, -- diff mode: Changed line |diff.txt|
-			DiffDelete      { bg = p.rose.de(40).da(58) }, -- diff mode: Deleted line |diff.txt|
-			DiffText        { bg = p.water.de(28).da(38), fg = p.fg }, -- diff mode: Changed text within a changed line |diff.txt|
+			DiffAdd         { bg = p.leaf.saturation(60).lightness(normal_bg.l + 8) }, -- diff mode: Added line |diff.txt|
+			DiffChange      { bg = p.water.saturation(60).lightness(normal_bg.l + 8) }, -- diff mode: Changed line |diff.txt|
+			DiffDelete      { bg = p.rose.saturation(40).lightness(normal_bg.l + 8) }, -- diff mode: Deleted line |diff.txt|
+			DiffText        { bg = p.water.saturation(60).lightness(normal_bg.l + 20), fg = p.fg }, -- diff mode: Changed text within a changed line |diff.txt|
 
 			LineNr          { fg = Normal.bg.li(30) }, -- Line number for ":number" and ":#" commands, and when 'number' or 'relativenumber' option is set.
 			SignColumn      { LineNr }, -- column where |signs| are displayed
