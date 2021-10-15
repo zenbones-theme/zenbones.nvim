@@ -8,8 +8,7 @@ local specs = generator.generate(p, bg, generator.get_global_config("forestbones
 return lush.extends({ specs }).with(function()
 	return {
 		Statement { fg = p.leaf, gui = "bold" },
-		PreProc { fg = p.rose },
-		Operator { fg = p.rose },
+		PreProc { fg = p.sky },
 		Type { fg = p.water },
 	}
 end)
