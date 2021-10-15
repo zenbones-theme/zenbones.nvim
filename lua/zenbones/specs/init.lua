@@ -19,7 +19,6 @@ function M.get_global_config(prefix, base_bg)
 end
 
 function M.generate(p, base_bg, opt)
-	base_bg = base_bg ~= nil and base_bg or "dark"
 	return require("zenbones.specs." .. base_bg)(p, opt)
 end
 
