@@ -13,6 +13,8 @@ M.light = util.palette_extend({
 	water = hsluv "#34548a",
 	blossom = hsluv "#5a4a78",
 	sky = hsluv "#166775",
+	orange = hsluv "#965027",
+	sky1 = hsluv "#33635c",
 }, "light")
 
 M.dark = util.palette_extend {
@@ -25,6 +27,8 @@ M.dark = util.palette_extend {
 	water = hsluv "#7aa2f7",
 	blossom = hsluv "#bb9af7",
 	sky = hsluv "#2ac3de",
+	orange = hsluv "#ff9e64",
+	sky1 = hsluv "#73daca",
 }
 
 return M
