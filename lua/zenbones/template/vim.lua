@@ -1,7 +1,6 @@
 local template = [[" This file is auto-generated from lua/zenbones/template/vim.lua
 if exists('g:colors_name')
     highlight clear
-    syntax reset
     set t_Co=256
 endif
 
