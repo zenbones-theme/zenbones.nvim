@@ -9,7 +9,7 @@ local function generate(p, opt)
 		normal_bg = p.bg_warm
 	elseif opt.darkness ~= nil then
 		local error_msg = "Unknown darkness value: " .. vim.inspect(darkness)
-		vim.api.nvim_echo({ { error_msg, "WarningMsg" } }, true, {})
+		vim.notify(error_msg, vim.log.levels.WARN)
 	end
 
 	local comment_gui = opt.comment_gui

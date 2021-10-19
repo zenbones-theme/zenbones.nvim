@@ -9,7 +9,7 @@ local function generate(p, opt)
 		normal_bg = p.bg_dim
 	elseif opt.lightness ~= nil then
 		local error_msg = "Unknown lightness value: " .. vim.inspect(lightness)
-		vim.api.nvim_echo({ { error_msg, "WarningMsg" } }, true, {})
+		vim.notify(error_msg, vim.log.levels.WARN)
 	end
 
 	local comment_gui = opt.comment_gui
