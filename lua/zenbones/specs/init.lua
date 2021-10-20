@@ -3,6 +3,7 @@ local M = {}
 function M.get_global_config(prefix, base_bg)
 	local common = {
 		solid_vert_split = vim.g[prefix .. "_solid_vert_split"],
+		solid_float_border = vim.g[prefix .. "_solid_float_border"],
 		comment_gui = vim.g[prefix .. "_italic_comments"] ~= false and "italic" or "NONE",
 	}
 	if base_bg == "light" then

@@ -17,7 +17,7 @@ if bg == "light" then
 else
 	return lush.extends({ specs }).with(function()
 		return {
-			FloatBorder { fg = hsluv "#203f57" }, -- --border-color
+			FloatBorder { specs.FloatBorder, fg = hsluv "#203f57" }, -- --border-color
 			helpHyperTextJump { fg = hsluv "#8ec77e" }, -- --link-color
 			helpOption { helpHyperTextJump },
 			markdownUrl { helpHyperTextJump },

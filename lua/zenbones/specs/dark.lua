@@ -12,10 +12,6 @@ local function generate(p, opt)
 		vim.notify(error_msg, vim.log.levels.WARN)
 	end
 
-	local lighten_comments = opt.lighten_comments or 38
-	local comment_gui = opt.comment_gui or "italic"
-	local lighten_linenr = opt.lighten_linenr
-
 	-- stylua: ignore start
 	local theme = lush(function()
 		return {
@@ -41,7 +37,7 @@ local function generate(p, opt)
 			ErrorMsg        { Error }, -- error messages on the command line
 			WarningMsg      { fg = p.wood }, -- warning messages
 
-			Comment         { fg = p.bg.li(lighten_comments).de(24), gui = comment_gui }, -- any comment
+			Comment         { fg = p.bg.li(opt.lighten_comments or 38).de(24), gui = opt.comment_gui or "italic" }, -- any comment
 			Conceal         { fg = p.fg.da(20), gui = "bold,italic" }, -- placeholder characters substituted for concealed text (see 'conceallevel')
 
 			Cursor          { bg = p.fg.li(20), fg = p.bg.da(20) }, -- character under the cursor
@@ -59,7 +55,7 @@ local function generate(p, opt)
 			DiffDelete      { bg = p.rose.saturation(30).lightness(normal_bg.l + 8) }, -- diff mode: Deleted line |diff.txt|
 			DiffText        { bg = p.water.saturation(50).lightness(normal_bg.l + 20), fg = p.fg }, -- diff mode: Changed text within a changed line |diff.txt|
 
-			LineNr          { fg = Normal.bg.li(30), bg = lighten_linenr and Normal.bg.li(6) or "NONE" }, -- Line number for ":number" and ":#" commands, and when 'number' or 'relativenumber' option is set.
+			LineNr          { fg = Normal.bg.li(30), bg = opt.lighten_linenr and Normal.bg.li(6) or "NONE" }, -- Line number for ":number" and ":#" commands, and when 'number' or 'relativenumber' option is set.
 			SignColumn      { LineNr }, -- column where |signs| are displayed
 			FoldColumn      { LineNr, gui = "bold" }, -- 'foldcolumn'
 			Folded          { bg = Normal.bg.li(16), fg = Normal.bg.li(64) }, -- line used for closed folds
@@ -70,7 +66,7 @@ local function generate(p, opt)
 			-- MsgSeparator { }, -- Separator for scrolled messages, `msgsep` flag of 'display'
 			MoreMsg         { fg = p.leaf, gui = "bold" }, -- |more-prompt|
 			NormalFloat     { bg = Normal.bg.li(8) }, -- Normal text in floating windows.
-			FloatBorder     { fg = Normal.bg.li(46) }, -- Normal text in floating windows.
+			FloatBorder     { fg = Normal.bg.li(46), bg = opt.solid_float_border and NormalFloat.bg or "NONE" }, -- Normal text in floating windows.
 
 			Pmenu           { bg = Normal.bg.li(12) }, -- Popup menu: normal item.
 			PmenuSel        { bg = Normal.bg.li(24) }, -- Popup menu: selected item.
@@ -306,7 +302,7 @@ local function generate(p, opt)
 			TelescopeSelection               { CursorLine },
 			TelescopeSelectionCaret          { TelescopeSelection, fg = p.rose },
 			TelescopeMatching                { fg = p.blossom, gui = "bold" },
-			TelescopeBorder                  { FloatBorder },
+			TelescopeBorder                  { fg = FloatBorder.fg },
 
 			Sneak                            { Search },
 			SneakLabel                       { WildMenu },
