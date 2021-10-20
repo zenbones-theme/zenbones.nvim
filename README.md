@@ -12,7 +12,8 @@ diffs, search matches.
 
 ## Recommended setup
 
--   Vim/Neovim with true colors support i.e. `set termguicolors`
+-   Neovim with true colors support i.e. `set termguicolors`. Vim works but only
+    in compatibility mode.
 -   Font with bold and italic
 -   Terminal or GUI with bold and italic support
 
