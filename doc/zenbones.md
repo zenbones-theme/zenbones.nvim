@@ -57,7 +57,8 @@ Default: `v:false`. Lighten LineNr background.
 
 #### g:zenflesh_solid_float_border
 
-Default: `v:false`. Make FloatBorder more distinguishable background highlight.
+Default: `v:false`. Make FloatBorder have a more distinguishable background
+highlight.
 
 #### g:zenbones_darken_noncurrent_window
 
@@ -65,7 +66,7 @@ Default: `v:false`. Make non-current window background darker than _Normal_.
 
 #### g:zenflesh_lighten_noncurrent_window
 
-Default: `v:false`. Make non-current window background warmer than _Normal_.
+Default: `v:false`. Make non-current window background lighter than _Normal_.
 
 #### g:zenbones_italic_comments
 
@@ -159,10 +160,11 @@ through an example. Let's make a zenbones-flavored Gruvbox colorscheme called
 
 Let's define our
 [colorscheme](https://neovim.io/doc/user/syntax.html#:colorscheme) in
-`nvim/colors/gruvbones.lua`. And it contains the following:
+`colors/gruvbones.lua`. It contains the following:
 
 ```lua
-vim.g.colors_name = "gruvbones" -- Required when defining a colorscheme
+local colors_name = "gruvbones"
+vim.g.colors_name = colors_name -- Required when defining a colorscheme
 
 local lush = require "lush"
 local hsluv = lush.hsluv -- Human-friendly hsl
@@ -183,7 +185,7 @@ if bg == "light" then
 		water = hsluv "#076678",
 		blossom = hsluv "#8f3f71",
 		sky = hsluv "#427b58",
-	}, "zenbones")
+	}, bg)
 else
 	palette = util.palette_extend({
 		bg = hsluv "#282828",
@@ -194,12 +196,12 @@ else
 		water = hsluv "#83a598",
 		blossom = hsluv "#d3869b",
 		sky = hsluv "#83c07c",
-	}, "zenflesh")
+	}, bg)
 end
 
 -- Generate the lush specs using the generator util
 local generator = require "zenbones.specs"
-local base_specs = generator.generate(palette, bg, generator.get_global_config("gruvbones", bg))
+local base_specs = generator.generate(palette, bg, generator.get_global_config(colors_name, bg))
 
 -- Optionally extend specs using Lush
 local specs = lush.extends({ base_specs }).with(function()
