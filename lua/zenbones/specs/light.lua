@@ -12,7 +12,8 @@ local function generate(p, opt)
 		vim.notify(error_msg, vim.log.levels.WARN)
 	end
 
-	local comment_gui = opt.comment_gui
+	local darken_comment = opt.darken_comment or 38
+	local comment_gui = opt.comment_gui or "italic"
 
 	-- stylua: ignore start
 	local theme = lush(function()
@@ -39,7 +40,7 @@ local function generate(p, opt)
 			ErrorMsg        { Error }, -- error messages on the command line
 			WarningMsg      { fg = p.wood }, -- warning messages
 
-			Comment         { fg = p.bg.da(38).de(28), gui = comment_gui }, -- any comment
+			Comment         { fg = p.bg.da(darken_comment).de(28), gui = comment_gui }, -- any comment
 			Conceal         { fg = p.fg.li(20), gui = "bold,italic" }, -- placeholder characters substituted for concealed text (see 'conceallevel')
 
 			Cursor          { bg = p.fg, fg = p.bg.li(20) }, -- character under the cursor

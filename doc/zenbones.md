@@ -59,6 +59,16 @@ Default: `v:false`. Make non-current window background warmer than _Normal_.
 
 Default: `v:true`. Make comments italicize.
 
+#### g:zenbones_darken_comments
+
+Default: 38. Percentage to darken comments. Comments base their fg color on the
+bg palette. See also |lush-color-darken|.
+
+#### g:zenflesh_lighten_comments
+
+Default: 38. Percentage to lighten comments. Comments base their fg color on the
+bg palette. See also |lush-color-lighten|.
+
 #### g:zenbones_compat
 
 Set to `1` to turn on compatibility mode.

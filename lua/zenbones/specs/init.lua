@@ -1,20 +1,22 @@
 local M = {}
 
 function M.get_global_config(prefix, base_bg)
+	local common = {
+		solid_vert_split = vim.g[prefix .. "_solid_vert_split"],
+		comment_gui = vim.g[prefix .. "_italic_comments"] ~= false and "italic" or "NONE",
+	}
 	if base_bg == "light" then
-		return {
+		return vim.tbl_extend("keep", {
 			lightness = vim.g[prefix .. "_lightness"],
-			comment_gui = vim.g[prefix .. "_italic_comments"] ~= false and "italic" or "NONE",
 			dim_noncurrent_window = vim.g[prefix .. "_dim_noncurrent_window"],
-			solid_vert_split = vim.g[prefix .. "_solid_vert_split"],
-		}
+			darken_comment = vim.g[prefix .. "_darken_comment"],
+		}, common)
 	else
-		return {
+		return vim.tbl_extend("keep", {
 			darkness = vim.g[prefix .. "_darkness"],
-			comment_gui = vim.g[prefix .. "_italic_comments"] ~= false and "italic" or "NONE",
 			lighten_noncurrent_window = vim.g[prefix .. "_lighten_noncurrent_window"],
-			solid_vert_split = vim.g[prefix .. "_solid_vert_split"],
-		}
+			lighten_comment = vim.g[prefix .. "_lighten_comment"],
+		}, common)
 	end
 end
 
