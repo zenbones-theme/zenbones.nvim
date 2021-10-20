@@ -11,14 +11,14 @@ function M.get_global_config(prefix, base_bg)
 			lightness = vim.g[prefix .. "_lightness"],
 			dim_noncurrent_window = vim.g[prefix .. "_dim_noncurrent_window"],
 			darken_comments = vim.g[prefix .. "_darken_comments"],
-			darken_linenr = vim.g[prefix .. "_darken_linenr"],
+			darken_line_nr = vim.g[prefix .. "_darken_line_nr"],
 		}, common)
 	else
 		return vim.tbl_extend("keep", {
 			darkness = vim.g[prefix .. "_darkness"],
 			lighten_noncurrent_window = vim.g[prefix .. "_lighten_noncurrent_window"],
 			lighten_comments = vim.g[prefix .. "_lighten_comments"],
-			lighten_linenr = vim.g[prefix .. "_lighten_linenr"],
+			lighten_line_nr = vim.g[prefix .. "_lighten_line_nr"],
 		}, common)
 	end
 end

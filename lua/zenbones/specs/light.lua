@@ -55,7 +55,7 @@ local function generate(p, opt)
 			DiffDelete      { bg = p.rose.saturation(40).lightness(normal_bg.l - 6) }, -- diff mode: Deleted line |diff.txt|
 			DiffText        { bg = p.water.saturation(30).lightness(normal_bg.l - 18), fg = p.fg }, -- diff mode: Changed text within a changed line |diff.txt|
 
-			LineNr          { fg = Normal.bg.da(32), bg = opt.darken_linenr and Normal.bg.da(4) or "NONE" }, -- Line number for ":number" and ":#" commands, and when 'number' or 'relativenumber' option is set.
+			LineNr          { fg = Normal.bg.da(32), bg = opt.darken_line_nr and Normal.bg.da(4) or "NONE" }, -- Line number for ":number" and ":#" commands, and when 'number' or 'relativenumber' option is set.
 			SignColumn      { LineNr }, -- column where |signs| are displayed
 			FoldColumn      { LineNr, gui = "bold" }, -- 'foldcolumn'
 			Folded          { bg = Normal.bg.da(16), fg = Normal.bg.da(64) }, -- line used for closed folds

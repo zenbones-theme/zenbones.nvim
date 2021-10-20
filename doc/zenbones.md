@@ -44,11 +44,11 @@ Change background colors darkness. Options: `'stark'`, `'warm'`.
 
 Default: `v:false`. Make VertSplit more distinguishable background highlight.
 
-#### g:zenbones_darken_linenr
+#### g:zenbones_darken_line_nr
 
 Default: `v:false`. Darken LineNr background.
 
-#### g:zenflesh_lighten_linenr
+#### g:zenflesh_lighten_line_nr
 
 Default: `v:false`. Lighten LineNr background.
 
