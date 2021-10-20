@@ -58,9 +58,9 @@ Default: `v:false`. Lighten LineNr background.
 
 Default: `v:false`. Make FloatBorder more distinguishable background highlight.
 
-#### g:zenbones_dim_noncurrent_window
+#### g:zenbones_darken_noncurrent_window
 
-Default: `v:false`. Make non-current window background dimmer than _Normal_.
+Default: `v:false`. Make non-current window background darker than _Normal_.
 
 #### g:zenflesh_lighten_noncurrent_window
 

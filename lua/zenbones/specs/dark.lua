@@ -9,7 +9,7 @@ local function generate(p, opt)
 		normal_bg = p.bg_warm
 	elseif opt.darkness ~= nil then
 		local error_msg = "Unknown darkness value: " .. vim.inspect(darkness)
-		vim.notify(error_msg, vim.log.levels.WARN)
+		vim.notify(error_msg, vim.log.levels.WARN, { title = "zenbones" })
 	end
 
 	-- stylua: ignore start

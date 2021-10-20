@@ -9,7 +9,7 @@ local function generate(p, opt)
 		normal_bg = p.bg_dim
 	elseif opt.lightness ~= nil then
 		local error_msg = "Unknown lightness value: " .. vim.inspect(lightness)
-		vim.notify(error_msg, vim.log.levels.WARN)
+		vim.notify(error_msg, vim.log.levels.WARN, { title = "zenbones" })
 	end
 
 	-- stylua: ignore start
@@ -381,7 +381,7 @@ local function generate(p, opt)
 		base_specs,
 	}
 
-	if opt.dim_noncurrent_window then
+	if opt.darken_noncurrent_window then
 		table.insert(
 			specs,
 			lush(function()
