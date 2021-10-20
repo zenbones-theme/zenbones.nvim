@@ -27,6 +27,9 @@ or customizing the colors to your likings.
 
 Configuration is only available for neovim.
 
+**Note**: Flavors accept their own configuration by replacing "zenbones" or
+"zenflesh" prefix with the flavor name e.g. `g:rosebones_italic_comments`.
+
 #### g:zenbones_lightness
 
 Change background colors lightness. Options: `'bright'`, `'dim'`.
@@ -104,7 +107,7 @@ local function customize_zenbones()
 	local specs = lush.parse(function()
 		return {
 			TabLine { base.TabLine, gui = "italic" }, -- setting gui to "italic"
-		
+
 	end)
 	-- Apply specs using lush tool-chain
 	lush.apply(lush.compile(specs))
@@ -126,8 +129,8 @@ more options.
 ### Create your own colorscheme
 
 You can ultimately create your own colorscheme that is based on Zenbones by
-defining a palette and generating a specs. Best way to demonstrate this
-is through an example. Let's make a zenbones-flavored Gruvbox colorscheme called
+defining a palette and generating a specs. Best way to demonstrate this is
+through an example. Let's make a zenbones-flavored Gruvbox colorscheme called
 `gruvbones`.
 
 Let's define our
