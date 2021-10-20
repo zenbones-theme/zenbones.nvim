@@ -27,8 +27,9 @@ or customizing the colors to your likings.
 
 Configuration is only available for neovim.
 
-**Note**: Flavors accept their own configuration by replacing "zenbones" or
-"zenflesh" prefix with the flavor name e.g. `g:rosebones_italic_comments`.
+**Note**: Flavors accept their own configuration by replacing the prefix with
+the flavor name e.g. `g:rosebones_italic_comments`. Just remember: `zenbones_`
+are for the `light` background and `zenflesh_` is for the dark.
 
 #### g:zenbones_lightness
 
