@@ -12,8 +12,9 @@ local function generate(p, opt)
 		vim.notify(error_msg, vim.log.levels.WARN)
 	end
 
-	local darken_comment = opt.darken_comment or 38
+	local darken_comments = opt.darken_comments or 38
 	local comment_gui = opt.comment_gui or "italic"
+	local darken_linenr = opt.darken_linenr
 
 	-- stylua: ignore start
 	local theme = lush(function()
@@ -40,7 +41,7 @@ local function generate(p, opt)
 			ErrorMsg        { Error }, -- error messages on the command line
 			WarningMsg      { fg = p.wood }, -- warning messages
 
-			Comment         { fg = p.bg.da(darken_comment).de(28), gui = comment_gui }, -- any comment
+			Comment         { fg = p.bg.da(darken_comments).de(28), gui = comment_gui }, -- any comment
 			Conceal         { fg = p.fg.li(20), gui = "bold,italic" }, -- placeholder characters substituted for concealed text (see 'conceallevel')
 
 			Cursor          { bg = p.fg, fg = p.bg.li(20) }, -- character under the cursor
@@ -49,7 +50,7 @@ local function generate(p, opt)
 			TermCursor      { Cursor }, -- cursor in a focused terminal
 			TermCursorNC    { lCursor }, -- cursor in an unfocused terminal
 
-			CursorLine      { bg = Normal.bg.da(4) }, -- Screen-line at the cursor, when 'cursorline' is set.	Low-priority if foreground (ctermfg OR guifg) is not set.
+			CursorLine      { bg = Normal.bg.da(3) }, -- Screen-line at the cursor, when 'cursorline' is set.	Low-priority if foreground (ctermfg OR guifg) is not set.
 			CursorColumn    { CursorLine }, -- Screen-column at the cursor, when 'cursorcolumn' is set.
 			ColorColumn     { bg = p.wood.de(38).li(80) }, -- used for the columns set with 'colorcolumn'
 
@@ -58,7 +59,7 @@ local function generate(p, opt)
 			DiffDelete      { bg = p.rose.saturation(40).lightness(normal_bg.l - 6) }, -- diff mode: Deleted line |diff.txt|
 			DiffText        { bg = p.water.saturation(30).lightness(normal_bg.l - 18), fg = p.fg }, -- diff mode: Changed text within a changed line |diff.txt|
 
-			LineNr          { fg = Normal.bg.da(32) }, -- Line number for ":number" and ":#" commands, and when 'number' or 'relativenumber' option is set.
+			LineNr          { fg = Normal.bg.da(32), bg = darken_linenr and Normal.bg.da(4) or "NONE" }, -- Line number for ":number" and ":#" commands, and when 'number' or 'relativenumber' option is set.
 			SignColumn      { LineNr }, -- column where |signs| are displayed
 			FoldColumn      { LineNr, gui = "bold" }, -- 'foldcolumn'
 			Folded          { bg = Normal.bg.da(16), fg = Normal.bg.da(64) }, -- line used for closed folds
@@ -92,7 +93,7 @@ local function generate(p, opt)
 			TabLine         { StatusLine }, -- tab pages line, not active tab page label
 			TabLineFill     { StatusLineNC }, -- tab pages line, where there are no labels
 			TabLineSel      { gui = "bold" }, -- tab pages line, active tab page label
-			VertSplit       { LineNr }, -- the column separating vertically split windows
+			VertSplit       { fg = LineNr.fg }, -- the column separating vertically split windows
 
 			Visual          { bg = p.fg.li(84) }, -- Visual mode selection
 			-- VisualNOS    { }, -- Visual mode selection when vim is "Not Owning the Selection".
@@ -292,9 +293,9 @@ local function generate(p, opt)
 			helpOption                { Constant },
 
 			-- Other plugins
-			GitSignsAdd                      { fg = p.leaf },
-			GitSignsChange                   { fg = p.water },
-			GitSignsDelete                   { fg = p.rose },
+			GitSignsAdd                      { SignColumn, fg = p.leaf },
+			GitSignsChange                   { SignColumn, fg = p.water },
+			GitSignsDelete                   { SignColumn, fg = p.rose },
 
 			GitGutterAdd                     { GitSignsAdd },
 			GitGutterChange                  { GitSignsChange },

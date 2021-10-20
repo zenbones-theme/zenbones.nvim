@@ -45,6 +45,14 @@ Change background colors darkness. Options: `'stark'`, `'warm'`.
 Default: `v:false`. Make vertical split more distinguishable background
 highlight.
 
+#### g:zenbones_darken_linenr
+
+Default: `v:false`. Darken LineNr background.
+
+#### g:zenflesh_lighten_linenr
+
+Default: `v:false`. Lighten LineNr background.
+
 #### g:zenbones_dim_noncurrent_window
 
 Default: `v:false`. Make non-current window background dimmer than _Normal_.
@@ -61,13 +69,13 @@ Default: `v:true`. Make comments italicize.
 
 #### g:zenbones_darken_comments
 
-Default: 38. Percentage to darken comments. Comments base their fg color on the
-bg palette. See also |lush-color-darken|.
+Default: 38. Percentage to darken comments. Comments base their foreground color
+on the bg palette. See also |lush-color-darken|.
 
 #### g:zenflesh_lighten_comments
 
-Default: 38. Percentage to lighten comments. Comments base their fg color on the
-bg palette. See also |lush-color-lighten|.
+Default: 38. Percentage to lighten comments. Comments base their foreground
+color on the bg palette. See also |lush-color-lighten|.
 
 #### g:zenbones_compat
 

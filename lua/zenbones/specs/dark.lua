@@ -12,8 +12,9 @@ local function generate(p, opt)
 		vim.notify(error_msg, vim.log.levels.WARN)
 	end
 
-	local lighten_comment = opt.lighten_comment or 38
+	local lighten_comments = opt.lighten_comments or 38
 	local comment_gui = opt.comment_gui or "italic"
+	local lighten_linenr = opt.lighten_linenr
 
 	-- stylua: ignore start
 	local theme = lush(function()
@@ -40,7 +41,7 @@ local function generate(p, opt)
 			ErrorMsg        { Error }, -- error messages on the command line
 			WarningMsg      { fg = p.wood }, -- warning messages
 
-			Comment         { fg = p.bg.li(lighten_comment).de(24), gui = comment_gui }, -- any comment
+			Comment         { fg = p.bg.li(lighten_comments).de(24), gui = comment_gui }, -- any comment
 			Conceal         { fg = p.fg.da(20), gui = "bold,italic" }, -- placeholder characters substituted for concealed text (see 'conceallevel')
 
 			Cursor          { bg = p.fg.li(20), fg = p.bg.da(20) }, -- character under the cursor
@@ -58,7 +59,7 @@ local function generate(p, opt)
 			DiffDelete      { bg = p.rose.saturation(30).lightness(normal_bg.l + 8) }, -- diff mode: Deleted line |diff.txt|
 			DiffText        { bg = p.water.saturation(50).lightness(normal_bg.l + 20), fg = p.fg }, -- diff mode: Changed text within a changed line |diff.txt|
 
-			LineNr          { fg = Normal.bg.li(30) }, -- Line number for ":number" and ":#" commands, and when 'number' or 'relativenumber' option is set.
+			LineNr          { fg = Normal.bg.li(30), bg = lighten_linenr and Normal.bg.li(6) or "NONE" }, -- Line number for ":number" and ":#" commands, and when 'number' or 'relativenumber' option is set.
 			SignColumn      { LineNr }, -- column where |signs| are displayed
 			FoldColumn      { LineNr, gui = "bold" }, -- 'foldcolumn'
 			Folded          { bg = Normal.bg.li(16), fg = Normal.bg.li(64) }, -- line used for closed folds
@@ -92,7 +93,7 @@ local function generate(p, opt)
 			TabLine         { StatusLine }, -- tab pages line, not active tab page label
 			TabLineFill     { StatusLineNC }, -- tab pages line, where there are no labels
 			TabLineSel      { gui = "bold" }, -- tab pages line, active tab page label
-			VertSplit       { LineNr }, -- the column separating vertically split windows
+			VertSplit       { fg = LineNr.fg }, -- the column separating vertically split windows
 
 			Visual          { bg = p.fg.de(18).da(68) }, -- Visual mode selection
 			-- VisualNOS    { }, -- Visual mode selection when vim is "Not Owning the Selection".
@@ -292,9 +293,9 @@ local function generate(p, opt)
 			helpOption                { Constant },
 
 			-- Other plugins
-			GitSignsAdd                      { fg = p.leaf },
-			GitSignsChange                   { fg = p.water },
-			GitSignsDelete                   { fg = p.rose },
+			GitSignsAdd                      { SignColumn, fg = p.leaf },
+			GitSignsChange                   { SignColumn, fg = p.water },
+			GitSignsDelete                   { SignColumn, fg = p.rose },
 
 			GitGutterAdd                     { GitSignsAdd },
 			GitGutterChange                  { GitSignsChange },
