@@ -39,6 +39,9 @@ CONFIGURATION                                         *zenbones-configuration*
 
 Configuration is only available for neovim.
 
+**Note**: Flavors accept their own configuration by replacing "zenbones" or
+"zenflesh" prefix with the flavor name e.g. `g:rosebones_italic_comments`.
+
                                                *zenbones-g:zenbones_lightness*
 
 g:zenbones_lightness                   Change background colors lightness.
@@ -55,15 +58,35 @@ g:zenflesh_darkness                    Change background colors darkness.
 
                                         *zenbones-g:zenflesh_solid_vert_split*
 
-g:zenflesh_solid_vert_split            Default: `v:false`. Make vertical split
+g:zenflesh_solid_vert_split            Default: `v:false`. Make VertSplit more
+                                       distinguishable background highlight.
+
+
+                                          *zenbones-g:zenbones_darken_line_nr*
+
+g:zenbones_darken_line_nr              Default: `v:false`. Darken LineNr
+                                       background.
+
+
+                                         *zenbones-g:zenflesh_lighten_line_nr*
+
+g:zenflesh_lighten_line_nr             Default: `v:false`. Lighten LineNr
+                                       background.
+
+
+                                      *zenbones-g:zenbones_solid_float_border*
+
+                                      *zenbones-g:zenflesh_solid_float_border*
+
+g:zenflesh_solid_float_border          Default: `v:false`. Make FloatBorder
                                        more distinguishable background
                                        highlight.
 
 
-                                   *zenbones-g:zenbones_dim_noncurrent_window*
+                                *zenbones-g:zenbones_darken_noncurrent_window*
 
-g:zenbones_dim_noncurrent_window       Default: `v:false`. Make non-current
-                                       window background dimmer than _Normal_.
+g:zenbones_darken_noncurrent_window    Default: `v:false`. Make non-current
+                                       window background darker than _Normal_.
 
 
                                *zenbones-g:zenflesh_lighten_noncurrent_window*
@@ -78,6 +101,22 @@ g:zenflesh_lighten_noncurrent_window   Default: `v:false`. Make non-current
 
 g:zenflesh_italic_comments             Default: `v:true`. Make comments
                                        italicize.
+
+
+                                         *zenbones-g:zenbones_darken_comments*
+
+g:zenbones_darken_comments             Default: 38. Percentage to darken
+                                       comments. Comments base their foreground
+                                       color on the bg palette. See also
+                                       |lush-color-darken|.
+
+
+                                        *zenbones-g:zenflesh_lighten_comments*
+
+g:zenflesh_lighten_comments            Default: 38. Percentage to lighten
+                                       comments. Comments base their foreground
+                                       color on the bg palette. See also
+                                       |lush-color-lighten|.
 
 
                                                   *zenbones-g:zenbones_compat*
@@ -133,7 +172,7 @@ Here’s an example of how to extend/override some highlights.
         local specs = lush.parse(function()
             return {
                 TabLine { base.TabLine, gui = "italic" }, -- setting gui to "italic"
-            
+    
         end)
         -- Apply specs using lush tool-chain
         lush.apply(lush.compile(specs))
