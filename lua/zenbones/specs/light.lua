@@ -13,7 +13,7 @@ local function generate(p, opt)
 	end
 
 	-- stylua: ignore start
-	local theme = lush(function()
+	local base_specs = lush(function()
 		return {
 			-- The following are all the Neovim default highlight groups from the docs
 			-- as of 0.5.0-nightly-446, to aid your theme creation. Your themes should
@@ -89,7 +89,7 @@ local function generate(p, opt)
 			TabLine         { StatusLine }, -- tab pages line, not active tab page label
 			TabLineFill     { StatusLineNC }, -- tab pages line, where there are no labels
 			TabLineSel      { gui = "bold" }, -- tab pages line, active tab page label
-			VertSplit       { fg = LineNr.fg }, -- the column separating vertically split windows
+			VertSplit       { fg = LineNr.fg, bg = opt.solid_vert_split and StatusLineNC.bg or "NONE" }, -- the column separating vertically split windows
 
 			Visual          { bg = p.fg.li(84) }, -- Visual mode selection
 			-- VisualNOS    { }, -- Visual mode selection when vim is "Not Owning the Selection".
@@ -378,7 +378,7 @@ local function generate(p, opt)
 	-- stylua: ignore end
 
 	local specs = {
-		theme,
+		base_specs,
 	}
 
 	if opt.dim_noncurrent_window then
@@ -386,18 +386,7 @@ local function generate(p, opt)
 			specs,
 			lush(function()
 				return {
-					NormalNC { theme.Normal, bg = theme.Normal.bg.abs_da(2) }, -- normal text in non-current windows
-				}
-			end)
-		)
-	end
-
-	if opt.solid_vert_split then
-		table.insert(
-			specs,
-			lush(function()
-				return {
-					VertSplit { bg = theme.StatusLineNC.bg, fg = theme.LineNr.fg }, -- the column separating vertically split windows
+					NormalNC { base_specs.Normal, bg = base_specs.Normal.bg.abs_da(2) }, -- normal text in non-current windows
 				}
 			end)
 		)

@@ -89,7 +89,7 @@ local function generate(p, opt)
 			TabLine         { StatusLine }, -- tab pages line, not active tab page label
 			TabLineFill     { StatusLineNC }, -- tab pages line, where there are no labels
 			TabLineSel      { gui = "bold" }, -- tab pages line, active tab page label
-			VertSplit       { fg = LineNr.fg }, -- the column separating vertically split windows
+			VertSplit       { fg = LineNr.fg, bg = opt.solid_vert_split and StatusLineNC.bg or "NONE" }, -- the column separating vertically split windows
 
 			Visual          { bg = p.fg.de(18).da(68) }, -- Visual mode selection
 			-- VisualNOS    { }, -- Visual mode selection when vim is "Not Owning the Selection".
@@ -387,17 +387,6 @@ local function generate(p, opt)
 			lush(function()
 				return {
 					NormalNC { theme.Normal, bg = theme.Normal.bg.abs_li(2) }, -- normal text in non-current windows
-				}
-			end)
-		)
-	end
-
-	if opt.solid_vert_split then
-		table.insert(
-			specs,
-			lush(function()
-				return {
-					VertSplit { bg = theme.StatusLineNC.bg, fg = theme.LineNr.fg }, -- the column separating vertically split windows
 				}
 			end)
 		)
