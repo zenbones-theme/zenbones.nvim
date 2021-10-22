@@ -105,12 +105,14 @@ highlight StatusLine guifg=#B4BDC3 guibg=#3E3835 guisp=NONE gui=NONE
 highlight StatusLineNC guifg=#CAD0D4 guibg=#322D2B guisp=NONE gui=NONE
 highlight TSConstant guifg=#979FA4 guibg=NONE guisp=NONE gui=bold
 highlight TabLineSel guifg=NONE guibg=NONE guisp=NONE gui=bold
+highlight TelescopeBorder guifg=#837771 guibg=NONE guisp=NONE gui=NONE
 highlight TelescopeMatching guifg=#B279A7 guibg=NONE guisp=NONE gui=bold
 highlight TelescopeSelectionCaret guifg=#DE6E7C guibg=#25211F guisp=NONE gui=NONE
 highlight Title guifg=NONE guibg=NONE guisp=NONE gui=bold
 highlight Todo guifg=NONE guibg=NONE guisp=NONE gui=bold,underline
 highlight Type guifg=#A1938C guibg=NONE guisp=NONE gui=NONE
 highlight Underlined guifg=NONE guibg=NONE guisp=NONE gui=underline
+highlight VertSplit guifg=#5C534F guibg=NONE guisp=NONE gui=NONE
 highlight Visual guifg=NONE guibg=#37393B guisp=NONE gui=NONE
 highlight WarningMsg guifg=#B77E64 guibg=NONE guisp=NONE gui=NONE
 highlight WildMenu guifg=#1C1917 guibg=#B279A7 guisp=NONE gui=NONE
@@ -127,17 +129,17 @@ highlight markdownH1 guifg=#B4BDC3 guibg=NONE guisp=NONE gui=bold,underline
 highlight! link Boolean Number
 highlight! link BufferCurrent TabLineSel
 highlight! link CocCodeLens LineNr
-highlight! link CocErrorHighlight LspDiagnosticsUnderlineError
-highlight! link CocErrorSign LspDiagnosticsDefaultError
-highlight! link CocErrorVirtualText LspDiagnosticsVirtualTextError
-highlight! link CocHintHighlight LspDiagnosticsUnderlineHint
-highlight! link CocHintSign LspDiagnosticsDefaultHint
-highlight! link CocInfoHighlight LspDiagnosticsUnderlineInformation
-highlight! link CocInfoSign LspDiagnosticsDefaultInformation
+highlight! link CocErrorHighlight DiagnosticUnderlineError
+highlight! link CocErrorSign DiagnosticError
+highlight! link CocErrorVirtualText DiagnosticVirtualTextError
+highlight! link CocHintHighlight DiagnosticUnderlineHint
+highlight! link CocHintSign DiagnosticHint
+highlight! link CocInfoHighlight DiagnosticUnderlineInfo
+highlight! link CocInfoSign DiagnosticInfo
 highlight! link CocSelectedText SpellBad
-highlight! link CocWarningHighlight LspDiagnosticsUnderlineWarning
-highlight! link CocWarningSign LspDiagnosticsDefaultWarning
-highlight! link CocWarningVitualText LspDiagnosticsVirtualTextWarning
+highlight! link CocWarningHighlight DiagnosticUnderlineWarn
+highlight! link CocWarningSign DiagnosticWarn
+highlight! link CocWarningVitualText DiagnosticVirtualTextWarn
 highlight! link CursorColumn CursorLine
 highlight! link DiagnosticError Error
 highlight! link DiagnosticWarn WarningMsg
@@ -153,16 +155,6 @@ highlight! link LightspeedMaskedChar Conceal
 highlight! link LightspeedPendingOpArea SneakLabel
 highlight! link LightspeedUnlabeledMatch Bold
 highlight! link LspCodeLens LineNr
-highlight! link LspDiagnosticsDefaultError DiagnosticError
-highlight! link LspDiagnosticsDefaultHint DiagnosticHint
-highlight! link LspDiagnosticsDefaultInformation DiagnosticInfo
-highlight! link LspDiagnosticsDefaultWarning DiagnosticWarn
-highlight! link LspDiagnosticsUnderlineError DiagnosticUnderlineError
-highlight! link LspDiagnosticsUnderlineHint DiagnosticUnderlineHint
-highlight! link LspDiagnosticsUnderlineInformation DiagnosticUnderlineInfo
-highlight! link LspDiagnosticsUnderlineWarning DiagnosticUnderlineWarn
-highlight! link LspDiagnosticsVirtualTextError DiagnosticVirtualTextError
-highlight! link LspDiagnosticsVirtualTextWarning DiagnosticVirtualTextWarn
 highlight! link LspReferenceRead ColorColumn
 highlight! link LspReferenceText ColorColumn
 highlight! link LspReferenceWrite ColorColumn
@@ -171,9 +163,9 @@ highlight! link NeogitDiffAddHighlight DiffAdd
 highlight! link NeogitDiffContextHighlight CursorLine
 highlight! link NeogitDiffDeleteHighlight DiffDelete
 highlight! link NeogitHunkHeader LineNr
-highlight! link NeogitNotificationError LspDiagnosticsDefaultError
-highlight! link NeogitNotificationInfo LspDiagnosticsDefaultInformation
-highlight! link NeogitNotificationWarning LspDiagnosticsDefaultWarning
+highlight! link NeogitNotificationError DiagnosticError
+highlight! link NeogitNotificationInfo DiagnosticInfo
+highlight! link NeogitNotificationWarning DiagnosticWarn
 highlight! link NvimTreeCursorColumn NvimTreeCursorLine
 highlight! link NvimTreeGitDeleted diffRemoved
 highlight! link NvimTreeGitDirty diffChanged
@@ -189,21 +181,19 @@ highlight! link TSConstBuiltin Number
 highlight! link TSConstMacro Number
 highlight! link TSDanger Error
 highlight! link TSNamespace Special
-highlight! link TSNote LspDiagnosticsDefaultInformation
+highlight! link TSNote DiagnosticInfo
 highlight! link TSTag Special
 highlight! link TSVariable Identifier
 highlight! link TSVariableBuiltin Number
 highlight! link TSWarning WarningMsg
 highlight! link TabLine StatusLine
 highlight! link TabLineFill StatusLineNC
-highlight! link TelescopeBorder FloatBorder
 highlight! link TelescopeSelection CursorLine
 highlight! link TermCursor Cursor
 highlight! link TermCursorNC lCursor
 highlight! link TroubleNormal Function
 highlight! link TroubleSource Constant
 highlight! link TroubleText Function
-highlight! link VertSplit LineNr
 highlight! link WhichKey Statement
 highlight! link WhichKeyGroup Special
 highlight! link WhichKeySeparator LineNr
