@@ -15,11 +15,11 @@ return {
 	},
 
 	command = {
-		a = { bg = "#73516C", fg = common_fg, gui = "bold" },
+		a = { bg = "#65435E", fg = common_fg, gui = "bold" },
 	},
 
 	visual = {
-		a = { bg = "#393939", fg = common_fg, gui = "bold" },
+		a = { bg = "#262626", fg = common_fg, gui = "bold" },
 	},
 
 	replace = {

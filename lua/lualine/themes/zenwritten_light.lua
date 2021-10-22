@@ -15,7 +15,7 @@ return {
 	},
 
 	command = {
-		a = { bg = "#D2A6C8", fg = common_fg, gui = "bold" },
+		a = { bg = "#DEB9D6", fg = common_fg, gui = "bold" },
 	},
 
 	visual = {

@@ -4,9 +4,9 @@
 foreground = "#C6D5CF"
 background = "#0F191F"
 cursor_bg = "#CEDDD7"
-cursor_border = "#0C141A"
-cursor_fg = "#0C141A"
-selection_bg = "#3D413F"
+cursor_border = "#0F191F"
+cursor_fg = "#0F191F"
+selection_bg = "#222423"
 selection_fg = "#C6D5CF"
 
 ansi = ["#0F191F", "#DE6E7C", "#90FF6B", "#B77E64", "#8190D4", "#B279A7", "#66A5AD", "#C6D5CF"]

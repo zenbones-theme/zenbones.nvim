@@ -34,11 +34,11 @@ highlight BufferVisible guifg=#596A76 guibg=NONE guisp=NONE gui=NONE
 highlight BufferVisibleIndex guifg=#596A76 guibg=NONE guisp=NONE gui=NONE
 highlight BufferVisibleSign guifg=#596A76 guibg=NONE guisp=NONE gui=NONE
 highlight CocMarkdownLink guifg=#3B8992 guibg=NONE guisp=NONE gui=underline
-highlight ColorColumn guifg=NONE guibg=#EFD8D3 guisp=NONE gui=NONE
+highlight ColorColumn guifg=NONE guibg=#E6C5BD guisp=NONE gui=NONE
 highlight Comment guifg=#948985 guibg=NONE guisp=NONE gui=italic
 highlight Conceal guifg=#4D5C65 guibg=NONE guisp=NONE gui=bold,italic
 highlight Constant guifg=#53636D guibg=NONE guisp=NONE gui=italic
-highlight Cursor guifg=#F2F0EF guibg=#2C363C guisp=NONE gui=NONE
+highlight Cursor guifg=#F0EDEC guibg=#2C363C guisp=NONE gui=NONE
 highlight CursorLine guifg=NONE guibg=#E9E4E2 guisp=NONE gui=NONE
 highlight CursorLineNr guifg=#2C363C guibg=NONE guisp=NONE gui=bold
 highlight Delimiter guifg=#8E817B guibg=NONE guisp=NONE gui=NONE
@@ -48,8 +48,8 @@ highlight DiagnosticUnderlineError guifg=#A8334C guibg=NONE guisp=NONE gui=under
 highlight DiagnosticUnderlineHint guifg=#88507D guibg=NONE guisp=NONE gui=undercurl
 highlight DiagnosticUnderlineInfo guifg=#286486 guibg=NONE guisp=NONE gui=undercurl
 highlight DiagnosticUnderlineWarn guifg=#944927 guibg=NONE guisp=NONE gui=undercurl
-highlight DiagnosticVirtualTextError guifg=#A8334C guibg=#E7DDDE guisp=NONE gui=NONE
-highlight DiagnosticVirtualTextWarn guifg=#944927 guibg=#F0E6E4 guisp=NONE gui=NONE
+highlight DiagnosticVirtualTextError guifg=#A8334C guibg=#F2DEE0 guisp=NONE gui=NONE
+highlight DiagnosticVirtualTextWarn guifg=#944927 guibg=#F2DEDA guisp=NONE gui=NONE
 highlight DiffAdd guifg=NONE guibg=#CBE5B8 guisp=NONE gui=NONE
 highlight DiffChange guifg=NONE guibg=#D4DEE7 guisp=NONE gui=NONE
 highlight DiffDelete guifg=NONE guibg=#EBD8DA guisp=NONE gui=NONE
@@ -65,7 +65,7 @@ highlight GitSignsChange guifg=#286486 guibg=NONE guisp=NONE gui=NONE
 highlight GitSignsDelete guifg=#A8334C guibg=NONE guisp=NONE gui=NONE
 highlight HopNextKey2 guifg=#286486 guibg=NONE guisp=NONE gui=NONE
 highlight Identifier guifg=#44525B guibg=NONE guisp=NONE gui=NONE
-highlight IncSearch guifg=#F0EDEC guibg=#88507D guisp=NONE gui=bold
+highlight IncSearch guifg=#F0EDEC guibg=#C074B2 guisp=NONE gui=bold
 highlight IndentBlanklineChar guifg=#D4CDCA guibg=NONE guisp=NONE gui=NONE
 highlight Italic guifg=NONE guibg=NONE guisp=NONE gui=italic
 highlight LightspeedGreyWash guifg=#948985 guibg=NONE guisp=NONE gui=NONE
@@ -92,7 +92,7 @@ highlight Pmenu guifg=NONE guibg=#DAD3CF guisp=NONE gui=NONE
 highlight PmenuSbar guifg=NONE guibg=#B2A39B guisp=NONE gui=NONE
 highlight PmenuSel guifg=NONE guibg=#C4B6AF guisp=NONE gui=NONE
 highlight PmenuThumb guifg=NONE guibg=#F7F6F5 guisp=NONE gui=NONE
-highlight Search guifg=#2C363C guibg=#D2A6C8 guisp=NONE gui=NONE
+highlight Search guifg=#2C363C guibg=#DEB9D6 guisp=NONE gui=NONE
 highlight SneakLabelMask guifg=#88507D guibg=#88507D guisp=NONE gui=NONE
 highlight Special guifg=#51606B guibg=NONE guisp=NONE gui=bold
 highlight SpecialComment guifg=#948985 guibg=NONE guisp=NONE gui=bold
@@ -124,7 +124,7 @@ highlight diffLine guifg=#88507D guibg=NONE guisp=NONE gui=bold
 highlight diffNewFile guifg=#4F6C31 guibg=NONE guisp=NONE gui=italic
 highlight diffOldFile guifg=#A8334C guibg=NONE guisp=NONE gui=italic
 highlight diffRemoved guifg=#A8334C guibg=NONE guisp=NONE gui=NONE
-highlight lCursor guifg=#F2F0EF guibg=#4D5C65 guisp=NONE gui=NONE
+highlight lCursor guifg=#F0EDEC guibg=#4D5C65 guisp=NONE gui=NONE
 highlight markdownH1 guifg=#2C363C guibg=NONE guisp=NONE gui=bold,underline
 highlight! link Boolean Number
 highlight! link BufferCurrent TabLineSel

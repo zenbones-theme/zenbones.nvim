@@ -228,13 +228,13 @@
 		<key>Alpha Component</key>
 		<real>1</real>
 		<key>Blue Component</key>
-		<real>0.3882352941176471</real>
+		<real>0.4000000000000000</real>
 		<key>Color Space</key>
 		<string>sRGB</string>
 		<key>Green Component</key>
-		<real>0.4039215686274510</real>
+		<real>0.4117647058823529</real>
 		<key>Red Component</key>
-		<real>0.4313725490196079</real>
+		<real>0.4392156862745098</real>
 	</dict>
 	<key>Bold Color</key>
 	<dict>
@@ -280,13 +280,13 @@
 		<key>Alpha Component</key>
 		<real>1</real>
 		<key>Blue Component</key>
-		<real>0.0745098039215686</real>
+		<real>0.0901960784313725</real>
 		<key>Color Space</key>
 		<string>sRGB</string>
 		<key>Green Component</key>
-		<real>0.0823529411764706</real>
+		<real>0.0980392156862745</real>
 		<key>Red Component</key>
-		<real>0.0941176470588235</real>
+		<real>0.1098039215686274</real>
 	</dict>
 	<key>Foreground Color</key>
 	<dict>
@@ -332,13 +332,13 @@
 		<key>Alpha Component</key>
 		<real>1</real>
 		<key>Blue Component</key>
-		<real>0.2313725490196079</real>
+		<real>0.1803921568627451</real>
 		<key>Color Space</key>
 		<string>sRGB</string>
 		<key>Green Component</key>
-		<real>0.2235294117647059</real>
+		<real>0.1725490196078431</real>
 		<key>Red Component</key>
-		<real>0.2156862745098039</real>
+		<real>0.1647058823529412</real>
 	</dict>
 	<key>Tab Color</key>
 	<dict>
