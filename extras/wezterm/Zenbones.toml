@@ -6,7 +6,7 @@ background = "#F0EDEC"
 cursor_bg = "#2C363C"
 cursor_border = "#F0EDEC"
 cursor_fg = "#F0EDEC"
-selection_bg = "#D2DFE7"
+selection_bg = "#CBD9E3"
 selection_fg = "#2C363C"
 
 ansi = ["#F0EDEC", "#A8334C", "#4F6C31", "#944927", "#286486", "#88507D", "#3B8992", "#2C363C"]

@@ -8,11 +8,11 @@ set -g window-status-current-style fg='#88507D',bg='#202E18',bold
 set -g pane-border-style fg='#88507D'
 set -g pane-active-border-style fg='#88507D'
 
-set -g message-style fg='#E5EDE6',bg='#B1EA90'
+set -g message-style fg='#E5EDE6',bg='#ADE48C'
 
 set -g display-panes-active-colour '#88507D'
 set -g display-panes-colour '#88507D'
 
 set -g clock-mode-colour '#88507D'
 
-set -g mode-style fg='#E5EDE6',bg='#B1EA90'
+set -g mode-style fg='#E5EDE6',bg='#ADE48C'

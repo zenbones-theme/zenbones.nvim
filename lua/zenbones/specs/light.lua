@@ -91,7 +91,7 @@ local function generate(p, opt)
 			TabLineSel      { gui = "bold" }, -- tab pages line, active tab page label
 			VertSplit       { fg = LineNr.fg, bg = opt.solid_vert_split and StatusLineNC.bg or "NONE" }, -- the column separating vertically split windows
 
-			Visual          { bg = p.fg.lightness(Normal.bg.l - 6) }, -- Visual mode selection
+			Visual          { bg = p.fg.lightness(Normal.bg.l - 8) }, -- Visual mode selection
 			-- VisualNOS    { }, -- Visual mode selection when vim is "Not Owning the Selection".
 
 			NonText         { fg = Normal.bg.da(22) }, -- '@' at the end of the window, characters from 'showbreak' and other characters that do not really exist in the text (e.g., ">" displayed when a double-wide character doesn't fit at the end of the line). See also |hl-EndOfBuffer|.

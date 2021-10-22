@@ -113,7 +113,7 @@ highlight Todo guifg=NONE guibg=NONE guisp=NONE gui=bold,underline
 highlight Type guifg=#6A5549 guibg=NONE guisp=NONE gui=NONE
 highlight Underlined guifg=NONE guibg=NONE guisp=NONE gui=underline
 highlight VertSplit guifg=#A79891 guibg=NONE guisp=NONE gui=NONE
-highlight Visual guifg=NONE guibg=#D2DFE7 guisp=NONE gui=NONE
+highlight Visual guifg=NONE guibg=#CBD9E3 guisp=NONE gui=NONE
 highlight WarningMsg guifg=#944927 guibg=NONE guisp=NONE gui=NONE
 highlight WildMenu guifg=#F0EDEC guibg=#88507D guisp=NONE gui=NONE
 highlight diffAdded guifg=#4F6C31 guibg=NONE guisp=NONE gui=NONE

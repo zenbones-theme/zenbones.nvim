@@ -13,7 +13,7 @@ let s:p.inactive.right = [ [ "#CFCFCF", "#2E2E2E" ] ]
 
 let s:p.insert.left = [ [ "#A3A3A3", "#324757", "bold" ], [ "#A3A3A3", "#494949" ] ]
 let s:p.replace.left = [ [ "#A3A3A3", "#3E2225", "bold" ], [ "#A3A3A3", "#494949" ] ]
-let s:p.visual.left = [ [ "#A3A3A3", "#262626", "bold" ], [ "#A3A3A3", "#494949" ] ]
+let s:p.visual.left = [ [ "#A3A3A3", "#404040", "bold" ], [ "#A3A3A3", "#494949" ] ]
 
 let s:p.tabline.left = [ [ "#BBBBBB", "#494949", "italic" ] ]
 let s:p.tabline.middle = [ [ "#CFCFCF", "#2E2E2E" ] ]

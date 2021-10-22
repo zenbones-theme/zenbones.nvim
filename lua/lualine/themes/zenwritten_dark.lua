@@ -19,7 +19,7 @@ return {
 	},
 
 	visual = {
-		a = { bg = "#262626", fg = common_fg, gui = "bold" },
+		a = { bg = "#404040", fg = common_fg, gui = "bold" },
 	},
 
 	replace = {
