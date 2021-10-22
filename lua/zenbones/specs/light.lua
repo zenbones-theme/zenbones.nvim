@@ -13,7 +13,7 @@ local function generate(p, opt)
 	end
 
 	-- stylua: ignore start
-	local base_specs = lush(function()
+	local base = lush(function()
 		return {
 			-- The following are all the Neovim default highlight groups from the docs
 			-- as of 0.5.0-nightly-446, to aid your theme creation. Your themes should
@@ -156,49 +156,23 @@ local function generate(p, opt)
 			-- use these groups, or use their own. Consult your LSP client's
 			-- documentation.
 
-			LspReferenceText                        { ColorColumn }, -- used for highlighting "text" references
-			LspReferenceRead                        { ColorColumn }, -- used for highlighting "read" references
-			LspReferenceWrite                       { ColorColumn }, -- used for highlighting "write" references
+			LspReferenceText           { ColorColumn }, -- used for highlighting "text" references
+			LspReferenceRead           { ColorColumn }, -- used for highlighting "read" references
+			LspReferenceWrite          { ColorColumn }, -- used for highlighting "write" references
+			LspCodeLens                { LineNr },
 
-			DiagnosticError		                    { Error },
-			DiagnosticWarn                          { WarningMsg },
-			DiagnosticInfo                          { fg = p.water },
-			DiagnosticHint                          { fg = p.blossom },
+			DiagnosticError            { Error },
+			DiagnosticWarn             { WarningMsg },
+			DiagnosticInfo             { fg = p.water },
+			DiagnosticHint             { fg = p.blossom },
 
-			DiagnosticVirtualTextError              { DiagnosticError, bg = p.rose.abs_de(48).li(82) },
-			DiagnosticVirtualTextWarn               { DiagnosticWarn, bg = p.wood.de(58).li(86) },
+			DiagnosticVirtualTextError { DiagnosticError, bg = p.rose.abs_de(48).li(82) },
+			DiagnosticVirtualTextWarn  { DiagnosticWarn, bg = p.wood.de(58).li(86) },
 
-			DiagnosticUnderlineError		        { DiagnosticError, gui = "undercurl" },
-			DiagnosticUnderlineWarn                 { DiagnosticWarn, gui = "undercurl" },
-			DiagnosticUnderlineInfo                 { DiagnosticInfo, gui = "undercurl" },
-			DiagnosticUnderlineHint                 { DiagnosticHint, gui = "undercurl" },
-
-			LspDiagnosticsDefaultError              { DiagnosticError }, -- Used as the base highlight group. Other LspDiagnostic highlights link to this by default (except Underline)
-			LspDiagnosticsDefaultWarning            { DiagnosticWarn }, -- Used as the base highlight group. Other LspDiagnostic highlights link to this by default (except Underline)
-			LspDiagnosticsDefaultInformation        { DiagnosticInfo }, -- Used as the base highlight group. Other LspDiagnostic highlights link to this by default (except Underline)
-			LspDiagnosticsDefaultHint               { DiagnosticHint }, -- Used as the base highlight group. Other LspDiagnostic highlights link to this by default (except Underline)
-
-			LspDiagnosticsVirtualTextError          { DiagnosticVirtualTextError }, -- Used for "Error" diagnostic virtual text
-			LspDiagnosticsVirtualTextWarning        { DiagnosticVirtualTextWarn }, -- Used for "Warning" diagnostic virtual text
-			-- LspDiagnosticsVirtualTextInformation { }, -- Used for "Information" diagnostic virtual text
-			-- LspDiagnosticsVirtualTextHint        { }, -- Used for "Hint" diagnostic virtual text
-
-			LspDiagnosticsUnderlineError            { DiagnosticUnderlineError }, -- Used to underline "Error" diagnostics
-			LspDiagnosticsUnderlineWarning          { DiagnosticUnderlineWarn }, -- Used to underline "Warning" diagnostics
-			LspDiagnosticsUnderlineInformation      { DiagnosticUnderlineInfo }, -- Used to underline "Information" diagnostics
-			LspDiagnosticsUnderlineHint             { DiagnosticUnderlineHint }, -- Used to underline "Hint" diagnostics
-
-			-- LspDiagnosticsFloatingError          { }, -- Used to color "Error" diagnostic messages in diagnostics float
-			-- LspDiagnosticsFloatingWarning        { }, -- Used to color "Warning" diagnostic messages in diagnostics float
-			-- LspDiagnosticsFloatingInformation    { }, -- Used to color "Information" diagnostic messages in diagnostics float
-			-- LspDiagnosticsFloatingHint           { }, -- Used to color "Hint" diagnostic messages in diagnostics float
-
-			-- LspDiagnosticsSignError              { }, -- Used for "Error" signs in sign column
-			-- LspDiagnosticsSignWarning            { }, -- Used for "Warning" signs in sign column
-			-- LspDiagnosticsSignInformation        { }, -- Used for "Information" signs in sign column
-			-- LspDiagnosticsSignHint               { }, -- Used for "Hint" signs in sign column
-
-			LspCodeLens                             { LineNr },
+			DiagnosticUnderlineError   { DiagnosticError, gui = "undercurl" },
+			DiagnosticUnderlineWarn    { DiagnosticWarn, gui = "undercurl" },
+			DiagnosticUnderlineInfo    { DiagnosticInfo, gui = "undercurl" },
+			DiagnosticUnderlineHint    { DiagnosticHint, gui = "undercurl" },
 
 			-- These groups are for the neovim tree-sitter highlights.
 			-- As of writing, tree-sitter support is a WIP, group names may change.
@@ -258,7 +232,7 @@ local function generate(p, opt)
 			-- TSLiteral            { };	-- Literal text.
 			-- TSURI                { };	-- Any URI like a link or email.
 
-			TSNote                  { LspDiagnosticsDefaultInformation },
+			TSNote                  { DiagnosticInfo },
 			TSWarning               { WarningMsg },
 			TSDanger                { Error },
 
@@ -330,23 +304,23 @@ local function generate(p, opt)
 			BufferVisibleSign                { fg = StatusLineNC.fg },
 			BufferVisibleIndex               { fg = StatusLineNC.fg },
 
-			CocErrorSign                     { LspDiagnosticsDefaultError },
-			CocWarningSign                   { LspDiagnosticsDefaultWarning },
-			CocInfoSign                      { LspDiagnosticsDefaultInformation },
-			CocHintSign                      { LspDiagnosticsDefaultHint },
-			CocErrorHighlight                { LspDiagnosticsUnderlineError },
-			CocWarningHighlight              { LspDiagnosticsUnderlineWarning },
-			CocInfoHighlight                 { LspDiagnosticsUnderlineInformation },
-			CocHintHighlight                 { LspDiagnosticsUnderlineHint },
-			CocErrorVirtualText              { LspDiagnosticsVirtualTextError },
-			CocWarningVitualText             { LspDiagnosticsVirtualTextWarning },
+			CocErrorSign                     { DiagnosticError },
+			CocWarningSign                   { DiagnosticWarn },
+			CocInfoSign                      { DiagnosticInfo },
+			CocHintSign                      { DiagnosticHint },
+			CocErrorHighlight                { DiagnosticUnderlineError },
+			CocWarningHighlight              { DiagnosticUnderlineWarn },
+			CocInfoHighlight                 { DiagnosticUnderlineInfo },
+			CocHintHighlight                 { DiagnosticUnderlineHint },
+			CocErrorVirtualText              { DiagnosticVirtualTextError },
+			CocWarningVitualText             { DiagnosticVirtualTextWarn },
 			CocSelectedText                  { SpellBad },
 			CocCodeLens                      { LineNr },
 			CocMarkdownLink                  { fg = p.sky, gui = "underline" },
 
-			NeogitNotificationError          { LspDiagnosticsDefaultError },
-			NeogitNotificationWarning        { LspDiagnosticsDefaultWarning },
-			NeogitNotificationInfo           { LspDiagnosticsDefaultInformation },
+			NeogitNotificationError          { DiagnosticError },
+			NeogitNotificationWarning        { DiagnosticWarn },
+			NeogitNotificationInfo           { DiagnosticInfo },
 
 			NeogitDiffContextHighlight       { CursorLine },
 			NeogitDiffDeleteHighlight        { DiffDelete },
@@ -378,7 +352,7 @@ local function generate(p, opt)
 	-- stylua: ignore end
 
 	local specs = {
-		base_specs,
+		base,
 	}
 
 	if opt.darken_noncurrent_window then
@@ -386,11 +360,47 @@ local function generate(p, opt)
 			specs,
 			lush(function()
 				return {
-					NormalNC { base_specs.Normal, bg = base_specs.Normal.bg.abs_da(2) }, -- normal text in non-current windows
+					NormalNC { base.Normal, bg = base.Normal.bg.abs_da(2) }, -- normal text in non-current windows
 				}
 			end)
 		)
 	end
+
+	-- stylua: ignore start
+	if not vim.diagnostic then
+		table.insert(
+			specs,
+			lush(function()
+				return {
+					LspDiagnosticsDefaultError              { base.DiagnosticError }, -- Used as the base highlight group. Other LspDiagnostic highlights link to this by default (except Underline)
+					LspDiagnosticsDefaultWarning            { base.DiagnosticWarn }, -- Used as the base highlight group. Other LspDiagnostic highlights link to this by default (except Underline)
+					LspDiagnosticsDefaultInformation        { base.DiagnosticInfo }, -- Used as the base highlight group. Other LspDiagnostic highlights link to this by default (except Underline)
+					LspDiagnosticsDefaultHint               { base.DiagnosticHint }, -- Used as the base highlight group. Other LspDiagnostic highlights link to this by default (except Underline)
+
+					LspDiagnosticsVirtualTextError          { base.DiagnosticVirtualTextError }, -- Used for "Error" diagnostic virtual text
+					LspDiagnosticsVirtualTextWarning        { base.DiagnosticVirtualTextWarn }, -- Used for "Warning" diagnostic virtual text
+					-- LspDiagnosticsVirtualTextInformation { }, -- Used for "Information" diagnostic virtual text
+					-- LspDiagnosticsVirtualTextHint        { }, -- Used for "Hint" diagnostic virtual text
+
+					LspDiagnosticsUnderlineError            { base.DiagnosticUnderlineError }, -- Used to underline "Error" diagnostics
+					LspDiagnosticsUnderlineWarning          { base.DiagnosticUnderlineWarn }, -- Used to underline "Warning" diagnostics
+					LspDiagnosticsUnderlineInformation      { base.DiagnosticUnderlineInfo }, -- Used to underline "Information" diagnostics
+					LspDiagnosticsUnderlineHint             { base.DiagnosticUnderlineHint }, -- Used to underline "Hint" diagnostics
+
+					-- LspDiagnosticsFloatingError          { }, -- Used to color "Error" diagnostic messages in diagnostics float
+					-- LspDiagnosticsFloatingWarning        { }, -- Used to color "Warning" diagnostic messages in diagnostics float
+					-- LspDiagnosticsFloatingInformation    { }, -- Used to color "Information" diagnostic messages in diagnostics float
+					-- LspDiagnosticsFloatingHint           { }, -- Used to color "Hint" diagnostic messages in diagnostics float
+
+					-- LspDiagnosticsSignError              { }, -- Used for "Error" signs in sign column
+					-- LspDiagnosticsSignWarning            { }, -- Used for "Warning" signs in sign column
+					-- LspDiagnosticsSignInformation        { }, -- Used for "Information" signs in sign column
+					-- LspDiagnosticsSignHint               { }, -- Used for "Hint" signs in sign column
+				}
+			end)
+		)
+	end
+	-- stylua: ignore end
 
 	return lush.merge(specs)
 end

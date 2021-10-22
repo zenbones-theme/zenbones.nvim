@@ -46,8 +46,8 @@ return function(name, specs, p)
 			tabsel_fg = specs.Normal.fg.hex,
 			warning_bg = specs.DiagnosticVirtualTextWarn.bg.hex,
 			warning_fg = specs.DiagnosticVirtualTextWarn.fg.hex,
-			error_bg = specs.LspDiagnosticsVirtualTextError.bg.hex,
-			error_fg = specs.LspDiagnosticsVirtualTextError.fg.hex,
+			error_bg = specs.DiagnosticVirtualTextError.bg.hex,
+			error_fg = specs.DiagnosticVirtualTextError.fg.hex,
 		},
 	}
 end
