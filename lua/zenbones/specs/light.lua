@@ -37,10 +37,10 @@ local function generate(p, opt)
 			ErrorMsg        { Error }, -- error messages on the command line
 			WarningMsg      { fg = p.wood }, -- warning messages
 
-			Comment         { fg = p.bg.da(opt.darken_comments or 38).de(28), gui = opt.comment_gui or "italic" }, -- any comment
+			Comment         { fg = Normal.bg.da(opt.darken_comments or 38).de(28), gui = opt.comment_gui or "italic" }, -- any comment
 			Conceal         { fg = p.fg.li(20), gui = "bold,italic" }, -- placeholder characters substituted for concealed text (see 'conceallevel')
 
-			Cursor          { bg = p.fg, fg = p.bg.li(20) }, -- character under the cursor
+			Cursor          { bg = p.fg, fg = p.bg }, -- character under the cursor
 			lCursor         { Cursor, bg = Cursor.bg.li(20)  }, -- the character under the cursor when |language-mapping| is used (see 'guicursor')
 			-- CursorIM     { }, -- like Cursor, but used when in IME mode |CursorIM|
 			TermCursor      { Cursor }, -- cursor in a focused terminal
@@ -48,7 +48,7 @@ local function generate(p, opt)
 
 			CursorLine      { bg = Normal.bg.da(3) }, -- Screen-line at the cursor, when 'cursorline' is set.	Low-priority if foreground (ctermfg OR guifg) is not set.
 			CursorColumn    { CursorLine }, -- Screen-column at the cursor, when 'cursorcolumn' is set.
-			ColorColumn     { bg = p.wood.de(38).li(80) }, -- used for the columns set with 'colorcolumn'
+			ColorColumn     { bg = p.wood.saturation(46).lightness(Normal.bg.l - 12) }, -- used for the columns set with 'colorcolumn'
 
 			DiffAdd         { bg = p.leaf.saturation(30).lightness(normal_bg.l - 6) }, -- diff mode: Added line |diff.txt|
 			DiffChange      { bg = p.water.saturation(30).lightness(normal_bg.l - 6) }, -- diff mode: Changed line |diff.txt|
@@ -73,8 +73,8 @@ local function generate(p, opt)
 			PmenuSbar       { bg = Normal.bg.da(28) }, -- Popup menu: scrollbar.
 			PmenuThumb      { bg = Normal.bg.li(58) }, -- Popup menu: Thumb of the scrollbar.
 
-			Search          { bg = p.blossom.de(10).li(54), fg = p.fg }, -- Last search pattern highlighting (see 'hlsearch').	Also used for similar items that need to stand out.
-			IncSearch       { bg = p.blossom, fg = p.bg, gui = "bold" }, -- 'incsearch' highlighting; also used for the text replaced with ":s///c"
+			Search          { bg = p.blossom.lightness(Normal.bg.l - 15), fg = p.fg }, -- Last search pattern highlighting (see 'hlsearch').	Also used for similar items that need to stand out.
+			IncSearch       { bg = p.blossom.lightness(Normal.bg.l - 35), fg = p.bg, gui = "bold" }, -- 'incsearch' highlighting; also used for the text replaced with ":s///c"
 			-- Substitute   { }, -- |:substitute| replacement text highlighting
 			MatchParen      { Search }, -- The character under the cursor or just before it, if it is a paired bracket, and its match. |pi_paren.txt|
 			-- QuickFixLine { }, -- Current |quickfix| item in the quickfix window. Combined with |hl-CursorLine| when the cursor is there.
@@ -84,14 +84,14 @@ local function generate(p, opt)
 			SpellLocal      { SpellCap }, -- Word that is recognized by the spellchecker as one that is used in another region. |spell| Combined with the highlighting used otherwise.
 			SpellRare       { SpellBad, guisp = p.wood }, -- Word that is recognized by the spellchecker as one that is hardly ever used.  |spell| Combined with the highlighting used otherwise.
 
-			StatusLine      { bg = p.bg.da(14), fg = p.fg }, -- status line of current window
-			StatusLineNC    { bg = p.bg.da(10), fg = p.fg.li(28) }, -- status lines of not-current windows Note: if this is equal to "StatusLine" Vim will use "^^^" in the status line of the current window.
+			StatusLine      { bg = Normal.bg.da(14), fg = p.fg }, -- status line of current window
+			StatusLineNC    { bg = Normal.bg.da(10), fg = p.fg.li(28) }, -- status lines of not-current windows Note: if this is equal to "StatusLine" Vim will use "^^^" in the status line of the current window.
 			TabLine         { StatusLine }, -- tab pages line, not active tab page label
 			TabLineFill     { StatusLineNC }, -- tab pages line, where there are no labels
 			TabLineSel      { gui = "bold" }, -- tab pages line, active tab page label
 			VertSplit       { fg = LineNr.fg, bg = opt.solid_vert_split and StatusLineNC.bg or "NONE" }, -- the column separating vertically split windows
 
-			Visual          { bg = p.fg.li(84) }, -- Visual mode selection
+			Visual          { bg = p.fg.lightness(Normal.bg.l - 6) }, -- Visual mode selection
 			-- VisualNOS    { }, -- Visual mode selection when vim is "Not Owning the Selection".
 
 			NonText         { fg = Normal.bg.da(22) }, -- '@' at the end of the window, characters from 'showbreak' and other characters that do not really exist in the text (e.g., ">" displayed when a double-wide character doesn't fit at the end of the line). See also |hl-EndOfBuffer|.
@@ -135,7 +135,7 @@ local function generate(p, opt)
 			-- Macro        { }, --    same as Define
 			-- PreCondit    { }, --  preprocessor #if, #else, #endif, etp.
 
-			Type            { fg = p.bg.sa(20).da(60) }, -- (preferred) int, long, char, etp.
+			Type            { fg = Normal.bg.sa(20).da(60) }, -- (preferred) int, long, char, etp.
 			-- StorageClass { }, -- static, register, volatile, etc.
 			-- Structure    { }, --  struct, union, enum, etc.
 			-- Typedef      { }, --  A typedef
@@ -143,7 +143,7 @@ local function generate(p, opt)
 			Special         { fg = p.fg.li(23), gui = "bold" }, -- (preferred) any special symbol
 			-- SpecialChar  { }, --  special character in a constant
 			-- Tag          { }, --    you can use CTRL-] on this
-			Delimiter       { fg = p.bg.da(42) }, --	character that needs attention
+			Delimiter       { fg = Normal.bg.da(42) }, --	character that needs attention
 			SpecialComment  { Comment, gui = "bold" }, -- special things inside a comment
 			-- Debug        { }, --    debugging statements
 
@@ -166,8 +166,8 @@ local function generate(p, opt)
 			DiagnosticInfo             { fg = p.water },
 			DiagnosticHint             { fg = p.blossom },
 
-			DiagnosticVirtualTextError { DiagnosticError, bg = p.rose.abs_de(48).li(82) },
-			DiagnosticVirtualTextWarn  { DiagnosticWarn, bg = p.wood.de(58).li(86) },
+			DiagnosticVirtualTextError { DiagnosticError, bg = p.rose.saturation(52).lightness(Normal.bg.l - 4) },
+			DiagnosticVirtualTextWarn  { DiagnosticWarn, bg = p.wood.saturation(52).lightness(Normal.bg.l - 4)},
 
 			DiagnosticUnderlineError   { DiagnosticError, gui = "undercurl" },
 			DiagnosticUnderlineWarn    { DiagnosticWarn, gui = "undercurl" },
@@ -271,7 +271,7 @@ local function generate(p, opt)
 			GitGutterChange                  { GitSignsChange },
 			GitGutterDelete                  { GitSignsDelete },
 
-			IndentBlanklineChar              { fg = p.bg.da(12).de(20) },
+			IndentBlanklineChar              { fg = Normal.bg.da(12).de(20) },
 
 			TelescopeSelection               { CursorLine },
 			TelescopeSelectionCaret          { TelescopeSelection, fg = p.rose },
