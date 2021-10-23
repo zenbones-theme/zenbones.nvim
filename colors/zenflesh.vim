@@ -33,10 +33,16 @@ highlight Bold guifg=NONE guibg=NONE guisp=NONE gui=bold
 highlight BufferVisible guifg=#CAD0D4 guibg=NONE guisp=NONE gui=NONE
 highlight BufferVisibleIndex guifg=#CAD0D4 guibg=NONE guisp=NONE gui=NONE
 highlight BufferVisibleSign guifg=#CAD0D4 guibg=NONE guisp=NONE gui=NONE
+highlight CmpItemAbbr guifg=#979FA4 guibg=NONE guisp=NONE gui=NONE
+highlight CmpItemAbbrDeprecated guifg=#64696D guibg=NONE guisp=NONE gui=NONE
+highlight CmpItemAbbrMatch guifg=#B4BDC3 guibg=NONE guisp=NONE gui=bold
+highlight CmpItemAbbrMatchFuzzy guifg=#9FA7AD guibg=NONE guisp=NONE gui=bold
+highlight CmpItemKind guifg=#868C91 guibg=NONE guisp=NONE gui=NONE
+highlight CmpItemMenu guifg=#797F84 guibg=NONE guisp=NONE gui=NONE
 highlight CocMarkdownLink guifg=#66A5AD guibg=NONE guisp=NONE gui=underline
 highlight ColorColumn guifg=NONE guibg=#55392C guisp=NONE gui=NONE
 highlight Comment guifg=#6E6763 guibg=NONE guisp=NONE gui=italic
-highlight Conceal guifg=#8D9499 guibg=NONE guisp=NONE gui=bold,italic
+highlight Conceal guifg=#797F84 guibg=NONE guisp=NONE gui=bold,italic
 highlight Constant guifg=#868C91 guibg=NONE guisp=NONE gui=italic
 highlight Cursor guifg=#1C1917 guibg=#C4CACF guisp=NONE gui=NONE
 highlight CursorLine guifg=NONE guibg=#25211F guisp=NONE gui=NONE
@@ -94,7 +100,7 @@ highlight PmenuSel guifg=NONE guibg=#4F4844 guisp=NONE gui=NONE
 highlight PmenuThumb guifg=NONE guibg=#8E817B guisp=NONE gui=NONE
 highlight Search guifg=#B4BDC3 guibg=#65435E guisp=NONE gui=NONE
 highlight SneakLabelMask guifg=#B279A7 guibg=#B279A7 guisp=NONE gui=NONE
-highlight Special guifg=#9CA4AA guibg=NONE guisp=NONE gui=bold
+highlight Special guifg=#8D9499 guibg=NONE guisp=NONE gui=bold
 highlight SpecialComment guifg=#6E6763 guibg=NONE guisp=NONE gui=bold
 highlight SpecialKey guifg=#544C48 guibg=NONE guisp=NONE gui=italic
 highlight SpellBad guifg=#CB7A83 guibg=NONE guisp=NONE gui=undercurl
