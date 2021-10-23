@@ -84,6 +84,7 @@ currently supported.
 -   [Lightline](https://github.com/itchyny/lightline.vim)
 -   [BarBar](https://github.com/romgrk/barbar.nvim)
 -   [CoC](https://github.com/neoclide/coc.nvim)
+-   [Cmp](https://github.com/hrsh7th/nvim-cmp)
 -   [Neogit](https://github.com/TimUntersberger/neogit)
 -   [WhichKey](https://github.com/folke/which-key.nvim)
 -   [Trouble](https://github.com/folke/trouble.nvim)

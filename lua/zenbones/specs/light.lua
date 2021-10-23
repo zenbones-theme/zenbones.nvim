@@ -1,12 +1,20 @@
 local lush = require "lush"
 
 local function generate(p, opt)
-	local normal_bg = p.bg
+	local p1 = {
+		bg = p.bg,
+		fg1 = p.fg.li(11),
+		fg2 = p.fg.li(15),
+		fg3 = p.fg.li(22),
+		fg4 = p.fg.li(25),
+		fg5 = p.fg.li(31),
+		fg6 = p.fg.li(42),
+	}
 
 	if opt.lightness == "bright" then
-		normal_bg = p.bg_bright
+		p1.bg = p.bg_bright
 	elseif opt.lightness == "dim" then
-		normal_bg = p.bg_dim
+		p1.bg = p.bg_dim
 	elseif opt.lightness ~= nil then
 		local error_msg = "Unknown lightness value: " .. vim.inspect(lightness)
 		vim.notify(error_msg, vim.log.levels.WARN, { title = "zenbones" })
@@ -27,7 +35,7 @@ local function generate(p, opt)
 			-- styling for that group (meaning they mostly get styled as Normal)
 			-- or leave them commented to apply vims default colouring or linking.
 
-			Normal          { bg = normal_bg, fg = p.fg }, -- normal text
+			Normal          { bg = p1.bg, fg = p.fg }, -- normal text
 
 			Underlined      { gui = "underline" }, -- (preferred) text that stands out, HTML links
 			Bold            { gui = "bold" },
@@ -38,9 +46,9 @@ local function generate(p, opt)
 			WarningMsg      { fg = p.wood }, -- warning messages
 
 			Comment         { fg = Normal.bg.da(opt.darken_comments or 38).de(28), gui = opt.comment_gui or "italic" }, -- any comment
-			Conceal         { fg = p.fg.li(20), gui = "bold,italic" }, -- placeholder characters substituted for concealed text (see 'conceallevel')
+			Conceal         { fg = p1.fg3, gui = "bold,italic" }, -- placeholder characters substituted for concealed text (see 'conceallevel')
 
-			Cursor          { bg = p.fg, fg = p.bg }, -- character under the cursor
+			Cursor          { bg = p.fg, fg = p1.bg }, -- character under the cursor
 			lCursor         { Cursor, bg = Cursor.bg.li(20)  }, -- the character under the cursor when |language-mapping| is used (see 'guicursor')
 			-- CursorIM     { }, -- like Cursor, but used when in IME mode |CursorIM|
 			TermCursor      { Cursor }, -- cursor in a focused terminal
@@ -50,10 +58,10 @@ local function generate(p, opt)
 			CursorColumn    { CursorLine }, -- Screen-column at the cursor, when 'cursorcolumn' is set.
 			ColorColumn     { bg = p.wood.saturation(46).lightness(Normal.bg.l - 12) }, -- used for the columns set with 'colorcolumn'
 
-			DiffAdd         { bg = p.leaf.saturation(30).lightness(normal_bg.l - 6) }, -- diff mode: Added line |diff.txt|
-			DiffChange      { bg = p.water.saturation(30).lightness(normal_bg.l - 6) }, -- diff mode: Changed line |diff.txt|
-			DiffDelete      { bg = p.rose.saturation(40).lightness(normal_bg.l - 6) }, -- diff mode: Deleted line |diff.txt|
-			DiffText        { bg = p.water.saturation(30).lightness(normal_bg.l - 18), fg = p.fg }, -- diff mode: Changed text within a changed line |diff.txt|
+			DiffAdd         { bg = p.leaf.saturation(30).lightness(p1.bg.l - 6) }, -- diff mode: Added line |diff.txt|
+			DiffChange      { bg = p.water.saturation(30).lightness(p1.bg.l - 6) }, -- diff mode: Changed line |diff.txt|
+			DiffDelete      { bg = p.rose.saturation(40).lightness(p1.bg.l - 6) }, -- diff mode: Deleted line |diff.txt|
+			DiffText        { bg = p.water.saturation(30).lightness(p1.bg.l - 18), fg = p.fg }, -- diff mode: Changed text within a changed line |diff.txt|
 
 			LineNr          { fg = Normal.bg.da(32), bg = opt.darken_line_nr and Normal.bg.da(4) or "NONE" }, -- Line number for ":number" and ":#" commands, and when 'number' or 'relativenumber' option is set.
 			SignColumn      { LineNr }, -- column where |signs| are displayed
@@ -74,7 +82,7 @@ local function generate(p, opt)
 			PmenuThumb      { bg = Normal.bg.li(58) }, -- Popup menu: Thumb of the scrollbar.
 
 			Search          { bg = p.blossom.lightness(Normal.bg.l - 15), fg = p.fg }, -- Last search pattern highlighting (see 'hlsearch').	Also used for similar items that need to stand out.
-			IncSearch       { bg = p.blossom.lightness(Normal.bg.l - 35), fg = p.bg, gui = "bold" }, -- 'incsearch' highlighting; also used for the text replaced with ":s///c"
+			IncSearch       { bg = p.blossom.lightness(Normal.bg.l - 35), fg = p1.bg, gui = "bold" }, -- 'incsearch' highlighting; also used for the text replaced with ":s///c"
 			-- Substitute   { }, -- |:substitute| replacement text highlighting
 			MatchParen      { Search }, -- The character under the cursor or just before it, if it is a paired bracket, and its match. |pi_paren.txt|
 			-- QuickFixLine { }, -- Current |quickfix| item in the quickfix window. Combined with |hl-CursorLine| when the cursor is there.
@@ -99,7 +107,7 @@ local function generate(p, opt)
 			Whitespace      { NonText }, -- "nbsp", "space", "tab" and "trail" in 'listchars'
 			EndOfBuffer     { NonText }, -- filler lines (~) after the end of the buffer.  By default, this is highlighted like |hl-NonText|.
 
-			WildMenu        { bg = p.blossom, fg = p.bg }, -- current match in 'wildmenu' completion
+			WildMenu        { bg = p.blossom, fg = p1.bg }, -- current match in 'wildmenu' completion
 			Directory       { gui = "bold" }, -- directory names (and other special names in listings)
 			Question        { MoreMsg }, -- |hit-enter| prompt and yes/no questions
 			Title           { gui = "bold" }, -- titles for output from ":set all", ":autocmd" etc.
@@ -111,14 +119,14 @@ local function generate(p, opt)
 			-- default,
 			-- Uncomment and edit if you want more specific syntax highlighting.
 
-			Constant        { fg = p.fg.li(24), gui = "italic" }, -- (preferred) any constant
+			Constant        { fg = p1.fg4, gui = "italic" }, -- (preferred) any constant
 			-- String       { }, --   a string constant: "this is a string"
 			-- Character    { }, --  a character constant: 'c', '\n'
 			Number          { fg = p.fg, gui = "italic" }, --   a number constant: 234, 0xff
 			Boolean         { Number }, --  a boolean constant: TRUE, false
 			-- Float        { }, --    a floating point constant: 2.3e10
 
-			Identifier      { fg = p.fg.li(15) }, -- (preferred) any variable name
+			Identifier      { fg = p1.fg2 }, -- (preferred) any variable name
 			Function        { fg = p.fg }, -- function name (also: methods for classes)
 
 			Statement       { fg = p.fg, gui = "bold" }, -- (preferred) any statement
@@ -140,7 +148,7 @@ local function generate(p, opt)
 			-- Structure    { }, --  struct, union, enum, etc.
 			-- Typedef      { }, --  A typedef
 
-			Special         { fg = p.fg.li(23), gui = "bold" }, -- (preferred) any special symbol
+			Special         { fg = p1.fg3, gui = "bold" }, -- (preferred) any special symbol
 			-- SpecialChar  { }, --  special character in a constant
 			-- Tag          { }, --    you can use CTRL-] on this
 			Delimiter       { fg = Normal.bg.da(42) }, --	character that needs attention
@@ -347,6 +355,12 @@ local function generate(p, opt)
 			NvimTreeGitNew                   { diffAdded },
 			NvimTreeGitDeleted               { diffRemoved },
 			NvimTreeSpecialFile              { fg = p.blossom, gui = "underline" },
+			CmpItemAbbr			             { fg = p1.fg2 },
+			CmpItemAbbrDeprecated            { fg = p1.fg6 },
+			CmpItemAbbrMatch	             { fg = p.fg, gui = "bold"  },
+			CmpItemAbbrMatchFuzzy            { fg = p1.fg1, gui = "bold" },
+			CmpItemKind                      { fg = p1.fg4 },
+			CmpItemMenu                      { fg = p1.fg5 },
 		}
 	end)
 	-- stylua: ignore end
