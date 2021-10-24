@@ -136,6 +136,86 @@ local colorschemes = {
 			exclude = { "vim" },
 		},
 	},
+
+	{
+		name = "rosebones_light",
+		specs = "rosebones",
+		palette = require("rosebones.palette").light,
+		setup = function()
+			vim.opt.background = "light"
+		end,
+		opt = {
+			exclude = { "vim", "alacritty", "iterm", "kitty", "tmux", "wezterm" },
+		},
+	},
+
+	{
+		name = "rosebones_dark",
+		specs = "rosebones",
+		palette = require("rosebones.palette").dark,
+		setup = function()
+			vim.opt.background = "dark"
+		end,
+		opt = {
+			exclude = { "vim", "alacritty", "iterm", "kitty", "tmux", "wezterm" },
+		},
+	},
+
+	{
+		name = "forestbones_light",
+		specs = "forestbones",
+		palette = require("forestbones.palette").light,
+		setup = function()
+			vim.opt.background = "light"
+		end,
+		opt = {
+			exclude = { "vim", "alacritty", "iterm", "kitty", "tmux", "wezterm" },
+		},
+	},
+
+	{
+		name = "forestbones_dark",
+		specs = "forestbones",
+		palette = require("forestbones.palette").dark,
+		setup = function()
+			vim.opt.background = "dark"
+		end,
+		opt = {
+			exclude = { "vim", "alacritty", "iterm", "kitty", "tmux", "wezterm" },
+		},
+	},
+
+	{
+		name = "tokyobones_light",
+		specs = "tokyobones",
+		palette = require("tokyobones.palette").light,
+		setup = function()
+			vim.opt.background = "light"
+		end,
+		opt = {
+			exclude = { "vim", "alacritty", "iterm", "kitty", "tmux", "wezterm" },
+		},
+	},
+
+	{
+		name = "tokyobones_dark",
+		specs = "tokyobones",
+		palette = require("tokyobones.palette").dark,
+		setup = function()
+			vim.opt.background = "dark"
+		end,
+		opt = {
+			exclude = { "vim", "alacritty", "iterm", "kitty", "tmux", "wezterm" },
+		},
+	},
+
+	{
+		name = "nordbones",
+		palette = require("nordbones.palette").derived,
+		opt = {
+			exclude = { "vim", "alacritty", "iterm", "kitty", "tmux", "wezterm" },
+		},
+	},
 }
 
 function build_from(colorscheme)
