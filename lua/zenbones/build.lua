@@ -18,81 +18,144 @@ function build(name, specs, palette, options)
 	end
 end
 
+local colorschemes = {
+	{
+		name = "zenbones",
+		palette = require "zenbones.palette",
+	},
+
+	{
+		name = "zenbones_bright",
+		specs = "zenbones",
+		palette = require "zenbones.palette",
+		setup = function()
+			vim.g.zenbones_lightness = "bright"
+		end,
+		cleanup = function()
+			vim.api.nvim_del_var "zenbones_lightness"
+		end,
+		opt = {
+			exclude = { "vim", "lightline", "lualine" },
+		},
+	},
+
+	{
+		name = "zenbones_dim",
+		specs = "zenbones",
+		palette = require "zenbones.palette",
+		setup = function()
+			vim.g.zenbones_lightness = "dim"
+		end,
+		cleanup = function()
+			vim.api.nvim_del_var "zenbones_lightness"
+		end,
+		opt = {
+			exclude = { "vim", "lightline", "lualine" },
+		},
+	},
+
+	{
+		name = "zenflesh",
+		palette = require "zenflesh.palette",
+	},
+
+	{
+		name = "zenflesh_stark",
+		specs = "zenflesh",
+		palette = require "zenflesh.palette",
+		setup = function()
+			vim.g.zenflesh_darkness = "stark"
+		end,
+		cleanup = function()
+			vim.api.nvim_del_var "zenflesh_darkness"
+		end,
+		opt = {
+			exclude = { "vim", "lightline", "lualine" },
+		},
+	},
+
+	{
+		name = "zenflesh_warm",
+		specs = "zenflesh",
+		palette = require "zenflesh.palette",
+		setup = function()
+			vim.g.zenflesh_darkness = "warm"
+		end,
+		cleanup = function()
+			vim.api.nvim_del_var "zenflesh_darkness"
+		end,
+		opt = {
+			exclude = { "vim", "lightline", "lualine" },
+		},
+	},
+
+	{
+		name = "neobones_light",
+		specs = "neobones",
+		palette = require("neobones.palette").light,
+		setup = function()
+			vim.opt.background = "light"
+		end,
+		opt = {
+			exclude = { "vim" },
+		},
+	},
+
+	{
+		name = "neobones_dark",
+		specs = "neobones",
+		palette = require("neobones.palette").dark,
+		setup = function()
+			vim.opt.background = "dark"
+		end,
+		opt = {
+			exclude = { "vim" },
+		},
+	},
+
+	{
+		name = "zenwritten_light",
+		specs = "zenwritten",
+		palette = require("zenwritten.palette").light,
+		setup = function()
+			vim.opt.background = "light"
+		end,
+		opt = {
+			exclude = { "vim" },
+		},
+	},
+
+	{
+		name = "zenwritten_dark",
+		specs = "zenwritten",
+		palette = require("zenwritten.palette").dark,
+		setup = function()
+			vim.opt.background = "dark"
+		end,
+		opt = {
+			exclude = { "vim" },
+		},
+	},
+}
+
+function build_from(colorscheme)
+	if colorscheme.setup then
+		colorscheme.setup()
+	end
+	local specs = colorscheme.specs or colorscheme.name
+	package.loaded[specs] = nil
+	build(colorscheme.name, require(specs), colorscheme.palette, colorscheme.opt or {})
+	if colorscheme.cleanup then
+		colorscheme.cleanup()
+	end
+end
+
 local M = {}
 
 function M.run()
-	-- default
-	package.loaded["zenbones"] = nil
-	local p = require "zenbones.palette"
-	build("zenbones", require "zenbones", p, {})
-
-	-- bright
-	package.loaded["zenbones"] = nil
-	vim.g.zenbones_lightness = "bright"
-	build(
-		"zenbones_bright",
-		require "zenbones",
-		require "zenbones.palette",
-		{ exclude = { "vim", "lightline", "lualine" } }
-	)
-	vim.api.nvim_del_var "zenbones_lightness"
-
-	-- dim
-	package.loaded["zenbones"] = nil
-	vim.g.zenbones_lightness = "dim"
-	build(
-		"zenbones_dim",
-		require "zenbones",
-		require "zenbones.palette",
-		{ exclude = { "vim", "lightline", "lualine" } }
-	)
-	vim.api.nvim_del_var "zenbones_lightness"
-
-	-- default
-	package.loaded["zenflesh"] = nil
-	build("zenflesh", require "zenflesh", require "zenflesh.palette", {})
-
-	-- stark
-	package.loaded["zenflesh"] = nil
-	vim.g.zenflesh_darkness = "stark"
-	build(
-		"zenflesh_stark",
-		require "zenflesh",
-		require "zenflesh.palette",
-		{ exclude = { "vim", "lightline", "lualine" } }
-	)
-	vim.api.nvim_del_var "zenflesh_darkness"
-
-	-- warm
-	package.loaded["zenflesh"] = nil
-	vim.g.zenflesh_darkness = "warm"
-	build(
-		"zenflesh_warm",
-		require "zenflesh",
-		require "zenflesh.palette",
-		{ exclude = { "vim", "lightline", "lualine" } }
-	)
-	vim.api.nvim_del_var "zenflesh_darkness"
-
-	-- neobones light
-	package.loaded["neobones"] = nil
-	vim.opt.background = "light"
-	build("neobones_light", require "neobones", require("neobones.palette").light, { exclude = { "vim" } })
-
-	-- neobones dark
-	package.loaded["neobones"] = nil
-	vim.opt.background = "dark"
-	build("neobones_dark", require "neobones", require("neobones.palette").dark, { exclude = { "vim" } })
-
-	-- zenwritten light
-	package.loaded["zenwritten"] = nil
-	vim.opt.background = "light"
-	build("zenwritten_light", require "zenwritten", require("zenwritten.palette").light, { exclude = { "vim" } })
-
-	-- zenwritten dark
-	package.loaded["zenwritten"] = nil
-	vim.opt.background = "dark"
-	build("zenwritten_dark", require "zenwritten", require("zenwritten.palette").dark, { exclude = { "vim" } })
+	for _i, colorscheme in ipairs(colorschemes) do
+		build_from(colorscheme)
+	end
 end
 
 return M
