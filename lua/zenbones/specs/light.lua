@@ -345,7 +345,7 @@ local function generate(p, opt)
 			TroubleText                      { Function },
 			TroubleSource                    { Constant },
 
-			NvimTreeNormal                   { NormalFloat },
+			NvimTreeNormal                   { Normal, bg = Normal.bg.da(2) },
 			NvimTreeVertSplit                { fg = "bg" },
 			NvimTreeCursorLine               { bg = StatusLineNC.bg },
 			NvimTreeCursorColumn             { NvimTreeCursorLine	},
@@ -355,12 +355,17 @@ local function generate(p, opt)
 			NvimTreeGitNew                   { diffAdded },
 			NvimTreeGitDeleted               { diffRemoved },
 			NvimTreeSpecialFile              { fg = p.blossom, gui = "underline" },
+
 			CmpItemAbbr			             { fg = p1.fg2 },
 			CmpItemAbbrDeprecated            { fg = p1.fg6 },
 			CmpItemAbbrMatch	             { fg = p.fg, gui = "bold"  },
 			CmpItemAbbrMatchFuzzy            { fg = p1.fg1, gui = "bold" },
 			CmpItemKind                      { fg = p1.fg4 },
 			CmpItemMenu                      { fg = p1.fg5 },
+
+			NnnNormal                        { Normal, bg = Normal.bg.da(2) },
+			NnnNormalNC                      { NnnNormal },
+			NnnVertSplit                     { fg = "bg" },
 		}
 	end)
 	-- stylua: ignore end
