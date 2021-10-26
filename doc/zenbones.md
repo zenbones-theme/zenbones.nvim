@@ -76,13 +76,23 @@ Default: `v:true`. Make comments italicize.
 
 #### g:zenbones_darken_comments
 
-Default: 38. Percentage to darken comments. Comments base their foreground color
-on the bg palette. See also |lush-color-darken|.
+Default: 38. Percentage to darken comments relative to Normal bg. See also
+|lush-color-darken|.
 
 #### g:zenflesh_lighten_comments
 
-Default: 38. Percentage to lighten comments. Comments base their foreground
-color on the bg palette. See also |lush-color-lighten|.
+Default: 38. Percentage to lighten comments relative to Normal bg. See also
+|lush-color-lighten|.
+
+#### g:zenbones_darken_non_text
+
+Default: 22. Percentage to darken |hl-NonText| relative to Normal bg. See also
+|lush-color-darken|.
+
+#### g:zenflesh_lighten_none_text
+
+Default: 26. Percentage to lighten |hl-NonText| relative to Normal bg. See also
+|lush-color-darken|.
 
 #### g:zenbones_compat
 
