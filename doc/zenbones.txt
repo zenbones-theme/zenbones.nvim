@@ -59,19 +59,15 @@ g:zenflesh_darkness                    Change background colors darkness.
 
                                         *zenbones-g:zenflesh_solid_vert_split*
 
-g:zenflesh_solid_vert_split            Default: `v:false`. Make VertSplit more
-                                       distinguishable background highlight.
-
-
-                                          *zenbones-g:zenbones_darken_line_nr*
-
-g:zenbones_darken_line_nr              Default: `v:false`. Darken LineNr
+g:zenflesh_solid_vert_split            Default: `v:false`. Solid |hl-VertSplit|
                                        background.
 
 
-                                         *zenbones-g:zenflesh_lighten_line_nr*
+                                           *zenbones-g:zenbones_solid_line_nr*
 
-g:zenflesh_lighten_line_nr             Default: `v:false`. Lighten LineNr
+                                           *zenbones-g:zenflesh_solid_line_nr*
+
+g:zenflesh_solid_line_nr               Default: `v:false`. Solid |hl-LineNr|
                                        background.
 
 
@@ -79,9 +75,9 @@ g:zenflesh_lighten_line_nr             Default: `v:false`. Lighten LineNr
 
                                       *zenbones-g:zenflesh_solid_float_border*
 
-g:zenflesh_solid_float_border          Default: `v:false`. Make FloatBorder
-                                       have a more distinguishable background
-                                       highlight.
+g:zenflesh_solid_float_border          Default: `v:false`. Make
+                                       |hl-FloatBorder| have a more
+                                       distinguishable background highlight.
 
 
                                 *zenbones-g:zenbones_darken_noncurrent_window*
@@ -107,17 +103,43 @@ g:zenflesh_italic_comments             Default: `v:true`. Make comments
                                          *zenbones-g:zenbones_darken_comments*
 
 g:zenbones_darken_comments             Default: 38. Percentage to darken
-                                       comments. Comments base their foreground
-                                       color on the bg palette. See also
+                                       comments relative to Normal bg. See also
                                        |lush-color-darken|.
 
 
                                         *zenbones-g:zenflesh_lighten_comments*
 
 g:zenflesh_lighten_comments            Default: 38. Percentage to lighten
-                                       comments. Comments base their foreground
-                                       color on the bg palette. See also
+                                       comments relative to Normal bg. See also
                                        |lush-color-lighten|.
+
+
+                                         *zenbones-g:zenbones_darken_non_text*
+
+g:zenbones_darken_non_text             Default: 22. Percentage to darken
+                                       |hl-NonText| relative to Normal bg. See
+                                       also |lush-color-darken|.
+
+
+                                       *zenbones-g:zenflesh_lighten_none_text*
+
+g:zenflesh_lighten_none_text           Default: 26. Percentage to lighten
+                                       |hl-NonText| relative to Normal bg. See
+                                       also |lush-color-darken|.
+
+
+                                          *zenbones-g:zenbones_darken_line_nr*
+
+g:zenbones_darken_line_nr              Default: 33. Percentage to darken
+                                       |hl-LineNr| relative to Normal bg. See
+                                       also |lush-color-darken|.
+
+
+                                         *zenbones-g:zenflesh_lighten_line_nr*
+
+g:zenflesh_lighten_line_nr             Default: 35. Percentage to lighten
+                                       |hl-LineNr| relative to Normal bg. See
+                                       also |lush-color-darken|.
 
 
                                                   *zenbones-g:zenbones_compat*
