@@ -1,12 +1,21 @@
 local M = {}
 
+function concat_config(prefix, suffixes)
+	local config = {}
+	for i, suffix in ipairs(suffixes) do
+		config[suffix] = vim.g[prefix .. "_" .. suffix]
+	end
+	return config
+end
+
 function M.get_global_config(prefix, base_bg)
-	local common = {
-		solid_vert_split = vim.g[prefix .. "_solid_vert_split"],
-		solid_float_border = vim.g[prefix .. "_solid_float_border"],
-		solid_line_nr = vim.g[prefix .. "_solid_line_nr"],
-		comment_gui = vim.g[prefix .. "_italic_comments"] ~= false and "italic" or "NONE",
-	}
+	local common = concat_config(prefix, {
+		"solid_vert_split",
+		"solid_float_border",
+		"solid_line_nr",
+		"italic_comments",
+	})
+
 	if base_bg == "light" then
 		if vim.g[prefix .. "_dim_noncurrent_window"] then
 			vim.notify(
@@ -15,21 +24,29 @@ function M.get_global_config(prefix, base_bg)
 				{ title = "zenbones" }
 			)
 		end
-		return vim.tbl_extend("keep", {
-			lightness = vim.g[prefix .. "_lightness"],
-			darken_noncurrent_window = vim.g[prefix .. "_darken_noncurrent_window"],
-			darken_comments = vim.g[prefix .. "_darken_comments"],
-			darken_line_nr = vim.g[prefix .. "_darken_line_nr"],
-			darken_non_text = vim.g[prefix .. "_darken_non_text"],
-		}, common)
+		return vim.tbl_extend(
+			"keep",
+			concat_config(prefix, {
+				"lightness",
+				"darken_noncurrent_window",
+				"darken_comments",
+				"darken_line_nr",
+				"darken_non_text",
+			}),
+			common
+		)
 	else
-		return vim.tbl_extend("keep", {
-			darkness = vim.g[prefix .. "_darkness"],
-			lighten_noncurrent_window = vim.g[prefix .. "_lighten_noncurrent_window"],
-			lighten_comments = vim.g[prefix .. "_lighten_comments"],
-			lighten_line_nr = vim.g[prefix .. "_lighten_line_nr"],
-			lighten_non_text = vim.g[prefix .. "_lighten_non_text"],
-		}, common)
+		return vim.tbl_extend(
+			"keep",
+			concat_config(prefix, {
+				"darkness",
+				"lighten_noncurrent_window",
+				"lighten_comments",
+				"lighten_line_nr",
+				"lighten_non_text",
+			}),
+			common
+		)
 	end
 end
 
