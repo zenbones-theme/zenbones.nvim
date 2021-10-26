@@ -92,6 +92,16 @@ Default: 22. Percentage to darken |hl-NonText| relative to Normal bg. See also
 Default: 26. Percentage to lighten |hl-NonText| relative to Normal bg. See also
 |lush-color-darken|.
 
+#### g:zenbones_darken_line_nr
+
+Default: 33. Percentage to darken |hl-LineNr| relative to Normal bg. See also
+|lush-color-darken|.
+
+#### g:zenflesh_lighten_line_nr
+
+Default: 35. Percentage to lighten |hl-LineNr| relative to Normal bg. See also
+|lush-color-darken|.
+
 #### g:zenbones_compat
 
 Set to `1` to turn on compatibility mode.
