@@ -43,21 +43,19 @@ Change background colors darkness. Options: `'stark'`, `'warm'`.
 
 #### g:zenflesh_solid_vert_split
 
-Default: `v:false`. Make VertSplit more distinguishable background highlight.
+Default: `v:false`. Solid |hl-VertSplit| background.
 
-#### g:zenbones_darken_line_nr
+#### g:zenbones_solid_line_nr
 
-Default: `v:false`. Darken LineNr background.
+#### g:zenflesh_solid_line_nr
 
-#### g:zenflesh_lighten_line_nr
-
-Default: `v:false`. Lighten LineNr background.
+Default: `v:false`. Solid |hl-LineNr| background.
 
 #### g:zenbones_solid_float_border
 
 #### g:zenflesh_solid_float_border
 
-Default: `v:false`. Make FloatBorder have a more distinguishable background
+Default: `v:false`. Make |hl-FloatBorder| have a more distinguishable background
 highlight.
 
 #### g:zenbones_darken_noncurrent_window
