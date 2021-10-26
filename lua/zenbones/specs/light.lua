@@ -345,7 +345,7 @@ local function generate(p, opt)
 			TroubleText                      { Function },
 			TroubleSource                    { Constant },
 
-			NvimTreeNormal                   { Normal, bg = Normal.bg.da(2) },
+			NvimTreeNormal                   { Normal, bg = Normal.bg.da(3) },
 			NvimTreeVertSplit                { fg = "bg" },
 			NvimTreeCursorLine               { bg = StatusLineNC.bg },
 			NvimTreeCursorColumn             { NvimTreeCursorLine	},
@@ -363,7 +363,7 @@ local function generate(p, opt)
 			CmpItemKind                      { fg = p1.fg4 },
 			CmpItemMenu                      { fg = p1.fg5 },
 
-			NnnNormal                        { Normal, bg = Normal.bg.da(2) },
+			NnnNormal                        { Normal, bg = Normal.bg.da(3) },
 			NnnNormalNC                      { NnnNormal },
 			NnnVertSplit                     { fg = "bg" },
 		}
@@ -379,7 +379,7 @@ local function generate(p, opt)
 			specs,
 			lush(function()
 				return {
-					NormalNC { base.Normal, bg = base.Normal.bg.abs_da(2) }, -- normal text in non-current windows
+					NormalNC { base.Normal, bg = base.Normal.bg.da(2) }, -- normal text in non-current windows
 				}
 			end)
 		)

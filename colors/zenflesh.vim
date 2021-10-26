@@ -84,14 +84,14 @@ highlight LightspeedShortcut guifg=#1C1917 guibg=#B279A7 guisp=NONE gui=bold,und
 highlight LineNr guifg=#5C534F guibg=NONE guisp=NONE gui=NONE
 highlight MoreMsg guifg=#819B69 guibg=NONE guisp=NONE gui=bold
 highlight NeogitHunkHeaderHighlight guifg=#B4BDC3 guibg=#25211F guisp=NONE gui=bold
-highlight NnnNormal guifg=#B4BDC3 guibg=#211D1B guisp=NONE gui=NONE
+highlight NnnNormal guifg=#B4BDC3 guibg=#231F1D guisp=NONE gui=NONE
 highlight NnnVertSplit guifg=bg guibg=NONE guisp=NONE gui=NONE
 highlight NonText guifg=#544C48 guibg=NONE guisp=NONE gui=NONE
 highlight Normal guifg=#B4BDC3 guibg=#1C1917 guisp=NONE gui=NONE
 highlight NormalFloat guifg=NONE guibg=#2C2725 guisp=NONE gui=NONE
 highlight Number guifg=#B4BDC3 guibg=NONE guisp=NONE gui=italic
 highlight NvimTreeCursorLine guifg=NONE guibg=#322D2B guisp=NONE gui=NONE
-highlight NvimTreeNormal guifg=#B4BDC3 guibg=#211D1B guisp=NONE gui=NONE
+highlight NvimTreeNormal guifg=#B4BDC3 guibg=#231F1D guisp=NONE gui=NONE
 highlight NvimTreeRootFolder guifg=#6099C0 guibg=NONE guisp=NONE gui=bold
 highlight NvimTreeSpecialFile guifg=#B279A7 guibg=NONE guisp=NONE gui=underline
 highlight NvimTreeSymlink guifg=#6099C0 guibg=NONE guisp=NONE gui=NONE
