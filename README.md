@@ -89,6 +89,7 @@ currently supported.
 -   [WhichKey](https://github.com/folke/which-key.nvim)
 -   [Trouble](https://github.com/folke/trouble.nvim)
 -   [NvimTree](https://github.com/kyazdani42/nvim-tree.lua)
+-   [Nnn](https://github.com/mcchrish/nnn.vim)
 
 ## Other implementations
 
