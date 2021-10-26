@@ -1,7 +1,6 @@
 local template = [[" This file is auto-generated from lua/zenbones/template/vim.lua
 if exists('g:colors_name')
     highlight clear
-    set t_Co=256
 endif
 
 set background=${background}
@@ -14,6 +13,8 @@ if has('nvim') && (!exists('g:zenbones_compat') || g:zenbones_compat == 0)
     finish
 else
 ${vimcolors}
+highlight! link StatusLineTerm StatusLine
+highlight! link StatusLineTermNC StatusLineNC
 endif
 
 if has('terminal')
