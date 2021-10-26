@@ -62,7 +62,7 @@ highlight DiffText guifg=#2C363C guibg=#A9BED1 guisp=NONE gui=NONE
 highlight Directory guifg=NONE guibg=NONE guisp=NONE gui=bold
 highlight Error guifg=#A8334C guibg=NONE guisp=NONE gui=NONE
 highlight FloatBorder guifg=#786D68 guibg=NONE guisp=NONE gui=NONE
-highlight FoldColumn guifg=#A79891 guibg=NONE guisp=NONE gui=bold
+highlight FoldColumn guifg=#A4968F guibg=NONE guisp=NONE gui=bold
 highlight Folded guifg=#564E4A guibg=#CDC2BC guisp=NONE gui=NONE
 highlight Function guifg=#2C363C guibg=NONE guisp=NONE gui=NONE
 highlight GitSignsAdd guifg=#4F6C31 guibg=NONE guisp=NONE gui=NONE
@@ -81,12 +81,12 @@ highlight LightspeedLabelOverlapped guifg=#88507D guibg=NONE guisp=NONE gui=unde
 highlight LightspeedOneCharMatch guifg=#F0EDEC guibg=#88507D guisp=NONE gui=bold
 highlight LightspeedPendingChangeOpArea guifg=#88507D guibg=NONE guisp=NONE gui=NONE
 highlight LightspeedShortcut guifg=#F0EDEC guibg=#88507D guisp=NONE gui=bold,underline
-highlight LineNr guifg=#A79891 guibg=NONE guisp=NONE gui=NONE
+highlight LineNr guifg=#A4968F guibg=NONE guisp=NONE gui=NONE
 highlight MoreMsg guifg=#4F6C31 guibg=NONE guisp=NONE gui=bold
 highlight NeogitHunkHeaderHighlight guifg=#2C363C guibg=#E9E4E2 guisp=NONE gui=bold
 highlight NnnNormal guifg=#2C363C guibg=#E9E4E2 guisp=NONE gui=NONE
 highlight NnnVertSplit guifg=bg guibg=NONE guisp=NONE gui=NONE
-highlight NonText guifg=#C0B0A8 guibg=NONE guisp=NONE gui=NONE
+highlight NonText guifg=#BBABA3 guibg=NONE guisp=NONE gui=NONE
 highlight Normal guifg=#2C363C guibg=#F0EDEC guisp=NONE gui=NONE
 highlight NormalFloat guifg=NONE guibg=#E1DCD9 guisp=NONE gui=NONE
 highlight Number guifg=#2C363C guibg=NONE guisp=NONE gui=italic
@@ -104,7 +104,7 @@ highlight Search guifg=#2C363C guibg=#DEB9D6 guisp=NONE gui=NONE
 highlight SneakLabelMask guifg=#88507D guibg=#88507D guisp=NONE gui=NONE
 highlight Special guifg=#4F5E68 guibg=NONE guisp=NONE gui=bold
 highlight SpecialComment guifg=#948985 guibg=NONE guisp=NONE gui=bold
-highlight SpecialKey guifg=#C0B0A8 guibg=NONE guisp=NONE gui=italic
+highlight SpecialKey guifg=#BBABA3 guibg=NONE guisp=NONE gui=italic
 highlight SpellBad guifg=#974352 guibg=NONE guisp=NONE gui=undercurl
 highlight SpellCap guifg=#974352 guibg=NONE guisp=NONE gui=undercurl
 highlight SpellRare guifg=#974352 guibg=NONE guisp=NONE gui=undercurl
@@ -120,7 +120,7 @@ highlight Title guifg=NONE guibg=NONE guisp=NONE gui=bold
 highlight Todo guifg=NONE guibg=NONE guisp=NONE gui=bold,underline
 highlight Type guifg=#6A5549 guibg=NONE guisp=NONE gui=NONE
 highlight Underlined guifg=NONE guibg=NONE guisp=NONE gui=underline
-highlight VertSplit guifg=#A79891 guibg=NONE guisp=NONE gui=NONE
+highlight VertSplit guifg=#A4968F guibg=NONE guisp=NONE gui=NONE
 highlight Visual guifg=NONE guibg=#CBD9E3 guisp=NONE gui=NONE
 highlight WarningMsg guifg=#944927 guibg=NONE guisp=NONE gui=NONE
 highlight WildMenu guifg=#F0EDEC guibg=#88507D guisp=NONE gui=NONE
