@@ -39,123 +39,67 @@ or customizing the colors to your likings.
 
 CONFIGURATION                                         *zenbones-configuration*
 
-Configuration is only available for neovim.
-
-**Note**: Flavors accept their own configuration by replacing the prefix with
-the flavor name e.g. `g:rosebones_italic_comments`. Just remember: `zenbones_`
-are for the `light` background and `zenflesh_` is for the dark.
-
-Another way to set configuration is to assign a dictionary to the prefix:
+Configuration is only available for neovim. There are two ways to set
+configuration. First:
 
 >
-    let g:forestbones = #{ solid_line_nr: v:true }
+    let g:zenbones_solid_line_nr = v:true
+    let g:zenbones_darken_comments = 45
 <
 
 
-Or in lua:
-
 >
-    vim.g.forestbones = { solid_line_nr = true }
+    vim.g.zenbones_solid_line_nr = true
+    vim.g.zenbones_darken_comments = 45
 <
 
 
-                                               *zenbones-g:zenbones_lightness*
+Second way is to set configuration is to assign a dictionary to the prefix:
 
-g:zenbones_lightness                   Change background colors lightness.
-                                       Options: `'bright'`, `'dim'`.
-
-
-                                                *zenbones-g:zenflesh_darkness*
-
-g:zenflesh_darkness                    Change background colors darkness.
-                                       Options: `'stark'`, `'warm'`.
+>
+    let g:forestbones = #{ solid_line_nr: v:true, darken_comments: 45 }
+<
 
 
-                                        *zenbones-g:zenbones_solid_vert_split*
-
-                                        *zenbones-g:zenflesh_solid_vert_split*
-
-g:zenflesh_solid_vert_split            Default: `v:false`. Solid |hl-VertSplit|
-                                       background.
+>
+    vim.g.forestbones = { solid_line_nr = true, darken_comments = 45 }
+<
 
 
-                                           *zenbones-g:zenbones_solid_line_nr*
+**Notes**: Flavors accept their own configuration by replacing the prefix with
+the flavor name e.g. `g:rosebones_italic_comments`.
 
-                                           *zenbones-g:zenflesh_solid_line_nr*
-
-g:zenflesh_solid_line_nr               Default: `v:false`. Solid |hl-LineNr|
-                                       background.
-
-
-                                      *zenbones-g:zenbones_solid_float_border*
-
-                                      *zenbones-g:zenflesh_solid_float_border*
-
-g:zenflesh_solid_float_border          Default: `v:false`. Make
-                                       |hl-FloatBorder| have a more
-                                       distinguishable background highlight.
-
-
-                                *zenbones-g:zenbones_darken_noncurrent_window*
-
-g:zenbones_darken_noncurrent_window    Default: `v:false`. Make non-current
-                                       window background darker than _Normal_.
-
-
-                               *zenbones-g:zenflesh_lighten_noncurrent_window*
-
-g:zenflesh_lighten_noncurrent_window   Default: `v:false`. Make non-current
-                                       window background lighter than _Normal_.
-
-
-                                         *zenbones-g:zenbones_italic_comments*
-
-                                         *zenbones-g:zenflesh_italic_comments*
-
-g:zenflesh_italic_comments             Default: `v:true`. Make comments
-                                       italicize.
-
-
-                                         *zenbones-g:zenbones_darken_comments*
-
-g:zenbones_darken_comments             Default: 38. Percentage to darken
-                                       comments relative to Normal bg. See also
-                                       |lush-color-darken|.
-
-
-                                        *zenbones-g:zenflesh_lighten_comments*
-
-g:zenflesh_lighten_comments            Default: 38. Percentage to lighten
-                                       comments relative to Normal bg. See also
-                                       |lush-color-lighten|.
-
-
-                                         *zenbones-g:zenbones_darken_non_text*
-
-g:zenbones_darken_non_text             Default: 25. Percentage to darken
-                                       |hl-NonText| relative to Normal bg. See
-                                       also |lush-color-darken|.
-
-
-                                        *zenbones-g:zenflesh_lighten_non_text*
-
-g:zenflesh_lighten_non_text            Default: 30. Percentage to lighten
-                                       |hl-NonText| relative to Normal bg. See
-                                       also |lush-color-darken|.
-
-
-                                          *zenbones-g:zenbones_darken_line_nr*
-
-g:zenbones_darken_line_nr              Default: 33. Percentage to darken
-                                       |hl-LineNr| relative to Normal bg. See
-                                       also |lush-color-darken|.
-
-
-                                         *zenbones-g:zenflesh_lighten_line_nr*
-
-g:zenflesh_lighten_line_nr             Default: 35. Percentage to lighten
-                                       |hl-LineNr| relative to Normal bg. See
-                                       also |lush-color-darken|.
+│    Option    │Backg│Defau│                   Description                   │
+│              │round│ lt  │                                                 │
+│              │     │     │                                                 │
+│lightness     │light│nil  │Change background colors lightness. Options: 'bri│
+│              │     │     │ght', 'dim'.                                     │
+│darkness      │dark │nil  │Change background colors darkness. Options: 'star│
+│              │     │     │k', 'warm'.                                      │
+│solid_vert_spl│both │false│Solid |hl-VertSplit| background.                 │
+│it            │     │     │                                                 │
+│solid_line_nr │both │false│Solid |hl-LineNr| background.                    │
+│              │     │     │                                                 │
+│solid_float_bo│both │false│Make |hl-FloatBorder| have a more distinguishable│
+│rder          │     │     │ background highlight.                           │
+│darken_noncurr│light│false│Default: v:false. Make non-current window backgro│
+│ent_window    │     │     │und darker than _Normal_.                        │
+│lighten_noncur│dark │false│Default: v:false. Make non-current window backgro│
+│rent_window   │     │     │und lighter than _Normal_.                       │
+│italic_comment│both │true │Make comments italicize.                         │
+│s             │     │     │                                                 │
+│darken_comment│light│38   │Percentage to darken comments relative to Normal │
+│s             │     │     │bg. See also |lush-color-darken|.                │
+│lighten_commen│dark │38   │Percentage to lighten comments relative to Normal│
+│ts            │     │     │ bg. See also |lush-color-lighten|.              │
+│darken_non_tex│light│25   │Percentage to darken |hl-NonText| relative to Nor│
+│t             │     │     │mal bg. See also |lush-color-darken|.            │
+│lighten_non_te│dark │30   │Percentage to lighten |hl-NonText| relative to No│
+│xt            │     │     │rmal bg. See also |lush-color-darken|.           │
+│darken_line_nr│light│33   │Percentage to darken |hl-LineNr| relative to Norm│
+│              │     │     │al bg. See also |lush-color-darken|.             │
+│lighten_line_n│dark │35   │Percentage to lighten |hl-LineNr| relative to Nor│
+│r             │     │     │mal bg. See also |lush-color-darken|.            │
 
 
                                                   *zenbones-g:zenbones_compat*
