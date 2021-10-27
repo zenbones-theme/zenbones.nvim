@@ -31,6 +31,15 @@ Configuration is only available for neovim.
 the flavor name e.g. `g:rosebones_italic_comments`. Just remember: `zenbones_`
 are for the `light` background and `zenflesh_` is for the dark.
 
+Another way to set configuration is to assign a dictionary to the prefix:
+```vim
+let g:forestbones = #{ solid_line_nr: v:true }
+```
+Or in lua:
+```lua
+vim.g.forestbones = { solid_line_nr = true }
+```
+
 #### g:zenbones_lightness
 
 Change background colors lightness. Options: `'bright'`, `'dim'`.

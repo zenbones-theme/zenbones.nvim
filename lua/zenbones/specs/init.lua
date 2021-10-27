@@ -9,6 +9,10 @@ function concat_config(prefix, suffixes)
 end
 
 function M.get_global_config(prefix, base_bg)
+	if type(vim.g[prefix]) == "table" then
+		return vim.g[prefix]
+	end
+
 	local common = concat_config(prefix, {
 		"solid_vert_split",
 		"solid_float_border",
