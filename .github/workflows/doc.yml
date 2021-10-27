@@ -2,7 +2,7 @@ name: doc
 
 on:
     push:
-        branches: [main, dev]
+        branches: [main]
 
 jobs:
     vimdocgen:
