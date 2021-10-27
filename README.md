@@ -4,6 +4,10 @@ Zenbones is a vim/neovim colorscheme designed to highlight code using contrasts
 and font variations. Colors are tasked only for other roles such as diagnostics,
 diffs, search matches.
 
+It is carefully crafted for extensibility. You can
+[create your own zenbones-based colorscheme](doc/zenbones.md#create-your-own-colorscheme)
+or try the [built-in collection](#usage).
+
 ![Zenbones main image](https://user-images.githubusercontent.com/7200153/133883977-116795f3-c602-45f0-8907-b89c8d0b2f82.jpg)
 
 <p align="center">
@@ -35,15 +39,17 @@ use {
 Just apply the colorscheme as usual:
 
 ```vim
+set termguicolors
+
 colorscheme zenbones " light
 colorscheme zenflesh " dark
 
-colorscheme zenwritten " Zero hue and saturation version
-colorscheme neobones " https://neovim.io flavor
-colorscheme rosebones " Rosé Pine flavor - https://rosepinetheme.com
-colorscheme forestbones " Everforest flavor - https://github.com/sainnhe/everforest
-colorscheme nordbones " Nord flavor - https://www.nordtheme.com/docs/colors-and-palettes
-colorscheme tokyobones " Tokyo Night flavor - https://github.com/enkia/tokyo-night-vscode-theme#color-palette
+colorscheme zenwritten   " Zero hue and saturation version
+colorscheme neobones     " https://neovim.io flavor
+colorscheme rosebones    " Rosé Pine flavor - https://rosepinetheme.com
+colorscheme forestbones  " Everforest flavor - https://github.com/sainnhe/everforest
+colorscheme nordbones    " Nord flavor - https://www.nordtheme.com/docs/colors-and-palettes
+colorscheme tokyobones   " Tokyo Night flavor - https://github.com/enkia/tokyo-night-vscode-theme#color-palette
 ```
 
 ## [Configuration and other documentations](doc/zenbones.md)

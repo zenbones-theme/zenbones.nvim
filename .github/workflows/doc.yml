@@ -29,7 +29,7 @@ jobs:
           # Output vimdoc project name
           vimdoc: zenbones
           pandoc: doc/zenbones.md
-          description: "A contrast-focused vim/neovim colorscheme"
+          description: "A collection of contrast-based vim/neovim colorschemes"
           version: "Vim v8.1 / Neovim 0.5.0"
       - uses: stefanzweifel/git-auto-commit-action@v4
         with:

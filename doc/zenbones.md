@@ -9,15 +9,17 @@ as diagnostics, diffs, search matches.
 Just apply the colorscheme as usual:
 
 ```vim
+set termguicolors
+
 colorscheme zenbones " light
 colorscheme zenflesh " dark
 
-colorscheme zenwritten " Zero hue and saturation version
-colorscheme neobones " https://neovim.io flavor
-colorscheme rosebones " Rosé Pine flavor - https://rosepinetheme.com
-colorscheme forestbones " Everforest flavor - https://github.com/sainnhe/everforest
-colorscheme nordbones " Nord flavor - https://www.nordtheme.com/docs/colors-and-palettes
-colorscheme tokyobones " Tokyo Night flavor - https://github.com/enkia/tokyo-night-vscode-theme#color-palette
+colorscheme zenwritten   " Zero hue and saturation version
+colorscheme neobones     " https://neovim.io flavor
+colorscheme rosebones    " Rosé Pine flavor - https://rosepinetheme.com
+colorscheme forestbones  " Everforest flavor - https://github.com/sainnhe/everforest
+colorscheme nordbones    " Nord flavor - https://www.nordtheme.com/docs/colors-and-palettes
+colorscheme tokyobones   " Tokyo Night flavor - https://github.com/enkia/tokyo-night-vscode-theme#color-palette
 ```
 
 It works pretty much the same as the first one but pretty handy when extending
@@ -180,7 +182,7 @@ more options.
 
 ### Create your own colorscheme
 
-You can ultimately create your own colorscheme that is based on Zenbones by
+You can ultimately create your own colorscheme that is based on zenbones by
 defining a palette and generating a specs. Best way to demonstrate this is
 through an example. Let's make a zenbones-flavored Gruvbox colorscheme called
 `gruvbones`.
