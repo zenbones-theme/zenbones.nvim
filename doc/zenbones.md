@@ -98,7 +98,7 @@ Default: 38. Percentage to lighten comments relative to Normal bg. See also
 Default: 25. Percentage to darken |hl-NonText| relative to Normal bg. See also
 |lush-color-darken|.
 
-#### g:zenflesh_lighten_none_text
+#### g:zenflesh_lighten_non_text
 
 Default: 30. Percentage to lighten |hl-NonText| relative to Normal bg. See also
 |lush-color-darken|.
