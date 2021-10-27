@@ -82,10 +82,10 @@ the flavor name e.g. `g:rosebones_italic_comments`.
 │              │     │     │                                                 │
 │solid_float_bo│both │false│Make |hl-FloatBorder| have a more distinguishable│
 │rder          │     │     │ background highlight.                           │
-│darken_noncurr│light│false│Default: v:false. Make non-current window backgro│
-│ent_window    │     │     │und darker than _Normal_.                        │
-│lighten_noncur│dark │false│Default: v:false. Make non-current window backgro│
-│rent_window   │     │     │und lighter than _Normal_.                       │
+│darken_noncurr│light│false│Make non-current window background darker than _N│
+│ent_window    │     │     │ormal_.                                          │
+│lighten_noncur│dark │false│Make non-current window background lighter than _│
+│rent_window   │     │     │Normal_.                                         │
 │italic_comment│both │true │Make comments italicize.                         │
 │s             │     │     │                                                 │
 │darken_comment│light│38   │Percentage to darken comments relative to Normal │
