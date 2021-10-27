@@ -8,6 +8,12 @@ jobs:
     vimdocgen:
         runs-on: ubuntu-latest
 
+        permissions:
+            contents: write
+            pull-requests: write
+        env:
+            GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
         steps:
             - uses: actions/checkout@v2
             - name: Setup git
