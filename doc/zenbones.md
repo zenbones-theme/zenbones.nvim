@@ -31,11 +31,13 @@ Configuration is only available for neovim. There are two ways to set
 configuration. First:
 
 ```vim
+" vimscript
 let g:zenbones_solid_line_nr = v:true
 let g:zenbones_darken_comments = 45
 ```
 
 ```lua
+-- lua
 vim.g.zenbones_solid_line_nr = true
 vim.g.zenbones_darken_comments = 45
 ```
@@ -43,10 +45,12 @@ vim.g.zenbones_darken_comments = 45
 Second way is to set configuration is to assign a dictionary to the prefix:
 
 ```vim
+" vimscript
 let g:forestbones = #{ solid_line_nr: v:true, darken_comments: 45 }
 ```
 
 ```lua
+-- lua
 vim.g.forestbones = { solid_line_nr = true, darken_comments = 45 }
 ```
 
@@ -54,7 +58,7 @@ vim.g.forestbones = { solid_line_nr = true, darken_comments = 45 }
 the flavor name e.g. `g:rosebones_italic_comments`.
 
 | Option                    | Background | Default | Description                                                                                 |
-| :------------------------ | :--------- | :------ | :------------------------------------------------------------------------------------------ |
+| ------------------------- | ---------- | ------- | ------------------------------------------------------------------------------------------- |
 | lightness                 | light      | `nil`   | Change background colors lightness. Options: `'bright'`, `'dim'`.                           |
 | darkness                  | dark       | `nil`   | Change background colors darkness. Options: `'stark'`, `'warm'`.                            |
 | solid_vert_split          | both       | `false` | Solid \|hl-VertSplit\| background.                                                          |
@@ -72,7 +76,7 @@ the flavor name e.g. `g:rosebones_italic_comments`.
 
 #### g:zenbones_compat
 
-Set to `1` to turn on compatibility mode.
+Set to `1` to turn on compatibility mode. Turned on in vim.
 
 #### lightline
 
