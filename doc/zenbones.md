@@ -1,8 +1,8 @@
 # Zenbones
 
-**Zenbones** is a vim/neovim colorscheme designed to highlight code
-using contrasts and font variations. Colors are tasked only for other roles such
-as diagnostics, diffs, search matches.
+**Zenbones** is a vim/neovim colorscheme designed to highlight code using
+contrasts and font variations. Colors are tasked only for other roles such as
+diagnostics, diffs, search matches.
 
 ## Usage
 
@@ -34,10 +34,13 @@ the flavor name e.g. `g:rosebones_italic_comments`. Just remember: `zenbones_`
 are for the `light` background and `zenflesh_` is for the dark.
 
 Another way to set configuration is to assign a dictionary to the prefix:
+
 ```vim
 let g:forestbones = #{ solid_line_nr: v:true }
 ```
+
 Or in lua:
+
 ```lua
 vim.g.forestbones = { solid_line_nr = true }
 ```
