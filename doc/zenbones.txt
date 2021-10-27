@@ -1,4 +1,4 @@
-*zenbones.txt*                       A contrast-focused vim/neovim colorscheme
+*zenbones.txt*          A collection of contrast-based vim/neovim colorschemes
 
 ==============================================================================
 Table of Contents                                 *zenbones-table-of-contents*
@@ -20,15 +20,17 @@ USAGE                                                         *zenbones-usage*
 Just apply the colorscheme as usual:
 
 >
+    set termguicolors
+    
     colorscheme zenbones " light
     colorscheme zenflesh " dark
     
-    colorscheme zenwritten " Zero hue and saturation version
-    colorscheme neobones " https://neovim.io flavor
-    colorscheme rosebones " Rosé Pine flavor - https://rosepinetheme.com
-    colorscheme forestbones " Everforest flavor - https://github.com/sainnhe/everforest
-    colorscheme nordbones " Nord flavor - https://www.nordtheme.com/docs/colors-and-palettes
-    colorscheme tokyobones " Tokyo Night flavor - https://github.com/enkia/tokyo-night-vscode-theme#color-palette
+    colorscheme zenwritten   " Zero hue and saturation version
+    colorscheme neobones     " https://neovim.io flavor
+    colorscheme rosebones    " Rosé Pine flavor - https://rosepinetheme.com
+    colorscheme forestbones  " Everforest flavor - https://github.com/sainnhe/everforest
+    colorscheme nordbones    " Nord flavor - https://www.nordtheme.com/docs/colors-and-palettes
+    colorscheme tokyobones   " Tokyo Night flavor - https://github.com/enkia/tokyo-night-vscode-theme#color-palette
 <
 
 
@@ -42,6 +44,20 @@ Configuration is only available for neovim.
 **Note**: Flavors accept their own configuration by replacing the prefix with
 the flavor name e.g. `g:rosebones_italic_comments`. Just remember: `zenbones_`
 are for the `light` background and `zenflesh_` is for the dark.
+
+Another way to set configuration is to assign a dictionary to the prefix:
+
+>
+    let g:forestbones = #{ solid_line_nr: v:true }
+<
+
+
+Or in lua:
+
+>
+    vim.g.forestbones = { solid_line_nr = true }
+<
+
 
                                                *zenbones-g:zenbones_lightness*
 
@@ -217,7 +233,7 @@ See also Lush’s documentation
 
 CREATE YOUR OWN COLORSCHEME ~
 
-You can ultimately create your own colorscheme that is based on Zenbones by
+You can ultimately create your own colorscheme that is based on zenbones by
 defining a palette and generating a specs. Best way to demonstrate this is
 through an example. Let’s make a zenbones-flavored Gruvbox colorscheme called
 `gruvbones`.
