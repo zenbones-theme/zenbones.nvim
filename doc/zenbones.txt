@@ -43,12 +43,14 @@ Configuration is only available for neovim. There are two ways to set
 configuration. First:
 
 >
+    " vimscript
     let g:zenbones_solid_line_nr = v:true
     let g:zenbones_darken_comments = 45
 <
 
 
 >
+    -- lua
     vim.g.zenbones_solid_line_nr = true
     vim.g.zenbones_darken_comments = 45
 <
@@ -57,11 +59,13 @@ configuration. First:
 Second way is to set configuration is to assign a dictionary to the prefix:
 
 >
+    " vimscript
     let g:forestbones = #{ solid_line_nr: v:true, darken_comments: 45 }
 <
 
 
 >
+    -- lua
     vim.g.forestbones = { solid_line_nr = true, darken_comments = 45 }
 <
 
@@ -105,7 +109,7 @@ the flavor name e.g. `g:rosebones_italic_comments`.
                                                   *zenbones-g:zenbones_compat*
 
 g:zenbones_compat                      Set to `1` to turn on compatibility
-                                       mode.
+                                       mode. Turned on in vim.
 
 
                                                           *zenbones-lightline*
