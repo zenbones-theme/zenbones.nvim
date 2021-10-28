@@ -15,10 +15,9 @@ brights = ["${color8}", "${color9}", "${color10}", "${color11}", "${color12}", "
 
 return function(name, specs, p)
 	local term = require("zenbones.term").colors_map(p)
-	local name = name:sub(1, 1):upper() .. name:sub(2)
 
 	local values = {
-		name = name,
+		name = name:sub(1, 1):upper() .. name:sub(2),
 		fg = specs.Normal.fg.hex,
 		bg = specs.Normal.bg.hex,
 		cursor_bg = specs.Cursor.bg.hex,
@@ -31,5 +30,5 @@ return function(name, specs, p)
 		values["color" .. (i - 1)] = v.hex
 	end
 
-	return { string.format("extras/wezterm/%s.toml", name), template, values }
+	return { string.format("extras/wezterm/%s.toml", values.name), template, values }
 end

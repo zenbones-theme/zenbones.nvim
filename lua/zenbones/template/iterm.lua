@@ -85,5 +85,5 @@ return function(name, specs, p)
 	template = template .. table.concat(vim.fn.sort(xml_compiled), "\n")
 	template = template .. end_template
 
-	return { string.format("extras/iterm/%s.itermcolors", name), template, values }
+	return { string.format("extras/iterm/%s.itermcolors", name), template, {} }
 end

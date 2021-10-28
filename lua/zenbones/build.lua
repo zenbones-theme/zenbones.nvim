@@ -8,7 +8,7 @@ local function write_template(path, template, values)
 	file:close()
 end
 
-function build(name, specs, palette, options)
+local function build(name, specs, palette, options)
 	local exclude = options.exclude or {}
 	local templates = { "vim", "iterm", "kitty", "alacritty", "wezterm", "lualine", "lightline", "tmux" }
 	for _, t in ipairs(templates) do
@@ -218,7 +218,7 @@ local colorschemes = {
 	},
 }
 
-function build_from(colorscheme)
+local function build_from(colorscheme)
 	if colorscheme.setup then
 		colorscheme.setup()
 	end

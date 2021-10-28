@@ -16,10 +16,11 @@ local function generate(p, opt)
 	elseif opt.lightness == "dim" then
 		p1.bg = p.bg_dim
 	elseif opt.lightness ~= nil then
-		local error_msg = "Unknown lightness value: " .. vim.inspect(lightness)
+		local error_msg = "Unknown lightness value: " .. vim.inspect(opt.lightness)
 		vim.notify(error_msg, vim.log.levels.WARN, { title = "zenbones" })
 	end
 
+	---@diagnostic disable: undefined-global
 	-- stylua: ignore start
 	local base = lush(function()
 		return {
@@ -255,7 +256,7 @@ local function generate(p, opt)
 			diffIndexLine             { fg = p.wood },
 
 			gitcommitOverflow         { WarningMsg },
-			
+
 			markdownH1                { Statement, gui = "bold,underline" },
 			markdownH2                { Statement },
 			markdownH3                { Statement },
@@ -369,6 +370,7 @@ local function generate(p, opt)
 		}
 	end)
 	-- stylua: ignore end
+	---@diagnostic enable: undefined-global
 
 	local specs = {
 		base,
@@ -377,11 +379,13 @@ local function generate(p, opt)
 	if opt.darken_noncurrent_window then
 		table.insert(
 			specs,
+			---@diagnostic disable: undefined-global
 			lush(function()
 				return {
 					NormalNC { base.Normal, bg = base.Normal.bg.da(2) }, -- normal text in non-current windows
 				}
 			end)
+			---@diagnostic enable: undefined-global
 		)
 	end
 
@@ -389,6 +393,7 @@ local function generate(p, opt)
 	if not vim.diagnostic then
 		table.insert(
 			specs,
+			---@diagnostic disable: undefined-global
 			lush(function()
 				return {
 					LspDiagnosticsDefaultError              { base.DiagnosticError }, -- Used as the base highlight group. Other LspDiagnostic highlights link to this by default (except Underline)
@@ -417,6 +422,7 @@ local function generate(p, opt)
 					-- LspDiagnosticsSignHint               { }, -- Used for "Hint" signs in sign column
 				}
 			end)
+			---@diagnostic enable: undefined-global
 		)
 	end
 	-- stylua: ignore end

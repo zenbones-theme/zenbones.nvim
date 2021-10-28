@@ -34,7 +34,7 @@ return {
 }
 ]]
 
-return function(name, specs, p)
+return function(name, specs)
 	return {
 		string.format("lua/lualine/themes/%s.lua", name),
 		template,

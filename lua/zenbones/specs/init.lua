@@ -1,6 +1,6 @@
 local M = {}
 
-function concat_config(prefix, suffixes)
+local function concat_config(prefix, suffixes)
 	local config = {}
 	for i, suffix in ipairs(suffixes) do
 		config[suffix] = vim.g[prefix .. "_" .. suffix]

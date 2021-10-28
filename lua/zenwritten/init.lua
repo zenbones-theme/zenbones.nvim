@@ -1,4 +1,3 @@
-local lush = require "lush"
 local generator = require "zenbones.specs"
 local bg = vim.opt.background:get()
 local p = require("zenwritten.palette")[bg]
