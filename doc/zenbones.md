@@ -88,7 +88,7 @@ let g:lightline = #{ colorscheme: 'zenbones' } " or zenflesh
 
 ```lua
 require("lualine").setup {
-	theme = "zenbones", -- or zenflesh
+	options = { theme = "zenbones" }, -- or zenflesh
 }
 ```
 
