@@ -78,18 +78,18 @@ the flavor name e.g. `g:rosebones_italic_comments`.
 
 Set to `1` to turn on compatibility mode. Turned on in vim.
 
-#### lightline
+### lightline
 
 ```vim
-let g:lightline = {
-      \ 'colorscheme': 'zenbones', " or 'zenflesh'
-      \ }
+let g:lightline = #{ colorscheme: 'zenbones' } " or zenflesh
 ```
 
-#### lualine
+### lualine
 
 ```lua
-options = { theme = 'zenbones' } -- or 'zenflesh'
+require("lualine").setup {
+	theme = "zenbones", -- or zenflesh
+}
 ```
 
 ## Advanced Usage
