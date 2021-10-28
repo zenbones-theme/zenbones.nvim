@@ -127,6 +127,7 @@ And then somewhere in your `init.vim`:
 
 ```vim
 autocmd ColorScheme zenbones lua require "customize_zenbones"
+colorscheme zenbones
 ```
 
 See also
