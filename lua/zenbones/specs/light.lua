@@ -175,6 +175,11 @@ local function generate(p, opt)
 			DiagnosticInfo             { fg = p.water },
 			DiagnosticHint             { fg = p.blossom },
 
+			DiagnosticSignError        { LineNr, fg = DiagnosticError.fg },
+			DiagnosticSignWarn         { LineNr, fg = DiagnosticWarn.fg },
+			DiagnosticSignInfo         { LineNr, fg = DiagnosticInfo.fg },
+			DiagnosticSignHint         { LineNr, fg = DiagnosticHint.fg },
+
 			DiagnosticVirtualTextError { DiagnosticError, bg = p.rose.saturation(52).lightness(Normal.bg.l - 4) },
 			DiagnosticVirtualTextWarn  { DiagnosticWarn, bg = p.wood.saturation(52).lightness(Normal.bg.l - 4)},
 
