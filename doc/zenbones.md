@@ -110,31 +110,23 @@ Here's an example of how to extend/override some highlights.
 `lua/customize_zenbones.lua`:
 
 ```lua
-local function customize_zenbones()
-	if vim.g.colors_name ~= "zenbones" then
-		return
-	end
+local lush = require "lush"
+local base = require "zenbones"
 
-	local lush = require "lush"
-	local base = require "zenbones"
-
-	-- Create some specs
-	local specs = lush.parse(function()
-		return {
-			TabLine { base.TabLine, gui = "italic" }, -- setting gui to "italic"
-
-	end)
-	-- Apply specs using lush tool-chain
-	lush.apply(lush.compile(specs))
-end
-
-return customize_zenbones
+-- Create some specs
+local specs = lush.parse(function()
+	return {
+		TabLine { base.TabLine, gui = "italic" }, -- setting gui to "italic"
+	}
+end)
+-- Apply specs using lush tool-chain
+lush.apply(lush.compile(specs))
 ```
 
 And then somewhere in your `init.vim`:
 
 ```vim
-autocmd VimEnter,ColorScheme * lua require("customize_zenbones")()
+autocmd ColorScheme zenbones lua require "customize_zenbones"
 ```
 
 See also
