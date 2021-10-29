@@ -1,0 +1,47 @@
+name: build
+
+on:
+    push:
+        branches: [main, dev]
+
+jobs:
+    build:
+        runs-on: ubuntu-latest
+
+        permissions:
+            contents: write
+            pull-requests: write
+        env:
+            GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+        steps:
+            - uses: actions/checkout@v2
+
+            - name: Clone lush
+              run: git clone --depth 1 https://github.com/rktjmp/lush.nvim ~/.local/share/nvim/site/pack/zenbones/start/lush.nvim
+
+            - uses: rhysd/action-setup-vim@v1
+              with:
+                  neovim: true
+                  version: nightly
+
+            - name: Setup git
+              run: |
+                  git config --local user.email "41898282+github-actions[bot]@users.noreply.github.com"
+                  git config --local user.name "github-actions[bot]"
+                  printf 'BUILD_BRANCH=bot/build/%s\n' ${GITHUB_REF#refs/heads/} >> $GITHUB_ENV
+
+            - name: Checkout to build branch
+              run: git checkout -b ${BUILD_BRANCH}
+
+            - name: Run builder script
+              run: make
+
+            - name: Create PR
+              run: |
+                  if ! [[ -z $(git status -s) ]]; then
+                      git add autoload/lightline/colorscheme/ colors/ lua/lualine/ extras/
+                      git commit -m "chore: rebuild artifacts"
+                      git push --force https://${GITHUB_ACTOR}:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY} ${BUILD_BRANCH}
+                      gh pr create --fill --base ${GITHUB_REF#refs/heads/} --head ${BUILD_BRANCH} || true
+                  fi
