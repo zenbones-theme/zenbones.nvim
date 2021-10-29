@@ -6,6 +6,8 @@ local p = require("tokyobones.palette")[bg]
 local specs = generator.generate(p, bg, generator.get_global_config("tokyobones", bg))
 
 return lush.extends({ specs }).with(function()
+	---@diagnostic disable: undefined-global
+	-- selene: allow(undefined_variable)
 	return {
 		Statement { fg = p.blossom, gui = "bold" },
 		Number { fg = p.sky },
@@ -15,4 +17,6 @@ return lush.extends({ specs }).with(function()
 		PreProc { fg = p.blossom },
 		Special { fg = p.water },
 	}
+	-- selene: deny(undefined_variable)
+	---@diagnostic enable: undefined-global
 end)

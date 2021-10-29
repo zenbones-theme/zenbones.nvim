@@ -21,6 +21,7 @@ local function generate(p, opt)
 	end
 
 	---@diagnostic disable: undefined-global
+	-- selene: allow(undefined_variable)
 	-- stylua: ignore start
 	local base = lush(function()
 		return {
@@ -375,6 +376,7 @@ local function generate(p, opt)
 		}
 	end)
 	-- stylua: ignore end
+	-- selene: deny(undefined_variable)
 	---@diagnostic enable: undefined-global
 
 	local specs = {
@@ -385,11 +387,13 @@ local function generate(p, opt)
 		table.insert(
 			specs,
 			---@diagnostic disable: undefined-global
+			-- selene: allow(undefined_variable)
 			lush(function()
 				return {
 					NormalNC { base.Normal, bg = base.Normal.bg.li(2) }, -- normal text in non-current windows
 				}
 			end)
+			-- selene: deny(undefined_variable)
 			---@diagnostic enable: undefined-global
 		)
 	end
@@ -399,6 +403,7 @@ local function generate(p, opt)
 		table.insert(
 			specs,
 			---@diagnostic disable: undefined-global
+			-- selene: allow(undefined_variable)
 			lush(function()
 				return {
 					LspDiagnosticsDefaultError              { base.DiagnosticError }, -- Used as the base highlight group. Other LspDiagnostic highlights link to this by default (except Underline)
@@ -427,6 +432,7 @@ local function generate(p, opt)
 					LspDiagnosticsSignHint                  { base.DiagnosticSignHint }, -- Used for "Hint" signs in sign column
 				}
 			end)
+			-- selene: deny(undefined_variable)
 			---@diagnostic enable: undefined-global
 		)
 	end
