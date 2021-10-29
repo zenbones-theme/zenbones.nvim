@@ -1,43 +1,43 @@
 name: doc
 
 on:
-    push:
-        branches: [main]
+  push:
+    branches: [main]
 
 jobs:
-    vimdocgen:
-        runs-on: ubuntu-latest
+  vimdocgen:
+    runs-on: ubuntu-latest
 
-        permissions:
-            contents: write
-            pull-requests: write
-        env:
-            GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+    permissions:
+      contents: write
+      pull-requests: write
+    env:
+      GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
-        steps:
-            - uses: actions/checkout@v2
-            - name: Setup git
-              run: |
-                  git config --local user.email "41898282+github-actions[bot]@users.noreply.github.com"
-                  git config --local user.name "github-actions[bot]"
-                  printf 'VIMDOC_BRANCH=bot/vimdoc/%s\n' ${GITHUB_REF#refs/heads/} >> $GITHUB_ENV
+    steps:
+      - uses: actions/checkout@v2
+      - name: Setup git
+        run: |
+          git config --local user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git config --local user.name "github-actions[bot]"
+          printf 'VIMDOC_BRANCH=bot/vimdoc/%s\n' ${GITHUB_REF#refs/heads/} >> $GITHUB_ENV
 
-            - name: Checkout to vimdoc branch
-              run: git checkout -b ${VIMDOC_BRANCH}
+      - name: Checkout to vimdoc branch
+        run: git checkout -b ${VIMDOC_BRANCH}
 
-            - name: panvimdoc
-              uses: kdheepak/panvimdoc@v2.7.1
-              with:
-                  # Output vimdoc project name
-                  vimdoc: zenbones
-                  pandoc: doc/zenbones.md
-                  description: "A collection of contrast-based vim/neovim colorschemes"
-                  version: "Vim v8.1 / Neovim 0.5.0"
-            - name: Create PR
-              run: |
-                  if ! [[ -z $(git status -s) ]]; then
-                      git add doc/zenbones.txt
-                      git commit -m "chore: generated vimdoc"
-                      git push --force https://${GITHUB_ACTOR}:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY} ${VIMDOC_BRANCH}
-                      gh pr create --fill --base ${GITHUB_REF#refs/heads/} --head ${VIMDOC_BRANCH} || true
-                  fi
+      - name: panvimdoc
+        uses: kdheepak/panvimdoc@v2.7.1
+        with:
+          # Output vimdoc project name
+          vimdoc: zenbones
+          pandoc: doc/zenbones.md
+          description: "A collection of contrast-based vim/neovim colorschemes"
+          version: "Vim v8.1 / Neovim 0.5.0"
+      - name: Create PR
+        run: |
+          if ! [[ -z $(git status -s) ]]; then
+              git add doc/zenbones.txt
+              git commit -m "chore: generated vimdoc"
+              git push --force https://${GITHUB_ACTOR}:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY} ${VIMDOC_BRANCH}
+              gh pr create --fill --base ${GITHUB_REF#refs/heads/} --head ${VIMDOC_BRANCH} || true
+          fi
