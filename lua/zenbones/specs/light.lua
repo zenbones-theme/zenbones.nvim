@@ -175,10 +175,10 @@ local function generate(p, opt)
 			DiagnosticInfo             { fg = p.water },
 			DiagnosticHint             { fg = p.blossom },
 
-			DiagnosticSignError        { LineNr, fg = DiagnosticError.fg },
-			DiagnosticSignWarn         { LineNr, fg = DiagnosticWarn.fg },
-			DiagnosticSignInfo         { LineNr, fg = DiagnosticInfo.fg },
-			DiagnosticSignHint         { LineNr, fg = DiagnosticHint.fg },
+			DiagnosticSignError        { SignColumn, fg = DiagnosticError.fg },
+			DiagnosticSignWarn         { SignColumn, fg = DiagnosticWarn.fg },
+			DiagnosticSignInfo         { SignColumn, fg = DiagnosticInfo.fg },
+			DiagnosticSignHint         { SignColumn, fg = DiagnosticHint.fg },
 
 			DiagnosticVirtualTextError { DiagnosticError, bg = p.rose.saturation(52).lightness(Normal.bg.l - 4) },
 			DiagnosticVirtualTextWarn  { DiagnosticWarn, bg = p.wood.saturation(52).lightness(Normal.bg.l - 4)},
@@ -318,10 +318,10 @@ local function generate(p, opt)
 			BufferVisibleSign                { fg = StatusLineNC.fg },
 			BufferVisibleIndex               { fg = StatusLineNC.fg },
 
-			CocErrorSign                     { DiagnosticError },
-			CocWarningSign                   { DiagnosticWarn },
-			CocInfoSign                      { DiagnosticInfo },
-			CocHintSign                      { DiagnosticHint },
+			CocErrorSign                     { DiagnosticSignError },
+			CocWarningSign                   { DiagnosticSignWarn },
+			CocInfoSign                      { DiagnosticSignInfo },
+			CocHintSign                      { DiagnosticSignHint },
 			CocErrorHighlight                { DiagnosticUnderlineError },
 			CocWarningHighlight              { DiagnosticUnderlineWarn },
 			CocInfoHighlight                 { DiagnosticUnderlineInfo },
@@ -421,10 +421,10 @@ local function generate(p, opt)
 					-- LspDiagnosticsFloatingInformation    { }, -- Used to color "Information" diagnostic messages in diagnostics float
 					-- LspDiagnosticsFloatingHint           { }, -- Used to color "Hint" diagnostic messages in diagnostics float
 
-					-- LspDiagnosticsSignError              { }, -- Used for "Error" signs in sign column
-					-- LspDiagnosticsSignWarning            { }, -- Used for "Warning" signs in sign column
-					-- LspDiagnosticsSignInformation        { }, -- Used for "Information" signs in sign column
-					-- LspDiagnosticsSignHint               { }, -- Used for "Hint" signs in sign column
+					LspDiagnosticsSignError                 { DiagnosticSignError }, -- Used for "Error" signs in sign column
+					LspDiagnosticsSignWarning               { DiagnosticSignWarn }, -- Used for "Warning" signs in sign column
+					LspDiagnosticsSignInformation           { DiagnosticSignInfo }, -- Used for "Information" signs in sign column
+					LspDiagnosticsSignHint                  { DiagnosticSignHint }, -- Used for "Hint" signs in sign column
 				}
 			end)
 			---@diagnostic enable: undefined-global
