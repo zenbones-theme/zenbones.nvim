@@ -49,6 +49,10 @@ highlight CursorLineNr guifg=#B4BDC3 guibg=NONE guisp=NONE gui=bold
 highlight Delimiter guifg=#867A74 guibg=NONE guisp=NONE gui=NONE
 highlight DiagnosticHint guifg=#B279A7 guibg=NONE guisp=NONE gui=NONE
 highlight DiagnosticInfo guifg=#6099C0 guibg=NONE guisp=NONE gui=NONE
+highlight DiagnosticSignError guifg=#DE6E7C guibg=NONE guisp=NONE gui=NONE
+highlight DiagnosticSignHint guifg=#B279A7 guibg=NONE guisp=NONE gui=NONE
+highlight DiagnosticSignInfo guifg=#6099C0 guibg=NONE guisp=NONE gui=NONE
+highlight DiagnosticSignWarn guifg=#B77E64 guibg=NONE guisp=NONE gui=NONE
 highlight DiagnosticUnderlineError guifg=#DE6E7C guibg=NONE guisp=NONE gui=undercurl
 highlight DiagnosticUnderlineHint guifg=#B279A7 guibg=NONE guisp=NONE gui=undercurl
 highlight DiagnosticUnderlineInfo guifg=#6099C0 guibg=NONE guisp=NONE gui=undercurl
@@ -138,15 +142,15 @@ highlight! link Boolean Number
 highlight! link BufferCurrent TabLineSel
 highlight! link CocCodeLens LineNr
 highlight! link CocErrorHighlight DiagnosticUnderlineError
-highlight! link CocErrorSign DiagnosticError
+highlight! link CocErrorSign DiagnosticSignError
 highlight! link CocErrorVirtualText DiagnosticVirtualTextError
 highlight! link CocHintHighlight DiagnosticUnderlineHint
-highlight! link CocHintSign DiagnosticHint
+highlight! link CocHintSign DiagnosticSignHint
 highlight! link CocInfoHighlight DiagnosticUnderlineInfo
-highlight! link CocInfoSign DiagnosticInfo
+highlight! link CocInfoSign DiagnosticSignInfo
 highlight! link CocSelectedText SpellBad
 highlight! link CocWarningHighlight DiagnosticUnderlineWarn
-highlight! link CocWarningSign DiagnosticWarn
+highlight! link CocWarningSign DiagnosticSignWarn
 highlight! link CocWarningVitualText DiagnosticVirtualTextWarn
 highlight! link CursorColumn CursorLine
 highlight! link DiagnosticError Error
