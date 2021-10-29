@@ -49,6 +49,10 @@ highlight CursorLineNr guifg=#2C363C guibg=NONE guisp=NONE gui=bold
 highlight Delimiter guifg=#8E817B guibg=NONE guisp=NONE gui=NONE
 highlight DiagnosticHint guifg=#88507D guibg=NONE guisp=NONE gui=NONE
 highlight DiagnosticInfo guifg=#286486 guibg=NONE guisp=NONE gui=NONE
+highlight DiagnosticSignError guifg=#A8334C guibg=NONE guisp=NONE gui=NONE
+highlight DiagnosticSignHint guifg=#88507D guibg=NONE guisp=NONE gui=NONE
+highlight DiagnosticSignInfo guifg=#286486 guibg=NONE guisp=NONE gui=NONE
+highlight DiagnosticSignWarn guifg=#944927 guibg=NONE guisp=NONE gui=NONE
 highlight DiagnosticUnderlineError guifg=#A8334C guibg=NONE guisp=NONE gui=undercurl
 highlight DiagnosticUnderlineHint guifg=#88507D guibg=NONE guisp=NONE gui=undercurl
 highlight DiagnosticUnderlineInfo guifg=#286486 guibg=NONE guisp=NONE gui=undercurl
@@ -138,15 +142,15 @@ highlight! link Boolean Number
 highlight! link BufferCurrent TabLineSel
 highlight! link CocCodeLens LineNr
 highlight! link CocErrorHighlight DiagnosticUnderlineError
-highlight! link CocErrorSign DiagnosticError
+highlight! link CocErrorSign DiagnosticSignError
 highlight! link CocErrorVirtualText DiagnosticVirtualTextError
 highlight! link CocHintHighlight DiagnosticUnderlineHint
-highlight! link CocHintSign DiagnosticHint
+highlight! link CocHintSign DiagnosticSignHint
 highlight! link CocInfoHighlight DiagnosticUnderlineInfo
-highlight! link CocInfoSign DiagnosticInfo
+highlight! link CocInfoSign DiagnosticSignInfo
 highlight! link CocSelectedText SpellBad
 highlight! link CocWarningHighlight DiagnosticUnderlineWarn
-highlight! link CocWarningSign DiagnosticWarn
+highlight! link CocWarningSign DiagnosticSignWarn
 highlight! link CocWarningVitualText DiagnosticVirtualTextWarn
 highlight! link CursorColumn CursorLine
 highlight! link DiagnosticError Error
@@ -163,6 +167,20 @@ highlight! link LightspeedMaskedChar Conceal
 highlight! link LightspeedPendingOpArea SneakLabel
 highlight! link LightspeedUnlabeledMatch Bold
 highlight! link LspCodeLens LineNr
+highlight! link LspDiagnosticsDefaultError DiagnosticError
+highlight! link LspDiagnosticsDefaultHint DiagnosticHint
+highlight! link LspDiagnosticsDefaultInformation DiagnosticInfo
+highlight! link LspDiagnosticsDefaultWarning DiagnosticWarn
+highlight! link LspDiagnosticsSignError DiagnosticSignError
+highlight! link LspDiagnosticsSignHint DiagnosticSignHint
+highlight! link LspDiagnosticsSignInformation DiagnosticSignInfo
+highlight! link LspDiagnosticsSignWarning DiagnosticSignWarn
+highlight! link LspDiagnosticsUnderlineError DiagnosticUnderlineError
+highlight! link LspDiagnosticsUnderlineHint DiagnosticUnderlineHint
+highlight! link LspDiagnosticsUnderlineInformation DiagnosticUnderlineInfo
+highlight! link LspDiagnosticsUnderlineWarning DiagnosticUnderlineWarn
+highlight! link LspDiagnosticsVirtualTextError DiagnosticVirtualTextError
+highlight! link LspDiagnosticsVirtualTextWarning DiagnosticVirtualTextWarn
 highlight! link LspReferenceRead ColorColumn
 highlight! link LspReferenceText ColorColumn
 highlight! link LspReferenceWrite ColorColumn
