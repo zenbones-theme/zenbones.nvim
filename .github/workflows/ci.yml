@@ -8,8 +8,11 @@ on:
 
 jobs:
   lint:
-    - uses: actions/checkout@v2
-    - uses: NTBBloodbath/selene-action@v1
-      with:
-        token: ${{ secrets.GITHUB_TOKEN }}
-        args: lua
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+      - uses: NTBBloodbath/selene-action@v1
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          args: lua
