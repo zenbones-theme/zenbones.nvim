@@ -3,9 +3,7 @@ on:
   push:
     paths:
       - 'lua/**.lua'
-      - '**.md'
-      - '.github/**.yml'
-    branches: [main, dev]
+    branches: [main]
 
 jobs:
   format:
@@ -32,9 +30,6 @@ jobs:
           unzip -d /tmp/ /tmp/stylua.zip
           chmod +x /tmp/stylua
           /tmp/stylua --config-path=.stylua.toml lua/
-
-      - name: Apply prettier
-        uses: creyD/prettier_action@v4.0
 
       - name: Create PR
         run: |
