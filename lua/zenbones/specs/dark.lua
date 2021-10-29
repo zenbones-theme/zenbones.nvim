@@ -421,10 +421,10 @@ local function generate(p, opt)
 					-- LspDiagnosticsFloatingInformation    { }, -- Used to color "Information" diagnostic messages in diagnostics float
 					-- LspDiagnosticsFloatingHint           { }, -- Used to color "Hint" diagnostic messages in diagnostics float
 
-					LspDiagnosticsSignError                 { DiagnosticSignError }, -- Used for "Error" signs in sign column
-					LspDiagnosticsSignWarning               { DiagnosticSignWarn }, -- Used for "Warning" signs in sign column
-					LspDiagnosticsSignInformation           { DiagnosticSignInfo }, -- Used for "Information" signs in sign column
-					LspDiagnosticsSignHint                  { DiagnosticSignHint }, -- Used for "Hint" signs in sign column
+					LspDiagnosticsSignError                 { base.DiagnosticSignError }, -- Used for "Error" signs in sign column
+					LspDiagnosticsSignWarning               { base.DiagnosticSignWarn }, -- Used for "Warning" signs in sign column
+					LspDiagnosticsSignInformation           { base.DiagnosticSignInfo }, -- Used for "Information" signs in sign column
+					LspDiagnosticsSignHint                  { base.DiagnosticSignHint }, -- Used for "Hint" signs in sign column
 				}
 			end)
 			---@diagnostic enable: undefined-global
