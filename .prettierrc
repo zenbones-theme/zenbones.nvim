@@ -1,0 +1,14 @@
+{
+    "singleQuote": true,
+    "tabWidth": 4,
+    "semi": false,
+    "proseWrap": "always",
+    "overrides": [
+        {
+            "files": ["*.yml"],
+            "options": {
+                "tabWidth": 2
+            }
+        }
+    ]
+}
