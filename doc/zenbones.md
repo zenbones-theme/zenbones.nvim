@@ -1,6 +1,6 @@
 # Zenbones
 
-  Zenbones is a collection of vim/neovim colorschemes designed to highlight code
+Zenbones is a collection of vim/neovim colorschemes designed to highlight code
 using contrasts and font variations. Colors are tasked only for other roles such
 as diagnostics, diffs, search matches.
 
