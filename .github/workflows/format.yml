@@ -3,7 +3,8 @@ on:
   push:
     paths:
       - 'lua/**.lua'
-    branches: [main]
+      - '**.md'
+    branches: [main, dev]
 
 jobs:
   format:
@@ -16,6 +17,7 @@ jobs:
       STYLUA_VERSION: 0.11.0
     steps:
       - uses: actions/checkout@v2
+      - uses: actions/setup-node@v2
 
       - name: Setup git
         run: |
@@ -30,6 +32,11 @@ jobs:
           unzip -d /tmp/ /tmp/stylua.zip
           chmod +x /tmp/stylua
           /tmp/stylua --config-path=.stylua.toml lua/
+
+      - name: Apply prettier
+        run: |
+          npm install -g prettier
+          prettier --write **/*.md
 
       - name: Create PR
         run: |

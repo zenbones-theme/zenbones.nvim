@@ -76,7 +76,7 @@ the flavor name e.g. `g:rosebones_italic_comments`.
 
 #### g:zenbones_compat
 
-Set to `1` to turn on compatibility mode. Turned on in vim.
+Set to `1` to enable compatibility mode. Enable in vim.
 
 ### lightline
 
