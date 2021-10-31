@@ -40,7 +40,7 @@ endif
 ]]
 
 local lush = require "lush"
-return function(name, specs, p)
+return function(name, specs, p, opt)
 	local term = require("zenbones.term").colors_map(p)
 	local termcolors = ""
 	for i, v in ipairs(term) do
@@ -56,7 +56,7 @@ return function(name, specs, p)
 		{
 			name = name,
 			specs_path = name,
-			background = name == "zenbones" and "light" or "dark",
+			background = opt.bg or "dark",
 			termcolors = termcolors,
 			vimcolors = vimcolors,
 		},

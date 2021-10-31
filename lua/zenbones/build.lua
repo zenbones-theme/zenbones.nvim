@@ -8,12 +8,13 @@ local function write_template(path, template, values)
 	file:close()
 end
 
-local function build(name, specs, palette, options)
-	local exclude = options.exclude or {}
+local function build(name, specs, palette, opt)
+	local exclude = opt.exclude or {}
 	local templates = { "vim", "iterm", "kitty", "alacritty", "wezterm", "lualine", "lightline", "tmux" }
+	local template_opt = opt.template_opt or {}
 	for _, t in ipairs(templates) do
 		if not vim.tbl_contains(exclude, t) then
-			write_template(unpack(require("zenbones.template." .. t)(name, specs, palette)))
+			write_template(unpack(require("zenbones.template." .. t)(name, specs, palette, template_opt[t] or {})))
 		end
 	end
 end
@@ -22,6 +23,11 @@ local colorschemes = {
 	{
 		name = "zenbones",
 		palette = require "zenbones.palette",
+		opt = {
+			template_opt = {
+				vim = { bg = "light" },
+			},
+		},
 	},
 
 	{
@@ -214,6 +220,16 @@ local colorschemes = {
 		palette = require("nordbones.palette").derived,
 		opt = {
 			exclude = { "vim", "alacritty", "iterm", "kitty", "tmux", "wezterm" },
+		},
+	},
+
+	{
+		name = "vimbones",
+		palette = require "vimbones.palette",
+		opt = {
+			template_opt = {
+				vim = { bg = "light" },
+			},
 		},
 	},
 }
