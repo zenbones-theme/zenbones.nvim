@@ -16,6 +16,7 @@ colorscheme zenflesh " dark
 
 colorscheme zenwritten   " Zero hue and saturation version
 colorscheme neobones     " https://neovim.io flavor
+colorscheme vimbones     " https://www.vim.org flavor
 colorscheme rosebones    " Rosé Pine flavor - https://rosepinetheme.com
 colorscheme forestbones  " Everforest flavor - https://github.com/sainnhe/everforest
 colorscheme nordbones    " Nord flavor - https://www.nordtheme.com/docs/colors-and-palettes
