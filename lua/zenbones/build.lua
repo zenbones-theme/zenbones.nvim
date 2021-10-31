@@ -219,7 +219,7 @@ local colorschemes = {
 		name = "nordbones",
 		palette = require("nordbones.palette").derived,
 		opt = {
-			exclude = { "vim", "alacritty", "iterm", "kitty", "tmux", "wezterm" },
+			exclude = { "alacritty", "iterm", "kitty", "tmux", "wezterm" },
 		},
 	},
 
