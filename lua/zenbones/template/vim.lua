@@ -7,7 +7,7 @@ set background=${background}
 let g:colors_name = '${name}'
 
 ${termcolors}
-if has('nvim') && (!exists('g:zenbones_compat') || g:zenbones_compat == 0)
+if has('nvim') && (!exists('g:${name}_compat') || g:${name}_compat == 0)
     lua package.loaded["${specs_path}"] = nil
     lua require "lush"(require "${specs_path}", { force_clean = false })
     finish

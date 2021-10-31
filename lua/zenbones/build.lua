@@ -10,16 +10,17 @@ end
 
 local function build(name, specs, palette, opt)
 	local exclude = opt.exclude or {}
-	local templates = { "vim", "iterm", "kitty", "alacritty", "wezterm", "lualine", "lightline", "tmux" }
 	local template_opt = opt.template_opt or {}
-	for _, t in ipairs(templates) do
-		if not vim.tbl_contains(exclude, t) then
-			write_template(unpack(require("zenbones.template." .. t)(name, specs, palette, template_opt[t] or {})))
+	local template_keys = { "vim", "iterm", "kitty", "alacritty", "wezterm", "lualine", "lightline", "tmux" }
+	for _, key in ipairs(template_keys) do
+		if not vim.tbl_contains(exclude, key) then
+			local template = require("zenbones.template." .. key)
+			write_template(unpack(template(name, specs, palette, template_opt[key] or {})))
 		end
 	end
 end
 
-local colorschemes = {
+local config_set = {
 	{
 		name = "zenbones",
 		palette = require "zenbones.palette",
@@ -234,23 +235,23 @@ local colorschemes = {
 	},
 }
 
-local function build_from(colorscheme)
-	if colorscheme.setup then
-		colorscheme.setup()
+local function build_from(config)
+	if config.setup then
+		config.setup()
 	end
-	local specs = colorscheme.specs or colorscheme.name
+	local specs = config.specs or config.name
 	package.loaded[specs] = nil
-	build(colorscheme.name, require(specs), colorscheme.palette, colorscheme.opt or {})
-	if colorscheme.cleanup then
-		colorscheme.cleanup()
+	build(config.name, require(specs), config.palette, config.opt or {})
+	if config.cleanup then
+		config.cleanup()
 	end
 end
 
 local M = {}
 
 function M.run()
-	for _i, colorscheme in ipairs(colorschemes) do
-		build_from(colorscheme)
+	for _i, config in ipairs(config_set) do
+		build_from(config)
 	end
 end
 
