@@ -72,8 +72,7 @@ See [documentations](doc/zenbones.md) or `:help zenbones.txt`.
 | :---------------------------------------------------------------------------------------------------------------------: | :-----------------------------------------------------------------------------------------------------------------------: | :--------------------------------------------------------------------------------------------------------------------: |
 | ![Stark darkness](https://user-images.githubusercontent.com/7200153/133776839-4b12c3dd-233f-47d1-9740-006bf50e812a.png) | ![Default darkness](https://user-images.githubusercontent.com/7200153/133776882-26d006b4-50db-49ad-bd79-3bec327a95fc.png) | ![Warm darkness](https://user-images.githubusercontent.com/7200153/133776957-3d2949c9-51b6-4537-aca4-6ced80113b91.png) |
 
-See more
-[showcase from the other flavors here](https://github.com/mcchrish/zenbones.nvim/issues/15).
+See more [showcase from the other flavors here](doc/showcase.md).
 
 ## Other plugins support
 
