@@ -8,9 +8,9 @@ return lush.extends({ specs }).with(function()
 	---@diagnostic disable: undefined-global
 	-- selene: allow(undefined_variable)
 	return {
-		Number { fg = p.leaf.de(20).da(26), gui = "italic" },
-		Statement { fg = p.leaf.da(24), gui = "bold" },
-		PreProc { fg = p.leaf.de(31).da(24) },
+		Number { fg = p.vim.de(20).da(26), gui = "italic" },
+		Statement { fg = p.vim.da(24), gui = "bold" },
+		PreProc { fg = p.vim.de(31).da(24) },
 	}
 	-- selene: deny(undefined_variable)
 	---@diagnostic enable: undefined-global
