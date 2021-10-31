@@ -48,7 +48,11 @@ return function(name, specs, p, opt)
 	end
 
 	-- Compile lush table, concatenate to a single string, and remove blend property
-	local vimcolors = table.concat(vim.fn.sort(lush.compile(specs, { exclude_keys = { "blend" } })), "\n")
+	local compiled = lush.compile(specs, {
+		exclude_keys = { "blend" },
+		copy_cterm_from_gui = true,
+	})
+	local vimcolors = table.concat(vim.fn.sort(compiled), "\n")
 
 	return {
 		string.format("colors/%s.vim", name),
