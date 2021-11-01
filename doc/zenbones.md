@@ -11,8 +11,7 @@ Just apply the colorscheme as usual:
 ```vim
 set termguicolors
 
-colorscheme zenbones " light
-colorscheme zenflesh " dark
+colorscheme zenbones
 
 colorscheme zenwritten   " Zero hue and saturation version
 colorscheme neobones     " https://neovim.io flavor
@@ -82,14 +81,14 @@ Set to `1` to enable compatibility mode. Enable in vim.
 ### lightline
 
 ```vim
-let g:lightline = #{ colorscheme: 'zenbones' } " or zenflesh
+let g:lightline = #{ colorscheme: 'zenbones' }
 ```
 
 ### lualine
 
 ```lua
 require("lualine").setup {
-	options = { theme = "zenbones" }, -- or zenflesh
+	options = { theme = "zenbones" }, 
 }
 ```
 
@@ -99,7 +98,7 @@ Zenbones is pretty extensible thanks to Lush. You can easily retrieve the colors
 in lua:
 
 ```lua
-local theme = require "zenbones" -- or zenflesh
+local theme = require "zenbones"
 local palette = require "zenbones.palette"
 
 print(theme.StatusLine.bg.hex)

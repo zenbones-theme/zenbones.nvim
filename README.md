@@ -41,8 +41,7 @@ Just apply the colorscheme as usual:
 ```vim
 set termguicolors
 
-colorscheme zenbones " light
-colorscheme zenflesh " dark
+colorscheme zenbones
 
 colorscheme zenwritten   " Zero hue and saturation version
 colorscheme neobones     " https://neovim.io flavor
@@ -59,7 +58,7 @@ See [documentations](doc/zenbones.md) or `:help zenbones.txt`.
 
 ## Showcase
 
-|                                                       Zenbones                                                       |                                                       Zenflesh                                                       |
+|                                                        light                                                         |                                                         dark                                                         |
 | :------------------------------------------------------------------------------------------------------------------: | :------------------------------------------------------------------------------------------------------------------: |
 |    ![diff](https://user-images.githubusercontent.com/7200153/133882734-de14cbb7-2faa-431b-9cb4-d674bf0f1d6a.png)     |    ![diff](https://user-images.githubusercontent.com/7200153/133882728-69abeca4-65d2-44e9-bddb-955e871c3143.png)     |
 | ![diagnostics](https://user-images.githubusercontent.com/7200153/133882735-974ce339-1d5e-4bc0-9a95-82d21934222b.png) | ![diagnostics](https://user-images.githubusercontent.com/7200153/133882738-1b11be5f-5885-4ff9-9670-7e0bacbb6dd8.png) |
