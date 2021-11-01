@@ -28,6 +28,9 @@ if has('nvim') && (!exists('g:zenbones_compat') || g:zenbones_compat == 0)
     lua require "lush"(require "zenflesh", { force_clean = false })
     finish
 else
+
+    echohl ErrorMsg | echo 'zenflesh is deprecated. Please use zenbones with background=dark.' | echohl None
+
 highlight Bold guifg=NONE guibg=NONE guisp=NONE gui=bold
 highlight BufferVisible guifg=#CAD0D4 guibg=NONE guisp=NONE gui=NONE
 highlight BufferVisibleIndex guifg=#CAD0D4 guibg=NONE guisp=NONE gui=NONE
