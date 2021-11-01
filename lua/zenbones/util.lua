@@ -7,6 +7,14 @@ function M.interp(s, tab)
 	end))
 end
 
+function M.apply_colorscheme()
+	local colors_name = vim.api.nvim_get_var "colors_name"
+	package.loaded[colors_name] = nil
+	require "lush"(require(colors_name), { force_clean = false })
+	local p = require(colors_name .. ".palette")[vim.opt.background:get()]
+	require("zenbones.term").apply_colors(p)
+end
+
 function M.palette_extend(p, base_bg)
 	local lush = require "lush"
 	local hsluv = lush.hsluv
