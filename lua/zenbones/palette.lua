@@ -1,3 +1,8 @@
 local util = require "zenbones.util"
 
-return util.palette_extend({}, "light")
+local M = {}
+
+M.light = util.palette_extend({}, "light")
+M.dark = util.palette_extend {}
+
+return M
