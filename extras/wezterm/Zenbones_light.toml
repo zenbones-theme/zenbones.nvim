@@ -1,0 +1,13 @@
+# This file is auto-generated from lua/zenbones/template/wezterm.lua
+# Zenbones_light
+[colors]
+foreground = "#2C363C"
+background = "#F0EDEC"
+cursor_bg = "#2C363C"
+cursor_border = "#F0EDEC"
+cursor_fg = "#F0EDEC"
+selection_bg = "#CBD9E3"
+selection_fg = "#2C363C"
+
+ansi = ["#E5EDE6", "#A8334C", "#567A30", "#944927", "#286486", "#88507D", "#3B8992", "#202E18"]
+brights = ["#B3C6B6", "#94253E", "#3F5A22", "#803D1C", "#1D5573", "#7B3B70", "#2B747C", "#415934"]
