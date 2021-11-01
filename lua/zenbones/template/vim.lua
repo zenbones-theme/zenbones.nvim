@@ -1,21 +1,10 @@
 local template = [[" This file is auto-generated from lua/zenbones/template/vim.lua
-if exists('g:colors_name')
-    highlight clear
-endif
-
-set background=${background}
-let g:colors_name = '${name}'
+function! ${name}#load()
 
 ${termcolors}
-if has('nvim') && (!exists('g:${name}_compat') || g:${name}_compat == 0)
-    lua package.loaded["${specs_path}"] = nil
-    lua require "lush"(require "${specs_path}", { force_clean = false })
-    finish
-else
 ${vimcolors}
 highlight! link StatusLineTerm StatusLine
 highlight! link StatusLineTermNC StatusLineNC
-endif
 
 if has('terminal')
     let g:terminal_ansi_colors = [
@@ -37,10 +26,12 @@ if has('terminal')
                 \ g:terminal_color_15
                 \ ]
 endif
+
+endfunction
 ]]
 
-local lush = require "lush"
-return function(name, specs, p, opt)
+return function(name, specs, p)
+	local lush = require "lush"
 	local term = require("zenbones.term").colors_map(p)
 	local termcolors = ""
 	for i, v in ipairs(term) do
@@ -55,12 +46,11 @@ return function(name, specs, p, opt)
 	local vimcolors = table.concat(vim.fn.sort(compiled), "\n")
 
 	return {
-		string.format("colors/%s.vim", name),
+		string.format("autoload/%s.vim", name),
 		template,
 		{
 			name = name,
 			specs_path = name,
-			background = opt.bg or "dark",
 			termcolors = termcolors,
 			vimcolors = vimcolors,
 		},

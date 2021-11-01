@@ -22,19 +22,27 @@ end
 
 local config_set = {
 	{
-		name = "zenbones",
-		palette = require "zenbones.palette",
-		opt = {
-			template_opt = {
-				vim = { bg = "light" },
-			},
-		},
+		name = "zenbones_light",
+		specs = "zenbones",
+		palette = require("zenbones.palette").light,
+		setup = function()
+			vim.opt.background = "light"
+		end,
+	},
+
+	{
+		name = "zenbones_dark",
+		specs = "zenbones",
+		palette = require("zenbones.palette").dark,
+		setup = function()
+			vim.opt.background = "dark"
+		end,
 	},
 
 	{
 		name = "zenbones_bright",
 		specs = "zenbones",
-		palette = require "zenbones.palette",
+		palette = require("zenbones.palette").light,
 		setup = function()
 			vim.g.zenbones_lightness = "bright"
 		end,
@@ -49,7 +57,7 @@ local config_set = {
 	{
 		name = "zenbones_dim",
 		specs = "zenbones",
-		palette = require "zenbones.palette",
+		palette = require("zenbones.palette").light,
 		setup = function()
 			vim.g.zenbones_lightness = "dim"
 		end,
@@ -61,40 +69,35 @@ local config_set = {
 		},
 	},
 
-	{
-		name = "zenflesh",
-		palette = require "zenflesh.palette",
-	},
-
-	{
-		name = "zenflesh_stark",
-		specs = "zenflesh",
-		palette = require "zenflesh.palette",
-		setup = function()
-			vim.g.zenflesh_darkness = "stark"
-		end,
-		cleanup = function()
-			vim.api.nvim_del_var "zenflesh_darkness"
-		end,
-		opt = {
-			exclude = { "vim", "lightline", "lualine" },
-		},
-	},
-
-	{
-		name = "zenflesh_warm",
-		specs = "zenflesh",
-		palette = require "zenflesh.palette",
-		setup = function()
-			vim.g.zenflesh_darkness = "warm"
-		end,
-		cleanup = function()
-			vim.api.nvim_del_var "zenflesh_darkness"
-		end,
-		opt = {
-			exclude = { "vim", "lightline", "lualine" },
-		},
-	},
+	-- {
+	-- 	name = "zenflesh_stark",
+	-- 	specs = "zenflesh",
+	-- 	palette = require "zenflesh.palette",
+	-- 	setup = function()
+	-- 		vim.g.zenflesh_darkness = "stark"
+	-- 	end,
+	-- 	cleanup = function()
+	-- 		vim.api.nvim_del_var "zenflesh_darkness"
+	-- 	end,
+	-- 	opt = {
+	-- 		exclude = { "vim", "lightline", "lualine" },
+	-- 	},
+	-- },
+	--
+	-- {
+	-- 	name = "zenflesh_warm",
+	-- 	specs = "zenflesh",
+	-- 	palette = require "zenflesh.palette",
+	-- 	setup = function()
+	-- 		vim.g.zenflesh_darkness = "warm"
+	-- 	end,
+	-- 	cleanup = function()
+	-- 		vim.api.nvim_del_var "zenflesh_darkness"
+	-- 	end,
+	-- 	opt = {
+	-- 		exclude = { "vim", "lightline", "lualine" },
+	-- 	},
+	-- },
 
 	{
 		name = "neobones_light",
@@ -218,7 +221,7 @@ local config_set = {
 
 	{
 		name = "nordbones",
-		palette = require("nordbones.palette").derived,
+		palette = require("nordbones.palette").dark,
 		opt = {
 			exclude = { "alacritty", "iterm", "kitty", "tmux", "wezterm" },
 		},

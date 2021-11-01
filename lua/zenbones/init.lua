@@ -1,4 +1,5 @@
 local generator = require "zenbones.specs"
-local p = require "zenbones.palette"
+local bg = vim.opt.background:get()
+local p = require("zenbones.palette")[bg]
 
-return generator.generate(p, "light", generator.get_global_config("zenbones", "light"))
+return generator.generate(p, bg, generator.get_global_config("zenbones", bg))
