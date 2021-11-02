@@ -8,7 +8,7 @@ It is carefully crafted for extensibility. You can
 [create your own zenbones-based colorscheme](doc/zenbones.md#create-your-own-colorscheme)
 or try the [built-in collection](#usage).
 
-## Breaking change notice
+## ⚠️ Breaking change notice ⚠️
 
 **zenflesh** is deprecated in favor of zenbones `background=dark`. It is
 expected to be removed in the next release.
