@@ -1,6 +1,6 @@
-# Zenbones
+# Documentation
 
-Zenbones is a collection of vim/neovim colorschemes designed to highlight code
+Zenbones is a collection of Vim/Neovim colorschemes designed to highlight code
 using contrasts and font variations. Colors are tasked only for other roles such
 as diagnostics, diffs, search matches.
 
@@ -27,7 +27,7 @@ or customizing the colors to your likings.
 
 ## Configuration
 
-Configuration is only available for neovim. There are two ways to set
+Configuration is only available for Neovim. There are two ways to set
 configuration. First:
 
 ```vim
@@ -79,7 +79,7 @@ the flavor name e.g. `g:rosebones_italic_comments`.
 
 #### g:zenbones_compat
 
-Set to `1` to enable compatibility mode. Enable in vim.
+Set to `1` to enable compatibility mode. Enable in Vim.
 
 ### lightline
 
@@ -107,6 +107,8 @@ local palette = require "zenbones.palette"
 print(theme.StatusLine.bg.hex)
 print(palette.blossom.darken(20).hex)
 ```
+
+### Extend/override highlights
 
 Here's an example of how to extend/override some highlights.
 
