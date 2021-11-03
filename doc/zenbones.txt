@@ -3,15 +3,15 @@
 ==============================================================================
 Table of Contents                                 *zenbones-table-of-contents*
 
-1. Zenbones                                                |zenbones-zenbones|
+1. Documentation                                      |zenbones-documentation|
   - Usage                                                     |zenbones-usage|
   - Configuration                                     |zenbones-configuration|
   - Advanced Usage                                   |zenbones-advanced-usage|
 
 ==============================================================================
-1. Zenbones                                                *zenbones-zenbones*
+1. Documentation                                      *zenbones-documentation*
 
-Zenbones is a collection of vim/neovim colorschemes designed to highlight code
+Zenbones is a collection of Vim/Neovim colorschemes designed to highlight code
 using contrasts and font variations. Colors are tasked only for other roles
 such as diagnostics, diffs, search matches.
 
@@ -39,7 +39,7 @@ or customizing the colors to your likings.
 
 CONFIGURATION                                         *zenbones-configuration*
 
-Configuration is only available for neovim. There are two ways to set
+Configuration is only available for Neovim. There are two ways to set
 configuration. First:
 
 >
@@ -114,7 +114,7 @@ the flavor name e.g. `g:rosebones_italic_comments`.
                                                   *zenbones-g:zenbones_compat*
 
 g:zenbones_compat                      Set to `1` to enable compatibility mode.
-                                       Enable in vim.
+                                       Enable in Vim.
 
 
 LIGHTLINE ~
@@ -146,6 +146,8 @@ colors in lua:
     print(palette.blossom.darken(20).hex)
 <
 
+
+EXTEND/OVERRIDE HIGHLIGHTS ~
 
 Here’s an example of how to extend/override some highlights.
 
