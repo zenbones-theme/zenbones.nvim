@@ -56,7 +56,7 @@ local function generate(p, opt)
 			TermCursor      { Cursor }, -- cursor in a focused terminal
 			TermCursorNC    { lCursor }, -- cursor in an unfocused terminal
 
-			CursorLine      { bg = p1.bg.da(3) }, -- Screen-line at the cursor, when 'cursorline' is set.	Low-priority if foreground (ctermfg OR guifg) is not set.
+			CursorLine      { bg = p1.bg.da(opt.darken_cursor_line or 3) }, -- Screen-line at the cursor, when 'cursorline' is set.	Low-priority if foreground (ctermfg OR guifg) is not set.
 			CursorColumn    { CursorLine }, -- Screen-column at the cursor, when 'cursorcolumn' is set.
 			ColorColumn     { bg = p.wood.saturation(46).lightness(p1.bg.l - 12) }, -- used for the columns set with 'colorcolumn'
 
