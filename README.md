@@ -13,6 +13,9 @@ or try the [built-in collection](#usage).
 **zenflesh** is deprecated in favor of zenbones `background=dark`. It is
 expected to be removed in the next release.
 
+See all the
+[changelogs in the release page](https://github.com/mcchrish/zenbones.nvim/releases).
+
 ![Zenbones main image](https://user-images.githubusercontent.com/7200153/133883977-116795f3-c602-45f0-8907-b89c8d0b2f82.jpg)
 
 <p align="center">
