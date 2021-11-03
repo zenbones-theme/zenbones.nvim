@@ -73,39 +73,42 @@ Second way is to set configuration is to assign a dictionary to the prefix:
 **Notes**: Flavors accept their own configuration by replacing the prefix with
 the flavor name e.g. `g:rosebones_italic_comments`.
 
-│    Option    │Backg│Defau│                   Description                   │
-│              │round│ lt  │                                                 │
-│              │     │     │                                                 │
-│lightness     │light│nil  │Change background colors lightness. Options: 'bri│
-│              │     │     │ght', 'dim'.                                     │
-│darkness      │dark │nil  │Change background colors darkness. Options: 'star│
-│              │     │     │k', 'warm'.                                      │
-│solid_vert_spl│both │false│Solid |hl-VertSplit| background.                 │
-│it            │     │     │                                                 │
-│solid_line_nr │both │false│Solid |hl-LineNr| background.                    │
-│              │     │     │                                                 │
-│solid_float_bo│both │false│Make |hl-FloatBorder| have a more distinguishable│
-│rder          │     │     │ background highlight.                           │
-│darken_noncurr│light│false│Make non-current window background darker than _N│
-│ent_window    │     │     │ormal_.                                          │
-│lighten_noncur│dark │false│Make non-current window background lighter than _│
-│rent_window   │     │     │Normal_.                                         │
-│italic_comment│both │true │Make comments italicize.                         │
-│s             │     │     │                                                 │
-│darken_comment│light│38   │Percentage to darken comments relative to Normal │
-│s             │     │     │bg. See also |lush-color-darken|.                │
-│lighten_commen│dark │38   │Percentage to lighten comments relative to Normal│
-│ts            │     │     │ bg. See also |lush-color-lighten|.              │
-│darken_non_tex│light│25   │Percentage to darken |hl-NonText| relative to Nor│
-│t             │     │     │mal bg. See also |lush-color-darken|.            │
-│lighten_non_te│dark │30   │Percentage to lighten |hl-NonText| relative to No│
-│xt            │     │     │rmal bg. See also |lush-color-darken|.           │
-│darken_line_nr│light│33   │Percentage to darken |hl-LineNr| relative to Norm│
-│              │     │     │al bg. See also |lush-color-darken|.             │
-│lighten_line_n│dark │35   │Percentage to lighten |hl-LineNr| relative to Nor│
-│r             │     │     │mal bg. See also |lush-color-darken|.            │
-│transparent_ba│both │false│Make background transparent.                     │
-│ckground      │     │     │                                                 │
+│    Option     │Backgr│Defau│                 Description                 │
+│               │ ound │ lt  │                                             │
+│lightness      │light │nil  │Change background colors lightness. Options: │
+│               │      │     │'bright', 'dim'.                             │
+│darkness       │dark  │nil  │Change background colors darkness. Options: '│
+│               │      │     │stark', 'warm'.                              │
+│solid_vert_spli│both  │false│Solid |hl-VertSplit| background.             │
+│t              │      │     │                                             │
+│solid_line_nr  │both  │false│Solid |hl-LineNr| background.                │
+│               │      │     │                                             │
+│solid_float_bor│both  │false│Make |hl-FloatBorder| have a more distinguish│
+│der            │      │     │able background highlight.                   │
+│darken_noncurre│light │false│Make non-current window background darker tha│
+│nt_window      │      │     │n _Normal_.                                  │
+│lighten_noncurr│dark  │false│Make non-current window background lighter th│
+│ent_window     │      │     │an _Normal_.                                 │
+│italic_comments│both  │true │Make comments italicize.                     │
+│               │      │     │                                             │
+│darken_comments│light │38   │Percentage to darken comments relative to Nor│
+│               │      │     │mal bg.                                      │
+│lighten_comment│dark  │38   │Percentage to lighten comments relative to No│
+│s              │      │     │rmal bg.                                     │
+│darken_non_text│light │25   │Percentage to darken |hl-NonText| relative to│
+│               │      │     │ Normal bg.                                  │
+│lighten_non_tex│dark  │30   │Percentage to lighten |hl-NonText| relative t│
+│t              │      │     │o Normal bg.                                 │
+│darken_line_nr │light │33   │Percentage to darken |hl-LineNr| relative to │
+│               │      │     │Normal bg.                                   │
+│lighten_line_nr│dark  │35   │Percentage to lighten |hl-LineNr| relative to│
+│               │      │     │ Normal bg.                                  │
+│darken_cursor_l│light │3    │Percentage to darken |hl-CursorLine| relative│
+│ine            │      │     │ to Normal bg.                               │
+│lighten_cursor_│dark  │4    │Percentage to lighten |hl-CursorLine| relativ│
+│line           │      │     │e to Normal bg.                              │
+│transparent_bac│both  │false│Make background transparent.                 │
+│kground        │      │     │                                             │
 
 
                                                   *zenbones-g:zenbones_compat*
