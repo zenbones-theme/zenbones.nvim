@@ -73,6 +73,7 @@ the flavor name e.g. `g:rosebones_italic_comments`.
 | lighten_non_text          | dark       | `30`    | Percentage to lighten \|hl-NonText\| relative to Normal bg. See also \|lush-color-darken\|. |
 | darken_line_nr            | light      | `33`    | Percentage to darken \|hl-LineNr\| relative to Normal bg. See also \|lush-color-darken\|.   |
 | lighten_line_nr           | dark       | `35`    | Percentage to lighten \|hl-LineNr\| relative to Normal bg. See also \|lush-color-darken\|.  |
+| transparent_background    | both       | `false` | Make background transparent.                                                                |
 
 #### g:zenbones_compat
 

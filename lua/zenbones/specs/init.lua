@@ -2,7 +2,7 @@ local M = {}
 
 local function concat_config(prefix, suffixes)
 	local config = {}
-	for _i, suffix in ipairs(suffixes) do
+	for _, suffix in ipairs(suffixes) do
 		config[suffix] = vim.g[prefix .. "_" .. suffix]
 	end
 	return config
@@ -18,6 +18,7 @@ function M.get_global_config(prefix, base_bg)
 		"solid_float_border",
 		"solid_line_nr",
 		"italic_comments",
+		"transparent_background",
 	})
 
 	if base_bg == "light" then
