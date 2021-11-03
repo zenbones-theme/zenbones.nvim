@@ -104,6 +104,8 @@ the flavor name e.g. `g:rosebones_italic_comments`.
 │              │     │     │al bg. See also |lush-color-darken|.             │
 │lighten_line_n│dark │35   │Percentage to lighten |hl-LineNr| relative to Nor│
 │r             │     │     │mal bg. See also |lush-color-darken|.            │
+│transparent_ba│both │false│Make background transparent.                     │
+│ckground      │     │     │                                                 │
 
 
                                                   *zenbones-g:zenbones_compat*
