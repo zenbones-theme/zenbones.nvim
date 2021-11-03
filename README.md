@@ -48,6 +48,7 @@ Just apply the colorscheme as usual:
 
 ```vim
 set termguicolors
+set background=light " or dark
 
 colorscheme zenbones
 
