@@ -43,17 +43,21 @@ set termguicolors
 set background=light " or dark
 
 colorscheme zenbones
-
-colorscheme zenwritten   " Zero hue and saturation version
-colorscheme neobones     " https://neovim.io flavor
-colorscheme vimbones     " https://www.vim.org flavor
-colorscheme rosebones    " Rosé Pine flavor - https://rosepinetheme.com
-colorscheme forestbones  " Everforest flavor - https://github.com/sainnhe/everforest
-colorscheme nordbones    " Nord flavor - https://www.nordtheme.com/docs/colors-and-palettes
-colorscheme tokyobones   " Tokyo Night flavor - https://github.com/enkia/tokyo-night-vscode-theme#color-palette
-colorscheme duckbones    " Spaceduck flavor - https://pineapplegiant.github.io/spaceduck
-colorscheme zenburned    " Zenburn flavor - https://kippura.org/zenburnpage
 ```
+
+Or choose from the collection:
+
+| colorscheme   | description                                                                                |
+| ------------- | ------------------------------------------------------------------------------------------ |
+| `zenwritten`  | Zero hue and saturation version                                                            |
+| `neobones`    | Inspired by [neovim.io](https://neovim.io)                                                 |
+| `vimbones`    | Inspired by [vim.org](https://www.vim.org)                                                 |
+| `rosebones`   | Inspired by [Rosé Pine](https://rosepinetheme.com)                                         |
+| `forestbones` | Inspired by [Everforest](https://github.com/sainnhe/everforest)                            |
+| `nordbones`   | Inspired by [Nord](https://www.nordtheme.com/docs/colors-and-palettes)                     |
+| `tokyobones`  | Inspired by [Tokyo Night](https://github.com/enkia/tokyo-night-vscode-theme#color-palette) |
+| `duckbones`   | Inspired by [Spaceduck](https://pineapplegiant.github.io/spaceduck)                        |
+| `zenburned`   | Inspired by [Zenburn](https://kippura.org/zenburnpage)                                     |
 
 ## [Configuration and other documentations](doc/zenbones.md)
 
@@ -74,7 +78,7 @@ See [documentations](doc/zenbones.md) or `:help zenbones.txt`.
 | :---------------------------------------------------------------------------------------------------------------------: | :-----------------------------------------------------------------------------------------------------------------------: | :--------------------------------------------------------------------------------------------------------------------: |
 | ![Stark darkness](https://user-images.githubusercontent.com/7200153/133776839-4b12c3dd-233f-47d1-9740-006bf50e812a.png) | ![Default darkness](https://user-images.githubusercontent.com/7200153/133776882-26d006b4-50db-49ad-bd79-3bec327a95fc.png) | ![Warm darkness](https://user-images.githubusercontent.com/7200153/133776957-3d2949c9-51b6-4537-aca4-6ced80113b91.png) |
 
-See more [showcase from the other flavors here](doc/showcase.md).
+See more [showcase from the other colorschemes here](doc/showcase.md).
 
 ## Other plugins support
 
