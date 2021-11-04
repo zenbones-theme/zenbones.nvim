@@ -1,6 +1,6 @@
 # Zenbones
 
-Zenbones is a collection of vim/neovim colorschemes designed to highlight code
+Zenbones is a collection of Vim/Neovim colorschemes designed to highlight code
 using contrasts and font variations. Colors are tasked only for other roles such
 as diagnostics, diffs, search matches.
 
@@ -29,8 +29,8 @@ Example installation using packer:
 use {
     "mcchrish/zenbones.nvim",
     -- Optionally install Lush. Allows for more configuration or extending the colorscheme
-    requires = "rktjmp/lush.nvim"
     -- If you don't want to install lush, make sure to set g:zenbones_compat = 1
+    requires = "rktjmp/lush.nvim"
 }
 ```
 
@@ -40,8 +40,9 @@ Just apply the colorscheme as usual:
 
 ```vim
 set termguicolors
+set background=light " or dark
 
-colorscheme zenbones " light
+colorscheme zenbones
 
 colorscheme zenwritten   " Zero hue and saturation version
 colorscheme neobones     " https://neovim.io flavor
@@ -50,6 +51,7 @@ colorscheme rosebones    " Rosé Pine flavor - https://rosepinetheme.com
 colorscheme forestbones  " Everforest flavor - https://github.com/sainnhe/everforest
 colorscheme nordbones    " Nord flavor - https://www.nordtheme.com/docs/colors-and-palettes
 colorscheme tokyobones   " Tokyo Night flavor - https://github.com/enkia/tokyo-night-vscode-theme#color-palette
+colorscheme duckbones    " Spaceduck flavor - https://pineapplegiant.github.io/spaceduck
 ```
 
 ## [Configuration and other documentations](doc/zenbones.md)
@@ -58,7 +60,7 @@ See [documentations](doc/zenbones.md) or `:help zenbones.txt`.
 
 ## Showcase
 
-|                                                       light                                                       |                                                       dark                                                       |
+|                                                        light                                                         |                                                         dark                                                         |
 | :------------------------------------------------------------------------------------------------------------------: | :------------------------------------------------------------------------------------------------------------------: |
 |    ![diff](https://user-images.githubusercontent.com/7200153/133882734-de14cbb7-2faa-431b-9cb4-d674bf0f1d6a.png)     |    ![diff](https://user-images.githubusercontent.com/7200153/133882728-69abeca4-65d2-44e9-bddb-955e871c3143.png)     |
 | ![diagnostics](https://user-images.githubusercontent.com/7200153/133882735-974ce339-1d5e-4bc0-9a95-82d21934222b.png) | ![diagnostics](https://user-images.githubusercontent.com/7200153/133882738-1b11be5f-5885-4ff9-9670-7e0bacbb6dd8.png) |

@@ -1,6 +1,6 @@
-# Zenbones
+# Documentation
 
-Zenbones is a collection of vim/neovim colorschemes designed to highlight code
+Zenbones is a collection of Vim/Neovim colorschemes designed to highlight code
 using contrasts and font variations. Colors are tasked only for other roles such
 as diagnostics, diffs, search matches.
 
@@ -10,8 +10,9 @@ Just apply the colorscheme as usual:
 
 ```vim
 set termguicolors
+set background=light " or dark
 
-colorscheme zenbones " light
+colorscheme zenbones
 
 colorscheme zenwritten   " Zero hue and saturation version
 colorscheme neobones     " https://neovim.io flavor
@@ -20,6 +21,7 @@ colorscheme rosebones    " Rosé Pine flavor - https://rosepinetheme.com
 colorscheme forestbones  " Everforest flavor - https://github.com/sainnhe/everforest
 colorscheme nordbones    " Nord flavor - https://www.nordtheme.com/docs/colors-and-palettes
 colorscheme tokyobones   " Tokyo Night flavor - https://github.com/enkia/tokyo-night-vscode-theme#color-palette
+colorscheme duckbones    " Spaceduck flavor - https://pineapplegiant.github.io/spaceduck
 ```
 
 It works pretty much the same as the first one but pretty handy when extending
@@ -27,7 +29,7 @@ or customizing the colors to your likings.
 
 ## Configuration
 
-Configuration is only available for neovim. There are two ways to set
+Configuration is only available for Neovim. There are two ways to set
 configuration. First:
 
 ```vim
@@ -57,26 +59,29 @@ vim.g.forestbones = { solid_line_nr = true, darken_comments = 45 }
 **Notes**: Flavors accept their own configuration by replacing the prefix with
 the flavor name e.g. `g:rosebones_italic_comments`.
 
-| Option                    | Background | Default | Description                                                                                 |
-| ------------------------- | ---------- | ------- | ------------------------------------------------------------------------------------------- |
-| lightness                 | light      | `nil`   | Change background colors lightness. Options: `'bright'`, `'dim'`.                           |
-| darkness                  | dark       | `nil`   | Change background colors darkness. Options: `'stark'`, `'warm'`.                            |
-| solid_vert_split          | both       | `false` | Solid \|hl-VertSplit\| background.                                                          |
-| solid_line_nr             | both       | `false` | Solid \|hl-LineNr\| background.                                                             |
-| solid_float_border        | both       | `false` | Make \|hl-FloatBorder\| have a more distinguishable background highlight.                   |
-| darken_noncurrent_window  | light      | `false` | Make non-current window background darker than _Normal_.                                    |
-| lighten_noncurrent_window | dark       | `false` | Make non-current window background lighter than _Normal_.                                   |
-| italic_comments           | both       | `true`  | Make comments italicize.                                                                    |
-| darken_comments           | light      | `38`    | Percentage to darken comments relative to Normal bg. See also \|lush-color-darken\|.        |
-| lighten_comments          | dark       | `38`    | Percentage to lighten comments relative to Normal bg. See also \|lush-color-lighten\|.      |
-| darken_non_text           | light      | `25`    | Percentage to darken \|hl-NonText\| relative to Normal bg. See also \|lush-color-darken\|.  |
-| lighten_non_text          | dark       | `30`    | Percentage to lighten \|hl-NonText\| relative to Normal bg. See also \|lush-color-darken\|. |
-| darken_line_nr            | light      | `33`    | Percentage to darken \|hl-LineNr\| relative to Normal bg. See also \|lush-color-darken\|.   |
-| lighten_line_nr           | dark       | `35`    | Percentage to lighten \|hl-LineNr\| relative to Normal bg. See also \|lush-color-darken\|.  |
+| Option                    | Background | Default | Description                                                               |
+| ------------------------- | ---------- | ------- | ------------------------------------------------------------------------- |
+| lightness                 | light      | `nil`   | Change background colors lightness. Options: `'bright'`, `'dim'`.         |
+| darkness                  | dark       | `nil`   | Change background colors darkness. Options: `'stark'`, `'warm'`.          |
+| solid_vert_split          | both       | `false` | Solid \|hl-VertSplit\| background.                                        |
+| solid_line_nr             | both       | `false` | Solid \|hl-LineNr\| background.                                           |
+| solid_float_border        | both       | `false` | Make \|hl-FloatBorder\| have a more distinguishable background highlight. |
+| darken_noncurrent_window  | light      | `false` | Make non-current window background darker than _Normal_.                  |
+| lighten_noncurrent_window | dark       | `false` | Make non-current window background lighter than _Normal_.                 |
+| italic_comments           | both       | `true`  | Make comments italicize.                                                  |
+| darken_comments           | light      | `38`    | Percentage to darken comments relative to Normal bg.                      |
+| lighten_comments          | dark       | `38`    | Percentage to lighten comments relative to Normal bg.                     |
+| darken_non_text           | light      | `25`    | Percentage to darken \|hl-NonText\| relative to Normal bg.                |
+| lighten_non_text          | dark       | `30`    | Percentage to lighten \|hl-NonText\| relative to Normal bg.               |
+| darken_line_nr            | light      | `33`    | Percentage to darken \|hl-LineNr\| relative to Normal bg.                 |
+| lighten_line_nr           | dark       | `35`    | Percentage to lighten \|hl-LineNr\| relative to Normal bg.                |
+| darken_cursor_line        | light      | `3`     | Percentage to darken \|hl-CursorLine\| relative to Normal bg.             |
+| lighten_cursor_line       | dark       | `4`     | Percentage to lighten \|hl-CursorLine\| relative to Normal bg.            |
+| transparent_background    | both       | `false` | Make background transparent.                                              |
 
 #### g:zenbones_compat
 
-Set to `1` to enable compatibility mode. Enable in vim.
+Set to `1` to enable compatibility mode. Enable in Vim.
 
 ### lightline
 
@@ -104,6 +109,8 @@ local palette = require "zenbones.palette"
 print(theme.StatusLine.bg.hex)
 print(palette.blossom.darken(20).hex)
 ```
+
+### Extend/override highlights
 
 Here's an example of how to extend/override some highlights.
 

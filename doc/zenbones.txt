@@ -3,15 +3,15 @@
 ==============================================================================
 Table of Contents                                 *zenbones-table-of-contents*
 
-1. Zenbones                                                |zenbones-zenbones|
+1. Documentation                                      |zenbones-documentation|
   - Usage                                                     |zenbones-usage|
   - Configuration                                     |zenbones-configuration|
   - Advanced Usage                                   |zenbones-advanced-usage|
 
 ==============================================================================
-1. Zenbones                                                *zenbones-zenbones*
+1. Documentation                                      *zenbones-documentation*
 
-Zenbones is a collection of vim/neovim colorschemes designed to highlight code
+Zenbones is a collection of Vim/Neovim colorschemes designed to highlight code
 using contrasts and font variations. Colors are tasked only for other roles
 such as diagnostics, diffs, search matches.
 
@@ -21,9 +21,9 @@ Just apply the colorscheme as usual:
 
 >
     set termguicolors
+    set background=light " or dark
     
-    colorscheme zenbones " light
-    colorscheme zenflesh " dark
+    colorscheme zenbones
     
     colorscheme zenwritten   " Zero hue and saturation version
     colorscheme neobones     " https://neovim.io flavor
@@ -32,6 +32,7 @@ Just apply the colorscheme as usual:
     colorscheme forestbones  " Everforest flavor - https://github.com/sainnhe/everforest
     colorscheme nordbones    " Nord flavor - https://www.nordtheme.com/docs/colors-and-palettes
     colorscheme tokyobones   " Tokyo Night flavor - https://github.com/enkia/tokyo-night-vscode-theme#color-palette
+    colorscheme duckbones    " Spaceduck flavor - https://pineapplegiant.github.io/spaceduck
 <
 
 
@@ -40,7 +41,7 @@ or customizing the colors to your likings.
 
 CONFIGURATION                                         *zenbones-configuration*
 
-Configuration is only available for neovim. There are two ways to set
+Configuration is only available for Neovim. There are two ways to set
 configuration. First:
 
 >
@@ -74,49 +75,54 @@ Second way is to set configuration is to assign a dictionary to the prefix:
 **Notes**: Flavors accept their own configuration by replacing the prefix with
 the flavor name e.g. `g:rosebones_italic_comments`.
 
-│    Option    │Backg│Defau│                   Description                   │
-│              │round│ lt  │                                                 │
-│              │     │     │                                                 │
-│lightness     │light│nil  │Change background colors lightness. Options: 'bri│
-│              │     │     │ght', 'dim'.                                     │
-│darkness      │dark │nil  │Change background colors darkness. Options: 'star│
-│              │     │     │k', 'warm'.                                      │
-│solid_vert_spl│both │false│Solid |hl-VertSplit| background.                 │
-│it            │     │     │                                                 │
-│solid_line_nr │both │false│Solid |hl-LineNr| background.                    │
-│              │     │     │                                                 │
-│solid_float_bo│both │false│Make |hl-FloatBorder| have a more distinguishable│
-│rder          │     │     │ background highlight.                           │
-│darken_noncurr│light│false│Make non-current window background darker than _N│
-│ent_window    │     │     │ormal_.                                          │
-│lighten_noncur│dark │false│Make non-current window background lighter than _│
-│rent_window   │     │     │Normal_.                                         │
-│italic_comment│both │true │Make comments italicize.                         │
-│s             │     │     │                                                 │
-│darken_comment│light│38   │Percentage to darken comments relative to Normal │
-│s             │     │     │bg. See also |lush-color-darken|.                │
-│lighten_commen│dark │38   │Percentage to lighten comments relative to Normal│
-│ts            │     │     │ bg. See also |lush-color-lighten|.              │
-│darken_non_tex│light│25   │Percentage to darken |hl-NonText| relative to Nor│
-│t             │     │     │mal bg. See also |lush-color-darken|.            │
-│lighten_non_te│dark │30   │Percentage to lighten |hl-NonText| relative to No│
-│xt            │     │     │rmal bg. See also |lush-color-darken|.           │
-│darken_line_nr│light│33   │Percentage to darken |hl-LineNr| relative to Norm│
-│              │     │     │al bg. See also |lush-color-darken|.             │
-│lighten_line_n│dark │35   │Percentage to lighten |hl-LineNr| relative to Nor│
-│r             │     │     │mal bg. See also |lush-color-darken|.            │
+│    Option     │Backgr│Defau│                 Description                 │
+│               │ ound │ lt  │                                             │
+│lightness      │light │nil  │Change background colors lightness. Options: │
+│               │      │     │'bright', 'dim'.                             │
+│darkness       │dark  │nil  │Change background colors darkness. Options: '│
+│               │      │     │stark', 'warm'.                              │
+│solid_vert_spli│both  │false│Solid |hl-VertSplit| background.             │
+│t              │      │     │                                             │
+│solid_line_nr  │both  │false│Solid |hl-LineNr| background.                │
+│               │      │     │                                             │
+│solid_float_bor│both  │false│Make |hl-FloatBorder| have a more distinguish│
+│der            │      │     │able background highlight.                   │
+│darken_noncurre│light │false│Make non-current window background darker tha│
+│nt_window      │      │     │n _Normal_.                                  │
+│lighten_noncurr│dark  │false│Make non-current window background lighter th│
+│ent_window     │      │     │an _Normal_.                                 │
+│italic_comments│both  │true │Make comments italicize.                     │
+│               │      │     │                                             │
+│darken_comments│light │38   │Percentage to darken comments relative to Nor│
+│               │      │     │mal bg.                                      │
+│lighten_comment│dark  │38   │Percentage to lighten comments relative to No│
+│s              │      │     │rmal bg.                                     │
+│darken_non_text│light │25   │Percentage to darken |hl-NonText| relative to│
+│               │      │     │ Normal bg.                                  │
+│lighten_non_tex│dark  │30   │Percentage to lighten |hl-NonText| relative t│
+│t              │      │     │o Normal bg.                                 │
+│darken_line_nr │light │33   │Percentage to darken |hl-LineNr| relative to │
+│               │      │     │Normal bg.                                   │
+│lighten_line_nr│dark  │35   │Percentage to lighten |hl-LineNr| relative to│
+│               │      │     │ Normal bg.                                  │
+│darken_cursor_l│light │3    │Percentage to darken |hl-CursorLine| relative│
+│ine            │      │     │ to Normal bg.                               │
+│lighten_cursor_│dark  │4    │Percentage to lighten |hl-CursorLine| relativ│
+│line           │      │     │e to Normal bg.                              │
+│transparent_bac│both  │false│Make background transparent.                 │
+│kground        │      │     │                                             │
 
 
                                                   *zenbones-g:zenbones_compat*
 
 g:zenbones_compat                      Set to `1` to enable compatibility mode.
-                                       Enable in vim.
+                                       Enable in Vim.
 
 
 LIGHTLINE ~
 
 >
-    let g:lightline = #{ colorscheme: 'zenbones' } " or zenflesh
+    let g:lightline = #{ colorscheme: 'zenbones' }
 <
 
 
@@ -124,7 +130,7 @@ LUALINE ~
 
 >
     require("lualine").setup {
-        options = { theme = "zenbones" }, -- or zenflesh
+        options = { theme = "zenbones" },
     }
 <
 
@@ -135,13 +141,15 @@ Zenbones is pretty extensible thanks to Lush. You can easily retrieve the
 colors in lua:
 
 >
-    local theme = require "zenbones" -- or zenflesh
+    local theme = require "zenbones"
     local palette = require "zenbones.palette"
     
     print(theme.StatusLine.bg.hex)
     print(palette.blossom.darken(20).hex)
 <
 
+
+EXTEND/OVERRIDE HIGHLIGHTS ~
 
 Here’s an example of how to extend/override some highlights.
 
