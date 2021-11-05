@@ -2,11 +2,14 @@ local M = {}
 
 M.colorscheme_to_term_colors = function(colorscheme)
 	local specs, _, term = unpack(colorscheme)
+	local fg = specs.Normal.fg.hex
 	return {
-		fg = specs.Normal.fg.hex,
+		fg = fg,
 		bg = specs.Normal.bg.hex,
 		cursor_fg = specs.Cursor.fg.hex,
 		cursor_bg = specs.Cursor.bg.hex,
+		selection_bg = specs.Visual.bg.hex,
+		selection_fg = fg,
 		black = term[1].hex,
 		red = term[2].hex,
 		green = term[3].hex,

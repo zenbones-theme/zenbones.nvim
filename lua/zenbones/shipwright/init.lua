@@ -55,8 +55,12 @@ local function make_runners(config)
 end
 
 M.run = function()
-	local runner_files = { "alacritty", "kitty" }
-	local colorschemes = { { name = "zenbones" }, { name = "neobones" } }
+	local runner_files = { "alacritty", "kitty", "wezterm" }
+	local colorschemes = {
+		{ name = "zenbones" },
+		{ name = "neobones" },
+		{ name = "vimbones", background = "light" },
+	}
 	for _, colorscheme in ipairs(colorschemes) do
 		for _, file in ipairs(runner_files) do
 			colorscheme.file = file
