@@ -60,6 +60,12 @@ M.run = function()
 		{ name = "zenbones" },
 		{ name = "neobones" },
 		{ name = "vimbones", background = "light" },
+		{ name = "forestbones" },
+		{ name = "nordbones", background = "dark" },
+		{ name = "rosebones" },
+		{ name = "tokyobones" },
+		{ name = "zenburned", background = "dark" },
+		{ name = "zenwritten" },
 	}
 	for _, colorscheme in ipairs(colorschemes) do
 		for _, file in ipairs(runner_files) do
