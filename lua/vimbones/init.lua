@@ -1,6 +1,6 @@
 local lush = require "lush"
 local generator = require "zenbones.specs"
-local p = require "vimbones.palette"
+local p = require("vimbones.palette").light
 
 local specs = generator.generate(p, "light", generator.get_global_config("vimbones", "light"))
 
