@@ -55,7 +55,7 @@ local function make_runners(config)
 end
 
 M.run = function()
-	local runner_files = { "alacritty", "kitty", "wezterm", "lualine" }
+	local runner_files = { "alacritty", "kitty", "wezterm", "lualine", "lightline" }
 	local colorschemes = {
 		{ name = "zenbones" },
 		{ name = "neobones" },
