@@ -49,7 +49,7 @@ local function remove_italics(specs)
 			table.insert(italic_specs, string.format("highlight %s gui=NONE cterm=NONE", key))
 		end
 	end
-	return italic_specs
+	return vim.fn.sort(italic_specs)
 end
 
 -- selene: allow(undefined_variable)
