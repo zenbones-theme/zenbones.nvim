@@ -19,8 +19,7 @@ let s:p.tabline.middle = [ [ "$inactive_fg", "$inactive_bg" ] ]
 let s:p.tabline.right = [ [ "$tabline_right_fg", "$tabline_right_bg" ] ]
 let s:p.tabline.tabsel = [ [ "$tabsel_fg", "$tabsel_bg", "bold" ] ]
 
-let g:lightline#colorscheme#$name#palette = lightline#colorscheme#fill(s:p)
-]]
+let g:lightline#colorscheme#$name#palette = lightline#colorscheme#fill(s:p)]]
 
 local helpers = require "shipwright.transform.helpers"
 

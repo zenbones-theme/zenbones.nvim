@@ -30,8 +30,7 @@ return {
 		b = { bg = inactive_bg, fg = inactive_fg },
 		c = { bg = inactive_bg, fg = inactive_fg },
 	},
-}
-]]
+}]]
 
 local helpers = require "shipwright.transform.helpers"
 
