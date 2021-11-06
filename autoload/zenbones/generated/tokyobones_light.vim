@@ -231,19 +231,19 @@ highlight markdownH1 guifg=#333A57 guibg=NONE guisp=NONE gui=bold,underline cter
 let s:italics = (&t_ZH != '' && &t_ZH != '[7m') || has('gui_running') || has('nvim')
 if !s:italics
 " start_no_italics
-highlight TSConstMacro gui=NONE cterm=NONE
-highlight TSVariableBuiltin gui=NONE cterm=NONE
-highlight diffOldFile gui=NONE cterm=NONE
-highlight diffNewFile gui=NONE cterm=NONE
-highlight WhichKeyValue gui=NONE cterm=NONE
-highlight TroubleSource gui=NONE cterm=NONE
-highlight TSKeyword gui=NONE cterm=NONE
-highlight helpOption gui=NONE cterm=NONE
-highlight helpHyperTextJump gui=NONE cterm=NONE
-highlight Comment gui=NONE cterm=NONE
-highlight SpecialKey gui=NONE cterm=NONE
-highlight Constant gui=NONE cterm=NONE
 highlight Boolean gui=NONE cterm=NONE
+highlight Comment gui=NONE cterm=NONE
+highlight Constant gui=NONE cterm=NONE
+highlight SpecialKey gui=NONE cterm=NONE
+highlight TSConstMacro gui=NONE cterm=NONE
+highlight TSKeyword gui=NONE cterm=NONE
+highlight TSVariableBuiltin gui=NONE cterm=NONE
+highlight TroubleSource gui=NONE cterm=NONE
+highlight WhichKeyValue gui=NONE cterm=NONE
+highlight diffNewFile gui=NONE cterm=NONE
+highlight diffOldFile gui=NONE cterm=NONE
+highlight helpHyperTextJump gui=NONE cterm=NONE
+highlight helpOption gui=NONE cterm=NONE
 " end_no_italics
 endif
 endfunction
