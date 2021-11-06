@@ -25,7 +25,7 @@ function M.get_global_config(prefix, base_bg)
 		if vim.g[prefix .. "_dim_noncurrent_window"] then
 			vim.notify(
 				prefix .. "_dim_noncurrent_window is replaced by " .. prefix .. "_darken_noncurrent_window",
-				vim.log.levels.ERROR,
+				vim.log.levels.WARN,
 				{ title = "zenbones" }
 			)
 		end

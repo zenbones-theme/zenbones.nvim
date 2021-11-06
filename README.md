@@ -8,14 +8,6 @@ It is carefully crafted for extensibility. You can
 [create your own zenbones-based colorscheme](doc/zenbones.md#create-your-own-colorscheme)
 or try the [built-in collection](#usage).
 
-## ⚠️ Breaking change notice ⚠️
-
-**zenflesh** is deprecated in favor of zenbones `background=dark`. It is
-expected to be removed in the next release.
-
-See all the
-[changelogs in the release page](https://github.com/mcchrish/zenbones.nvim/releases).
-
 ![Zenbones main image](https://user-images.githubusercontent.com/7200153/133883977-116795f3-c602-45f0-8907-b89c8d0b2f82.jpg)
 
 <p align="center">
@@ -37,8 +29,8 @@ Example installation using packer:
 use {
     "mcchrish/zenbones.nvim",
     -- Optionally install Lush. Allows for more configuration or extending the colorscheme
-    requires = "rktjmp/lush.nvim"
     -- If you don't want to install lush, make sure to set g:zenbones_compat = 1
+    requires = "rktjmp/lush.nvim"
 }
 ```
 
@@ -51,16 +43,21 @@ set termguicolors
 set background=light " or dark
 
 colorscheme zenbones
-
-colorscheme zenwritten   " Zero hue and saturation version
-colorscheme neobones     " https://neovim.io flavor
-colorscheme vimbones     " https://www.vim.org flavor
-colorscheme rosebones    " Rosé Pine flavor - https://rosepinetheme.com
-colorscheme forestbones  " Everforest flavor - https://github.com/sainnhe/everforest
-colorscheme nordbones    " Nord flavor - https://www.nordtheme.com/docs/colors-and-palettes
-colorscheme tokyobones   " Tokyo Night flavor - https://github.com/enkia/tokyo-night-vscode-theme#color-palette
-colorscheme duckbones    " Spaceduck flavor - https://pineapplegiant.github.io/spaceduck
 ```
+
+Or choose from the collection:
+
+| colorscheme   | description                                                                                |
+| ------------- | ------------------------------------------------------------------------------------------ |
+| `zenwritten`  | Zero hue and saturation version                                                            |
+| `neobones`    | Inspired by [neovim.io](https://neovim.io)                                                 |
+| `vimbones`    | Inspired by [vim.org](https://www.vim.org)                                                 |
+| `rosebones`   | Inspired by [Rosé Pine](https://rosepinetheme.com)                                         |
+| `forestbones` | Inspired by [Everforest](https://github.com/sainnhe/everforest)                            |
+| `nordbones`   | Inspired by [Nord](https://www.nordtheme.com/docs/colors-and-palettes)                     |
+| `tokyobones`  | Inspired by [Tokyo Night](https://github.com/enkia/tokyo-night-vscode-theme#color-palette) |
+| `duckbones`   | Inspired by [Spaceduck](https://pineapplegiant.github.io/spaceduck)                        |
+| `zenburned`   | Inspired by [Zenburn](https://kippura.org/zenburnpage)                                     |
 
 ## [Configuration and other documentations](doc/zenbones.md)
 
@@ -81,7 +78,7 @@ See [documentations](doc/zenbones.md) or `:help zenbones.txt`.
 | :---------------------------------------------------------------------------------------------------------------------: | :-----------------------------------------------------------------------------------------------------------------------: | :--------------------------------------------------------------------------------------------------------------------: |
 | ![Stark darkness](https://user-images.githubusercontent.com/7200153/133776839-4b12c3dd-233f-47d1-9740-006bf50e812a.png) | ![Default darkness](https://user-images.githubusercontent.com/7200153/133776882-26d006b4-50db-49ad-bd79-3bec327a95fc.png) | ![Warm darkness](https://user-images.githubusercontent.com/7200153/133776957-3d2949c9-51b6-4537-aca4-6ced80113b91.png) |
 
-See more [showcase from the other flavors here](doc/showcase.md).
+See more [showcase from the other colorschemes here](doc/showcase.md).
 
 ## Other plugins support
 

@@ -1,10 +1,11 @@
 local M = {}
 
--- got from http://lua-users.org/wiki/StringInterpolation
-function M.interp(s, tab)
-	return (s:gsub("($%b{})", function(w)
-		return tab[w:sub(3, -2)] or w
-	end))
+function M.apply_colorscheme()
+	local colors_name = vim.api.nvim_get_var "colors_name"
+	package.loaded[colors_name] = nil
+	require "lush"(require(colors_name), { force_clean = false })
+	local p = require(colors_name .. ".palette")[vim.opt.background:get()]
+	require("zenbones.term").apply_colors(p)
 end
 
 function M.palette_extend(p, base_bg)

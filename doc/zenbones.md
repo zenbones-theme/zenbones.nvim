@@ -22,6 +22,7 @@ colorscheme forestbones  " Everforest flavor - https://github.com/sainnhe/everfo
 colorscheme nordbones    " Nord flavor - https://www.nordtheme.com/docs/colors-and-palettes
 colorscheme tokyobones   " Tokyo Night flavor - https://github.com/enkia/tokyo-night-vscode-theme#color-palette
 colorscheme duckbones    " Spaceduck flavor - https://pineapplegiant.github.io/spaceduck
+colorscheme zenburned    " Zenburn flavor - https://kippura.org/zenburnpage
 ```
 
 It works pretty much the same as the first one but pretty handy when extending
@@ -86,14 +87,14 @@ Set to `1` to enable compatibility mode. Enable in Vim.
 ### lightline
 
 ```vim
-let g:lightline = #{ colorscheme: 'zenbones' }
+let g:lightline = #{ colorscheme: 'zenbones' } " or any other flavor
 ```
 
 ### lualine
 
 ```lua
 require("lualine").setup {
-	options = { theme = "zenbones" },
+	options = { theme = "zenbones" }, -- or any other flavor
 }
 ```
 
@@ -103,7 +104,7 @@ Zenbones is pretty extensible thanks to Lush. You can easily retrieve the colors
 in lua:
 
 ```lua
-local theme = require "zenbones"
+local theme = require "zenbones" -- or any other flavor
 local palette = require "zenbones.palette"
 
 print(theme.StatusLine.bg.hex)

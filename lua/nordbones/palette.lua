@@ -23,7 +23,7 @@ local base = {
 	nord15 = hsluv "#b48ead",
 }
 
-M.derived = util.palette_extend {
+M.dark = util.palette_extend {
 	bg = base.nord0,
 	fg = base.nord6,
 	rose = base.nord11,
