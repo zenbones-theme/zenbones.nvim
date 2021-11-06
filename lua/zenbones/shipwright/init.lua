@@ -61,18 +61,20 @@ M.run = function()
 		{ name = "zenbones" },
 		{ name = "neobones" },
 		{ name = "vimbones", background = "light" },
-		{ name = "forestbones" },
-		{ name = "nordbones", background = "dark" },
-		{ name = "rosebones" },
-		{ name = "tokyobones" },
+		{ name = "forestbones", exclude = { "iterm", "alacritty", "kitty", "wezterm", "tmux" } },
+		{ name = "nordbones", background = "dark", exclude = { "iterm", "alacritty", "kitty", "wezterm", "tmux" } },
+		{ name = "rosebones", exclude = { "iterm", "alacritty", "kitty", "wezterm", "tmux" } },
+		{ name = "tokyobones", exclude = { "iterm", "alacritty", "kitty", "wezterm", "tmux" } },
 		{ name = "zenburned", background = "dark" },
 		{ name = "zenwritten" },
 	}
 	for _, colorscheme in ipairs(colorschemes) do
 		for _, file in ipairs(runner_files) do
-			colorscheme.file = file
-			for _, runner in ipairs(make_runners(colorscheme)) do
-				assert(pcall(runner))
+			if not vim.tbl_contains(colorscheme.exclude or {}, file) then
+				colorscheme.file = file
+				for _, runner in ipairs(make_runners(colorscheme)) do
+					assert(pcall(runner))
+				end
 			end
 		end
 	end
