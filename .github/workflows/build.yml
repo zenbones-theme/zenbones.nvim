@@ -18,8 +18,9 @@ jobs:
       - uses: actions/checkout@v2
 
       - name: Clone lush
-        run: git clone --depth 1 https://github.com/rktjmp/lush.nvim ~/.local/share/nvim/site/pack/zenbones/start/lush.nvim
-        run: git clone --depth 1 https://github.com/rktjmp/shipwright.nvim ~/.local/share/nvim/site/pack/zenbones/start/shipwright.nvim
+        run: |
+          git clone --depth 1 https://github.com/rktjmp/lush.nvim ~/.local/share/nvim/site/pack/zenbones/start/lush.nvim
+          git clone --depth 1 https://github.com/rktjmp/shipwright.nvim ~/.local/share/nvim/site/pack/zenbones/start/shipwright.nvim
 
       - uses: rhysd/action-setup-vim@v1
         with:
