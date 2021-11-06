@@ -41,7 +41,7 @@ jobs:
       - name: Create PR
         run: |
           if ! [[ -z $(git status -s) ]]; then
-              git add autoload/lightline/colorscheme/ colors/ lua/lualine/ extras/
+              git add autoload/lightline/colorscheme/ autoload/zenbones/generated lua/lualine/ extras/
               git commit -m "chore: rebuild artifacts"
               git push --force https://${GITHUB_ACTOR}:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY} ${BUILD_BRANCH}
               gh pr create --fill --base ${GITHUB_REF#refs/heads/} --head ${BUILD_BRANCH} || true
