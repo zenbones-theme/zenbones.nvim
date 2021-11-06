@@ -226,27 +226,24 @@ highlight! link NvimTreeGitDeleted diffRemoved
 highlight lCursor guifg=#F0EDEC guibg=#4D5C65 guisp=NONE gui=NONE cterm=NONE
 highlight! link TermCursorNC lCursor
 highlight markdownH1 guifg=#2C363C guibg=NONE guisp=NONE gui=bold,underline cterm=bold,underline
-highlight! link StatusLineTerm StatusLine
-highlight! link StatusLineTermNC StatusLineNC
 
-if has('terminal')
-    let g:terminal_ansi_colors = [
-                \ g:terminal_color_0,
-                \ g:terminal_color_1,
-                \ g:terminal_color_2,
-                \ g:terminal_color_3,
-                \ g:terminal_color_4,
-                \ g:terminal_color_5,
-                \ g:terminal_color_6,
-                \ g:terminal_color_7,
-                \ g:terminal_color_8,
-                \ g:terminal_color_9,
-                \ g:terminal_color_10,
-                \ g:terminal_color_11,
-                \ g:terminal_color_12,
-                \ g:terminal_color_13,
-                \ g:terminal_color_14,
-                \ g:terminal_color_15
-                \ ]
+let s:italics = (&t_ZH != '' && &t_ZH != '[7m') || has('gui_running') || has('nvim')
+if !s:italics
+" start_no_italics
+highlight TSConstBuiltin gui=NONE cterm=NONE
+highlight TSConstMacro gui=NONE cterm=NONE
+highlight TSVariableBuiltin gui=NONE cterm=NONE
+highlight diffOldFile gui=NONE cterm=NONE
+highlight diffNewFile gui=NONE cterm=NONE
+highlight WhichKeyValue gui=NONE cterm=NONE
+highlight TroubleSource gui=NONE cterm=NONE
+highlight helpOption gui=NONE cterm=NONE
+highlight helpHyperTextJump gui=NONE cterm=NONE
+highlight Comment gui=NONE cterm=NONE
+highlight SpecialKey gui=NONE cterm=NONE
+highlight Constant gui=NONE cterm=NONE
+highlight Number gui=NONE cterm=NONE
+highlight Boolean gui=NONE cterm=NONE
+" end_no_italics
 endif
 endfunction
