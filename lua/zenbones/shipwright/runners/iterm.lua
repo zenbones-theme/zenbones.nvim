@@ -1,20 +1,18 @@
-local util = require "zenbones.util"
-
 local key_template = [[
-	<key>${k} Color</key>
+	<key>$k Color</key>
 ]]
 local color_template = [[
 	<dict>
 		<key>Alpha Component</key>
 		<real>1</real>
 		<key>Blue Component</key>
-		<real>${b}</real>
+		<real>$b</real>
 		<key>Color Space</key>
 		<string>sRGB</string>
 		<key>Green Component</key>
-		<real>${g}</real>
+		<real>$g</real>
 		<key>Red Component</key>
-		<real>${r}</real>
+		<real>$r</real>
 	</dict>]]
 
 local start_template = [[<?xml version="1.0" encoding="UTF-8"?>
@@ -27,6 +25,8 @@ local end_template = [[
 </dict>
 </plist>]]
 
+local helpers = require "shipwright.transform.helpers"
+
 local function hex_to_rgb(hex)
 	local _, r, g, b = hex:match "(.)(..)(..)(..)"
 	r, g, b =
@@ -37,9 +37,9 @@ local function hex_to_rgb(hex)
 end
 
 local function key_to_xml(key, color)
-	local xml = util.interp(key_template, { k = key })
+	local xml = helpers.apply_template(key_template, { k = key })
 	local rgb = hex_to_rgb(color.hex)
-	xml = xml .. util.interp(color_template, rgb)
+	xml = xml .. helpers.apply_template(color_template, rgb)
 	return xml
 end
 
