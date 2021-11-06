@@ -37,7 +37,9 @@ jobs:
         run: git checkout -b ${BUILD_BRANCH}
 
       - name: Run builder script
-        run: make
+        run: |
+          mkdir -p autoload/lightline/colorscheme autoload/zenbones/generated lua/lualine extras
+          make
 
       - name: Create PR
         run: |
