@@ -55,22 +55,22 @@ local function transform(colors)
 	end
 
 	local text = helpers.apply_template(template, colors)
-	return helpers.split_newlines(text)
+	return { text }
 end
 
 local function specs_to_colors(specs)
 	return {
-		common_fg = specs.Folded.fg.hex,
-		inactive_bg = specs.StatusLineNC.bg.hex,
-		inactive_fg = specs.StatusLineNC.fg.hex,
-		normal_a_bg = specs.PmenuSbar.bg.hex,
-		normal_b_bg = specs.PmenuSel.bg.hex,
-		normal_c_bg = specs.StatusLine.bg.hex,
-		normal_c_fg = specs.StatusLine.fg.hex,
-		insert_a_bg = specs.DiffText.bg.hex,
-		command_a_bg = specs.Search.bg.hex,
-		visual_a_bg = specs.Visual.bg.hex,
-		replace_a_bg = specs.DiffDelete.bg.hex,
+		common_fg = specs.Folded.fg,
+		inactive_bg = specs.StatusLineNC.bg,
+		inactive_fg = specs.StatusLineNC.fg,
+		normal_a_bg = specs.PmenuSbar.bg,
+		normal_b_bg = specs.PmenuSel.bg,
+		normal_c_bg = specs.StatusLine.bg,
+		normal_c_fg = specs.StatusLine.fg,
+		insert_a_bg = specs.DiffText.bg,
+		command_a_bg = specs.Search.bg,
+		visual_a_bg = specs.Visual.bg,
+		replace_a_bg = specs.DiffDelete.bg,
 	}
 end
 
