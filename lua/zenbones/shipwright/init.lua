@@ -1,18 +1,19 @@
 local M = {}
 
 local function make_env(colorscheme)
-	local builder = require "shipwright.builder"
-	local env = builder.make_env()
-
 	local specs = colorscheme.specs
-	env.name = colorscheme.name
-
 	vim.opt.background = colorscheme.background
 	package.loaded[specs] = nil
-	env.specs = require(specs)
-	env.p = require(specs .. ".palette")[colorscheme.background]
-	env.term = require("zenbones.term").colors_map(env.p)
-	env.transform = require "zenbones.shipwright.transform"
+
+	local builder = require "shipwright.builder"
+	local p = require(specs .. ".palette")[colorscheme.background]
+	local env = builder.make_env {
+		name = colorscheme.name,
+		specs = require(specs),
+		p = p,
+		term = require("zenbones.term").colors_map(p),
+		transform = require "zenbones.shipwright.transform",
+	}
 	return env
 end
 
@@ -55,7 +56,7 @@ local function make_runners(config)
 end
 
 M.run = function()
-	local runner_files = { "alacritty", "kitty", "wezterm", "lualine", "lightline" }
+	local runner_files = { "vim", "alacritty", "kitty", "wezterm", "tmux", "lualine", "lightline" }
 	local colorschemes = {
 		{ name = "zenbones" },
 		{ name = "neobones" },
