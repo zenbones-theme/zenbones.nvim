@@ -1,1 +1,1 @@
-call zenbones#util#setup_colorscheme('rosebones')
+call zenbones#setup_colorscheme('rosebones')

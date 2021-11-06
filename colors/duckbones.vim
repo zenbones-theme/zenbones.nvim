@@ -1,1 +1,1 @@
-call zenbones#util#setup_colorscheme('duckbones', 'dark')
+call zenbones#setup_colorscheme('duckbones', 'dark')

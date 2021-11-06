@@ -1,1 +1,1 @@
-call zenbones#util#setup_colorscheme('tokyobones')
+call zenbones#setup_colorscheme('tokyobones')

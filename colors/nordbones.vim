@@ -1,1 +1,1 @@
-call zenbones#util#setup_colorscheme('nordbones', 'dark')
+call zenbones#setup_colorscheme('nordbones', 'dark')

@@ -1,1 +1,1 @@
-call zenbones#util#setup_colorscheme('zenburned', 'dark')
+call zenbones#setup_colorscheme('zenburned', 'dark')

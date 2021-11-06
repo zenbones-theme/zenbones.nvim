@@ -1,1 +1,1 @@
-call zenbones#util#setup_colorscheme('vimbones', 'light')
+call zenbones#setup_colorscheme('vimbones', 'light')

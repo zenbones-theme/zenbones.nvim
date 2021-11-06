@@ -1,1 +1,1 @@
-call zenbones#util#setup_colorscheme('forestbones')
+call zenbones#setup_colorscheme('forestbones')

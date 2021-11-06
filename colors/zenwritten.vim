@@ -1,1 +1,1 @@
-call zenbones#util#setup_colorscheme('zenwritten')
+call zenbones#setup_colorscheme('zenwritten')

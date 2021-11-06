@@ -1,4 +1,4 @@
-function! zenbones#util#setup_colorscheme(...) abort
+function! zenbones#setup_colorscheme(...) abort
     if exists('g:colors_name')
         highlight clear
     endif
@@ -12,6 +12,6 @@ function! zenbones#util#setup_colorscheme(...) abort
     if has('nvim') && (!exists('g:' . g:colors_name . '_compat') || g:{g:colors_name}_compat == 0)
         lua require("zenbones.util").apply_colorscheme()
     else
-        call {g:colors_name . (l:bg ? '_' . l:bg : '')}#load()
+        call zenbones#generated#{g:colors_name . (l:bg == v:null ? '_' . &background : '')}#load()
     endif
 endfunction

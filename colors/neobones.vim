@@ -1,1 +1,1 @@
-call zenbones#util#setup_colorscheme('neobones')
+call zenbones#setup_colorscheme('neobones')
