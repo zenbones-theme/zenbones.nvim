@@ -112,9 +112,9 @@ currently supported.
 -   [WezTerm](extras/wezterm)
 -   [Tmux](extras/tmux)
 
-It's also possible to generate any color configuration files using a template,
-[this one for Kitty](lua/zenbones/template/kitty.lua) for example. Please feel
-free to submit a PR if you want to add some more.
+It's also possible to generate any color configuration files using shipwright,
+[this one for Kitty](lua/zenbones/shipwright/runners/kitty.lua) for example.
+Please feel free to submit a PR if you want to add some more.
 
 ## Inspirations
 

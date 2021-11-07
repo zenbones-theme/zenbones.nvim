@@ -14,19 +14,17 @@ set background=light " or dark
 
 colorscheme zenbones
 
-colorscheme zenwritten   " Zero hue and saturation version
-colorscheme neobones     " https://neovim.io flavor
-colorscheme vimbones     " https://www.vim.org flavor
-colorscheme rosebones    " Rosé Pine flavor - https://rosepinetheme.com
-colorscheme forestbones  " Everforest flavor - https://github.com/sainnhe/everforest
-colorscheme nordbones    " Nord flavor - https://www.nordtheme.com/docs/colors-and-palettes
-colorscheme tokyobones   " Tokyo Night flavor - https://github.com/enkia/tokyo-night-vscode-theme#color-palette
-colorscheme duckbones    " Spaceduck flavor - https://pineapplegiant.github.io/spaceduck
-colorscheme zenburned    " Zenburn flavor - https://kippura.org/zenburnpage
+" or any from the collection
+colorscheme zenwritten
+colorscheme neobones
+colorscheme vimbones
+colorscheme rosebones
+colorscheme forestbones
+colorscheme nordbones
+colorscheme tokyobones
+colorscheme duckbones
+colorscheme zenburned
 ```
-
-It works pretty much the same as the first one but pretty handy when extending
-or customizing the colors to your likings.
 
 ## Configuration
 
@@ -82,7 +80,7 @@ the flavor name e.g. `g:rosebones_italic_comments`.
 
 #### g:zenbones_compat
 
-Set to `1` to enable compatibility mode. Enable in Vim.
+Set to `1` to enable compatibility mode. Enabled in Vim.
 
 ### lightline
 
@@ -212,7 +210,3 @@ require("zenbones.term").apply_colors(palette)
 
 And there you have it. Just call `colorscheme gruvbones` to use your new
 colorscheme. It respects `&background` and other configurations too.
-
-Also checkout the [neobones](../colors/neobones.lua) and
-[rosebones](../colors/rosebones.lua) colorscheme for a similar and complete
-example.
