@@ -1,0 +1,24 @@
+[
+    { "name": "zenbones" },
+    { "name": "neobones" },
+    { "name": "vimbones", "background": "light" },
+    {
+        "name": "forestbones",
+        "exclude": ["iterm", "alacritty", "kitty", "wezterm", "tmux"]
+    },
+    {
+        "name": "nordbones",
+        "background": "dark",
+        "exclude": ["iterm", "alacritty", "kitty", "wezterm", "tmux"]
+    },
+    {
+        "name": "rosebones",
+        "exclude": ["iterm", "alacritty", "kitty", "wezterm", "tmux"]
+    },
+    {
+        "name": "tokyobones",
+        "exclude": ["iterm", "alacritty", "kitty", "wezterm", "tmux"]
+    },
+    { "name": "zenburned", "background": "dark" },
+    { "name": "zenwritten" }
+]

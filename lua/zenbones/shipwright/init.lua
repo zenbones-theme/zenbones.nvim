@@ -57,17 +57,7 @@ end
 
 M.run = function()
 	local runner_files = { "vim", "iterm", "alacritty", "kitty", "wezterm", "tmux", "lualine", "lightline" }
-	local colorschemes = {
-		{ name = "zenbones" },
-		{ name = "neobones" },
-		{ name = "vimbones", background = "light" },
-		{ name = "forestbones", exclude = { "iterm", "alacritty", "kitty", "wezterm", "tmux" } },
-		{ name = "nordbones", background = "dark", exclude = { "iterm", "alacritty", "kitty", "wezterm", "tmux" } },
-		{ name = "rosebones", exclude = { "iterm", "alacritty", "kitty", "wezterm", "tmux" } },
-		{ name = "tokyobones", exclude = { "iterm", "alacritty", "kitty", "wezterm", "tmux" } },
-		{ name = "zenburned", background = "dark" },
-		{ name = "zenwritten" },
-	}
+	local colorschemes = vim.fn.json_decode(vim.fn.readfile "colorschemes.json")
 	for _, colorscheme in ipairs(colorschemes) do
 		for _, file in ipairs(runner_files) do
 			if not vim.tbl_contains(colorscheme.exclude or {}, file) then
