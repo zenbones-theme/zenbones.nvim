@@ -73,6 +73,7 @@ local function specs_to_colors(specs)
 	}
 end
 
+---@diagnostic disable: undefined-global
 -- selene: allow(undefined_variable)
 run(
 	specs,
@@ -82,3 +83,4 @@ run(
 	{ overwrite, string.format("lua/lualine/themes/%s.lua", name) }
 )
 -- selene: deny(undefined_variable)
+---@diagnostic enable: undefined-global

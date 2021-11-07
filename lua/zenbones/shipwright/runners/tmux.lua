@@ -19,6 +19,7 @@ set -g mode-style fg='$black',bg='$selection_bg'
 
 local helpers = require "shipwright.transform.helpers"
 
+---@diagnostic disable: undefined-global
 -- selene: allow(undefined_variable)
 run(
 	{ specs, p, term },
@@ -31,3 +32,4 @@ run(
 	{ overwrite, string.format("extras/tmux/%s.tmux", name) }
 )
 -- selene: deny(undefined_variable)
+---@diagnostic enable: undefined-global

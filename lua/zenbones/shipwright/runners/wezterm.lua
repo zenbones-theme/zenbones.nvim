@@ -1,3 +1,4 @@
+---@diagnostic disable: undefined-global
 -- selene: allow(undefined_variable)
 run(
 	{ specs, p, term },
@@ -12,3 +13,4 @@ run(
 	{ overwrite, string.format("extras/wezterm/%s.toml", name:sub(1, 1):upper() .. name:sub(2)) }
 )
 -- selene: deny(undefined_variable)
+---@diagnostic enable: undefined-global

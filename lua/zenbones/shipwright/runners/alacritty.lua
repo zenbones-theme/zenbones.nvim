@@ -1,3 +1,4 @@
+---@diagnostic disable: undefined-global
 -- selene: allow(undefined_variable)
 run(
 	{ specs, p, term },
@@ -7,3 +8,4 @@ run(
 	{ overwrite, string.format("extras/alacritty/%s.yml", name) }
 )
 -- selene: deny(undefined_variable)
+---@diagnostic enable: undefined-global

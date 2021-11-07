@@ -88,6 +88,8 @@ local function to_iterm(colorscheme)
 	return { template }
 end
 
+---@diagnostic disable: undefined-global
 -- selene: allow(undefined_variable)
 run({ specs, term }, to_iterm, { overwrite, string.format("extras/iterm/%s.itermcolors", name) })
 -- selene: deny(undefined_variable)
+---@diagnostic enable: undefined-global

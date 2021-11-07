@@ -28,6 +28,7 @@ end
 
 local lushwright = require "shipwright.transform.lush"
 
+---@diagnostic disable: undefined-global
 -- selene: allow(undefined_variable)
 run(
 	specs,
@@ -41,6 +42,7 @@ run(
 	{ overwrite, string.format("autoload/zenbones/generated/%s.vim", name) }
 )
 -- selene: deny(undefined_variable)
+---@diagnostic enable: undefined-global
 
 local function remove_italics(specs)
 	local italic_specs = {}
@@ -52,6 +54,7 @@ local function remove_italics(specs)
 	return vim.fn.sort(italic_specs)
 end
 
+---@diagnostic disable: undefined-global
 -- selene: allow(undefined_variable)
 run(
 	specs,
@@ -64,3 +67,4 @@ run(
 	}
 )
 -- selene: deny(undefined_variable)
+---@diagnostic enable: undefined-global

@@ -83,6 +83,7 @@ local function specs_to_colors(colorscheme)
 	}
 end
 
+---@diagnostic disable: undefined-global
 -- selene: allow(undefined_variable)
 run(
 	{ specs, name },
@@ -92,3 +93,4 @@ run(
 	{ overwrite, string.format("autoload/lightline/colorscheme/%s.vim", name) }
 )
 -- selene: deny(undefined_variable)
+---@diagnostic enable: undefined-global
