@@ -7,9 +7,9 @@ else
     let s:index = rand() % len(s:colorschemes)
 endif
 
-let s:color = s:colorschemes[s:index]
-if exists('s:color.background')
-    call zenbones#setup_colorscheme(s:color.name, s:color.background)
+let g:randombones = s:colorschemes[s:index]
+if exists('g:randombones.background')
+    call zenbones#setup_colorscheme(g:randombones.name, g:randombones.background)
 else
-    call zenbones#setup_colorscheme(s:color.name)
+    call zenbones#setup_colorscheme(g:randombones.name)
 end
