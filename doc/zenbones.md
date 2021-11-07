@@ -24,6 +24,7 @@ colorscheme nordbones
 colorscheme tokyobones
 colorscheme duckbones
 colorscheme zenburned
+colorscheme randombones
 ```
 
 ## Configuration

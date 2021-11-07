@@ -59,6 +59,7 @@ Or choose from the collection:
 | `tokyobones`  | Inspired by [Tokyo Night](https://github.com/enkia/tokyo-night-vscode-theme#color-palette) |
 | `duckbones`   | Inspired by [Spaceduck](https://pineapplegiant.github.io/spaceduck)                        |
 | `zenburned`   | Inspired by [Zenburn](https://kippura.org/zenburnpage)                                     |
+| `randombones` | Randomly pick from the collection.                                                         |
 
 ## [Configuration and other documentations](doc/zenbones.md)
 
