@@ -56,15 +56,11 @@ end
 
 ---@diagnostic disable: undefined-global
 -- selene: allow(undefined_variable)
-run(
-	specs,
-	remove_italics,
-	{
-		patchwrite,
-		string.format("autoload/zenbones/generated/%s.vim", name),
-		[[" start_no_italics]],
-		[[" end_no_italics]],
-	}
-)
+run(specs, remove_italics, {
+	patchwrite,
+	string.format("autoload/zenbones/generated/%s.vim", name),
+	[[" start_no_italics]],
+	[[" end_no_italics]],
+})
 -- selene: deny(undefined_variable)
 ---@diagnostic enable: undefined-global
