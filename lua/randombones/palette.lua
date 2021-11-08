@@ -1,1 +1,1 @@
-return require(vim.g.randombones.name .. ".palette")
+return require(vim.g.randombones_colors_name .. ".palette")

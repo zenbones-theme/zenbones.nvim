@@ -1,1 +1,1 @@
-return require("lualine.themes." .. vim.g.randombones.name)
+return require("lualine.themes." .. vim.g.randombones_colors_name)
