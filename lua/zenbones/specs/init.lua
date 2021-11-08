@@ -1,5 +1,3 @@
-local M = {}
-
 local function concat_config(prefix, suffixes)
 	local config = {}
 	for _, suffix in ipairs(suffixes) do
@@ -8,6 +6,11 @@ local function concat_config(prefix, suffixes)
 	return config
 end
 
+local M = {}
+
+--- Get global configuration as a table.
+---@param prefix string e.g. "zenbones"
+---@param base_bg? string light or dark
 function M.get_global_config(prefix, base_bg)
 	if type(vim.g[prefix]) == "table" then
 		return vim.g[prefix]
@@ -57,6 +60,11 @@ function M.get_global_config(prefix, base_bg)
 	end
 end
 
+--- Generate a specs given a palette.
+---@param p table palette
+---@param base_bg string light or dark
+---@param opt? table
+---@return table
 function M.generate(p, base_bg, opt)
 	return require("zenbones.specs." .. base_bg)(p, opt)
 end

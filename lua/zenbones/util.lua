@@ -1,5 +1,7 @@
 local M = {}
 
+--- Apply a zenbones colorscheme based on g:colors_name and &background.
+---@return nil
 function M.apply_colorscheme()
 	local colors_name = vim.api.nvim_get_var "colors_name"
 	package.loaded[colors_name] = nil
@@ -8,6 +10,10 @@ function M.apply_colorscheme()
 	require("zenbones.term").apply_colors(p)
 end
 
+--- Auto-fill a palette with the default palette.
+---@param p table palette
+---@param base_bg? string light or dark
+---@return table<string, table> palette
 function M.palette_extend(p, base_bg)
 	local lush = require "lush"
 	local hsluv = lush.hsluv

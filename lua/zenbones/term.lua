@@ -1,5 +1,6 @@
 local M = {}
 
+--- Map palette to 16 ansi colors.
 ---@param p table
 ---@return table
 function M.colors_map(p)
@@ -23,6 +24,7 @@ function M.colors_map(p)
 	}
 end
 
+--- Apply a palette to g:terminal_color_*.
 ---@param p table
 ---@return nil
 function M.apply_colors(p)
