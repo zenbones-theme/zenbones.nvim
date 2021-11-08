@@ -1,10 +1,10 @@
-function! zenbones#setup_colorscheme(...) abort
+function! zenbones#setup_colorscheme(colors_name, ...) abort
     if exists('g:colors_name')
         highlight clear
     endif
 
-    let g:colors_name = a:1
-    let l:bg = a:0 == 2 ? a:2 : v:null
+    let g:colors_name = a:colors_name
+    let l:bg = a:0 == 1 ? a:1 : v:null
     if l:bg != v:null
         let &background = l:bg
     endif
