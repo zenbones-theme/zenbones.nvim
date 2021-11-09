@@ -1,4 +1,4 @@
-let s:colorschemes = json_decode(readfile(expand('<sfile>:h:h') . '/colorschemes.json'))
+let s:colorschemes = json_decode(join(readfile(expand('<sfile>:h:h') . '/colorschemes.json'), "\n"))
 
 if has('nvim')
     lua math.randomseed(os.time())
