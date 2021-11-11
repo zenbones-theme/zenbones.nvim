@@ -63,31 +63,45 @@ if &background ==# 'dark'
     highlight CursorLineNr guifg=#BBBBBB guibg=NONE guisp=NONE gui=bold cterm=bold
     highlight Delimiter guifg=#7C7C7C guibg=NONE guisp=NONE gui=NONE cterm=NONE
     highlight! link markdownLinkTextDelimiter Delimiter
+    highlight! link LspDiagnosticsDefaultError DiagnosticError
     highlight! link NeogitNotificationError DiagnosticError
     highlight DiagnosticHint guifg=#B279A7 guibg=NONE guisp=NONE gui=NONE cterm=NONE
+    highlight! link LspDiagnosticsDefaultHint DiagnosticHint
     highlight DiagnosticInfo guifg=#6099C0 guibg=NONE guisp=NONE gui=NONE cterm=NONE
+    highlight! link LspDiagnosticsDefaultInformation DiagnosticInfo
     highlight! link NeogitNotificationInfo DiagnosticInfo
     highlight! link TSNote DiagnosticInfo
     highlight DiagnosticSignError guifg=#DE6E7C guibg=NONE guisp=NONE gui=NONE cterm=NONE
     highlight! link CocErrorSign DiagnosticSignError
+    highlight! link LspDiagnosticsSignError DiagnosticSignError
     highlight DiagnosticSignHint guifg=#B279A7 guibg=NONE guisp=NONE gui=NONE cterm=NONE
     highlight! link CocHintSign DiagnosticSignHint
+    highlight! link LspDiagnosticsSignHint DiagnosticSignHint
     highlight DiagnosticSignInfo guifg=#6099C0 guibg=NONE guisp=NONE gui=NONE cterm=NONE
     highlight! link CocInfoSign DiagnosticSignInfo
+    highlight! link LspDiagnosticsSignInformation DiagnosticSignInfo
     highlight DiagnosticSignWarn guifg=#B77E64 guibg=NONE guisp=NONE gui=NONE cterm=NONE
     highlight! link CocWarningSign DiagnosticSignWarn
+    highlight! link LspDiagnosticsSignWarning DiagnosticSignWarn
     highlight DiagnosticUnderlineError guifg=#DE6E7C guibg=NONE guisp=NONE gui=undercurl cterm=undercurl
     highlight! link CocErrorHighlight DiagnosticUnderlineError
+    highlight! link LspDiagnosticsUnderlineError DiagnosticUnderlineError
     highlight DiagnosticUnderlineHint guifg=#B279A7 guibg=NONE guisp=NONE gui=undercurl cterm=undercurl
     highlight! link CocHintHighlight DiagnosticUnderlineHint
+    highlight! link LspDiagnosticsUnderlineHint DiagnosticUnderlineHint
     highlight DiagnosticUnderlineInfo guifg=#6099C0 guibg=NONE guisp=NONE gui=undercurl cterm=undercurl
     highlight! link CocInfoHighlight DiagnosticUnderlineInfo
+    highlight! link LspDiagnosticsUnderlineInformation DiagnosticUnderlineInfo
     highlight DiagnosticUnderlineWarn guifg=#B77E64 guibg=NONE guisp=NONE gui=undercurl cterm=undercurl
     highlight! link CocWarningHighlight DiagnosticUnderlineWarn
+    highlight! link LspDiagnosticsUnderlineWarning DiagnosticUnderlineWarn
     highlight DiagnosticVirtualTextError guifg=#DE6E7C guibg=#251B1C guisp=NONE gui=NONE cterm=NONE
     highlight! link CocErrorVirtualText DiagnosticVirtualTextError
+    highlight! link LspDiagnosticsVirtualTextError DiagnosticVirtualTextError
     highlight DiagnosticVirtualTextWarn guifg=#B77E64 guibg=#211D1B guisp=NONE gui=NONE cterm=NONE
     highlight! link CocWarningVitualText DiagnosticVirtualTextWarn
+    highlight! link LspDiagnosticsVirtualTextWarning DiagnosticVirtualTextWarn
+    highlight! link LspDiagnosticsDefaultWarning DiagnosticWarn
     highlight! link NeogitNotificationWarning DiagnosticWarn
     highlight DiffAdd guifg=NONE guibg=#232D1A guisp=NONE gui=NONE cterm=NONE
     highlight! link NeogitDiffAddHighlight DiffAdd
@@ -298,31 +312,45 @@ else
     highlight CursorLineNr guifg=#353535 guibg=NONE guisp=NONE gui=bold cterm=bold
     highlight Delimiter guifg=#848484 guibg=NONE guisp=NONE gui=NONE cterm=NONE
     highlight! link markdownLinkTextDelimiter Delimiter
+    highlight! link LspDiagnosticsDefaultError DiagnosticError
     highlight! link NeogitNotificationError DiagnosticError
     highlight DiagnosticHint guifg=#88507D guibg=NONE guisp=NONE gui=NONE cterm=NONE
+    highlight! link LspDiagnosticsDefaultHint DiagnosticHint
     highlight DiagnosticInfo guifg=#286486 guibg=NONE guisp=NONE gui=NONE cterm=NONE
+    highlight! link LspDiagnosticsDefaultInformation DiagnosticInfo
     highlight! link NeogitNotificationInfo DiagnosticInfo
     highlight! link TSNote DiagnosticInfo
     highlight DiagnosticSignError guifg=#A8334C guibg=NONE guisp=NONE gui=NONE cterm=NONE
     highlight! link CocErrorSign DiagnosticSignError
+    highlight! link LspDiagnosticsSignError DiagnosticSignError
     highlight DiagnosticSignHint guifg=#88507D guibg=NONE guisp=NONE gui=NONE cterm=NONE
     highlight! link CocHintSign DiagnosticSignHint
+    highlight! link LspDiagnosticsSignHint DiagnosticSignHint
     highlight DiagnosticSignInfo guifg=#286486 guibg=NONE guisp=NONE gui=NONE cterm=NONE
     highlight! link CocInfoSign DiagnosticSignInfo
+    highlight! link LspDiagnosticsSignInformation DiagnosticSignInfo
     highlight DiagnosticSignWarn guifg=#944927 guibg=NONE guisp=NONE gui=NONE cterm=NONE
     highlight! link CocWarningSign DiagnosticSignWarn
+    highlight! link LspDiagnosticsSignWarning DiagnosticSignWarn
     highlight DiagnosticUnderlineError guifg=#A8334C guibg=NONE guisp=NONE gui=undercurl cterm=undercurl
     highlight! link CocErrorHighlight DiagnosticUnderlineError
+    highlight! link LspDiagnosticsUnderlineError DiagnosticUnderlineError
     highlight DiagnosticUnderlineHint guifg=#88507D guibg=NONE guisp=NONE gui=undercurl cterm=undercurl
     highlight! link CocHintHighlight DiagnosticUnderlineHint
+    highlight! link LspDiagnosticsUnderlineHint DiagnosticUnderlineHint
     highlight DiagnosticUnderlineInfo guifg=#286486 guibg=NONE guisp=NONE gui=undercurl cterm=undercurl
     highlight! link CocInfoHighlight DiagnosticUnderlineInfo
+    highlight! link LspDiagnosticsUnderlineInformation DiagnosticUnderlineInfo
     highlight DiagnosticUnderlineWarn guifg=#944927 guibg=NONE guisp=NONE gui=undercurl cterm=undercurl
     highlight! link CocWarningHighlight DiagnosticUnderlineWarn
+    highlight! link LspDiagnosticsUnderlineWarning DiagnosticUnderlineWarn
     highlight DiagnosticVirtualTextError guifg=#A8334C guibg=#F2DEE0 guisp=NONE gui=NONE cterm=NONE
     highlight! link CocErrorVirtualText DiagnosticVirtualTextError
+    highlight! link LspDiagnosticsVirtualTextError DiagnosticVirtualTextError
     highlight DiagnosticVirtualTextWarn guifg=#944927 guibg=#F2DEDA guisp=NONE gui=NONE cterm=NONE
     highlight! link CocWarningVitualText DiagnosticVirtualTextWarn
+    highlight! link LspDiagnosticsVirtualTextWarning DiagnosticVirtualTextWarn
+    highlight! link LspDiagnosticsDefaultWarning DiagnosticWarn
     highlight! link NeogitNotificationWarning DiagnosticWarn
     highlight DiffAdd guifg=NONE guibg=#CBE5B8 guisp=NONE gui=NONE cterm=NONE
     highlight! link NeogitDiffAddHighlight DiffAdd
