@@ -9,8 +9,10 @@ local function make_env(colorscheme)
 	local p = require(specs .. ".palette")[colorscheme.background]
 	local env = builder.make_env {
 		name = colorscheme.name,
+		specs_name = specs,
 		specs = require(specs),
 		p = p,
+		background = colorscheme.background,
 		term = require("zenbones.term").colors_map(p),
 		transform = require "zenbones.shipwright.transform",
 	}
