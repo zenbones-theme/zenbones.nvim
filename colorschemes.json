@@ -19,6 +19,7 @@
         "name": "tokyobones",
         "exclude": ["iterm", "alacritty", "kitty", "wezterm", "tmux"]
     },
+    { "name": "duckbones", "background": "dark" },
     { "name": "zenburned", "background": "dark" },
     { "name": "zenwritten" }
 ]
