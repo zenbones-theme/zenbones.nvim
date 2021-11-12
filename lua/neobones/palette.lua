@@ -11,11 +11,11 @@ M.light = util.palette_extend({
 }, "light")
 M.light.leaf = M.light.leaf.sa(24).li(8) -- need to make green more prominent
 
-M.dark = util.palette_extend {
+M.dark = util.palette_extend({
 	bg = hsluv "#0f191f", -- --bg-color
 	fg = hsluv "#c7d6d0", -- --fg-color
 	leaf = hsluv "#8fff6d", -- --accent-color
 	water = hsluv "#8190d4", -- default blue looks to close to bg
-}
+}, "dark")
 
 return M

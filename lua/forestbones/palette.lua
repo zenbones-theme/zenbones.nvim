@@ -15,7 +15,7 @@ M.light = util.palette_extend({
 	sky = hsluv(151.6, 87.3, 61.5),
 }, "light")
 
-M.dark = util.palette_extend {
+M.dark = util.palette_extend({
 	bg = hsluv(232.6, 27, 20.7),
 	fg = hsluv(67.1, 26.4, 88), -- base: 67.1, 26.4, 80.3
 	rose = hsluv(11.3, 67.5, 64.4),
@@ -24,6 +24,6 @@ M.dark = util.palette_extend {
 	water = hsluv(179.5, 51, 71.8),
 	blossom = hsluv(339.1, 46.7, 69.8),
 	sky = hsluv(136.1, 45.8, 72.6),
-}
+}, "dark")
 
 return M

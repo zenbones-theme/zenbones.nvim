@@ -16,7 +16,7 @@ M.light = util.palette_extend({
 	text = hsluv(270.1, 22.9, 36.8), -- text, base: 270.1, 22.9, 36.8
 }, "light")
 
-M.dark = util.palette_extend {
+M.dark = util.palette_extend({
 	bg = hsluv(271.2, 20.2, 8.5), -- base
 	bg_warm = hsluv(268.9, 24.5, 13.9), -- base moon
 	fg = hsluv(14.8, 23, 86), -- rose, base: 14.8, 59.9, 80.3
@@ -27,6 +27,6 @@ M.dark = util.palette_extend {
 	blossom = hsluv(283.1, 67.3, 73), -- iris
 	sky = hsluv(206.7, 42.9, 80), -- foam
 	text = hsluv(269.4, 56, 89.2), -- text, base: 269.4, 63.6, 89.2
-}
+}, "dark")
 
 return M

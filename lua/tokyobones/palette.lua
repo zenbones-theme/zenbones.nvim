@@ -17,7 +17,7 @@ M.light = util.palette_extend({
 	sky1 = hsluv "#33635c",
 }, "light")
 
-M.dark = util.palette_extend {
+M.dark = util.palette_extend({
 	bg = hsluv "#1a1b26",
 	bg_warm = hsluv "#24283b", -- storm
 	fg = hsluv "#c0caf5",
@@ -29,6 +29,6 @@ M.dark = util.palette_extend {
 	sky = hsluv "#2ac3de",
 	orange = hsluv "#ff9e64",
 	sky1 = hsluv "#73daca",
-}
+}, "dark")
 
 return M

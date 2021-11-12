@@ -12,7 +12,7 @@ end
 
 --- Auto-fill a palette with the default palette.
 ---@param p table palette
----@param base_bg? string light or dark
+---@param base_bg string light or dark
 ---@return table<string, table> palette
 function M.palette_extend(p, base_bg)
 	local lush = require "lush"
@@ -40,7 +40,7 @@ function M.palette_extend(p, base_bg)
 			sky1 = p.sky.sa(20).da(16),
 			fg1 = p.fg.li(22),
 		})
-	else
+	elseif base_bg == "dark" then
 		-- default
 		p = vim.tbl_extend("keep", p, {
 			bg = hsluv(39, 12, 9), -- sand
@@ -65,6 +65,8 @@ function M.palette_extend(p, base_bg)
 			sky1 = p.sky.sa(20).li(16),
 			fg1 = p.fg.da(22),
 		})
+	else
+		error(string.format([[Invalid base_bg value: '%s', must be 'light' or 'dark'.]], base_bg))
 	end
 end
 

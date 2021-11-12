@@ -10,7 +10,7 @@ local M = {}
 
 --- Get global configuration as a table.
 ---@param prefix string e.g. "zenbones"
----@param base_bg? string light or dark
+---@param base_bg string light or dark
 function M.get_global_config(prefix, base_bg)
 	if type(vim.g[prefix]) == "table" then
 		return vim.g[prefix]
@@ -44,7 +44,7 @@ function M.get_global_config(prefix, base_bg)
 			}),
 			common
 		)
-	else
+	elseif base_bg == "dark" then
 		return vim.tbl_extend(
 			"keep",
 			concat_config(prefix, {
@@ -57,6 +57,8 @@ function M.get_global_config(prefix, base_bg)
 			}),
 			common
 		)
+	else
+		error(string.format([[Invalid base_bg value: '%s', must be 'light' or 'dark'.]], base_bg))
 	end
 end
 
