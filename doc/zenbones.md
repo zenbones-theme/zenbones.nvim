@@ -22,6 +22,7 @@ colorscheme rosebones
 colorscheme forestbones
 colorscheme nordbones
 colorscheme tokyobones
+colorscheme seoulbones
 colorscheme duckbones
 colorscheme zenburned
 colorscheme randombones

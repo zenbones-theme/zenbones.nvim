@@ -57,6 +57,7 @@ Or choose from the collection:
 | `forestbones` | Inspired by [Everforest](https://github.com/sainnhe/everforest)                            |
 | `nordbones`   | Inspired by [Nord](https://www.nordtheme.com/docs/colors-and-palettes)                     |
 | `tokyobones`  | Inspired by [Tokyo Night](https://github.com/enkia/tokyo-night-vscode-theme#color-palette) |
+| `seoulbones`  | Inspired by [Seoul256](https://github.com/junegunn/seoul256.vim)                           |
 | `duckbones`   | Inspired by [Spaceduck](https://pineapplegiant.github.io/spaceduck)                        |
 | `zenburned`   | Inspired by [Zenburn](https://kippura.org/zenburnpage)                                     |
 | `randombones` | Randomly pick from the collection.                                                         |
