@@ -154,7 +154,7 @@ local function generate(p, opt)
 			-- SpecialChar  { }, --  special character in a constant
 			-- Tag          { }, --    you can use CTRL-] on this
 			Delimiter       { fg = p1.bg.li(47) }, --	character that needs attention
-			SpecialComment  { Comment, gui = "bold" }, -- special things inside a comment
+			SpecialComment  { Comment, gui = "NONE" }, -- special things inside a comment
 			-- Debug        { }, --    debugging statements
 
 			-- ("Ignore", below, may be invisible...)
