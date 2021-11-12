@@ -192,7 +192,7 @@ if &background ==# 'light'
     highlight! link markdownH4 Special
     highlight! link markdownH5 Special
     highlight! link markdownH6 Special
-    highlight SpecialComment guifg=#8C8C7C guibg=NONE guisp=NONE gui=bold cterm=bold
+    highlight SpecialComment guifg=#8C8C7C guibg=NONE guisp=NONE gui=NONE cterm=NONE
     highlight SpecialKey guifg=#B0B093 guibg=NONE guisp=NONE gui=italic cterm=italic
     highlight SpellBad guifg=#974352 guibg=NONE guisp=NONE gui=undercurl cterm=undercurl
     highlight! link CocSelectedText SpellBad

@@ -190,7 +190,7 @@ if &background ==# 'dark'
     highlight! link markdownH4 Special
     highlight! link markdownH5 Special
     highlight! link markdownH6 Special
-    highlight SpecialComment guifg=#6E6763 guibg=NONE guisp=NONE gui=bold cterm=bold
+    highlight SpecialComment guifg=#6E6763 guibg=NONE guisp=NONE gui=NONE cterm=NONE
     highlight SpecialKey guifg=#5C534F guibg=NONE guisp=NONE gui=italic cterm=italic
     highlight SpellBad guifg=#CB7A83 guibg=NONE guisp=NONE gui=undercurl cterm=undercurl
     highlight! link CocSelectedText SpellBad
@@ -439,7 +439,7 @@ else
     highlight! link markdownH4 Special
     highlight! link markdownH5 Special
     highlight! link markdownH6 Special
-    highlight SpecialComment guifg=#948985 guibg=NONE guisp=NONE gui=bold cterm=bold
+    highlight SpecialComment guifg=#948985 guibg=NONE guisp=NONE gui=NONE cterm=NONE
     highlight SpecialKey guifg=#BBABA3 guibg=NONE guisp=NONE gui=italic cterm=italic
     highlight SpellBad guifg=#974352 guibg=NONE guisp=NONE gui=undercurl cterm=undercurl
     highlight! link CocSelectedText SpellBad
