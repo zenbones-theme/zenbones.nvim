@@ -23,7 +23,7 @@ M.dark = util.palette_extend({
 	leaf = hsluv "#98bc99",
 	wood = hsluv "#ffde99",
 	water = hsluv "#98bede",
-	blossom = hsluv "#999abd",
+	blossom = hsluv("#999abd").li(10),
 	sky = hsluv "#6fbcbd",
 	orange = hsluv "#e19972",
 }, "dark")
