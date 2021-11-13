@@ -7,5 +7,5 @@ cursor_bg     = "#E8E8E8"
 cursor_border = "#4B4B4B"
 selection_fg  = "#E2E2E2"
 selection_bg  = "#777777"
-ansi = ["#4B4B4B", "#E388A3", "#98BD99", "#FFDF9B", "#97BDDE", "#9A9BBD", "#6FBDBE", "#E2E2E2"]
-brights = ["#6C6465", "#EB99B1", "#8FCD92", "#FFE5B3", "#A2C8E9", "#A9AAD6", "#6BCACB", "#ABABAB"]
+ansi = ["#4B4B4B", "#E388A3", "#98BD99", "#FFDF9B", "#97BDDE", "#A5A6C5", "#6FBDBE", "#E2E2E2"]
+brights = ["#6C6465", "#EB99B1", "#8FCD92", "#FFE5B3", "#A2C8E9", "#B2B3DA", "#6BCACB", "#ABABAB"]
