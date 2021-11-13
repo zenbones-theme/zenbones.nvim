@@ -18,7 +18,7 @@ M.light = util.palette_extend({
 
 M.dark = util.palette_extend({
 	bg = hsluv "#4b4b4b",
-	fg = hsluv("#d9d9d9").li(20),
+	fg = hsluv("#d9d9d9").li(10),
 	rose = hsluv("#e17899").li(12),
 	leaf = hsluv "#98bc99",
 	wood = hsluv "#ffde99",
