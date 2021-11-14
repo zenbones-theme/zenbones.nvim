@@ -9,6 +9,7 @@ run(
 			author = "Michael Chris Lopez",
 			license = "MIT",
 			upstream = string.format("https://github.com/mcchrish/zenbones.nvim/raw/main/extras/kitty/%s.conf", name),
+			blurb = description,
 			url_color = term.bright_magenta,
 			tab_active_bg = specs.Search.bg,
 			tab_active_fg = colors.fg,

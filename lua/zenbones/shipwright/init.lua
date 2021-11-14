@@ -13,6 +13,7 @@ local function make_env(colorscheme)
 		specs = require(specs),
 		p = p,
 		background = colorscheme.background,
+		description = colorscheme.description,
 		term = require("zenbones.term").colors_map(p),
 		transform = require "zenbones.shipwright.transform",
 	}
@@ -32,6 +33,7 @@ local function make_runners(config)
 					name = config.name .. "_light",
 					specs = config.name,
 					background = "light",
+					description = config.description,
 				}
 			),
 			setfenv(
@@ -40,6 +42,7 @@ local function make_runners(config)
 					name = config.name .. "_dark",
 					specs = config.name,
 					background = "dark",
+					description = config.description,
 				}
 			),
 		}
@@ -52,6 +55,7 @@ local function make_runners(config)
 				name = config.name,
 				specs = config.name,
 				background = config.background,
+				description = config.description,
 			}
 		),
 	}
