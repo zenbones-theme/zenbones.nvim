@@ -4,8 +4,8 @@ let s:p = {'normal': {}, 'inactive': {}, 'insert': {}, 'replace': {}, 'visual': 
 let s:p.normal.left = [ [ "#A8B1C5", "#727F98", "bold" ], [ "#A8B1C5", "#576175" ] ]
 let s:p.normal.middle = [ [ "#EBEEF3", "#485061" ] ]
 let s:p.normal.right = [ [ "#A8B1C5", "#576175" ], [ "#A8B1C5", "#576175" ] ]
-let s:p.normal.warning = [ [ "#CF866F", "#403735" ] ]
-let s:p.normal.error = [ [ "#C1616A", "#453536" ] ]
+let s:p.normal.warning = [ [ "#CF866F", "#433C3B" ] ]
+let s:p.normal.error = [ [ "#C1616A", "#463B3B" ] ]
 
 let s:p.inactive.left =  [ [ "#F2F4F7", "#414959" ], [ "#F2F4F7", "#414959" ] ]
 let s:p.inactive.middle = [ [ "#F2F4F7", "#414959" ] ]

@@ -83,22 +83,26 @@ if &background ==# 'dark'
     highlight DiagnosticSignWarn guifg=#F6C074 guibg=NONE guisp=NONE gui=NONE cterm=NONE
     highlight! link CocWarningSign DiagnosticSignWarn
     highlight! link LspDiagnosticsSignWarning DiagnosticSignWarn
-    highlight DiagnosticUnderlineError guifg=#EB7193 guibg=NONE guisp=NONE gui=undercurl cterm=undercurl
+    highlight DiagnosticUnderlineError guifg=NONE guibg=NONE guisp=#EB7193 gui=undercurl cterm=undercurl
     highlight! link CocErrorHighlight DiagnosticUnderlineError
     highlight! link LspDiagnosticsUnderlineError DiagnosticUnderlineError
-    highlight DiagnosticUnderlineHint guifg=#C4A7E7 guibg=NONE guisp=NONE gui=undercurl cterm=undercurl
+    highlight DiagnosticUnderlineHint guifg=NONE guibg=NONE guisp=#C4A7E7 gui=undercurl cterm=undercurl
     highlight! link CocHintHighlight DiagnosticUnderlineHint
     highlight! link LspDiagnosticsUnderlineHint DiagnosticUnderlineHint
-    highlight DiagnosticUnderlineInfo guifg=#9CCFD8 guibg=NONE guisp=NONE gui=undercurl cterm=undercurl
+    highlight DiagnosticUnderlineInfo guifg=NONE guibg=NONE guisp=#9CCFD8 gui=undercurl cterm=undercurl
     highlight! link CocInfoHighlight DiagnosticUnderlineInfo
     highlight! link LspDiagnosticsUnderlineInformation DiagnosticUnderlineInfo
-    highlight DiagnosticUnderlineWarn guifg=#F6C074 guibg=NONE guisp=NONE gui=undercurl cterm=undercurl
+    highlight DiagnosticUnderlineWarn guifg=NONE guibg=NONE guisp=#F6C074 gui=undercurl cterm=undercurl
     highlight! link CocWarningHighlight DiagnosticUnderlineWarn
     highlight! link LspDiagnosticsUnderlineWarning DiagnosticUnderlineWarn
-    highlight DiagnosticVirtualTextError guifg=#EB7193 guibg=#241B1D guisp=NONE gui=NONE cterm=NONE
+    highlight DiagnosticVirtualTextError guifg=#EB7193 guibg=#262021 guisp=NONE gui=NONE cterm=NONE
     highlight! link CocErrorVirtualText DiagnosticVirtualTextError
     highlight! link LspDiagnosticsVirtualTextError DiagnosticVirtualTextError
-    highlight DiagnosticVirtualTextWarn guifg=#F6C074 guibg=#1F1D1B guisp=NONE gui=NONE cterm=NONE
+    highlight DiagnosticVirtualTextHint guifg=#C4A7E7 guibg=#232126 guisp=NONE gui=NONE cterm=NONE
+    highlight! link LspDiagnosticsVirtualTextHint DiagnosticVirtualTextHint
+    highlight DiagnosticVirtualTextInfo guifg=#9CCFD8 guibg=#202222 guisp=NONE gui=NONE cterm=NONE
+    highlight! link LspDiagnosticsVirtualTextInformation DiagnosticVirtualTextInfo
+    highlight DiagnosticVirtualTextWarn guifg=#F6C074 guibg=#232120 guisp=NONE gui=NONE cterm=NONE
     highlight! link CocWarningVitualText DiagnosticVirtualTextWarn
     highlight! link LspDiagnosticsVirtualTextWarning DiagnosticVirtualTextWarn
     highlight! link LspDiagnosticsDefaultWarning DiagnosticWarn
@@ -332,22 +336,26 @@ else
     highlight DiagnosticSignWarn guifg=#EC9D33 guibg=NONE guisp=NONE gui=NONE cterm=NONE
     highlight! link CocWarningSign DiagnosticSignWarn
     highlight! link LspDiagnosticsSignWarning DiagnosticSignWarn
-    highlight DiagnosticUnderlineError guifg=#B5637A guibg=NONE guisp=NONE gui=undercurl cterm=undercurl
+    highlight DiagnosticUnderlineError guifg=NONE guibg=NONE guisp=#B5637A gui=undercurl cterm=undercurl
     highlight! link CocErrorHighlight DiagnosticUnderlineError
     highlight! link LspDiagnosticsUnderlineError DiagnosticUnderlineError
-    highlight DiagnosticUnderlineHint guifg=#917BA9 guibg=NONE guisp=NONE gui=undercurl cterm=undercurl
+    highlight DiagnosticUnderlineHint guifg=NONE guibg=NONE guisp=#917BA9 gui=undercurl cterm=undercurl
     highlight! link CocHintHighlight DiagnosticUnderlineHint
     highlight! link LspDiagnosticsUnderlineHint DiagnosticUnderlineHint
-    highlight DiagnosticUnderlineInfo guifg=#5795A0 guibg=NONE guisp=NONE gui=undercurl cterm=undercurl
+    highlight DiagnosticUnderlineInfo guifg=NONE guibg=NONE guisp=#5795A0 gui=undercurl cterm=undercurl
     highlight! link CocInfoHighlight DiagnosticUnderlineInfo
     highlight! link LspDiagnosticsUnderlineInformation DiagnosticUnderlineInfo
-    highlight DiagnosticUnderlineWarn guifg=#EC9D33 guibg=NONE guisp=NONE gui=undercurl cterm=undercurl
+    highlight DiagnosticUnderlineWarn guifg=NONE guibg=NONE guisp=#EC9D33 gui=undercurl cterm=undercurl
     highlight! link CocWarningHighlight DiagnosticUnderlineWarn
     highlight! link LspDiagnosticsUnderlineWarning DiagnosticUnderlineWarn
-    highlight DiagnosticVirtualTextError guifg=#B5637A guibg=#F6E8EB guisp=NONE gui=NONE cterm=NONE
+    highlight DiagnosticVirtualTextError guifg=#B5637A guibg=#F4E8EB guisp=NONE gui=NONE cterm=NONE
     highlight! link CocErrorVirtualText DiagnosticVirtualTextError
     highlight! link LspDiagnosticsVirtualTextError DiagnosticVirtualTextError
-    highlight DiagnosticVirtualTextWarn guifg=#EC9D33 guibg=#F6E9E0 guisp=NONE gui=NONE cterm=NONE
+    highlight DiagnosticVirtualTextHint guifg=#917BA9 guibg=#EEE9F3 guisp=NONE gui=NONE cterm=NONE
+    highlight! link LspDiagnosticsVirtualTextHint DiagnosticVirtualTextHint
+    highlight DiagnosticVirtualTextInfo guifg=#5795A0 guibg=#DAEFF3 guisp=NONE gui=NONE cterm=NONE
+    highlight! link LspDiagnosticsVirtualTextInformation DiagnosticVirtualTextInfo
+    highlight DiagnosticVirtualTextWarn guifg=#EC9D33 guibg=#F4E9E2 guisp=NONE gui=NONE cterm=NONE
     highlight! link CocWarningVitualText DiagnosticVirtualTextWarn
     highlight! link LspDiagnosticsVirtualTextWarning DiagnosticVirtualTextWarn
     highlight! link LspDiagnosticsDefaultWarning DiagnosticWarn
@@ -441,11 +449,11 @@ else
     highlight! link markdownH6 Special
     highlight SpecialComment guifg=#A18E72 guibg=NONE guisp=NONE gui=NONE cterm=NONE
     highlight SpecialKey guifg=#CEAF7E guibg=NONE guisp=NONE gui=italic cterm=italic
-    highlight SpellBad guifg=#A66B7B guibg=NONE guisp=NONE gui=undercurl cterm=undercurl
+    highlight SpellBad guifg=#A66B7B guibg=NONE guisp=#B5637A gui=undercurl cterm=undercurl
     highlight! link CocSelectedText SpellBad
-    highlight SpellCap guifg=#A66B7B guibg=NONE guisp=NONE gui=undercurl cterm=undercurl
+    highlight SpellCap guifg=#A66B7B guibg=NONE guisp=#C27187 gui=undercurl cterm=undercurl
     highlight! link SpellLocal SpellCap
-    highlight SpellRare guifg=#A66B7B guibg=NONE guisp=NONE gui=undercurl cterm=undercurl
+    highlight SpellRare guifg=#A66B7B guibg=NONE guisp=#EC9D33 gui=undercurl cterm=undercurl
     highlight Statement guifg=#286A84 guibg=NONE guisp=NONE gui=NONE cterm=NONE
     highlight! link PreProc Statement
     highlight! link WhichKey Statement
