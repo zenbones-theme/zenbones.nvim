@@ -183,6 +183,8 @@ local function generate(p, opt)
 
 			DiagnosticVirtualTextError { DiagnosticError, bg = DiagnosticError.fg.saturation(42).lightness(p1.bg.l - 4) },
 			DiagnosticVirtualTextWarn  { DiagnosticWarn, bg = DiagnosticWarn.fg.saturation(42).lightness(p1.bg.l - 4)},
+			DiagnosticVirtualTextInfo  { DiagnosticInfo, bg = DiagnosticInfo.fg.saturation(42).lightness(p1.bg.l - 4) },
+			DiagnosticVirtualTextHint  { DiagnosticHint, bg = DiagnosticHint.fg.saturation(42).lightness(p1.bg.l - 4)},
 
 			DiagnosticUnderlineError   { fg = opt.colorize_diagnostic_underline_text and DiagnosticError.fg or "NONE", gui = "undercurl", sp = DiagnosticError.fg },
 			DiagnosticUnderlineWarn    { fg = opt.colorize_diagnostic_underline_text and DiagnosticWarn.fg or "NONE", gui = "undercurl", sp = DiagnosticWarn.fg },
@@ -413,8 +415,8 @@ local function generate(p, opt)
 
 					LspDiagnosticsVirtualTextError          { base.DiagnosticVirtualTextError }, -- Used for "Error" diagnostic virtual text
 					LspDiagnosticsVirtualTextWarning        { base.DiagnosticVirtualTextWarn }, -- Used for "Warning" diagnostic virtual text
-					-- LspDiagnosticsVirtualTextInformation { }, -- Used for "Information" diagnostic virtual text
-					-- LspDiagnosticsVirtualTextHint        { }, -- Used for "Hint" diagnostic virtual text
+					LspDiagnosticsVirtualTextInformation    { base.DiagnosticVirtualTextInfo }, -- Used for "Information" diagnostic virtual text
+					LspDiagnosticsVirtualTextHint           { base.DiagnosticVirtualTextHint }, -- Used for "Hint" diagnostic virtual text
 
 					LspDiagnosticsUnderlineError            { base.DiagnosticUnderlineError }, -- Used to underline "Error" diagnostics
 					LspDiagnosticsUnderlineWarning          { base.DiagnosticUnderlineWarn }, -- Used to underline "Warning" diagnostics
