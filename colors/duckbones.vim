@@ -84,22 +84,26 @@ if &background ==# 'dark'
     highlight DiagnosticSignWarn guifg=#E39500 guibg=NONE guisp=NONE gui=NONE cterm=NONE
     highlight! link CocWarningSign DiagnosticSignWarn
     highlight! link LspDiagnosticsSignWarning DiagnosticSignWarn
-    highlight DiagnosticUnderlineError guifg=#E03600 guibg=NONE guisp=NONE gui=undercurl cterm=undercurl
+    highlight DiagnosticUnderlineError guifg=NONE guibg=NONE guisp=#E03600 gui=undercurl cterm=undercurl
     highlight! link CocErrorHighlight DiagnosticUnderlineError
     highlight! link LspDiagnosticsUnderlineError DiagnosticUnderlineError
-    highlight DiagnosticUnderlineHint guifg=#795CCC guibg=NONE guisp=NONE gui=undercurl cterm=undercurl
+    highlight DiagnosticUnderlineHint guifg=NONE guibg=NONE guisp=#795CCC gui=undercurl cterm=undercurl
     highlight! link CocHintHighlight DiagnosticUnderlineHint
     highlight! link LspDiagnosticsUnderlineHint DiagnosticUnderlineHint
-    highlight DiagnosticUnderlineInfo guifg=#00A3CB guibg=NONE guisp=NONE gui=undercurl cterm=undercurl
+    highlight DiagnosticUnderlineInfo guifg=NONE guibg=NONE guisp=#00A3CB gui=undercurl cterm=undercurl
     highlight! link CocInfoHighlight DiagnosticUnderlineInfo
     highlight! link LspDiagnosticsUnderlineInformation DiagnosticUnderlineInfo
-    highlight DiagnosticUnderlineWarn guifg=#E39500 guibg=NONE guisp=NONE gui=undercurl cterm=undercurl
+    highlight DiagnosticUnderlineWarn guifg=NONE guibg=NONE guisp=#E39500 gui=undercurl cterm=undercurl
     highlight! link CocWarningHighlight DiagnosticUnderlineWarn
     highlight! link LspDiagnosticsUnderlineWarning DiagnosticUnderlineWarn
-    highlight DiagnosticVirtualTextError guifg=#E03600 guibg=#1B1413 guisp=NONE gui=NONE cterm=NONE
+    highlight DiagnosticVirtualTextError guifg=#E03600 guibg=#1E1818 guisp=NONE gui=NONE cterm=NONE
     highlight! link CocErrorVirtualText DiagnosticVirtualTextError
     highlight! link LspDiagnosticsVirtualTextError DiagnosticVirtualTextError
-    highlight DiagnosticVirtualTextWarn guifg=#E39500 guibg=#171513 guisp=NONE gui=NONE cterm=NONE
+    highlight DiagnosticVirtualTextHint guifg=#795CCC guibg=#1A191E guisp=NONE gui=NONE cterm=NONE
+    highlight! link LspDiagnosticsVirtualTextHint DiagnosticVirtualTextHint
+    highlight DiagnosticVirtualTextInfo guifg=#00A3CB guibg=#181A1B guisp=NONE gui=NONE cterm=NONE
+    highlight! link LspDiagnosticsVirtualTextInformation DiagnosticVirtualTextInfo
+    highlight DiagnosticVirtualTextWarn guifg=#E39500 guibg=#1B1918 guisp=NONE gui=NONE cterm=NONE
     highlight! link CocWarningVitualText DiagnosticVirtualTextWarn
     highlight! link LspDiagnosticsVirtualTextWarning DiagnosticVirtualTextWarn
     highlight! link LspDiagnosticsDefaultWarning DiagnosticWarn

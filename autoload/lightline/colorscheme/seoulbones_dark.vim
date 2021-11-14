@@ -2,22 +2,22 @@
 let s:p = {'normal': {}, 'inactive': {}, 'insert': {}, 'replace': {}, 'visual': {}, 'tabline': {}}
 
 let s:p.normal.left = [ [ "#BBBBBB", "#8E8E8E", "bold" ], [ "#BBBBBB", "#727272" ] ]
-let s:p.normal.middle = [ [ "#E2E2E2", "#666666" ] ]
+let s:p.normal.middle = [ [ "#DDDDDD", "#666666" ] ]
 let s:p.normal.right = [ [ "#BBBBBB", "#727272" ], [ "#BBBBBB", "#727272" ] ]
-let s:p.normal.warning = [ [ "#FFDF9B", "#53504A" ] ]
-let s:p.normal.error = [ [ "#E388A3", "#5E4B50" ] ]
+let s:p.normal.warning = [ [ "#FFDF9B", "#575451" ] ]
+let s:p.normal.error = [ [ "#E388A3", "#5F5155" ] ]
 
-let s:p.inactive.left =  [ [ "#EBEBEB", "#5C5C5C" ], [ "#EBEBEB", "#5C5C5C" ] ]
-let s:p.inactive.middle = [ [ "#EBEBEB", "#5C5C5C" ] ]
-let s:p.inactive.right = [ [ "#EBEBEB", "#5C5C5C" ] ]
+let s:p.inactive.left =  [ [ "#E5E5E5", "#5C5C5C" ], [ "#E5E5E5", "#5C5C5C" ] ]
+let s:p.inactive.middle = [ [ "#E5E5E5", "#5C5C5C" ] ]
+let s:p.inactive.right = [ [ "#E5E5E5", "#5C5C5C" ] ]
 
 let s:p.insert.left = [ [ "#BBBBBB", "#5D809B", "bold" ], [ "#BBBBBB", "#727272" ] ]
 let s:p.replace.left = [ [ "#BBBBBB", "#82505E", "bold" ], [ "#BBBBBB", "#727272" ] ]
 let s:p.visual.left = [ [ "#BBBBBB", "#777777", "bold" ], [ "#BBBBBB", "#727272" ] ]
 
-let s:p.tabline.left = [ [ "#E2E2E2", "#727272", "italic" ] ]
-let s:p.tabline.middle = [ [ "#EBEBEB", "#5C5C5C" ] ]
-let s:p.tabline.right = [ [ "#E2E2E2", "#727272" ] ]
-let s:p.tabline.tabsel = [ [ "#E2E2E2", "#4B4B4B", "bold" ] ]
+let s:p.tabline.left = [ [ "#DDDDDD", "#727272", "italic" ] ]
+let s:p.tabline.middle = [ [ "#E5E5E5", "#5C5C5C" ] ]
+let s:p.tabline.right = [ [ "#DDDDDD", "#727272" ] ]
+let s:p.tabline.tabsel = [ [ "#DDDDDD", "#4B4B4B", "bold" ] ]
 
 let g:lightline#colorscheme#seoulbones_dark#palette = lightline#colorscheme#fill(s:p)
