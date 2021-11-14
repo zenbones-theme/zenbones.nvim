@@ -181,8 +181,8 @@ local function generate(p, opt)
 			DiagnosticSignInfo         { SignColumn, fg = DiagnosticInfo.fg },
 			DiagnosticSignHint         { SignColumn, fg = DiagnosticHint.fg },
 
-			DiagnosticVirtualTextError { DiagnosticError, bg = p.rose.saturation(12).lightness(p1.bg.l + 2) },
-			DiagnosticVirtualTextWarn  { DiagnosticWarn, bg = p.wood.saturation(12).lightness(p1.bg.l + 2) },
+			DiagnosticVirtualTextError { DiagnosticError, bg = DiagnosticError.fg.saturation(8).lightness(p1.bg.l + 4) },
+			DiagnosticVirtualTextWarn  { DiagnosticWarn, bg = DiagnosticWarn.fg.saturation(8).lightness(p1.bg.l + 4) },
 
 			DiagnosticUnderlineError   { DiagnosticError, gui = "undercurl" },
 			DiagnosticUnderlineWarn    { DiagnosticWarn, gui = "undercurl" },
