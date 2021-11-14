@@ -89,10 +89,10 @@ local function generate(p, opt)
 			MatchParen      { Search }, -- The character under the cursor or just before it, if it is a paired bracket, and its match. |pi_paren.txt|
 			-- QuickFixLine { }, -- Current |quickfix| item in the quickfix window. Combined with |hl-CursorLine| when the cursor is there.
 
-			SpellBad        { fg = Error.fg.de(30), gui = "undercurl", guisp = Error.fg }, -- Word that is not recognized by the spellchecker. |spell| Combined with the highlighting used otherwise.
-			SpellCap        { SpellBad, guisp = Error.fg.li(10) }, -- Word that should start with a capital. |spell| Combined with the highlighting used otherwise.
+			SpellBad        { fg = Error.fg.de(30), gui = "undercurl", sp = Error.fg }, -- Word that is not recognized by the spellchecker. |spell| Combined with the highlighting used otherwise.
+			SpellCap        { SpellBad, sp = Error.fg.li(10) }, -- Word that should start with a capital. |spell| Combined with the highlighting used otherwise.
 			SpellLocal      { SpellCap }, -- Word that is recognized by the spellchecker as one that is used in another region. |spell| Combined with the highlighting used otherwise.
-			SpellRare       { SpellBad, guisp = p.wood }, -- Word that is recognized by the spellchecker as one that is hardly ever used.  |spell| Combined with the highlighting used otherwise.
+			SpellRare       { SpellBad, sp = p.wood }, -- Word that is recognized by the spellchecker as one that is hardly ever used.  |spell| Combined with the highlighting used otherwise.
 
 			StatusLine      { bg = p1.bg.da(14), fg = p.fg }, -- status line of current window
 			StatusLineNC    { bg = p1.bg.da(10), fg = p.fg.li(28) }, -- status lines of not-current windows Note: if this is equal to "StatusLine" Vim will use "^^^" in the status line of the current window.
@@ -184,10 +184,10 @@ local function generate(p, opt)
 			DiagnosticVirtualTextError { DiagnosticError, bg = DiagnosticError.fg.saturation(42).lightness(p1.bg.l - 4) },
 			DiagnosticVirtualTextWarn  { DiagnosticWarn, bg = DiagnosticWarn.fg.saturation(42).lightness(p1.bg.l - 4)},
 
-			DiagnosticUnderlineError   { DiagnosticError, gui = "undercurl" },
-			DiagnosticUnderlineWarn    { DiagnosticWarn, gui = "undercurl" },
-			DiagnosticUnderlineInfo    { DiagnosticInfo, gui = "undercurl" },
-			DiagnosticUnderlineHint    { DiagnosticHint, gui = "undercurl" },
+			DiagnosticUnderlineError   { gui = "undercurl", sp = DiagnosticError.fg },
+			DiagnosticUnderlineWarn    { gui = "undercurl", sp = DiagnosticWarn.fg },
+			DiagnosticUnderlineInfo    { gui = "undercurl", sp = DiagnosticInfo.fg },
+			DiagnosticUnderlineHint    { gui = "undercurl", sp = DiagnosticHint.fg },
 
 			-- These groups are for the neovim tree-sitter highlights.
 			-- As of writing, tree-sitter support is a WIP, group names may change.
