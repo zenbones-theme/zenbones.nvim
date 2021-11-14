@@ -184,10 +184,10 @@ local function generate(p, opt)
 			DiagnosticVirtualTextError { DiagnosticError, bg = DiagnosticError.fg.saturation(42).lightness(p1.bg.l - 4) },
 			DiagnosticVirtualTextWarn  { DiagnosticWarn, bg = DiagnosticWarn.fg.saturation(42).lightness(p1.bg.l - 4)},
 
-			DiagnosticUnderlineError   { gui = "undercurl", sp = DiagnosticError.fg },
-			DiagnosticUnderlineWarn    { gui = "undercurl", sp = DiagnosticWarn.fg },
-			DiagnosticUnderlineInfo    { gui = "undercurl", sp = DiagnosticInfo.fg },
-			DiagnosticUnderlineHint    { gui = "undercurl", sp = DiagnosticHint.fg },
+			DiagnosticUnderlineError   { fg = opt.colorize_diagnostic_underline_text and DiagnosticError.fg or "NONE", gui = "undercurl", sp = DiagnosticError.fg },
+			DiagnosticUnderlineWarn    { fg = opt.colorize_diagnostic_underline_text and DiagnosticWarn.fg or "NONE", gui = "undercurl", sp = DiagnosticWarn.fg },
+			DiagnosticUnderlineInfo    { fg = opt.colorize_diagnostic_underline_text and DiagnosticInfo.fg or "NONE", gui = "undercurl", sp = DiagnosticInfo.fg },
+			DiagnosticUnderlineHint    { fg = opt.colorize_diagnostic_underline_text and DiagnosticHint.fg or "NONE", gui = "undercurl", sp = DiagnosticHint.fg },
 
 			-- These groups are for the neovim tree-sitter highlights.
 			-- As of writing, tree-sitter support is a WIP, group names may change.
