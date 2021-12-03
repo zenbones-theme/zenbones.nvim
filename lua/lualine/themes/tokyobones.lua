@@ -1,1 +1,1 @@
-return require("zenbones.util").get_lualine_theme("tokyobones")
+return require("zenbones.util").get_lualine_theme "tokyobones"
