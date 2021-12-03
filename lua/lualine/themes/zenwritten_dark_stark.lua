@@ -5,9 +5,9 @@ local inactive_fg = "#CFCFCF"
 
 return {
 	normal = {
-		a = { bg = "#6F5F62", fg = common_fg, gui = "bold" },
-		b = { bg = "#483D3F", fg = common_fg },
-		c = { bg = "#302829", fg = "#BBBBBB" },
+		a = { bg = "#574A4D", fg = common_fg, gui = "bold" },
+		b = { bg = "#413738", fg = common_fg },
+		c = { bg = "#292223", fg = "#BBBBBB" },
 	},
 
 	insert = {
