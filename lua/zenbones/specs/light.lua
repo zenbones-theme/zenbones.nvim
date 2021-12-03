@@ -75,7 +75,7 @@ local function generate(p, opt)
 			-- MsgArea      { }, -- Area for messages and cmdline
 			-- MsgSeparator { }, -- Separator for scrolled messages, `msgsep` flag of 'display'
 			MoreMsg         { fg = p.leaf, gui = "bold" }, -- |more-prompt|
-			NormalFloat     { bg = p1.bg.da(6) }, -- Normal text in floating windows.
+			NormalFloat     { bg = p1.bg.da(8) }, -- Normal text in floating windows.
 			FloatBorder     { fg = p1.bg.da(50), bg = opt.solid_float_border and NormalFloat.bg or "NONE" }, -- Normal text in floating windows.
 
 			Pmenu           { bg = p1.bg.da(10) }, -- Popup menu: normal item.
@@ -94,8 +94,8 @@ local function generate(p, opt)
 			SpellLocal      { SpellCap }, -- Word that is recognized by the spellchecker as one that is used in another region. |spell| Combined with the highlighting used otherwise.
 			SpellRare       { SpellBad, sp = p.wood }, -- Word that is recognized by the spellchecker as one that is hardly ever used.  |spell| Combined with the highlighting used otherwise.
 
-			StatusLine      { bg = p1.bg.da(14), fg = p.fg }, -- status line of current window
-			StatusLineNC    { bg = p1.bg.da(10), fg = p.fg.li(28) }, -- status lines of not-current windows Note: if this is equal to "StatusLine" Vim will use "^^^" in the status line of the current window.
+			StatusLine      { bg = p1.bg.da(12), fg = p.fg }, -- status line of current window
+			StatusLineNC    { bg = p1.bg.da(6), fg = p.fg.li(28) }, -- status lines of not-current windows Note: if this is equal to "StatusLine" Vim will use "^^^" in the status line of the current window.
 			TabLine         { StatusLine }, -- tab pages line, not active tab page label
 			TabLineFill     { StatusLineNC }, -- tab pages line, where there are no labels
 			TabLineSel      { gui = "bold" }, -- tab pages line, active tab page label

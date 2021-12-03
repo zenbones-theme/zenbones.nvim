@@ -80,7 +80,7 @@ local function generate(p, opt)
 
 			Pmenu           { bg = p1.bg.li(10) }, -- Popup menu: normal item.
 			PmenuSel        { bg = p1.bg.li(22) }, -- Popup menu: selected item.
-			PmenuSbar       { bg = p1.bg.li(38) }, -- Popup menu: scrollbar.
+			PmenuSbar       { bg = p1.bg.li(32) }, -- Popup menu: scrollbar.
 			PmenuThumb      { bg = p1.bg.li(50) }, -- Popup menu: Thumb of the scrollbar.
 
 			Search          { bg = p.blossom.lightness(p1.bg.l + 24), fg = p.fg }, -- Last search pattern highlighting (see 'hlsearch').	Also used for similar items that need to stand out.
