@@ -11,9 +11,8 @@ Table of Contents                                 *zenbones-table-of-contents*
 ==============================================================================
 1. Documentation                                      *zenbones-documentation*
 
-Zenbones is a collection of Vim/Neovim colorschemes designed to highlight code
-using contrasts and font variations. Colors are tasked only for other roles
-such as diagnostics, diffs, search matches.
+A collection of Vim/Neovim colorschemes designed to highlight code using
+contrasts and font variations.
 
 USAGE                                                         *zenbones-usage*
 
