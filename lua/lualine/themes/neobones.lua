@@ -1,1 +1,1 @@
-return require("zenbones.util").get_lualine_theme("neobones")
+return require("zenbones.util").get_lualine_theme "neobones"
