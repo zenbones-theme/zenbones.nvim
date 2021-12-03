@@ -4,7 +4,8 @@ end
 
 vim.g.colors_name = "randombones"
 
-local colorschemes = vim.fn.json_decode(vim.fn.readfile(vim.fn.expand "<sfile>:h:h" .. "/colorschemes.json"))
+local util = require "zenbones.util"
+local colorschemes = util.get_colorscheme_list()
 
 math.randomseed(os.time())
 local index = math.random(#colorschemes)
@@ -16,4 +17,4 @@ if colorscheme.background then
 	vim.opt.background = colorscheme.background
 end
 
-require("zenbones.util").apply_colorscheme()
+util.apply_colorscheme()

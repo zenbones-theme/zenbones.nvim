@@ -65,22 +65,22 @@ local function generate(p, opt)
 			DiffDelete      { bg = p.rose.saturation(30).lightness(p1.bg.l + 8) }, -- diff mode: Deleted line |diff.txt|
 			DiffText        { bg = p.water.saturation(50).lightness(p1.bg.l + 20), fg = p.fg }, -- diff mode: Changed text within a changed line |diff.txt|
 
-			LineNr          { fg = p1.bg.li(opt.lighten_line_nr or 35), bg = opt.solid_line_nr and p1.bg.li(6) or "NONE" }, -- Line number for ":number" and ":#" commands, and when 'number' or 'relativenumber' option is set.
+			LineNr          { fg = p1.bg.li(opt.lighten_line_nr or 35), bg = opt.solid_line_nr and p1.bg.li(4) or "NONE" }, -- Line number for ":number" and ":#" commands, and when 'number' or 'relativenumber' option is set.
 			SignColumn      { LineNr }, -- column where |signs| are displayed
 			FoldColumn      { LineNr, gui = "bold" }, -- 'foldcolumn'
-			Folded          { bg = p1.bg.li(16), fg = p1.bg.li(64) }, -- line used for closed folds
+			Folded          { bg = p1.bg.li(14), fg = p1.bg.li(64) }, -- line used for closed folds
 			CursorLineNr    { LineNr, fg = p.fg, gui = "bold" }, -- Like LineNr when 'cursorline' or 'relativenumber' is set for the cursor line.
 
 			-- ModeMsg      { }, -- 'showmode' message (e.g., "-- INSERT -- ")
 			-- MsgArea      { }, -- Area for messages and cmdline
 			-- MsgSeparator { }, -- Separator for scrolled messages, `msgsep` flag of 'display'
 			MoreMsg         { fg = p.leaf, gui = "bold" }, -- |more-prompt|
-			NormalFloat     { bg = p1.bg.li(8) }, -- Normal text in floating windows.
+			NormalFloat     { bg = p1.bg.li(10) }, -- Normal text in floating windows.
 			FloatBorder     { fg = p1.bg.li(46), bg = opt.solid_float_border and NormalFloat.bg or "NONE" }, -- Normal text in floating windows.
 
-			Pmenu           { bg = p1.bg.li(12) }, -- Popup menu: normal item.
-			PmenuSel        { bg = p1.bg.li(24) }, -- Popup menu: selected item.
-			PmenuSbar       { bg = p1.bg.li(40) }, -- Popup menu: scrollbar.
+			Pmenu           { bg = p1.bg.li(10) }, -- Popup menu: normal item.
+			PmenuSel        { bg = p1.bg.li(22) }, -- Popup menu: selected item.
+			PmenuSbar       { bg = p1.bg.li(32) }, -- Popup menu: scrollbar.
 			PmenuThumb      { bg = p1.bg.li(50) }, -- Popup menu: Thumb of the scrollbar.
 
 			Search          { bg = p.blossom.lightness(p1.bg.l + 24), fg = p.fg }, -- Last search pattern highlighting (see 'hlsearch').	Also used for similar items that need to stand out.
@@ -94,8 +94,8 @@ local function generate(p, opt)
 			SpellLocal      { SpellCap }, -- Word that is recognized by the spellchecker as one that is used in another region. |spell| Combined with the highlighting used otherwise.
 			SpellRare       { SpellBad, guisp = p.wood }, -- Word that is recognized by the spellchecker as one that is hardly ever used.  |spell| Combined with the highlighting used otherwise.
 
-			StatusLine      { bg = p1.bg.li(16), fg = p.fg }, -- status line of current window
-			StatusLineNC    { bg = p1.bg.li(11), fg = p.fg.li(28) }, -- status lines of not-current windows Note: if this is equal to "StatusLine" Vim will use "^^^" in the status line of the current window.
+			StatusLine      { bg = p1.bg.li(12), fg = p.fg }, -- status line of current window
+			StatusLineNC    { bg = p1.bg.li(6), fg = p.fg.li(28) }, -- status lines of not-current windows Note: if this is equal to "StatusLine" Vim will use "^^^" in the status line of the current window.
 			TabLine         { StatusLine }, -- tab pages line, not active tab page label
 			TabLineFill     { StatusLineNC }, -- tab pages line, where there are no labels
 			TabLineSel      { gui = "bold" }, -- tab pages line, active tab page label

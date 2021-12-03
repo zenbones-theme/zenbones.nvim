@@ -3,11 +3,46 @@ local M = {}
 --- Apply a zenbones colorscheme based on g:colors_name and &background.
 ---@return nil
 function M.apply_colorscheme()
-	local colors_name = vim.api.nvim_get_var "colors_name"
+	local colors_name = vim.g.colors_name
 	package.loaded[colors_name] = nil
 	require "lush"(require(colors_name), { force_clean = false })
 	local p = require(colors_name .. ".palette")[vim.opt.background:get()]
 	require("zenbones.term").apply_colors(p)
+end
+
+function M.get_colorscheme_list()
+	local json_decode = vim.fn.has "nvim-0.6.0" == 1 and vim.json.decode or vim.fn.json_decode
+	local file = io.open(vim.api.nvim_get_runtime_file("colorschemes.json", false)[1], "r")
+	local content = file:read "*a"
+	file:close()
+	return json_decode(content)
+end
+
+function M.get_colorscheme(name)
+	local colorschemes = M.get_colorscheme_list()
+	local colorscheme = nil
+	for _, c in ipairs(colorschemes) do
+		if c.name == name then
+			colorscheme = c
+		end
+	end
+	if colorscheme == nil then
+		error(string.format("Invalid name %s", name))
+	end
+	return colorscheme
+end
+
+function M.get_lualine_theme(name)
+	local colorscheme = M.get_colorscheme(name)
+	local ness_config = vim.g[name] and vim.g[name][string.format("%sness", colorscheme.background)]
+		or vim.g[string.format("%s_%sness", name, colorscheme.background)]
+	local ness = ness_config or "default"
+
+	if colorscheme.background then
+		return require(string.format("lualine.themes.%s_%s", name, ness))
+	else
+		return require(string.format("lualine.themes.%s_%s_%s", name, vim.opt.background:get(), ness))
+	end
 end
 
 --- Auto-fill a palette with the default palette.

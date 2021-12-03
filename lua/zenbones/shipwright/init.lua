@@ -1,22 +1,38 @@
 local M = {}
 
-local function make_env(colorscheme)
-	local specs = colorscheme.specs
-	vim.opt.background = colorscheme.background
-	package.loaded[specs] = nil
+local function make_specs(specs_name, ness)
+	local background = vim.opt.background:get()
+	package.loaded[specs_name] = nil
+	if ness == nil then
+		return require(specs_name)
+	end
+	vim.g[specs_name .. "_" .. background .. "ness"] = ness
+	local specs = require(specs_name)
+	vim.g[specs_name .. "_" .. background .. "ness"] = nil
+	return specs
+end
 
+local function make_env(colorscheme)
+	local specs_name = colorscheme.specs
 	local builder = require "shipwright.builder"
-	local p = require(specs .. ".palette")[colorscheme.background]
-	local env = builder.make_env {
+	local p = require(specs_name .. ".palette")[colorscheme.background]
+	local env = {
 		name = colorscheme.name,
-		specs_name = specs,
-		specs = require(specs),
+		specs_name = specs_name,
 		p = p,
 		background = colorscheme.background,
+		description = colorscheme.description,
 		term = require("zenbones.term").colors_map(p),
 		transform = require "zenbones.shipwright.transform",
 	}
-	return env
+
+	vim.opt.background = colorscheme.background
+	env.specs = make_specs(specs_name)
+	local ness = colorscheme.background == "light" and { "dim", "bright" } or { "stark", "warm" }
+	env["specs_" .. ness[1]] = make_specs(specs_name, ness[1])
+	env["specs_" .. ness[2]] = make_specs(specs_name, ness[2])
+
+	return builder.make_env(env)
 end
 
 local function make_build_fn(file)
@@ -32,6 +48,7 @@ local function make_runners(config)
 					name = config.name .. "_light",
 					specs = config.name,
 					background = "light",
+					description = config.description,
 				}
 			),
 			setfenv(
@@ -40,6 +57,7 @@ local function make_runners(config)
 					name = config.name .. "_dark",
 					specs = config.name,
 					background = "dark",
+					description = config.description,
 				}
 			),
 		}
@@ -52,6 +70,7 @@ local function make_runners(config)
 				name = config.name,
 				specs = config.name,
 				background = config.background,
+				description = config.description,
 			}
 		),
 	}

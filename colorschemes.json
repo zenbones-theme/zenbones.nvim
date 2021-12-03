@@ -1,26 +1,54 @@
 [
-    { "name": "zenbones" },
-    { "name": "neobones" },
-    { "name": "vimbones", "background": "light" },
+    {
+        "name": "zenbones",
+        "description": "A contrast-based colorscheme."
+    },
+    {
+        "name": "neobones",
+        "description": "A zenbones variant inspired by neovim.io."
+    },
+    {
+        "name": "vimbones",
+        "background": "light",
+        "description": "A zenbones variant inspired by vim.org."
+    },
     {
         "name": "forestbones",
-        "exclude": ["iterm", "alacritty", "kitty", "wezterm", "tmux"]
+        "exclude": ["iterm", "alacritty", "kitty", "wezterm", "tmux"],
+        "description": "A zenbones variant inspired by Everforest."
     },
     {
         "name": "nordbones",
         "background": "dark",
-        "exclude": ["iterm", "alacritty", "kitty", "wezterm", "tmux"]
+        "exclude": ["iterm", "alacritty", "kitty", "wezterm", "tmux"],
+        "description": "A zenbones variant inspired by Nord."
     },
     {
         "name": "rosebones",
-        "exclude": ["iterm", "alacritty", "kitty", "wezterm", "tmux"]
+        "exclude": ["iterm", "alacritty", "kitty", "wezterm", "tmux"],
+        "description": "A zenbones variant inspired by Rosé Pine."
     },
     {
         "name": "tokyobones",
-        "exclude": ["iterm", "alacritty", "kitty", "wezterm", "tmux"]
+        "exclude": ["iterm", "alacritty", "kitty", "wezterm", "tmux"],
+        "description": "A zenbones variant inspired by Tokyo Night."
     },
-    { "name": "seoulbones" },
-    { "name": "duckbones", "background": "dark" },
-    { "name": "zenburned", "background": "dark" },
-    { "name": "zenwritten" }
+    {
+        "name": "seoulbones",
+        "description": "A zenbones variant inspired by Seoul256."
+    },
+    {
+        "name": "duckbones",
+        "background": "dark",
+        "description": "A zenbones variant inspired by Spaceduck."
+    },
+    {
+        "name": "zenburned",
+        "background": "dark",
+        "description": "A zenbones variant inspired by Zenburn."
+    },
+    {
+        "name": "zenwritten",
+        "description": "A zenbones variant with zero hue and saturation."
+    }
 ]

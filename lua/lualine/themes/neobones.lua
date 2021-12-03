@@ -1,1 +1,1 @@
-return require("lualine.themes.neobones_" .. vim.opt.background:get())
+return require("zenbones.util").get_lualine_theme("neobones")
