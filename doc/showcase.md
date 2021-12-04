@@ -1,5 +1,8 @@
 # Showcase
 
+See also the
+[vimcolorschemes page](https://vimcolorschemes.com/mcchrish/zenbones.nvim).
+
 ## Neobones
 
 <img width="1128" alt="Screen Shot 2021-10-31 at 8 49 26 AM" src="https://user-images.githubusercontent.com/7200153/139562404-70bc126e-e078-4190-a25e-41a17fa1fbaf.png">
