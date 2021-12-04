@@ -78,7 +78,7 @@ end
 
 M.run = function()
 	local runner_files = { "vim", "iterm", "alacritty", "kitty", "wezterm", "tmux", "lualine", "lightline" }
-	local colorschemes = vim.fn.json_decode(vim.fn.readfile "colorschemes.json")
+	local colorschemes = vim.fn.json_decode(vim.fn.readfile "zenbones.json")
 	for _, colorscheme in ipairs(colorschemes) do
 		for _, file in ipairs(runner_files) do
 			if not vim.tbl_contains(colorscheme.exclude or {}, file) then
