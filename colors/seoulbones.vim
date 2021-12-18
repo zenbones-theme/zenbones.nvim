@@ -32,6 +32,7 @@ if &background ==# 'dark'
     let g:terminal_color_15 = '#A8A8A8'
     highlight Bold guifg=NONE guibg=NONE guisp=NONE gui=bold cterm=bold
     highlight! link LightspeedUnlabeledMatch Bold
+    highlight! link markdownTSStrong Bold
     highlight BufferVisible guifg=#E5E5E5 guibg=NONE guisp=NONE gui=NONE cterm=NONE
     highlight BufferVisibleIndex guifg=#E5E5E5 guibg=NONE guisp=NONE gui=NONE cterm=NONE
     highlight BufferVisibleSign guifg=#E5E5E5 guibg=NONE guisp=NONE gui=NONE cterm=NONE
@@ -63,6 +64,7 @@ if &background ==# 'dark'
     highlight CursorLineNr guifg=#DDDDDD guibg=NONE guisp=NONE gui=bold cterm=bold
     highlight Delimiter guifg=#9B9B9B guibg=NONE guisp=NONE gui=NONE cterm=NONE
     highlight! link markdownLinkTextDelimiter Delimiter
+    highlight! link markdownTSLiteral Delimiter
     highlight! link NeogitNotificationError DiagnosticError
     highlight DiagnosticHint guifg=#A5A6C5 guibg=NONE guisp=NONE gui=NONE cterm=NONE
     highlight DiagnosticInfo guifg=#97BDDE guibg=NONE guisp=NONE gui=NONE cterm=NONE
@@ -121,6 +123,7 @@ if &background ==# 'dark'
     highlight IncSearch guifg=#4B4B4B guibg=#DCDCE8 guisp=NONE gui=bold cterm=bold
     highlight IndentBlanklineChar guifg=#636363 guibg=NONE guisp=NONE gui=NONE cterm=NONE
     highlight Italic guifg=NONE guibg=NONE guisp=NONE gui=italic cterm=italic
+    highlight! link markdownTSEmphasis Italic
     highlight Keyword guifg=#DC8CA3 guibg=NONE guisp=NONE gui=bold cterm=bold
     highlight! link Exception Keyword
     highlight LightspeedGreyWash guifg=#8B8B8B guibg=NONE guisp=NONE gui=NONE cterm=NONE
@@ -148,6 +151,7 @@ if &background ==# 'dark'
     highlight NonText guifg=#7C7C7C guibg=NONE guisp=NONE gui=NONE cterm=NONE
     highlight! link EndOfBuffer NonText
     highlight! link Whitespace NonText
+    highlight! link markdownTSURI NonText
     highlight Normal guifg=#DDDDDD guibg=#4B4B4B guisp=NONE gui=NONE cterm=NONE
     highlight NormalFloat guifg=NONE guibg=#5C5C5C guisp=NONE gui=NONE cterm=NONE
     highlight Number guifg=#F7E0B3 guibg=NONE guisp=NONE gui=italic cterm=italic
@@ -181,8 +185,10 @@ if &background ==# 'dark'
     highlight! link markdownH4 Special
     highlight! link markdownH5 Special
     highlight! link markdownH6 Special
+    highlight! link markdownTSPunctSpecial Special
     highlight SpecialComment guifg=#8B8B8B guibg=NONE guisp=NONE gui=NONE cterm=NONE
     highlight SpecialKey guifg=#7C7C7C guibg=NONE guisp=NONE gui=italic cterm=italic
+    highlight! link markdownTSStringEscape SpecialKey
     highlight SpellBad guifg=#D291A3 guibg=NONE guisp=NONE gui=undercurl cterm=undercurl
     highlight! link CocSelectedText SpellBad
     highlight SpellCap guifg=#D291A3 guibg=NONE guisp=NONE gui=undercurl cterm=undercurl
@@ -192,6 +198,7 @@ if &background ==# 'dark'
     highlight! link WhichKey Statement
     highlight! link markdownH2 Statement
     highlight! link markdownH3 Statement
+    highlight! link markdownTSTitle Statement
     highlight StatusLine guifg=#DDDDDD guibg=#5E5E5E guisp=NONE gui=NONE cterm=NONE
     highlight! link TabLine StatusLine
     highlight StatusLineNC guifg=#E5E5E5 guibg=#555555 guisp=NONE gui=NONE cterm=NONE
@@ -230,6 +237,7 @@ if &background ==# 'dark'
     highlight lCursor guifg=#4B4B4B guibg=#8E8E8E guisp=NONE gui=NONE cterm=NONE
     highlight! link TermCursorNC lCursor
     highlight markdownH1 guifg=#DDDDDD guibg=NONE guisp=NONE gui=bold,underline cterm=bold,underline
+    highlight markdownTSTextReference guifg=#ABABAB guibg=NONE guisp=NONE gui=underline cterm=underline
     " dark end
 
     if !s:italics
@@ -250,6 +258,8 @@ if &background ==# 'dark'
         highlight diffOldFile gui=NONE cterm=NONE
         highlight helpHyperTextJump gui=NONE cterm=NONE
         highlight helpOption gui=NONE cterm=NONE
+        highlight markdownTSEmphasis gui=NONE cterm=NONE
+        highlight markdownTSStringEscape gui=NONE cterm=NONE
         " no italics dark end
     endif
 else
@@ -273,6 +283,7 @@ else
     let g:terminal_color_15 = '#777777'
     highlight Bold guifg=NONE guibg=NONE guisp=NONE gui=bold cterm=bold
     highlight! link LightspeedUnlabeledMatch Bold
+    highlight! link markdownTSStrong Bold
     highlight BufferVisible guifg=#818181 guibg=NONE guisp=NONE gui=NONE cterm=NONE
     highlight BufferVisibleIndex guifg=#818181 guibg=NONE guisp=NONE gui=NONE cterm=NONE
     highlight BufferVisibleSign guifg=#818181 guibg=NONE guisp=NONE gui=NONE cterm=NONE
@@ -304,6 +315,7 @@ else
     highlight CursorLineNr guifg=#555555 guibg=NONE guisp=NONE gui=bold cterm=bold
     highlight Delimiter guifg=#7C7C7C guibg=NONE guisp=NONE gui=NONE cterm=NONE
     highlight! link markdownLinkTextDelimiter Delimiter
+    highlight! link markdownTSLiteral Delimiter
     highlight! link NeogitNotificationError DiagnosticError
     highlight DiagnosticHint guifg=#896788 guibg=NONE guisp=NONE gui=NONE cterm=NONE
     highlight DiagnosticInfo guifg=#0084A3 guibg=NONE guisp=NONE gui=NONE cterm=NONE
@@ -362,6 +374,7 @@ else
     highlight IncSearch guifg=#E2E2E2 guibg=#9E779D guisp=NONE gui=bold cterm=bold
     highlight IndentBlanklineChar guifg=#C4C4C4 guibg=NONE guisp=NONE gui=NONE cterm=NONE
     highlight Italic guifg=NONE guibg=NONE guisp=NONE gui=italic cterm=italic
+    highlight! link markdownTSEmphasis Italic
     highlight Keyword guifg=#CA6284 guibg=NONE guisp=NONE gui=bold cterm=bold
     highlight! link Exception Keyword
     highlight LightspeedGreyWash guifg=#868686 guibg=NONE guisp=NONE gui=NONE cterm=NONE
@@ -389,6 +402,7 @@ else
     highlight NonText guifg=#A6A6A6 guibg=NONE guisp=NONE gui=NONE cterm=NONE
     highlight! link EndOfBuffer NonText
     highlight! link Whitespace NonText
+    highlight! link markdownTSURI NonText
     highlight Normal guifg=#555555 guibg=#E2E2E2 guisp=NONE gui=NONE cterm=NONE
     highlight NormalFloat guifg=NONE guibg=#CFCFCF guisp=NONE gui=NONE cterm=NONE
     highlight Number guifg=#896500 guibg=NONE guisp=NONE gui=italic cterm=italic
@@ -422,8 +436,10 @@ else
     highlight! link markdownH4 Special
     highlight! link markdownH5 Special
     highlight! link markdownH6 Special
+    highlight! link markdownTSPunctSpecial Special
     highlight SpecialComment guifg=#868686 guibg=NONE guisp=NONE gui=NONE cterm=NONE
     highlight SpecialKey guifg=#A6A6A6 guibg=NONE guisp=NONE gui=italic cterm=italic
+    highlight! link markdownTSStringEscape SpecialKey
     highlight SpellBad guifg=#C66484 guibg=NONE guisp=#DC5284 gui=undercurl cterm=undercurl
     highlight! link CocSelectedText SpellBad
     highlight SpellCap guifg=#C66484 guibg=NONE guisp=#DF6B91 gui=undercurl cterm=undercurl
@@ -433,6 +449,7 @@ else
     highlight! link WhichKey Statement
     highlight! link markdownH2 Statement
     highlight! link markdownH3 Statement
+    highlight! link markdownTSTitle Statement
     highlight StatusLine guifg=#555555 guibg=#C4C4C4 guisp=NONE gui=NONE cterm=NONE
     highlight! link TabLine StatusLine
     highlight StatusLineNC guifg=#818181 guibg=#D4D4D4 guisp=NONE gui=NONE cterm=NONE
@@ -471,6 +488,7 @@ else
     highlight lCursor guifg=#E2E2E2 guibg=#747474 guisp=NONE gui=NONE cterm=NONE
     highlight! link TermCursorNC lCursor
     highlight markdownH1 guifg=#555555 guibg=NONE guisp=NONE gui=bold,underline cterm=bold,underline
+    highlight markdownTSTextReference guifg=#777777 guibg=NONE guisp=NONE gui=underline cterm=underline
     " light end
 
     if !s:italics
@@ -491,6 +509,8 @@ else
         highlight diffOldFile gui=NONE cterm=NONE
         highlight helpHyperTextJump gui=NONE cterm=NONE
         highlight helpOption gui=NONE cterm=NONE
+        highlight markdownTSEmphasis gui=NONE cterm=NONE
+        highlight markdownTSStringEscape gui=NONE cterm=NONE
         " no italics light end
     endif
 endif
