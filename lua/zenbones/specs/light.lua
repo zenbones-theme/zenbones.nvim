@@ -253,6 +253,16 @@ local function generate(p, opt)
 			TSWarning               { WarningMsg },
 			TSDanger                { Error },
 
+			-- TS: Markdown
+			markdownTSPunctSpecial  { Special };	-- For special punctutation that does not fall in the catagories before.
+			markdownTSStringEscape  { SpecialKey };	-- For escape characters within a string.
+			markdownTSTextReference { Special, gui = "underline" };	-- Footnotes, text references, citations, etc.
+			markdownTSEmphasis      { Italic };	-- For text to be represented with emphasis.
+			markdownTSStrong        { Bold };	-- Text to be represented in bold.
+			markdownTSTitle         { Statement };	-- Text that is part of a title.
+			markdownTSLiteral       { Delimiter };	-- Literal text.
+			markdownTSURI           { NonText };	-- Any URI like a link or email.
+
 			-- Syntax
 			diffAdded                 { fg = p.leaf },
 			diffRemoved               { fg = p.rose },
