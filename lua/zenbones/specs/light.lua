@@ -112,7 +112,7 @@ local function generate(p, opt)
 			WildMenu        { bg = p.blossom, fg = p1.bg }, -- current match in 'wildmenu' completion
 			Directory       { gui = "bold" }, -- directory names (and other special names in listings)
 			Question        { MoreMsg }, -- |hit-enter| prompt and yes/no questions
-			Title           { gui = "bold" }, -- titles for output from ":set all", ":autocmd" etc.
+			Title           { fg = p.fg, gui = "bold" }, -- titles for output from ":set all", ":autocmd" etc.
 
 
 			-- These groups are not listed as default vim groups,
@@ -242,8 +242,9 @@ local function generate(p, opt)
 			TSTag                   { Special }, -- Tags like html tag names.
 			-- TSTagDelimiter       { };	-- Tag delimiter like `<` `>` `/`
 			-- TSText               { };	-- For strings considered text in a markup language.
-			-- TSEmphasis           { };	-- For text to be represented with emphasis.
-			-- TSUnderline          { };	-- For text to be represented with an underline.
+			TSEmphasis              { Italic },	-- For text to be represented with emphasis.
+			TSUnderline             { Underlined },	-- For text to be represented with an underline.
+			TSStrong                { Bold },	-- Text to be represented in bold.
 			-- TSStrike             { };	-- For strikethrough text.
 			-- TSTitle              { };	-- Text that is part of a title.
 			-- TSLiteral            { };	-- Literal text.
@@ -254,14 +255,13 @@ local function generate(p, opt)
 			TSDanger                { Error },
 
 			-- TS: Markdown
-			markdownTSPunctSpecial  { Special };	-- For special punctutation that does not fall in the catagories before.
-			markdownTSStringEscape  { SpecialKey };	-- For escape characters within a string.
-			markdownTSTextReference { Special, gui = "underline" };	-- Footnotes, text references, citations, etc.
-			markdownTSEmphasis      { Italic };	-- For text to be represented with emphasis.
-			markdownTSStrong        { Bold };	-- Text to be represented in bold.
-			markdownTSTitle         { Statement };	-- Text that is part of a title.
-			markdownTSLiteral       { Delimiter };	-- Literal text.
-			markdownTSURI           { NonText };	-- Any URI like a link or email.
+			markdownTSPunctSpecial  { Special },
+			markdownTSStringEscape  { SpecialKey },
+			markdownTSTextReference { Identifier, gui = "underline" },
+			markdownTSEmphasis      { Italic },
+			markdownTSTitle         { Statement },
+			markdownTSLiteral       { Type },
+			markdownTSURI           { SpecialComment },
 
 			-- Syntax
 			diffAdded                 { fg = p.leaf },
@@ -275,13 +275,9 @@ local function generate(p, opt)
 
 			gitcommitOverflow         { WarningMsg },
 
-			markdownH1                { Statement, gui = "bold,underline" },
-			markdownH2                { Statement },
-			markdownH3                { Statement },
-			markdownH4                { Special },
-			markdownH5                { Special },
-			markdownH6                { Special },
-			markdownCode              { Identifier },
+			markdownUrl               { markdownTSURI },
+			markdownCode              { markdownTSLiteral },
+			markdownLinkText          { markdownTSTextReference },
 			markdownLinkTextDelimiter { Delimiter },
 
 			helpHyperTextEntry        { Special },
