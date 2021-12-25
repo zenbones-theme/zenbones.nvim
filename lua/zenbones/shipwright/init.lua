@@ -77,7 +77,7 @@ local function make_runners(config)
 end
 
 M.run = function()
-	local runner_files = { "vim", "iterm", "alacritty", "kitty", "wezterm", "tmux", "windowsTerminal", "lualine", "lightline" }
+	local runner_files = { "vim", "iterm", "alacritty", "kitty", "wezterm", "tmux", "windows_terminal", "lualine", "lightline" }
 	local colorschemes = vim.fn.json_decode(vim.fn.readfile "zenbones.json")
 	for _, colorscheme in ipairs(colorschemes) do
 		for _, file in ipairs(runner_files) do

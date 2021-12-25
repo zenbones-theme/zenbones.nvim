@@ -14,23 +14,51 @@
     },
     {
         "name": "forestbones",
-        "exclude": ["iterm", "alacritty", "kitty", "wezterm", "tmux", "windowsTerminal"],
+        "exclude": [
+            "iterm",
+            "alacritty",
+            "kitty",
+            "wezterm",
+            "tmux",
+            "windows_terminal"
+        ],
         "description": "A zenbones variant inspired by Everforest."
     },
     {
         "name": "nordbones",
         "background": "dark",
-        "exclude": ["iterm", "alacritty", "kitty", "wezterm", "tmux", "windowsTerminal"],
+        "exclude": [
+            "iterm",
+            "alacritty",
+            "kitty",
+            "wezterm",
+            "tmux",
+            "windows_terminal"
+        ],
         "description": "A zenbones variant inspired by Nord."
     },
     {
         "name": "rosebones",
-        "exclude": ["iterm", "alacritty", "kitty", "wezterm", "tmux", "windowsTerminal"],
+        "exclude": [
+            "iterm",
+            "alacritty",
+            "kitty",
+            "wezterm",
+            "tmux",
+            "windows_terminal"
+        ],
         "description": "A zenbones variant inspired by Rosé Pine."
     },
     {
         "name": "tokyobones",
-        "exclude": ["iterm", "alacritty", "kitty", "wezterm", "tmux", "windowsTerminal"],
+        "exclude": [
+            "iterm",
+            "alacritty",
+            "kitty",
+            "wezterm",
+            "tmux",
+            "windows_terminal"
+        ],
         "description": "A zenbones variant inspired by Tokyo Night."
     },
     {
