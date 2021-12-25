@@ -50,5 +50,10 @@
     {
         "name": "zenwritten",
         "description": "A zenbones variant with zero hue and saturation."
+    },
+    {
+        "name": "kanagawabones",
+        "background": "dark",
+        "description": "A zenbones variant inspired by Kanagawa."
     }
 ]

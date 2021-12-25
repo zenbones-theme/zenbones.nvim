@@ -35,6 +35,7 @@ Just apply the colorscheme as usual:
     colorscheme seoulbones
     colorscheme duckbones
     colorscheme zenburned
+    colorscheme kanagawabones
     colorscheme randombones
 <
 

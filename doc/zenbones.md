@@ -24,6 +24,7 @@ colorscheme tokyobones
 colorscheme seoulbones
 colorscheme duckbones
 colorscheme zenburned
+colorscheme kanagawabones
 colorscheme randombones
 ```
 

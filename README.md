@@ -48,19 +48,20 @@ colorscheme zenbones
 
 Or choose from the collection:
 
-| colorscheme   | description                                                                                |
-| ------------- | ------------------------------------------------------------------------------------------ |
-| `zenwritten`  | Zero hue and saturation version                                                            |
-| `neobones`    | Inspired by [neovim.io](https://neovim.io)                                                 |
-| `vimbones`    | Inspired by [vim.org](https://www.vim.org)                                                 |
-| `rosebones`   | Inspired by [Rosé Pine](https://rosepinetheme.com)                                         |
-| `forestbones` | Inspired by [Everforest](https://github.com/sainnhe/everforest)                            |
-| `nordbones`   | Inspired by [Nord](https://www.nordtheme.com/docs/colors-and-palettes)                     |
-| `tokyobones`  | Inspired by [Tokyo Night](https://github.com/enkia/tokyo-night-vscode-theme#color-palette) |
-| `seoulbones`  | Inspired by [Seoul256](https://github.com/junegunn/seoul256.vim)                           |
-| `duckbones`   | Inspired by [Spaceduck](https://pineapplegiant.github.io/spaceduck)                        |
-| `zenburned`   | Inspired by [Zenburn](https://kippura.org/zenburnpage)                                     |
-| `randombones` | Randomly pick from the collection.                                                         |
+| colorscheme     | description                                                                                |
+| --------------- | ------------------------------------------------------------------------------------------ |
+| `zenwritten`    | Zero hue and saturation version                                                            |
+| `neobones`      | Inspired by [neovim.io](https://neovim.io)                                                 |
+| `vimbones`      | Inspired by [vim.org](https://www.vim.org)                                                 |
+| `rosebones`     | Inspired by [Rosé Pine](https://rosepinetheme.com)                                         |
+| `forestbones`   | Inspired by [Everforest](https://github.com/sainnhe/everforest)                            |
+| `nordbones`     | Inspired by [Nord](https://www.nordtheme.com/docs/colors-and-palettes)                     |
+| `tokyobones`    | Inspired by [Tokyo Night](https://github.com/enkia/tokyo-night-vscode-theme#color-palette) |
+| `seoulbones`    | Inspired by [Seoul256](https://github.com/junegunn/seoul256.vim)                           |
+| `duckbones`     | Inspired by [Spaceduck](https://pineapplegiant.github.io/spaceduck)                        |
+| `zenburned`     | Inspired by [Zenburn](https://kippura.org/zenburnpage)                                     |
+| `kanagawabones` | Inspired by [Kanagawa](https://github.com/rebelot/kanagawa.nvim)                           |
+| `randombones`   | Randomly pick from the collection.                                                         |
 
 ## [Configuration and other documentations](doc/zenbones.md)
 
