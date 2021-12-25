@@ -10,7 +10,7 @@ local template = [[{
 "brightRed": "$bright_red",
 "brightWhite": "$bright_white",
 "brightYellow": "$bright_yellow",
-"cursorColor": "$cursor_fg",
+"cursorColor": "$cursor_bg",
 "cyan": "$cyan",
 "foreground": "$fg",
 "green": "$green",
