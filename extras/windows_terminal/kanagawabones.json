@@ -1,0 +1,24 @@
+{
+    "name": "kanagawabones",
+    "foreground": "#DDD8BB",
+    "background": "#1F1F28",
+    "selectionBackground": "#49473E",
+    "cursorColor": "#E6E0C2",
+    "black": "#1F1F28",
+    "red": "#E46A78",
+    "green": "#98BC6D",
+    "yellow": "#E5C283",
+    "blue": "#7EB3C9",
+    "purple": "#957FB8",
+    "cyan": "#7EB3C9",
+    "white": "#DDD8BB",
+    "brightBlack": "#3C3C51",
+    "brightRed": "#EC818C",
+    "brightGreen": "#9EC967",
+    "brightYellow": "#F1C982",
+    "brightBlue": "#7BC2DF",
+    "brightPurple": "#A98FD2",
+    "brightCyan": "#7BC2DF",
+    "brightWhite": "#A8A48D"
+}
+

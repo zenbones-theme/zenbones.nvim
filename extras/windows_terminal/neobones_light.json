@@ -1,0 +1,24 @@
+{
+    "name": "neobones_light",
+    "foreground": "#202E18",
+    "background": "#E5EDE6",
+    "selectionBackground": "#ADE48C",
+    "cursorColor": "#202E18",
+    "black": "#E5EDE6",
+    "red": "#A8334C",
+    "green": "#567A30",
+    "yellow": "#944927",
+    "blue": "#286486",
+    "purple": "#88507D",
+    "cyan": "#3B8992",
+    "white": "#202E18",
+    "brightBlack": "#B3C6B6",
+    "brightRed": "#94253E",
+    "brightGreen": "#3F5A22",
+    "brightYellow": "#803D1C",
+    "brightBlue": "#1D5573",
+    "brightPurple": "#7B3B70",
+    "brightCyan": "#2B747C",
+    "brightWhite": "#415934"
+}
+

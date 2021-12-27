@@ -1,0 +1,24 @@
+{
+    "name": "zenwritten_dark",
+    "foreground": "#BBBBBB",
+    "background": "#191919",
+    "selectionBackground": "#404040",
+    "cursorColor": "#C9C9C9",
+    "black": "#191919",
+    "red": "#DE6E7C",
+    "green": "#819B69",
+    "yellow": "#B77E64",
+    "blue": "#6099C0",
+    "purple": "#B279A7",
+    "cyan": "#66A5AD",
+    "white": "#BBBBBB",
+    "brightBlack": "#3D3839",
+    "brightRed": "#E8838F",
+    "brightGreen": "#8BAE68",
+    "brightYellow": "#D68C67",
+    "brightBlue": "#61ABDA",
+    "brightPurple": "#CF86C1",
+    "brightCyan": "#65B8C1",
+    "brightWhite": "#8E8E8E"
+}
+
