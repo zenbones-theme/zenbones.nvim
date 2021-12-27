@@ -31,6 +31,9 @@ run(
 	{ specs, p, term },
 	transform.colorscheme_to_term_colors,
 	function(colors)
+		return vim.tbl_extend("keep", colors, { name = name })
+	end
+	function(colors)
 		local text = helpers.apply_template(template, colors)
 		return { text }
 	end,
