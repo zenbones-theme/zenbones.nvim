@@ -114,6 +114,7 @@ currently supported.
 -   [Kitty](extras/kitty)
 -   [Alacritty](extras/alacritty)
 -   [WezTerm](extras/wezterm)
+-   [Windows Terminal](extras/windows_terminal)
 -   [Tmux](extras/tmux)
 
 It's also possible to generate any color configuration files using shipwright,

@@ -20,24 +20,16 @@ local template = [[{
     "brightPurple": "$bright_magenta",
     "brightCyan": "$bright_cyan",
     "brightWhite": "$bright_white"
-}
-]]
+}]]
 
 local helpers = require "shipwright.transform.helpers"
 
 ---@diagnostic disable: undefined-global
 -- selene: allow(undefined_variable)
-run(
-	{ specs, p, term },
-	transform.colorscheme_to_term_colors,
-	function(colors)
-		return vim.tbl_extend("keep", colors, { name = name })
-	end,
-	function(colors)
-		local text = helpers.apply_template(template, colors)
-		return { text }
-	end,
-	{ overwrite, string.format("extras/windows_terminal/%s.json", name) }
-)
+run({ specs, p, term }, transform.colorscheme_to_term_colors, function(colors)
+	local values = vim.tbl_extend("keep", colors, { name = name })
+	local text = helpers.apply_template(template, values)
+	return { text }
+end, { overwrite, string.format("extras/windows_terminal/%s.json", name) })
 -- selene: deny(undefined_variable)
 ---@diagnostic enable: undefined-global
