@@ -20,7 +20,8 @@
             "kitty",
             "wezterm",
             "tmux",
-            "windows_terminal"
+            "windows_terminal",
+            "foot"
         ],
         "description": "A zenbones variant inspired by Everforest."
     },
@@ -33,7 +34,8 @@
             "kitty",
             "wezterm",
             "tmux",
-            "windows_terminal"
+            "windows_terminal",
+            "foot"
         ],
         "description": "A zenbones variant inspired by Nord."
     },
@@ -45,7 +47,8 @@
             "kitty",
             "wezterm",
             "tmux",
-            "windows_terminal"
+            "windows_terminal",
+            "foot"
         ],
         "description": "A zenbones variant inspired by Rosé Pine."
     },
@@ -57,7 +60,8 @@
             "kitty",
             "wezterm",
             "tmux",
-            "windows_terminal"
+            "windows_terminal",
+            "foot"
         ],
         "description": "A zenbones variant inspired by Tokyo Night."
     },

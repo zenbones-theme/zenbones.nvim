@@ -85,6 +85,7 @@ M.run = function()
 		"wezterm",
 		"tmux",
 		"windows_terminal",
+		"foot",
 		"lualine",
 		"lightline",
 	}
