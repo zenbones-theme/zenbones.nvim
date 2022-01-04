@@ -12,4 +12,4 @@ run(
 	{ overwrite, string.format("extras/windows_terminal/%s.json", name) }
 )
 -- selene: deny(undefined_variable)
----@diagnostic enable: undefined-global--@diagnostic enable: undefined-global
+---@diagnostic enable: undefined-global
