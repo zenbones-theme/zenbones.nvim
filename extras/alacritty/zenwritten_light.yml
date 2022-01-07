@@ -4,8 +4,8 @@ colors:
     foreground: '#353535'
     background: '#EEEEEE'
   cursor:
-    cursor: '#EEEEEE'
-    text: '#353535'
+    cursor: '#353535'
+    text: '#EEEEEE'
   normal:
     black:   '#EEEEEE'
     red:     '#A8334C'
