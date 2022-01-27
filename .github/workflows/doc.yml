@@ -26,7 +26,7 @@ jobs:
         run: git checkout -b ${VIMDOC_BRANCH}
 
       - name: panvimdoc
-        uses: kdheepak/panvimdoc@v2.7.1
+        uses: kdheepak/panvimdoc@v2.7.2
         with:
           # Output vimdoc project name
           vimdoc: zenbones
