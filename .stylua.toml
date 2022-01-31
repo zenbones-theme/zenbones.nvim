@@ -1,1 +1,1 @@
-no_call_parentheses = true
+call_parentheses = "None"
