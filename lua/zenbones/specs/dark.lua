@@ -341,6 +341,7 @@ local function generate(p, opt)
 			CocSelectedText                  { SpellBad },
 			CocCodeLens                      { LineNr },
 			CocMarkdownLink                  { fg = p.sky, gui = "underline" },
+			CocSearch                        { Search },
 
 			NeogitNotificationError          { DiagnosticError },
 			NeogitNotificationWarning        { DiagnosticWarn },

@@ -170,6 +170,7 @@ if &background ==# 'dark'
     highlight PmenuThumb guifg=NONE guibg=#8296A5 guisp=NONE gui=NONE cterm=NONE
     highlight PreProc guifg=#83C193 guibg=NONE guisp=NONE gui=NONE cterm=NONE
     highlight Search guifg=#E7DCC4 guibg=#9E5179 guisp=NONE gui=NONE cterm=NONE
+    highlight! link CocSearch Search
     highlight! link MatchParen Search
     highlight! link Sneak Search
     highlight! link LightspeedPendingOpArea SneakLabel
@@ -417,6 +418,7 @@ else
     highlight PmenuThumb guifg=NONE guibg=#FCF9F1 guisp=NONE gui=NONE cterm=NONE
     highlight PreProc guifg=#36A87E guibg=NONE guisp=NONE gui=NONE cterm=NONE
     highlight Search guifg=#4F5B62 guibg=#EEBADB guisp=NONE gui=NONE cterm=NONE
+    highlight! link CocSearch Search
     highlight! link MatchParen Search
     highlight! link Sneak Search
     highlight! link LightspeedPendingOpArea SneakLabel

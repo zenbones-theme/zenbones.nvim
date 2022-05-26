@@ -170,6 +170,7 @@ if &background ==# 'dark'
     highlight PmenuSel guifg=NONE guibg=#484759 guisp=NONE gui=NONE cterm=NONE
     highlight PmenuThumb guifg=NONE guibg=#858594 guisp=NONE gui=NONE cterm=NONE
     highlight Search guifg=#DDD8BB guibg=#614A82 guisp=NONE gui=NONE cterm=NONE
+    highlight! link CocSearch Search
     highlight! link MatchParen Search
     highlight! link Sneak Search
     highlight! link LightspeedPendingOpArea SneakLabel
