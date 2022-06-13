@@ -363,7 +363,7 @@ local function generate(p, opt)
 			TroubleSource                    { Constant },
 
 			NvimTreeNormal                   { Normal, bg = not opt.transparent_background and p1.bg.li(3) or "NONE" },
-			NvimTreeVertSplit                { fg = "bg" },
+			NvimTreeVertSplit                { fg = p.bg },
 			NvimTreeCursorLine               { bg = StatusLineNC.bg },
 			NvimTreeCursorColumn             { NvimTreeCursorLine	},
 			NvimTreeRootFolder               { fg = p.water, gui = "bold" },
@@ -382,7 +382,7 @@ local function generate(p, opt)
 
 			NnnNormal                        { NvimTreeNormal },
 			NnnNormalNC                      { NnnNormal },
-			NnnVertSplit                     { fg = "bg" },
+			NnnVertSplit                     { fg = p.bg },
 		}
 	end)
 	-- stylua: ignore end
