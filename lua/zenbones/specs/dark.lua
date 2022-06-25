@@ -101,6 +101,7 @@ local function generate(p, opt)
 			TabLineFill     { StatusLineNC }, -- tab pages line, where there are no labels
 			TabLineSel      { gui = "bold" }, -- tab pages line, active tab page label
 			VertSplit       { fg = LineNr.fg, bg = opt.solid_vert_split and StatusLineNC.bg or "NONE" }, -- the column separating vertically split windows
+			WinSeparator    { VertSplit },
 
 			Visual          { bg = p.fg.de(18).lightness(p1.bg.l + 18) }, -- Visual mode selection
 			-- VisualNOS    { }, -- Visual mode selection when vim is "Not Owning the Selection".
@@ -363,7 +364,7 @@ local function generate(p, opt)
 			TroubleSource                    { Constant },
 
 			NvimTreeNormal                   { Normal, bg = not opt.transparent_background and p1.bg.li(3) or "NONE" },
-			NvimTreeVertSplit                { fg = "bg" },
+			NvimTreeWinSeparator             (opt.transparent_background and { WinSeparator } or { fg = "bg" }),
 			NvimTreeCursorLine               { bg = StatusLineNC.bg },
 			NvimTreeCursorColumn             { NvimTreeCursorLine	},
 			NvimTreeRootFolder               { fg = p.water, gui = "bold" },
@@ -382,7 +383,8 @@ local function generate(p, opt)
 
 			NnnNormal                        { NvimTreeNormal },
 			NnnNormalNC                      { NnnNormal },
-			NnnVertSplit                     { fg = "bg" },
+			NnnWinSeparator                  { NvimTreeWinSeparator },
+			NnnVertSplit                     { NnnWinSeparator },
 		}
 	end)
 	-- stylua: ignore end
