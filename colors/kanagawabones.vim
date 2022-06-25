@@ -31,6 +31,7 @@ if &background ==# 'dark'
     let g:terminal_color_13 = '#A98FD2'
     let g:terminal_color_14 = '#7BC2DF'
     let g:terminal_color_15 = '#A8A48D'
+    highlight Normal guifg=#DDD8BB guibg=#1F1F28 guisp=NONE gui=NONE cterm=NONE
     highlight Bold guifg=NONE guibg=NONE guisp=NONE gui=bold cterm=bold
     highlight! link LightspeedUnlabeledMatch Bold
     highlight! link TSStrong Bold
@@ -150,7 +151,6 @@ if &background ==# 'dark'
     highlight NonText guifg=#58586A guibg=NONE guisp=NONE gui=NONE cterm=NONE
     highlight! link EndOfBuffer NonText
     highlight! link Whitespace NonText
-    highlight Normal guifg=#DDD8BB guibg=#1F1F28 guisp=NONE gui=NONE cterm=NONE
     highlight NormalFloat guifg=NONE guibg=#31313F guisp=NONE gui=NONE cterm=NONE
     highlight Number guifg=#DDD8BB guibg=NONE guisp=NONE gui=italic cterm=italic
     highlight! link Boolean Number
