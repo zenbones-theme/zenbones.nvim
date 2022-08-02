@@ -60,6 +60,7 @@ if &background ==# 'light'
     highlight Cursor guifg=#F0F0CA guibg=#353535 guisp=NONE gui=NONE cterm=NONE
     highlight! link TermCursor Cursor
     highlight CursorLine guifg=NONE guibg=#E7E8C3 guisp=NONE gui=NONE cterm=NONE
+    highlight! link CocMenuSel CursorLine
     highlight! link CursorColumn CursorLine
     highlight! link NeogitDiffContextHighlight CursorLine
     highlight! link TelescopeSelection CursorLine

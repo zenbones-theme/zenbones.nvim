@@ -59,6 +59,7 @@ if &background ==# 'dark'
     highlight Cursor guifg=#1A1825 guibg=#E7DDDD guisp=NONE gui=NONE cterm=NONE
     highlight! link TermCursor Cursor
     highlight CursorLine guifg=NONE guibg=#222030 guisp=NONE gui=NONE cterm=NONE
+    highlight! link CocMenuSel CursorLine
     highlight! link CursorColumn CursorLine
     highlight! link NeogitDiffContextHighlight CursorLine
     highlight! link TelescopeSelection CursorLine
@@ -309,6 +310,7 @@ else
     highlight Cursor guifg=#FBF6F0 guibg=#724341 guisp=NONE gui=NONE cterm=NONE
     highlight! link TermCursor Cursor
     highlight CursorLine guifg=NONE guibg=#F7ECE0 guisp=NONE gui=NONE cterm=NONE
+    highlight! link CocMenuSel CursorLine
     highlight! link CursorColumn CursorLine
     highlight! link NeogitDiffContextHighlight CursorLine
     highlight! link TelescopeSelection CursorLine

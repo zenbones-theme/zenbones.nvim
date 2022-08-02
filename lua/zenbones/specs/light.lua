@@ -339,6 +339,7 @@ local function generate(p, opt)
 			CocHintHighlight                 { DiagnosticUnderlineHint },
 			CocErrorVirtualText              { DiagnosticVirtualTextError },
 			CocWarningVitualText             { DiagnosticVirtualTextWarn },
+			CocMenuSel                       { CursorLine },
 			CocSelectedText                  { SpellBad },
 			CocCodeLens                      { LineNr },
 			CocMarkdownLink                  { fg = p.sky, gui = "underline" },
