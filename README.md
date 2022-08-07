@@ -107,6 +107,7 @@ currently supported.
 -   [Trouble](https://github.com/folke/trouble.nvim)
 -   [NvimTree](https://github.com/kyazdani42/nvim-tree.lua)
 -   [n³](https://github.com/mcchrish/nnn.vim)
+-   [Mason](https://github.com/williamboman/mason.nvim)
 
 ## Other implementations
 

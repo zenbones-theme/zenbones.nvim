@@ -102,6 +102,7 @@ if &background ==# 'dark'
     highlight Error guifg=#DE6E7C guibg=NONE guisp=NONE gui=NONE cterm=NONE
     highlight! link DiagnosticError Error
     highlight! link ErrorMsg Error
+    highlight! link MasonError Error
     highlight! link TSDanger Error
     highlight FloatBorder guifg=#1F3E56 guibg=NONE guisp=NONE gui=NONE cterm=NONE
     highlight FoldColumn guifg=#466273 guibg=NONE guisp=NONE gui=bold cterm=bold
@@ -141,6 +142,16 @@ if &background ==# 'dark'
     highlight! link NeogitHunkHeader LineNr
     highlight! link SignColumn LineNr
     highlight! link WhichKeySeparator LineNr
+    highlight MasonHeader guifg=#0F191F guibg=#B77E64 guisp=NONE gui=bold cterm=bold
+    highlight MasonHighlight guifg=#8190D4 guibg=NONE guisp=NONE gui=NONE cterm=NONE
+    highlight MasonHighlightBlock guifg=#0F191F guibg=#8190D4 guisp=NONE gui=NONE cterm=NONE
+    highlight MasonHighlightBlockBold guifg=#0F191F guibg=#8190D4 guisp=NONE gui=bold cterm=bold
+    highlight MasonHighlightBlockBoldSecondary guifg=#0F191F guibg=#B77E64 guisp=NONE gui=bold cterm=bold
+    highlight MasonHighlightBlockSecondary guifg=#0F191F guibg=#B77E64 guisp=NONE gui=NONE cterm=NONE
+    highlight MasonHighlightSecondary guifg=#B77E64 guibg=NONE guisp=NONE gui=NONE cterm=NONE
+    highlight MasonMuted guifg=#939E99 guibg=NONE guisp=NONE gui=NONE cterm=NONE
+    highlight MasonMutedBlock guifg=#0F191F guibg=#939E99 guisp=NONE gui=NONE cterm=NONE
+    highlight MasonMutedBlockBold guifg=#0F191F guibg=#939E99 guisp=NONE gui=bold cterm=bold
     highlight MoreMsg guifg=#90FF6B guibg=NONE guisp=NONE gui=bold cterm=bold
     highlight! link Question MoreMsg
     highlight NeogitHunkHeaderHighlight guifg=#C6D5CF guibg=#152128 guisp=NONE gui=bold cterm=bold
@@ -351,6 +362,7 @@ else
     highlight Error guifg=#A8334C guibg=NONE guisp=NONE gui=NONE cterm=NONE
     highlight! link DiagnosticError Error
     highlight! link ErrorMsg Error
+    highlight! link MasonError Error
     highlight! link TSDanger Error
     highlight FloatBorder guifg=#6A716B guibg=NONE guisp=NONE gui=NONE cterm=NONE
     highlight FoldColumn guifg=#8F9890 guibg=NONE guisp=NONE gui=bold cterm=bold
@@ -390,6 +402,16 @@ else
     highlight! link NeogitHunkHeader LineNr
     highlight! link SignColumn LineNr
     highlight! link WhichKeySeparator LineNr
+    highlight MasonHeader guifg=#E5EDE6 guibg=#944927 guisp=NONE gui=bold cterm=bold
+    highlight MasonHighlight guifg=#286486 guibg=NONE guisp=NONE gui=NONE cterm=NONE
+    highlight MasonHighlightBlock guifg=#E5EDE6 guibg=#286486 guisp=NONE gui=NONE cterm=NONE
+    highlight MasonHighlightBlockBold guifg=#E5EDE6 guibg=#286486 guisp=NONE gui=bold cterm=bold
+    highlight MasonHighlightBlockBoldSecondary guifg=#E5EDE6 guibg=#944927 guisp=NONE gui=bold cterm=bold
+    highlight MasonHighlightBlockSecondary guifg=#E5EDE6 guibg=#944927 guisp=NONE gui=NONE cterm=NONE
+    highlight MasonHighlightSecondary guifg=#944927 guibg=NONE guisp=NONE gui=NONE cterm=NONE
+    highlight MasonMuted guifg=#476038 guibg=NONE guisp=NONE gui=NONE cterm=NONE
+    highlight MasonMutedBlock guifg=#E5EDE6 guibg=#476038 guisp=NONE gui=NONE cterm=NONE
+    highlight MasonMutedBlockBold guifg=#E5EDE6 guibg=#476038 guisp=NONE gui=bold cterm=bold
     highlight MoreMsg guifg=#567A30 guibg=NONE guisp=NONE gui=bold cterm=bold
     highlight! link Question MoreMsg
     highlight NeogitHunkHeaderHighlight guifg=#202E18 guibg=#DAE5DB guisp=NONE gui=bold cterm=bold
