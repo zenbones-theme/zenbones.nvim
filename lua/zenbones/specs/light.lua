@@ -416,46 +416,6 @@ local function generate(p, opt)
 		)
 	end
 
-	-- stylua: ignore start
-	if not vim.diagnostic then
-		table.insert(
-			specs,
-			---@diagnostic disable: undefined-global
-			-- selene: allow(undefined_variable)
-			lush(function()
-				return {
-					LspDiagnosticsDefaultError              { base.DiagnosticError }, -- Used as the base highlight group. Other LspDiagnostic highlights link to this by default (except Underline)
-					LspDiagnosticsDefaultWarning            { base.DiagnosticWarn }, -- Used as the base highlight group. Other LspDiagnostic highlights link to this by default (except Underline)
-					LspDiagnosticsDefaultInformation        { base.DiagnosticInfo }, -- Used as the base highlight group. Other LspDiagnostic highlights link to this by default (except Underline)
-					LspDiagnosticsDefaultHint               { base.DiagnosticHint }, -- Used as the base highlight group. Other LspDiagnostic highlights link to this by default (except Underline)
-
-					LspDiagnosticsVirtualTextError          { base.DiagnosticVirtualTextError }, -- Used for "Error" diagnostic virtual text
-					LspDiagnosticsVirtualTextWarning        { base.DiagnosticVirtualTextWarn }, -- Used for "Warning" diagnostic virtual text
-					LspDiagnosticsVirtualTextInformation    { base.DiagnosticVirtualTextInfo }, -- Used for "Information" diagnostic virtual text
-					LspDiagnosticsVirtualTextHint           { base.DiagnosticVirtualTextHint }, -- Used for "Hint" diagnostic virtual text
-
-					LspDiagnosticsUnderlineError            { base.DiagnosticUnderlineError }, -- Used to underline "Error" diagnostics
-					LspDiagnosticsUnderlineWarning          { base.DiagnosticUnderlineWarn }, -- Used to underline "Warning" diagnostics
-					LspDiagnosticsUnderlineInformation      { base.DiagnosticUnderlineInfo }, -- Used to underline "Information" diagnostics
-					LspDiagnosticsUnderlineHint             { base.DiagnosticUnderlineHint }, -- Used to underline "Hint" diagnostics
-
-					-- LspDiagnosticsFloatingError          { }, -- Used to color "Error" diagnostic messages in diagnostics float
-					-- LspDiagnosticsFloatingWarning        { }, -- Used to color "Warning" diagnostic messages in diagnostics float
-					-- LspDiagnosticsFloatingInformation    { }, -- Used to color "Information" diagnostic messages in diagnostics float
-					-- LspDiagnosticsFloatingHint           { }, -- Used to color "Hint" diagnostic messages in diagnostics float
-
-					LspDiagnosticsSignError                 { base.DiagnosticSignError }, -- Used for "Error" signs in sign column
-					LspDiagnosticsSignWarning               { base.DiagnosticSignWarn }, -- Used for "Warning" signs in sign column
-					LspDiagnosticsSignInformation           { base.DiagnosticSignInfo }, -- Used for "Information" signs in sign column
-					LspDiagnosticsSignHint                  { base.DiagnosticSignHint }, -- Used for "Hint" signs in sign column
-				}
-			end)
-			-- selene: deny(undefined_variable)
-			---@diagnostic enable: undefined-global
-		)
-	end
-	-- stylua: ignore end
-
 	return lush.merge(specs)
 end
 

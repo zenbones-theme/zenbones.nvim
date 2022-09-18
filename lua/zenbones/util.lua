@@ -11,11 +11,10 @@ function M.apply_colorscheme()
 end
 
 function M.get_colorscheme_list()
-	local json_decode = vim.fn.has "nvim-0.6.0" == 1 and vim.json.decode or vim.fn.json_decode
 	local file = io.open(vim.api.nvim_get_runtime_file("zenbones.json", false)[1], "r")
 	local content = file:read "*a"
 	file:close()
-	return json_decode(content)
+	return vim.json.decode(content)
 end
 
 function M.get_colorscheme(name)
