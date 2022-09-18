@@ -68,7 +68,7 @@ local function generate(p, opt)
 			LineNr          { fg = p1.bg.da(opt.darken_line_nr or 33), bg = opt.solid_line_nr and p1.bg.da(4) or "NONE" }, -- Line number for ":number" and ":#" commands, and when 'number' or 'relativenumber' option is set.
 			SignColumn      { LineNr }, -- column where |signs| are displayed
 			FoldColumn      { LineNr, gui = "bold" }, -- 'foldcolumn'
-			Folded          { bg = p1.bg.da(16), fg = p1.bg.da(64) }, -- line used for closed folds
+			Folded          { bg = not opt.transparent_background and p1.bg.da(16) or "NONE", fg = p1.bg.da(64) }, -- line used for closed folds
 			CursorLineNr    { LineNr, fg = p.fg, gui = "bold" }, -- Like LineNr when 'cursorline' or 'relativenumber' is set for the cursor line.
 
 			-- ModeMsg      { }, -- 'showmode' message (e.g., "-- INSERT -- ")
@@ -307,22 +307,15 @@ local function generate(p, opt)
 			SneakLabel                       { WildMenu },
 			SneakLabelMask                   { bg = p.blossom, fg = p.blossom },
 
-			LightspeedLabel                  { fg = p.blossom, gui = "bold,underline" },
-			LightspeedLabelOverlapped        { fg = p.blossom, gui = "underline" },
-			LightspeedLabelDistant           { fg = p.sky, gui = "bold,underline" },
-			LightspeedLabelDistantOverlapped { fg = p.sky, gui = "underline" },
-			LightspeedShortcut               { SneakLabel, gui = "bold,underline" },
-			LightspeedOneCharMatch           { SneakLabel, gui = "bold" },
-			LightspeedMaskedChar             { Conceal },
-			LightspeedUnlabeledMatch         { Bold },
-			LightspeedPendingOpArea          { SneakLabel },
-			LightspeedPendingChangeOpArea    { fg = p.blossom },
-			LightspeedGreyWash               { fg = Comment.fg },
+			LeapMatch                        { gui = "bold,underline,nocombine" },
+			LeapLabelPrimary                 { Search , gui = "bold,nocombine" },
+			LeapLabelSecondary               { DiffText, gui = "bold,nocombine" },
+			LeapLabelSelected                { IncSearch },
 
-			HopNextKey                       { LightspeedLabel },
-			HopNextKey1                      { LightspeedLabelDistant },
+			HopNextKey                       { fg = p.blossom, gui = "bold,underline" },
+			HopNextKey1                      { fg = p.sky, gui = "bold,underline" },
 			HopNextKey2                      { fg = p.water },
-			HopUnmatched                     { LightspeedGreyWash } ,
+			HopUnmatched                     { fg = Comment.fg },
 
 			BufferCurrent                    { TabLineSel },
 			BufferVisible                    { fg = StatusLineNC.fg },
