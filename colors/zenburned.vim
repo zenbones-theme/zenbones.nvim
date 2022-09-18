@@ -33,7 +33,6 @@ if &background ==# 'dark'
     let g:terminal_color_15 = '#C0AB86'
     highlight Normal guifg=#F0E4CF guibg=#404040 guisp=NONE gui=NONE cterm=NONE
     highlight Bold guifg=NONE guibg=NONE guisp=NONE gui=bold cterm=bold
-    highlight! link LightspeedUnlabeledMatch Bold
     highlight! link TSStrong Bold
     highlight BufferVisible guifg=#F5EDE0 guibg=NONE guisp=NONE gui=NONE cterm=NONE
     highlight BufferVisibleIndex guifg=#F5EDE0 guibg=NONE guisp=NONE gui=NONE cterm=NONE
@@ -51,7 +50,6 @@ if &background ==# 'dark'
     highlight! link LspReferenceWrite ColorColumn
     highlight Comment guifg=#848484 guibg=NONE guisp=NONE gui=italic cterm=italic
     highlight Conceal guifg=#AB9977 guibg=NONE guisp=NONE gui=bold,italic cterm=bold,italic
-    highlight! link LightspeedMaskedChar Conceal
     highlight Constant guifg=#BAA681 guibg=NONE guisp=NONE gui=italic cterm=italic
     highlight! link TroubleSource Constant
     highlight! link WhichKeyValue Constant
@@ -119,26 +117,22 @@ if &background ==# 'dark'
     highlight! link GitGutterChange GitSignsChange
     highlight GitSignsDelete guifg=#E3716E guibg=NONE guisp=NONE gui=NONE cterm=NONE
     highlight! link GitGutterDelete GitSignsDelete
+    highlight HopNextKey guifg=#B279A7 guibg=NONE guisp=NONE gui=bold,underline cterm=bold,underline
+    highlight HopNextKey1 guifg=#66A5AD guibg=NONE guisp=NONE gui=bold,underline cterm=bold,underline
     highlight HopNextKey2 guifg=#6099C0 guibg=NONE guisp=NONE gui=NONE cterm=NONE
+    highlight HopUnmatched guifg=#848484 guibg=NONE guisp=NONE gui=NONE cterm=NONE
     highlight Identifier guifg=#D5BE95 guibg=NONE guisp=NONE gui=NONE cterm=NONE
     highlight! link TSVariable Identifier
     highlight IncSearch guifg=#404040 guibg=#DFC8DA guisp=NONE gui=bold cterm=bold
     highlight! link CurSearch IncSearch
+    highlight! link LeapLabelSelected IncSearch
     highlight IndentBlanklineChar guifg=#575757 guibg=NONE guisp=NONE gui=NONE cterm=NONE
     highlight Italic guifg=NONE guibg=NONE guisp=NONE gui=italic cterm=italic
     highlight! link TSEmphasis Italic
     highlight! link markdownTSEmphasis Italic
-    highlight LightspeedGreyWash guifg=#848484 guibg=NONE guisp=NONE gui=NONE cterm=NONE
-    highlight! link HopUnmatched LightspeedGreyWash
-    highlight LightspeedLabel guifg=#B279A7 guibg=NONE guisp=NONE gui=bold,underline cterm=bold,underline
-    highlight! link HopNextKey LightspeedLabel
-    highlight LightspeedLabelDistant guifg=#66A5AD guibg=NONE guisp=NONE gui=bold,underline cterm=bold,underline
-    highlight! link HopNextKey1 LightspeedLabelDistant
-    highlight LightspeedLabelDistantOverlapped guifg=#66A5AD guibg=NONE guisp=NONE gui=underline cterm=underline
-    highlight LightspeedLabelOverlapped guifg=#B279A7 guibg=NONE guisp=NONE gui=underline cterm=underline
-    highlight LightspeedOneCharMatch guifg=#404040 guibg=#B279A7 guisp=NONE gui=bold cterm=bold
-    highlight LightspeedPendingChangeOpArea guifg=#B279A7 guibg=NONE guisp=NONE gui=NONE cterm=NONE
-    highlight LightspeedShortcut guifg=#404040 guibg=#B279A7 guisp=NONE gui=bold,underline cterm=bold,underline
+    highlight LeapLabelPrimary guifg=#F0E4CF guibg=#9C6992 guisp=NONE gui=bold,nocombine cterm=bold,nocombine
+    highlight LeapLabelSecondary guifg=#F0E4CF guibg=#53738B guisp=NONE gui=bold,nocombine cterm=bold,nocombine
+    highlight LeapMatch guifg=NONE guibg=NONE guisp=NONE gui=bold,underline,nocombine cterm=bold,underline,nocombine
     highlight LineNr guifg=#7F7F7F guibg=NONE guisp=NONE gui=NONE cterm=NONE
     highlight! link CocCodeLens LineNr
     highlight! link LspCodeLens LineNr
@@ -187,7 +181,6 @@ if &background ==# 'dark'
     highlight! link CocSearch Search
     highlight! link MatchParen Search
     highlight! link Sneak Search
-    highlight! link LightspeedPendingOpArea SneakLabel
     highlight SneakLabelMask guifg=#B279A7 guibg=#B279A7 guisp=NONE gui=NONE cterm=NONE
     highlight Special guifg=#F0F08F guibg=NONE guisp=NONE gui=NONE cterm=NONE
     highlight! link TSNamespace Special
