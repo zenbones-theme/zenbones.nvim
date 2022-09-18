@@ -68,7 +68,7 @@ local function generate(p, opt)
 			LineNr          { fg = p1.bg.li(opt.lighten_line_nr or 35), bg = opt.solid_line_nr and p1.bg.li(4) or "NONE" }, -- Line number for ":number" and ":#" commands, and when 'number' or 'relativenumber' option is set.
 			SignColumn      { LineNr }, -- column where |signs| are displayed
 			FoldColumn      { LineNr, gui = "bold" }, -- 'foldcolumn'
-			Folded          { bg = p1.bg.li(14), fg = p1.bg.li(64) }, -- line used for closed folds
+			Folded          { bg = not opt.transparent_background and p1.bg.li(14) or "NONE", fg = p1.bg.li(64) }, -- line used for closed folds
 			CursorLineNr    { LineNr, fg = p.fg, gui = "bold" }, -- Like LineNr when 'cursorline' or 'relativenumber' is set for the cursor line.
 
 			-- ModeMsg      { }, -- 'showmode' message (e.g., "-- INSERT -- ")
