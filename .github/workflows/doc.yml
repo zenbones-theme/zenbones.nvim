@@ -15,7 +15,7 @@ jobs:
       GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3
       - name: Setup git
         run: |
           git config --local user.email "41898282+github-actions[bot]@users.noreply.github.com"
@@ -26,13 +26,13 @@ jobs:
         run: git checkout -b ${VIMDOC_BRANCH}
 
       - name: panvimdoc
-        uses: kdheepak/panvimdoc@v2.7.2
+        uses: kdheepak/panvimdoc@v2.7.3
         with:
           # Output vimdoc project name
           vimdoc: zenbones
           pandoc: doc/zenbones.md
           description: "A collection of contrast-based vim/neovim colorschemes"
-          version: "Vim v8.1 / Neovim 0.6.0"
+          version: "Vim v8.1 / Nvim 0.6.0"
       - name: Create PR
         run: |
           if ! [[ -z $(git status -s) ]]; then

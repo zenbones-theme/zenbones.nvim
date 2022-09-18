@@ -14,9 +14,8 @@ jobs:
       pull-requests: write
     env:
       GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      STYLUA_VERSION: 0.12.2
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3
 
       - name: Setup git
         run: |
@@ -25,12 +24,12 @@ jobs:
           printf 'STYLE_BRANCH=bot/style/%s\n' ${GITHUB_REF#refs/heads/} >> $GITHUB_ENV
           git checkout -b ${STYLE_BRANCH}
 
-      - uses: JohnnyMorganz/stylua-action@1.0.0
+      - uses: JohnnyMorganz/stylua-action@v1
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
           args: --check lua
 
-      - uses: actions/setup-node@v2
+      - uses: actions/setup-node@v3
       - name: Apply prettier
         run: |
           npm install -g prettier
