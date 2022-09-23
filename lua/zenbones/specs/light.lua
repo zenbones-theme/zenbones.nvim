@@ -1,5 +1,6 @@
 local lush = require "lush"
 
+
 local function generate(p, opt)
 	local p1 = {
 		bg = p.bg,
