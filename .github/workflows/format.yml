@@ -28,8 +28,9 @@ jobs:
 
       - uses: JohnnyMorganz/stylua-action@v1
         with:
+          version: 0.15.1
           token: ${{ secrets.GITHUB_TOKEN }}
-          args: --check lua
+          args: --config-path=.stylua.toml lua/
 
       - uses: actions/setup-node@v3
       - name: Apply prettier
