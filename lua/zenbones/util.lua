@@ -6,12 +6,15 @@ function M.apply_colorscheme()
 	local colors_name = vim.g.colors_name
 	package.loaded[colors_name] = nil
 	require "lush"(require(colors_name), { force_clean = false })
-	local p = require(colors_name .. ".palette")[vim.opt.background:get()]
+	local p = require(colors_name .. ".palette")[vim.o.background]
 	require("zenbones.term").apply_colors(p)
 end
 
 function M.get_colorscheme_list()
 	local file = io.open(vim.api.nvim_get_runtime_file("zenbones.json", false)[1], "r")
+	if not file then
+		error "zenbones.json not found"
+	end
 	local content = file:read "*a"
 	file:close()
 	return vim.json.decode(content)
@@ -40,7 +43,7 @@ function M.get_lualine_theme(name)
 	if colorscheme.background then
 		return require(string.format("lualine.themes.%s_%s", name, ness))
 	else
-		return require(string.format("lualine.themes.%s_%s_%s", name, vim.opt.background:get(), ness))
+		return require(string.format("lualine.themes.%s_%s_%s", name, vim.o.background, ness))
 	end
 end
 

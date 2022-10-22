@@ -32,7 +32,7 @@ jobs:
           vimdoc: zenbones
           pandoc: doc/zenbones.md
           description: "A collection of contrast-based vim/neovim colorschemes"
-          version: "Vim v8.1 / Nvim 0.6.0"
+          version: "Vim v8.1 / Nvim 0.8.0"
       - name: Create PR
         run: |
           if ! [[ -z $(git status -s) ]]; then

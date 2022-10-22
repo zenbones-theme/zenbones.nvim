@@ -14,6 +14,10 @@ or try the [built-in collection](#usage).
 <em>A rock garden in <a href="https://en.wikipedia.org/wiki/Ry%C5%8Dan-ji">Ryōan-ji</a>.</em>
 </p>
 
+## Requirement
+
+-   Neovim v0.8.0 (use v2.0.0 for older versions)
+
 ## Recommended setup
 
 -   Neovim with true colors support i.e. `set termguicolors`. Vim works but only

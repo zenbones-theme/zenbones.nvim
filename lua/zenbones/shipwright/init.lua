@@ -1,7 +1,7 @@
 local M = {}
 
 local function make_specs(specs_name, ness)
-	local background = vim.opt.background:get()
+	local background = vim.o.background
 	package.loaded[specs_name] = nil
 	if ness == nil then
 		return require(specs_name)
@@ -26,7 +26,7 @@ local function make_env(colorscheme)
 		transform = require "zenbones.shipwright.transform",
 	}
 
-	vim.opt.background = colorscheme.background
+	vim.o.background = colorscheme.background
 	env.specs = make_specs(specs_name)
 	local ness = colorscheme.background == "light" and { "dim", "bright" } or { "stark", "warm" }
 	env["specs_" .. ness[1]] = make_specs(specs_name, ness[1])
