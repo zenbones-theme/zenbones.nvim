@@ -14,7 +14,7 @@ local colorscheme = colorschemes[index]
 vim.g.randombones_colors_name = colorscheme.name
 
 if colorscheme.background then
-	vim.opt.background = colorscheme.background
+	vim.o.background = colorscheme.background
 end
 
 util.apply_colorscheme()
