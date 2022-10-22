@@ -33,7 +33,6 @@ if &background ==# 'dark'
     let g:terminal_color_15 = '#A8A48D'
     highlight Normal guifg=#DDD8BB guibg=#1F1F28 guisp=NONE gui=NONE cterm=NONE
     highlight Bold guifg=NONE guibg=NONE guisp=NONE gui=bold cterm=bold
-    highlight! link TSStrong Bold
     highlight BufferVisible guifg=#E9E3C5 guibg=NONE guisp=NONE gui=NONE cterm=NONE
     highlight BufferVisibleIndex guifg=#E9E3C5 guibg=NONE guisp=NONE gui=NONE cterm=NONE
     highlight BufferVisibleSign guifg=#E9E3C5 guibg=NONE guisp=NONE gui=NONE cterm=NONE
@@ -69,7 +68,6 @@ if &background ==# 'dark'
     highlight DiagnosticHint guifg=#957FB8 guibg=NONE guisp=NONE gui=NONE cterm=NONE
     highlight DiagnosticInfo guifg=#7EB3C9 guibg=NONE guisp=NONE gui=NONE cterm=NONE
     highlight! link NeogitNotificationInfo DiagnosticInfo
-    highlight! link TSNote DiagnosticInfo
     highlight DiagnosticSignError guifg=#E46A78 guibg=NONE guisp=NONE gui=NONE cterm=NONE
     highlight! link CocErrorSign DiagnosticSignError
     highlight DiagnosticSignHint guifg=#957FB8 guibg=NONE guisp=NONE gui=NONE cterm=NONE
@@ -104,7 +102,6 @@ if &background ==# 'dark'
     highlight! link DiagnosticError Error
     highlight! link ErrorMsg Error
     highlight! link MasonError Error
-    highlight! link TSDanger Error
     highlight FloatBorder guifg=#7B7B8B guibg=NONE guisp=NONE gui=NONE cterm=NONE
     highlight FoldColumn guifg=#646476 guibg=NONE guisp=NONE gui=bold cterm=bold
     highlight Folded guifg=#A5A5B0 guibg=#383846 guisp=NONE gui=NONE cterm=NONE
@@ -122,14 +119,11 @@ if &background ==# 'dark'
     highlight HopNextKey2 guifg=#7EB3C9 guibg=NONE guisp=NONE gui=NONE cterm=NONE
     highlight HopUnmatched guifg=#696977 guibg=NONE guisp=NONE gui=NONE cterm=NONE
     highlight Identifier guifg=#BBB79E guibg=NONE guisp=NONE gui=NONE cterm=NONE
-    highlight! link TSVariable Identifier
     highlight IncSearch guifg=#1F1F28 guibg=#AE9FCA guisp=NONE gui=bold cterm=bold
     highlight! link CurSearch IncSearch
     highlight! link LeapLabelSelected IncSearch
     highlight IndentBlanklineChar guifg=#383844 guibg=NONE guisp=NONE gui=NONE cterm=NONE
     highlight Italic guifg=NONE guibg=NONE guisp=NONE gui=italic cterm=italic
-    highlight! link TSEmphasis Italic
-    highlight! link markdownTSEmphasis Italic
     highlight LeapLabelPrimary guifg=#DDD8BB guibg=#614A82 guisp=NONE gui=bold,nocombine cterm=bold,nocombine
     highlight LeapLabelSecondary guifg=#DDD8BB guibg=#364F59 guisp=NONE gui=bold,nocombine cterm=bold,nocombine
     highlight LeapMatch guifg=NONE guibg=NONE guisp=NONE gui=bold,underline,nocombine cterm=bold,underline,nocombine
@@ -160,9 +154,6 @@ if &background ==# 'dark'
     highlight NormalFloat guifg=NONE guibg=#31313F guisp=NONE gui=NONE cterm=NONE
     highlight Number guifg=#DDD8BB guibg=NONE guisp=NONE gui=italic cterm=italic
     highlight! link Boolean Number
-    highlight! link TSConstBuiltin Number
-    highlight! link TSConstMacro Number
-    highlight! link TSVariableBuiltin Number
     highlight NvimTreeCursorLine guifg=NONE guibg=#292934 guisp=NONE gui=NONE cterm=NONE
     highlight! link NvimTreeCursorColumn NvimTreeCursorLine
     highlight NvimTreeNormal guifg=#DDD8BB guibg=#25252F guisp=NONE gui=NONE cterm=NONE
@@ -182,15 +173,11 @@ if &background ==# 'dark'
     highlight! link Sneak Search
     highlight SneakLabelMask guifg=#957FB8 guibg=#957FB8 guisp=NONE gui=NONE cterm=NONE
     highlight Special guifg=#ADA992 guibg=NONE guisp=NONE gui=bold cterm=bold
-    highlight! link TSNamespace Special
-    highlight! link TSTag Special
     highlight! link WhichKeyGroup Special
     highlight! link helpHyperTextEntry Special
-    highlight! link markdownTSPunctSpecial Special
     highlight SpecialComment guifg=#696977 guibg=NONE guisp=NONE gui=NONE cterm=NONE
-    highlight! link markdownTSURI SpecialComment
+    highlight! link markdownUrl SpecialComment
     highlight SpecialKey guifg=#58586A guibg=NONE guisp=NONE gui=italic cterm=italic
-    highlight! link markdownTSStringEscape SpecialKey
     highlight SpellBad guifg=#D0777F guibg=NONE guisp=NONE gui=undercurl cterm=undercurl
     highlight! link CocSelectedText SpellBad
     highlight SpellCap guifg=#D0777F guibg=NONE guisp=NONE gui=undercurl cterm=undercurl
@@ -199,12 +186,10 @@ if &background ==# 'dark'
     highlight Statement guifg=#DDD8BB guibg=NONE guisp=NONE gui=bold cterm=bold
     highlight! link PreProc Statement
     highlight! link WhichKey Statement
-    highlight! link markdownTSTitle Statement
     highlight StatusLine guifg=#DDD8BB guibg=#363644 guisp=NONE gui=NONE cterm=NONE
     highlight! link TabLine StatusLine
     highlight StatusLineNC guifg=#E9E3C5 guibg=#292934 guisp=NONE gui=NONE cterm=NONE
     highlight! link TabLineFill StatusLineNC
-    highlight TSConstant guifg=#BBB79E guibg=NONE guisp=NONE gui=bold cterm=bold
     highlight TabLineSel guifg=NONE guibg=NONE guisp=NONE gui=bold cterm=bold
     highlight! link BufferCurrent TabLineSel
     highlight TelescopeBorder guifg=#7B7B8B guibg=NONE guisp=NONE gui=NONE cterm=NONE
@@ -214,15 +199,13 @@ if &background ==# 'dark'
     highlight Todo guifg=NONE guibg=NONE guisp=NONE gui=bold,underline cterm=bold,underline
     highlight Type guifg=#9797A5 guibg=NONE guisp=NONE gui=NONE cterm=NONE
     highlight! link helpSpecial Type
-    highlight! link markdownTSLiteral Type
+    highlight! link markdownCode Type
     highlight Underlined guifg=NONE guibg=NONE guisp=NONE gui=underline cterm=underline
-    highlight! link TSUnderline Underlined
     highlight VertSplit guifg=#646476 guibg=NONE guisp=NONE gui=NONE cterm=NONE
     highlight! link WinSeparator VertSplit
     highlight Visual guifg=NONE guibg=#49473E guisp=NONE gui=NONE cterm=NONE
     highlight WarningMsg guifg=#E5C283 guibg=NONE guisp=NONE gui=NONE cterm=NONE
     highlight! link DiagnosticWarn WarningMsg
-    highlight! link TSWarning WarningMsg
     highlight! link gitcommitOverflow WarningMsg
     highlight WildMenu guifg=#1F1F28 guibg=#957FB8 guisp=NONE gui=NONE cterm=NONE
     highlight! link SneakLabel WildMenu
@@ -239,10 +222,7 @@ if &background ==# 'dark'
     highlight! link NvimTreeGitDeleted diffRemoved
     highlight lCursor guifg=#1F1F28 guibg=#8F8C78 guisp=NONE gui=NONE cterm=NONE
     highlight! link TermCursorNC lCursor
-    highlight! link markdownCode markdownTSLiteral
-    highlight markdownTSTextReference guifg=#BBB79E guibg=NONE guisp=NONE gui=underline cterm=underline
-    highlight! link markdownLinkText markdownTSTextReference
-    highlight! link markdownUrl markdownTSURI
+    highlight markdownLinkText guifg=#BBB79E guibg=NONE guisp=NONE gui=underline cterm=underline
     " dark end
 
     if !s:italics
@@ -253,18 +233,12 @@ if &background ==# 'dark'
         highlight Constant gui=NONE cterm=NONE
         highlight Number gui=NONE cterm=NONE
         highlight SpecialKey gui=NONE cterm=NONE
-        highlight TSConstBuiltin gui=NONE cterm=NONE
-        highlight TSConstMacro gui=NONE cterm=NONE
-        highlight TSEmphasis gui=NONE cterm=NONE
-        highlight TSVariableBuiltin gui=NONE cterm=NONE
         highlight TroubleSource gui=NONE cterm=NONE
         highlight WhichKeyValue gui=NONE cterm=NONE
         highlight diffNewFile gui=NONE cterm=NONE
         highlight diffOldFile gui=NONE cterm=NONE
         highlight helpHyperTextJump gui=NONE cterm=NONE
         highlight helpOption gui=NONE cterm=NONE
-        highlight markdownTSEmphasis gui=NONE cterm=NONE
-        highlight markdownTSStringEscape gui=NONE cterm=NONE
         " no italics dark end
     endif
 endif
