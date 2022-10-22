@@ -16,7 +16,7 @@ or try the [built-in collection](#usage).
 
 ## Requirement
 
--   Neovim v0.8.0 (use v2.0.0 for older versions)
+-   Neovim v0.8.0 (use v2.0.0 for older versions) or Vim 8.1
 
 ## Recommended setup
 
