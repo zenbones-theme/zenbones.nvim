@@ -4,6 +4,7 @@
 Table of Contents                                 *zenbones-table-of-contents*
 
 1. Documentation                                      |zenbones-documentation|
+  - Requirement                                         |zenbones-requirement|
   - Usage                                                     |zenbones-usage|
   - Configuration                                     |zenbones-configuration|
   - Advanced Usage                                   |zenbones-advanced-usage|
@@ -13,6 +14,12 @@ Table of Contents                                 *zenbones-table-of-contents*
 
 A collection of Vim/Neovim colorschemes designed to highlight code using
 contrasts and font variations.
+
+REQUIREMENT                                             *zenbones-requirement*
+
+
+- Neovim v0.8.0 (use v2.0.0 for older versions) or Vim 8.1
+
 
 USAGE                                                         *zenbones-usage*
 
