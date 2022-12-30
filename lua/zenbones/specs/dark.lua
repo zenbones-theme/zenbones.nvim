@@ -275,6 +275,9 @@ local function generate(p, opt)
 			diffLine                  { fg = p.blossom, gui = "bold" },
 			diffIndexLine             { fg = p.wood },
 
+			sym "@text.diff.add"      { diffAdded },
+			sym "@text.diff.delete"   { diffRemoved },
+
 			gitcommitOverflow         { WarningMsg },
 
 			markdownUrl               { SpecialComment },
