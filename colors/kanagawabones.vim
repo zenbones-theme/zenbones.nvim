@@ -132,7 +132,6 @@ if &background ==# 'dark'
     highlight! link LspCodeLens LineNr
     highlight! link NeogitHunkHeader LineNr
     highlight! link SignColumn LineNr
-    highlight! link WhichKeySeparator LineNr
     highlight MasonHeader guifg=#1F1F28 guibg=#E5C283 guisp=NONE gui=bold cterm=bold
     highlight MasonHighlight guifg=#7EB3C9 guibg=NONE guisp=NONE gui=NONE cterm=NONE
     highlight MasonHighlightBlock guifg=#1F1F28 guibg=#7EB3C9 guisp=NONE gui=NONE cterm=NONE
@@ -207,6 +206,7 @@ if &background ==# 'dark'
     highlight WarningMsg guifg=#E5C283 guibg=NONE guisp=NONE gui=NONE cterm=NONE
     highlight! link DiagnosticWarn WarningMsg
     highlight! link gitcommitOverflow WarningMsg
+    highlight WhichKeySeparator guifg=#646476 guibg=NONE guisp=NONE gui=NONE cterm=NONE
     highlight WildMenu guifg=#1F1F28 guibg=#957FB8 guisp=NONE gui=NONE cterm=NONE
     highlight! link SneakLabel WildMenu
     highlight diffAdded guifg=#98BC6D guibg=NONE guisp=NONE gui=NONE cterm=NONE
