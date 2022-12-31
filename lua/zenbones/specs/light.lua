@@ -353,7 +353,7 @@ local function generate(p, opt)
 
 			WhichKey                         { Statement },
 			WhichKeyGroup                    { Special },
-			WhichKeySeparator                { LineNr },
+			WhichKeySeparator                { fg = LineNr.fg },
 			WhichKeyValue                    { Constant },
 
 			TroubleNormal                    { Function },
