@@ -85,9 +85,11 @@ the flavor name e.g. `g:rosebones_italic_comments`.
 | colorize_diagnostic_underline_text | both       | `false` | Colorize the fg of `DiagnosticUnderline*`.                                |
 | transparent_background             | both       | `false` | Make background transparent.                                              |
 
-#### g:zenbones_compat
+#### g:bones_compat
 
-Set to `1` to enable compatibility mode. Enabled in Vim.
+Set to `1` to enable compatibility mode for all colorschemes. Enabled in Vim. To
+enable/disable compatibility mode for a specific theme, set the variable
+`g:{theme}_compat` to `0` or `1`, e.g. `let g:zenbones_compat = 1`.
 
 ### lightline
 
