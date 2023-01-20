@@ -104,10 +104,14 @@ the flavor name e.g. `g:rosebones_italic_comments`.
 │transparent_background            │both      │false    │Make background transparent.                                           │
 
 
-                                                  *zenbones-g:zenbones_compat*
+                                                     *zenbones-g:bones_compat*
 
-g:zenbones_compat                      Set to `1` to enable compatibility mode.
-                                       Enabled in Vim.
+g:bones_compat                         Set to `1` to enable compatibility mode
+                                       for all colorschemes. Enabled in Vim. To
+                                       enable/disable compatibility mode for a
+                                       specific theme, set the variable
+                                       `g:{theme}_compat` to `0` or `1`,
+                                       e.g. `let g:zenbones_compat = 1`.
 
 
 LIGHTLINE ~
