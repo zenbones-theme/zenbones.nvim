@@ -4,7 +4,7 @@ endif
 
 let g:colors_name = 'tokyobones'
 
-if has('nvim') && (!exists('g:' . g:colors_name . '_compat') || g:{g:colors_name}_compat == 0)
+if has('nvim') && !bones#_compat(g:colors_name)
     lua require("zenbones.util").apply_colorscheme()
     finish
 endif
