@@ -90,6 +90,8 @@ if &background ==# 'dark'
     highlight DiagnosticVirtualTextInfo guifg=#00A3CB guibg=#181A1B guisp=NONE gui=NONE cterm=NONE
     highlight DiagnosticVirtualTextWarn guifg=#E39500 guibg=#1B1918 guisp=NONE gui=NONE cterm=NONE
     highlight! link CocWarningVitualText DiagnosticVirtualTextWarn
+    highlight! link DiagnosticDeprecated DiagnosticWarn
+    highlight! link DiagnosticUnnecessary DiagnosticWarn
     highlight! link NeogitNotificationWarning DiagnosticWarn
     highlight DiffAdd guifg=NONE guibg=#15251C guisp=NONE gui=NONE cterm=NONE
     highlight! link NeogitDiffAddHighlight DiffAdd
