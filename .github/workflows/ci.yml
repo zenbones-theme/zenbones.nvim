@@ -7,13 +7,13 @@ on:
 jobs:
   lint:
     runs-on: ubuntu-latest
-
     steps:
       - uses: actions/checkout@v3
       - uses: NTBBloodbath/selene-action@v1.0.0
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
           args: lua
+
   docs:
     runs-on: ubuntu-latest
     if: ${{ github.ref == 'refs/heads/main' }}
@@ -34,6 +34,7 @@ jobs:
           commit_user_name: "github-actions[bot]"
           commit_user_email: "github-actions[bot]@users.noreply.github.com"
           commit_author: "github-actions[bot] <github-actions[bot]@users.noreply.github.com>"
+
   build:
     runs-on: ubuntu-latest
     if: ${{ github.ref == 'refs/heads/main' }}
@@ -49,13 +50,6 @@ jobs:
         with:
           neovim: true
           version: stable
-
-      - name: Setup git
-        run: |
-          printf 'BUILD_BRANCH=bot/build/%s\n' ${GITHUB_REF#refs/heads/} >> $GITHUB_ENV
-
-      - name: Checkout to build branch
-        run: git checkout -b ${BUILD_BRANCH}
 
       - name: Run builder script
         run: |
@@ -75,13 +69,6 @@ jobs:
     if: ${{ github.ref == 'refs/heads/main' }}
     steps:
       - uses: actions/checkout@v3
-
-      - name: Setup git
-        run: |
-          printf 'STYLE_BRANCH=bot/style/%s\n' ${GITHUB_REF#refs/heads/} >> $GITHUB_ENV
-
-      - name: Checkout to style branch
-        run: git checkout -b ${STYLE_BRANCH}
 
       - uses: JohnnyMorganz/stylua-action@v2
         with:
