@@ -168,6 +168,8 @@ local function generate(p, opt)
 			DiagnosticWarn             { WarningMsg },
 			DiagnosticInfo             { fg = p.water },
 			DiagnosticHint             { fg = p.blossom },
+			DiagnosticDeprecated       { DiagnosticWarn },
+			DiagnosticUnnecessary      { DiagnosticWarn },
 
 			DiagnosticSignError        { SignColumn, fg = DiagnosticError.fg },
 			DiagnosticSignWarn         { SignColumn, fg = DiagnosticWarn.fg },
@@ -264,6 +266,20 @@ local function generate(p, opt)
 			sym "@text.title.markdown"          { Statement },
 			sym "@text.literal.markdown"        { Type },
 			sym "@text.uri.markdown"            { SpecialComment },
+
+			-- LSP Semantic Token Groups
+			sym "@lsp.type.comment"                    { sym "@comment" },
+			sym "@lsp.type.enum"                       { sym "@type" },
+			sym "@lsp.type.keyword"                    { sym "@keyword" },
+			sym "@lsp.type.namespace"                  { sym "@namespace" },
+			sym "@lsp.type.parameter"                  { sym "@parameter" },
+			sym "@lsp.type.property"                   { sym "@property" },
+			sym "@lsp.typemod.method.defaultLibrary"   { sym  "@function.builtin" },
+			sym "@lsp.typemod.function.defaultLibrary" { sym  "@function.builtin" },
+			sym "@lsp.typemod.operator.injected"       { sym "@operator" },
+			sym "@lsp.typemod.string.injected"         { sym "@string" },
+			sym "@lsp.typemod.variable.defaultLibrary" { sym "@variable.builtin" },
+			sym "@lsp.typemod.variable.injected"       { sym "@variable" },
 
 			-- Syntax
 			diffAdded                 { fg = p.leaf },
