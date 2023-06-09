@@ -1,5 +1,12 @@
 # Changelog
 
+## [3.2.0](https://github.com/mcchrish/zenbones.nvim/compare/v3.1.0...v3.2.0) (2023-06-09)
+
+
+### Features
+
+* add more lsp hl group ([#121](https://github.com/mcchrish/zenbones.nvim/issues/121)) ([0cb5aff](https://github.com/mcchrish/zenbones.nvim/commit/0cb5aff21dac1cbd96bcfc476dd9da8dc3895d31))
+
 ## [3.1.0](https://github.com/mcchrish/zenbones.nvim/compare/v3.0.0...v3.1.0) (2023-04-09)
 
 
