@@ -18,7 +18,6 @@ contrasts and font variations.
 
 REQUIREMENT                               *zenbones-documentation-requirement*
 
-
 - Neovim v0.8.0 (use v2.0.0 for older versions) or Vim 8.1
 
 
