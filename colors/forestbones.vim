@@ -148,6 +148,11 @@ if &background ==# 'dark'
     highlight NeogitHunkHeaderHighlight guifg=#E7DCC4 guibg=#313A41 guisp=NONE gui=bold cterm=bold
     highlight! link NnnNormalNC NnnNormal
     highlight! link NnnVertSplit NnnWinSeparator
+    highlight NoiceCmdlineIcon guifg=#7FBCB4 guibg=NONE guisp=NONE gui=NONE cterm=NONE
+    highlight! link NoiceCmdlinePopupBorder NoiceCmdlineIcon
+    highlight! link NoiceCmdlinePopupTitle NoiceCmdlineIcon
+    highlight! link NoiceConfirmBorder NoiceCmdlineIcon
+    highlight NoiceCompletionItemKindDefault guifg=#ADA28B guibg=NONE guisp=NONE gui=NONE cterm=NONE
     highlight NonText guifg=#5D6D78 guibg=NONE guisp=NONE gui=NONE cterm=NONE
     highlight! link EndOfBuffer NonText
     highlight! link Whitespace NonText
@@ -206,6 +211,8 @@ if &background ==# 'dark'
     highlight Visual guifg=NONE guibg=#615B51 guisp=NONE gui=NONE cterm=NONE
     highlight WarningMsg guifg=#DDBD7F guibg=NONE guisp=NONE gui=NONE cterm=NONE
     highlight! link DiagnosticWarn WarningMsg
+    highlight! link NoiceCmdlineIconSearch WarningMsg
+    highlight! link NoiceCmdlinePopupBorderSearch WarningMsg
     highlight! link gitcommitOverflow WarningMsg
     highlight WhichKeySeparator guifg=#667783 guibg=NONE guisp=NONE gui=NONE cterm=NONE
     highlight WildMenu guifg=#2C343A guibg=#D69AB7 guisp=NONE gui=NONE cterm=NONE
@@ -379,6 +386,11 @@ else
     highlight NeogitHunkHeaderHighlight guifg=#4F5B62 guibg=#F6EBC8 guisp=NONE gui=bold cterm=bold
     highlight! link NnnNormalNC NnnNormal
     highlight! link NnnVertSplit NnnWinSeparator
+    highlight NoiceCmdlineIcon guifg=#3A94C4 guibg=NONE guisp=NONE gui=NONE cterm=NONE
+    highlight! link NoiceCmdlinePopupBorder NoiceCmdlineIcon
+    highlight! link NoiceCmdlinePopupTitle NoiceCmdlineIcon
+    highlight! link NoiceConfirmBorder NoiceCmdlineIcon
+    highlight NoiceCompletionItemKindDefault guifg=#73848D guibg=NONE guisp=NONE gui=NONE cterm=NONE
     highlight NonText guifg=#C0B079 guibg=NONE guisp=NONE gui=NONE cterm=NONE
     highlight! link EndOfBuffer NonText
     highlight! link Whitespace NonText
@@ -437,6 +449,8 @@ else
     highlight Visual guifg=NONE guibg=#D3DFE6 guisp=NONE gui=NONE cterm=NONE
     highlight WarningMsg guifg=#DEA000 guibg=NONE guisp=NONE gui=NONE cterm=NONE
     highlight! link DiagnosticWarn WarningMsg
+    highlight! link NoiceCmdlineIconSearch WarningMsg
+    highlight! link NoiceCmdlinePopupBorderSearch WarningMsg
     highlight! link gitcommitOverflow WarningMsg
     highlight WhichKeySeparator guifg=#A99B6A guibg=NONE guisp=NONE gui=NONE cterm=NONE
     highlight WildMenu guifg=#FAF3E1 guibg=#DF69BA guisp=NONE gui=NONE cterm=NONE

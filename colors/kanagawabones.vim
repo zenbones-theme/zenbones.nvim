@@ -149,6 +149,11 @@ if &background ==# 'dark'
     highlight NeogitHunkHeaderHighlight guifg=#DDD8BB guibg=#272732 guisp=NONE gui=bold cterm=bold
     highlight! link NnnNormalNC NnnNormal
     highlight! link NnnVertSplit NnnWinSeparator
+    highlight NoiceCmdlineIcon guifg=#7EB3C9 guibg=NONE guisp=NONE gui=NONE cterm=NONE
+    highlight! link NoiceCmdlinePopupBorder NoiceCmdlineIcon
+    highlight! link NoiceCmdlinePopupTitle NoiceCmdlineIcon
+    highlight! link NoiceConfirmBorder NoiceCmdlineIcon
+    highlight NoiceCompletionItemKindDefault guifg=#A29E89 guibg=NONE guisp=NONE gui=NONE cterm=NONE
     highlight NonText guifg=#58586A guibg=NONE guisp=NONE gui=NONE cterm=NONE
     highlight! link EndOfBuffer NonText
     highlight! link Whitespace NonText
@@ -207,6 +212,8 @@ if &background ==# 'dark'
     highlight Visual guifg=NONE guibg=#49473E guisp=NONE gui=NONE cterm=NONE
     highlight WarningMsg guifg=#E5C283 guibg=NONE guisp=NONE gui=NONE cterm=NONE
     highlight! link DiagnosticWarn WarningMsg
+    highlight! link NoiceCmdlineIconSearch WarningMsg
+    highlight! link NoiceCmdlinePopupBorderSearch WarningMsg
     highlight! link gitcommitOverflow WarningMsg
     highlight WhichKeySeparator guifg=#646476 guibg=NONE guisp=NONE gui=NONE cterm=NONE
     highlight WildMenu guifg=#1F1F28 guibg=#957FB8 guisp=NONE gui=NONE cterm=NONE
