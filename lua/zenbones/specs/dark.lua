@@ -427,6 +427,14 @@ local function generate(p, opt)
 			MasonMutedBlockBold	             { MasonMutedBlock, gui = "bold" },
 			MasonHeader	                     { fg = p1.bg, bg = p.wood, gui = "bold" },
 			MasonError                       { Error },
+
+			NoiceCmdlineIcon                 { fg = p.water },
+			NoiceCmdlineIconSearch           { WarningMsg },
+			NoiceCmdlinePopupBorder          { NoiceCmdlineIcon },
+			NoiceCmdlinePopupBorderSearch    { WarningMsg },
+			NoiceCmdlinePopupTitle           { NoiceCmdlineIcon },
+			NoiceCompletionItemKindDefault   { fg = p1.fg4 },
+			NoiceConfirmBorder               { NoiceCmdlineIcon },
 		}
 	end)
 	-- stylua: ignore end
