@@ -1,5 +1,12 @@
 # Changelog
 
+## [3.3.0](https://github.com/mcchrish/zenbones.nvim/compare/v3.2.0...v3.3.0) (2023-06-26)
+
+
+### Features
+
+* **main:** noice support ([729110b](https://github.com/mcchrish/zenbones.nvim/commit/729110be6e0b6f74d1c9a4d14322f3a79206e397))
+
 ## [3.2.0](https://github.com/mcchrish/zenbones.nvim/compare/v3.1.0...v3.2.0) (2023-06-09)
 
 
