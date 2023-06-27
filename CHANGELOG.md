@@ -1,5 +1,12 @@
 # Changelog
 
+## [3.3.1](https://github.com/mcchrish/zenbones.nvim/compare/v3.3.0...v3.3.1) (2023-06-27)
+
+
+### Bug Fixes
+
+* **build:** remove neovim only plugins in compat ([10b299a](https://github.com/mcchrish/zenbones.nvim/commit/10b299a7bd5d8dc9ff28561fa8d8a69277d35721))
+
 ## [3.3.0](https://github.com/mcchrish/zenbones.nvim/compare/v3.2.0...v3.3.0) (2023-06-26)
 
 
