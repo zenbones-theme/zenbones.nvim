@@ -35,12 +35,6 @@ if &background ==# 'dark'
     highlight BufferVisible guifg=#EDE5D4 guibg=NONE guisp=NONE gui=NONE cterm=NONE
     highlight BufferVisibleIndex guifg=#EDE5D4 guibg=NONE guisp=NONE gui=NONE cterm=NONE
     highlight BufferVisibleSign guifg=#EDE5D4 guibg=NONE guisp=NONE gui=NONE cterm=NONE
-    highlight CmpItemAbbr guifg=#C6BAA0 guibg=NONE guisp=NONE gui=NONE cterm=NONE
-    highlight CmpItemAbbrDeprecated guifg=#817967 guibg=NONE guisp=NONE gui=NONE cterm=NONE
-    highlight CmpItemAbbrMatch guifg=#E7DCC4 guibg=NONE guisp=NONE gui=bold cterm=bold
-    highlight CmpItemAbbrMatchFuzzy guifg=#CFC3A7 guibg=NONE guisp=NONE gui=bold cterm=bold
-    highlight CmpItemKind guifg=#ADA28B guibg=NONE guisp=NONE gui=NONE cterm=NONE
-    highlight CmpItemMenu guifg=#9F9580 guibg=NONE guisp=NONE gui=NONE cterm=NONE
     highlight CocMarkdownLink guifg=#83C193 guibg=NONE guisp=NONE gui=underline cterm=underline
     highlight ColorColumn guifg=NONE guibg=#685A41 guisp=NONE gui=NONE cterm=NONE
     highlight! link LspReferenceRead ColorColumn
@@ -58,15 +52,11 @@ if &background ==# 'dark'
     highlight CursorLine guifg=NONE guibg=#313A41 guisp=NONE gui=NONE cterm=NONE
     highlight! link CocMenuSel CursorLine
     highlight! link CursorColumn CursorLine
-    highlight! link NeogitDiffContextHighlight CursorLine
-    highlight! link TelescopeSelection CursorLine
     highlight CursorLineNr guifg=#E7DCC4 guibg=NONE guisp=NONE gui=bold cterm=bold
     highlight Delimiter guifg=#7B8E9D guibg=NONE guisp=NONE gui=NONE cterm=NONE
     highlight! link markdownLinkTextDelimiter Delimiter
-    highlight! link NeogitNotificationError DiagnosticError
     highlight DiagnosticHint guifg=#D69AB7 guibg=NONE guisp=NONE gui=NONE cterm=NONE
     highlight DiagnosticInfo guifg=#7FBCB4 guibg=NONE guisp=NONE gui=NONE cterm=NONE
-    highlight! link NeogitNotificationInfo DiagnosticInfo
     highlight DiagnosticSignError guifg=#E67C7F guibg=NONE guisp=NONE gui=NONE cterm=NONE
     highlight! link CocErrorSign DiagnosticSignError
     highlight DiagnosticSignHint guifg=#D69AB7 guibg=NONE guisp=NONE gui=NONE cterm=NONE
@@ -91,18 +81,14 @@ if &background ==# 'dark'
     highlight! link CocWarningVitualText DiagnosticVirtualTextWarn
     highlight! link DiagnosticDeprecated DiagnosticWarn
     highlight! link DiagnosticUnnecessary DiagnosticWarn
-    highlight! link NeogitNotificationWarning DiagnosticWarn
     highlight DiffAdd guifg=NONE guibg=#3E482D guisp=NONE gui=NONE cterm=NONE
-    highlight! link NeogitDiffAddHighlight DiffAdd
     highlight DiffChange guifg=NONE guibg=#304946 guisp=NONE gui=NONE cterm=NONE
     highlight DiffDelete guifg=NONE guibg=#643839 guisp=NONE gui=NONE cterm=NONE
-    highlight! link NeogitDiffDeleteHighlight DiffDelete
     highlight DiffText guifg=#E7DCC4 guibg=#456763 guisp=NONE gui=NONE cterm=NONE
     highlight Directory guifg=NONE guibg=NONE guisp=NONE gui=bold cterm=bold
     highlight Error guifg=#E67C7F guibg=NONE guisp=NONE gui=NONE cterm=NONE
     highlight! link DiagnosticError Error
     highlight! link ErrorMsg Error
-    highlight! link MasonError Error
     highlight FloatBorder guifg=#798B9A guibg=NONE guisp=NONE gui=NONE cterm=NONE
     highlight FoldColumn guifg=#667783 guibg=NONE guisp=NONE gui=bold cterm=bold
     highlight Folded guifg=#9CB4C6 guibg=#424D55 guisp=NONE gui=NONE cterm=NONE
@@ -115,59 +101,25 @@ if &background ==# 'dark'
     highlight! link GitGutterChange GitSignsChange
     highlight GitSignsDelete guifg=#E67C7F guibg=NONE guisp=NONE gui=NONE cterm=NONE
     highlight! link GitGutterDelete GitSignsDelete
-    highlight HopNextKey guifg=#D69AB7 guibg=NONE guisp=NONE gui=bold,underline cterm=bold,underline
-    highlight HopNextKey1 guifg=#83C193 guibg=NONE guisp=NONE gui=bold,underline cterm=bold,underline
-    highlight HopNextKey2 guifg=#7FBCB4 guibg=NONE guisp=NONE gui=NONE cterm=NONE
-    highlight HopUnmatched guifg=#6E7B85 guibg=NONE guisp=NONE gui=NONE cterm=NONE
     highlight Identifier guifg=#C6BAA0 guibg=NONE guisp=NONE gui=NONE cterm=NONE
     highlight IncSearch guifg=#2C343A guibg=#DFB2C7 guisp=NONE gui=bold cterm=bold
     highlight! link CurSearch IncSearch
-    highlight! link LeapLabelSelected IncSearch
     highlight IndentBlanklineChar guifg=#444C53 guibg=NONE guisp=NONE gui=NONE cterm=NONE
     highlight Italic guifg=NONE guibg=NONE guisp=NONE gui=italic cterm=italic
-    highlight LeapLabelPrimary guifg=#E7DCC4 guibg=#9E5179 guisp=NONE gui=bold,nocombine cterm=bold,nocombine
-    highlight LeapLabelSecondary guifg=#E7DCC4 guibg=#456763 guisp=NONE gui=bold,nocombine cterm=bold,nocombine
-    highlight LeapMatch guifg=NONE guibg=NONE guisp=NONE gui=bold,underline,nocombine cterm=bold,underline,nocombine
     highlight LineNr guifg=#667783 guibg=NONE guisp=NONE gui=NONE cterm=NONE
     highlight! link CocCodeLens LineNr
     highlight! link LspCodeLens LineNr
-    highlight! link NeogitHunkHeader LineNr
     highlight! link SignColumn LineNr
-    highlight MasonHeader guifg=#2C343A guibg=#DDBD7F guisp=NONE gui=bold cterm=bold
-    highlight MasonHighlight guifg=#7FBCB4 guibg=NONE guisp=NONE gui=NONE cterm=NONE
-    highlight MasonHighlightBlock guifg=#2C343A guibg=#7FBCB4 guisp=NONE gui=NONE cterm=NONE
-    highlight MasonHighlightBlockBold guifg=#2C343A guibg=#7FBCB4 guisp=NONE gui=bold cterm=bold
-    highlight MasonHighlightBlockBoldSecondary guifg=#2C343A guibg=#DDBD7F guisp=NONE gui=bold cterm=bold
-    highlight MasonHighlightBlockSecondary guifg=#2C343A guibg=#DDBD7F guisp=NONE gui=NONE cterm=NONE
-    highlight MasonHighlightSecondary guifg=#DDBD7F guibg=NONE guisp=NONE gui=NONE cterm=NONE
-    highlight MasonMuted guifg=#ADA28B guibg=NONE guisp=NONE gui=NONE cterm=NONE
-    highlight MasonMutedBlock guifg=#2C343A guibg=#ADA28B guisp=NONE gui=NONE cterm=NONE
-    highlight MasonMutedBlockBold guifg=#2C343A guibg=#ADA28B guisp=NONE gui=bold cterm=bold
     highlight MoreMsg guifg=#A9C181 guibg=NONE guisp=NONE gui=bold cterm=bold
     highlight! link Question MoreMsg
-    highlight NeogitHunkHeaderHighlight guifg=#E7DCC4 guibg=#313A41 guisp=NONE gui=bold cterm=bold
     highlight! link NnnNormalNC NnnNormal
     highlight! link NnnVertSplit NnnWinSeparator
-    highlight NoiceCmdlineIcon guifg=#7FBCB4 guibg=NONE guisp=NONE gui=NONE cterm=NONE
-    highlight! link NoiceCmdlinePopupBorder NoiceCmdlineIcon
-    highlight! link NoiceCmdlinePopupTitle NoiceCmdlineIcon
-    highlight! link NoiceConfirmBorder NoiceCmdlineIcon
-    highlight NoiceCompletionItemKindDefault guifg=#ADA28B guibg=NONE guisp=NONE gui=NONE cterm=NONE
     highlight NonText guifg=#5D6D78 guibg=NONE guisp=NONE gui=NONE cterm=NONE
     highlight! link EndOfBuffer NonText
     highlight! link Whitespace NonText
     highlight NormalFloat guifg=NONE guibg=#3B464E guisp=NONE gui=NONE cterm=NONE
     highlight Number guifg=#E7DCC4 guibg=NONE guisp=NONE gui=italic cterm=italic
     highlight! link Boolean Number
-    highlight NvimTreeCursorLine guifg=NONE guibg=#353F46 guisp=NONE gui=NONE cterm=NONE
-    highlight! link NvimTreeCursorColumn NvimTreeCursorLine
-    highlight NvimTreeNormal guifg=#E7DCC4 guibg=#2F383F guisp=NONE gui=NONE cterm=NONE
-    highlight! link NnnNormal NvimTreeNormal
-    highlight NvimTreeRootFolder guifg=#7FBCB4 guibg=NONE guisp=NONE gui=bold cterm=bold
-    highlight NvimTreeSpecialFile guifg=#D69AB7 guibg=NONE guisp=NONE gui=underline cterm=underline
-    highlight NvimTreeSymlink guifg=#7FBCB4 guibg=NONE guisp=NONE gui=NONE cterm=NONE
-    highlight NvimTreeWinSeparator guifg=bg guibg=NONE guisp=NONE gui=NONE cterm=NONE
-    highlight! link NnnWinSeparator NvimTreeWinSeparator
     highlight Pmenu guifg=NONE guibg=#3B464E guisp=NONE gui=NONE cterm=NONE
     highlight PmenuSbar guifg=NONE guibg=#606F7B guisp=NONE gui=NONE cterm=NONE
     highlight PmenuSel guifg=NONE guibg=#4E5B65 guisp=NONE gui=NONE cterm=NONE
@@ -197,9 +149,6 @@ if &background ==# 'dark'
     highlight! link TabLineFill StatusLineNC
     highlight TabLineSel guifg=NONE guibg=NONE guisp=NONE gui=bold cterm=bold
     highlight! link BufferCurrent TabLineSel
-    highlight TelescopeBorder guifg=#798B9A guibg=NONE guisp=NONE gui=NONE cterm=NONE
-    highlight TelescopeMatching guifg=#D69AB7 guibg=NONE guisp=NONE gui=bold cterm=bold
-    highlight TelescopeSelectionCaret guifg=#E67C7F guibg=#313A41 guisp=NONE gui=NONE cterm=NONE
     highlight Title guifg=#E7DCC4 guibg=NONE guisp=NONE gui=bold cterm=bold
     highlight Todo guifg=NONE guibg=NONE guisp=NONE gui=bold,underline cterm=bold,underline
     highlight Type guifg=#7FBCB4 guibg=NONE guisp=NONE gui=NONE cterm=NONE
@@ -211,23 +160,18 @@ if &background ==# 'dark'
     highlight Visual guifg=NONE guibg=#615B51 guisp=NONE gui=NONE cterm=NONE
     highlight WarningMsg guifg=#DDBD7F guibg=NONE guisp=NONE gui=NONE cterm=NONE
     highlight! link DiagnosticWarn WarningMsg
-    highlight! link NoiceCmdlineIconSearch WarningMsg
-    highlight! link NoiceCmdlinePopupBorderSearch WarningMsg
     highlight! link gitcommitOverflow WarningMsg
     highlight WhichKeySeparator guifg=#667783 guibg=NONE guisp=NONE gui=NONE cterm=NONE
     highlight WildMenu guifg=#2C343A guibg=#D69AB7 guisp=NONE gui=NONE cterm=NONE
     highlight! link SneakLabel WildMenu
     highlight diffAdded guifg=#A9C181 guibg=NONE guisp=NONE gui=NONE cterm=NONE
-    highlight! link NvimTreeGitNew diffAdded
     highlight diffChanged guifg=#7FBCB4 guibg=NONE guisp=NONE gui=NONE cterm=NONE
-    highlight! link NvimTreeGitDirty diffChanged
     highlight diffFile guifg=#DDBD7F guibg=NONE guisp=NONE gui=bold cterm=bold
     highlight diffIndexLine guifg=#DDBD7F guibg=NONE guisp=NONE gui=NONE cterm=NONE
     highlight diffLine guifg=#D69AB7 guibg=NONE guisp=NONE gui=bold cterm=bold
     highlight diffNewFile guifg=#A9C181 guibg=NONE guisp=NONE gui=italic cterm=italic
     highlight diffOldFile guifg=#E67C7F guibg=NONE guisp=NONE gui=italic cterm=italic
     highlight diffRemoved guifg=#E67C7F guibg=NONE guisp=NONE gui=NONE cterm=NONE
-    highlight! link NvimTreeGitDeleted diffRemoved
     highlight lCursor guifg=#2C343A guibg=#978D79 guisp=NONE gui=NONE cterm=NONE
     highlight! link TermCursorNC lCursor
     highlight markdownLinkText guifg=#C6BAA0 guibg=NONE guisp=NONE gui=underline cterm=underline
@@ -273,12 +217,6 @@ else
     highlight BufferVisible guifg=#758690 guibg=NONE guisp=NONE gui=NONE cterm=NONE
     highlight BufferVisibleIndex guifg=#758690 guibg=NONE guisp=NONE gui=NONE cterm=NONE
     highlight BufferVisibleSign guifg=#758690 guibg=NONE guisp=NONE gui=NONE cterm=NONE
-    highlight CmpItemAbbr guifg=#63727A guibg=NONE guisp=NONE gui=NONE cterm=NONE
-    highlight CmpItemAbbrDeprecated guifg=#8A9EAA guibg=NONE guisp=NONE gui=NONE cterm=NONE
-    highlight CmpItemAbbrMatch guifg=#4F5B62 guibg=NONE guisp=NONE gui=bold cterm=bold
-    highlight CmpItemAbbrMatchFuzzy guifg=#5E6D75 guibg=NONE guisp=NONE gui=bold cterm=bold
-    highlight CmpItemKind guifg=#73848D guibg=NONE guisp=NONE gui=NONE cterm=NONE
-    highlight CmpItemMenu guifg=#798C96 guibg=NONE guisp=NONE gui=NONE cterm=NONE
     highlight CocMarkdownLink guifg=#36A87E guibg=NONE guisp=NONE gui=underline cterm=underline
     highlight ColorColumn guifg=NONE guibg=#E9CDAD guisp=NONE gui=NONE cterm=NONE
     highlight! link LspReferenceRead ColorColumn
@@ -296,15 +234,11 @@ else
     highlight CursorLine guifg=NONE guibg=#F6EBC8 guisp=NONE gui=NONE cterm=NONE
     highlight! link CocMenuSel CursorLine
     highlight! link CursorColumn CursorLine
-    highlight! link NeogitDiffContextHighlight CursorLine
-    highlight! link TelescopeSelection CursorLine
     highlight CursorLineNr guifg=#4F5B62 guibg=NONE guisp=NONE gui=bold cterm=bold
     highlight Delimiter guifg=#92865B guibg=NONE guisp=NONE gui=NONE cterm=NONE
     highlight! link markdownLinkTextDelimiter Delimiter
-    highlight! link NeogitNotificationError DiagnosticError
     highlight DiagnosticHint guifg=#DF69BA guibg=NONE guisp=NONE gui=NONE cterm=NONE
     highlight DiagnosticInfo guifg=#3A94C4 guibg=NONE guisp=NONE gui=NONE cterm=NONE
-    highlight! link NeogitNotificationInfo DiagnosticInfo
     highlight DiagnosticSignError guifg=#F85550 guibg=NONE guisp=NONE gui=NONE cterm=NONE
     highlight! link CocErrorSign DiagnosticSignError
     highlight DiagnosticSignHint guifg=#DF69BA guibg=NONE guisp=NONE gui=NONE cterm=NONE
@@ -329,18 +263,14 @@ else
     highlight! link CocWarningVitualText DiagnosticVirtualTextWarn
     highlight! link DiagnosticDeprecated DiagnosticWarn
     highlight! link DiagnosticUnnecessary DiagnosticWarn
-    highlight! link NeogitNotificationWarning DiagnosticWarn
     highlight DiffAdd guifg=NONE guibg=#DDE7BD guisp=NONE gui=NONE cterm=NONE
-    highlight! link NeogitDiffAddHighlight DiffAdd
     highlight DiffChange guifg=NONE guibg=#DCE3EB guisp=NONE gui=NONE cterm=NONE
     highlight DiffDelete guifg=NONE guibg=#EEDFDF guisp=NONE gui=NONE cterm=NONE
-    highlight! link NeogitDiffDeleteHighlight DiffDelete
     highlight DiffText guifg=#4F5B62 guibg=#B0C3D4 guisp=NONE gui=NONE cterm=NONE
     highlight Directory guifg=NONE guibg=NONE guisp=NONE gui=bold cterm=bold
     highlight Error guifg=#F85550 guibg=NONE guisp=NONE gui=NONE cterm=NONE
     highlight! link DiagnosticError Error
     highlight! link ErrorMsg Error
-    highlight! link MasonError Error
     highlight FloatBorder guifg=#7C724D guibg=NONE guisp=NONE gui=NONE cterm=NONE
     highlight FoldColumn guifg=#A99B6A guibg=NONE guisp=NONE gui=bold cterm=bold
     highlight Folded guifg=#5A5236 guibg=#DAC98B guisp=NONE gui=NONE cterm=NONE
@@ -353,59 +283,25 @@ else
     highlight! link GitGutterChange GitSignsChange
     highlight GitSignsDelete guifg=#F85550 guibg=NONE guisp=NONE gui=NONE cterm=NONE
     highlight! link GitGutterDelete GitSignsDelete
-    highlight HopNextKey guifg=#DF69BA guibg=NONE guisp=NONE gui=bold,underline cterm=bold,underline
-    highlight HopNextKey1 guifg=#36A87E guibg=NONE guisp=NONE gui=bold,underline cterm=bold,underline
-    highlight HopNextKey2 guifg=#3A94C4 guibg=NONE guisp=NONE gui=NONE cterm=NONE
-    highlight HopUnmatched guifg=#9A9071 guibg=NONE guisp=NONE gui=NONE cterm=NONE
     highlight Identifier guifg=#63727A guibg=NONE guisp=NONE gui=NONE cterm=NONE
     highlight IncSearch guifg=#FAF3E1 guibg=#DF69BA guisp=NONE gui=bold cterm=bold
     highlight! link CurSearch IncSearch
-    highlight! link LeapLabelSelected IncSearch
     highlight IndentBlanklineChar guifg=#E0D19F guibg=NONE guisp=NONE gui=NONE cterm=NONE
     highlight Italic guifg=NONE guibg=NONE guisp=NONE gui=italic cterm=italic
-    highlight LeapLabelPrimary guifg=#4F5B62 guibg=#EEBADB guisp=NONE gui=bold,nocombine cterm=bold,nocombine
-    highlight LeapLabelSecondary guifg=#4F5B62 guibg=#B0C3D4 guisp=NONE gui=bold,nocombine cterm=bold,nocombine
-    highlight LeapMatch guifg=NONE guibg=NONE guisp=NONE gui=bold,underline,nocombine cterm=bold,underline,nocombine
     highlight LineNr guifg=#A99B6A guibg=NONE guisp=NONE gui=NONE cterm=NONE
     highlight! link CocCodeLens LineNr
     highlight! link LspCodeLens LineNr
-    highlight! link NeogitHunkHeader LineNr
     highlight! link SignColumn LineNr
-    highlight MasonHeader guifg=#FAF3E1 guibg=#DEA000 guisp=NONE gui=bold cterm=bold
-    highlight MasonHighlight guifg=#3A94C4 guibg=NONE guisp=NONE gui=NONE cterm=NONE
-    highlight MasonHighlightBlock guifg=#FAF3E1 guibg=#3A94C4 guisp=NONE gui=NONE cterm=NONE
-    highlight MasonHighlightBlockBold guifg=#FAF3E1 guibg=#3A94C4 guisp=NONE gui=bold cterm=bold
-    highlight MasonHighlightBlockBoldSecondary guifg=#FAF3E1 guibg=#DEA000 guisp=NONE gui=bold cterm=bold
-    highlight MasonHighlightBlockSecondary guifg=#FAF3E1 guibg=#DEA000 guisp=NONE gui=NONE cterm=NONE
-    highlight MasonHighlightSecondary guifg=#DEA000 guibg=NONE guisp=NONE gui=NONE cterm=NONE
-    highlight MasonMuted guifg=#73848D guibg=NONE guisp=NONE gui=NONE cterm=NONE
-    highlight MasonMutedBlock guifg=#FAF3E1 guibg=#73848D guisp=NONE gui=NONE cterm=NONE
-    highlight MasonMutedBlockBold guifg=#FAF3E1 guibg=#73848D guisp=NONE gui=bold cterm=bold
     highlight MoreMsg guifg=#8DA200 guibg=NONE guisp=NONE gui=bold cterm=bold
     highlight! link Question MoreMsg
-    highlight NeogitHunkHeaderHighlight guifg=#4F5B62 guibg=#F6EBC8 guisp=NONE gui=bold cterm=bold
     highlight! link NnnNormalNC NnnNormal
     highlight! link NnnVertSplit NnnWinSeparator
-    highlight NoiceCmdlineIcon guifg=#3A94C4 guibg=NONE guisp=NONE gui=NONE cterm=NONE
-    highlight! link NoiceCmdlinePopupBorder NoiceCmdlineIcon
-    highlight! link NoiceCmdlinePopupTitle NoiceCmdlineIcon
-    highlight! link NoiceConfirmBorder NoiceCmdlineIcon
-    highlight NoiceCompletionItemKindDefault guifg=#73848D guibg=NONE guisp=NONE gui=NONE cterm=NONE
     highlight NonText guifg=#C0B079 guibg=NONE guisp=NONE gui=NONE cterm=NONE
     highlight! link EndOfBuffer NonText
     highlight! link Whitespace NonText
     highlight NormalFloat guifg=NONE guibg=#F0DC99 guisp=NONE gui=NONE cterm=NONE
     highlight Number guifg=#4F5B62 guibg=NONE guisp=NONE gui=italic cterm=italic
     highlight! link Boolean Number
-    highlight NvimTreeCursorLine guifg=NONE guibg=#F3E2AA guisp=NONE gui=NONE cterm=NONE
-    highlight! link NvimTreeCursorColumn NvimTreeCursorLine
-    highlight NvimTreeNormal guifg=#4F5B62 guibg=#F6EBC8 guisp=NONE gui=NONE cterm=NONE
-    highlight! link NnnNormal NvimTreeNormal
-    highlight NvimTreeRootFolder guifg=#3A94C4 guibg=NONE guisp=NONE gui=bold cterm=bold
-    highlight NvimTreeSpecialFile guifg=#DF69BA guibg=NONE guisp=NONE gui=underline cterm=underline
-    highlight NvimTreeSymlink guifg=#3A94C4 guibg=NONE guisp=NONE gui=NONE cterm=NONE
-    highlight NvimTreeWinSeparator guifg=bg guibg=NONE guisp=NONE gui=NONE cterm=NONE
-    highlight! link NnnWinSeparator NvimTreeWinSeparator
     highlight Pmenu guifg=NONE guibg=#E9D795 guisp=NONE gui=NONE cterm=NONE
     highlight PmenuSbar guifg=NONE guibg=#B7A874 guisp=NONE gui=NONE cterm=NONE
     highlight PmenuSel guifg=NONE guibg=#CFBE83 guisp=NONE gui=NONE cterm=NONE
@@ -435,9 +331,6 @@ else
     highlight! link TabLineFill StatusLineNC
     highlight TabLineSel guifg=NONE guibg=NONE guisp=NONE gui=bold cterm=bold
     highlight! link BufferCurrent TabLineSel
-    highlight TelescopeBorder guifg=#7C724D guibg=NONE guisp=NONE gui=NONE cterm=NONE
-    highlight TelescopeMatching guifg=#DF69BA guibg=NONE guisp=NONE gui=bold cterm=bold
-    highlight TelescopeSelectionCaret guifg=#F85550 guibg=#F6EBC8 guisp=NONE gui=NONE cterm=NONE
     highlight Title guifg=#4F5B62 guibg=NONE guisp=NONE gui=bold cterm=bold
     highlight Todo guifg=NONE guibg=NONE guisp=NONE gui=bold,underline cterm=bold,underline
     highlight Type guifg=#3A94C4 guibg=NONE guisp=NONE gui=NONE cterm=NONE
@@ -449,23 +342,18 @@ else
     highlight Visual guifg=NONE guibg=#D3DFE6 guisp=NONE gui=NONE cterm=NONE
     highlight WarningMsg guifg=#DEA000 guibg=NONE guisp=NONE gui=NONE cterm=NONE
     highlight! link DiagnosticWarn WarningMsg
-    highlight! link NoiceCmdlineIconSearch WarningMsg
-    highlight! link NoiceCmdlinePopupBorderSearch WarningMsg
     highlight! link gitcommitOverflow WarningMsg
     highlight WhichKeySeparator guifg=#A99B6A guibg=NONE guisp=NONE gui=NONE cterm=NONE
     highlight WildMenu guifg=#FAF3E1 guibg=#DF69BA guisp=NONE gui=NONE cterm=NONE
     highlight! link SneakLabel WildMenu
     highlight diffAdded guifg=#8DA200 guibg=NONE guisp=NONE gui=NONE cterm=NONE
-    highlight! link NvimTreeGitNew diffAdded
     highlight diffChanged guifg=#3A94C4 guibg=NONE guisp=NONE gui=NONE cterm=NONE
-    highlight! link NvimTreeGitDirty diffChanged
     highlight diffFile guifg=#DEA000 guibg=NONE guisp=NONE gui=bold cterm=bold
     highlight diffIndexLine guifg=#DEA000 guibg=NONE guisp=NONE gui=NONE cterm=NONE
     highlight diffLine guifg=#DF69BA guibg=NONE guisp=NONE gui=bold cterm=bold
     highlight diffNewFile guifg=#8DA200 guibg=NONE guisp=NONE gui=italic cterm=italic
     highlight diffOldFile guifg=#F85550 guibg=NONE guisp=NONE gui=italic cterm=italic
     highlight diffRemoved guifg=#F85550 guibg=NONE guisp=NONE gui=NONE cterm=NONE
-    highlight! link NvimTreeGitDeleted diffRemoved
     highlight lCursor guifg=#FAF3E1 guibg=#697982 guisp=NONE gui=NONE cterm=NONE
     highlight! link TermCursorNC lCursor
     highlight markdownLinkText guifg=#63727A guibg=NONE guisp=NONE gui=underline cterm=underline
