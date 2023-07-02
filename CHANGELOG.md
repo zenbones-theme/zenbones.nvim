@@ -1,5 +1,12 @@
 # Changelog
 
+## [3.3.2](https://github.com/mcchrish/zenbones.nvim/compare/v3.3.1...v3.3.2) (2023-07-02)
+
+
+### Bug Fixes
+
+* **main:** support flash.nvim ([f8fe7b1](https://github.com/mcchrish/zenbones.nvim/commit/f8fe7b163c3c898a1de465112b3965dca7689000))
+
 ## [3.3.1](https://github.com/mcchrish/zenbones.nvim/compare/v3.3.0...v3.3.1) (2023-06-27)
 
 
