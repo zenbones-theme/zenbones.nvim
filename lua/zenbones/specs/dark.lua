@@ -437,6 +437,7 @@ local function generate(p, opt)
 			NoiceConfirmBorder               { NoiceCmdlineIcon },
 
 			FlashLabel                       { bg = p.water.lightness(p1.bg.l + 24), fg = p.fg },
+			FlashBackdrop                    { fg = Comment.fg },
 		}
 	end)
 	-- stylua: ignore end
