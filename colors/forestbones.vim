@@ -89,6 +89,7 @@ if &background ==# 'dark'
     highlight Error guifg=#E67C7F guibg=NONE guisp=NONE gui=NONE cterm=NONE
     highlight! link DiagnosticError Error
     highlight! link ErrorMsg Error
+    highlight FlashLabel guifg=#E7DCC4 guibg=#4B726D guisp=NONE gui=NONE cterm=NONE
     highlight FloatBorder guifg=#798B9A guibg=NONE guisp=NONE gui=NONE cterm=NONE
     highlight FoldColumn guifg=#667783 guibg=NONE guisp=NONE gui=bold cterm=bold
     highlight Folded guifg=#9CB4C6 guibg=#424D55 guisp=NONE gui=NONE cterm=NONE
@@ -271,6 +272,7 @@ else
     highlight Error guifg=#F85550 guibg=NONE guisp=NONE gui=NONE cterm=NONE
     highlight! link DiagnosticError Error
     highlight! link ErrorMsg Error
+    highlight FlashLabel guifg=#4F5B62 guibg=#9ACFF8 guisp=NONE gui=NONE cterm=NONE
     highlight FloatBorder guifg=#7C724D guibg=NONE guisp=NONE gui=NONE cterm=NONE
     highlight FoldColumn guifg=#A99B6A guibg=NONE guisp=NONE gui=bold cterm=bold
     highlight Folded guifg=#5A5236 guibg=#DAC98B guisp=NONE gui=NONE cterm=NONE
