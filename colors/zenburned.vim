@@ -90,6 +90,7 @@ if &background ==# 'dark'
     highlight Error guifg=#E3716E guibg=NONE guisp=NONE gui=NONE cterm=NONE
     highlight! link DiagnosticError Error
     highlight! link ErrorMsg Error
+    highlight FlashBackdrop guifg=#848484 guibg=NONE guisp=NONE gui=NONE cterm=NONE
     highlight FlashLabel guifg=#F0E4CF guibg=#4F7F9F guisp=NONE gui=NONE cterm=NONE
     highlight FloatBorder guifg=#939393 guibg=NONE guisp=NONE gui=NONE cterm=NONE
     highlight FoldColumn guifg=#7F7F7F guibg=NONE guisp=NONE gui=bold cterm=bold
