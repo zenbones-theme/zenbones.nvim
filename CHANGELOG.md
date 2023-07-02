@@ -1,5 +1,12 @@
 # Changelog
 
+## [3.3.3](https://github.com/mcchrish/zenbones.nvim/compare/v3.3.2...v3.3.3) (2023-07-02)
+
+
+### Bug Fixes
+
+* FlashBackdrop ([b46b222](https://github.com/mcchrish/zenbones.nvim/commit/b46b2227c41ae0d4da594ac5f52dbff63f140beb))
+
 ## [3.3.2](https://github.com/mcchrish/zenbones.nvim/compare/v3.3.1...v3.3.2) (2023-07-02)
 
 
