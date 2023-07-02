@@ -435,6 +435,8 @@ local function generate(p, opt)
 			NoiceCmdlinePopupTitle           { NoiceCmdlineIcon },
 			NoiceCompletionItemKindDefault   { fg = p1.fg4 },
 			NoiceConfirmBorder               { NoiceCmdlineIcon },
+
+			FlashLabel                       { bg = p.water.lightness(p1.bg.l + 24), fg = p.fg },
 		}
 	end)
 	-- stylua: ignore end
