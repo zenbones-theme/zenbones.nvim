@@ -1,5 +1,12 @@
 # Changelog
 
+## [3.4.0](https://github.com/mcchrish/zenbones.nvim/compare/v3.3.3...v3.4.0) (2023-08-30)
+
+
+### Features
+
+* **main:** support nvim-notify ([#132](https://github.com/mcchrish/zenbones.nvim/issues/132)) ([dd4ad12](https://github.com/mcchrish/zenbones.nvim/commit/dd4ad1273defc46695ea3997f030661e4a893eb1))
+
 ## [3.3.3](https://github.com/mcchrish/zenbones.nvim/compare/v3.3.2...v3.3.3) (2023-07-02)
 
 
