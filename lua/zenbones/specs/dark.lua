@@ -438,6 +438,17 @@ local function generate(p, opt)
 
 			FlashLabel                       { bg = p.water.lightness(p1.bg.l + 24), fg = p.fg },
 			FlashBackdrop                    { fg = Comment.fg },
+
+			NotifyERRORIcon                  { DiagnosticError },
+			NotifyERRORTitle                 { DiagnosticError },
+			NotifyWARNIcon                   { DiagnosticWarn },
+			NotifyWARNTitle                  { DiagnosticWarn },
+			NotifyINFOIcon                   { DiagnosticInfo },
+			NotifyINFOTitle                  { DiagnosticInfo },
+			NotifyDEBUGIcon                  { DiagnosticHint },
+			NotifyDEBUGTitle                 { DiagnosticHint },
+			NotifyTRACEIcon                  { DiagnosticHint },
+			NotifyTRACETitle                 { DiagnosticHint },
 		}
 	end)
 	-- stylua: ignore end
