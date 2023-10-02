@@ -1,5 +1,12 @@
 # Changelog
 
+## [3.4.1](https://github.com/mcchrish/zenbones.nvim/compare/v3.4.0...v3.4.1) (2023-10-02)
+
+
+### Bug Fixes
+
+* support indent-blankline v3 ([#136](https://github.com/mcchrish/zenbones.nvim/issues/136)) ([01ac6cb](https://github.com/mcchrish/zenbones.nvim/commit/01ac6cbb1af9f5f49465e7478d5ab7fa1900abd2))
+
 ## [3.4.0](https://github.com/mcchrish/zenbones.nvim/compare/v3.3.3...v3.4.0) (2023-08-30)
 
 
