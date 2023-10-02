@@ -333,6 +333,7 @@ local function generate(p, opt)
 			GitGutterDelete                  { GitSignsDelete },
 
 			IndentBlanklineChar              { fg = p1.bg.li(14).de(22) },
+			IblIndent                        { fg = p1.bg.li(14).de(22) },
 
 			TelescopeSelection               { CursorLine },
 			TelescopeSelectionCaret          { TelescopeSelection, fg = p.rose },
