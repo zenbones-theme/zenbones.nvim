@@ -113,6 +113,7 @@ if &background ==# 'dark'
     highlight! link GitGutterChange GitSignsChange
     highlight GitSignsDelete guifg=#DE6E7C guibg=NONE guisp=NONE gui=NONE cterm=NONE
     highlight! link GitGutterDelete GitSignsDelete
+    highlight IblIndent guifg=#353535 guibg=NONE guisp=NONE gui=NONE cterm=NONE
     highlight Identifier guifg=#9E9E9E guibg=NONE guisp=NONE gui=NONE cterm=NONE
     highlight IncSearch guifg=#191919 guibg=#BF8FB5 guisp=NONE gui=bold cterm=bold
     highlight! link CurSearch IncSearch
@@ -307,6 +308,7 @@ else
     highlight! link GitGutterChange GitSignsChange
     highlight GitSignsDelete guifg=#A8334C guibg=NONE guisp=NONE gui=NONE cterm=NONE
     highlight! link GitGutterDelete GitSignsDelete
+    highlight IblIndent guifg=#CFCFCF guibg=NONE guisp=NONE gui=NONE cterm=NONE
     highlight Identifier guifg=#505050 guibg=NONE guisp=NONE gui=NONE cterm=NONE
     highlight IncSearch guifg=#EEEEEE guibg=#C074B2 guisp=NONE gui=bold cterm=bold
     highlight! link CurSearch IncSearch
