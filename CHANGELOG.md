@@ -1,5 +1,12 @@
 # Changelog
 
+## [3.5.0](https://github.com/mcchrish/zenbones.nvim/compare/v3.4.2...v3.5.0) (2023-10-30)
+
+
+### Features
+
+* DiagnosticOk ([#142](https://github.com/mcchrish/zenbones.nvim/issues/142)) ([c7b66be](https://github.com/mcchrish/zenbones.nvim/commit/c7b66be373d7576ad02b5ee9c847971421c6781c))
+
 ## [3.4.2](https://github.com/mcchrish/zenbones.nvim/compare/v3.4.1...v3.4.2) (2023-10-30)
 
 
