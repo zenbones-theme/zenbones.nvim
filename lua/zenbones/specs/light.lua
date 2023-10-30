@@ -168,6 +168,7 @@ local function generate(p, opt)
 			DiagnosticWarn             { WarningMsg },
 			DiagnosticInfo             { fg = p.water },
 			DiagnosticHint             { fg = p.blossom },
+			DiagnosticOk               { fg = p.leaf },
 			DiagnosticDeprecated       { DiagnosticWarn },
 			DiagnosticUnnecessary      { DiagnosticWarn },
 
@@ -175,16 +176,19 @@ local function generate(p, opt)
 			DiagnosticSignWarn         { SignColumn, fg = DiagnosticWarn.fg },
 			DiagnosticSignInfo         { SignColumn, fg = DiagnosticInfo.fg },
 			DiagnosticSignHint         { SignColumn, fg = DiagnosticHint.fg },
+			DiagnosticSignOk           { SignColumn, fg = DiagnosticOk.fg },
 
 			DiagnosticVirtualTextError { DiagnosticError, bg = DiagnosticError.fg.saturation(42).lightness(p1.bg.l - 4) },
-			DiagnosticVirtualTextWarn  { DiagnosticWarn, bg = DiagnosticWarn.fg.saturation(42).lightness(p1.bg.l - 4)},
+			DiagnosticVirtualTextWarn  { DiagnosticWarn, bg = DiagnosticWarn.fg.saturation(42).lightness(p1.bg.l - 4) },
 			DiagnosticVirtualTextInfo  { DiagnosticInfo, bg = DiagnosticInfo.fg.saturation(42).lightness(p1.bg.l - 4) },
-			DiagnosticVirtualTextHint  { DiagnosticHint, bg = DiagnosticHint.fg.saturation(42).lightness(p1.bg.l - 4)},
+			DiagnosticVirtualTextHint  { DiagnosticHint, bg = DiagnosticHint.fg.saturation(42).lightness(p1.bg.l - 4) },
+			DiagnosticVirtualTextOk    { DiagnosticOk, bg = DiagnosticOk.fg.saturation(42).lightness(p1.bg.l - 4) },
 
 			DiagnosticUnderlineError   { fg = opt.colorize_diagnostic_underline_text and DiagnosticError.fg or "NONE", gui = "undercurl", sp = DiagnosticError.fg },
 			DiagnosticUnderlineWarn    { fg = opt.colorize_diagnostic_underline_text and DiagnosticWarn.fg or "NONE", gui = "undercurl", sp = DiagnosticWarn.fg },
 			DiagnosticUnderlineInfo    { fg = opt.colorize_diagnostic_underline_text and DiagnosticInfo.fg or "NONE", gui = "undercurl", sp = DiagnosticInfo.fg },
 			DiagnosticUnderlineHint    { fg = opt.colorize_diagnostic_underline_text and DiagnosticHint.fg or "NONE", gui = "undercurl", sp = DiagnosticHint.fg },
+			DiagnosticUnderlineOk    { fg = opt.colorize_diagnostic_underline_text and DiagnosticOk.fg or "NONE", gui = "undercurl", sp = DiagnosticOk.fg },
 
 			-- Tree-sitter
 			sym "@annotation"            { PreProc },
