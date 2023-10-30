@@ -1,5 +1,12 @@
 # Changelog
 
+## [3.4.2](https://github.com/mcchrish/zenbones.nvim/compare/v3.4.1...v3.4.2) (2023-10-30)
+
+
+### Bug Fixes
+
+* add IblScope ([#140](https://github.com/mcchrish/zenbones.nvim/issues/140)) ([a2f1b4c](https://github.com/mcchrish/zenbones.nvim/commit/a2f1b4c6a28c2b4a4bc3bb1b0121c505b4974ee9))
+
 ## [3.4.1](https://github.com/mcchrish/zenbones.nvim/compare/v3.4.0...v3.4.1) (2023-10-02)
 
 
