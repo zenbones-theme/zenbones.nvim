@@ -332,8 +332,8 @@ local function generate(p, opt)
 			GitGutterChange                  { GitSignsChange },
 			GitGutterDelete                  { GitSignsDelete },
 
-			IndentBlanklineChar              { fg = p1.bg.da(12).de(20) },
-			IblIndent                        { fg = p1.bg.da(12).de(20) },
+			IblIndent                        { fg = p1.bg.da(6).de(20) },
+			IblScope                         { fg = p1.bg.da(22).de(20) },
 
 			TelescopeSelection               { CursorLine },
 			TelescopeSelectionCaret          { TelescopeSelection, fg = p.rose },
