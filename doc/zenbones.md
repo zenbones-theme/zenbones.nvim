@@ -115,7 +115,7 @@ local theme = require "zenbones" -- or any other flavor
 local palette = require "zenbones.palette"
 
 print(theme.StatusLine.bg.hex)
-print(palette.blossom.darken(20).hex)
+print(palette.dark.blossom.darken(20).hex)
 ```
 
 ### Extend/override highlights
