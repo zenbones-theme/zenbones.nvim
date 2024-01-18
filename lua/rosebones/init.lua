@@ -12,6 +12,7 @@ return lush.extends({ specs }).with(function()
 		Statement { fg = p.leaf },
 		Special { fg = p.water },
 		Type { fg = p.text },
+		ColorColumn { bg = p.bg1 },
 	}
 	-- selene: deny(undefined_variable)
 	---@diagnostic enable: undefined-global

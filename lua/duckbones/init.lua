@@ -8,7 +8,6 @@ return lush.extends({ specs }).with(function()
 	---@diagnostic disable: undefined-global
 	-- selene: allow(undefined_variable)
 	return {
-		Statement { specs.Statement, fg = p.blossom },
 		Special { fg = p.leaf },
 		PreProc { fg = p.sky },
 	}

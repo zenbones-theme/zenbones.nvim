@@ -13,6 +13,7 @@ return lush.extends({ specs }).with(function()
 		Function { fg = p.base.nord8 },
 		Statement { fg = p.base.nord9 },
 		Type { fg = p.base.nord10 },
+		ColorColumn { bg = p.base.nord0 },
 	}
 	-- selene: deny(undefined_variable)
 	---@diagnostic enable: undefined-global

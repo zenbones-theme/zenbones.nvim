@@ -27,6 +27,11 @@ else
 			helpHyperTextJump { fg = hsluv "#8ec77e" }, -- --link-color
 			helpOption { helpHyperTextJump },
 			markdownUrl { helpHyperTextJump },
+			Special { fg = p.water },
+			String { fg = p.leaf },
+			Constant { fg = p.leaf },
+			Statement { fg = p.sky },
+			ColorColumn { bg = p.bg1 },
 		}
 		-- selene: deny(undefined_variable)
 		---@diagnostic enable: undefined-global
