@@ -1,5 +1,22 @@
 # Changelog
 
+## [4.0.0](https://github.com/mcchrish/zenbones.nvim/compare/v3.5.0...v4.0.0) (2024-01-20)
+
+
+### ⚠ BREAKING CHANGES
+
+* **treesitter:** support nvim-treesitter@0.9.2 ([#151](https://github.com/mcchrish/zenbones.nvim/issues/151))
+
+### Features
+
+* **treesitter:** support nvim-treesitter@0.9.2 ([#151](https://github.com/mcchrish/zenbones.nvim/issues/151)) ([eed5f2d](https://github.com/mcchrish/zenbones.nvim/commit/eed5f2d3e3912994d8c16d4d56f73ca8d7b7f6d9))
+
+
+### Bug Fixes
+
+* **doc:** bug in example code ([#148](https://github.com/mcchrish/zenbones.nvim/issues/148)) ([3d2447e](https://github.com/mcchrish/zenbones.nvim/commit/3d2447e48a12a6af130669ad03f12441921a8b5e))
+* **lint:** allow mixed table ([#150](https://github.com/mcchrish/zenbones.nvim/issues/150)) ([22cfe4b](https://github.com/mcchrish/zenbones.nvim/commit/22cfe4b28e8bb5173624f69ac6bb2803d8653a12))
+
 ## [3.5.0](https://github.com/mcchrish/zenbones.nvim/compare/v3.4.2...v3.5.0) (2023-10-30)
 
 
