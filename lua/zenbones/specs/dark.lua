@@ -267,7 +267,7 @@ local function generate(p, opt)
 			sym "@comment.note"                 { DiagnosticInfo },
 
 			sym "@markup.strong"                { Bold },
-			sym "@markup.itailc"                { Italic },
+			sym "@markup.italic"                { Italic },
 			sym "@markup.strikethrough"         { gui = "strikethrough" },
 			sym "@markup.underline"             { Underlined },
 
