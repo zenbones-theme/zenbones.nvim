@@ -1,5 +1,12 @@
 # Changelog
 
+## [4.0.1](https://github.com/mcchrish/zenbones.nvim/compare/v4.0.0...v4.0.1) (2024-02-03)
+
+
+### Bug Fixes
+
+* markup italic typo ([#153](https://github.com/mcchrish/zenbones.nvim/issues/153)) ([90a56c9](https://github.com/mcchrish/zenbones.nvim/commit/90a56c97459c8511003778a25633f121bf3fc976))
+
 ## [4.0.0](https://github.com/mcchrish/zenbones.nvim/compare/v3.5.0...v4.0.0) (2024-01-20)
 
 
