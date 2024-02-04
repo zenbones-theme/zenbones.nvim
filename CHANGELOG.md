@@ -1,5 +1,13 @@
 # Changelog
 
+## [4.0.2](https://github.com/mcchrish/zenbones.nvim/compare/v4.0.1...v4.0.2) (2024-02-04)
+
+
+### Bug Fixes
+
+* **coc:** CocWarningVirtualText typo ([52b8939](https://github.com/mcchrish/zenbones.nvim/commit/52b893945e1a83bc8c2068e7968a5c648a587bfc))
+* **nordbones:** Identifer typo ([da9c6c3](https://github.com/mcchrish/zenbones.nvim/commit/da9c6c3404479926b799753ff693e002385067c1))
+
 ## [4.0.1](https://github.com/mcchrish/zenbones.nvim/compare/v4.0.0...v4.0.1) (2024-02-03)
 
 
