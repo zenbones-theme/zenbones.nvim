@@ -416,7 +416,7 @@ local function generate(p, opt)
 			CocInfoHighlight                 { DiagnosticUnderlineInfo },
 			CocHintHighlight                 { DiagnosticUnderlineHint },
 			CocErrorVirtualText              { DiagnosticVirtualTextError },
-			CocWarningVitualText             { DiagnosticVirtualTextWarn },
+			CocWarningVirtualText            { DiagnosticVirtualTextWarn },
 			CocMenuSel                       { CursorLine },
 			CocSelectedText                  { SpellBad },
 			CocCodeLens                      { LineNr },
