@@ -9,7 +9,7 @@ return lush.extends({ specs }).with(function()
 	-- selene: allow(undefined_variable)
 	return {
 		Number { fg = p.base.nord7, gui = "italic" },
-		Identifer { fg = p.dark.fg },
+		Identifier { fg = p.dark.fg },
 		Function { fg = p.base.nord8 },
 		Statement { fg = p.base.nord9 },
 		Type { fg = p.base.nord10 },
