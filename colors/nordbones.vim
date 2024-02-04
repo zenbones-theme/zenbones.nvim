@@ -91,7 +91,7 @@ if &background ==# 'dark'
     highlight DiagnosticVirtualTextInfo guifg=#8FBCBA guibg=#3B3E3E guisp=NONE gui=NONE cterm=NONE
     highlight DiagnosticVirtualTextOk guifg=#A4BE8D guibg=#3C3E3A guisp=NONE gui=NONE cterm=NONE
     highlight DiagnosticVirtualTextWarn guifg=#CF866F guibg=#433C3B guisp=NONE gui=NONE cterm=NONE
-    highlight! link CocWarningVitualText DiagnosticVirtualTextWarn
+    highlight! link CocWarningVirtualText DiagnosticVirtualTextWarn
     highlight! link DiagnosticDeprecated DiagnosticWarn
     highlight! link DiagnosticUnnecessary DiagnosticWarn
     highlight! link NotifyWARNIcon DiagnosticWarn

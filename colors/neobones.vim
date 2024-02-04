@@ -88,7 +88,7 @@ if &background ==# 'dark'
     highlight DiagnosticVirtualTextInfo guifg=#8190D4 guibg=#1F1F24 guisp=NONE gui=NONE cterm=NONE
     highlight DiagnosticVirtualTextOk guifg=#90FF6B guibg=#1E201E guisp=NONE gui=NONE cterm=NONE
     highlight DiagnosticVirtualTextWarn guifg=#B77E64 guibg=#221F1E guisp=NONE gui=NONE cterm=NONE
-    highlight! link CocWarningVitualText DiagnosticVirtualTextWarn
+    highlight! link CocWarningVirtualText DiagnosticVirtualTextWarn
     highlight! link DiagnosticDeprecated DiagnosticWarn
     highlight! link DiagnosticUnnecessary DiagnosticWarn
     highlight! link NotifyWARNIcon DiagnosticWarn
@@ -285,7 +285,7 @@ else
     highlight DiagnosticVirtualTextInfo guifg=#286486 guibg=#D5E1ED guisp=NONE gui=NONE cterm=NONE
     highlight DiagnosticVirtualTextOk guifg=#567A30 guibg=#C7EBA9 guisp=NONE gui=NONE cterm=NONE
     highlight DiagnosticVirtualTextWarn guifg=#944927 guibg=#EEDCD8 guisp=NONE gui=NONE cterm=NONE
-    highlight! link CocWarningVitualText DiagnosticVirtualTextWarn
+    highlight! link CocWarningVirtualText DiagnosticVirtualTextWarn
     highlight! link DiagnosticDeprecated DiagnosticWarn
     highlight! link DiagnosticUnnecessary DiagnosticWarn
     highlight! link NotifyWARNIcon DiagnosticWarn
