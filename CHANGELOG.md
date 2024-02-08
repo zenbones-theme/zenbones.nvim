@@ -1,5 +1,12 @@
 # Changelog
 
+## [4.1.0](https://github.com/mcchrish/zenbones.nvim/compare/v4.0.2...v4.1.0) (2024-02-08)
+
+
+### Features
+
+* generate Alacritty files in toml instead of yaml ([#158](https://github.com/mcchrish/zenbones.nvim/issues/158)) ([7abac65](https://github.com/mcchrish/zenbones.nvim/commit/7abac65da3a19767314e6bc42e98631a45f178a4))
+
 ## [4.0.2](https://github.com/mcchrish/zenbones.nvim/compare/v4.0.1...v4.0.2) (2024-02-04)
 
 
