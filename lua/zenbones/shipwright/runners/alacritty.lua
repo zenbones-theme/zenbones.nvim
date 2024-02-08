@@ -1,4 +1,4 @@
-local helpers = require("shipwright.transform.helpers")
+local helpers = require "shipwright.transform.helpers"
 
 local base_template = [[
 [colors.bright]
