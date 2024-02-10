@@ -46,7 +46,6 @@ if &background ==# 'dark'
     highlight Constant guifg=#9EAFC9 guibg=NONE guisp=NONE gui=italic cterm=italic
     highlight! link TroubleSource Constant
     highlight! link WhichKeyValue Constant
-    highlight! link helpHyperTextJump Constant
     highlight! link helpOption Constant
     highlight Cursor guifg=#2F3541 guibg=#EEF1F5 guisp=NONE gui=NONE cterm=NONE
     highlight! link TermCursor Cursor
@@ -149,7 +148,6 @@ if &background ==# 'dark'
     highlight SneakLabelMask guifg=#B38DAC guibg=#B38DAC guisp=NONE gui=NONE cterm=NONE
     highlight Special guifg=#ABBAD0 guibg=NONE guisp=NONE gui=bold cterm=bold
     highlight! link WhichKeyGroup Special
-    highlight! link helpHyperTextEntry Special
     highlight SpecialComment guifg=#737C90 guibg=NONE guisp=NONE gui=NONE cterm=NONE
     highlight! link markdownUrl SpecialComment
     highlight SpecialKey guifg=#606B81 guibg=NONE guisp=NONE gui=italic cterm=italic
@@ -190,6 +188,8 @@ if &background ==# 'dark'
     highlight diffNewFile guifg=#A4BE8D guibg=NONE guisp=NONE gui=italic cterm=italic
     highlight diffOldFile guifg=#C1616A guibg=NONE guisp=NONE gui=italic cterm=italic
     highlight diffRemoved guifg=#C1616A guibg=NONE guisp=NONE gui=NONE cterm=NONE
+    highlight helpHyperTextEntry guifg=#98A3BB guibg=NONE guisp=NONE gui=bold cterm=bold
+    highlight helpHyperTextJump guifg=#BFCADB guibg=NONE guisp=NONE gui=underline cterm=underline
     highlight lCursor guifg=#2F3541 guibg=#8297B6 guisp=NONE gui=NONE cterm=NONE
     highlight! link TermCursorNC lCursor
     highlight markdownLinkText guifg=#BFCADB guibg=NONE guisp=NONE gui=underline cterm=underline
@@ -207,7 +207,6 @@ if &background ==# 'dark'
         highlight WhichKeyValue gui=NONE cterm=NONE
         highlight diffNewFile gui=NONE cterm=NONE
         highlight diffOldFile gui=NONE cterm=NONE
-        highlight helpHyperTextJump gui=NONE cterm=NONE
         highlight helpOption gui=NONE cterm=NONE
         " no italics dark end
     endif

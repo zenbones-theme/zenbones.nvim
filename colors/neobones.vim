@@ -146,7 +146,6 @@ if &background ==# 'dark'
     highlight SneakLabelMask guifg=#B279A7 guibg=#B279A7 guisp=NONE gui=NONE cterm=NONE
     highlight Special guifg=#9AA6A1 guibg=NONE guisp=NONE gui=bold cterm=bold
     highlight! link WhichKeyGroup Special
-    highlight! link helpHyperTextEntry Special
     highlight SpecialComment guifg=#536977 guibg=NONE guisp=NONE gui=NONE cterm=NONE
     highlight SpecialKey guifg=#3E5868 guibg=NONE guisp=NONE gui=italic cterm=italic
     highlight SpellBad guifg=#CB7A83 guibg=NONE guisp=NONE gui=undercurl cterm=undercurl
@@ -186,6 +185,7 @@ if &background ==# 'dark'
     highlight diffNewFile guifg=#90FF6B guibg=NONE guisp=NONE gui=italic cterm=italic
     highlight diffOldFile guifg=#DE6E7C guibg=NONE guisp=NONE gui=italic cterm=italic
     highlight diffRemoved guifg=#DE6E7C guibg=NONE guisp=NONE gui=NONE cterm=NONE
+    highlight helpHyperTextEntry guifg=#6E99B2 guibg=NONE guisp=NONE gui=bold cterm=bold
     highlight helpHyperTextJump guifg=#8FC77E guibg=NONE guisp=NONE gui=NONE cterm=NONE
     highlight! link helpOption helpHyperTextJump
     highlight! link markdownUrl helpHyperTextJump
@@ -343,7 +343,6 @@ else
     highlight SneakLabelMask guifg=#88507D guibg=#88507D guisp=NONE gui=NONE cterm=NONE
     highlight Special guifg=#415934 guibg=NONE guisp=NONE gui=bold cterm=bold
     highlight! link WhichKeyGroup Special
-    highlight! link helpHyperTextEntry Special
     highlight SpecialComment guifg=#878D88 guibg=NONE guisp=NONE gui=NONE cterm=NONE
     highlight SpecialKey guifg=#A3AEA4 guibg=NONE guisp=NONE gui=italic cterm=italic
     highlight SpellBad guifg=#974352 guibg=NONE guisp=#A8334C gui=undercurl cterm=undercurl
@@ -383,6 +382,7 @@ else
     highlight diffNewFile guifg=#567A30 guibg=NONE guisp=NONE gui=italic cterm=italic
     highlight diffOldFile guifg=#A8334C guibg=NONE guisp=NONE gui=italic cterm=italic
     highlight diffRemoved guifg=#A8334C guibg=NONE guisp=NONE gui=NONE cterm=NONE
+    highlight helpHyperTextEntry guifg=#495C4C guibg=NONE guisp=NONE gui=bold cterm=bold
     highlight helpHyperTextJump guifg=#195275 guibg=NONE guisp=NONE gui=NONE cterm=NONE
     highlight! link helpOption helpHyperTextJump
     highlight! link markdownUrl helpHyperTextJump
