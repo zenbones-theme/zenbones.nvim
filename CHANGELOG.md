@@ -1,5 +1,12 @@
 # Changelog
 
+## [4.1.1](https://github.com/mcchrish/zenbones.nvim/compare/v4.1.0...v4.1.1) (2024-02-10)
+
+
+### Bug Fixes
+
+* improve help highlighting ([#160](https://github.com/mcchrish/zenbones.nvim/issues/160)) ([3df286b](https://github.com/mcchrish/zenbones.nvim/commit/3df286bc8439ad7b4a6d6ec2f3944b0e30763191))
+
 ## [4.1.0](https://github.com/mcchrish/zenbones.nvim/compare/v4.0.2...v4.1.0) (2024-02-08)
 
 
