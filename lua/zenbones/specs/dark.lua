@@ -306,6 +306,11 @@ local function generate(p, opt)
 			sym "@markup.raw.markdown"          { Type },
 			sym "@markup.link.url.markdown"     { SpecialComment },
 
+			sym "@markup.link.vimdoc"           { Identifier, gui = "underline" },
+			sym "@markup.raw.block.vimdoc"      { fg = 'NONE' },
+			sym "@variable.parameter.vimdoc"    { Type },
+			sym "@label.vimdoc"                 { Type, gui = "bold" },
+
 			-- LSP Semantic Token Groups
 			sym "@lsp.type.boolean"                       { sym "@boolean" },
 			sym "@lsp.type.builtinType"                   { sym "@type.builtin" },
@@ -366,8 +371,8 @@ local function generate(p, opt)
 			markdownLinkText          { Identifier, gui = "underline" },
 			markdownLinkTextDelimiter { Delimiter },
 
-			helpHyperTextEntry        { Special },
-			helpHyperTextJump         { Constant },
+			helpHyperTextEntry        { Type, gui = "bold" },
+			helpHyperTextJump         { Identifier, gui = "underline" },
 			helpSpecial               { Type },
 			helpOption                { Constant },
 
