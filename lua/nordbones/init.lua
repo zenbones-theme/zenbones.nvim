@@ -14,7 +14,7 @@ return lush.extends({ specs }).with(function()
 		Statement { fg = p.base.nord9 },
 		Type { fg = p.base.nord10 },
 		ColorColumn { bg = p.base.nord0 },
-		MiniFilesNormal { bg = p.base.nord0 },
+		MiniFilesNormal { bg = p.nonexistent },
 	}
 	-- selene: deny(undefined_variable)
 	---@diagnostic enable: undefined-global
