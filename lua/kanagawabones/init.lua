@@ -14,7 +14,7 @@ return lush.extends({ specs }).with(function()
     String { fg = p.leaf },
     Constant { fg = p.leaf },
     ColorColumn { bg = p.bg1 },
-    MiniFilesNormal { bg = p.nonexistent },
+    MiniFilesNormal { bg = "#18181c" },
   }
   -- selene: deny(undefined_variable)
   ---@diagnostic enable: undefined-global

@@ -32,7 +32,7 @@ else
 			Constant { fg = p.leaf },
 			Statement { fg = p.sky },
 			ColorColumn { bg = p.bg1 },
-			MiniFilesNormal { bg = p.nonexistent },
+			MiniFilesNormal { bg = "#18181c" },
 		}
 		-- selene: deny(undefined_variable)
 		---@diagnostic enable: undefined-global

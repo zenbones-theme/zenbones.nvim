@@ -16,7 +16,7 @@ return lush.extends({ specs }).with(function()
 		PreProc { fg = p.sky },
 		Type { fg = p.water },
 		ColorColumn { bg = p.bg },
-		MiniFilesNormal { bg = p.nonexistent },
+		MiniFilesNormal { bg = "#18181c" },
 	}
 	-- selene: deny(undefined_variable)
 	---@diagnostic enable: undefined-global
