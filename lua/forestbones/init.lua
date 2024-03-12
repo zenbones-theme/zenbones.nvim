@@ -15,7 +15,8 @@ return lush.extends({ specs }).with(function()
 		Constant { fg = p.leaf },
 		PreProc { fg = p.sky },
 		Type { fg = p.water },
-		ColorColumn { bg = p.bg }
+		ColorColumn { bg = p.bg },
+		MiniFilesNormal { bg = p.bg },
 	}
 	-- selene: deny(undefined_variable)
 	---@diagnostic enable: undefined-global
