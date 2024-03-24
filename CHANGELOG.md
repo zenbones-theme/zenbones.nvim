@@ -1,5 +1,17 @@
 # Changelog
 
+## [4.2.0](https://github.com/mcchrish/zenbones.nvim/compare/v4.1.1...v4.2.0) (2024-03-24)
+
+
+### Features
+
+* **extras:** remove excludes ([7009ede](https://github.com/mcchrish/zenbones.nvim/commit/7009ede80daaabeaa5dbd3c9567252c7a243c221))
+
+
+### Bug Fixes
+
+* define WinSeparator first ([8fb981e](https://github.com/mcchrish/zenbones.nvim/commit/8fb981e8fea1eab821df988728e10d341dd07b8f))
+
 ## [4.1.1](https://github.com/mcchrish/zenbones.nvim/compare/v4.1.0...v4.1.1) (2024-02-10)
 
 
