@@ -193,7 +193,7 @@ local function generate(p, opt)
 			-- Tree-sitter
 			sym "@variable"                     { Identifier },
 			sym "@variable.builtin"             { Number },
-			sym "@variable.parameter"           { sym "@variable" },
+			sym "@variable.parameter"           { sym "@variable", gui = "bold, italic" },
 			sym "@variable.member"              { sym "@variable" },
 
 			sym "@constant"                     { Identifier, gui = "bold" },
