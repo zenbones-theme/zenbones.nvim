@@ -6,25 +6,24 @@ local p = require("kanagawabones.palette")[bg]
 local specs = generator.generate(p, bg, generator.get_global_config("kanagawabones", bg))
 
 return lush.extends({ specs }).with(function()
-  ---@diagnostic disable: undefined-global
-  -- selene: allow(undefined_variable)
-  return {
-    Statement { fg = p.wood },
-    Special { fg = p.water },
-    String { fg = p.leaf },
-    Constant { fg = p.leaf },
-    ColorColumn { bg = p.bg1 },
-    MiniFilesNormal { bg = "#18181c" },
-  }
-  -- selene: deny(undefined_variable)
-  ---@diagnostic enable: undefined-global
+	---@diagnostic disable: undefined-global
+	-- selene: allow(undefined_variable)
+	return {
+		Statement { fg = p.wood },
+		Special { fg = p.water },
+		String { fg = p.leaf },
+		Constant { fg = p.leaf },
+		ColorColumn { bg = p.bg1 },
+		MiniFilesNormal { bg = "#18181c" },
+	}
+	-- selene: deny(undefined_variable)
+	---@diagnostic enable: undefined-global
 end)
 
-
-	-- bg = hsluv "#1f1f28",
-	-- fg = hsluv "#dcd7ba",
-	-- leaf = hsluv "#98bb6c",
-	-- water = hsluv "#7fb4ca",
-	-- rose = hsluv "#e46876",
-	-- wood = hsluv "#e6c384",
-	-- blossom = hsluv "#957fb8",
+-- bg = hsluv "#1f1f28",
+-- fg = hsluv "#dcd7ba",
+-- leaf = hsluv "#98bb6c",
+-- water = hsluv "#7fb4ca",
+-- rose = hsluv "#e46876",
+-- wood = hsluv "#e6c384",
+-- blossom = hsluv "#957fb8",
