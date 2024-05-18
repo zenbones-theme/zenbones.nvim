@@ -168,8 +168,6 @@ if &background ==# 'dark'
     highlight! link helpSpecial Type
     highlight! link markdownCode Type
     highlight Underlined guifg=NONE guibg=NONE guisp=NONE gui=underline cterm=underline
-    highlight VertSplit guifg=#466273 guibg=NONE guisp=NONE gui=NONE cterm=NONE
-    highlight! link WinSeparator VertSplit
     highlight Visual guifg=NONE guibg=#3A3E3D guisp=NONE gui=NONE cterm=NONE
     highlight WarningMsg guifg=#B77E64 guibg=NONE guisp=NONE gui=NONE cterm=NONE
     highlight! link DiagnosticWarn WarningMsg
@@ -177,6 +175,8 @@ if &background ==# 'dark'
     highlight WhichKeySeparator guifg=#466273 guibg=NONE guisp=NONE gui=NONE cterm=NONE
     highlight WildMenu guifg=#0F191F guibg=#B279A7 guisp=NONE gui=NONE cterm=NONE
     highlight! link SneakLabel WildMenu
+    highlight WinSeparator guifg=#466273 guibg=NONE guisp=NONE gui=NONE cterm=NONE
+    highlight! link VertSplit WinSeparator
     highlight diffAdded guifg=#90FF6B guibg=NONE guisp=NONE gui=NONE cterm=NONE
     highlight diffChanged guifg=#8190D4 guibg=NONE guisp=NONE gui=NONE cterm=NONE
     highlight diffFile guifg=#B77E64 guibg=NONE guisp=NONE gui=bold cterm=bold
@@ -365,8 +365,6 @@ else
     highlight! link helpSpecial Type
     highlight! link markdownCode Type
     highlight Underlined guifg=NONE guibg=NONE guisp=NONE gui=underline cterm=underline
-    highlight VertSplit guifg=#8F9890 guibg=NONE guisp=NONE gui=NONE cterm=NONE
-    highlight! link WinSeparator VertSplit
     highlight Visual guifg=NONE guibg=#ADE48C guisp=NONE gui=NONE cterm=NONE
     highlight WarningMsg guifg=#944927 guibg=NONE guisp=NONE gui=NONE cterm=NONE
     highlight! link DiagnosticWarn WarningMsg
@@ -374,6 +372,8 @@ else
     highlight WhichKeySeparator guifg=#8F9890 guibg=NONE guisp=NONE gui=NONE cterm=NONE
     highlight WildMenu guifg=#E5EDE6 guibg=#88507D guisp=NONE gui=NONE cterm=NONE
     highlight! link SneakLabel WildMenu
+    highlight WinSeparator guifg=#8F9890 guibg=NONE guisp=NONE gui=NONE cterm=NONE
+    highlight! link VertSplit WinSeparator
     highlight diffAdded guifg=#567A30 guibg=NONE guisp=NONE gui=NONE cterm=NONE
     highlight diffChanged guifg=#286486 guibg=NONE guisp=NONE gui=NONE cterm=NONE
     highlight diffFile guifg=#944927 guibg=NONE guisp=NONE gui=bold cterm=bold

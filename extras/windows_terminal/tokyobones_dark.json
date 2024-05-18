@@ -1,0 +1,23 @@
+{
+    "name": "tokyobones_dark",
+    "selectionBackground": "#2C4075",
+    "cursorColor": "#CED6F7",
+    "foreground": "#C0CAF5",
+    "background": "#1A1B26",
+    "black": "#1A1B26",
+    "blue": "#7BA2F7",
+    "cyan": "#2BC4DE",
+    "green": "#74DBCB",
+    "purple": "#BB9BF7",
+    "red": "#F77890",
+    "white": "#C0CAF5",
+    "yellow": "#E1B068",
+    "brightBlack": "#36384D",
+    "brightBlue": "#90AFFA",
+    "brightCyan": "#74DBCB",
+    "brightGreen": "#6DE5D3",
+    "brightRed": "#F98EA0",
+    "brightPurple": "#C6ACFA",
+    "brightWhite": "#7E98EB",
+    "brightYellow": "#F2BA64"
+}

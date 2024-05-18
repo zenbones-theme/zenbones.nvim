@@ -1,0 +1,23 @@
+{
+    "name": "rosebones_dark",
+    "selectionBackground": "#523A39",
+    "cursorColor": "#E7DDDD",
+    "foreground": "#E1D4D4",
+    "background": "#1A1825",
+    "black": "#1A1825",
+    "blue": "#9CCFD8",
+    "cyan": "#9CCFD8",
+    "green": "#317490",
+    "purple": "#C4A7E7",
+    "red": "#EB7193",
+    "white": "#E1D4D4",
+    "yellow": "#F6C074",
+    "brightBlack": "#3A3651",
+    "brightBlue": "#94DAE6",
+    "brightCyan": "#94DAE6",
+    "brightGreen": "#358DAF",
+    "brightRed": "#F289A4",
+    "brightPurple": "#CEB3EF",
+    "brightWhite": "#BF9B99",
+    "brightYellow": "#F9CA8E"
+}

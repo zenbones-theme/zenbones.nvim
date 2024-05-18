@@ -1,0 +1,23 @@
+{
+    "name": "forestbones_light",
+    "selectionBackground": "#D3DFE6",
+    "cursorColor": "#4F5B62",
+    "foreground": "#4F5B62",
+    "background": "#FAF3E1",
+    "black": "#FAF3E1",
+    "blue": "#3A94C4",
+    "cyan": "#36A87E",
+    "green": "#8DA200",
+    "purple": "#DF69BA",
+    "red": "#F85550",
+    "white": "#4F5B62",
+    "yellow": "#DEA000",
+    "brightBlack": "#DBC988",
+    "brightBlue": "#297CA6",
+    "brightCyan": "#258C67",
+    "brightGreen": "#758700",
+    "brightRed": "#E6271C",
+    "brightPurple": "#CA43A3",
+    "brightWhite": "#6E7F88",
+    "brightYellow": "#B98500"
+}

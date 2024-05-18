@@ -1,0 +1,23 @@
+{
+    "name": "tokyobones_light",
+    "selectionBackground": "#BBC0D8",
+    "cursorColor": "#333A57",
+    "foreground": "#333A57",
+    "background": "#D6D7DC",
+    "black": "#D6D7DC",
+    "blue": "#34548C",
+    "cyan": "#176775",
+    "green": "#34645D",
+    "purple": "#5A4A79",
+    "red": "#8B4351",
+    "white": "#333A57",
+    "yellow": "#8F5E14",
+    "brightBlack": "#ADB0BD",
+    "brightBlue": "#26467A",
+    "brightCyan": "#34645D",
+    "brightGreen": "#26554F",
+    "brightRed": "#7E3242",
+    "brightPurple": "#503875",
+    "brightWhite": "#56618D",
+    "brightYellow": "#794E0D"
+}

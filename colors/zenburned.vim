@@ -171,8 +171,6 @@ if &background ==# 'dark'
     highlight! link helpSpecial Type
     highlight! link markdownCode Type
     highlight Underlined guifg=NONE guibg=NONE guisp=NONE gui=underline cterm=underline
-    highlight VertSplit guifg=#7F7F7F guibg=NONE guisp=NONE gui=NONE cterm=NONE
-    highlight! link WinSeparator VertSplit
     highlight Visual guifg=NONE guibg=#746956 guisp=NONE gui=NONE cterm=NONE
     highlight WarningMsg guifg=#B77E64 guibg=NONE guisp=NONE gui=NONE cterm=NONE
     highlight! link DiagnosticWarn WarningMsg
@@ -180,6 +178,8 @@ if &background ==# 'dark'
     highlight WhichKeySeparator guifg=#7F7F7F guibg=NONE guisp=NONE gui=NONE cterm=NONE
     highlight WildMenu guifg=#404040 guibg=#B279A7 guisp=NONE gui=NONE cterm=NONE
     highlight! link SneakLabel WildMenu
+    highlight WinSeparator guifg=#7F7F7F guibg=NONE guisp=NONE gui=NONE cterm=NONE
+    highlight! link VertSplit WinSeparator
     highlight diffAdded guifg=#819B69 guibg=NONE guisp=NONE gui=NONE cterm=NONE
     highlight diffChanged guifg=#6099C0 guibg=NONE guisp=NONE gui=NONE cterm=NONE
     highlight diffFile guifg=#B77E64 guibg=NONE guisp=NONE gui=bold cterm=bold

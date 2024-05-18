@@ -1,0 +1,23 @@
+{
+    "name": "nordbones",
+    "selectionBackground": "#545F70",
+    "cursorColor": "#EEF1F5",
+    "foreground": "#EBEEF3",
+    "background": "#2F3541",
+    "black": "#2F3541",
+    "blue": "#8FBCBA",
+    "cyan": "#87BFCE",
+    "green": "#A4BE8D",
+    "purple": "#B38DAC",
+    "red": "#C1616A",
+    "white": "#EBEEF3",
+    "yellow": "#CF866F",
+    "brightBlack": "#475063",
+    "brightBlue": "#89CAC8",
+    "brightCyan": "#82CCE0",
+    "brightGreen": "#A8CC86",
+    "brightRed": "#D6787F",
+    "brightPurple": "#CF97C5",
+    "brightWhite": "#A5B4CD",
+    "brightYellow": "#E09680"
+}

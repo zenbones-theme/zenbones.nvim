@@ -1,0 +1,23 @@
+{
+    "name": "forestbones_dark",
+    "selectionBackground": "#615B51",
+    "cursorColor": "#EBE2CF",
+    "foreground": "#E7DCC4",
+    "background": "#2C343A",
+    "black": "#2C343A",
+    "blue": "#7FBCB4",
+    "cyan": "#83C193",
+    "green": "#A9C181",
+    "purple": "#D69AB7",
+    "red": "#E67C7F",
+    "white": "#E7DCC4",
+    "yellow": "#DDBD7F",
+    "brightBlack": "#45525C",
+    "brightBlue": "#7AC9C0",
+    "brightCyan": "#7DD093",
+    "brightGreen": "#B0CE7B",
+    "brightRed": "#ED9294",
+    "brightPurple": "#E5A7C4",
+    "brightWhite": "#B2A790",
+    "brightYellow": "#EDC77A"
+}

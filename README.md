@@ -137,3 +137,8 @@ book called
 
 There are more similar
 [colorschemes with few colors from this collection](https://github.com/mcchrish/vim-no-color-collections).
+
+## Git mirrors
+
+- [Gitlab](https://gitlab.com/mcchris/zenbones.nvim)
+- [Codeberg](https://codeberg.org/mcchris/zenbones.nvim)

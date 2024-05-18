@@ -1,0 +1,23 @@
+{
+    "name": "rosebones_light",
+    "selectionBackground": "#EADDDC",
+    "cursorColor": "#724341",
+    "foreground": "#724341",
+    "background": "#FBF6F0",
+    "black": "#FBF6F0",
+    "blue": "#5795A0",
+    "cyan": "#5795A0",
+    "green": "#286A84",
+    "purple": "#917BA9",
+    "red": "#B5637A",
+    "white": "#724341",
+    "yellow": "#EC9D33",
+    "brightBlack": "#E8C48B",
+    "brightBlue": "#407D88",
+    "brightCyan": "#407D88",
+    "brightGreen": "#1C5970",
+    "brightRed": "#A54A66",
+    "brightPurple": "#855AAC",
+    "brightWhite": "#A4635F",
+    "brightYellow": "#C68223"
+}

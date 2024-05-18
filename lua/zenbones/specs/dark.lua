@@ -91,8 +91,8 @@ local function generate(p, opt)
 			TabLine         { StatusLine }, -- tab pages line, not active tab page label
 			TabLineFill     { StatusLineNC }, -- tab pages line, where there are no labels
 			TabLineSel      { gui = "bold" }, -- tab pages line, active tab page label
-			VertSplit       { fg = LineNr.fg, bg = opt.solid_vert_split and StatusLineNC.bg or "NONE" }, -- the column separating vertically split windows
-			WinSeparator    { VertSplit },
+			WinSeparator    { fg = LineNr.fg, bg = opt.solid_vert_split and StatusLineNC.bg or "NONE" },
+			VertSplit       { WinSeparator },
 
 			Visual          { bg = p.fg.de(18).lightness(p1.bg.l + 18) }, -- Visual mode selection
 			-- VisualNOS    { }, -- Visual mode selection when vim is "Not Owning the Selection".
