@@ -62,15 +62,22 @@ local function generate(p, opt)
 			Folded          { bg = not opt.transparent_background and p1.bg.li(14) or "NONE", fg = p1.bg.li(64) }, -- line used for closed folds
 			CursorLineNr    { LineNr, fg = p.fg, gui = "bold" }, -- Like LineNr when 'cursorline' or 'relativenumber' is set for the cursor line.
 
-			-- ModeMsg      { }, -- 'showmode' message (e.g., "-- INSERT -- ")
+			ModeMsg         { Normal }, -- 'showmode' message (e.g., "-- INSERT -- ")
 			-- MsgArea      { }, -- Area for messages and cmdline
 			-- MsgSeparator { }, -- Separator for scrolled messages, `msgsep` flag of 'display'
 			MoreMsg         { fg = p.leaf, gui = "bold" }, -- |more-prompt|
+
 			NormalFloat     { bg = p1.bg.li(10) }, -- Normal text in floating windows.
 			FloatBorder     { fg = p1.bg.li(46), bg = opt.solid_float_border and NormalFloat.bg or "NONE" }, -- Normal text in floating windows.
+			-- FloatTitle      { },
+			-- FloatFooter     { },
 
 			Pmenu           { bg = p1.bg.li(10) }, -- Popup menu: normal item.
 			PmenuSel        { bg = p1.bg.li(22) }, -- Popup menu: selected item.
+			-- PmenuKind       { },
+			-- PmenuKindSel    { },
+			-- PmenuKindExtra  { },
+			-- PmenuKindExtraSel { },
 			PmenuSbar       { bg = p1.bg.li(32) }, -- Popup menu: scrollbar.
 			PmenuThumb      { bg = p1.bg.li(50) }, -- Popup menu: Thumb of the scrollbar.
 
@@ -78,7 +85,7 @@ local function generate(p, opt)
 			IncSearch       { bg = p.blossom.lightness(p1.bg.l + 56), fg = p1.bg, gui = "bold" }, -- 'incsearch' highlighting; also used for the text replaced with ":s///c"
 			-- Substitute   { }, -- |:substitute| replacement text highlighting
 			MatchParen      { Search }, -- The character under the cursor or just before it, if it is a paired bracket, and its match. |pi_paren.txt|
-			-- QuickFixLine { }, -- Current |quickfix| item in the quickfix window. Combined with |hl-CursorLine| when the cursor is there.
+			QuickFixLine    { Search }, -- Current |quickfix| item in the quickfix window. Combined with |hl-CursorLine| when the cursor is there.
 			CurSearch       { IncSearch },
 
 			SpellBad        { fg = Error.fg.de(30), gui = "undercurl", guisp = Error.fg }, -- Word that is not recognized by the spellchecker. |spell| Combined with the highlighting used otherwise.
@@ -91,6 +98,8 @@ local function generate(p, opt)
 			TabLine         { StatusLine }, -- tab pages line, not active tab page label
 			TabLineFill     { StatusLineNC }, -- tab pages line, where there are no labels
 			TabLineSel      { gui = "bold" }, -- tab pages line, active tab page label
+			WinBar          { StatusLine },
+			WinBarNC        { StatusLineNC },
 			WinSeparator    { fg = LineNr.fg, bg = opt.solid_vert_split and StatusLineNC.bg or "NONE" },
 			VertSplit       { WinSeparator },
 
@@ -115,11 +124,11 @@ local function generate(p, opt)
 			-- Uncomment and edit if you want more specific syntax highlighting.
 
 			Constant        { fg = p1.fg4, gui = "italic" }, -- (preferred) any constant
-			-- String       { }, --   a string constant: "this is a string"
-			-- Character    { }, --  a character constant: 'c', '\n'
+			String          { Constant }, --   a string constant: "this is a string"
+			Character       { Constant }, --  a character constant: 'c', '\n'
 			Number          { fg = p.fg, gui = "italic" }, --   a number constant: 234, 0xff
 			Boolean         { Number }, --  a boolean constant: TRUE, false
-			-- Float        { }, --    a floating point constant: 2.3e10
+			Float           { Constant }, --    a floating point constant: 2.3e10
 
 			Identifier      { fg = p1.fg2 }, -- (preferred) any variable name
 			Function        { fg = p.fg }, -- function name (also: methods for classes)
