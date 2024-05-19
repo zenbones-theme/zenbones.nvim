@@ -1,5 +1,21 @@
 # Changelog
 
+## [4.3.0](https://github.com/mcchrish/zenbones.nvim/compare/v4.2.0...v4.3.0) (2024-05-19)
+
+
+### Features
+
+* **ci:** sync to codeberg and gitlab ([#168](https://github.com/mcchrish/zenbones.nvim/issues/168)) ([f5f5fff](https://github.com/mcchrish/zenbones.nvim/commit/f5f5fff4e9ebb68c956a4557790a8941fbcf9c1d))
+* support fzf-lua ([#178](https://github.com/mcchrish/zenbones.nvim/issues/178)) ([a509e6c](https://github.com/mcchrish/zenbones.nvim/commit/a509e6c590a07a195cc1cb77a0afe82217a2705d))
+* support nvim 0.10 ([#176](https://github.com/mcchrish/zenbones.nvim/issues/176)) ([8877bb1](https://github.com/mcchrish/zenbones.nvim/commit/8877bb1dfc50467888ebe16aaf424e36492807c9))
+
+
+### Bug Fixes
+
+* add missing fzf-lua hl ([#179](https://github.com/mcchrish/zenbones.nvim/issues/179)) ([f74fc32](https://github.com/mcchrish/zenbones.nvim/commit/f74fc327273d627ef305f85faf72c3fd9c049c3f))
+* **ci:** turn off sync for pr ([#177](https://github.com/mcchrish/zenbones.nvim/issues/177)) ([a983937](https://github.com/mcchrish/zenbones.nvim/commit/a9839370202c62527f37f695e18df5a0576bf08e))
+* **docs:** add git mirror links ([#170](https://github.com/mcchrish/zenbones.nvim/issues/170)) ([453ec69](https://github.com/mcchrish/zenbones.nvim/commit/453ec69d82d644ee6998a3464da49d0261df9f80))
+
 ## [4.2.0](https://github.com/mcchrish/zenbones.nvim/compare/v4.1.1...v4.2.0) (2024-03-24)
 
 
