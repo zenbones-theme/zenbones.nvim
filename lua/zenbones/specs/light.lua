@@ -402,6 +402,17 @@ local function generate(p, opt)
 			TelescopeMatching                { fg = p.blossom, gui = "bold" },
 			TelescopeBorder                  { fg = FloatBorder.fg },
 
+			FzfLuaHeaderBind                 { fg = p.leaf },
+			FzfLuaHeaderText                 { fg = p.wood },
+			FzfLuaPathColNr                  { Type, gui = "bold" },
+			FzfLuaPathLineNr                 { FzfLuaPathColNr },
+			FzfLuaBufName                    { Statement },
+			FzfLuaBufNr                      { fg = p.leaf },
+			FzfLuaBufFlagCur                 { fg = p.wood },
+			FzfLuaBufFlagAlt                 { fg = p.water },
+			FzfLuaTabTitle                   { fg = p.sky },
+			FzfLuaTabMarker                  { fg = p.leaf },
+
 			Sneak                            { Search },
 			SneakLabel                       { WildMenu },
 			SneakLabelMask                   { bg = p.blossom, fg = p.blossom },
