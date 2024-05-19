@@ -412,6 +412,7 @@ local function generate(p, opt)
 			FzfLuaBufFlagAlt                 { fg = p.water },
 			FzfLuaTabTitle                   { fg = p.sky },
 			FzfLuaTabMarker                  { fg = p.leaf },
+			FzfLuaLiveSym                    { fg = p.wood },
 
 			Sneak                            { Search },
 			SneakLabel                       { WildMenu },
