@@ -120,6 +120,7 @@ if &background ==# 'dark'
     highlight FzfLuaBufNr guifg=#98BC6D guibg=NONE guisp=NONE gui=NONE cterm=NONE
     highlight FzfLuaHeaderBind guifg=#98BC6D guibg=NONE guisp=NONE gui=NONE cterm=NONE
     highlight FzfLuaHeaderText guifg=#E5C283 guibg=NONE guisp=NONE gui=NONE cterm=NONE
+    highlight FzfLuaLiveSym guifg=#E5C283 guibg=NONE guisp=NONE gui=NONE cterm=NONE
     highlight FzfLuaPathColNr guifg=#9797A5 guibg=NONE guisp=NONE gui=bold cterm=bold
     highlight! link FzfLuaPathLineNr FzfLuaPathColNr
     highlight FzfLuaTabMarker guifg=#98BC6D guibg=NONE guisp=NONE gui=NONE cterm=NONE

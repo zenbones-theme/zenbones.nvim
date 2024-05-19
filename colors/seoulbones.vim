@@ -118,6 +118,7 @@ if &background ==# 'dark'
     highlight FzfLuaBufNr guifg=#98BD99 guibg=NONE guisp=NONE gui=NONE cterm=NONE
     highlight FzfLuaHeaderBind guifg=#98BD99 guibg=NONE guisp=NONE gui=NONE cterm=NONE
     highlight FzfLuaHeaderText guifg=#FFDF9B guibg=NONE guisp=NONE gui=NONE cterm=NONE
+    highlight FzfLuaLiveSym guifg=#FFDF9B guibg=NONE guisp=NONE gui=NONE cterm=NONE
     highlight FzfLuaPathColNr guifg=#AEAEAE guibg=NONE guisp=NONE gui=bold cterm=bold
     highlight! link FzfLuaPathLineNr FzfLuaPathColNr
     highlight FzfLuaTabMarker guifg=#98BD99 guibg=NONE guisp=NONE gui=NONE cterm=NONE
@@ -338,6 +339,7 @@ else
     highlight FzfLuaBufNr guifg=#628562 guibg=NONE guisp=NONE gui=NONE cterm=NONE
     highlight FzfLuaHeaderBind guifg=#628562 guibg=NONE guisp=NONE gui=NONE cterm=NONE
     highlight FzfLuaHeaderText guifg=#C48562 guibg=NONE guisp=NONE gui=NONE cterm=NONE
+    highlight FzfLuaLiveSym guifg=#C48562 guibg=NONE guisp=NONE gui=NONE cterm=NONE
     highlight FzfLuaPathColNr guifg=#6D4C52 guibg=NONE guisp=NONE gui=bold cterm=bold
     highlight! link FzfLuaPathLineNr FzfLuaPathColNr
     highlight FzfLuaTabMarker guifg=#628562 guibg=NONE guisp=NONE gui=NONE cterm=NONE
