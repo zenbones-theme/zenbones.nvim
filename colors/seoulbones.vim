@@ -113,6 +113,15 @@ if &background ==# 'dark'
     highlight Function guifg=#DFDFC1 guibg=NONE guisp=NONE gui=NONE cterm=NONE
     highlight! link TroubleNormal Function
     highlight! link TroubleText Function
+    highlight FzfLuaBufFlagAlt guifg=#97BDDE guibg=NONE guisp=NONE gui=NONE cterm=NONE
+    highlight FzfLuaBufFlagCur guifg=#FFDF9B guibg=NONE guisp=NONE gui=NONE cterm=NONE
+    highlight FzfLuaBufNr guifg=#98BD99 guibg=NONE guisp=NONE gui=NONE cterm=NONE
+    highlight FzfLuaHeaderBind guifg=#98BD99 guibg=NONE guisp=NONE gui=NONE cterm=NONE
+    highlight FzfLuaHeaderText guifg=#FFDF9B guibg=NONE guisp=NONE gui=NONE cterm=NONE
+    highlight FzfLuaPathColNr guifg=#AEAEAE guibg=NONE guisp=NONE gui=bold cterm=bold
+    highlight! link FzfLuaPathLineNr FzfLuaPathColNr
+    highlight FzfLuaTabMarker guifg=#98BD99 guibg=NONE guisp=NONE gui=NONE cterm=NONE
+    highlight FzfLuaTabTitle guifg=#6FBDBE guibg=NONE guisp=NONE gui=NONE cterm=NONE
     highlight GitSignsAdd guifg=#98BD99 guibg=NONE guisp=NONE gui=NONE cterm=NONE
     highlight! link GitGutterAdd GitSignsAdd
     highlight GitSignsChange guifg=#97BDDE guibg=NONE guisp=NONE gui=NONE cterm=NONE
@@ -163,6 +172,7 @@ if &background ==# 'dark'
     highlight! link SpellLocal SpellCap
     highlight SpellRare guifg=#D291A3 guibg=NONE guisp=NONE gui=undercurl cterm=undercurl
     highlight Statement guifg=#97BDDE guibg=NONE guisp=NONE gui=bold cterm=bold
+    highlight! link FzfLuaBufName Statement
     highlight! link WhichKey Statement
     highlight StatusLine guifg=#DDDDDD guibg=#5E5E5E guisp=NONE gui=NONE cterm=NONE
     highlight! link TabLine StatusLine
@@ -323,6 +333,15 @@ else
     highlight Function guifg=#6C6B20 guibg=NONE guisp=NONE gui=NONE cterm=NONE
     highlight! link TroubleNormal Function
     highlight! link TroubleText Function
+    highlight FzfLuaBufFlagAlt guifg=#0084A3 guibg=NONE guisp=NONE gui=NONE cterm=NONE
+    highlight FzfLuaBufFlagCur guifg=#C48562 guibg=NONE guisp=NONE gui=NONE cterm=NONE
+    highlight FzfLuaBufNr guifg=#628562 guibg=NONE guisp=NONE gui=NONE cterm=NONE
+    highlight FzfLuaHeaderBind guifg=#628562 guibg=NONE guisp=NONE gui=NONE cterm=NONE
+    highlight FzfLuaHeaderText guifg=#C48562 guibg=NONE guisp=NONE gui=NONE cterm=NONE
+    highlight FzfLuaPathColNr guifg=#6D4C52 guibg=NONE guisp=NONE gui=bold cterm=bold
+    highlight! link FzfLuaPathLineNr FzfLuaPathColNr
+    highlight FzfLuaTabMarker guifg=#628562 guibg=NONE guisp=NONE gui=NONE cterm=NONE
+    highlight FzfLuaTabTitle guifg=#008586 guibg=NONE guisp=NONE gui=NONE cterm=NONE
     highlight GitSignsAdd guifg=#628562 guibg=NONE guisp=NONE gui=NONE cterm=NONE
     highlight! link GitGutterAdd GitSignsAdd
     highlight GitSignsChange guifg=#0084A3 guibg=NONE guisp=NONE gui=NONE cterm=NONE
@@ -373,6 +392,7 @@ else
     highlight! link SpellLocal SpellCap
     highlight SpellRare guifg=#C66484 guibg=NONE guisp=#C48562 gui=undercurl cterm=undercurl
     highlight Statement guifg=#0084A3 guibg=NONE guisp=NONE gui=bold cterm=bold
+    highlight! link FzfLuaBufName Statement
     highlight! link WhichKey Statement
     highlight StatusLine guifg=#555555 guibg=#C4C4C4 guisp=NONE gui=NONE cterm=NONE
     highlight! link TabLine StatusLine
