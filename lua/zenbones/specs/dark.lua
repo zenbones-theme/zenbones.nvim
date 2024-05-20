@@ -172,6 +172,7 @@ local function generate(p, opt)
 			LspReferenceRead           { ColorColumn }, -- used for highlighting "read" references
 			LspReferenceWrite          { ColorColumn }, -- used for highlighting "write" references
 			LspCodeLens                { LineNr },
+			LspInlayHint               { fg = p1.bg.sa(10).li(40), bg = p1.bg.li(4) },
 
 			DiagnosticError            { Error },
 			DiagnosticWarn             { WarningMsg },
