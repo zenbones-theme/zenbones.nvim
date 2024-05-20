@@ -140,6 +140,7 @@ if &background ==# 'dark'
     highlight! link CocCodeLens LineNr
     highlight! link LspCodeLens LineNr
     highlight! link SignColumn LineNr
+    highlight LspInlayHint guifg=#79675E guibg=#25211F guisp=NONE gui=NONE cterm=NONE
     highlight MoreMsg guifg=#819B69 guibg=NONE guisp=NONE gui=bold cterm=bold
     highlight! link Question MoreMsg
     highlight! link NnnNormalNC NnnNormal
@@ -359,6 +360,7 @@ else
     highlight! link CocCodeLens LineNr
     highlight! link LspCodeLens LineNr
     highlight! link SignColumn LineNr
+    highlight LspInlayHint guifg=#A38C80 guibg=#EBE7E6 guisp=NONE gui=NONE cterm=NONE
     highlight MoreMsg guifg=#4F6C31 guibg=NONE guisp=NONE gui=bold cterm=bold
     highlight! link Question MoreMsg
     highlight! link NnnNormalNC NnnNormal
