@@ -1,5 +1,12 @@
 # Changelog
 
+## [4.3.1](https://github.com/mcchrish/zenbones.nvim/compare/v4.3.0...v4.3.1) (2024-05-20)
+
+
+### Bug Fixes
+
+* lsp inlay hint ([#180](https://github.com/mcchrish/zenbones.nvim/issues/180)) ([0554b55](https://github.com/mcchrish/zenbones.nvim/commit/0554b55153eaea443402e282e0064eeb7a0f75a7))
+
 ## [4.3.0](https://github.com/mcchrish/zenbones.nvim/compare/v4.2.0...v4.3.0) (2024-05-19)
 
 
