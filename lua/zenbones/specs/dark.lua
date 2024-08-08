@@ -202,15 +202,15 @@ local function generate(p, opt)
 
 			-- Tree-sitter
 			sym "@variable"                     { Identifier },
-			sym "@variable.builtin"             { Number },
+			sym "@variable.builtin"             { Constant },
 			sym "@variable.parameter"           { sym "@variable" },
 			sym "@variable.member"              { sym "@variable" },
 
 			sym "@constant"                     { Identifier, gui = "bold" },
-			sym "@constant.builtin"             { Number },
-			sym "@constant.macro"               { Number },
+			sym "@constant.builtin"             { Constant },
+			sym "@constant.macro"               { Constant },
 
-			sym "@module"                       { Number },
+			sym "@module"                       { Constant },
 			sym "@module.builtin"               { sym "@module" },
 			sym "@label"                        { Statement },
 
