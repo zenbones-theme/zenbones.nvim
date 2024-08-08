@@ -1,5 +1,12 @@
 # Changelog
 
+## [4.3.3](https://github.com/zenbones-theme/zenbones.nvim/compare/v4.3.2...v4.3.3) (2024-08-08)
+
+
+### Bug Fixes
+
+* **specs:** use Constant instead of Number ([#192](https://github.com/zenbones-theme/zenbones.nvim/issues/192)) ([a041a4e](https://github.com/zenbones-theme/zenbones.nvim/commit/a041a4e7a10b8f185f3eaf18e35e60cb0d3ca6a2))
+
 ## [4.3.2](https://github.com/zenbones-theme/zenbones.nvim/compare/v4.3.1...v4.3.2) (2024-08-08)
 
 
