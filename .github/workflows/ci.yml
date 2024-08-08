@@ -4,6 +4,10 @@ on:
   push:
   pull_request:
 
+permissions:
+  contents: write
+  pull-requests: write
+
 jobs:
   lint:
     runs-on: ubuntu-latest
@@ -16,8 +20,6 @@ jobs:
 
   docs:
     runs-on: ubuntu-latest
-    permissions:
-      contents: write
     if: ${{ github.ref == 'refs/heads/main' }}
     steps:
       - uses: actions/checkout@v4
@@ -39,8 +41,6 @@ jobs:
 
   build:
     runs-on: ubuntu-latest
-    permissions:
-      contents: write
     if: ${{ github.ref == 'refs/heads/main' }}
     steps:
       - uses: actions/checkout@v4
@@ -70,8 +70,6 @@ jobs:
 
   format:
     runs-on: ubuntu-latest
-    permissions:
-      contents: write
     if: ${{ github.ref == 'refs/heads/main' }}
     steps:
       - uses: actions/checkout@v4
@@ -98,9 +96,6 @@ jobs:
 
   release:
     name: release
-    permissions:
-      contents: write
-      pull-requests: write
     if: ${{ github.ref == 'refs/heads/main' }}
     needs:
       - docs
@@ -113,4 +108,3 @@ jobs:
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
           release-type: simple
-          package-name: zenbones.nvim
