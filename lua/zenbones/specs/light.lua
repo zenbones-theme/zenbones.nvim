@@ -39,6 +39,8 @@ local function generate(p, opt)
 			WarningMsg      { fg = p.wood }, -- warning messages
 
 			Comment         { fg = p1.bg.da(opt.darken_comments or 38).de(28), gui = opt.italic_comments ~= false and "italic" or "NONE" }, -- any comment
+			Conceal         { fg = p1.fg5, gui = "bold,italic" }, -- placeholder characters substituted for concealed text (see 'conceallevel')
+
 			Cursor          { bg = p.fg, fg = p1.bg }, -- character under the cursor
 			lCursor         { Cursor, bg = Cursor.bg.li(20)  }, -- the character under the cursor when |language-mapping| is used (see 'guicursor')
 			-- CursorIM     { }, -- like Cursor, but used when in IME mode |CursorIM|
