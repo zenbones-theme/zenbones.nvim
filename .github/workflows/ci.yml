@@ -74,7 +74,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - uses: JohnnyMorganz/stylua-action@v2
+      - uses: JohnnyMorganz/stylua-action@v4
         with:
           version: latest
           token: ${{ secrets.GITHUB_TOKEN }}
@@ -95,7 +95,6 @@ jobs:
           commit_author: "github-actions[bot] <github-actions[bot]@users.noreply.github.com>"
 
   release:
-    name: release
     if: ${{ github.ref == 'refs/heads/main' }}
     needs:
       - docs
@@ -104,7 +103,5 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: googleapis/release-please-action@v4
-        id: release
         with:
-          token: ${{ secrets.GITHUB_TOKEN }}
           release-type: simple
