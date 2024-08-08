@@ -39,7 +39,7 @@ local function generate(p, opt)
 			WarningMsg      { fg = p.wood }, -- warning messages
 
 			Comment         { fg = p1.bg.da(opt.darken_comments or 38).de(28), gui = opt.italic_comments ~= false and "italic" or "NONE" }, -- any comment
-			Conceal         { fg = p1.fg3, gui = "bold,italic" }, -- placeholder characters substituted for concealed text (see 'conceallevel')
+			Conceal         { fg = p1.fg5, gui = "bold,italic" }, -- placeholder characters substituted for concealed text (see 'conceallevel')
 
 			Cursor          { bg = p.fg, fg = p1.bg }, -- character under the cursor
 			lCursor         { Cursor, bg = Cursor.bg.li(20)  }, -- the character under the cursor when |language-mapping| is used (see 'guicursor')
@@ -126,9 +126,9 @@ local function generate(p, opt)
 			Constant        { fg = p1.fg4, gui = "italic" }, -- (preferred) any constant
 			String          { Constant }, --   a string constant: "this is a string"
 			Character       { Constant }, --  a character constant: 'c', '\n'
-			Number          { fg = p.fg, gui = "italic" }, --   a number constant: 234, 0xff
-			Boolean         { Number }, --  a boolean constant: TRUE, false
-			Float           { Constant }, --    a floating point constant: 2.3e10
+			Number          { fg = p1.fg4 }, --   a number constant: 234, 0xff
+			Boolean         { fg = p.fg, gui = "italic" }, --  a boolean constant: TRUE, false
+			Float           { Number }, --    a floating point constant: 2.3e10
 
 			Identifier      { fg = p1.fg2 }, -- (preferred) any variable name
 			Function        { fg = p.fg }, -- function name (also: methods for classes)
@@ -214,7 +214,7 @@ local function generate(p, opt)
 			sym "@module.builtin"               { sym "@module" },
 			sym "@label"                        { Statement },
 
-			sym "@string"                       { Constant },
+			sym "@string"                       { String },
 			sym "@string.documentation"         { sym "@string" },
 			sym "@string.regexp"                { Constant },
 			sym "@string.escape"                { Special },
@@ -226,7 +226,7 @@ local function generate(p, opt)
 			sym "@character"                    { Constant },
 			sym "@character.special"            { Special },
 
-			sym "@boolean"                      { Number },
+			sym "@boolean"                      { Boolean },
 			sym "@number"                       { Number },
 			sym "@number.float"                 { sym "@number" },
 
@@ -321,6 +321,8 @@ local function generate(p, opt)
 			sym "@variable.parameter.vimdoc"    { Type },
 			sym "@label.vimdoc"                 { Type, gui = "bold" },
 
+			sym "@constructor.lua"                  { Delimiter },
+
 			-- LSP Semantic Token Groups
 			sym "@lsp.type.boolean"                       { sym "@boolean" },
 			sym "@lsp.type.builtinType"                   { sym "@type.builtin" },
@@ -397,6 +399,8 @@ local function generate(p, opt)
 
 			IblIndent                        { fg = p1.bg.da(6).de(20) },
 			IblScope                         { fg = p1.bg.da(22).de(20) },
+			IndentLine                       { IblIndent },
+			IndentLineCurrent                { IblScope },
 
 			TelescopeSelection               { CursorLine },
 			TelescopeSelectionCaret          { TelescopeSelection, fg = p.rose },
