@@ -33,6 +33,7 @@ if &background ==# 'dark'
     highlight Normal guifg=#E1D4D4 guibg=#1A1825 guisp=NONE gui=NONE cterm=NONE
     highlight! link ModeMsg Normal
     highlight Bold guifg=NONE guibg=NONE guisp=NONE gui=bold cterm=bold
+    highlight Boolean guifg=#E1D4D4 guibg=NONE guisp=NONE gui=italic cterm=italic
     highlight BufferVisible guifg=#E9E0E0 guibg=NONE guisp=NONE gui=NONE cterm=NONE
     highlight BufferVisibleIndex guifg=#E9E0E0 guibg=NONE guisp=NONE gui=NONE cterm=NONE
     highlight BufferVisibleSign guifg=#E9E0E0 guibg=NONE guisp=NONE gui=NONE cterm=NONE
@@ -45,7 +46,6 @@ if &background ==# 'dark'
     highlight Conceal guifg=#B48583 guibg=NONE guisp=NONE gui=bold,italic cterm=bold,italic
     highlight Constant guifg=#BC9493 guibg=NONE guisp=NONE gui=italic cterm=italic
     highlight! link Character Constant
-    highlight! link Float Constant
     highlight! link String Constant
     highlight! link TroubleSource Constant
     highlight! link WhichKeyValue Constant
@@ -131,7 +131,9 @@ if &background ==# 'dark'
     highlight GitSignsDelete guifg=#EB7193 guibg=NONE guisp=NONE gui=NONE cterm=NONE
     highlight! link GitGutterDelete GitSignsDelete
     highlight IblIndent guifg=#282635 guibg=NONE guisp=NONE gui=NONE cterm=NONE
+    highlight! link IndentLine IblIndent
     highlight IblScope guifg=#454258 guibg=NONE guisp=NONE gui=NONE cterm=NONE
+    highlight! link IndentLineCurrent IblScope
     highlight Identifier guifg=#CAB0AF guibg=NONE guisp=NONE gui=NONE cterm=NONE
     highlight IncSearch guifg=#1A1825 guibg=#B48DE0 guisp=NONE gui=bold cterm=bold
     highlight! link CurSearch IncSearch
@@ -149,8 +151,8 @@ if &background ==# 'dark'
     highlight! link EndOfBuffer NonText
     highlight! link Whitespace NonText
     highlight NormalFloat guifg=NONE guibg=#2D2A3D guisp=NONE gui=NONE cterm=NONE
-    highlight Number guifg=#E1D4D4 guibg=NONE guisp=NONE gui=italic cterm=italic
-    highlight! link Boolean Number
+    highlight Number guifg=#BC9493 guibg=NONE guisp=NONE gui=NONE cterm=NONE
+    highlight! link Float Number
     highlight Pmenu guifg=NONE guibg=#2D2A3D guisp=NONE gui=NONE cterm=NONE
     highlight PmenuSbar guifg=NONE guibg=#5A5578 guisp=NONE gui=NONE cterm=NONE
     highlight PmenuSel guifg=NONE guibg=#45415D guisp=NONE gui=NONE cterm=NONE
@@ -220,8 +222,6 @@ if &background ==# 'dark'
         highlight Character gui=NONE cterm=NONE
         highlight Comment gui=NONE cterm=NONE
         highlight Constant gui=NONE cterm=NONE
-        highlight Float gui=NONE cterm=NONE
-        highlight Number gui=NONE cterm=NONE
         highlight SpecialKey gui=NONE cterm=NONE
         highlight String gui=NONE cterm=NONE
         highlight TroubleSource gui=NONE cterm=NONE
@@ -253,6 +253,7 @@ else
     highlight Normal guifg=#724341 guibg=#FBF6F0 guisp=NONE gui=NONE cterm=NONE
     highlight! link ModeMsg Normal
     highlight Bold guifg=NONE guibg=NONE guisp=NONE gui=bold cterm=bold
+    highlight Boolean guifg=#724341 guibg=NONE guisp=NONE gui=italic cterm=italic
     highlight BufferVisible guifg=#AE6966 guibg=NONE guisp=NONE gui=NONE cterm=NONE
     highlight BufferVisibleIndex guifg=#AE6966 guibg=NONE guisp=NONE gui=NONE cterm=NONE
     highlight BufferVisibleSign guifg=#AE6966 guibg=NONE guisp=NONE gui=NONE cterm=NONE
@@ -262,10 +263,9 @@ else
     highlight! link LspReferenceText ColorColumn
     highlight! link LspReferenceWrite ColorColumn
     highlight Comment guifg=#A18E72 guibg=NONE guisp=NONE gui=italic cterm=italic
-    highlight Conceal guifg=#A4635F guibg=NONE guisp=NONE gui=bold,italic cterm=bold,italic
+    highlight Conceal guifg=#B56E6A guibg=NONE guisp=NONE gui=bold,italic cterm=bold,italic
     highlight Constant guifg=#AB6763 guibg=NONE guisp=NONE gui=italic cterm=italic
     highlight! link Character Constant
-    highlight! link Float Constant
     highlight! link String Constant
     highlight! link TroubleSource Constant
     highlight! link WhichKeyValue Constant
@@ -351,7 +351,9 @@ else
     highlight GitSignsDelete guifg=#B5637A guibg=NONE guisp=NONE gui=NONE cterm=NONE
     highlight! link GitGutterDelete GitSignsDelete
     highlight IblIndent guifg=#F0E3D4 guibg=NONE guisp=NONE gui=NONE cterm=NONE
+    highlight! link IndentLine IblIndent
     highlight IblScope guifg=#D3B790 guibg=NONE guisp=NONE gui=NONE cterm=NONE
+    highlight! link IndentLineCurrent IblScope
     highlight Identifier guifg=#935855 guibg=NONE guisp=NONE gui=NONE cterm=NONE
     highlight IncSearch guifg=#FBF6F0 guibg=#A18EB6 guisp=NONE gui=bold cterm=bold
     highlight! link CurSearch IncSearch
@@ -369,8 +371,8 @@ else
     highlight! link EndOfBuffer NonText
     highlight! link Whitespace NonText
     highlight NormalFloat guifg=NONE guibg=#F1DDC3 guisp=NONE gui=NONE cterm=NONE
-    highlight Number guifg=#724341 guibg=NONE guisp=NONE gui=italic cterm=italic
-    highlight! link Boolean Number
+    highlight Number guifg=#AB6763 guibg=NONE guisp=NONE gui=NONE cterm=NONE
+    highlight! link Float Number
     highlight Pmenu guifg=NONE guibg=#EED7B7 guisp=NONE gui=NONE cterm=NONE
     highlight PmenuSbar guifg=NONE guibg=#C5A778 guisp=NONE gui=NONE cterm=NONE
     highlight PmenuSel guifg=NONE guibg=#DEBC88 guisp=NONE gui=NONE cterm=NONE
@@ -440,8 +442,6 @@ else
         highlight Character gui=NONE cterm=NONE
         highlight Comment gui=NONE cterm=NONE
         highlight Constant gui=NONE cterm=NONE
-        highlight Float gui=NONE cterm=NONE
-        highlight Number gui=NONE cterm=NONE
         highlight SpecialKey gui=NONE cterm=NONE
         highlight String gui=NONE cterm=NONE
         highlight TroubleSource gui=NONE cterm=NONE
