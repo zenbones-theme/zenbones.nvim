@@ -1,5 +1,20 @@
 # Changelog
 
+## [4.3.2](https://github.com/zenbones-theme/zenbones.nvim/compare/v4.3.1...v4.3.2) (2024-08-08)
+
+
+### Bug Fixes
+
+* **ci:** add tagging step back ([#189](https://github.com/zenbones-theme/zenbones.nvim/issues/189)) ([1acd87e](https://github.com/zenbones-theme/zenbones.nvim/commit/1acd87ea10ce26b1613167b7e060ff7110f20686))
+* **ci:** fix release step ([#185](https://github.com/zenbones-theme/zenbones.nvim/issues/185)) ([b42f399](https://github.com/zenbones-theme/zenbones.nvim/commit/b42f3994a9079c192eba674dd8fb8acbacca80d8))
+* **ci:** proper permissions ([#187](https://github.com/zenbones-theme/zenbones.nvim/issues/187)) ([26e26dc](https://github.com/zenbones-theme/zenbones.nvim/commit/26e26dc704f0ce037fca4b96742f2224292fbe07))
+* **ci:** remove deprecated release ([#186](https://github.com/zenbones-theme/zenbones.nvim/issues/186)) ([65d324d](https://github.com/zenbones-theme/zenbones.nvim/commit/65d324d2d703296b8c9872063a8733ce34d69fd4))
+* **ci:** update ([#188](https://github.com/zenbones-theme/zenbones.nvim/issues/188)) ([9cf9de9](https://github.com/zenbones-theme/zenbones.nvim/commit/9cf9de96db145854927ac4621772b7161d38935c))
+* **ci:** update auto commit ([#184](https://github.com/zenbones-theme/zenbones.nvim/issues/184)) ([ce694ef](https://github.com/zenbones-theme/zenbones.nvim/commit/ce694ef8e222e4682ebd9c7de62cf2747efccea0))
+* **doc:** update install ([e9ba830](https://github.com/zenbones-theme/zenbones.nvim/commit/e9ba8305f65524f9355515cdd8704b2c6ba2def6))
+* **specs:** sync light and dark ([c4e1845](https://github.com/zenbones-theme/zenbones.nvim/commit/c4e1845cdc9be2c1b2ba02c78ee0438e576898cf))
+* **ts:** use delimiter for [@constructor](https://github.com/constructor).lua ([1ac520f](https://github.com/zenbones-theme/zenbones.nvim/commit/1ac520f7fc8b1c41d1414270ee48c8f8be2714b0))
+
 ## [4.3.1](https://github.com/mcchrish/zenbones.nvim/compare/v4.3.0...v4.3.1) (2024-05-20)
 
 
