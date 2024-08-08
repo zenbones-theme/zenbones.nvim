@@ -16,6 +16,8 @@ jobs:
 
   docs:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
     if: ${{ github.ref == 'refs/heads/main' }}
     steps:
       - uses: actions/checkout@v4
@@ -28,7 +30,7 @@ jobs:
           version: "Vim 8.1 / Nvim v0.8.0"
           treesitter: true
       - name: Push changes
-        uses: stefanzweifel/git-auto-commit-action@v4
+        uses: stefanzweifel/git-auto-commit-action@v5
         with:
           commit_message: "chore(build): auto-generate vimdoc"
           commit_user_name: "github-actions[bot]"
@@ -59,7 +61,7 @@ jobs:
           make
 
       - name: Push changes
-        uses: stefanzweifel/git-auto-commit-action@v4
+        uses: stefanzweifel/git-auto-commit-action@v5
         with:
           commit_message: "chore(build): rebuild artifacts"
           commit_user_name: "github-actions[bot]"
@@ -68,6 +70,8 @@ jobs:
 
   format:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
     if: ${{ github.ref == 'refs/heads/main' }}
     steps:
       - uses: actions/checkout@v4
@@ -94,6 +98,9 @@ jobs:
 
   release:
     name: release
+    permissions:
+      contents: write
+      pull-requests: write
     if: ${{ github.ref == 'refs/heads/main' }}
     needs:
       - docs
