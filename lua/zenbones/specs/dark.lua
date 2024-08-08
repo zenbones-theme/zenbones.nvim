@@ -321,6 +321,8 @@ local function generate(p, opt)
 			sym "@variable.parameter.vimdoc"    { Type },
 			sym "@label.vimdoc"                 { Type, gui = "bold" },
 
+			sym "@constructor.lua"                  { Delimiter },
+
 			-- LSP Semantic Token Groups
 			sym "@lsp.type.boolean"                       { sym "@boolean" },
 			sym "@lsp.type.builtinType"                   { sym "@type.builtin" },
@@ -397,6 +399,9 @@ local function generate(p, opt)
 
 			IblIndent                        { fg = p1.bg.li(8).de(22) },
 			IblScope                         { fg = p1.bg.li(22).de(22) },
+
+			IndentLine                       { IblIndent },
+			IndentLineCurrent                { IblScope },
 
 			TelescopeSelection               { CursorLine },
 			TelescopeSelectionCaret          { TelescopeSelection, fg = p.rose },
