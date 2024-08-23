@@ -424,9 +424,8 @@ local function generate(p, opt)
 			SneakLabelMask                   { bg = p.blossom, fg = p.blossom },
 
 			LeapMatch                        { gui = "bold,underline,nocombine" },
-			LeapLabelPrimary                 { Search , gui = "bold,nocombine" },
-			LeapLabelSecondary               { DiffText, gui = "bold,nocombine" },
-			LeapLabelSelected                { IncSearch },
+			LeapBackdrop                     { gui = "nocombine", fg = p.bg.lightness(p.bg.l - 20) },
+			LeapLabel                        { fg = p.blossom.lightness(p1.bg.l - 46).sa(80), gui = "bold" },
 
 			HopNextKey                       { fg = p.blossom, gui = "bold,underline" },
 			HopNextKey1                      { fg = p.sky, gui = "bold,underline" },
