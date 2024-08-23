@@ -1,5 +1,12 @@
 # Changelog
 
+## [4.3.4](https://github.com/zenbones-theme/zenbones.nvim/compare/v4.3.3...v4.3.4) (2024-08-23)
+
+
+### Bug Fixes
+
+* Leap highlight are out of date ([#195](https://github.com/zenbones-theme/zenbones.nvim/issues/195)) ([b433225](https://github.com/zenbones-theme/zenbones.nvim/commit/b433225e29de5955a70b3e25a762cfaf2cf24a3d))
+
 ## [4.3.3](https://github.com/zenbones-theme/zenbones.nvim/compare/v4.3.2...v4.3.3) (2024-08-08)
 
 
