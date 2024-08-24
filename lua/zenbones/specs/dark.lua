@@ -298,9 +298,9 @@ local function generate(p, opt)
 			sym "@markup.list.checked"          { sym "@markup.list" },
 			sym "@markup.list.unchecked"        { sym "@markup.list" },
 
-			sym "@diff.plus"                    { fg = p.leaf },
-			sym "@diff.minus"                   { fg = p.rose },
-			sym "@diff.delta"                   { fg = p.water },
+			sym "@diff.plus"                    { DiffAdd },
+			sym "@diff.minus"                   { DiffDelete },
+			sym "@diff.delta"                   { DiffChange },
 
 			sym "@tag"                          { Special },
 			sym "@tag.attribute"                { sym "@property" },
@@ -367,9 +367,9 @@ local function generate(p, opt)
 			sym "@lsp.typemod.variable.static"            { sym "@constant" },
 
 			-- Syntax
-			diffAdded                 { fg = p.leaf },
-			diffRemoved               { fg = p.rose },
-			diffChanged               { fg = p.water },
+			diffAdded                 { DiffAdd },
+			diffRemoved               { DiffDelete },
+			diffChanged               { DiffChange },
 			diffOldFile               { fg = p.rose, gui = "italic" },
 			diffNewFile               { fg = p.leaf, gui = "italic" },
 			diffFile                  { fg = p.wood, gui = "bold" },
