@@ -100,8 +100,11 @@ if &background ==# 'dark'
     highlight! link NotifyWARNIcon DiagnosticWarn
     highlight! link NotifyWARNTitle DiagnosticWarn
     highlight DiffAdd guifg=NONE guibg=#3D4B2F guisp=NONE gui=NONE cterm=NONE
+    highlight! link diffAdded DiffAdd
     highlight DiffChange guifg=NONE guibg=#324B4B guisp=NONE gui=NONE cterm=NONE
+    highlight! link diffChanged DiffChange
     highlight DiffDelete guifg=NONE guibg=#663A3E guisp=NONE gui=NONE cterm=NONE
+    highlight! link diffRemoved DiffDelete
     highlight DiffText guifg=#EBEEF3 guibg=#476968 guisp=NONE gui=NONE cterm=NONE
     highlight Directory guifg=NONE guibg=NONE guisp=NONE gui=bold cterm=bold
     highlight Error guifg=#C1616A guibg=NONE guisp=NONE gui=NONE cterm=NONE
@@ -201,14 +204,11 @@ if &background ==# 'dark'
     highlight! link SneakLabel WildMenu
     highlight WinSeparator guifg=#69758C guibg=NONE guisp=NONE gui=NONE cterm=NONE
     highlight! link VertSplit WinSeparator
-    highlight diffAdded guifg=#A4BE8D guibg=NONE guisp=NONE gui=NONE cterm=NONE
-    highlight diffChanged guifg=#8FBCBA guibg=NONE guisp=NONE gui=NONE cterm=NONE
     highlight diffFile guifg=#CF866F guibg=NONE guisp=NONE gui=bold cterm=bold
     highlight diffIndexLine guifg=#CF866F guibg=NONE guisp=NONE gui=NONE cterm=NONE
     highlight diffLine guifg=#B38DAC guibg=NONE guisp=NONE gui=bold cterm=bold
     highlight diffNewFile guifg=#A4BE8D guibg=NONE guisp=NONE gui=italic cterm=italic
     highlight diffOldFile guifg=#C1616A guibg=NONE guisp=NONE gui=italic cterm=italic
-    highlight diffRemoved guifg=#C1616A guibg=NONE guisp=NONE gui=NONE cterm=NONE
     highlight helpHyperTextEntry guifg=#98A3BB guibg=NONE guisp=NONE gui=bold cterm=bold
     highlight helpHyperTextJump guifg=#BFCADB guibg=NONE guisp=NONE gui=underline cterm=underline
     highlight lCursor guifg=#2F3541 guibg=#8297B6 guisp=NONE gui=NONE cterm=NONE
