@@ -1,5 +1,13 @@
 # Changelog
 
+## [4.3.5](https://github.com/zenbones-theme/zenbones.nvim/compare/v4.3.4...v4.3.5) (2024-08-24)
+
+
+### Bug Fixes
+
+* add lazy.nvim instructions ([6c01e4c](https://github.com/zenbones-theme/zenbones.nvim/commit/6c01e4cd3a4e8ae4321069bfb814cac1e2b2a07e))
+* improve diff ([168593f](https://github.com/zenbones-theme/zenbones.nvim/commit/168593f4ad8dc79fce52b88b5cf90447536d0a81))
+
 ## [4.3.4](https://github.com/zenbones-theme/zenbones.nvim/compare/v4.3.3...v4.3.4) (2024-08-23)
 
 
