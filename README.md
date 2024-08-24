@@ -27,15 +27,18 @@ or try the [built-in collection](#usage).
 
 ## Installation
 
-Example installation using packer:
+Example installation using lazy.nvim:
 
 ```lua
-use {
+{
     "zenbones-theme/zenbones.nvim",
     -- Optionally install Lush. Allows for more configuration or extending the colorscheme
     -- If you don't want to install lush, make sure to set g:zenbones_compat = 1
     -- In Vim, compat mode is turned on as Lush only works in Neovim.
-    requires = "rktjmp/lush.nvim"
+    dependencies = "rktjmp/lush.nvim",
+    lazy = false,
+    priority = 1000,
+    opts = {},
 }
 ```
 
@@ -140,5 +143,5 @@ There are more similar
 
 ## Git mirrors
 
-- [Gitlab](https://gitlab.com/mcchris/zenbones.nvim)
-- [Codeberg](https://codeberg.org/mcchris/zenbones.nvim)
+-   [Gitlab](https://gitlab.com/mcchris/zenbones.nvim)
+-   [Codeberg](https://codeberg.org/mcchris/zenbones.nvim)
