@@ -161,6 +161,7 @@ if &background ==# 'dark'
     highlight PmenuSbar guifg=NONE guibg=#657087 guisp=NONE gui=NONE cterm=NONE
     highlight PmenuSel guifg=NONE guibg=#535C6F guisp=NONE gui=NONE cterm=NONE
     highlight PmenuThumb guifg=NONE guibg=#8694B0 guisp=NONE gui=NONE cterm=NONE
+    highlight RenderMarkdownCode guifg=NONE guibg=#353C49 guisp=NONE gui=NONE cterm=NONE
     highlight Search guifg=#EBEEF3 guibg=#84637E guisp=NONE gui=NONE cterm=NONE
     highlight! link CocSearch Search
     highlight! link MatchParen Search

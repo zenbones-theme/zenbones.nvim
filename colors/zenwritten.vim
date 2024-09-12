@@ -160,6 +160,7 @@ if &background ==# 'dark'
     highlight PmenuSbar guifg=NONE guibg=#595959 guisp=NONE gui=NONE cterm=NONE
     highlight PmenuSel guifg=NONE guibg=#444444 guisp=NONE gui=NONE cterm=NONE
     highlight PmenuThumb guifg=NONE guibg=#848484 guisp=NONE gui=NONE cterm=NONE
+    highlight RenderMarkdownCode guifg=NONE guibg=#222222 guisp=NONE gui=NONE cterm=NONE
     highlight Search guifg=#BBBBBB guibg=#65435E guisp=NONE gui=NONE cterm=NONE
     highlight! link CocSearch Search
     highlight! link MatchParen Search
@@ -380,6 +381,7 @@ else
     highlight PmenuSbar guifg=NONE guibg=#A6A6A6 guisp=NONE gui=NONE cterm=NONE
     highlight PmenuSel guifg=NONE guibg=#B9B9B9 guisp=NONE gui=NONE cterm=NONE
     highlight PmenuThumb guifg=NONE guibg=#F6F6F6 guisp=NONE gui=NONE cterm=NONE
+    highlight RenderMarkdownCode guifg=NONE guibg=#E8E8E8 guisp=NONE gui=NONE cterm=NONE
     highlight Search guifg=#353535 guibg=#DEB9D6 guisp=NONE gui=NONE cterm=NONE
     highlight! link CocSearch Search
     highlight! link MatchParen Search
