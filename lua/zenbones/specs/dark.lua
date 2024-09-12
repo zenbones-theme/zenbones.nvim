@@ -529,6 +529,8 @@ local function generate(p, opt)
 			NotifyDEBUGTitle                 { DiagnosticHint },
 			NotifyTRACEIcon                  { DiagnosticHint },
 			NotifyTRACETitle                 { DiagnosticHint },
+
+			RenderMarkdownCode { bg = LspInlayHint.bg },
 		}
 	end)
 	-- stylua: ignore end
