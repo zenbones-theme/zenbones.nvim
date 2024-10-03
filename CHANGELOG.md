@@ -1,5 +1,17 @@
 # Changelog
 
+## [4.4.0](https://github.com/zenbones-theme/zenbones.nvim/compare/v4.3.5...v4.4.0) (2024-10-03)
+
+
+### Features
+
+* render markdown codeblock bg ([#199](https://github.com/zenbones-theme/zenbones.nvim/issues/199)) ([f82c02d](https://github.com/zenbones-theme/zenbones.nvim/commit/f82c02d773b952f2cf0edd443665e4be0873e17d))
+
+
+### Bug Fixes
+
+* correct bug and clarify lazy.nvim install ([#202](https://github.com/zenbones-theme/zenbones.nvim/issues/202)) ([88960c8](https://github.com/zenbones-theme/zenbones.nvim/commit/88960c8aa3ad8aff0bcccdce7cd23629c7a3c510))
+
 ## [4.3.5](https://github.com/zenbones-theme/zenbones.nvim/compare/v4.3.4...v4.3.5) (2024-08-24)
 
 
