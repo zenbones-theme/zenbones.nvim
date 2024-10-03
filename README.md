@@ -38,7 +38,11 @@ Example installation using lazy.nvim:
     dependencies = "rktjmp/lush.nvim",
     lazy = false,
     priority = 1000,
-    opts = {},
+    -- you can set set configuration options here
+    -- config = function()
+    --     vim.g.zenbones_darken_comments = 45
+    --     vim.cmd.colorscheme('zenbones')
+    -- end
 }
 ```
 
