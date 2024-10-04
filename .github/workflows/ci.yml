@@ -4,11 +4,15 @@ on:
   push:
   pull_request:
 
+permissions:
+  contents: write
+  pull-requests: write
+
 jobs:
   lint:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
       - uses: NTBBloodbath/selene-action@v1.0.0
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
@@ -18,7 +22,7 @@ jobs:
     runs-on: ubuntu-latest
     if: ${{ github.ref == 'refs/heads/main' }}
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
       - name: panvimdoc
         uses: kdheepak/panvimdoc@main
         with:
@@ -28,7 +32,7 @@ jobs:
           version: "Vim 8.1 / Nvim v0.8.0"
           treesitter: true
       - name: Push changes
-        uses: stefanzweifel/git-auto-commit-action@v4
+        uses: stefanzweifel/git-auto-commit-action@v5
         with:
           commit_message: "chore(build): auto-generate vimdoc"
           commit_user_name: "github-actions[bot]"
@@ -39,7 +43,7 @@ jobs:
     runs-on: ubuntu-latest
     if: ${{ github.ref == 'refs/heads/main' }}
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
 
       - name: Clone lush
         run: |
@@ -57,7 +61,7 @@ jobs:
           make
 
       - name: Push changes
-        uses: stefanzweifel/git-auto-commit-action@v4
+        uses: stefanzweifel/git-auto-commit-action@v5
         with:
           commit_message: "chore(build): rebuild artifacts"
           commit_user_name: "github-actions[bot]"
@@ -68,22 +72,22 @@ jobs:
     runs-on: ubuntu-latest
     if: ${{ github.ref == 'refs/heads/main' }}
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
 
-      - uses: JohnnyMorganz/stylua-action@v2
+      - uses: JohnnyMorganz/stylua-action@v4
         with:
           version: latest
           token: ${{ secrets.GITHUB_TOKEN }}
           args: --config-path=.stylua.toml lua/
 
-      - uses: actions/setup-node@v3
+      - uses: actions/setup-node@v4
       - name: Apply prettier
         run: |
           npm install -g prettier
           prettier --write **/*.md
 
       - name: Push changes
-        uses: stefanzweifel/git-auto-commit-action@v4
+        uses: stefanzweifel/git-auto-commit-action@v5
         with:
           commit_message: "chore(build): format"
           commit_user_name: "github-actions[bot]"
@@ -91,7 +95,6 @@ jobs:
           commit_author: "github-actions[bot] <github-actions[bot]@users.noreply.github.com>"
 
   release:
-    name: release
     if: ${{ github.ref == 'refs/heads/main' }}
     needs:
       - docs
@@ -99,12 +102,9 @@ jobs:
       - format
     runs-on: ubuntu-latest
     steps:
-      - uses: google-github-actions/release-please-action@v3
-        id: release
+      - uses: googleapis/release-please-action@v4
         with:
           release-type: simple
-          package-name: zenbones.nvim
-      - uses: actions/checkout@v3
       - name: tag stable versions
         if: ${{ steps.release.outputs.release_created }}
         run: |

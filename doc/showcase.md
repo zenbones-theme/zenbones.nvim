@@ -1,7 +1,7 @@
 # Showcase
 
 See also the
-[vimcolorschemes page](https://vimcolorschemes.com/mcchrish/zenbones.nvim).
+[vimcolorschemes page](https://vimcolorschemes.com/zenbones-theme/zenbones.nvim).
 
 ## Neobones
 

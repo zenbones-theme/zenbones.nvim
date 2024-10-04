@@ -39,7 +39,7 @@ local function generate(p, opt)
 			WarningMsg      { fg = p.wood }, -- warning messages
 
 			Comment         { fg = p1.bg.da(opt.darken_comments or 38).de(28), gui = opt.italic_comments ~= false and "italic" or "NONE" }, -- any comment
-			Conceal         { fg = p1.fg3, gui = "bold,italic" }, -- placeholder characters substituted for concealed text (see 'conceallevel')
+			Conceal         { fg = p1.fg5, gui = "bold,italic" }, -- placeholder characters substituted for concealed text (see 'conceallevel')
 
 			Cursor          { bg = p.fg, fg = p1.bg }, -- character under the cursor
 			lCursor         { Cursor, bg = Cursor.bg.li(20)  }, -- the character under the cursor when |language-mapping| is used (see 'guicursor')
@@ -62,15 +62,22 @@ local function generate(p, opt)
 			Folded          { bg = not opt.transparent_background and p1.bg.da(16) or "NONE", fg = p1.bg.da(64) }, -- line used for closed folds
 			CursorLineNr    { LineNr, fg = p.fg, gui = "bold" }, -- Like LineNr when 'cursorline' or 'relativenumber' is set for the cursor line.
 
-			-- ModeMsg      { }, -- 'showmode' message (e.g., "-- INSERT -- ")
+			ModeMsg         { Normal }, -- 'showmode' message (e.g., "-- INSERT -- ")
 			-- MsgArea      { }, -- Area for messages and cmdline
 			-- MsgSeparator { }, -- Separator for scrolled messages, `msgsep` flag of 'display'
 			MoreMsg         { fg = p.leaf, gui = "bold" }, -- |more-prompt|
+
 			NormalFloat     { bg = p1.bg.da(8) }, -- Normal text in floating windows.
 			FloatBorder     { fg = p1.bg.da(50), bg = opt.solid_float_border and NormalFloat.bg or "NONE" }, -- Normal text in floating windows.
+			-- FloatTitle      { },
+			-- FloatFooter     { },
 
 			Pmenu           { bg = p1.bg.da(10) }, -- Popup menu: normal item.
 			PmenuSel        { bg = p1.bg.da(20) }, -- Popup menu: selected item.
+			-- PmenuKind       { },
+			-- PmenuKindSel    { },
+			-- PmenuKindExtra  { },
+			-- PmenuKindExtraSel { },
 			PmenuSbar       { bg = p1.bg.da(28) }, -- Popup menu: scrollbar.
 			PmenuThumb      { bg = p1.bg.li(58) }, -- Popup menu: Thumb of the scrollbar.
 
@@ -78,7 +85,7 @@ local function generate(p, opt)
 			IncSearch       { bg = p.blossom.lightness(p1.bg.l - 35), fg = p1.bg, gui = "bold" }, -- 'incsearch' highlighting; also used for the text replaced with ":s///c"
 			-- Substitute   { }, -- |:substitute| replacement text highlighting
 			MatchParen      { Search }, -- The character under the cursor or just before it, if it is a paired bracket, and its match. |pi_paren.txt|
-			-- QuickFixLine { }, -- Current |quickfix| item in the quickfix window. Combined with |hl-CursorLine| when the cursor is there.
+			QuickFixLine    { Search }, -- Current |quickfix| item in the quickfix window. Combined with |hl-CursorLine| when the cursor is there.
 			CurSearch       { IncSearch },
 
 			SpellBad        { fg = Error.fg.de(30), gui = "undercurl", sp = Error.fg }, -- Word that is not recognized by the spellchecker. |spell| Combined with the highlighting used otherwise.
@@ -91,6 +98,8 @@ local function generate(p, opt)
 			TabLine         { StatusLine }, -- tab pages line, not active tab page label
 			TabLineFill     { StatusLineNC }, -- tab pages line, where there are no labels
 			TabLineSel      { gui = "bold" }, -- tab pages line, active tab page label
+			WinBar          { StatusLine },
+			WinBarNC        { StatusLineNC },
 			WinSeparator    { fg = LineNr.fg, bg = opt.solid_vert_split and StatusLineNC.bg or "NONE" },
 			VertSplit       { WinSeparator },
 
@@ -115,11 +124,11 @@ local function generate(p, opt)
 			-- Uncomment and edit if you want more specific syntax highlighting.
 
 			Constant        { fg = p1.fg4, gui = "italic" }, -- (preferred) any constant
-			-- String       { }, --   a string constant: "this is a string"
-			-- Character    { }, --  a character constant: 'c', '\n'
-			Number          { fg = p.fg, gui = "italic" }, --   a number constant: 234, 0xff
-			Boolean         { Number }, --  a boolean constant: TRUE, false
-			-- Float        { }, --    a floating point constant: 2.3e10
+			String          { Constant }, --   a string constant: "this is a string"
+			Character       { Constant }, --  a character constant: 'c', '\n'
+			Number          { fg = p1.fg4 }, --   a number constant: 234, 0xff
+			Boolean         { fg = p.fg, gui = "italic" }, --  a boolean constant: TRUE, false
+			Float           { Number }, --    a floating point constant: 2.3e10
 
 			Identifier      { fg = p1.fg2 }, -- (preferred) any variable name
 			Function        { fg = p.fg }, -- function name (also: methods for classes)
@@ -163,6 +172,7 @@ local function generate(p, opt)
 			LspReferenceRead           { ColorColumn }, -- used for highlighting "read" references
 			LspReferenceWrite          { ColorColumn }, -- used for highlighting "write" references
 			LspCodeLens                { LineNr },
+			LspInlayHint               { fg = p1.bg.sa(10).da(36), bg = p1.bg.da(2) },
 
 			DiagnosticError            { Error },
 			DiagnosticWarn             { WarningMsg },
@@ -192,19 +202,19 @@ local function generate(p, opt)
 
 			-- Tree-sitter
 			sym "@variable"                     { Identifier },
-			sym "@variable.builtin"             { Number },
+			sym "@variable.builtin"             { Constant },
 			sym "@variable.parameter"           { sym "@variable" },
 			sym "@variable.member"              { sym "@variable" },
 
 			sym "@constant"                     { Identifier, gui = "bold" },
-			sym "@constant.builtin"             { Number },
-			sym "@constant.macro"               { Number },
+			sym "@constant.builtin"             { Constant },
+			sym "@constant.macro"               { Constant },
 
-			sym "@module"                       { Number },
+			sym "@module"                       { Constant },
 			sym "@module.builtin"               { sym "@module" },
 			sym "@label"                        { Statement },
 
-			sym "@string"                       { Constant },
+			sym "@string"                       { String },
 			sym "@string.documentation"         { sym "@string" },
 			sym "@string.regexp"                { Constant },
 			sym "@string.escape"                { Special },
@@ -216,7 +226,7 @@ local function generate(p, opt)
 			sym "@character"                    { Constant },
 			sym "@character.special"            { Special },
 
-			sym "@boolean"                      { Number },
+			sym "@boolean"                      { Boolean },
 			sym "@number"                       { Number },
 			sym "@number.float"                 { sym "@number" },
 
@@ -288,9 +298,9 @@ local function generate(p, opt)
 			sym "@markup.list.checked"          { sym "@markup.list" },
 			sym "@markup.list.unchecked"        { sym "@markup.list" },
 
-			sym "@diff.plus"                    { fg = p.leaf },
-			sym "@diff.minus"                   { fg = p.rose },
-			sym "@diff.delta"                   { fg = p.water },
+			sym "@diff.plus"                    { DiffAdd },
+			sym "@diff.minus"                   { DiffDelete },
+			sym "@diff.delta"                   { DiffChange },
 
 			sym "@tag"                          { Special },
 			sym "@tag.attribute"                { sym "@property" },
@@ -310,6 +320,8 @@ local function generate(p, opt)
 			sym "@markup.raw.block.vimdoc"      { fg = 'NONE' },
 			sym "@variable.parameter.vimdoc"    { Type },
 			sym "@label.vimdoc"                 { Type, gui = "bold" },
+
+			sym "@constructor.lua"                  { Delimiter },
 
 			-- LSP Semantic Token Groups
 			sym "@lsp.type.boolean"                       { sym "@boolean" },
@@ -355,9 +367,9 @@ local function generate(p, opt)
 			sym "@lsp.typemod.variable.static"            { sym "@constant" },
 
 			-- Syntax
-			diffAdded                 { fg = p.leaf },
-			diffRemoved               { fg = p.rose },
-			diffChanged               { fg = p.water },
+			diffAdded                 { DiffAdd },
+			diffRemoved               { DiffDelete },
+			diffChanged               { DiffChange },
 			diffOldFile               { fg = p.rose, gui = "italic" },
 			diffNewFile               { fg = p.leaf, gui = "italic" },
 			diffFile                  { fg = p.wood, gui = "bold" },
@@ -387,20 +399,33 @@ local function generate(p, opt)
 
 			IblIndent                        { fg = p1.bg.da(6).de(20) },
 			IblScope                         { fg = p1.bg.da(22).de(20) },
+			IndentLine                       { IblIndent },
+			IndentLineCurrent                { IblScope },
 
 			TelescopeSelection               { CursorLine },
 			TelescopeSelectionCaret          { TelescopeSelection, fg = p.rose },
 			TelescopeMatching                { fg = p.blossom, gui = "bold" },
 			TelescopeBorder                  { fg = FloatBorder.fg },
 
+			FzfLuaHeaderBind                 { fg = p.leaf },
+			FzfLuaHeaderText                 { fg = p.wood },
+			FzfLuaPathColNr                  { Type, gui = "bold" },
+			FzfLuaPathLineNr                 { FzfLuaPathColNr },
+			FzfLuaBufName                    { Statement },
+			FzfLuaBufNr                      { fg = p.leaf },
+			FzfLuaBufFlagCur                 { fg = p.wood },
+			FzfLuaBufFlagAlt                 { fg = p.water },
+			FzfLuaTabTitle                   { fg = p.sky },
+			FzfLuaTabMarker                  { fg = p.leaf },
+			FzfLuaLiveSym                    { fg = p.wood },
+
 			Sneak                            { Search },
 			SneakLabel                       { WildMenu },
 			SneakLabelMask                   { bg = p.blossom, fg = p.blossom },
 
 			LeapMatch                        { gui = "bold,underline,nocombine" },
-			LeapLabelPrimary                 { Search , gui = "bold,nocombine" },
-			LeapLabelSecondary               { DiffText, gui = "bold,nocombine" },
-			LeapLabelSelected                { IncSearch },
+			LeapBackdrop                     { gui = "nocombine", fg = p.bg.lightness(p.bg.l - 20) },
+			LeapLabel                        { fg = p.blossom.lightness(p1.bg.l - 46).sa(80), gui = "bold" },
 
 			HopNextKey                       { fg = p.blossom, gui = "bold,underline" },
 			HopNextKey1                      { fg = p.sky, gui = "bold,underline" },
@@ -503,6 +528,8 @@ local function generate(p, opt)
 			NotifyDEBUGTitle                 { DiagnosticHint },
 			NotifyTRACEIcon                  { DiagnosticHint },
 			NotifyTRACETitle                 { DiagnosticHint },
+
+			RenderMarkdownCode { bg = LspInlayHint.bg },
 		}
 	end)
 	-- stylua: ignore end

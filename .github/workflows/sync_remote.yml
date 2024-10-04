@@ -1,11 +1,11 @@
 name: Sync remote
 
-on: [push, pull_request, delete]
+on: [push, delete]
 
 jobs:
   push:
     runs-on: ubuntu-latest
-    if: github.repository == 'mcchrish/zenbones.nvim'
+    if: github.repository == 'zenbones-theme/zenbones.nvim'
     steps:
       - uses: actions/checkout@v4
         with:
