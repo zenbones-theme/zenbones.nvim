@@ -12,7 +12,6 @@ return lush.extends({ specs }).with(function()
 		Statement { fg = p.wood },
 		Special { fg = p.water },
 		String { fg = p.leaf },
-		Constant { fg = p.leaf },
 		PreProc { fg = p.sky },
 		Type { fg = p.water },
 		ColorColumn { bg = p.bg },

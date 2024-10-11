@@ -16,7 +16,6 @@ return lush.extends({ specs }).with(function()
 		TSConstBuiltin { fg = p.sky1 },
 		PreProc { fg = p.blossom },
 		Special { fg = p.water },
-		Constant { fg = p.leaf },
 		String { fg = p.leaf },
 		ColorColumn { bg = p.bg1 },
 		MiniFilesNormal { bg = "#18181c" },
