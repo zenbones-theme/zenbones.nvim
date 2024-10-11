@@ -44,7 +44,7 @@ if &background ==# 'dark'
     highlight! link LspReferenceWrite ColorColumn
     highlight Comment guifg=#686868 guibg=NONE guisp=NONE gui=italic cterm=italic
     highlight Conceal guifg=#7F7F7F guibg=NONE guisp=NONE gui=bold,italic cterm=bold,italic
-    highlight Constant guifg=#819B69 guibg=NONE guisp=NONE gui=NONE cterm=NONE
+    highlight Constant guifg=#8B8B8B guibg=NONE guisp=NONE gui=italic cterm=italic
     highlight! link Character Constant
     highlight! link TroubleSource Constant
     highlight! link WhichKeyValue Constant
@@ -223,6 +223,7 @@ if &background ==# 'dark'
         highlight Boolean gui=NONE cterm=NONE
         highlight Character gui=NONE cterm=NONE
         highlight Comment gui=NONE cterm=NONE
+        highlight Constant gui=NONE cterm=NONE
         highlight SpecialKey gui=NONE cterm=NONE
         highlight TroubleSource gui=NONE cterm=NONE
         highlight WhichKeyValue gui=NONE cterm=NONE
@@ -264,7 +265,7 @@ else
     highlight! link LspReferenceWrite ColorColumn
     highlight Comment guifg=#8B8B8B guibg=NONE guisp=NONE gui=italic cterm=italic
     highlight Conceal guifg=#6D6D6D guibg=NONE guisp=NONE gui=bold,italic cterm=bold,italic
-    highlight Constant guifg=#4F6C31 guibg=NONE guisp=NONE gui=NONE cterm=NONE
+    highlight Constant guifg=#636363 guibg=NONE guisp=NONE gui=italic cterm=italic
     highlight! link Character Constant
     highlight! link TroubleSource Constant
     highlight! link WhichKeyValue Constant
@@ -443,6 +444,7 @@ else
         highlight Boolean gui=NONE cterm=NONE
         highlight Character gui=NONE cterm=NONE
         highlight Comment gui=NONE cterm=NONE
+        highlight Constant gui=NONE cterm=NONE
         highlight SpecialKey gui=NONE cterm=NONE
         highlight TroubleSource gui=NONE cterm=NONE
         highlight WhichKeyValue gui=NONE cterm=NONE
