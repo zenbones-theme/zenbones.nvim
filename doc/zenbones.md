@@ -76,8 +76,10 @@ the flavor name e.g. `g:rosebones_italic_comments`.
 | italic_comments                    | both       | `true`  | Make comments italicize.                                                  |
 | darken_comments                    | light      | `38`    | Percentage to darken comments relative to Normal bg.                      |
 | lighten_comments                   | dark       | `38`    | Percentage to lighten comments relative to Normal bg.                     |
-| darken_non_text                    | light      | `25`    | Percentage to darken \|hl-NonText\| relative to Normal bg.                |
-| lighten_non_text                   | dark       | `30`    | Percentage to lighten \|hl-NonText\| relative to Normal bg.               |
+| darken_non_text                    | light      | `40`    | Percentage to darken \|hl-NonText\| relative to Normal bg.                |
+| lighten_non_text                   | dark       | `45`    | Percentage to lighten \|hl-NonText\| relative to Normal bg.               |
+| darken_whitespace                  | light      | `10`    | Percentage to darken \|hl-Whitespace\| relative to Normal bg.                |
+| lighten_whitespace                 | dark       | `15`    | Percentage to lighten \|hl-Whitespace\| relative to Normal bg.               |
 | darken_line_nr                     | light      | `33`    | Percentage to darken \|hl-LineNr\| relative to Normal bg.                 |
 | lighten_line_nr                    | dark       | `35`    | Percentage to lighten \|hl-LineNr\| relative to Normal bg.                |
 | darken_cursor_line                 | light      | `3`     | Percentage to darken \|hl-CursorLine\| relative to Normal bg.             |
