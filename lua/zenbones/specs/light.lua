@@ -401,6 +401,8 @@ local function generate(p, opt)
 			IblScope                         { fg = p1.bg.da(22).de(20) },
 			IndentLine                       { IblIndent },
 			IndentLineCurrent                { IblScope },
+			SnacksIndent                     { fg = p1.bg.da(6).de(20) },
+			SnacksIndentScope                { fg = p1.bg.da(22).de(20) },
 
 			TelescopeSelection               { CursorLine },
 			TelescopeSelectionCaret          { TelescopeSelection, fg = p.rose },
