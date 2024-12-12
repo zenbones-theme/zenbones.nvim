@@ -150,6 +150,7 @@ if &background ==# 'dark'
     highlight MiniFilesNormal guifg=NONE guibg=#18181c guisp=NONE gui=NONE cterm=NONE
     highlight MoreMsg guifg=#A4BE8D guibg=NONE guisp=NONE gui=bold cterm=bold
     highlight! link Question MoreMsg
+    highlight NavicText guifg=#bdc3c8 guibg=NONE guisp=NONE gui=NONE cterm=NONE
     highlight! link NnnNormalNC NnnNormal
     highlight! link NnnVertSplit NnnWinSeparator
     highlight NonText guifg=#606B81 guibg=NONE guisp=NONE gui=NONE cterm=NONE
