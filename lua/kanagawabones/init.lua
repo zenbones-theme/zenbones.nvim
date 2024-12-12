@@ -14,6 +14,7 @@ return lush.extends({ specs }).with(function()
 		String { fg = p.leaf },
 		ColorColumn { bg = p.bg1 },
 		MiniFilesNormal { bg = "#18181c" },
+		NavicText { fg = "#b0ac96" },
 	}
 	-- selene: deny(undefined_variable)
 	---@diagnostic enable: undefined-global

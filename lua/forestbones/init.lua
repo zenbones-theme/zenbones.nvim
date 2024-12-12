@@ -16,6 +16,7 @@ return lush.extends({ specs }).with(function()
 		Type { fg = p.water },
 		ColorColumn { bg = p.bg },
 		MiniFilesNormal { bg = "#18181c" },
+		NavicText { fg = "#b4ae9c" },
 	}
 	-- selene: deny(undefined_variable)
 	---@diagnostic enable: undefined-global
