@@ -1,5 +1,12 @@
 # Changelog
 
+## [4.5.0](https://github.com/zenbones-theme/zenbones.nvim/compare/v4.4.0...v4.5.0) (2025-01-09)
+
+
+### Features
+
+* more fzf-lua support ([f860d70](https://github.com/zenbones-theme/zenbones.nvim/commit/f860d70d57f51134a9b7a54d8b39d8385744bcb1))
+
 ## [4.4.0](https://github.com/zenbones-theme/zenbones.nvim/compare/v4.3.5...v4.4.0) (2024-10-03)
 
 
