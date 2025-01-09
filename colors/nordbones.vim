@@ -56,6 +56,7 @@ if &background ==# 'dark'
     highlight CursorLine guifg=NONE guibg=#353C49 guisp=NONE gui=NONE cterm=NONE
     highlight! link CocMenuSel CursorLine
     highlight! link CursorColumn CursorLine
+    highlight! link FzfLuaFzfCursorLine CursorLine
     highlight CursorLineNr guifg=#EBEEF3 guibg=NONE guisp=NONE gui=bold cterm=bold
     highlight Delimiter guifg=#818EAB guibg=NONE guisp=NONE gui=NONE cterm=NONE
     highlight! link markdownLinkTextDelimiter Delimiter
@@ -113,6 +114,7 @@ if &background ==# 'dark'
     highlight FlashBackdrop guifg=#737C90 guibg=NONE guisp=NONE gui=NONE cterm=NONE
     highlight FlashLabel guifg=#EBEEF3 guibg=#567272 guisp=NONE gui=NONE cterm=NONE
     highlight FloatBorder guifg=#7E8CA8 guibg=NONE guisp=NONE gui=NONE cterm=NONE
+    highlight FloatTitle guifg=#EBEEF3 guibg=#3F4756 guisp=NONE gui=bold cterm=bold
     highlight FoldColumn guifg=#69758C guibg=NONE guisp=NONE gui=bold cterm=bold
     highlight Folded guifg=#A8B1C5 guibg=#464E5F guisp=NONE gui=NONE cterm=NONE
     highlight Function guifg=#87BFCE guibg=NONE guisp=NONE gui=NONE cterm=NONE
@@ -121,6 +123,7 @@ if &background ==# 'dark'
     highlight FzfLuaBufFlagAlt guifg=#8FBCBA guibg=NONE guisp=NONE gui=NONE cterm=NONE
     highlight FzfLuaBufFlagCur guifg=#CF866F guibg=NONE guisp=NONE gui=NONE cterm=NONE
     highlight FzfLuaBufNr guifg=#A4BE8D guibg=NONE guisp=NONE gui=NONE cterm=NONE
+    highlight FzfLuaFzfMatch guifg=NONE guibg=NONE guisp=NONE gui=bold cterm=bold
     highlight FzfLuaHeaderBind guifg=#A4BE8D guibg=NONE guisp=NONE gui=NONE cterm=NONE
     highlight FzfLuaHeaderText guifg=#CF866F guibg=NONE guisp=NONE gui=NONE cterm=NONE
     highlight FzfLuaLiveSym guifg=#CF866F guibg=NONE guisp=NONE gui=NONE cterm=NONE
@@ -193,6 +196,7 @@ if &background ==# 'dark'
     highlight TabLineSel guifg=NONE guibg=NONE guisp=NONE gui=bold cterm=bold
     highlight! link BufferCurrent TabLineSel
     highlight Title guifg=#EBEEF3 guibg=NONE guisp=NONE gui=bold cterm=bold
+    highlight! link FzfLuaTitle Title
     highlight Todo guifg=NONE guibg=NONE guisp=NONE gui=bold,underline cterm=bold,underline
     highlight Type guifg=#5E81AB guibg=NONE guisp=NONE gui=NONE cterm=NONE
     highlight! link helpSpecial Type
