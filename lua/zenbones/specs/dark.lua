@@ -69,7 +69,7 @@ local function generate(p, opt)
 
 			NormalFloat     { bg = p1.bg.li(10) }, -- Normal text in floating windows.
 			FloatBorder     { fg = p1.bg.li(46), bg = opt.solid_float_border and NormalFloat.bg or "NONE" }, -- Normal text in floating windows.
-			-- FloatTitle      { },
+			FloatTitle      { fg = p.fg, bg = NormalFloat.bg, gui = "bold" },
 			-- FloatFooter     { },
 
 			Pmenu           { bg = p1.bg.li(10) }, -- Popup menu: normal item.
@@ -420,6 +420,9 @@ local function generate(p, opt)
 			FzfLuaTabTitle                   { fg = p.sky },
 			FzfLuaTabMarker                  { fg = p.leaf },
 			FzfLuaLiveSym                    { fg = p.wood },
+			FzfLuaTitle                      { Title },
+			FzfLuaFzfCursorLine              { CursorLine },
+			FzfLuaFzfMatch                   { fb = p.blossom, gui = "bold" },
 
 			Sneak                            { Search },
 			SneakLabel                       { WildMenu },
