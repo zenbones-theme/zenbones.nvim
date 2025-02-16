@@ -495,6 +495,11 @@ local function generate(p, opt)
 			CmpItemKind                      { fg = p1.fg4 },
 			CmpItemMenu                      { fg = p1.fg5 },
 
+			BlinkCmpLabelDetail              { Type },
+			BlinkCmpLabelDescription         { Type },
+			BlinkCmpSource                   { Type },
+			BlinkCmpKind                     { fg = p1.fg4 },
+
 			NnnNormal                        { NvimTreeNormal },
 			NnnNormalNC                      { NnnNormal },
 			NnnWinSeparator                  { NvimTreeWinSeparator },
