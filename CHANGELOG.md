@@ -1,5 +1,12 @@
 # Changelog
 
+## [4.6.0](https://github.com/zenbones-theme/zenbones.nvim/compare/v4.5.0...v4.6.0) (2025-02-16)
+
+
+### Features
+
+* support blink.cmp ([a92d8fa](https://github.com/zenbones-theme/zenbones.nvim/commit/a92d8fad347969490af0a95d6722b7f22344fef7))
+
 ## [4.5.0](https://github.com/zenbones-theme/zenbones.nvim/compare/v4.4.0...v4.5.0) (2025-01-09)
 
 
