@@ -403,6 +403,10 @@ local function generate(p, opt)
 			IndentLineCurrent                { IblScope },
 			SnacksIndent                     { fg = p1.bg.da(6).de(20) },
 			SnacksIndentScope                { fg = p1.bg.da(22).de(20) },
+			SnacksPickerBorder               { NormalFloat },
+			SnacksPickerListCursorLine       { CursorLine },
+			SnacksPickerMatch                { fg = p.sky, gui = "bold"  },
+			SnacksPickerPreviewCursorLine    { CursorLine },
 
 			TelescopeSelection               { CursorLine },
 			TelescopeSelectionCaret          { TelescopeSelection, fg = p.rose },
