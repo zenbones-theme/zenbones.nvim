@@ -1,5 +1,17 @@
 # Changelog
 
+## [4.7.0](https://github.com/zenbones-theme/zenbones.nvim/compare/v4.6.0...v4.7.0) (2025-03-04)
+
+
+### Features
+
+* support Snacks.picker ([#209](https://github.com/zenbones-theme/zenbones.nvim/issues/209)) ([8e6b18c](https://github.com/zenbones-theme/zenbones.nvim/commit/8e6b18c3032378f61d0d1efdf191301804a3da1c))
+
+
+### Bug Fixes
+
+* **ci:** sync remote gitlab ([cdb980d](https://github.com/zenbones-theme/zenbones.nvim/commit/cdb980d8144ea789fa73b47b05b9d180af9ff5b1))
+
 ## [4.6.0](https://github.com/zenbones-theme/zenbones.nvim/compare/v4.5.0...v4.6.0) (2025-02-16)
 
 
