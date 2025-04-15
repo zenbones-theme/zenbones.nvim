@@ -401,11 +401,12 @@ local function generate(p, opt)
 			IblScope                         { fg = p1.bg.li(22).de(22) },
 			IndentLine                       { IblIndent },
 			IndentLineCurrent                { IblScope },
+
 			SnacksIndent                     { fg = p1.bg.li(8).de(22) },
 			SnacksIndentScope                { fg = p1.bg.li(22).de(22) },
 			SnacksPickerBorder               { NormalFloat },
 			SnacksPickerListCursorLine       { CursorLine },
-			SnacksPickerMatch                { fg = p.sky, gui = "bold"  },
+			SnacksPickerMatch                { fg = p.blossom, gui = "bold"  },
 			SnacksPickerPreviewCursorLine    { CursorLine },
 
 			TelescopeSelection               { CursorLine },
