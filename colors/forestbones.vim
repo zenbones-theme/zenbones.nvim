@@ -175,7 +175,7 @@ if &background ==# 'dark'
     highlight! link Sneak Search
     highlight SnacksIndent guifg=#394147 guibg=NONE guisp=NONE gui=NONE cterm=NONE
     highlight SnacksIndentScope guifg=#515B63 guibg=NONE guisp=NONE gui=NONE cterm=NONE
-    highlight SnacksPickerMatch guifg=#83C193 guibg=NONE guisp=NONE gui=bold cterm=bold
+    highlight SnacksPickerMatch guifg=#D69AB7 guibg=NONE guisp=NONE gui=bold cterm=bold
     highlight SneakLabelMask guifg=#D69AB7 guibg=#D69AB7 guisp=NONE gui=NONE cterm=NONE
     highlight Special guifg=#B5AA92 guibg=NONE guisp=NONE gui=bold cterm=bold
     highlight! link WhichKeyGroup Special
@@ -406,7 +406,7 @@ else
     highlight! link Sneak Search
     highlight SnacksIndent guifg=#F0E2B6 guibg=NONE guisp=NONE gui=NONE cterm=NONE
     highlight SnacksIndentScope guifg=#C6B88C guibg=NONE guisp=NONE gui=NONE cterm=NONE
-    highlight SnacksPickerMatch guifg=#36A87E guibg=NONE guisp=NONE gui=bold cterm=bold
+    highlight SnacksPickerMatch guifg=#DF69BA guibg=NONE guisp=NONE gui=bold cterm=bold
     highlight SneakLabelMask guifg=#DF69BA guibg=#DF69BA guisp=NONE gui=NONE cterm=NONE
     highlight Special guifg=#6E7F88 guibg=NONE guisp=NONE gui=bold cterm=bold
     highlight! link WhichKeyGroup Special
