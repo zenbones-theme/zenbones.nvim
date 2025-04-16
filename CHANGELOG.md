@@ -1,5 +1,12 @@
 # Changelog
 
+## [4.7.1](https://github.com/zenbones-theme/zenbones.nvim/compare/v4.7.0...v4.7.1) (2025-04-15)
+
+
+### Bug Fixes
+
+* use blossom for snack match ([68edbb8](https://github.com/zenbones-theme/zenbones.nvim/commit/68edbb8716132b3e3283817ae91899036ff02bc8))
+
 ## [4.7.0](https://github.com/zenbones-theme/zenbones.nvim/compare/v4.6.0...v4.7.0) (2025-03-04)
 
 
