@@ -427,7 +427,7 @@ local function generate(p, opt)
 			FzfLuaLiveSym                    { fg = p.wood },
 			FzfLuaTitle                      { Title },
 			FzfLuaFzfCursorLine              { CursorLine },
-			FzfLuaFzfMatch                   { fb = p.blossom, gui = "bold" },
+			FzfLuaFzfMatch                   { fg = p.blossom, gui = "bold" },
 
 			Sneak                            { Search },
 			SneakLabel                       { WildMenu },
