@@ -1,5 +1,12 @@
 # Changelog
 
+## [4.7.2](https://github.com/zenbones-theme/zenbones.nvim/compare/v4.7.1...v4.7.2) (2025-04-21)
+
+
+### Bug Fixes
+
+* fzf match ([b6a0f6f](https://github.com/zenbones-theme/zenbones.nvim/commit/b6a0f6f41b660c9b183d60bfbc4b93908dc6c75a))
+
 ## [4.7.1](https://github.com/zenbones-theme/zenbones.nvim/compare/v4.7.0...v4.7.1) (2025-04-15)
 
 
