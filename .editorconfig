@@ -7,7 +7,6 @@ end_of_line = lf
 [*.lua]
 indent_style = tab
 
-
 [*.vim]
 indent_style = space
 

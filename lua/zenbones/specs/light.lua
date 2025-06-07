@@ -69,7 +69,7 @@ local function generate(p, opt)
 
 			NormalFloat     { bg = p1.bg.da(8) }, -- Normal text in floating windows.
 			FloatBorder     { fg = p1.bg.da(50), bg = opt.solid_float_border and NormalFloat.bg or "NONE" }, -- Normal text in floating windows.
-			-- FloatTitle      { },
+			FloatTitle      { fg = p.fg, bg = NormalFloat.bg, gui = "bold" },
 			-- FloatFooter     { },
 
 			Pmenu           { bg = p1.bg.da(10) }, -- Popup menu: normal item.
@@ -402,6 +402,13 @@ local function generate(p, opt)
 			IndentLine                       { IblIndent },
 			IndentLineCurrent                { IblScope },
 
+			SnacksIndent                     { fg = p1.bg.da(6).de(20) },
+			SnacksIndentScope                { fg = p1.bg.da(22).de(20) },
+			SnacksPickerBorder               { NormalFloat },
+			SnacksPickerListCursorLine       { CursorLine },
+			SnacksPickerMatch                { fg = p.blossom, gui = "bold"  },
+			SnacksPickerPreviewCursorLine    { CursorLine },
+
 			TelescopeSelection               { CursorLine },
 			TelescopeSelectionCaret          { TelescopeSelection, fg = p.rose },
 			TelescopeMatching                { fg = p.blossom, gui = "bold" },
@@ -418,6 +425,9 @@ local function generate(p, opt)
 			FzfLuaTabTitle                   { fg = p.sky },
 			FzfLuaTabMarker                  { fg = p.leaf },
 			FzfLuaLiveSym                    { fg = p.wood },
+			FzfLuaTitle                      { Title },
+			FzfLuaFzfCursorLine              { CursorLine },
+			FzfLuaFzfMatch                   { fg = p.blossom, gui = "bold" },
 
 			Sneak                            { Search },
 			SneakLabel                       { WildMenu },
@@ -489,6 +499,11 @@ local function generate(p, opt)
 			CmpItemAbbrMatchFuzzy            { fg = p1.fg1, gui = "bold" },
 			CmpItemKind                      { fg = p1.fg4 },
 			CmpItemMenu                      { fg = p1.fg5 },
+
+			BlinkCmpLabelDetail              { Type },
+			BlinkCmpLabelDescription         { Type },
+			BlinkCmpSource                   { Type },
+			BlinkCmpKind                     { fg = p1.fg4 },
 
 			NnnNormal                        { NvimTreeNormal },
 			NnnNormalNC                      { NnnNormal },

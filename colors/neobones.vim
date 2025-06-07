@@ -53,6 +53,9 @@ if &background ==# 'dark'
     highlight CursorLine guifg=NONE guibg=#152128 guisp=NONE gui=NONE cterm=NONE
     highlight! link CocMenuSel CursorLine
     highlight! link CursorColumn CursorLine
+    highlight! link FzfLuaFzfCursorLine CursorLine
+    highlight! link SnacksPickerListCursorLine CursorLine
+    highlight! link SnacksPickerPreviewCursorLine CursorLine
     highlight CursorLineNr guifg=#C6D5CF guibg=NONE guisp=NONE gui=bold cterm=bold
     highlight Delimiter guifg=#5B7E94 guibg=NONE guisp=NONE gui=NONE cterm=NONE
     highlight! link markdownLinkTextDelimiter Delimiter
@@ -110,6 +113,7 @@ if &background ==# 'dark'
     highlight FlashBackdrop guifg=#536977 guibg=NONE guisp=NONE gui=NONE cterm=NONE
     highlight FlashLabel guifg=#C6D5CF guibg=#384884 guisp=NONE gui=NONE cterm=NONE
     highlight FloatBorder guifg=#1F3E56 guibg=NONE guisp=NONE gui=NONE cterm=NONE
+    highlight FloatTitle guifg=#C6D5CF guibg=#1D2C35 guisp=NONE gui=bold cterm=bold
     highlight FoldColumn guifg=#466273 guibg=NONE guisp=NONE gui=bold cterm=bold
     highlight Folded guifg=#7BA9C5 guibg=#24353F guisp=NONE gui=NONE cterm=NONE
     highlight Function guifg=#C6D5CF guibg=NONE guisp=NONE gui=NONE cterm=NONE
@@ -118,6 +122,7 @@ if &background ==# 'dark'
     highlight FzfLuaBufFlagAlt guifg=#8190D4 guibg=NONE guisp=NONE gui=NONE cterm=NONE
     highlight FzfLuaBufFlagCur guifg=#B77E64 guibg=NONE guisp=NONE gui=NONE cterm=NONE
     highlight FzfLuaBufNr guifg=#90FF6B guibg=NONE guisp=NONE gui=NONE cterm=NONE
+    highlight FzfLuaFzfMatch guifg=#B279A7 guibg=NONE guisp=NONE gui=bold cterm=bold
     highlight FzfLuaHeaderBind guifg=#90FF6B guibg=NONE guisp=NONE gui=NONE cterm=NONE
     highlight FzfLuaHeaderText guifg=#B77E64 guibg=NONE guisp=NONE gui=NONE cterm=NONE
     highlight FzfLuaLiveSym guifg=#B77E64 guibg=NONE guisp=NONE gui=NONE cterm=NONE
@@ -154,6 +159,7 @@ if &background ==# 'dark'
     highlight! link EndOfBuffer NonText
     highlight! link Whitespace NonText
     highlight NormalFloat guifg=NONE guibg=#1D2C35 guisp=NONE gui=NONE cterm=NONE
+    highlight! link SnacksPickerBorder NormalFloat
     highlight Number guifg=#939E99 guibg=NONE guisp=NONE gui=NONE cterm=NONE
     highlight! link Float Number
     highlight Pmenu guifg=NONE guibg=#1D2C35 guisp=NONE gui=NONE cterm=NONE
@@ -166,6 +172,9 @@ if &background ==# 'dark'
     highlight! link MatchParen Search
     highlight! link QuickFixLine Search
     highlight! link Sneak Search
+    highlight SnacksIndent guifg=#1D272E guibg=NONE guisp=NONE gui=NONE cterm=NONE
+    highlight SnacksIndentScope guifg=#35444E guibg=NONE guisp=NONE gui=NONE cterm=NONE
+    highlight SnacksPickerMatch guifg=#B279A7 guibg=NONE guisp=NONE gui=bold cterm=bold
     highlight SneakLabelMask guifg=#B279A7 guibg=#B279A7 guisp=NONE gui=NONE cterm=NONE
     highlight Special guifg=#8190D4 guibg=NONE guisp=NONE gui=NONE cterm=NONE
     highlight! link WhichKeyGroup Special
@@ -190,6 +199,7 @@ if &background ==# 'dark'
     highlight TabLineSel guifg=NONE guibg=NONE guisp=NONE gui=bold cterm=bold
     highlight! link BufferCurrent TabLineSel
     highlight Title guifg=#C6D5CF guibg=NONE guisp=NONE gui=bold cterm=bold
+    highlight! link FzfLuaTitle Title
     highlight Todo guifg=NONE guibg=NONE guisp=NONE gui=bold,underline cterm=bold,underline
     highlight Type guifg=#6E99B2 guibg=NONE guisp=NONE gui=NONE cterm=NONE
     highlight! link helpSpecial Type
@@ -275,6 +285,9 @@ else
     highlight CursorLine guifg=NONE guibg=#DAE5DB guisp=NONE gui=NONE cterm=NONE
     highlight! link CocMenuSel CursorLine
     highlight! link CursorColumn CursorLine
+    highlight! link FzfLuaFzfCursorLine CursorLine
+    highlight! link SnacksPickerListCursorLine CursorLine
+    highlight! link SnacksPickerPreviewCursorLine CursorLine
     highlight CursorLineNr guifg=#202E18 guibg=NONE guisp=NONE gui=bold cterm=bold
     highlight Delimiter guifg=#7B837C guibg=NONE guisp=NONE gui=NONE cterm=NONE
     highlight! link markdownLinkTextDelimiter Delimiter
@@ -332,6 +345,7 @@ else
     highlight FlashBackdrop guifg=#878D88 guibg=NONE guisp=NONE gui=NONE cterm=NONE
     highlight FlashLabel guifg=#202E18 guibg=#88C8F5 guisp=NONE gui=NONE cterm=NONE
     highlight FloatBorder guifg=#6A716B guibg=NONE guisp=NONE gui=NONE cterm=NONE
+    highlight FloatTitle guifg=#202E18 guibg=#CDDBCF guisp=NONE gui=bold cterm=bold
     highlight FoldColumn guifg=#8F9890 guibg=NONE guisp=NONE gui=bold cterm=bold
     highlight Folded guifg=#4A4F4A guibg=#B8C4B9 guisp=NONE gui=NONE cterm=NONE
     highlight Function guifg=#202E18 guibg=NONE guisp=NONE gui=NONE cterm=NONE
@@ -340,6 +354,7 @@ else
     highlight FzfLuaBufFlagAlt guifg=#286486 guibg=NONE guisp=NONE gui=NONE cterm=NONE
     highlight FzfLuaBufFlagCur guifg=#944927 guibg=NONE guisp=NONE gui=NONE cterm=NONE
     highlight FzfLuaBufNr guifg=#567A30 guibg=NONE guisp=NONE gui=NONE cterm=NONE
+    highlight FzfLuaFzfMatch guifg=#88507D guibg=NONE guisp=NONE gui=bold cterm=bold
     highlight FzfLuaHeaderBind guifg=#567A30 guibg=NONE guisp=NONE gui=NONE cterm=NONE
     highlight FzfLuaHeaderText guifg=#944927 guibg=NONE guisp=NONE gui=NONE cterm=NONE
     highlight FzfLuaLiveSym guifg=#944927 guibg=NONE guisp=NONE gui=NONE cterm=NONE
@@ -374,6 +389,7 @@ else
     highlight! link EndOfBuffer NonText
     highlight! link Whitespace NonText
     highlight NormalFloat guifg=NONE guibg=#CDDBCF guisp=NONE gui=NONE cterm=NONE
+    highlight! link SnacksPickerBorder NormalFloat
     highlight Number guifg=#476038 guibg=NONE guisp=NONE gui=NONE cterm=NONE
     highlight! link Float Number
     highlight Pmenu guifg=NONE guibg=#C8D5C9 guisp=NONE gui=NONE cterm=NONE
@@ -386,6 +402,9 @@ else
     highlight! link MatchParen Search
     highlight! link QuickFixLine Search
     highlight! link Sneak Search
+    highlight SnacksIndent guifg=#D2DDD3 guibg=NONE guisp=NONE gui=NONE cterm=NONE
+    highlight SnacksIndentScope guifg=#ADB6AE guibg=NONE guisp=NONE gui=NONE cterm=NONE
+    highlight SnacksPickerMatch guifg=#88507D guibg=NONE guisp=NONE gui=bold cterm=bold
     highlight SneakLabelMask guifg=#88507D guibg=#88507D guisp=NONE gui=NONE cterm=NONE
     highlight Special guifg=#415934 guibg=NONE guisp=NONE gui=bold cterm=bold
     highlight! link WhichKeyGroup Special
@@ -409,6 +428,7 @@ else
     highlight TabLineSel guifg=NONE guibg=NONE guisp=NONE gui=bold cterm=bold
     highlight! link BufferCurrent TabLineSel
     highlight Title guifg=#202E18 guibg=NONE guisp=NONE gui=bold cterm=bold
+    highlight! link FzfLuaTitle Title
     highlight Todo guifg=NONE guibg=NONE guisp=NONE gui=bold,underline cterm=bold,underline
     highlight Type guifg=#495C4C guibg=NONE guisp=NONE gui=NONE cterm=NONE
     highlight! link helpSpecial Type

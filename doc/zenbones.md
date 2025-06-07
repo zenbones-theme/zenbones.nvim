@@ -5,7 +5,7 @@ contrasts and font variations.
 
 ## Requirement
 
--   Neovim v0.8.0 (use v2.0.0 for older versions) or Vim 8.1
+- Neovim v0.8.0 (use v2.0.0 for older versions) or Vim 8.1
 
 ## Usage
 
