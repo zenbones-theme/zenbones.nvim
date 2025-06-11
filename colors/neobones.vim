@@ -46,7 +46,6 @@ if &background ==# 'dark'
     highlight Conceal guifg=#86908C guibg=NONE guisp=NONE gui=bold,italic cterm=bold,italic
     highlight Constant guifg=#939E99 guibg=NONE guisp=NONE gui=italic cterm=italic
     highlight! link Character Constant
-    highlight! link String Constant
     highlight! link TroubleSource Constant
     highlight! link WhichKeyValue Constant
     highlight Cursor guifg=#0F191F guibg=#CEDDD7 guisp=NONE gui=NONE cterm=NONE
@@ -194,6 +193,7 @@ if &background ==# 'dark'
     highlight StatusLineNC guifg=#D1E0DA guibg=#18252D guisp=NONE gui=NONE cterm=NONE
     highlight! link TabLineFill StatusLineNC
     highlight! link WinBarNC StatusLineNC
+    highlight String guifg=#939E99 guibg=NONE guisp=NONE gui=italic cterm=italic
     highlight TabLineSel guifg=NONE guibg=NONE guisp=NONE gui=bold cterm=bold
     highlight! link BufferCurrent TabLineSel
     highlight Title guifg=#C6D5CF guibg=NONE guisp=NONE gui=bold cterm=bold
@@ -276,7 +276,6 @@ else
     highlight Conceal guifg=#516D41 guibg=NONE guisp=NONE gui=bold,italic cterm=bold,italic
     highlight Constant guifg=#476038 guibg=NONE guisp=NONE gui=italic cterm=italic
     highlight! link Character Constant
-    highlight! link String Constant
     highlight! link TroubleSource Constant
     highlight! link WhichKeyValue Constant
     highlight Cursor guifg=#E5EDE6 guibg=#202E18 guisp=NONE gui=NONE cterm=NONE
@@ -424,6 +423,7 @@ else
     highlight StatusLineNC guifg=#4B663C guibg=#D0DED2 guisp=NONE gui=NONE cterm=NONE
     highlight! link TabLineFill StatusLineNC
     highlight! link WinBarNC StatusLineNC
+    highlight String guifg=#476038 guibg=NONE guisp=NONE gui=italic cterm=italic
     highlight TabLineSel guifg=NONE guibg=NONE guisp=NONE gui=bold cterm=bold
     highlight! link BufferCurrent TabLineSel
     highlight Title guifg=#202E18 guibg=NONE guisp=NONE gui=bold cterm=bold
