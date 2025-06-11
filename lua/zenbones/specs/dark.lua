@@ -124,7 +124,7 @@ local function generate(p, opt)
 			-- Uncomment and edit if you want more specific syntax highlighting.
 
 			Constant        { fg = p1.fg4, gui = "italic" }, -- (preferred) any constant
-			String          { Constant }, --   a string constant: "this is a string"
+			String          { fg = p1.fg4, gui = opt.italic_strings ~= false and "italic" or "NONE"  }, --   a string constant: "this is a string"
 			Character       { Constant }, --  a character constant: 'c', '\n'
 			Number          { fg = p1.fg4 }, --   a number constant: 234, 0xff
 			Boolean         { fg = p.fg, gui = "italic" }, --  a boolean constant: TRUE, false

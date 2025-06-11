@@ -74,6 +74,7 @@ the flavor name e.g. `g:rosebones_italic_comments`.
 | darken_noncurrent_window           | light      | `false` | Make non-current window background darker than _Normal_.                  |
 | lighten_noncurrent_window          | dark       | `false` | Make non-current window background lighter than _Normal_.                 |
 | italic_comments                    | both       | `true`  | Make comments italicize.                                                  |
+| italic_strings                     | both       | `true`  | Make strings italicize.                                                   |
 | darken_comments                    | light      | `38`    | Percentage to darken comments relative to Normal bg.                      |
 | lighten_comments                   | dark       | `38`    | Percentage to lighten comments relative to Normal bg.                     |
 | darken_non_text                    | light      | `25`    | Percentage to darken \|hl-NonText\| relative to Normal bg.                |

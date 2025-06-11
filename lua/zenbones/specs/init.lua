@@ -22,6 +22,7 @@ function M.get_global_config(prefix, base_bg)
 		"solid_line_nr",
 		"colorize_diagnostic_underline_text",
 		"italic_comments",
+		"italic_strings",
 		"transparent_background",
 	})
 
