@@ -1,5 +1,17 @@
 # Changelog
 
+## [4.8.0](https://github.com/zenbones-theme/zenbones.nvim/compare/v4.7.2...v4.8.0) (2025-06-11)
+
+
+### Features
+
+* italic_strings option ([878601c](https://github.com/zenbones-theme/zenbones.nvim/commit/878601c1af1bfdf0531524392587a50b2dcce3cd))
+
+
+### Bug Fixes
+
+* format readme ([0be0192](https://github.com/zenbones-theme/zenbones.nvim/commit/0be0192b5bca13f7909a9eb57cd03b99c40fcb04))
+
 ## [4.7.2](https://github.com/zenbones-theme/zenbones.nvim/compare/v4.7.1...v4.7.2) (2025-04-21)
 
 
