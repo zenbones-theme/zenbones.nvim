@@ -103,6 +103,8 @@ the flavor name e.g. `g:rosebones_italic_comments`.
 
   italic_comments                      both         true      Make comments italicize.
 
+  italic_strings                       both         true      Make strings italicize.
+
   darken_comments                      light        38        Percentage to darken comments relative to
                                                               Normal bg.
 
