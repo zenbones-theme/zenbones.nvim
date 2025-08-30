@@ -2,8 +2,6 @@ if vim.g.colors_name then
 	vim.api.nvim_command [[highlight clear]]
 end
 
-vim.g.colors_name = "randombones"
-
 local util = require "zenbones.util"
 local colorschemes = util.get_colorscheme_list()
 
@@ -16,5 +14,7 @@ vim.g.randombones_colors_name = colorscheme.name
 if colorscheme.background then
 	vim.o.background = colorscheme.background
 end
+
+vim.g.colors_name = colorscheme.name
 
 util.apply_colorscheme()
