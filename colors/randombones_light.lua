@@ -2,7 +2,7 @@ if vim.g.colors_name then
 	vim.api.nvim_command [[highlight clear]]
 end
 
-vim.g.colors_name = "randombones"
+vim.g.colors_name = "randombones_light"
 
 local util = require "zenbones.util"
 local colorschemes = util.get_colorscheme_list()
