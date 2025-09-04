@@ -1,5 +1,12 @@
 # Changelog
 
+## [4.9.0](https://github.com/zenbones-theme/zenbones.nvim/compare/v4.8.0...v4.9.0) (2025-09-03)
+
+
+### Features
+
+* add randombones variants for when light / dark themes are set ([#219](https://github.com/zenbones-theme/zenbones.nvim/issues/219)) ([e3ab355](https://github.com/zenbones-theme/zenbones.nvim/commit/e3ab355fe93919ced777accfa2d631f49d0bd72c))
+
 ## [4.8.0](https://github.com/zenbones-theme/zenbones.nvim/compare/v4.7.2...v4.8.0) (2025-06-11)
 
 
