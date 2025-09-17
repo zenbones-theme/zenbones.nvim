@@ -13,8 +13,8 @@ return lush.extends({ specs }).with(function()
 		Special { fg = p.water },
 		String { fg = p.leaf },
 		ColorColumn { bg = p.bg1 },
-		MiniFilesNormal { bg = "#18181c" },
 		NavicText { fg = "#b0ac96" },
+		SnacksPickerBorder { specs.FloatBorder }, -- --border-color
 	}
 	-- selene: deny(undefined_variable)
 	---@diagnostic enable: undefined-global

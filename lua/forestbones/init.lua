@@ -16,6 +16,7 @@ return lush.extends({ specs }).with(function()
 		Type { fg = p.water },
 		ColorColumn { bg = p.bg },
 		NavicText { fg = "#b4ae9c" },
+		SnacksPickerBorder { specs.FloatBorder }, -- --border-color
 	}
 	-- selene: deny(undefined_variable)
 	---@diagnostic enable: undefined-global

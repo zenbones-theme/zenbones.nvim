@@ -32,6 +32,7 @@ else
 			Statement { fg = p.sky },
 			ColorColumn { bg = p.bg1 },
 			NavicText { fg = "#a1b0ac" },
+			SnacksPickerBorder { specs.FloatBorder }, -- --border-color
 		}
 		-- selene: deny(undefined_variable)
 		---@diagnostic enable: undefined-global
