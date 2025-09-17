@@ -31,7 +31,6 @@ else
 			String { fg = p.leaf },
 			Statement { fg = p.sky },
 			ColorColumn { bg = p.bg1 },
-			MiniFilesNormal { bg = "#18181c" },
 			NavicText { fg = "#a1b0ac" },
 		}
 		-- selene: deny(undefined_variable)

@@ -13,7 +13,6 @@ return lush.extends({ specs }).with(function()
 		Special { fg = p.water },
 		String { fg = p.leaf },
 		ColorColumn { bg = p.bg1 },
-		MiniFilesNormal { bg = "#18181c" },
 		NavicText { fg = "#989fa7" },
 	}
 	-- selene: deny(undefined_variable)
