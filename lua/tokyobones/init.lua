@@ -20,6 +20,7 @@ return lush.extends({ specs }).with(function()
 		ColorColumn { bg = p.bg1 },
 		NavicText { fg = "#9faad3" },
 		SnacksPickerBorder { specs.FloatBorder }, -- --border-color
+		SnacksPickerListCursorLine { bg = p.bg1.da(40) },
 	}
 	-- selene: deny(undefined_variable)
 	---@diagnostic enable: undefined-global

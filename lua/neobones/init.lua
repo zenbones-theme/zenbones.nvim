@@ -33,6 +33,7 @@ else
 			ColorColumn { bg = p.bg1 },
 			NavicText { fg = "#a1b0ac" },
 			SnacksPickerBorder { specs.FloatBorder }, -- --border-color
+			SnacksPickerListCursorLine { bg = p.bg1.da(40) },
 		}
 		-- selene: deny(undefined_variable)
 		---@diagnostic enable: undefined-global
