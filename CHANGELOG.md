@@ -1,5 +1,12 @@
 # Changelog
 
+## [4.10.0](https://github.com/zenbones-theme/zenbones.nvim/compare/v4.9.0...v4.10.0) (2025-12-01)
+
+
+### Features
+
+* add Ghostty terminal support ([#225](https://github.com/zenbones-theme/zenbones.nvim/issues/225)) ([3da02e5](https://github.com/zenbones-theme/zenbones.nvim/commit/3da02e553a171fe02245cda8024763194254dcc6))
+
 ## [4.9.0](https://github.com/zenbones-theme/zenbones.nvim/compare/v4.8.0...v4.9.0) (2025-09-03)
 
 
