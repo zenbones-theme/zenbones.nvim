@@ -82,6 +82,7 @@ M.run = function()
 		"iterm",
 		"alacritty",
 		"kitty",
+		"ghostty",
 		"wezterm",
 		"tmux",
 		"windows_terminal",
