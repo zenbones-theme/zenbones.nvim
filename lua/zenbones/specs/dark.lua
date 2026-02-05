@@ -433,10 +433,6 @@ local function generate(p, opt)
 			SneakLabel                       { WildMenu },
 			SneakLabelMask                   { bg = p.blossom, fg = p.blossom },
 
-			LeapMatch                        { gui = "bold,underline,nocombine" },
-			LeapBackdrop                     { gui = "nocombine", fg = p.bg.lightness(p.bg.l + 20) },
-			LeapLabel                        { fg = p.blossom.lightness(p1.bg.l + 56).sa(80), gui = "bold" },
-
 			HopNextKey                       { fg = p.blossom, gui = "bold,underline" },
 			HopNextKey1                      { fg = p.sky, gui = "bold,underline" },
 			HopNextKey2                      { fg = p.water },
