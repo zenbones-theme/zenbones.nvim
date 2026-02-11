@@ -1,5 +1,12 @@
 # Changelog
 
+## [4.11.0](https://github.com/zenbones-theme/zenbones.nvim/compare/v4.10.0...v4.11.0) (2026-02-11)
+
+
+### Features
+
+* remove custom Leap groups ([#227](https://github.com/zenbones-theme/zenbones.nvim/issues/227)) ([205a99c](https://github.com/zenbones-theme/zenbones.nvim/commit/205a99cc29fe9f66a861c200b2e0bcac54f04a01))
+
 ## [4.10.0](https://github.com/zenbones-theme/zenbones.nvim/compare/v4.9.0...v4.10.0) (2025-12-01)
 
 
