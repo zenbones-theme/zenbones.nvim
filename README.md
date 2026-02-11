@@ -106,7 +106,6 @@ currently supported.
 - [Indent Blankline](https://github.com/lukas-reineke/indent-blankline.nvim)
 - [Telescope](https://github.com/nvim-telescope/telescope.nvim)
 - [Sneak](https://github.com/justinmk/vim-sneak)
-- [Leap](https://github.com/ggandor/leap.nvim)
 - [Hop](https://github.com/phaazon/hop.nvim)
 - [Lualine](https://github.com/hoob3rt/lualine.nvim)
 - [Lightline](https://github.com/itchyny/lightline.vim)
