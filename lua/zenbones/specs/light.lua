@@ -496,13 +496,10 @@ local function generate(p, opt)
 			CmpItemKind                      { fg = p1.fg4 },
 			CmpItemMenu                      { fg = p1.fg5 },
 
-			BlinkCmpLabel                    { fg = p1.fg2 },
-			BlinkCmpLabelDeprecated          { fg = p1.fg6 },
-			BlinkCmpLabelMatch               { fg = p.fg, gui = "bold" },
-			BlinkCmpLabelDetail              { fg = p1.fg4 },
-			BlinkCmpLabelDescription         { fg = p1.fg4 },
+			BlinkCmpLabelDetail              { Type },
+			BlinkCmpLabelDescription         { Type },
+			BlinkCmpSource                   { Type },
 			BlinkCmpKind                     { fg = p1.fg4 },
-			BlinkCmpSource                   { fg = p1.fg4 },
 
 			NnnNormal                        { NvimTreeNormal },
 			NnnNormalNC                      { NnnNormal },
