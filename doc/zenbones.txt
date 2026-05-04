@@ -1,4 +1,5 @@
 *zenbones.txt*          A collection of contrast-based vim/neovim colorschemes
+                         For Vim 8.1 / Nvim v0.8.0    Last change: 2026 May 04
 
 ==============================================================================
 Table of Contents                                 *zenbones-table-of-contents*
@@ -77,7 +78,7 @@ Second way is to set configuration is to assign a dictionary to the prefix:
 <
 
 **Notes**: Flavors accept their own configuration by replacing the prefix with
-the flavor name e.g. `g:rosebones_italic_comments`.
+the flavor name e.g. `g:rosebones_italic_comments`.
 
   -----------------------------------------------------------------------------------------------------
   Option                               Background   Default   Description
@@ -138,7 +139,7 @@ G:BONES_COMPAT
 
 Set to `1` to enable compatibility mode for all colorschemes. Enabled in Vim.
 To enable/disable compatibility mode for a specific theme, set the variable
-`g:{theme}_compat` to `0` or `1`, e.g. `let g:zenbones_compat = 1`.
+`g:{theme}_compat` to `0` or `1`, e.g. `let g:zenbones_compat = 1`.
 
 
 LIGHTLINE ~
