@@ -496,6 +496,7 @@ local function generate(p, opt)
 			CmpItemKind                      { fg = p1.fg4 },
 			CmpItemMenu                      { fg = p1.fg5 },
 
+			BlinkCmpLabelMatch               { fg = p.blossom, gui = "bold" },
 			BlinkCmpLabelDetail              { Type },
 			BlinkCmpLabelDescription         { Type },
 			BlinkCmpSource                   { Type },
