@@ -118,6 +118,7 @@ currently supported.
 - [NvimTree](https://github.com/kyazdani42/nvim-tree.lua)
 - [n³](https://github.com/mcchrish/nnn.vim)
 - [Mason](https://github.com/williamboman/mason.nvim)
+- [mini.icons](https://github.com/nvim-mini/mini.nvim/blob/main/readmes/mini-icons.md)
 
 ## Other implementations
 
