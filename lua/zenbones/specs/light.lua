@@ -541,6 +541,16 @@ local function generate(p, opt)
 			NotifyTRACEIcon                  { DiagnosticHint },
 			NotifyTRACETitle                 { DiagnosticHint },
 
+			MiniIconsAzure                   { fg = p.water },
+			MiniIconsCyan                    { fg = p.sky },
+			MiniIconsPurple                  { fg = p.blossom },
+			MiniIconsBlue                    { fg = p.sky1 },
+			MiniIconsGreen                   { fg = p.leaf },
+			MiniIconsGrey                    { fg = p1.fg4 },
+			MiniIconsOrange                  { fg = p.wood1 },
+			MiniIconsRed                     { fg = p.rose },
+			MiniIconsYellow                  { fg = p.wood },
+
 			RenderMarkdownCode { bg = LspInlayHint.bg },
 		}
 	end)

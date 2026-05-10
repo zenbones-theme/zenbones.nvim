@@ -50,6 +50,7 @@ run(
 				or string.match(color, "NvimTree")
 				or string.match(color, "Cmp")
 				or string.match(color, "Mason")
+				or string.match(color, "Mini")
 			)
 		end, colors)
 		return {
