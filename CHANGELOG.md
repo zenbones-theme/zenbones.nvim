@@ -1,5 +1,13 @@
 # Changelog
 
+## [4.12.0](https://github.com/zenbones-theme/zenbones.nvim/compare/v4.11.0...v4.12.0) (2026-05-10)
+
+
+### Features
+
+* add colors for blink.cmp label matches ([#231](https://github.com/zenbones-theme/zenbones.nvim/issues/231)) ([3722934](https://github.com/zenbones-theme/zenbones.nvim/commit/3722934f65bf3f2b90d7103121082b4116d097fd))
+* support `mini.icons` ([#234](https://github.com/zenbones-theme/zenbones.nvim/issues/234)) ([f5588d1](https://github.com/zenbones-theme/zenbones.nvim/commit/f5588d12f008154c2b506651cf86e81c6fdf20c8))
+
 ## [4.11.0](https://github.com/zenbones-theme/zenbones.nvim/compare/v4.10.0...v4.11.0) (2026-02-11)
 
 
