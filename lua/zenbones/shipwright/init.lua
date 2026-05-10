@@ -78,6 +78,7 @@ end
 
 M.run = function()
 	local runner_files = {
+		"neovim",
 		"vim",
 		"iterm",
 		"alacritty",

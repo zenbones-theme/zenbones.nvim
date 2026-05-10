@@ -3,11 +3,9 @@ local M = {}
 --- Apply a zenbones colorscheme based on g:colors_name and &background.
 ---@return nil
 function M.apply_colorscheme()
-	local colors_name = vim.g.colors_name
-	package.loaded[colors_name] = nil
-	require "lush"(require(colors_name), { force_clean = false })
-	local p = require(colors_name .. ".palette")[vim.o.background]
-	require("zenbones.term").apply_colors(p)
+	local colors_module = vim.g.colors_name..".prebuilt"
+	package.loaded[colors_module] = nil
+	require(colors_module)
 end
 
 function M.get_colorscheme_list()
