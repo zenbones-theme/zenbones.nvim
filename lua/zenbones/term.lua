@@ -24,6 +24,28 @@ function M.colors_map(p)
 	}
 end
 
+function M.get_colors_idx(p)
+	local colors = M.colors_map(p)
+	return {
+		colors.black.hex,
+		colors.red.hex,
+		colors.green.hex,
+		colors.yellow.hex,
+		colors.blue.hex,
+		colors.magenta.hex,
+		colors.cyan.hex,
+		colors.white.hex,
+		colors.bright_black.hex,
+		colors.bright_red.hex,
+		colors.bright_green.hex,
+		colors.bright_yellow.hex,
+		colors.bright_blue.hex,
+		colors.bright_magenta.hex,
+		colors.bright_cyan.hex,
+		colors.bright_white.hex,
+	}
+end
+
 --- Apply a palette to g:terminal_color_*.
 ---@param p table
 ---@return nil
