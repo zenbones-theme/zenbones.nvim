@@ -92,6 +92,12 @@ Set to `1` to enable compatibility mode for all colorschemes. Enabled in Vim. To
 enable/disable compatibility mode for a specific theme, set the variable
 `g:{theme}_compat` to `0` or `1`, e.g. `let g:zenbones_compat = 1`.
 
+#### g:bones_no_cache
+
+Set to `true` to disable caching for all colorschemes. Only valid for Neovim.
+To enable/disable caching for a specific theme, set the variable
+`g:{theme}_no_cache` to `true`, e.g. `vim.g.zenbones_no_cache = true`.
+
 ### lightline
 
 ```vim
