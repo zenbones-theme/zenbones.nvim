@@ -69,7 +69,7 @@ end
 
 function M.compile_palette(colors_name, bg)
 	local p = require(colors_name .. ".palette")[bg]
-	return require("zenbones.term").get_colors_idx(p)
+	return require("zenbones.term").colors_array(p)
 end
 
 M.cache = {}
