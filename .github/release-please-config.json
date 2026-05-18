@@ -1,0 +1,9 @@
+{
+    "packages": {
+        ".": {
+            "extra-files": [
+                "lua/zenbones/util.lua"
+            ]
+        }
+    }
+}
