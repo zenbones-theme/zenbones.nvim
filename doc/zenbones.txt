@@ -1,5 +1,5 @@
 *zenbones.txt*          A collection of contrast-based vim/neovim colorschemes
-                         For Vim 8.1 / Nvim v0.8.0    Last change: 2026 May 10
+                        For Vim 8.1 / Nvim v0.8.0    Last change: 2026 June 26
 
 ==============================================================================
 Table of Contents                                 *zenbones-table-of-contents*
