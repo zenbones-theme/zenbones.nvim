@@ -32,11 +32,13 @@ if &background ==# 'dark'
     let g:terminal_color_15 = '#888F94'
     highlight Normal guifg=#B4BDC3 guibg=#1C1917 guisp=NONE gui=NONE cterm=NONE
     highlight! link ModeMsg Normal
+    highlight Added guifg=#819B69 guibg=NONE guisp=NONE gui=NONE cterm=NONE
     highlight Bold guifg=NONE guibg=NONE guisp=NONE gui=bold cterm=bold
     highlight Boolean guifg=#B4BDC3 guibg=NONE guisp=NONE gui=italic cterm=italic
     highlight BufferVisible guifg=#CAD0D4 guibg=NONE guisp=NONE gui=NONE cterm=NONE
     highlight BufferVisibleIndex guifg=#CAD0D4 guibg=NONE guisp=NONE gui=NONE cterm=NONE
     highlight BufferVisibleSign guifg=#CAD0D4 guibg=NONE guisp=NONE gui=NONE cterm=NONE
+    highlight Changed guifg=#6099C0 guibg=NONE guisp=NONE gui=NONE cterm=NONE
     highlight CocMarkdownLink guifg=#66A5AD guibg=NONE guisp=NONE gui=underline cterm=underline
     highlight ColorColumn guifg=NONE guibg=#55392C guisp=NONE gui=NONE cterm=NONE
     highlight! link LspReferenceRead ColorColumn
@@ -165,6 +167,7 @@ if &background ==# 'dark'
     highlight PmenuSbar guifg=NONE guibg=#615853 guisp=NONE gui=NONE cterm=NONE
     highlight PmenuSel guifg=NONE guibg=#4A433F guisp=NONE gui=NONE cterm=NONE
     highlight PmenuThumb guifg=NONE guibg=#8E817B guisp=NONE gui=NONE cterm=NONE
+    highlight Removed guifg=#DE6E7C guibg=NONE guisp=NONE gui=NONE cterm=NONE
     highlight RenderMarkdownCode guifg=NONE guibg=#25211F guisp=NONE gui=NONE cterm=NONE
     highlight Search guifg=#B4BDC3 guibg=#65435E guisp=NONE gui=NONE cterm=NONE
     highlight! link CocSearch Search
@@ -263,11 +266,13 @@ else
     let g:terminal_color_15 = '#4F5E68'
     highlight Normal guifg=#2C363C guibg=#F0EDEC guisp=NONE gui=NONE cterm=NONE
     highlight! link ModeMsg Normal
+    highlight Added guifg=#4F6C31 guibg=NONE guisp=NONE gui=NONE cterm=NONE
     highlight Bold guifg=NONE guibg=NONE guisp=NONE gui=bold cterm=bold
     highlight Boolean guifg=#2C363C guibg=NONE guisp=NONE gui=italic cterm=italic
     highlight BufferVisible guifg=#596A76 guibg=NONE guisp=NONE gui=NONE cterm=NONE
     highlight BufferVisibleIndex guifg=#596A76 guibg=NONE guisp=NONE gui=NONE cterm=NONE
     highlight BufferVisibleSign guifg=#596A76 guibg=NONE guisp=NONE gui=NONE cterm=NONE
+    highlight Changed guifg=#286486 guibg=NONE guisp=NONE gui=NONE cterm=NONE
     highlight CocMarkdownLink guifg=#3B8992 guibg=NONE guisp=NONE gui=underline cterm=underline
     highlight ColorColumn guifg=NONE guibg=#E6C5BD guisp=NONE gui=NONE cterm=NONE
     highlight! link LspReferenceRead ColorColumn
@@ -396,6 +401,7 @@ else
     highlight PmenuSbar guifg=NONE guibg=#B2A39B guisp=NONE gui=NONE cterm=NONE
     highlight PmenuSel guifg=NONE guibg=#C4B6AF guisp=NONE gui=NONE cterm=NONE
     highlight PmenuThumb guifg=NONE guibg=#F7F6F5 guisp=NONE gui=NONE cterm=NONE
+    highlight Removed guifg=#A8334C guibg=NONE guisp=NONE gui=NONE cterm=NONE
     highlight RenderMarkdownCode guifg=NONE guibg=#EBE7E6 guisp=NONE gui=NONE cterm=NONE
     highlight Search guifg=#2C363C guibg=#DEB9D6 guisp=NONE gui=NONE cterm=NONE
     highlight! link CocSearch Search

@@ -33,11 +33,13 @@ if &background ==# 'dark'
     let g:terminal_color_15 = '#A8A48D'
     highlight Normal guifg=#DDD8BB guibg=#1F1F28 guisp=NONE gui=NONE cterm=NONE
     highlight! link ModeMsg Normal
+    highlight Added guifg=#98BC6D guibg=NONE guisp=NONE gui=NONE cterm=NONE
     highlight Bold guifg=NONE guibg=NONE guisp=NONE gui=bold cterm=bold
     highlight Boolean guifg=#DDD8BB guibg=NONE guisp=NONE gui=italic cterm=italic
     highlight BufferVisible guifg=#E9E3C5 guibg=NONE guisp=NONE gui=NONE cterm=NONE
     highlight BufferVisibleIndex guifg=#E9E3C5 guibg=NONE guisp=NONE gui=NONE cterm=NONE
     highlight BufferVisibleSign guifg=#E9E3C5 guibg=NONE guisp=NONE gui=NONE cterm=NONE
+    highlight Changed guifg=#7EB3C9 guibg=NONE guisp=NONE gui=NONE cterm=NONE
     highlight CocMarkdownLink guifg=#7EB3C9 guibg=NONE guisp=NONE gui=underline cterm=underline
     highlight ColorColumn guifg=NONE guibg=#514531 guisp=NONE gui=NONE cterm=NONE
     highlight! link LspReferenceRead ColorColumn
@@ -166,6 +168,7 @@ if &background ==# 'dark'
     highlight PmenuSbar guifg=NONE guibg=#5D5D6F guisp=NONE gui=NONE cterm=NONE
     highlight PmenuSel guifg=NONE guibg=#484759 guisp=NONE gui=NONE cterm=NONE
     highlight PmenuThumb guifg=NONE guibg=#858594 guisp=NONE gui=NONE cterm=NONE
+    highlight Removed guifg=#E46A78 guibg=NONE guisp=NONE gui=NONE cterm=NONE
     highlight RenderMarkdownCode guifg=NONE guibg=#272732 guisp=NONE gui=NONE cterm=NONE
     highlight Search guifg=#DDD8BB guibg=#614A82 guisp=NONE gui=NONE cterm=NONE
     highlight! link CocSearch Search
