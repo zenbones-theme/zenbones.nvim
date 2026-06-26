@@ -376,6 +376,10 @@ local function generate(p, opt)
 			diffLine                  { fg = p.blossom, gui = "bold" },
 			diffIndexLine             { fg = p.wood },
 
+			Added                     { fg = p.leaf },
+			Removed                   { fg = p.rose },
+			Changed                   { fg = p.water },
+
 			gitcommitOverflow         { WarningMsg },
 
 			markdownUrl               { SpecialComment },
