@@ -1,5 +1,17 @@
 # Changelog
 
+## [4.13.0](https://github.com/zenbones-theme/zenbones.nvim/compare/v4.12.0...v4.13.0) (2026-06-26)
+
+
+### Features
+
+* set additional diff highlights ([#238](https://github.com/zenbones-theme/zenbones.nvim/issues/238)) ([88bbdbc](https://github.com/zenbones-theme/zenbones.nvim/commit/88bbdbc5c2347322eee44cdcafe47fe899453126))
+
+
+### Bug Fixes
+
+* link `[@lsp](https://github.com/lsp).type.variable` to `[@variable](https://github.com/variable)` ([#237](https://github.com/zenbones-theme/zenbones.nvim/issues/237)) ([12d187a](https://github.com/zenbones-theme/zenbones.nvim/commit/12d187a9698b1c9e01d33740d25d3c25114d923c))
+
 ## [4.12.0](https://github.com/zenbones-theme/zenbones.nvim/compare/v4.11.0...v4.12.0) (2026-05-10)
 
 
