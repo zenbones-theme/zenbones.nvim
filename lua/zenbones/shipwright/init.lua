@@ -87,6 +87,7 @@ M.run = function()
 		"tmux",
 		"windows_terminal",
 		"foot",
+		"helix",
 		"lualine",
 		"lightline",
 	}
