@@ -1,13 +1,110 @@
 local M = {}
 
+M.version = "4.12.0" -- x-release-please-version
+
 --- Apply a zenbones colorscheme based on g:colors_name and &background.
 ---@return nil
 function M.apply_colorscheme()
 	local colors_name = vim.g.colors_name
+	if M.is_cache_disabled(colors_name) then
+		M.apply_colorscheme_without_cache(colors_name)
+	else
+		M.apply_colorscheme_with_cache(colors_name)
+	end
+end
+
+function M.is_cache_disabled(colors_name)
+	return vim.g.bones_no_cache or vim.g[colors_name .. "_no_cache"]
+end
+
+function M.apply_colorscheme_without_cache(colors_name)
 	package.loaded[colors_name] = nil
 	require "lush"(require(colors_name), { force_clean = false })
 	local p = require(colors_name .. ".palette")[vim.o.background]
 	require("zenbones.term").apply_colors(p)
+end
+
+function M.apply_colorscheme_with_cache(global_colors_name)
+	-- For randombones, we should cache individual colorscheme with their real name
+	-- but use options from prefix "randombones"
+	local opts = require("zenbones.specs").get_global_config(global_colors_name, vim.o.background)
+	local colors_name = vim.g.randombones_colors_name or global_colors_name
+	local inputs = {
+		version = M.version,
+		opts = opts,
+	}
+
+	local cache = M.cache.load(colors_name)
+
+	local colors, palette
+	if cache and vim.deep_equal(inputs, cache.inputs) then
+		colors = cache.colors
+		palette = cache.palette
+	else
+		colors = M.compile_colorscheme(colors_name, opts)
+		palette = M.compile_palette(colors_name, vim.o.background)
+		local ok, msg = M.cache.write(colors_name, {
+			inputs = inputs,
+			colors = colors,
+			palette = palette,
+		})
+		if not ok then
+			vim.notify("zenbones.nvim failed to cache colors: " .. msg, vim.log.levels.WARN)
+		end
+	end
+
+	for group, attrs in pairs(colors) do
+		vim.api.nvim_set_hl(0, group, attrs)
+	end
+
+	for idx, color in ipairs(palette) do
+		vim.g["terminal_color_" .. idx - 1] = color
+	end
+end
+
+function M.compile_colorscheme(colors_name)
+	local spec = require(colors_name)
+	return require("lush.compiler")(spec)
+end
+
+function M.compile_palette(colors_name, bg)
+	local p = require(colors_name .. ".palette")[bg]
+	return require("zenbones.term").colors_array(p)
+end
+
+M.cache = {}
+
+function M.cache.file(colors_name)
+	return vim.fn.stdpath("cache") .. "/" .. colors_name .. ".msgpack"
+end
+
+function M.cache.load(colors_name)
+	local ok, cache = pcall(function()
+		local file = io.open(M.cache.file(colors_name), "rb")
+		local content = file:read("*a")
+		file:close()
+		return vim.mpack.decode(content)
+	end)
+
+	return ok and cache or nil
+end
+
+function M.cache.write(colors_name, cache)
+	return pcall(function()
+		local file, msg = io.open(M.cache.file(colors_name), "wb+")
+		if not file then
+			error(msg)
+		end
+		file:write(vim.mpack.encode(cache))
+		file:close()
+	end)
+end
+
+function M.cache.clear()
+	for _, colorscheme in ipairs(M.get_colorscheme_list()) do
+		local path = M.cache.file(colorscheme.name)
+		vim.uv.fs_unlink(path)
+	end
 end
 
 function M.get_colorscheme_list()
